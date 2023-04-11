@@ -3,7 +3,6 @@ group: contributor-guide
 title: Backward compatible development
 redirect_from:
 - guides/v2.3/contributor-guide/backward-compatible-development/index.html
-- guides/v2.4/contributor-guide/backward-compatible-development/index.html
 redirect_to: https://developer.adobe.com/commerce/contributor/guides/code-contributions/backward-compatibility-policy/
 status: migrated
 ---
@@ -140,7 +139,7 @@ Prefix the type name with a question mark when declaring a parameter with a `nul
 ```php
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright &copy; Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 

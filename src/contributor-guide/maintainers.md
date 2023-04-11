@@ -3,7 +3,6 @@ group: contributor-guide
 title: Maintainers
 redirect_from:
 - guides/v2.3/contributor-guide/maintainers.html
-- guides/v2.4/contributor-guide/maintainers.html
 redirect_to: https://developer.adobe.com/commerce/contributor/guides/maintainers/
 status: migrated
 ---

@@ -9,7 +9,6 @@ return_to:
    url: contributor-guide/contributing.html
 redirect_from:
 - guides/v2.3/contributor-guide/templates/tutorial-template-last.html
-- guides/v2.4/contributor-guide/templates/tutorial-template-last.html
 ---
 
 The last page of a tutorial should acknowledge the reader has completed the tutorial and provide links to related information. Otherwise, add the content as you see fit.

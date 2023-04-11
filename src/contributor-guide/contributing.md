@@ -3,7 +3,6 @@ group: contributor-guide
 title: Code Contributions
 redirect_from:
 - guides/v2.3/contributor-guide/contributing.html
-- guides/v2.4/contributor-guide/contributing.html
 redirect_to: https://developer.adobe.com/commerce/contributor/guides/code-contributions/
 status: migrated
 ---
@@ -36,7 +35,7 @@ Magento and Community Maintainers process contributions based on the issue/pull 
 **Priority** signifies how important or detrimental a defect is. The defect priority status is set by Product Managers. Priority also helps to determine the scheduling of the fix: Higher priority bugs will be fixed and merged first. It is a reflection on how bad the bug is for the system and also for business or marketing requirements.
 
 {:.bs-callout-tip}
-**Severity** is a measure of how ‘bad’ the bug is and how much disruption it causes, without regard to remaining work or the release schedule.
+**Severity** is a measure of how 'bad' the bug is and how much disruption it causes, without regard to remaining work or the release schedule.
 
 ### Priority and severity descriptions
 
@@ -46,7 +45,7 @@ Magento and Community Maintainers process contributions based on the issue/pull 
 | Severity: S1 | -  Affects critical data or functionality and forces users to employ a workaround.<br>-  Impact to the key product qualities.<br>-  An immediate fix is needed.<br> |
 | Severity: S2 | -  Affects non-critical data or functionality and forces users to employ a workaround.<br>-  Impact to the product qualities that makes the product more usable.<br>-  Major restrictions or short-term circumventions are required until a fix is available. A fix is important.<br> |
 | Severity: S3 | -  Affects non-critical data or functionality and does not force users to employ a workaround.<br>-  Problem has moderate impact requiring some restrictions. The fix is in an area that is not critical.<br> |
-| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.<br>-  Impact that does not prevent or hinder functionality.<br>-  Affects aesthetics, professional look and feel, “quality” or “usability”.<br> |
+| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.<br>-  Impact that does not prevent or hinder functionality.<br>-  Affects aesthetics, professional look and feel, "quality" or "usability".<br> |
 
 | Priority | Description |
 | ------------- | ------------- |
@@ -335,7 +334,7 @@ To maintain an effective bug fix workflow, we ask reporters to follow some simpl
 Before creating an issue, do the following:
 
 -  Check the [Developer Documentation]({{ site.baseurl }}/) and [User Guide]({{ site.user_guide_url }}/getting-started.html) to make sure the behavior you are reporting is really a bug, not a feature.
--  Check the [existing issues](https://github.com/magento/magento2/issues) to make sure you are not duplicating somebody’s work.
+-  Check the [existing issues](https://github.com/magento/magento2/issues) to make sure you are not duplicating somebody's work.
 -  Ensure that information you are reporting is a technical issue. Refer to the [Community Forums](https://community.magento.com/) or [Magento Stack Exchange](https://magento.stackexchange.com//) for technical questions, feature requests, etc.
 -  Verify that the issue you are reporting does not relate to {{site.data.var.ee}}. GitHub is intended for {{site.data.var.ce}} users to report on issues related to Open Source only. You can report Commerce-related issues one of two ways:
 

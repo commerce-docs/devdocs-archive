@@ -3,7 +3,6 @@ group: contributor-guide
 title: Basic template
 redirect_from:
 - guides/v2.3/contributor-guide/templates/basic_template.html
-- guides/v2.4/contributor-guide/templates/basic_template.html
 redirect_to: https://developer.adobe.com/commerce/contributor/guides/doc-contributions/
 ---
 

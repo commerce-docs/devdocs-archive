@@ -9,7 +9,6 @@ return_to:
    url: contributor-guide/contributing.html
 redirect_from:
 - guides/v2.3/contributor-guide/templates/tutorial-template-middle.html
-- guides/v2.4/contributor-guide/templates/tutorial-template-middle.html
 ---
 
 Add the content for each step as you see fit.
