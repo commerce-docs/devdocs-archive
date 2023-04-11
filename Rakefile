@@ -63,6 +63,36 @@ task build: %w[clean] do
   puts 'Built!'.green
 end
 
+desc 'Build the entire website'
+task build_and_deploy: %w[clean] do
+  print 'Building the site with Jekyll: $ '.magenta
+
+  # Check for uncommitted messages
+  abort "\nCannot checkout. The branch contains uncommitted messages.".red unless `git status --short`.empty?
+
+  # Back up an environmental variable
+  jekyll_env = ENV['JEKYLL_ENV']
+  ENV['JEKYLL_ENV'] = 'production'
+  # Build the site
+  sh 'bundle exec jekyll build --verbose --baseurl=/devdocs/2.3'
+  # Restore the environmental variable
+  ENV['JEKYLL_ENV'] = jekyll_env
+
+  # Remember the SHA of the built commit
+  commit = `git log --pretty=format:"%h" -1`
+
+  # Deploy the site
+  # `git checkout gh-pages-v2.3`
+  # `cp -R _site/ ./`
+  # `git add --all`
+  # `git commit --message "Deploy #{commit}"`
+  # `git push public`
+  # `git checkout -`
+
+  puts 'Done!'.green
+end
+
+
 desc 'Pull docs from external repositories'
 task init: %w[multirepo:init]
 

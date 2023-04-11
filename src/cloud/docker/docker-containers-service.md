@@ -410,4 +410,4 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [varnish]: https://hub.docker.com/r/magento/magento-cloud-docker-varnish
 [varnish]: https://hub.docker.com/r/magento/magento-cloud-docker-varnish
 [web config]: https://github.com/magento/docker
-[Configure the lock provider]: {{site.baseurl}}/guides/v2.4/install-gde/install/cli/install-cli-subcommands-lock.html#instgde-cli-lockconfig
+[Configure the lock provider]: https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-lock.html#instgde-cli-lockconfig

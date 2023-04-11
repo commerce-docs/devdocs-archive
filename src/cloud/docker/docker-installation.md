@@ -42,7 +42,7 @@ When you initialize a {{site.data.var.ee}} project for Docker development, you m
 {:.procedure}
 To install an {{site.data.var.ee}} on-premises project:
 
-1. Create a project using [Composer]({{site.baseurl}}/guides/v2.4/install-gde/composer.html).
+1. Create a project using [Composer](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html).
 
    ```bash
     composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>

@@ -172,7 +172,7 @@ Now you can see all requests that are passing through the TLS container and chec
 [web-container]: {{site.baseurl}}/cloud/docker/docker-containers-service.html#web-container
 [mount-configuration]: {{site.baseurl}}/cloud/project/magento-app-properties.html#mounts
 [zookeeper-container]: {{site.baseurl}}/cloud/docker/docker-containers-service.html#zookeeper-container
-[lock provider]: {{site.baseurl}}/guides/v2.4/install-gde/install/cli/install-cli-subcommands-lock.html#instgde-cli-lockconfig
+[lock provider]: https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-lock.html#instgde-cli-lockconfig
 <!--Custom css-->
 
 <!--

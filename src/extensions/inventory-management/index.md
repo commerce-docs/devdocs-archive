@@ -12,7 +12,7 @@ These features and extensions were developed as part of the [Magento Inventory (
 
 {{site.data.var.im}} installs with Magento {{site.data.var.ce}} and {{site.data.var.ee}} with all features enabled by default. No additional steps are required for enabling these inventory features. Upgrades from v2.1.x or 2.2.x may require additional steps. See [Upgrade Inventory Management](#upgrade-inventory-management).
 
-We recommend installing according to [Install Magento Using Composer]({{site.baseurl}}/guides/v2.4/install-gde/composer.html). You must install with a metapackage to receive all {{site.data.var.im}} modules.
+We recommend installing according to [Install Magento Using Composer](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html). You must install with a metapackage to receive all {{site.data.var.im}} modules.
 
 The following line in the `composer.json` metapackage installs Inventory Management:
 
@@ -20,7 +20,7 @@ The following line in the `composer.json` metapackage installs Inventory Managem
         magento/inventory-composer-metapackage = 1.1.3
 ```
 
-For a list of {{site.data.var.im}} metapackage versions, see the [release notes]({{site.baseurl}}/guides/v2.4/inventory/release-notes.html).
+For a list of {{site.data.var.im}} metapackage versions, see the [release notes](https://devdocs.magento.com/guides/v2.4/inventory/release-notes.html).
 
 The {{site.data.var.im}} installation process adds all modules to the `<Magento_installation_directory>/app/etc/config.php` file. A `1` value indicates the corresponding module is enabled. The following list of modules are added:
 
@@ -88,7 +88,7 @@ You may need to disable {{site.data.var.im}} modules to:
 *  Use custom or third-party inventory and Order Management System (OMS) modules.
 *  Use [OMS](https://omsdocs.magento.com) for inventory and order management. The current OMS Connector does not support {{site.data.var.im}} interfaces. We plan to support this integration in a later release.
 
-See the [Enable or disable modules]({{site.baseurl}}/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html) topic, specifically the [Module status]({{site.baseurl}}/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-status) and [Module enable, disable]({{site.baseurl}}/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable) sections, for information about how to disable the applicable modules.
+See the [Enable or disable modules](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html) topic, specifically the [Module status](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-status) and [Module enable, disable](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable) sections, for information about how to disable the applicable modules.
 
 When complete, you should a list of modules and values in `<Magento_installation_directory>/app/etc/config.php`, beginning with:
 
@@ -126,7 +126,7 @@ To enable {{site.data.var.im}} modules:
    bin/magento cache:clean
    ```
 
-We also recommend using [reservation inconsistencies commands]({{site.baseurl}}/guides/v2.4/inventory/inventory-cli-reference.html) after upgrading. When upgrading, all of your products will be added to the Default Stock. If you have pending orders, the commands correctly update your salable quantity and reservations for sales and order fulfillment.
+We also recommend using [reservation inconsistencies commands](https://devdocs.magento.com/guides/v2.4/inventory/inventory-cli-reference.html) after upgrading. When upgrading, all of your products will be added to the Default Stock. If you have pending orders, the commands correctly update your salable quantity and reservations for sales and order fulfillment.
 
 ### Previous {{site.data.var.im}} versions
 
@@ -141,12 +141,12 @@ For the latest, update your metapackage version:
 See the following guides for more information on upgrades:
 
 *  [Software Update Guide](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html)
-*  [Enable or disable modules]({{site.baseurl}}/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html)
+*  [Enable or disable modules](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html)
 
 ## Additional information
 
 See the following guides for more information on {{site.data.var.im}}:
 
-*  [Release Notes]({{site.baseurl}}/guides/v2.4/inventory/release-notes.html)
-*  [Inventory Management]({{site.baseurl}}/guides/v2.4/inventory/index.html) overview for developer resources
+*  [Release Notes](https://devdocs.magento.com/guides/v2.4/inventory/release-notes.html)
+*  [Inventory Management](https://devdocs.magento.com/guides/v2.4/inventory/index.html) overview for developer resources
 *  [Managing Inventory](https://docs.magento.com/m2/ce/user_guide/catalog/inventory-management.html) in the Magento 2 User Guides for merchant information

@@ -2,12 +2,12 @@
 # Each setting is available on pages using Liquid {{ site.<config key> }}. For example, {{ site.title }}.
 # For more details about available options and defaults, refer to https://jekyllrb.com/docs/configuration/
 #
-title: Adobe Commerce Developer Guide
+title: Archived 2.3 Magento Developer Guide
 logo: Commerce DevDocs
-description: Adobe Commerce Developer Guide
+description: Magento Developer Guide
 
 # the base protocol and domain
-url: https://devdocs.magento.com
+url: http://magento.github.io/devdocs/
 
 # Site theme: https://github.com/commerce-docs/devdocs-theme
 # About themes in Jekyll: https://jekyllrb.com/docs/themes/
@@ -22,15 +22,11 @@ plugins_dir: ./_plugins
 
 # Parameters for the version switcher. Numeric values must be wrapped in quotes.
 #
-version: "2.4"
+version: "2.3"
 versions:
   -
     name: "2.3"
     url: /guides/v2.3/
-  -
-    name: "2.4"
-    url: /guides/v2.4/
-
 
 collections:
   videos:
@@ -59,12 +55,6 @@ defaults:
       path: guides/v2.3
     values:
       guide_version: '2.3'
-
-  -
-    scope:
-      path: guides/v2.4
-    values:
-      guide_version: '2.4'
 
   -
     scope:
@@ -125,23 +115,9 @@ defaults:
 
   -
     scope:
-      path: guides/v2.4/mrg
-    values:
-      group: module-reference-guide-2_4
-      layout: migrated
-
-  -
-    scope:
       path: guides/v2.3/install-gde
     values:
       group: installation-guide
-
-  -
-    scope:
-      path: guides/v2.4/install-gde
-    values:
-      group: installation-guide
-
 
 ##########################
 # Plugins and extensions #
@@ -198,20 +174,6 @@ kramdown:
     block:
       line_numbers: true
 
-# Search engine settings. For more details, refer to https://github.com/algolia/jekyll-algolia
-#
-algolia:
-  application_id: E642SEDTHL
-  index_name: devdocs
-  # search-only API key allows to search data immediately.
-  # It is safe to use in production front-end code.
-  # Used at src/_includes/layout/header-scripts.html
-  # For more details, refer to: https://www.algolia.com/doc/guides/security/api-keys/#search-only-api-key
-  search_only_key: d2d0f33ab73e291ef8d88d8b565e754c #gitleaks:allow
-
-google:
-  gtm: GTM-KRCLXBB
-
 # Toggles the _plugin/html-check-hook.rb script that checks links in the generated HTML
 #
 check_links: true
@@ -224,14 +186,15 @@ check_links: true
 mage2bloburl: https://github.com/magento/magento2/blob
 
 # Current version
-gdeurl: /guides/v2.4
+gdeurl: /guides/v2.3
 
 # URL to downloadable binary files, such as .ai, .psd, .zip, .pdf, .sketch
 downloads: https://devdocs.magento.com/download
 
 # URL to the User guide
-user_guide_url: https://docs.magento.com/user-guide
+user_guide_url: https://docs.magento.com/user-guide/v2.3
 
 # Patterns to exclude for Jekyll
 exclude:
   - .git
+  - tmp

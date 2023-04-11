@@ -91,7 +91,7 @@ Release date: August 12, 2021
 
 Critical patch for {{site.data.var.ee}} 2.4.3 and 2.3.7-p1:
 
--  **Issue with API rate limiting**—This patch corrects a default rate limit that prevented Web APIs from processing requests with more than 20 items in an array. This patch raises the default value of the rate limit. See the {{site.data.var.ee}} [2.4.3 release notes]({{site.baseurl}}/guides/v2.4/release-notes/commerce-2-4-3.html#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting) and the [2.3.7 release notes]({{site.baseurl}}/guides/v2.3/release-notes/2-3-7-p1.html#apply-mc-43048__set_rate_limits__237-p1patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+-  **Issue with API rate limiting**—This patch corrects a default rate limit that prevented Web APIs from processing requests with more than 20 items in an array. This patch raises the default value of the rate limit. See the {{site.data.var.ee}} [2.4.3 release notes](https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-3.html#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting) and the [2.3.7 release notes]({{site.baseurl}}/guides/v2.3/release-notes/2-3-7-p1.html#apply-mc-43048__set_rate_limits__237-p1patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 

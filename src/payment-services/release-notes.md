@@ -29,7 +29,7 @@ These release notes describe the initial release of Payment Services and include
 
 *  {:.new}<!-- Issue PAY-1443 -->It is possible to customise the look and feel of PayPal buttons and the CC fields for the [Payment Services]({{site.baseurl}}/payment-services/customize-buttons-messaging.html) extension.
 
-*  {:.bug}<!-- Issue PAY-2473 -->Using [incorrect composer keys](https://support.magento.com/hc/en-us/articles/4406603542541) during installation of the extension prevents user to [authenticate]({{site.baseurl}}/guides/v2.4/install-gde/prereq/connect-auth.html) with correct `MAGEID`.
+*  {:.bug}<!-- Issue PAY-2473 -->Using [incorrect composer keys](https://support.magento.com/hc/en-us/articles/4406603542541) during installation of the extension prevents user to [authenticate](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html) with correct `MAGEID`.
 
 *  {:.bug}<!-- Issue PAY-2474 -->Payment Services [reports](https://support.magento.com/hc/en-us/articles/4406114741517) for Payout and Order payment status may not synchronize immediately.
 
