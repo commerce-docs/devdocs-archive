@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Install by cloning repositories | Archived 2.3 Magento Developer Guide</title>
+	<meta name="description" content="Magento Developer Guide">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/app.css?ver=20" />
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/print.css?ver=20" media="print" />
+	<script src="https://assets.adobedtm.com/a7d65461e54e/f87b70cb627a/launch-b042bff6c581.min.js" async></script>
+
+	<link rel="stylesheet" href="/devdocs/2.3/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.3";
+  var algolia = {
+    id: "E642SEDTHL",
+    index: "devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [{
+      label: "Results",
+      name: "devdocs",
+      facetFilters: [
+        ["guide_version: 2.3",
+          "versionless: true"
+        ]
+      ],
+      refinements: [{
+        label: "Functional areas",
+        attribute: "functional_areas"
+      }],
+      baseUrl: "/devdocs/2.3"
+    }
+  ];
+
+</script>
+
+
+
+
+	<link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://adobe.com/favicon.ico">
+
+</head>
+
+<body class="layout-default">
+
+	<header class="site-header">
+
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.3/">
+      <img class="logo-image" src="/devdocs/2.3/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Adobe</span>
+      <span class="site-logo">Commerce DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation --><ul class="nav-main spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" role="menubar"><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Cloud</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud basics</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html" class="spectrum-Menu-itemLabel ">Cloud Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html" class="spectrum-Menu-itemLabel ">Cloud Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/file-structure.html" class="spectrum-Menu-itemLabel ">Project Structure</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/best-practices.html" class="spectrum-Menu-itemLabel ">Upgrades and Patches</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html" class="spectrum-Menu-itemLabel ">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud development</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/" class="spectrum-Menu-itemLabel ">Local development</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/configure/" class="spectrum-Menu-itemLabel ">Configure and launch Docker</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/" class="spectrum-Menu-itemLabel ">Docker quick reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html" class="spectrum-Menu-itemLabel ">Configure Application</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html" class="spectrum-Menu-itemLabel ">Configure Environments</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Functional Testing</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/" class="spectrum-Menu-itemLabel ">Application testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/" class="spectrum-Menu-itemLabel ">Cloud code testing</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Setup</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-Menu-itemLabel ">Installation Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html" class="spectrum-Menu-itemLabel ">Extensions Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html" class="spectrum-Menu-itemLabel ">Software Update Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-Menu-itemLabel ">Configuration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-Menu-itemLabel ">Performance Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/migration/bk-migration-guide.html" class="spectrum-Menu-itemLabel ">Migration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html" class="spectrum-Menu-itemLabel ">Release Information</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/reference/cli/magento.html" class="spectrum-Menu-itemLabel ">Command-line Tools Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html" class="spectrum-Menu-itemLabel ">Tools</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Development</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Backend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-Menu-itemLabel ">Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html" class="spectrum-Menu-itemLabel ">PHP Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ext-best-practices/bk-ext-best-practices.html" class="spectrum-Menu-itemLabel ">Extension Developer Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/mrg/intro.html" class="spectrum-Menu-itemLabel ">Module Reference Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-Menu-itemLabel ">Coding Standards</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/guides/" class="spectrum-Menu-itemLabel ">Contributor Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/" class="spectrum-Menu-itemLabel ">Contribution Resources</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Frontend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html" class="spectrum-Menu-itemLabel ">Frontend Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ui_comp_guide/bk-ui_comps.html" class="spectrum-Menu-itemLabel ">UI Components Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html" class="spectrum-Menu-itemLabel ">JavaScript Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/pattern-library/bk-pattern.html" class="spectrum-Menu-itemLabel ">Admin Design Pattern Library</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/design-styleguide/bk-styleguide.html" class="spectrum-Menu-itemLabel ">Admin Style Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/pwa-studio/" class="spectrum-Menu-itemLabel ">PWA Documentation Site</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder Developer Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">API</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/bk-get-started-api.html" class="spectrum-Menu-itemLabel ">Get Started with our Web APIs</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/bk-rest.html" class="spectrum-Menu-itemLabel ">REST API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/soap/bk-soap.html" class="spectrum-Menu-itemLabel ">SOAP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/graphql/" class="spectrum-Menu-itemLabel ">GraphQL Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/" class="spectrum-Menu-itemLabel ">Marketplace EQP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/mbi/docs/getting-started.html" class="spectrum-Menu-itemLabel ">Commerce Reporting API</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Testing</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/testing.html" class="spectrum-Menu-itemLabel ">Application Testing Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://devdocs.magento.com/mftf/v2/docs/introduction.html" class="spectrum-Menu-itemLabel ">Functional Acceptance Testing (MFTF)</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/integration/integration_test_execution.html" class="spectrum-Menu-itemLabel ">Integration Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/js/jasmine.html" class="spectrum-Menu-itemLabel ">JavaScript Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/unit/unit_test_execution.html" class="spectrum-Menu-itemLabel ">PHP Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/web-api-functional-testing.html" class="spectrum-Menu-itemLabel ">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Functional Areas</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/advanced-reporting/overview.html" class="spectrum-Menu-itemLabel ">Advanced Reporting</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/b2b/bk-b2b.html" class="spectrum-Menu-itemLabel ">B2B</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html" class="spectrum-Menu-itemLabel ">Catalog Service</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/inventory/index.html" class="spectrum-Menu-itemLabel ">Inventory Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html" class="spectrum-Menu-itemLabel ">Live Search</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/" class="spectrum-Menu-itemLabel ">Commerce Marketplace</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html" class="spectrum-Menu-itemLabel ">Payment Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://omsdocs.magento.com/en/" class="spectrum-Menu-itemLabel ">Order Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/developer/development-overview.html" class="spectrum-Menu-itemLabel ">Product Recommendations Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html" class="spectrum-Menu-itemLabel ">Security and Compliance</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/services/shared-services/" class="spectrum-Menu-itemLabel ">Shared Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/staging.html" class="spectrum-Menu-itemLabel ">Staging</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Tutorials</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/tutorials/index.html" class="spectrum-Menu-itemLabel ">Rest Tutorials</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/custom-attributes/introduction.html" class="spectrum-Menu-itemLabel ">Custom Attributes</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/customize_product.html" class="spectrum-Menu-itemLabel ">Customize Product Creation Form</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Customize Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/support/" class="spectrum-Menu-itemLabel ">Support</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/overview.html" class="spectrum-Menu-itemLabel ">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      <div class="version-switcher">
+	<button class="spectrum-Picker spectrum-Picker--sizeM dropdown-toggle" disabled>
+		<span class="spectrum-Picker-label">Version 2.3</span>
+	</button>
+</div>
+
+      
+        <div class="search-btn">
+  <button class="search-trigger" aria-label="Search">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Search">
+      <rect opacity="0" width="18" height="18" /><path class="a" d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+    </svg>
+  </button>
+</div>
+
+<div class="quick-search">
+  <form class="spectrum-Search spectrum-Textfield search-form"
+      action="/devdocs/2.3/guides/v2.3/search.html">
+  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
+    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+    <rect fill="#ff13dc" opacity="0" width="18" height="18" />
+    <path class="a"
+      d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+  </svg>
+  <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+    <div class="spectrum-ClearButton-fill">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+        <path class="a"
+          d="M13.2425,3.343,9,7.586,4.7575,3.343a.5.5,0,0,0-.707,0L3.343,4.05a.5.5,0,0,0,0,.707L7.586,9,3.343,13.2425a.5.5,0,0,0,0,.707l.707.7075a.5.5,0,0,0,.707,0L9,10.414l4.2425,4.243a.5.5,0,0,0,.707,0l.7075-.707a.5.5,0,0,0,0-.707L10.414,9l4.243-4.2425a.5.5,0,0,0,0-.707L13.95,3.343a.5.5,0,0,0-.70711-.00039Z" />
+      </svg>
+    </div>
+  </button>
+</form>
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Installation Guide</h4>
+		
+		<div class="collapsible-navigation">
+		  <ul class="spectrum-SideNav spectrum-SideNav--multiLevel"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-SideNav-itemLink ">Installation flow</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/system-requirements.html" class="spectrum-SideNav-itemLink ">System requirements</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/prereq-overview.html" class="spectrum-SideNav-itemLink ">Prerequisites</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/apache.html" class="spectrum-SideNav-itemLink ">Apache</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/nginx.html" class="spectrum-SideNav-itemLink ">nginx</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/mysql.html" class="spectrum-SideNav-itemLink ">MySQL</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/php-settings.html" class="spectrum-SideNav-itemLink ">PHP</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/connect-auth.html" class="spectrum-SideNav-itemLink ">Get your authentication keys</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">File system ownership and permissions</span><ul class=""><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/file-sys-perms-over.html" class="spectrum-SideNav-itemLink ">Overview of ownership and permissions</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/file-system-perms.html" class="spectrum-SideNav-itemLink ">Set pre-installation ownership and permissions</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/install-rabbitmq.html" class="spectrum-SideNav-itemLink ">RabbitMQ</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/mysql_remote.html" class="spectrum-SideNav-itemLink ">Set up a remote MySQL database connection</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/security.html" class="spectrum-SideNav-itemLink ">SELinux and iptables</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/optional.html" class="spectrum-SideNav-itemLink ">Optional software</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/bk-install-guide.html" class="spectrum-SideNav-itemLink ">Get the software</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/composer.html" class="spectrum-SideNav-itemLink ">Quick start install</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/contrib-git.html" class="spectrum-SideNav-itemLink ">Contributor install</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/dev_install.html" class="spectrum-SideNav-itemLink ">Clone the repository</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/dev_downgrade.html" class="spectrum-SideNav-itemLink ">Change to a released version</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/prepare-install.html" class="spectrum-SideNav-itemLink ">Update installation dependencies</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli.html" class="spectrum-SideNav-itemLink ">Advanced install</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/continue-to-verify_cli.html" class="spectrum-SideNav-itemLink ">Post Installation</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/verify.html" class="spectrum-SideNav-itemLink ">Verify the installation</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/post-install-config.html" class="spectrum-SideNav-itemLink ">Configure the application</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/post-install-umask.html" class="spectrum-SideNav-itemLink ">Optionally set a umask</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/sample-data-after-magento.html" class="spectrum-SideNav-itemLink ">Install optional sample data</a><ul class=""><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/sample-data-after-composer.html" class="spectrum-SideNav-itemLink ">Install using Composer</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/sample-data-after-clone.html" class="spectrum-SideNav-itemLink ">Install by cloning repositories</a></li></ul></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Tutorials</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-backup.html" class="spectrum-SideNav-itemLink ">Back up and roll back the file system, media, and database</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-consumers.html" class="spectrum-SideNav-itemLink ">Configure consumer behavior</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-lock.html" class="spectrum-SideNav-itemLink ">Configure the lock provider</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-store.html" class="spectrum-SideNav-itemLink ">Configure the store</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-admin.html" class="spectrum-SideNav-itemLink ">Create, edit, or unlock an administrator account</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-deployment.html" class="spectrum-SideNav-itemLink ">Create or update the deployment configuration</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-db.html" class="spectrum-SideNav-itemLink ">Create the database schema</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-adminurl.html" class="spectrum-SideNav-itemLink ">Display or change the Admin URI</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-maint.html" class="spectrum-SideNav-itemLink ">Enable or disable maintenance mode</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html" class="spectrum-SideNav-itemLink ">Enable or disable modules</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/tutorials/change-docroot-to-pub.html" class="spectrum-SideNav-itemLink ">Modify docroot to improve security</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-sample-data-other.html" class="spectrum-SideNav-itemLink ">Remove sample data modules or update sample data</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-uninstall-langpk.html" class="spectrum-SideNav-itemLink ">Uninstall language packages</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-uninstall-mods.html" class="spectrum-SideNav-itemLink ">Uninstall modules</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-uninstall.html" class="spectrum-SideNav-itemLink ">Uninstall or reinstall Commerce</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-subcommands-db-upgr.html" class="spectrum-SideNav-itemLink ">Update the database schema and data</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-theme-uninstall.html" class="spectrum-SideNav-itemLink ">Uninstall themes Composer packages</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="https://support.magento.com/hc/en-us/categories/115000200533-Troubleshooting" class="spectrum-SideNav-itemLink ">Troubleshooting</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+
+  
+
+  
+  <div class="message-banner">
+    <center>Adobe Commerce 2.3 reached end of support in September 2022.</center>
+  </div>
+  
+
+  
+
+
+
+
+<!--   
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-itemLabel">Shantanu</span>
+  </div>
+</div> -->
+
+
+  <h1 class="page-title">Install by cloning repositories</h1>
+
+  
+
+  
+	<div class="github-links spectrum-ActionGroup--compact ActionGroup--justified"></div>
+	
+
+</section>
+
+			</header>
+			<main>
+				
+<h2 id="sample-clone">Install sample data by cloning repositories</h2>
+
+<p>This topic discusses how to clone and add Magento sample data if you cloned the Magento GitHub repository. This method is intended only for <abbr title="Developers who contribute code to the Magento 2 CE codebase">contributing developers</abbr> (that is, developers who plan to contribute to the Magento 2 codebase).</p>
+
+<p>If you’re not a <abbr title="A developer who contributes code to the Magento 2 CE codebase">contributing developer</abbr>, choose one of the other options displayed in the table of contents on the left side of the page.</p>
+
+<p><abbr title="Developers who contribute code to the Magento 2 CE codebase">Contributing developers</abbr> can use this method of installing sample data <em>only</em> if all of the following are true:</p>
+
+<ul>
+  <li>You use Magento Open Source</li>
+  <li>You <a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/dev_install.html">cloned the Magento 2 repository</a>.</li>
+</ul>
+
+<p class="bs-callout-warning">You can use sample data with either the <code class="language-plaintext highlighter-rouge">develop</code> branch (more current) or a released branch (such as <code class="language-plaintext highlighter-rouge">2.2</code> or <code class="language-plaintext highlighter-rouge">2.2.5</code> (more stable)). We recommend you use a released branch because it’s more stable. If you’re contributing code to the Magento 2 repository and you need the most recent code, use the <code class="language-plaintext highlighter-rouge">develop</code> branch. Regardless of the branch you choose, you must <a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/dev_install.html">clone</a> the corresponding branch of the Magento 2 GitHub repository. For example, sample data for the <code class="language-plaintext highlighter-rouge">develop</code> branch can be used <em>only</em> with the Magento 2 <code class="language-plaintext highlighter-rouge">develop</code> branch.</p>
+
+<p>See the following sections:</p>
+
+<ul>
+  <li><a href="#clone-sample-repo">Clone the sample data repository</a></li>
+  <li><a href="#samp-data-perms">Set file system ownership and permissions</a></li>
+</ul>
+
+<h2 id="clone-sample-repo">Clone the sample data repository</h2>
+
+<p>This section discusses how to install Magento sample data by cloning the sample data repository. You can clone the sample data repository in any of the following ways:</p>
+
+<ul>
+  <li>Clone with the <a href="#clone-sample-repo-ssh">SSH protocol</a></li>
+  <li>Clone with the <a href="#instgde-prereq-compose-clone-https">HTTPS protocol</a></li>
+</ul>
+
+<h3 id="clone-sample-repo-ssh">Clone with SSH</h3>
+
+<p>To clone the Magento sample data GitHub repository using the SSH protocol:</p>
+
+<ol>
+  <li>In a web browser, go to <a href="https://github.com/magento/magento2-sample-data">the Magento sample data repository</a>.</li>
+  <li>Next to the name of the branch, click <strong>SSH</strong> from the list.</li>
+  <li>
+    <p>Click <strong>Copy to clipboard</strong></p>
+
+    <p>The following figure shows an example.</p>
+
+    <p><img src="/devdocs/2.3/common/images/install_mage2_clone-ssh.png" alt="Clone the Magento GitHub repository using SSH" width="650px" /></p>
+  </li>
+  <li>
+    <p>Change to your web server’s docroot directory.</p>
+
+    <p>Typically, for Ubuntu, it is <code class="language-plaintext highlighter-rouge">/var/www</code> and for CentOS it is <code class="language-plaintext highlighter-rouge">/var/www/html</code>.</p>
+  </li>
+  <li>
+    <p>Enter <code class="language-plaintext highlighter-rouge">git clone</code> and paste the value you obtained from step 1.</p>
+
+    <p>An example follows:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git clone git@github.com:magento/magento2-sample-data.git
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Wait for the repository to clone on your server.</p>
+
+    <p class="bs-callout-info">If the following error displays, make sure you <a href="https://help.github.com/articles/generating-ssh-keys/">shared your SSH key</a> with GitHub:<br /></p>
+
+    <div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="go">Cloning into 'magento2'...
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+</span></pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Ensure you checkout the branch of the sample data repository that corresponds with the branch you used from the main <code class="language-plaintext highlighter-rouge">magento2</code> repository.</p>
+
+    <p>For example:</p>
+
+    <p>If you used the <code class="language-plaintext highlighter-rouge">2.2-develop</code> branch of the Magento 2 repository, the Sample Data branch should be <code class="language-plaintext highlighter-rouge">2.2-develop</code>.</p>
+
+    <p>If you used the <code class="language-plaintext highlighter-rouge">2.2.5</code> branch of the Magento 2 repository, the Sample Data branch should be <code class="language-plaintext highlighter-rouge">2.2.5</code>.</p>
+
+    <p>To checkout the correct branch, run the following command from the sample data repository’s root directory (assuming you need the <code class="language-plaintext highlighter-rouge">2.2.5</code> branch):</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git checkout 2.2.5
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Change to <code class="language-plaintext highlighter-rouge">&lt;magento_root&gt;</code>.</li>
+  <li>
+    <p>Enter the following command to create symbolic links between the files you just cloned so sample data works properly:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php <span class="nt">-f</span> &lt;sample-data_clone_dir&gt;/dev/tools/build-sample-data.php <span class="nt">--</span> <span class="nt">--ce-source</span><span class="o">=</span><span class="s2">"&lt;path_to_your_magento_instance&gt;"</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Wait for the command to complete.</p>
+  </li>
+  <li>
+    <p>See <a href="#samp-data-perms">Set file system permissions and ownership</a>.</p>
+  </li>
+  <li>
+    <p>Run the following command:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:upgrade
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="instgde-prereq-compose-clone-https">Clone with HTTPS</h3>
+
+<p>To clone the Magento sample data GitHub repository using the HTTPS protocol:</p>
+
+<ol>
+  <li>In a web browser, go to <a href="https://github.com/magento/magento2-sample-data">the Magento sample data repository</a>.</li>
+  <li>On the right side of the page, under the <strong>clone URL</strong> field, click <strong>HTTPS</strong>.</li>
+  <li>
+    <p>Click <strong>Copy to clipboard</strong>.</p>
+
+    <p>The following figure shows an example.</p>
+
+    <p><img src="/devdocs/2.3/common/images/install_mage2_clone-https.png" alt="Clone the Magento GitHub repository using HTTPS" width="650px" /></p>
+  </li>
+  <li>
+    <p>Change to your web server’s docroot directory.</p>
+
+    <p>Typically, for Ubuntu, it’s <code class="language-plaintext highlighter-rouge">/var/www</code> and for CentOS it’s <code class="language-plaintext highlighter-rouge">/var/www/html</code>.</p>
+  </li>
+  <li>
+    <p>Enter <code class="language-plaintext highlighter-rouge">git clone</code> and paste the value you obtained from step 1.</p>
+
+    <p>An example follows:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/magento/magento2-sample-data.git
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Wait for the repository to clone on your server.</li>
+  <li>
+    <p>Ensure you checkout the branch of the sample data repository that corresponds with the branch you used from the main <code class="language-plaintext highlighter-rouge">magento2</code> repository.</p>
+
+    <p>For example:</p>
+
+    <p>If you used the <code class="language-plaintext highlighter-rouge">2.2-develop</code> branch of the Magento 2 repository, the Sample Data branch should be <code class="language-plaintext highlighter-rouge">2.2-develop</code>.</p>
+
+    <p>If you used the <code class="language-plaintext highlighter-rouge">2.2.5</code> branch of the Magento 2 repository, the Sample Data branch should be <code class="language-plaintext highlighter-rouge">2.2.5</code>.</p>
+
+    <p>To checkout the correct branch, run the following command from the sample data repository’s root directory (assuming you need the <code class="language-plaintext highlighter-rouge">2.2.5</code> branch):</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git checkout 2.2.5
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Change to <code class="language-plaintext highlighter-rouge">&lt;magento_root&gt;</code>.</li>
+  <li>
+    <p>Enter the following command to create symbolic links between the files you just cloned so sample data works properly:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php <span class="nt">-f</span> &lt;sample-data_clone_dir&gt;/dev/tools/build-sample-data.php <span class="nt">--</span> <span class="nt">--ce-source</span><span class="o">=</span><span class="s2">"&lt;path_to_your_magento_instance&gt;"</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>For example,</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php <span class="nt">-f</span> &lt;sample-data_clone_dir&gt;/dev/tools/build-sample-data.php <span class="nt">--</span> <span class="nt">--ce-source</span><span class="o">=</span><span class="s2">"/var/www/magento2"</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Wait for the command to complete.</li>
+  <li>See the next section.</li>
+</ol>
+
+<p class="bs-callout-warning">If you’re installing sample data <em>after</em> installing Magento, you must also run the following command to update the database and schema:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>&lt;magento_root&gt;/bin/magento setup:upgrade
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="samp-data-perms">Set file system ownership and permissions</h2>
+
+<p>Because the <code class="language-plaintext highlighter-rouge">php build-sample-data.php</code> script creates symlinks between the sample data repository and your Magento 2 repository, you must set file system permissions and ownership in the sample data repository. Failure to do so results in errors accessing the storefront.</p>
+
+<p>To set file system permissions and ownership on the sample data repository:</p>
+
+<ol>
+  <li>Change to your sample data clone directory.</li>
+  <li>
+    <p>Set ownership:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">chown</span> <span class="nt">-R</span> :&lt;your web server group name&gt; <span class="nb">.</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>Typical examples:</p>
+
+    <ul>
+      <li>
+        <p>CentOS: <code class="language-plaintext highlighter-rouge">chown -R :apache .</code></p>
+      </li>
+      <li>
+        <p>Ubuntu: <code class="language-plaintext highlighter-rouge">chown -R :www-data .</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Set permissions:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>find <span class="nb">.</span> <span class="nt">-type</span> d <span class="nt">-exec</span> <span class="nb">chmod </span>g+ws <span class="o">{}</span> +
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Clear static files:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> &lt;your Magento Open Source <span class="nb">install dir</span><span class="o">&gt;</span>/var
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">rm</span> <span class="nt">-rf</span> cache/<span class="k">*</span> page_cache/<span class="k">*</span> generation/<span class="k">*</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<!-- ABBREVIATIONS -->
+
+<h3 id="install-the-magento-software">Install the Magento software</h3>
+
+<p>After sample data installation is complete, install the Magento software using the <a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli.html">command line</a>.</p>
+
+			</main>
+			<footer class="content-footer">
+				<button class="page-updated spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+  <img class="spectrum-Icon spectrum-Icon--sizeS" src="/devdocs/2.3/assets/i/icons/time.svg" alt="Updated" />
+  <time class="spectrum-ActionButton-label" id="last-modified-at" itemprop="dateModified"
+    datetime="2021-02-16">
+    Feb 16th, 2021
+  </time>
+</button>
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+</div>
+<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+    <div class="container">
+  
+      <div class="copyright-links">
+        
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="  " role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md" class=" ">Become a Contributor</a></li>
+
+  <li class="  " role="menuitem"><a href="https://glossary.magento.com/" class=" ">Glossary</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/privacy/" class=" ">Privacy Policy</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/" class=" ">Terms of Service</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/licensing/" class=" ">License/Trademark FAQ</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/bk-release-notes.html" class=" ">Release Notes</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-open-source.html" class=" ">Third-Party Licenses</a></li>
+
+</ul>
+
+      </div>
+  
+          <div class="copyright-date">&copy; 2023 Adobe. All rights reserved.</div>
+  
+    </div>
+  </div>
+  <!-- / #footer -->
+  
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.3/assets/js/app.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/editions.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/page-updated.min.js?ver=20"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.3/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+
+</html>

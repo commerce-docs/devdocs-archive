@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Security overview | Archived 2.3 Magento Developer Guide</title>
+	<meta name="description" content="Magento Developer Guide">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/app.css?ver=20" />
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/print.css?ver=20" media="print" />
+	<script src="https://assets.adobedtm.com/a7d65461e54e/f87b70cb627a/launch-b042bff6c581.min.js" async></script>
+
+	<link rel="stylesheet" href="/devdocs/2.3/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.3";
+  var algolia = {
+    id: "E642SEDTHL",
+    index: "devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [{
+      label: "Results",
+      name: "devdocs",
+      facetFilters: [
+        ["guide_version: 2.3",
+          "versionless: true"
+        ]
+      ],
+      refinements: [{
+        label: "Functional areas",
+        attribute: "functional_areas"
+      }],
+      baseUrl: "/devdocs/2.3"
+    }
+  ];
+
+</script>
+
+
+
+
+	<link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://adobe.com/favicon.ico">
+
+</head>
+
+<body class="layout-default">
+
+	<header class="site-header">
+
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.3/">
+      <img class="logo-image" src="/devdocs/2.3/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Adobe</span>
+      <span class="site-logo">Commerce DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation --><ul class="nav-main spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" role="menubar"><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Cloud</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud basics</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html" class="spectrum-Menu-itemLabel ">Cloud Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html" class="spectrum-Menu-itemLabel ">Cloud Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/file-structure.html" class="spectrum-Menu-itemLabel ">Project Structure</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/best-practices.html" class="spectrum-Menu-itemLabel ">Upgrades and Patches</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html" class="spectrum-Menu-itemLabel ">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud development</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/" class="spectrum-Menu-itemLabel ">Local development</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/configure/" class="spectrum-Menu-itemLabel ">Configure and launch Docker</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/" class="spectrum-Menu-itemLabel ">Docker quick reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html" class="spectrum-Menu-itemLabel ">Configure Application</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html" class="spectrum-Menu-itemLabel ">Configure Environments</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Functional Testing</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/" class="spectrum-Menu-itemLabel ">Application testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/" class="spectrum-Menu-itemLabel ">Cloud code testing</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Setup</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-Menu-itemLabel ">Installation Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html" class="spectrum-Menu-itemLabel ">Extensions Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html" class="spectrum-Menu-itemLabel ">Software Update Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-Menu-itemLabel ">Configuration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-Menu-itemLabel ">Performance Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/migration/bk-migration-guide.html" class="spectrum-Menu-itemLabel ">Migration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html" class="spectrum-Menu-itemLabel ">Release Information</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/reference/cli/magento.html" class="spectrum-Menu-itemLabel ">Command-line Tools Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html" class="spectrum-Menu-itemLabel ">Tools</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Development</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Backend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-Menu-itemLabel ">Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html" class="spectrum-Menu-itemLabel ">PHP Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ext-best-practices/bk-ext-best-practices.html" class="spectrum-Menu-itemLabel ">Extension Developer Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/mrg/intro.html" class="spectrum-Menu-itemLabel ">Module Reference Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-Menu-itemLabel ">Coding Standards</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/guides/" class="spectrum-Menu-itemLabel ">Contributor Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/" class="spectrum-Menu-itemLabel ">Contribution Resources</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Frontend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html" class="spectrum-Menu-itemLabel ">Frontend Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ui_comp_guide/bk-ui_comps.html" class="spectrum-Menu-itemLabel ">UI Components Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html" class="spectrum-Menu-itemLabel ">JavaScript Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/pattern-library/bk-pattern.html" class="spectrum-Menu-itemLabel ">Admin Design Pattern Library</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/design-styleguide/bk-styleguide.html" class="spectrum-Menu-itemLabel ">Admin Style Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/pwa-studio/" class="spectrum-Menu-itemLabel ">PWA Documentation Site</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder Developer Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">API</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/bk-get-started-api.html" class="spectrum-Menu-itemLabel ">Get Started with our Web APIs</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/bk-rest.html" class="spectrum-Menu-itemLabel ">REST API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/soap/bk-soap.html" class="spectrum-Menu-itemLabel ">SOAP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/graphql/" class="spectrum-Menu-itemLabel ">GraphQL Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/" class="spectrum-Menu-itemLabel ">Marketplace EQP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/mbi/docs/getting-started.html" class="spectrum-Menu-itemLabel ">Commerce Reporting API</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Testing</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/testing.html" class="spectrum-Menu-itemLabel ">Application Testing Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://devdocs.magento.com/mftf/v2/docs/introduction.html" class="spectrum-Menu-itemLabel ">Functional Acceptance Testing (MFTF)</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/integration/integration_test_execution.html" class="spectrum-Menu-itemLabel ">Integration Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/js/jasmine.html" class="spectrum-Menu-itemLabel ">JavaScript Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/unit/unit_test_execution.html" class="spectrum-Menu-itemLabel ">PHP Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/web-api-functional-testing.html" class="spectrum-Menu-itemLabel ">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Functional Areas</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/advanced-reporting/overview.html" class="spectrum-Menu-itemLabel ">Advanced Reporting</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/b2b/bk-b2b.html" class="spectrum-Menu-itemLabel ">B2B</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html" class="spectrum-Menu-itemLabel ">Catalog Service</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/inventory/index.html" class="spectrum-Menu-itemLabel ">Inventory Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html" class="spectrum-Menu-itemLabel ">Live Search</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/" class="spectrum-Menu-itemLabel ">Commerce Marketplace</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html" class="spectrum-Menu-itemLabel ">Payment Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://omsdocs.magento.com/en/" class="spectrum-Menu-itemLabel ">Order Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/developer/development-overview.html" class="spectrum-Menu-itemLabel ">Product Recommendations Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html" class="spectrum-Menu-itemLabel ">Security and Compliance</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/services/shared-services/" class="spectrum-Menu-itemLabel ">Shared Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/staging.html" class="spectrum-Menu-itemLabel ">Staging</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Tutorials</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/tutorials/index.html" class="spectrum-Menu-itemLabel ">Rest Tutorials</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/custom-attributes/introduction.html" class="spectrum-Menu-itemLabel ">Custom Attributes</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/customize_product.html" class="spectrum-Menu-itemLabel ">Customize Product Creation Form</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Customize Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/support/" class="spectrum-Menu-itemLabel ">Support</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/overview.html" class="spectrum-Menu-itemLabel ">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      <div class="version-switcher">
+	<button class="spectrum-Picker spectrum-Picker--sizeM dropdown-toggle" disabled>
+		<span class="spectrum-Picker-label">Version 2.3</span>
+	</button>
+</div>
+
+      
+        <div class="search-btn">
+  <button class="search-trigger" aria-label="Search">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Search">
+      <rect opacity="0" width="18" height="18" /><path class="a" d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+    </svg>
+  </button>
+</div>
+
+<div class="quick-search">
+  <form class="spectrum-Search spectrum-Textfield search-form"
+      action="/devdocs/2.3/guides/v2.3/search.html">
+  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
+    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+    <rect fill="#ff13dc" opacity="0" width="18" height="18" />
+    <path class="a"
+      d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+  </svg>
+  <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+    <div class="spectrum-ClearButton-fill">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+        <path class="a"
+          d="M13.2425,3.343,9,7.586,4.7575,3.343a.5.5,0,0,0-.707,0L3.343,4.05a.5.5,0,0,0,0,.707L7.586,9,3.343,13.2425a.5.5,0,0,0,0,.707l.707.7075a.5.5,0,0,0,.707,0L9,10.414l4.2425,4.243a.5.5,0,0,0,.707,0l.7075-.707a.5.5,0,0,0,0-.707L10.414,9l4.243-4.2425a.5.5,0,0,0,0-.707L13.95,3.343a.5.5,0,0,0-.70711-.00039Z" />
+      </svg>
+    </div>
+  </button>
+</form>
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Architecture Guide</h4>
+		
+		<div class="collapsible-navigation">
+		  <ul class="spectrum-SideNav spectrum-SideNav--multiLevel"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-SideNav-itemLink ">Introduction</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/ABasics_intro.html" class="spectrum-SideNav-itemLink ">Architectural basics</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/arch_diagrams.html" class="spectrum-SideNav-itemLink ">Architectural diagrams</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/frontend_custom_strategies.html" class="spectrum-SideNav-itemLink ">Frontend customization</a></li><li class="is-selected  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/security_intro.html" class="spectrum-SideNav-itemLink ">Security overview</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/ALayers_intro.html" class="spectrum-SideNav-itemLink ">Architectural layers</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/domain_layer.html" class="spectrum-SideNav-itemLink ">Domain layer</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/persist_layer.html" class="spectrum-SideNav-itemLink ">Persistence layer</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/present_layer.html" class="spectrum-SideNav-itemLink ">Presentation layer</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/service_layer.html" class="spectrum-SideNav-itemLink ">Service layer</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-SideNav-itemLink ">Coding Standards</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/framework.html" class="spectrum-SideNav-itemLink ">Commerce and Magento Framework</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/extensibility.html" class="spectrum-SideNav-itemLink ">Modules and Extensibility</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/components/modules/mod_intro.html" class="spectrum-SideNav-itemLink ">Module overview</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/components/modules/mod_and_areas.html" class="spectrum-SideNav-itemLink ">Modules and areas</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/components/modules/mod_relationships.html" class="spectrum-SideNav-itemLink ">Module relationships</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/components/modules/mod_depend.html" class="spectrum-SideNav-itemLink ">Module dependencies</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/tech-vision.html" class="spectrum-SideNav-itemLink ">Technical vision</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/archi_perspectives/webapi-vision.html" class="spectrum-SideNav-itemLink ">Web Api</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+
+  
+
+  
+  <div class="message-banner">
+    <center>Adobe Commerce 2.3 reached end of support in September 2022.</center>
+  </div>
+  
+
+  
+
+
+
+
+<!--   
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-itemLabel">Shantanu</span>
+  </div>
+</div> -->
+
+
+  <h1 class="page-title">Security overview</h1>
+
+  
+
+  
+	<div class="github-links spectrum-ActionGroup--compact ActionGroup--justified"></div>
+	
+
+</section>
+
+			</header>
+			<main>
+				<p>The security of your data and digital experiences is our priority. To better protect Adobe Commerce and Magento Open Source installations from the physical layer up, we have implemented hundreds of processes and controls to help us comply with <a href="https://docs.magento.com/m2/ee/user_guide/stores/compliance-industry.html">industry-accepted standards</a>, regulations, and certifications. To help protect installations from the software layer down, we build in security measures that are based on the <a href="https://www.adobe.com/security/engineering.html">Adobe Secure Product Lifecyle</a>.</p>
+
+<p>Although there is no single way to eliminate all security risks, there are many steps you can take to harden your installations and make them a less attractive target for bad actors. The <a href="https://www.adobe.com/content/dam/acom/en/security/pdfs/Adobe-Magento-Commerce-Best-Practices-Guide.pdf">Security Best Practices Guide</a> offers insight and practical guidelines to help protect all installations from security incidents.</p>
+
+<h2 id="examples-of-built-in-security-measures">Examples of built-in security measures</h2>
+
+<h3 id="enhanced-password-management">Enhanced password management</h3>
+
+<p>Magento has strengthened the hashing algorithms (SHA-256) used in password management. Magento now supports Argon2ID13 through the PHP sodium extension, which requires the libsodium library version 1.0.13 or higher.</p>
+
+<h3 id="improved-prevention-of-cross-site-scripting-xss-attacks-by-making-escaped-data-the-default">Improved prevention of cross-site scripting (XSS) attacks by making escaped data the default</h3>
+
+<p>The Magento Framework has adopted conventions that regulate the escaping of data in output. These conventions include the ability to escape  output for <a href="https://glossary.magento.com/html">HTML</a> pages (HTML, JSON, and JavaScript) and email. Where possible, escaping is transparent to client code. See <a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/xss-protection.html">Security measures against XSS attacks</a> in the <a href="https://glossary.magento.com/frontend">Frontend</a> Developer Guide.</p>
+
+<h3 id="more-flexible-file-system-ownership-and-permissions">More flexible file system ownership and permissions</h3>
+
+<p>Starting in version 2.0.6, Magento no longer explicitly sets file system permissions. Instead, we recommend that certain files and directories be writable in a development environment and read-only in a production environment.</p>
+
+<p>To provide you with a simple way to restrict access to the file system in production, we provide the flexibility for you to further restrict those permissions using a <a href="https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html">umask</a>.</p>
+
+<p>For an overview, see <a href="/devdocs/2.3/guides/v2.3/install-gde/prereq/file-sys-perms-over.html">Overview of ownership and permissions</a>.</p>
+
+<p>For details about ownership and permissions in development and production, see <a href="/devdocs/2.3/guides/v2.3/config-guide/prod/prod_file-sys-perms.html">Magento ownership and permissions in development and production</a>.</p>
+
+<h3 id="improved-prevention-of-clickjacking-exploits">Improved prevention of clickjacking exploits</h3>
+
+<p>Magento safeguards your store from clickjacking attacks by using an X-Frame-Options HTTP request header. For more information, see <a href="/devdocs/2.3/guides/v2.3/config-guide/secy/secy-xframe.html">X-Frame-Options header</a>.</p>
+
+<h3 id="use-of-non-default-admin-url">Use of non-default Admin URL</h3>
+
+<p>A simple <a href="https://glossary.magento.com/magento-admin">Admin</a> <a href="https://glossary.magento.com/url">URL</a> (like <code class="language-plaintext highlighter-rouge">admin</code> or <code class="language-plaintext highlighter-rouge">backend</code>) makes it easy to target attacks on specific locations using automated password guessing. To prevent against this type of attack, Magento by default creates a random Admin URI when you install the product. The CLI command <code class="language-plaintext highlighter-rouge">php bin/magento info:adminuri</code> is provided so that you can  see the URI if you forget it. You can also use the CLI to change this URI.  Although the use of a non-default admin URL will not secure the site, its use will help prevent large-scale automated attacks. See <a href="/devdocs/2.3/guides/v2.3/install-gde/install/cli/install-cli-adminurl.html">Display or change the Admin URI</a> in Configuration Guide for more information.</p>
+
+<p class="ref-header">Related topics</p>
+
+<p><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html">Configuration Guide</a></p>
+
+
+			</main>
+			<footer class="content-footer">
+				<button class="page-updated spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+  <img class="spectrum-Icon spectrum-Icon--sizeS" src="/devdocs/2.3/assets/i/icons/time.svg" alt="Updated" />
+  <time class="spectrum-ActionButton-label" id="last-modified-at" itemprop="dateModified"
+    datetime="2022-08-01">
+    Aug 1st, 2022
+  </time>
+</button>
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+</div>
+<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+    <div class="container">
+  
+      <div class="copyright-links">
+        
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="  " role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md" class=" ">Become a Contributor</a></li>
+
+  <li class="  " role="menuitem"><a href="https://glossary.magento.com/" class=" ">Glossary</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/privacy/" class=" ">Privacy Policy</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/" class=" ">Terms of Service</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/licensing/" class=" ">License/Trademark FAQ</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/bk-release-notes.html" class=" ">Release Notes</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-open-source.html" class=" ">Third-Party Licenses</a></li>
+
+</ul>
+
+      </div>
+  
+          <div class="copyright-date">&copy; 2023 Adobe. All rights reserved.</div>
+  
+    </div>
+  </div>
+  <!-- / #footer -->
+  
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.3/assets/js/app.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/editions.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/page-updated.min.js?ver=20"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.3/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+
+</html>

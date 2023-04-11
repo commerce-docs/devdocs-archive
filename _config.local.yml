@@ -1,7 +1,0 @@
----
-exclude:
-  - guides
-  - mrg
-
-check_links: false
-# debug: site_pre_render

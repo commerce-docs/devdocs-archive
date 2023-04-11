@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Use environment variables to override configuration settings | Archived 2.3 Magento Developer Guide</title>
+	<meta name="description" content="Magento Developer Guide">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/app.css?ver=20" />
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/print.css?ver=20" media="print" />
+	<script src="https://assets.adobedtm.com/a7d65461e54e/f87b70cb627a/launch-b042bff6c581.min.js" async></script>
+
+	<link rel="stylesheet" href="/devdocs/2.3/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.3";
+  var algolia = {
+    id: "E642SEDTHL",
+    index: "devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [{
+      label: "Results",
+      name: "devdocs",
+      facetFilters: [
+        ["guide_version: 2.3",
+          "versionless: true"
+        ]
+      ],
+      refinements: [{
+        label: "Functional areas",
+        attribute: "functional_areas"
+      }],
+      baseUrl: "/devdocs/2.3"
+    }
+  ];
+
+</script>
+
+
+
+
+	<link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://adobe.com/favicon.ico">
+
+</head>
+
+<body class="layout-default">
+
+	<header class="site-header">
+
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.3/">
+      <img class="logo-image" src="/devdocs/2.3/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Adobe</span>
+      <span class="site-logo">Commerce DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation --><ul class="nav-main spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" role="menubar"><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Cloud</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud basics</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html" class="spectrum-Menu-itemLabel ">Cloud Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html" class="spectrum-Menu-itemLabel ">Cloud Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/file-structure.html" class="spectrum-Menu-itemLabel ">Project Structure</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/best-practices.html" class="spectrum-Menu-itemLabel ">Upgrades and Patches</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html" class="spectrum-Menu-itemLabel ">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud development</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/" class="spectrum-Menu-itemLabel ">Local development</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/configure/" class="spectrum-Menu-itemLabel ">Configure and launch Docker</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/" class="spectrum-Menu-itemLabel ">Docker quick reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html" class="spectrum-Menu-itemLabel ">Configure Application</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html" class="spectrum-Menu-itemLabel ">Configure Environments</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Functional Testing</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/" class="spectrum-Menu-itemLabel ">Application testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/" class="spectrum-Menu-itemLabel ">Cloud code testing</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Setup</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-Menu-itemLabel ">Installation Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html" class="spectrum-Menu-itemLabel ">Extensions Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html" class="spectrum-Menu-itemLabel ">Software Update Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-Menu-itemLabel ">Configuration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-Menu-itemLabel ">Performance Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/migration/bk-migration-guide.html" class="spectrum-Menu-itemLabel ">Migration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html" class="spectrum-Menu-itemLabel ">Release Information</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/reference/cli/magento.html" class="spectrum-Menu-itemLabel ">Command-line Tools Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html" class="spectrum-Menu-itemLabel ">Tools</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Development</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Backend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-Menu-itemLabel ">Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html" class="spectrum-Menu-itemLabel ">PHP Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ext-best-practices/bk-ext-best-practices.html" class="spectrum-Menu-itemLabel ">Extension Developer Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/mrg/intro.html" class="spectrum-Menu-itemLabel ">Module Reference Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-Menu-itemLabel ">Coding Standards</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/guides/" class="spectrum-Menu-itemLabel ">Contributor Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/" class="spectrum-Menu-itemLabel ">Contribution Resources</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Frontend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html" class="spectrum-Menu-itemLabel ">Frontend Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ui_comp_guide/bk-ui_comps.html" class="spectrum-Menu-itemLabel ">UI Components Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html" class="spectrum-Menu-itemLabel ">JavaScript Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/pattern-library/bk-pattern.html" class="spectrum-Menu-itemLabel ">Admin Design Pattern Library</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/design-styleguide/bk-styleguide.html" class="spectrum-Menu-itemLabel ">Admin Style Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/pwa-studio/" class="spectrum-Menu-itemLabel ">PWA Documentation Site</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder Developer Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">API</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/bk-get-started-api.html" class="spectrum-Menu-itemLabel ">Get Started with our Web APIs</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/bk-rest.html" class="spectrum-Menu-itemLabel ">REST API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/soap/bk-soap.html" class="spectrum-Menu-itemLabel ">SOAP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/graphql/" class="spectrum-Menu-itemLabel ">GraphQL Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/" class="spectrum-Menu-itemLabel ">Marketplace EQP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/mbi/docs/getting-started.html" class="spectrum-Menu-itemLabel ">Commerce Reporting API</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Testing</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/testing.html" class="spectrum-Menu-itemLabel ">Application Testing Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://devdocs.magento.com/mftf/v2/docs/introduction.html" class="spectrum-Menu-itemLabel ">Functional Acceptance Testing (MFTF)</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/integration/integration_test_execution.html" class="spectrum-Menu-itemLabel ">Integration Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/js/jasmine.html" class="spectrum-Menu-itemLabel ">JavaScript Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/unit/unit_test_execution.html" class="spectrum-Menu-itemLabel ">PHP Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/web-api-functional-testing.html" class="spectrum-Menu-itemLabel ">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Functional Areas</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/advanced-reporting/overview.html" class="spectrum-Menu-itemLabel ">Advanced Reporting</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/b2b/bk-b2b.html" class="spectrum-Menu-itemLabel ">B2B</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html" class="spectrum-Menu-itemLabel ">Catalog Service</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/inventory/index.html" class="spectrum-Menu-itemLabel ">Inventory Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html" class="spectrum-Menu-itemLabel ">Live Search</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/" class="spectrum-Menu-itemLabel ">Commerce Marketplace</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html" class="spectrum-Menu-itemLabel ">Payment Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://omsdocs.magento.com/en/" class="spectrum-Menu-itemLabel ">Order Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/developer/development-overview.html" class="spectrum-Menu-itemLabel ">Product Recommendations Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html" class="spectrum-Menu-itemLabel ">Security and Compliance</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/services/shared-services/" class="spectrum-Menu-itemLabel ">Shared Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/staging.html" class="spectrum-Menu-itemLabel ">Staging</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Tutorials</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/tutorials/index.html" class="spectrum-Menu-itemLabel ">Rest Tutorials</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/custom-attributes/introduction.html" class="spectrum-Menu-itemLabel ">Custom Attributes</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/customize_product.html" class="spectrum-Menu-itemLabel ">Customize Product Creation Form</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Customize Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/support/" class="spectrum-Menu-itemLabel ">Support</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/overview.html" class="spectrum-Menu-itemLabel ">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      <div class="version-switcher">
+	<button class="spectrum-Picker spectrum-Picker--sizeM dropdown-toggle" disabled>
+		<span class="spectrum-Picker-label">Version 2.3</span>
+	</button>
+</div>
+
+      
+        <div class="search-btn">
+  <button class="search-trigger" aria-label="Search">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Search">
+      <rect opacity="0" width="18" height="18" /><path class="a" d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+    </svg>
+  </button>
+</div>
+
+<div class="quick-search">
+  <form class="spectrum-Search spectrum-Textfield search-form"
+      action="/devdocs/2.3/guides/v2.3/search.html">
+  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
+    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+    <rect fill="#ff13dc" opacity="0" width="18" height="18" />
+    <path class="a"
+      d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+  </svg>
+  <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+    <div class="spectrum-ClearButton-fill">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+        <path class="a"
+          d="M13.2425,3.343,9,7.586,4.7575,3.343a.5.5,0,0,0-.707,0L3.343,4.05a.5.5,0,0,0,0,.707L7.586,9,3.343,13.2425a.5.5,0,0,0,0,.707l.707.7075a.5.5,0,0,0,.707,0L9,10.414l4.2425,4.243a.5.5,0,0,0,.707,0l.7075-.707a.5.5,0,0,0,0-.707L10.414,9l4.243-4.2425a.5.5,0,0,0,0-.707L13.95,3.343a.5.5,0,0,0-.70711-.00039Z" />
+      </svg>
+    </div>
+  </button>
+</form>
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Configuration Guide</h4>
+		
+		<div class="collapsible-navigation">
+		  <ul class="spectrum-SideNav spectrum-SideNav--multiLevel"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-SideNav-itemLink ">Introduction</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Security settings</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/security/google-recaptcha.html" class="spectrum-SideNav-itemLink ">Google reCAPTCHA</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/secy/hashing.html" class="spectrum-SideNav-itemLink ">Password hashing</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/secy/secy-headers.html" class="spectrum-SideNav-itemLink ">Prevent cache poisoning</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/secy/secy-cron.html" class="spectrum-SideNav-itemLink ">Secure cron.php to run in a browser</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/security/two-factor-authentication.html" class="spectrum-SideNav-itemLink ">Two-Factor Authentication</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/secy/secy-xframe.html" class="spectrum-SideNav-itemLink ">X-Frame-Options header</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bootstrap/magento-bootstrap.html" class="spectrum-SideNav-itemLink ">Application initialization and bootstrap</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bootstrap/magento-modes.html" class="spectrum-SideNav-itemLink ">About application modes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bootstrap/mage-dirs.html" class="spectrum-SideNav-itemLink ">Customize base directory paths (MAGE_DIRS)</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bootstrap/mage-profiler.html" class="spectrum-SideNav-itemLink ">Enable profiling (MAGE_PROFILER)</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bootstrap/magento-how-to-set.html" class="spectrum-SideNav-itemLink ">Set the value of bootstrap parameters</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/" class="spectrum-SideNav-itemLink ">Pipeline Deployment</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/" class="spectrum-SideNav-itemLink ">Overview</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/technical-details.html" class="spectrum-SideNav-itemLink ">Technical Details</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/development-system.html" class="spectrum-SideNav-itemLink ">Development System Setup</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/build-system.html" class="spectrum-SideNav-itemLink ">Build System Setup</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/production-system.html" class="spectrum-SideNav-itemLink ">Production System Setup</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/prod_file-sys-perms.html" class="spectrum-SideNav-itemLink ">File systems access permissions</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Examples</span><ul class=""><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/example/shared-configuration.html" class="spectrum-SideNav-itemLink ">Shared configuration</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/example/cli.html" class="spectrum-SideNav-itemLink ">Using CLI commands</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/example/environment-variables.html" class="spectrum-SideNav-itemLink ">Using environment variables</a></li></ul></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/single-machine.html" class="spectrum-SideNav-itemLink ">Single machine deployment</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli.html" class="spectrum-SideNav-itemLink ">Command line configuration</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands.html" class="spectrum-SideNav-itemLink ">Get started with command-line configuration</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/logging.html" class="spectrum-SideNav-itemLink ">Logging</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-cache.html" class="spectrum-SideNav-itemLink ">Manage the cache</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html" class="spectrum-SideNav-itemLink ">Manage the indexers</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html" class="spectrum-SideNav-itemLink ">Configure and run cron</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-compiler.html" class="spectrum-SideNav-itemLink ">Code compiler</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-mode.html" class="spectrum-SideNav-itemLink ">Set the operation mode</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-queue.html" class="spectrum-SideNav-itemLink ">Start message queue consumers</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-urn.html" class="spectrum-SideNav-itemLink ">URN highlighter</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-depen.html" class="spectrum-SideNav-itemLink ">Dependency reports</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-catalog-sync.html" class="spectrum-SideNav-itemLink ">Catalog sync</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Configuration management</span><ul class=""><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-export.html" class="spectrum-SideNav-itemLink ">Export the configuration</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-set.html" class="spectrum-SideNav-itemLink ">Set configuration values</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-import.html" class="spectrum-SideNav-itemLink ">Import data from configuration files</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-i18n.html" class="spectrum-SideNav-itemLink ">Translation dictionaries and language packages</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Static view files deployment</span><ul class=""><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html" class="spectrum-SideNav-itemLink ">Static files deployment strategies</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html" class="spectrum-SideNav-itemLink ">Deploy static view files</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-less-sass.html" class="spectrum-SideNav-itemLink ">Create symlinks to LESS files</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-test.html" class="spectrum-SideNav-itemLink ">Run unit tests</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-layout-xml.html" class="spectrum-SideNav-itemLink ">Convert layout XML files</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-perf-data.html" class="spectrum-SideNav-itemLink ">Generate data for performance testing</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-spt-util.html" class="spectrum-SideNav-itemLink ee-only">Run the support utilities (Adobe Commerce only)</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/config/config-magento.html" class="spectrum-SideNav-itemLink ">Configuration files</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/config/config-php.html" class="spectrum-SideNav-itemLink ">Deployment configuration</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/config/config-files.html" class="spectrum-SideNav-itemLink ">Module configuration files</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/config/config-create.html" class="spectrum-SideNav-itemLink ">Create or extend configuration types</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/config/disable-module-output.html" class="spectrum-SideNav-itemLink ">Disable module output</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Configuration reference</span><ul class=""><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-sens.html" class="spectrum-SideNav-itemLink ">Sensitive and system-specific</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-payment.html" class="spectrum-SideNav-itemLink ">Payment configuration paths reference</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-most.html" class="spectrum-SideNav-itemLink ">Other configuration paths reference</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-b2b.html" class="spectrum-SideNav-itemLink b2b-only">B2B Extension configuration paths reference (Adobe Commerce only)</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-gitignore.html" class="spectrum-SideNav-itemLink ">.gitignore reference</a></li><li class="is-selected  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-var-name.html" class="spectrum-SideNav-itemLink ">Use environment variables to override configuration settings</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-configphp.html" class="spectrum-SideNav-itemLink ">config.php reference</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-envphp.html" class="spectrum-SideNav-itemLink ">env.php reference</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-systemxml.html" class="spectrum-SideNav-itemLink ">system.xml reference</a></li></ul></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cache.html" class="spectrum-SideNav-itemLink ">Configure caching</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cache/cache-types.html" class="spectrum-SideNav-itemLink ">Associate cache frontends with cache types</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cache/cache-options.html" class="spectrum-SideNav-itemLink ">Low-level cache options</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cache/static-content-signing.html" class="spectrum-SideNav-itemLink ">Static content signing</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cache/two-level-cache.html" class="spectrum-SideNav-itemLink ">L2 cache</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/redis/config-redis.html" class="spectrum-SideNav-itemLink ">Configure Redis</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/redis/redis-pg-cache.html" class="spectrum-SideNav-itemLink ">Use Redis for default cache</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/redis/redis-session.html" class="spectrum-SideNav-itemLink ">Use Redis for session storage</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/config-varnish.html" class="spectrum-SideNav-itemLink ">Configure and use Varnish</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/config-varnish-install.html" class="spectrum-SideNav-itemLink ">Install Varnish</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/config-varnish-configure.html" class="spectrum-SideNav-itemLink ">Configure Varnish and your web server</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/config-varnish-magento.html" class="spectrum-SideNav-itemLink ">Configure Varnish for Commerce or Magento</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/config-varnish-advanced.html" class="spectrum-SideNav-itemLink ">Advanced Varnish configuration</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/use-multiple-varnish-cache.html" class="spectrum-SideNav-itemLink ">How cache clearing works with multiple Varnish instances</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/config-varnish-final.html" class="spectrum-SideNav-itemLink ">Final verification</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/use-varnish-cache.html" class="spectrum-SideNav-itemLink ">How cache clearing works with Varnish</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/use-varnish-cache-how.html" class="spectrum-SideNav-itemLink ">How Varnish caching works</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/varnish/use-varnish-esi.html" class="spectrum-SideNav-itemLink ">Varnish ESI Block</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/memcache/memcache.html" class="spectrum-SideNav-itemLink ">Use memcached for session storage</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/memcache/memcache_ubuntu.html" class="spectrum-SideNav-itemLink ">Install, configure, verify memcached on Ubuntu</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/memcache/memcache_centos.html" class="spectrum-SideNav-itemLink ">Install, configure, verify memcached on CentOS</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/memcache/memcache_magento.html" class="spectrum-SideNav-itemLink ">Configure Commerce or Magento to use memcached</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-site/ms_over.html" class="spectrum-SideNav-itemLink ">Multiple websites or stores</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-site/change-increment-id.html" class="spectrum-SideNav-itemLink ">Change increment ID for a database entity on particular store</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-site/ms_websites.html" class="spectrum-SideNav-itemLink ">Set up multiple websites, stores, and store views in the Admin</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-site/ms_nginx.html" class="spectrum-SideNav-itemLink ">Tutorial—Set up multiple websites or stores with nginx</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-site/ms_apache.html" class="spectrum-SideNav-itemLink ">Tutorial—Set up multiple websites with Apache</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cron/custom-cron.html" class="spectrum-SideNav-itemLink ">Set up a custom cron job and cron group</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cron/custom-cron-ref.html" class="spectrum-SideNav-itemLink ">Custom cron job and cron group reference</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/cron/custom-cron-tut.html" class="spectrum-SideNav-itemLink ">Configure a custom cron job and cron group (tutorial)</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/db-profiler/db-profiler.html" class="spectrum-SideNav-itemLink ">Configure the database profiler</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/elasticsearch/es-overview.html" class="spectrum-SideNav-itemLink ">Install and configure Elasticsearch</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/elasticsearch/opensearch-migration.html" class="spectrum-SideNav-itemLink ">Migrate from Elasticsearch to OpenSearch</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/elasticsearch/es-config-nginx.html" class="spectrum-SideNav-itemLink ">Configure nginx and Elasticsearch</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/elasticsearch/es-config-apache.html" class="spectrum-SideNav-itemLink ">Configure Apache and Elasticsearch</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/elasticsearch/es-config-stopwords.html" class="spectrum-SideNav-itemLink ">Configure Elasticsearch stopwords</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/elasticsearch/configure-magento.html" class="spectrum-SideNav-itemLink ">Configure Commerce and Magento to use Elasticsearch</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/elasticsearch/es-downgrade.html" class="spectrum-SideNav-itemLink ">Change the Elasticsearch client</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/mq/rabbitmq-overview.html" class="spectrum-SideNav-itemLink ">Message Queues</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/mq/manage-message-queues.html" class="spectrum-SideNav-itemLink ">Manage message queues</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-master/multi-master.html" class="spectrum-SideNav-itemLink ee-only">Split database performance solution (Adobe Commerce only)</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-master/multi-master_masterdb.html" class="spectrum-SideNav-itemLink ">Automatically configure master databases</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-master/multi-master_manual.html" class="spectrum-SideNav-itemLink ">Manually configure master databases</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-master/multi-master_verify.html" class="spectrum-SideNav-itemLink ">Verify split databases</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/multi-master/multi-master_slavedb.html" class="spectrum-SideNav-itemLink ">Set up optional database replication</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/revert-split-database.html" class="spectrum-SideNav-itemLink ">Revert from a split database to a single database</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/log/log-intro.html" class="spectrum-SideNav-itemLink ">Custom Logging</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/log/log-magento.html" class="spectrum-SideNav-itemLink ">Logging in more detail</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/log/log-db.html" class="spectrum-SideNav-itemLink ">Example - logging database activity</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/log/custom-logger-handler.html" class="spectrum-SideNav-itemLink ">Example - logging to a custom log file</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/sessions.html" class="spectrum-SideNav-itemLink ">How to locate your session files</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/compliance/privacy/gdpr.html" class="spectrum-SideNav-itemLink ">GDPR compliance</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+
+  
+
+  
+  <div class="message-banner">
+    <center>Adobe Commerce 2.3 reached end of support in September 2022.</center>
+  </div>
+  
+
+  
+
+
+
+
+<!--   
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-itemLabel">Shantanu</span>
+  </div>
+</div> -->
+
+
+  <h1 class="page-title">Use environment variables to override configuration settings</h1>
+
+  
+
+  
+	<div class="github-links spectrum-ActionGroup--compact ActionGroup--justified"></div>
+	
+
+</section>
+
+			</header>
+			<main>
+				<p>This topic discusses how to derive an environment variable name knowing a configuration path. You can override Adobe Commerce configuration settings using environment variables. For example, you can override the value of a payment processor’s live URL on your production system.</p>
+
+<p>You can override the value of <em>any</em> configuration setting using environment variables; however, Adobe recommends you maintain consistent settings using the shared configuration file, <code class="language-plaintext highlighter-rouge">config.php</code>, and the system-specific configuration file, <code class="language-plaintext highlighter-rouge">env.php</code>, as discussed in <a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/">Deployment general overview</a>.</p>
+
+<p class="bs-callout-tip">Check out the <a href="/devdocs/2.3/cloud/env/variables-intro.html">Configure environments</a> topic in the <em>Cloud</em> guide for details on working with variables in Adobe Commerce on cloud infrastructure.</p>
+
+<p>An environment variable name consists of its scope followed by its configuration path in a particular format. The following sections discuss how to determine a variable name in more detail.</p>
+
+<p>You can use variables for any of the following:</p>
+
+<ul>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-sens.html">Sensitive values</a> must be set using either environment variables or the <a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-set.html"><code class="language-plaintext highlighter-rouge">magento config:sensitive:set</code></a> command.</li>
+  <li>
+    <p>System-specific values must be set using:</p>
+
+    <ul>
+      <li>Environment variables</li>
+      <li>The <a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-set.html"><code class="language-plaintext highlighter-rouge">magento config:set</code></a> command</li>
+      <li>The Admin followed by the <a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-export.html"><code class="language-plaintext highlighter-rouge">magento app:config:dump</code> command</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Configuration paths can be found in:</p>
+
+<ul>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-sens.html">Sensitive and system-specific configuration paths reference</a></li>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-payment.html">Payment configuration paths reference</a></li>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-b2b.html">Magento Enterprise B2B Extension configuration paths reference</a></li>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-most.html">Other configuration paths reference</a></li>
+</ul>
+
+<h3 id="variable-names">Variable names</h3>
+
+<p>The general format of system settings variable names follows:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;__&lt;SYSTEM__VARIABLE__NAME&gt;</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;</code> can be either:</p>
+
+<ul>
+  <li>
+    <p>Global scope (that is, the global setting for <em>all</em> scopes)</p>
+
+    <p>Global scope variables have the following format:</p>
+  </li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">CONFIG__DEFAULT__&lt;SYSTEM__VARIABLE__NAME&gt;</code></p>
+
+<ul>
+  <li>
+    <p>A specific scope (that is, the setting affects only a specified store view or website)</p>
+
+    <p>Store view scope variables, for example, have the following format:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">CONFIG__STORES__ &lt;STORE_VIEW_CODE&gt;__&lt;SYSTEM__VARIABLE__NAME&gt;</code></p>
+
+    <p>For more information about scopes, see:</p>
+
+    <ul>
+      <li><a href="#deploy-system-vars-scopes">Step 1: Find the website or store view scope value</a></li>
+      <li><a href="https://docs.magento.com/user-guide/v2.3/configuration/scope.html">Magento User Guide topic on scope</a></li>
+      <li><a href="https://docs.magento.com/user-guide/v2.3/stores/store-scope-reference.html">Scope quick reference</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;SYSTEM__VARIABLE__NAME&gt;</code> is the configuration path with double underscore characters substituted for <code class="language-plaintext highlighter-rouge">/</code>. For more information, see <a href="#cloud-system-vars-sys">Step 2: Set system variables</a>.</p>
+
+<h3 id="variable-format">Variable format</h3>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;</code> is separated from <code class="language-plaintext highlighter-rouge">&lt;SYSTEM__VARIABLE__NAME&gt;</code> by two underscore characters.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;SYSTEM__VARIABLE__NAME&gt;</code> is derived from a configuration setting’s <em>configuration path</em>, which is a <code class="language-plaintext highlighter-rouge">/</code> delimited string that uniquely identifies a particular setting. Replace each <code class="language-plaintext highlighter-rouge">/</code> character in the configuration path with two underscore characters to create the system variable.</p>
+
+<p>If a configuration path contains an underscore character, the underscore character remains in the variable.</p>
+
+<p>A complete list of configuration paths can be found in:</p>
+
+<ul>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-sens.html">Sensitive and system-specific configuration paths reference</a></li>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-payment.html">Payment configuration paths reference</a></li>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-b2b.html">Magento Enterprise B2B Extension configuration paths reference</a></li>
+  <li><a href="/devdocs/2.3/guides/v2.3/config-guide/prod/config-reference-most.html">Other configuration paths reference</a></li>
+</ul>
+
+<h2 id="deploy-system-vars-scopes">Step 1: Find the website or store view scope value</h2>
+
+<p>This section discusses how you can find and set system configuration values per <em>scope</em> (store view or website). To set global scope variables, see <a href="#cloud-system-vars-sys">Step 2:  Set global, website, or store view variables</a>.</p>
+
+<p>Scope values come from the <code class="language-plaintext highlighter-rouge">store</code>, <code class="language-plaintext highlighter-rouge">store_group</code>, and <code class="language-plaintext highlighter-rouge">store_website</code> tables.</p>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">store</code> table specifies store view names and codes</li>
+  <li>The <code class="language-plaintext highlighter-rouge">store_website</code> table specifies website names and codes</li>
+</ul>
+
+<p>You can also find the code values using the Admin.</p>
+
+<p>How to read the table:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Path in Admin</code> column</p>
+
+    <p>Values before the comma are paths in the Admin navigation. Values after the comma are options in the right pane.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Variable name</code> column is the name of the corresponding environment variable.</p>
+
+    <p>You have the option of specifying system values for these configuration parameters as environment variables if you wish.</p>
+
+    <ul>
+      <li>The entire variable name is always ALL CAPS</li>
+      <li>Start a variable name with <code class="language-plaintext highlighter-rouge">CONFIG__</code> (note two underscore characters)</li>
+      <li>You can find the <code class="language-plaintext highlighter-rouge">&lt;STORE_VIEW_CODE&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;WEBSITE_CODE&gt;</code> portion of a variable name in either the Admin or the Magento database, as indicated in the following sections.</li>
+      <li>You can find <code class="language-plaintext highlighter-rouge">&lt;SYSTEM__VARIABLE__NAME&gt;</code> as discussed in <a href="#cloud-system-vars-sys">Step 2:  Set global, website, or store view variables</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="find-a-website-or-store-view-scope-in-the-admin">Find a website or store view scope in the Admin</h3>
+
+<p>The following table summarizes how to find website or store view value in the Admin.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Path in Admin</th>
+      <th>Variable name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Create, edit, delete store views</td>
+      <td><strong>Stores</strong> &gt; <strong>All Stores</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">CONFIG__STORES__&lt;STORE_VIEW_CODE&gt;__&lt;SYSTEM__VARIABLE__NAME&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Create, edit, delete websites</td>
+      <td><strong>Stores</strong> &gt; <strong>All Stores</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">CONFIG__WEBSITES__&lt;WEBSITE_CODE&gt;__&lt;SYSTEM__VARIABLE__NAME&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, to find a website or store view scope value in the Admin:</p>
+
+<ol>
+  <li>Log in to the Admin as a user authorized to view websites.</li>
+  <li>Click <strong>Stores</strong> &gt; <strong>All Stores</strong>.</li>
+  <li>
+    <p>Click the name of a website or store view.</p>
+
+    <p>The right pane is displayed similar to the following.</p>
+
+    <p><img src="/devdocs/2.3/common/images/cloud/cloud_vars_website-code.png" alt="Find a website code" width="300px" /></p>
+  </li>
+  <li>The scope name is displayed in the <strong>Code</strong> field.</li>
+  <li>Continue with <a href="#cloud-system-vars-sys">Step 2:  Set global, website, or store view variables</a>.</li>
+</ol>
+
+<h3 id="cloud-vars-db">Find a website or store view scope in the database</h3>
+
+<p>To get these values from the database:</p>
+
+<ol>
+  <li>Log in to your development system as the <a href="https://glossary.magento.com/magento-file-system-owner">file system owner</a> if you have not done so already.</li>
+  <li>
+    <p>Enter the following command:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>mysql <span class="nt">-u</span> &lt;magento database username&gt; <span class="nt">-p</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>At the <code class="language-plaintext highlighter-rouge">mysql&gt;</code> prompt, enter the following commands in the order shown:</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>use &lt;magento database name&gt;<span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Use the following SQL queries to find the relevant values:</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>SELECT <span class="k">*</span> FROM STORE<span class="p">;</span>
+SELECT <span class="k">*</span> FROM STORE_WEBSITE<span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>A sample follows:</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>mysql&gt; SELECT <span class="k">*</span> FROM STORE_WEBSITE<span class="p">;</span>
++------------+-------+--------------+------------+------------------+------------+
+| website_id | code  | name         | sort_order | default_group_id | is_default |
++------------+-------+--------------+------------+------------------+------------+
+|          0 | admin | Admin        |          0 |                0 |          0 |
+|          1 | base  | Main Website |          0 |                1 |          1 |
+|          2 | test1 | Test Website |          0 |                3 |          0 |
++------------+-------+--------------+------------+------------------+------------+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Use the value from the <code class="language-plaintext highlighter-rouge">code</code> column as the scope name, not the <code class="language-plaintext highlighter-rouge">name</code> value.</p>
+
+    <p>For example, to set a configuration variable for Test Website, use the following format:</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>CONFIG__WEBSITES__TEST1__&lt;SYSTEM__VARIABLE__NAME&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>where <code class="language-plaintext highlighter-rouge">&lt;SYSTEM__VARIABLE__NAME&gt;</code> comes from the next section.</p>
+  </li>
+</ol>
+
+<h2 id="cloud-system-vars-sys">Step 2: Set global, website, or store view variables</h2>
+
+<p>This section discusses how to set system variables.</p>
+
+<ul>
+  <li>
+    <p>To set values for the global scope (that is, all websites, stores, and store views), start the variable name with <code class="language-plaintext highlighter-rouge">CONFIG__DEFAULT__</code>.</p>
+  </li>
+  <li>
+    <p>To set a value for a particular store view or website, start the variable name as discussed in <a href="#deploy-system-vars-scopes">Step 1: Find the scope value</a>:</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">CONFIG__WEBSITES</code></li>
+      <li><code class="language-plaintext highlighter-rouge">CONFIG__STORES</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>The last part of the variable name is the configuration path, which is unique for each configuration setting.</p>
+  </li>
+</ul>
+
+<p><a href="#cloud-system-vars-ex">See some examples</a></p>
+
+<p>The following table shows a few sample variables.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Path in Admin (omitting <strong>Stores</strong> &gt; <strong>Settings</strong> &gt; <strong>Configuration</strong>)</th>
+      <th>Variable name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Elasticsearch server hostname</td>
+      <td>Catalog &gt; <strong>Catalog</strong>, <strong>Elasticsearch Server Hostname</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME</code></td>
+    </tr>
+    <tr>
+      <td>Elasticsearch server port</td>
+      <td>Catalog &gt; <strong>Catalog</strong>, <strong>Elasticsearch Server Port</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;__CATALOG__SEARCH__ELASTICSEARCH_SERVER_PORT</code></td>
+    </tr>
+    <tr>
+      <td>Shipping country origin</td>
+      <td>Sales &gt; <strong>Shipping Settings</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;__SHIPPING__ORIGIN__COUNTRY_ID</code></td>
+    </tr>
+    <tr>
+      <td>Custom Admin URL</td>
+      <td>Advanced &gt; <strong>Admin</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;__ADMIN__URL__CUSTOM</code></td>
+    </tr>
+    <tr>
+      <td>Custom Admin Path</td>
+      <td>Advanced &gt; <strong>Admin</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;SCOPE&gt;__ADMIN__URL__CUSTOM_PATH</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cloud-system-vars-ex">Examples</h2>
+
+<p>This section shows how to find values of some sample variables.</p>
+
+<h3 id="elasticsearch-server-hostname">Elasticsearch server hostname</h3>
+
+<p>To find the variable name for global HTML minification:</p>
+
+<ol>
+  <li>
+    <p>Determine the scope.</p>
+
+    <p>It’s the global scope so the variable name starts with <code class="language-plaintext highlighter-rouge">CONFIG__DEFAULT__</code></p>
+  </li>
+  <li>
+    <p>The rest of the variable name is <code class="language-plaintext highlighter-rouge">CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME</code>.</p>
+  </li>
+</ol>
+
+<p><strong>Result</strong>: The variable name is <code class="language-plaintext highlighter-rouge">CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME</code></p>
+
+<h3 id="shipping-country-origin">Shipping country origin</h3>
+
+<p>To find the variable name for the shipping country origin:</p>
+
+<ol>
+  <li>
+    <p>Determine the scope.</p>
+
+    <p>Find the scope in the <a href="#deploy-system-vars-scopes">database</a> as discussed in Step 1: Find the website or store view scope value. (You can also find the value in the Admin as shown in the <a href="#cloud-system-vars-sys">table in Step 2: Set global, website, or store view variables</a>.</p>
+
+    <p>For example, the scope might be <code class="language-plaintext highlighter-rouge">CONFIG__WEBSITES__DEFAULT</code>.</p>
+  </li>
+  <li>
+    <p>The rest of the variable name is <code class="language-plaintext highlighter-rouge">SHIPPING__ORIGIN__COUNTRY_ID</code>.</p>
+  </li>
+</ol>
+
+<p><strong>Result</strong>: The variable name is <code class="language-plaintext highlighter-rouge">CONFIG__WEBSITES__DEFAULT__SHIPPING__ORIGIN__COUNTRY_ID</code></p>
+
+<h2 id="how-to-use-environment-variables">How to use environment variables</h2>
+
+<p>Set configuration values as variables using PHP’s <a href="https://php.net/manual/en/reserved.variables.environment.php"><code class="language-plaintext highlighter-rouge">$_ENV</code></a> associate array. You can set the values in any PHP script that runs when Commerce runs.</p>
+
+<!-- Available note types: "info", "warning", "tip" -->
+
+<div class="bs-callout-tip">
+
+  <p>Be aware that setting variable values in <code class="language-plaintext highlighter-rouge">index.php</code> or <code class="language-plaintext highlighter-rouge">pub/index.php</code> does not always function as expected since different application entry points can be used depending on the web server configuration. By placing <code class="language-plaintext highlighter-rouge">$_ENV</code> directives in the <code class="language-plaintext highlighter-rouge">app/bootstrap.php</code> file,regardless of different application entry points, the <code class="language-plaintext highlighter-rouge">$_ENV</code> directives always execute since the <code class="language-plaintext highlighter-rouge">app/bootstrap.php</code> file loads as part of the Commerce architecture.</p>
+
+</div>
+
+<p>An example of setting two <code class="language-plaintext highlighter-rouge">$_ENV</code> values follows:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'http://search.example.com'</span><span class="p">;</span>
+<span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'1234'</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>A step-by-step example is shown in <a href="/devdocs/2.3/guides/v2.3/config-guide/deployment/pipeline/example/environment-variables.html">Set configuration values using environment variables</a>.</p>
+
+<!-- Available note types: "info", "warning", "tip" -->
+
+<div class="bs-callout-warning">
+
+  <ul>
+    <li>
+      <p>To use values that you set in the <code class="language-plaintext highlighter-rouge">$_ENV</code> array, you must set <code class="language-plaintext highlighter-rouge">variables_order = "EGPCS"</code>(Environment, Get, Post, Cookie, and Server) in your <code class="language-plaintext highlighter-rouge">php.ini</code> file. For details, see <a href="https://www.php.net/manual/en/ini.core.php#ini.variables-order">PHP documentation</a>.</p>
+    </li>
+    <li>
+      <p>For Adobe Commerce on cloud infrastructure, if you are attempting to override configuration settings using the <a href="https://devdocs.magento.com/cloud/project/project-webint-basic.html#project-conf-env-var">Project Web Interface</a>, you must prepend the variable name with <code class="language-plaintext highlighter-rouge">env:</code>. For example:</p>
+    </li>
+  </ul>
+
+  <p><img src="https://devdocs.magento.com/common/images/cloud/cloud_env_var_example.png" alt="Environment variable example" /></p>
+
+</div>
+
+<p class="ref-header">Related topics</p>
+
+<ul>
+  <li><a href="https://docs.magento.com/user-guide/v2.3/configuration/scope.html">Magento User Guide topic on scope</a></li>
+  <li><a href="https://docs.magento.com/user-guide/v2.3/stores/store-scope-reference.html">Magento User Guide scope quick reference</a></li>
+</ul>
+
+			</main>
+			<footer class="content-footer">
+				<button class="page-updated spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+  <img class="spectrum-Icon spectrum-Icon--sizeS" src="/devdocs/2.3/assets/i/icons/time.svg" alt="Updated" />
+  <time class="spectrum-ActionButton-label" id="last-modified-at" itemprop="dateModified"
+    datetime="2022-08-01">
+    Aug 1st, 2022
+  </time>
+</button>
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+</div>
+<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+    <div class="container">
+  
+      <div class="copyright-links">
+        
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="  " role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md" class=" ">Become a Contributor</a></li>
+
+  <li class="  " role="menuitem"><a href="https://glossary.magento.com/" class=" ">Glossary</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/privacy/" class=" ">Privacy Policy</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/" class=" ">Terms of Service</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/licensing/" class=" ">License/Trademark FAQ</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/bk-release-notes.html" class=" ">Release Notes</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-open-source.html" class=" ">Third-Party Licenses</a></li>
+
+</ul>
+
+      </div>
+  
+          <div class="copyright-date">&copy; 2023 Adobe. All rights reserved.</div>
+  
+    </div>
+  </div>
+  <!-- / #footer -->
+  
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.3/assets/js/app.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/editions.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/page-updated.min.js?ver=20"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.3/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+
+</html>

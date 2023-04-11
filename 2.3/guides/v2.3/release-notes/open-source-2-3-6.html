@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Magento Open Source 2.3.6 Release Notes | Archived 2.3 Magento Developer Guide</title>
+	<meta name="description" content="Magento Developer Guide">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/app.css?ver=20" />
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/print.css?ver=20" media="print" />
+	<script src="https://assets.adobedtm.com/a7d65461e54e/f87b70cb627a/launch-b042bff6c581.min.js" async></script>
+
+	<link rel="stylesheet" href="/devdocs/2.3/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.3";
+  var algolia = {
+    id: "E642SEDTHL",
+    index: "devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [{
+      label: "Results",
+      name: "devdocs",
+      facetFilters: [
+        ["guide_version: 2.3",
+          "versionless: true"
+        ]
+      ],
+      refinements: [{
+        label: "Functional areas",
+        attribute: "functional_areas"
+      }],
+      baseUrl: "/devdocs/2.3"
+    }
+  ];
+
+</script>
+
+
+
+
+	<link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://adobe.com/favicon.ico">
+
+</head>
+
+<body class="layout-default">
+
+	<header class="site-header">
+
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.3/">
+      <img class="logo-image" src="/devdocs/2.3/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Adobe</span>
+      <span class="site-logo">Commerce DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation --><ul class="nav-main spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" role="menubar"><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Cloud</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud basics</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html" class="spectrum-Menu-itemLabel ">Cloud Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html" class="spectrum-Menu-itemLabel ">Cloud Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/file-structure.html" class="spectrum-Menu-itemLabel ">Project Structure</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/best-practices.html" class="spectrum-Menu-itemLabel ">Upgrades and Patches</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html" class="spectrum-Menu-itemLabel ">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud development</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/" class="spectrum-Menu-itemLabel ">Local development</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/configure/" class="spectrum-Menu-itemLabel ">Configure and launch Docker</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/" class="spectrum-Menu-itemLabel ">Docker quick reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html" class="spectrum-Menu-itemLabel ">Configure Application</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html" class="spectrum-Menu-itemLabel ">Configure Environments</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Functional Testing</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/" class="spectrum-Menu-itemLabel ">Application testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/" class="spectrum-Menu-itemLabel ">Cloud code testing</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Setup</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-Menu-itemLabel ">Installation Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html" class="spectrum-Menu-itemLabel ">Extensions Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html" class="spectrum-Menu-itemLabel ">Software Update Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-Menu-itemLabel ">Configuration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-Menu-itemLabel ">Performance Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/migration/bk-migration-guide.html" class="spectrum-Menu-itemLabel ">Migration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html" class="spectrum-Menu-itemLabel ">Release Information</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/reference/cli/magento.html" class="spectrum-Menu-itemLabel ">Command-line Tools Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html" class="spectrum-Menu-itemLabel ">Tools</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Development</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Backend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-Menu-itemLabel ">Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html" class="spectrum-Menu-itemLabel ">PHP Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ext-best-practices/bk-ext-best-practices.html" class="spectrum-Menu-itemLabel ">Extension Developer Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/mrg/intro.html" class="spectrum-Menu-itemLabel ">Module Reference Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-Menu-itemLabel ">Coding Standards</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/guides/" class="spectrum-Menu-itemLabel ">Contributor Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/" class="spectrum-Menu-itemLabel ">Contribution Resources</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Frontend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html" class="spectrum-Menu-itemLabel ">Frontend Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ui_comp_guide/bk-ui_comps.html" class="spectrum-Menu-itemLabel ">UI Components Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html" class="spectrum-Menu-itemLabel ">JavaScript Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/pattern-library/bk-pattern.html" class="spectrum-Menu-itemLabel ">Admin Design Pattern Library</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/design-styleguide/bk-styleguide.html" class="spectrum-Menu-itemLabel ">Admin Style Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/pwa-studio/" class="spectrum-Menu-itemLabel ">PWA Documentation Site</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder Developer Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">API</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/bk-get-started-api.html" class="spectrum-Menu-itemLabel ">Get Started with our Web APIs</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/bk-rest.html" class="spectrum-Menu-itemLabel ">REST API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/soap/bk-soap.html" class="spectrum-Menu-itemLabel ">SOAP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/graphql/" class="spectrum-Menu-itemLabel ">GraphQL Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/" class="spectrum-Menu-itemLabel ">Marketplace EQP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/mbi/docs/getting-started.html" class="spectrum-Menu-itemLabel ">Commerce Reporting API</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Testing</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/testing.html" class="spectrum-Menu-itemLabel ">Application Testing Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://devdocs.magento.com/mftf/v2/docs/introduction.html" class="spectrum-Menu-itemLabel ">Functional Acceptance Testing (MFTF)</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/integration/integration_test_execution.html" class="spectrum-Menu-itemLabel ">Integration Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/js/jasmine.html" class="spectrum-Menu-itemLabel ">JavaScript Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/unit/unit_test_execution.html" class="spectrum-Menu-itemLabel ">PHP Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/web-api-functional-testing.html" class="spectrum-Menu-itemLabel ">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Functional Areas</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/advanced-reporting/overview.html" class="spectrum-Menu-itemLabel ">Advanced Reporting</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/b2b/bk-b2b.html" class="spectrum-Menu-itemLabel ">B2B</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html" class="spectrum-Menu-itemLabel ">Catalog Service</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/inventory/index.html" class="spectrum-Menu-itemLabel ">Inventory Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html" class="spectrum-Menu-itemLabel ">Live Search</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/" class="spectrum-Menu-itemLabel ">Commerce Marketplace</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html" class="spectrum-Menu-itemLabel ">Payment Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://omsdocs.magento.com/en/" class="spectrum-Menu-itemLabel ">Order Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/developer/development-overview.html" class="spectrum-Menu-itemLabel ">Product Recommendations Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html" class="spectrum-Menu-itemLabel ">Security and Compliance</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/services/shared-services/" class="spectrum-Menu-itemLabel ">Shared Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/staging.html" class="spectrum-Menu-itemLabel ">Staging</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Tutorials</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/tutorials/index.html" class="spectrum-Menu-itemLabel ">Rest Tutorials</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/custom-attributes/introduction.html" class="spectrum-Menu-itemLabel ">Custom Attributes</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/customize_product.html" class="spectrum-Menu-itemLabel ">Customize Product Creation Form</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Customize Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/support/" class="spectrum-Menu-itemLabel ">Support</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/overview.html" class="spectrum-Menu-itemLabel ">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      <div class="version-switcher">
+	<button class="spectrum-Picker spectrum-Picker--sizeM dropdown-toggle" disabled>
+		<span class="spectrum-Picker-label">Version 2.3</span>
+	</button>
+</div>
+
+      
+        <div class="search-btn">
+  <button class="search-trigger" aria-label="Search">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Search">
+      <rect opacity="0" width="18" height="18" /><path class="a" d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+    </svg>
+  </button>
+</div>
+
+<div class="quick-search">
+  <form class="spectrum-Search spectrum-Textfield search-form"
+      action="/devdocs/2.3/guides/v2.3/search.html">
+  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
+    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+    <rect fill="#ff13dc" opacity="0" width="18" height="18" />
+    <path class="a"
+      d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+  </svg>
+  <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+    <div class="spectrum-ClearButton-fill">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+        <path class="a"
+          d="M13.2425,3.343,9,7.586,4.7575,3.343a.5.5,0,0,0-.707,0L3.343,4.05a.5.5,0,0,0,0,.707L7.586,9,3.343,13.2425a.5.5,0,0,0,0,.707l.707.7075a.5.5,0,0,0,.707,0L9,10.414l4.2425,4.243a.5.5,0,0,0,.707,0l.7075-.707a.5.5,0,0,0,0-.707L10.414,9l4.243-4.2425a.5.5,0,0,0,0-.707L13.95,3.343a.5.5,0,0,0-.70711-.00039Z" />
+      </svg>
+    </div>
+  </button>
+</form>
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Release Information</h4>
+		
+		<div class="collapsible-navigation">
+		  <ul class="spectrum-SideNav spectrum-SideNav--multiLevel"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/bk-release-notes.html" class="spectrum-SideNav-itemLink ">Introduction</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">2.3 Release Notes</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/component-status.html" class="spectrum-SideNav-itemLink ">Component Status</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/2-3-7-p4.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.7-p4 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/2-3-7-p3.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.7-p3 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/2-3-7-p2.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.7-p2 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/2-3-7-p1.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.7-p1 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/open-source-2-3-7.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.7 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/commerce-2-3-7.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.7 Release Notes</a></li><li class="is-selected  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/open-source-2-3-6.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.6 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/commerce-2-3-6.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.6 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/release-notes-2-3-5-open-source.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.5 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.5 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/release-notes-2-3-4-open-source.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.4 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/release-notes-2-3-4-commerce.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.4 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/release-notes-2-3-3-open-source.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.3 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/release-notes-2-3-3-commerce.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.3 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/ReleaseNotes2.3.2OpenSource.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.2 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/ReleaseNotes2.3.2Commerce.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.2 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/ReleaseNotes2.3.1OpenSource.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.1 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/ReleaseNotes2.3.1Commerce.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.1 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/ReleaseNotes2.3.0OpenSource.html" class="spectrum-SideNav-itemLink ">Magento Open Source 2.3.0 Release Notes</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/ReleaseNotes2.3.0Commerce.html" class="spectrum-SideNav-itemLink ">Adobe Commerce 2.3.0 Release Notes</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Backward incompatible changes</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/backward-incompatible-changes/index.html" class="spectrum-SideNav-itemLink ">Highlights</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/backward-incompatible-changes/reference.html" class="spectrum-SideNav-itemLink ">Reference</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Packages</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-open-source.html" class="spectrum-SideNav-itemLink ">Magento Open Source packages</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-commerce.html" class="spectrum-SideNav-itemLink ">Adobe Commerce packages</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-cloud.html" class="spectrum-SideNav-itemLink ">Cloud packages for Adobe Commerce</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/b2b-release-notes.html" class="spectrum-SideNav-itemLink ">B2B</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/graphql/release-notes.html" class="spectrum-SideNav-itemLink ">GraphQL</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/inventory/release-notes.html" class="spectrum-SideNav-itemLink ">Inventory Management</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/live-search/release-notes.html" class="spectrum-SideNav-itemLink ">Live Search</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/page-builder/docs/release-notes.html" class="spectrum-SideNav-itemLink ">Page Builder</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/recommendations/release-notes.html" class="spectrum-SideNav-itemLink ">Product Recommendations</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Sales Channels</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/extensions/amazon-sales/release-notes/" class="spectrum-SideNav-itemLink ">Amazon</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/payment-services/release-notes.html" class="spectrum-SideNav-itemLink ">Payment Services</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+
+  
+
+  
+  <div class="message-banner">
+    <center>Adobe Commerce 2.3 reached end of support in September 2022.</center>
+  </div>
+  
+
+  
+
+
+
+
+<!--   
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-itemLabel">Shantanu</span>
+  </div>
+</div> -->
+
+
+  <h1 class="page-title">Magento Open Source 2.3.6 Release Notes</h1>
+
+  
+
+  
+	<div class="github-links spectrum-ActionGroup--compact ActionGroup--justified"></div>
+	
+
+</section>
+
+			</header>
+			<main>
+				<p>Magento Open Source 2.3.6 offers significant platform upgrades, substantial security changes, and performance improvements.</p>
+
+<p>This release includes over 160 functional fixes to the core product and over 15 security enhancements</p>
+
+<p class="bs-callout-info">Quarterly releases may contain backward-incompatible changes (BIC). Magento 2.3.6 contains minor backward-incompatible changes. To review minor backward-incompatible changes, see <a href="/devdocs/2.3/guides/v2.3/release-notes/backward-incompatible-changes/reference.html">BIC reference</a>. (Major backward-incompatible issues are described in <a href="/devdocs/2.3/guides/v2.3/release-notes/backward-incompatible-changes/index.html">BIC highlights</a>. Not all releases introduce major BICs.)</p>
+
+<p>We are adding support for PHP 7.4.x in Magento 2.3.7, which is scheduled for release in Q2 2021. This support will introduce breaking changes to Magento 2.3.x deployments. How will this affect your store? See the <a href="https://community.magento.com/t5/Magento-DevBlog/PHP-7-4-support-for-Magento-2-3-x-release-line/ba-p/458946">PHP 7.4 support for Magento 2.3.x release line</a> DevBlog post.</p>
+
+<h2 id="highlights">Highlights</h2>
+
+<p>Look for the following highlights in this release:</p>
+
+<h3 id="substantial-security-enhancements">Substantial security enhancements</h3>
+
+<p>This release includes the following security enhancements:</p>
+
+<h4 id="over-15-security-enhancements-that-help-close-remote-code-execution-rce-and-cross-site-scripting-xss-vulnerabilities">Over 15 security enhancements that help close remote code execution (RCE) and cross-site scripting (XSS) vulnerabilities</h4>
+
+<p>No confirmed attacks related to these issues have occurred to date. However, certain vulnerabilities can potentially be exploited to access customer information or take over administrator sessions. Most of these issues require that an attacker first obtains access to the Admin. As a result, we remind you to take all necessary steps to protect your Admin, including but not limited to these efforts: IP allowlisting, <a href="/devdocs/2.3/guides/v2.3/security/two-factor-authentication.html">two-factor authentication</a>, use of a VPN, the use of a unique location rather than <code class="language-plaintext highlighter-rouge">/admin</code>, and good password hygiene. See <a href="https://helpx.adobe.com/security/products/magento/apsb20-59.html">Security Updates Available for Magento</a> for a discussion of these fixed issues.</p>
+
+<h4 id="security-enhancements-and-fixes-to-core-code">Security enhancements and fixes to core code</h4>
+
+<p>This release includes over 15 security fixes and platform security improvements. Additional security enhancements include:</p>
+
+<p><strong>CAPTCHA</strong> protection has been added to the following product areas:</p>
+
+<ul>
+  <li>Place Order storefront page and REST and GraphQL endpoints<!--- MC-36067--></li>
+  <li>Payment-related REST and GraphQL endpoints.<!--- MC-36064--></li>
+</ul>
+
+<p>CAPTCHA protection for these additional pages is disabled by default. It can be enabled on the Admin in the same way that other pages covered by CAPTCHA are. This protection has been added as an anti-brute force mechanism to protect stores against carding attacks. See <a href="https://docs.magento.com/user-guide/v2.3/stores/security-captcha.html">CAPTCHA</a>.</p>
+
+<p class="bs-callout-info">Starting with the release of Magento Open Source 2.3.2, we will assign and publish indexed Common Vulnerabilities and Exposures (CVE) numbers with each security bug reported to us by external parties. This allows users to more easily identify unaddressed vulnerabilities in their deployment.</p>
+<h2 id="compatibility-issues-upgrading-from-magento-open-source-235-to-236">Compatibility issues upgrading from Magento Open Source 2.3.5 to 2.3.6</h2>
+
+<p>Merchants upgrading from Magento Open Source 2.3.5 to 2.3.6 and extension developers should be aware of these code changes:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">\Magento\Sales\Model\Order\Pdf\Invoice</code> class constructor arguments have changed.</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">\Magento\Framework\Locale\ResolverInterface</code> dependency has been replaced with  <code class="language-plaintext highlighter-rouge">\Magento\Store\Model\App\Emulation</code>.</p>
+      </li>
+      <li>
+        <p>You can no longer call a parent constructor from child classes with the same arguments.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Protected property <code class="language-plaintext highlighter-rouge">\Magento\Sales\Model\Order\Pdf\Invoice::_localeResolver</code>  has been removed and cannot be used in child classes.</p>
+  </li>
+  <li>
+    <p>If your module contains a class that extends <code class="language-plaintext highlighter-rouge">\Magento\Sales\Model\Order\Pdf\Invoice</code> and must support both Magento 2.3.5 and 2.3.6, see the recommended solution documented in this <a href="https://github.com/magento/magento2/issues/30684#issuecomment-722602562">comment</a>.</p>
+  </li>
+</ul>
+
+<h2 id="fixed-issues">Fixed issues</h2>
+
+<p>We have fixed hundreds of issues in the Magento 2.3.6 core code.</p>
+
+<h3 id="installation-upgrade-deployment">Installation, upgrade, deployment</h3>
+
+<!--- MC-35408-->
+
+<ul>
+  <li>Magento now displays an informative error message when some themes are not deployed after running <code class="language-plaintext highlighter-rouge">setup:static-content:deploy</code>. Previously, when deployment completed successfully but not all packages were deployed, Magento did not display an error. When the <code class="language-plaintext highlighter-rouge">setup:static-content:deploy</code> command is executed with enabled parallel processing and each theme requires more time to be deployed then the specified maximum execution time, this command can finish successfully, although themes are not deployed.</li>
+</ul>
+
+<!--- MC-34790-->
+
+<ul>
+  <li>The <strong>Use default</strong> checkbox for Klarna payments (<strong>Stores</strong> &gt; <strong>Configuration</strong> &gt; <strong>Sales</strong> &gt; <strong>Payment methods</strong> &gt; <strong>Klarna</strong>) now remain checked as expected when website scope changes.</li>
+</ul>
+
+<!--- MC-33648-->
+
+<ul>
+  <li>Upgrade no longer results in the sudden failure of the Galera cluster. Previously, the Galera cluster exited abruptly after re-indexing immediately after upgrade. During Magento upgrade, index tables are altered and the engine is changed from MEMORY to InnoDB. At this point, the content of these tables becomes out-of-sync between the nodes of the Galera cluster. <a href="https://github.com/magento/magento2/issues/25334">GitHub-25334</a></li>
+</ul>
+
+<!--- MC-33199-->
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">bin/magento setup:di:compile</code> no longer throws a fatal error. Previously, Magento threw an error the first time you ran this command, but the second execution resulted in successful compilation.</li>
+</ul>
+
+<h3 id="amazon-pay">Amazon Pay</h3>
+
+<ul>
+  <li>Clicking <strong>Return to standard checkout</strong> just before completing checkout with Amazon Pay now returns the shopper to the checkout page that displays all payment methods available the shopper. Previously, no payment methods were displayed.</li>
+</ul>
+
+<h3 id="analytics">Analytics</h3>
+
+<!--- MC-35302-->
+
+<ul>
+  <li>CSV files that are generated by <code class="language-plaintext highlighter-rouge">analytics_collect_data</code> are now properly escaped. Previously, these files were not generated with the correct escaping, which prevented the generation of Inventory reports.</li>
+</ul>
+
+<!--- MC-34137-->
+
+<ul>
+  <li>Magento successfully generates advance reporting data files and sends them as expected to Inventory on deployments with split databases. Previously, Magento did not generate or send the <code class="language-plaintext highlighter-rouge">quotes.csv</code> file to Inventory, and as a result, Inventory did not generate the expected reports.</li>
+</ul>
+
+<h3 id="backend">Backend</h3>
+
+<!--- MC-30522-->
+
+<ul>
+  <li>The Products in the Comparison List and the Recently Compared Products features now work as expected. Previously, when the comparison list was expanded, Magento did not display products, even though the section indicated that the list contained products.</li>
+</ul>
+
+<h3 id="bundle-products">Bundle products</h3>
+
+<!--- MC-35484-->
+
+<ul>
+  <li>Re-importing bundle products now works as expected. Previously, the second import did not change the <code class="language-plaintext highlighter-rouge">catalog_product_relation</code> table, and the storefront did not display the bundled products because parent-child product relations were not generated correctly.</li>
+</ul>
+
+<!--- MC-33902-->
+
+<ul>
+  <li>Magento no longer sets prices for fixed-price bundle product child items in quotes.</li>
+</ul>
+
+<h3 id="cache">Cache</h3>
+
+<!--- MC-32022-->
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">X-Magento-Tags</code> headers no longer exceed the size permitted by the HTTP specification. Previously, category pages that contain many products return an <code class="language-plaintext highlighter-rouge">X-Magento-Tag</code> header that resulted in a 503 error.</li>
+</ul>
+
+<h3 id="cart-and-checkout">Cart and checkout</h3>
+
+<!--- MC-36055-->
+
+<ul>
+  <li>The <strong>State/Province/Region</strong> input box is now enabled as expected on <strong>My account</strong> &gt; <strong>Address Book</strong> &gt; <strong>Add new address</strong>.</li>
+</ul>
+
+<!--- MC-35953-->
+
+<ul>
+  <li>Custom address attributes are now included as expected in the form that is displayed for the Payment step of the checkout workflow.</li>
+</ul>
+
+<!--- MC-35805-->
+
+<ul>
+  <li>The shipping method estimator now works as expected when custom address attributes are present on the shipping step of the checkout workflow. Previously, Magento displayed this error message:<code class="language-plaintext highlighter-rouge">{"message":"Error occurred during \"custom_attributes\" processing. A custom attribute is specified with a missing attribute code. Verify the code and try again."}</code> <a href="https://github.com/magento/magento2/issues/27505">GitHub-27505</a></li>
+</ul>
+
+<!--- MC-35351-->
+
+<ul>
+  <li>Custom customer address attributes fields are now displayed as expected in the storefront checkout workflow.</li>
+</ul>
+
+<!--- MC-35204-->
+
+<ul>
+  <li>Shoppers can now purchase a virtual gift card using PayPal Braintree without defining a shipment address. Previously, Magento threw an error.</li>
+</ul>
+
+<!--- MC-32160-->
+
+<ul>
+  <li>Magento now displays the waiting/spinning icon while prices are updated on the cart.</li>
+</ul>
+
+<!--- MC-19818-->
+
+<ul>
+  <li>Merchants can now enable <strong>Apply to Shipping Amount</strong> in the Action tab of <strong>Marketing</strong> &gt; <strong>Cart Price Rules</strong> &gt; <strong>Add New Rule</strong> when <strong>Fixed amount discount for whole cart</strong> is applied. <a href="https://github.com/magento/magento2/issues/24422">GitHub-24422</a></li>
+</ul>
+
+<h3 id="catalog">Catalog</h3>
+
+<!--- MC-35781-->
+
+<ul>
+  <li>Merchants with multiple websites can now use <code class="language-plaintext highlighter-rouge">POST /V1/products</code> to create and update products while preserving image and image-role inheritance. Previously, when a merchant used the REST API to create and update products, and a product was updated for store view, the default image roles were loaded and saved for that store view. As a result, the store-view image roles stopped inheriting from the default scope after update.</li>
+</ul>
+
+<!--- MC-35575-->
+
+<ul>
+  <li>Magento now successfully updates attributes labeled <code class="language-plaintext highlighter-rouge">Product Type</code>. Previously, because the <code class="language-plaintext highlighter-rouge">product_type</code> attribute is reserved in Magento core code, Magento displayed this message when you tried to update it: <code class="language-plaintext highlighter-rouge">An attribute with the same code (product_type) already exists.</code></li>
+</ul>
+
+<!--- MC-35366-->
+
+<ul>
+  <li>Problems with product sort order on the storefront have been resolved. Previously, when Magento indexed product prices, it occasionally set a configurable product’s <code class="language-plaintext highlighter-rouge">min_price</code> and <code class="language-plaintext highlighter-rouge">max_price</code> to 0 in the <code class="language-plaintext highlighter-rouge">catalog_product_index_price</code> table, which affected price sort order on the storefront.</li>
+</ul>
+
+<!--- MC-35097-->
+
+<ul>
+  <li>Shoppers can now re-order an invoiced order of a product with customizable options as expected. Previously, Magento threw this error when a shopper tried to re-order: <code class="language-plaintext highlighter-rouge">{"0":"The product's required option(s) weren't entered. Make sure the options are entered and try again</code>.</li>
+</ul>
+
+<!--- MC-34082-->
+
+<ul>
+  <li>Magento now displays all re-enabled products in the storefront as expected. Previously, when a product was disabled and then re-enabled, Magento did not display the product until the Varnish page cache was cleared or the store re-indexed because the page cache was not invalidated after re-enabling a product.</li>
+</ul>
+
+<!--- MC-32751-->
+
+<ul>
+  <li>Magento now displays the Recently Compared Products widget only after at least one product has been deleted from a product comparison. Previously, this widget was displayed immediately after a shopper added a product for comparison.</li>
+</ul>
+
+<!--- MC-32228-->
+
+<ul>
+  <li>You can now successfully save an image to a category from the Admin. Previously, after you saved the image, part of the URL was missing, and you could not re-open the image.</li>
+</ul>
+
+<!--- MC-31764-->
+
+<ul>
+  <li>The <strong>Product in Websites</strong> checkbox of the new product page is now enabled by default for restricted administrative users in multi-site deployments. Previously, the checkbox for the non-default website was not preselected, and if the administrator left the checkbox unselected, Magento displayed an error message.</li>
+</ul>
+
+<!--- MC-31247-->
+
+<ul>
+  <li>The <strong>Price</strong> condition in Page Builder now works as expected for configurable products.</li>
+</ul>
+
+<!--- MC-35149-->
+
+<ul>
+  <li>Saving a category now flushes only the block cache that is related to this category. Previously, Magento flushed cache for all category blocks.</li>
+</ul>
+
+<!--- MC-35025-->
+
+<ul>
+  <li>Magento now correctly represents Arabic thousands grouping and Arabic decimal separator symbols. Previously, Arabic symbols were trimmed. <a href="https://github.com/magento/magento2/issues/26676">GitHub-26676</a></li>
+</ul>
+
+<!--- MC-34364-->
+
+<ul>
+  <li>Consecutive asynchronous price updates no longer interfere with each other and correct status is assigned to each operation. Previously, if an asynchronous price update failed, all subsequent asynchronous price updates will fail until the corresponding queue consumer is restarted.</li>
+</ul>
+
+<!--- MC-33810-->
+
+<ul>
+  <li>Changes introduced by an earlier bug fix that resulted in HTML errors on the product list page have been reverted.</li>
+</ul>
+
+<h3 id="catalog-rule">Catalog Rule</h3>
+
+<!--- MC-34255-->
+
+<ul>
+  <li>Product and catalog caches now expire as scheduled. Previously, caches expired daily because <code class="language-plaintext highlighter-rouge">сron</code> ran the <code class="language-plaintext highlighter-rouge">catalogrule_apply_all</code> task once daily, which re-indexed all catalog rules and dependent indexers, and cleared the cache for all products and categories.</li>
+</ul>
+
+<h3 id="cms-content">CMS content</h3>
+
+<!--- MC-35478-->
+
+<ul>
+  <li>Magento now throws an error when a merchant creates a CMS page with the same URL as the Company Structure page. Previously, Magento displayed the CMS page instead of the Company Structure page.</li>
+</ul>
+
+<h3 id="configurable-products">Configurable products</h3>
+
+<!--- MC-33755-->
+
+<ul>
+  <li>Admin users accounts created from an admin account with a restricted scope can now create a configurable product with attributes as expected. Previously, Magento threw this error: <code class="language-plaintext highlighter-rouge">Notice: Undefined index: value_index in 23develop/app/code/Magento/ConfigurableProduct/Helper/Product/Options/Factory.php on line 101</code>.</li>
+</ul>
+
+<!--- MC-32351-->
+
+<ul>
+  <li>Magento no longer links a simple product to a configurable product when the API call to link these products fails.</li>
+</ul>
+
+<!--- MC-33502-->
+
+<ul>
+  <li>Pagination problems with the Configurable Product Edit Current Variations list have been corrected.</li>
+</ul>
+
+<h3 id="customer">Customer</h3>
+
+<!--- MC-36136-->
+
+<ul>
+  <li>The <strong>State/Province</strong> fields are now populated as expected on the Edit Address page (<strong>My Account</strong> &gt; <strong>Address book</strong>).</li>
+</ul>
+
+<!--- MC-35253-->
+
+<ul>
+  <li>Customer group is no longer automatically changed for a customer who is assigned to a Company when you edit the customer on the Customer grid.</li>
+</ul>
+
+<!--- MC-33470-->
+
+<ul>
+  <li>Magento no longer resets a customer’s customer group to the default when a customer saves their account information.</li>
+</ul>
+
+<!--- MC-33458-->
+
+<ul>
+  <li>Saving a deleted customer from the Admin now generates an error message only. Previously, Magento displayed a blank page and generated a report that contained this string: <code class="language-plaintext highlighter-rouge">"0":"No such entity with customerId = 3","1":"#1 Magento\\Customer\\Model CustomerRegistry-&gt;retrieve() called at [app\/code\/Magento\/Customer\/Model\/ResourceModel\/CustomerRepository.php:340"</code>.</li>
+</ul>
+
+<!--- MC-32314-->
+
+<ul>
+  <li>Magento now honors customer group settings when you create a new customer from the Admin in a multi-site deployment.</li>
+</ul>
+
+<!--- MC-32178-->
+
+<ul>
+  <li>The validation logic associated with the <strong>Date of Birth</strong> field of the Customer Registration form no longer triggers a JavaScript error.</li>
+</ul>
+
+<!--- MC-32151-->
+
+<ul>
+  <li>The Admin view of a customer cart now displays all the products that were added to the cart from multiple websites in a multi-website deployment. Previously, when a customer added a product to their cart from a non-default website, the product was not displayed in the Admin even when <strong>Share customer account</strong> was set to <strong>Global</strong>.</li>
+</ul>
+
+<!--- MC-32122-->
+
+<ul>
+  <li>The <strong>Invalid Form Key. Please refresh the page</strong> text string on the login page is now translated as expected.</li>
+</ul>
+
+<!--- MC-32121-->
+
+<ul>
+  <li>Magento now displays the <strong>Credit memo</strong> button after the partial refund of an order. Previously, Magento did not display this button after you created a partial refund, and you could not create a credit memo for the rest of the order.</li>
+</ul>
+
+<!--- MC-31989-->
+
+<ul>
+  <li>The shopping cart that is accessed from the Admin customer details page now includes only products from the selected customer’s quote. Previously, this cart listed all items in the <code class="language-plaintext highlighter-rouge">quote_item</code> table.</li>
+</ul>
+
+<!--- MC-31935-->
+
+<ul>
+  <li>Customer creation from the Admin now honors the default customer group setting as expected.</li>
+</ul>
+
+<!--- MC-31575-->
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">PHPSessionId</code> is now changed as expected after a customer logs out and then logs back in.</li>
+</ul>
+
+<!--- MC-18593-->
+
+<ul>
+  <li>Data scripts are no longer re-run whenever you attempt to upgrade the database by running <code class="language-plaintext highlighter-rouge">bin/magento setup:upgrade</code>. Previously, upgrade scripts were re-run unnecessarily, which affected performance. <a href="https://github.com/magento/magento2/issues/19469">GitHub-19469</a></li>
+</ul>
+
+<h3 id="directory">Directory</h3>
+
+<!--- MC-33152-->
+
+<ul>
+  <li>The Default State dropdown menu is now populated by data that is based on the allowed countries that have been assigned to the selected website when you configure a value for the <strong>Default Tax Destination Calculation</strong> field. Previously, this dropdown listed the countries that were assigned to the default website.</li>
+</ul>
+
+<!--- MC-32186-->
+
+<ul>
+  <li>The format of the State/Province drop-down menu is now consistent across the Admin.</li>
+</ul>
+
+<h3 id="dotdigital">dotdigital</h3>
+
+<ul>
+  <li>
+    <p>dotdigital now has a Content Security Policy whitelist for specific domains used by this module.</p>
+  </li>
+  <li>
+    <p>Contacts are no longer resubscribed when their <code class="language-plaintext highlighter-rouge">last_subscribed_at</code> value is <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p>Deletion of automation enrollments and abandoned carts from their respective report grids now works as expected.</p>
+  </li>
+  <li>
+    <p>Handling of the API response dotdigital receives when processing resubscribes has been improved.</p>
+  </li>
+  <li>
+    <p>dotdigital now catches exceptions that are thrown by <code class="language-plaintext highlighter-rouge">unserialize()</code> to protect against unserializable data being stored for custom attributes.</p>
+  </li>
+</ul>
+
+<h3 id="downloadable">Downloadable</h3>
+
+<!--- MC-34259-->
+
+<ul>
+  <li>Clicking on a downloadable product’s <strong>Sample</strong> button from the Admin product page now downloads a sample as expected. Previously, when you clicked <strong>Sample</strong>, Magento displayed this error: <code class="language-plaintext highlighter-rouge">The product that was requested doesn't exist. Verify the product and try again</code>.</li>
+</ul>
+
+<!--- MC-32286-->
+
+<ul>
+  <li>You can now use an import file to update downloadable products in bulk by SKU and description. Previously, validation errors occurred, and import failed.</li>
+</ul>
+
+<!--- MC-31801-->
+
+<ul>
+  <li>Administrators with restricted permissions to Catalog can now create a downloadable product. Previously, these administrators could not create a downloadable product, and Magento threw an error.</li>
+</ul>
+
+<h3 id="email">Email</h3>
+
+<!--- MC-32850-->
+
+<ul>
+  <li>Customers are no longer redirected away from the current website when they report a forgotten password in multi-site deployments where customer accounts are shared globally. Previously, customers were redirected to the website on which the account was created.</li>
+</ul>
+
+<!--- MC-32728-->
+
+<ul>
+  <li>Order confirmation emails sent to customers now include the list of ordered items as expected. Previously, when you created an email template in the Admin by loading and saving the default template, emails generated from this template did not include the list of ordered items. <a href="https://github.com/magento/magento2/issues/26882">GitHub-26882</a></li>
+</ul>
+
+<h3 id="frameworks">Frameworks</h3>
+
+<!--- MC-33759-->
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sales_order_shipment_track_save_commit_after</code> is now triggered as expected when you use the REST API to create a shipment.</li>
+</ul>
+
+<!--- MC-33007-->
+
+<ul>
+  <li>We have improved the performance of the <code class="language-plaintext highlighter-rouge">Magento\Framework\App\DeploymentConfig\Reader::load</code> function. Previously, when a request was made to Magento, this function was called repetitively, which resulted in <code class="language-plaintext highlighter-rouge">config.php</code> and <code class="language-plaintext highlighter-rouge">env.php config</code> files being loaded each time the method was called.</li>
+</ul>
+
+<!--- MC-32928-->
+
+<ul>
+  <li>Magento no longer throws the following fatal error when Redis uses all allowed memory: <code class="language-plaintext highlighter-rouge">report.CRITICAL: OOM command not allowed when used memory &gt; 'maxmemory'.</code></li>
+</ul>
+
+<h3 id="general-fixes">General fixes</h3>
+
+<!--- MC-35184-->
+
+<ul>
+  <li>An expired persistent session is now renewed as expected when the shopper logs back in.</li>
+</ul>
+
+<!--- MC-35046-->
+
+<ul>
+  <li>Merchants can now unassign products from categories as expected. Previously, Magento threw an error similar to this error: <code class="language-plaintext highlighter-rouge">Could not save product "4" with position 0 to category 3</code>.</li>
+</ul>
+
+<!--- MC-33339-->
+
+<ul>
+  <li>MAP (minimum advertised price ) now works as expected for group products.</li>
+</ul>
+
+<!--- MC-32374-->
+
+<ul>
+  <li>New CMS pages are now added as expected to a website’s store page hierarchy.</li>
+</ul>
+
+<!--- MC-19560-->
+
+<ul>
+  <li>Magento no longer throws an exception when a shopper tries to unset the persistence cookie after beginning checkout and then navigating to the storefront home page. Previously, when the shopper clicked the <strong>Not you?</strong> link on the home page, Magento threw this exception: <code class="language-plaintext highlighter-rouge">The shipping address is missing. Set the address and try again</code>. <a href="https://github.com/magento/magento2/issues/24218">GitHub-24218</a></li>
+</ul>
+
+<!--- MC-17438-->
+
+<ul>
+  <li>You can now use the <code class="language-plaintext highlighter-rouge">PUT /V1/products/:sku</code> endpoint to update links to YouTube videos. Previously, Magento displayed a thumbnail for the video, but the video player did not load when you clicked the <strong>Play</strong> button. <a href="https://github.com/magento/magento2/issues/23194">GitHub-23194</a></li>
+</ul>
+
+<!--- MC-32147-->
+
+<ul>
+  <li>You can now use <code class="language-plaintext highlighter-rouge">app/etc/env.php</code> to change the message broker from MYSQL to AMQP.</li>
+</ul>
+
+<h3 id="groupedproducts">GroupedProducts</h3>
+
+<!--- MC-23209-->
+
+<ul>
+  <li>Merchants can now successfully send email to a shopper that contains a credit memo for an order that includes a grouped product. Previously, Magento threw a fatal error when the merchant clicked <strong>Send Email</strong>. <a href="https://github.com/magento/magento2/issues/25617">GitHub-25617</a></li>
+</ul>
+
+<!--- MC-35077-->
+
+<ul>
+  <li>The products query now returns all expected data for grouped products. Previously,  <code class="language-plaintext highlighter-rouge">product_links</code> was an empty array.</li>
+</ul>
+
+<h3 id="image">Image</h3>
+
+<!--- MC-31707-->
+
+<ul>
+  <li>Magento now displays PNG images as expected after upload.</li>
+</ul>
+
+<h3 id="importexport">Import/export</h3>
+
+<!--- MC-35634-->
+
+<ul>
+  <li>When an imported product has <code class="language-plaintext highlighter-rouge">qty</code> set to 0 but <code class="language-plaintext highlighter-rouge">is_in_stock set</code> to 1 in the CSV file, the product is not listed on the category page, and the product details page lists it as out-of-stock. Previously, products with these values were visible on the storefront after import.</li>
+</ul>
+
+<!--- MC-35448-->
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">error_report.csv</code> file now downloads with content and is available inside the <code class="language-plaintext highlighter-rouge">var/import_history/</code> directory as expected. Previously, this file was not generated after import.</li>
+</ul>
+
+<!--- MC-35255-->
+
+<ul>
+  <li>You can now hide product images on the storefront during import.</li>
+</ul>
+
+<!--- MC-34639-->
+
+<ul>
+  <li>Imported CSV files now capture related product information as expected. Previously, related product information was not consistently uploaded the first time the CSV file was imported.</li>
+</ul>
+
+<!--- MC-33625-->
+
+<ul>
+  <li>Magento now successfully imports customer addresses that contains a region for a country that does not have defined regions. Previously, Magento threw this error: <code class="language-plaintext highlighter-rouge">Please enter a valid region</code>.</li>
+</ul>
+
+<!--- MC-31765-->
+
+<ul>
+  <li>Magento now displays the customer list as expected after automatic re-indexing. Previously, although manually running <code class="language-plaintext highlighter-rouge">bin/magento index:reindex</code> worked, the customer grid did not display customer information after automatic re-indexing.</li>
+</ul>
+
+<!--- MC-31594-->
+
+<ul>
+  <li>Magento no longer creates duplicate SKUs in the Admin when products are imported by CSV file.</li>
+</ul>
+
+<!--- MC-23088-->
+
+<ul>
+  <li>Magento no longer throws an error during import when imported data includes a <code class="language-plaintext highlighter-rouge">swatch_image</code> store-view key has a value of <code class="language-plaintext highlighter-rouge">no_selection</code>. Previously, Magento threw this error: <code class="language-plaintext highlighter-rouge">Imported resource (image) could not be downloaded from external resource due to timeout or access permissions in row(s): 1</code>. <a href="https://github.com/magento/magento2/issues/25026">GitHub-25026</a></li>
+</ul>
+
+<!--- MC-22212-->
+
+<ul>
+  <li>Deadlocks no longer occur when the import process executes a bulk insert and the re-index process simultaneously executes a large insert from select. Previously, Magento displayed this error: <code class="language-plaintext highlighter-rouge">PDOException: SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock</code>. <a href="https://github.com/magento/magento2/issues/8933">GitHub-8933</a></li>
+</ul>
+
+<!--- MC-35080-->
+
+<ul>
+  <li>Customer address <code class="language-plaintext highlighter-rouge">region_id</code> is no longer assigned a <code class="language-plaintext highlighter-rouge">NULL</code> value when you import customer addresses using a CSV file (<code class="language-plaintext highlighter-rouge">entity type = "customer address"</code> and <code class="language-plaintext highlighter-rouge">import behavior = "add/update”</code>) from which certain field values have been deleted.</li>
+</ul>
+
+<h3 id="klarna">Klarna</h3>
+
+<ul>
+  <li>
+    <p>Magento now correctly refunds a Klarna order when the order contains a product that has been deleted. Previously, Magento threw a fatal error.</p>
+  </li>
+  <li>
+    <p>Default configuration settings for Klarna remain set as expected when you change the configuration scope to a different website. Previously, changing scope resulted in clearing all Klarna settings.</p>
+  </li>
+  <li>
+    <p>The checkout page now opens as expected when a shopper’s cart contains a downloadable product. Previously, the checkout page was blank.</p>
+  </li>
+  <li>
+    <p>Fraud notification messages have been improved.</p>
+  </li>
+</ul>
+
+<h3 id="media-storage">Media storage</h3>
+
+<!--- MC-32404-->
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">var/resource_config.json</code> is no longer regenerated whenever an image is requested by <code class="language-plaintext highlighter-rouge">get.php</code>. Previously, this file was rewritten on each call to <code class="language-plaintext highlighter-rouge">get.php</code>.</li>
+</ul>
+
+<h3 id="newsletter">Newsletter</h3>
+
+<!--- MC-34616-->
+
+<ul>
+  <li>Exporting the Newsletter Subscribers list using the <code class="language-plaintext highlighter-rouge">Excel XML</code> option now results in the export of all rows as expected. Previously, exported data included only the page pagination value, not all rows.</li>
+</ul>
+
+<!--- MC-34540-->
+
+<ul>
+  <li>Magento no longer throws an error when a user subscribes to a newsletter and reCAPTCHA for the newsletter is disabled for the website scope. Previously, when <strong>Use invisible ReCaptcha in newsletter</strong> was set to the default (<strong>yes</strong>) in the default configuration scope but set to <strong>no</strong> in the Main Website scope, the storefront subscription attempt failed, and Magento displayed this error: <code class="language-plaintext highlighter-rouge">Incorrect ReCaptcha validation</code>.</li>
+</ul>
+
+<!--- MC-31709-->
+
+<ul>
+  <li>Shoppers subscribing to a newsletter now receive only an email confirming their subscription. Previously, shoppers received two emails: a subscription confirmation and an unsubscribed notification.</li>
+</ul>
+
+<h3 id="payment-methods">Payment methods</h3>
+
+<!--- MC-35154-->
+
+<ul>
+  <li>Registered shoppers can now checkout successfully when their only defined payment method is Braintree. Previously, the <strong>Place Order</strong> button remained disabled after the shopper entered the correct credit card details unless the shopper had unchecked the <strong>My billing and shipping address are the same</strong> checkbox.</li>
+</ul>
+
+<!--- MC-35132-->
+
+<ul>
+  <li>Magento now completes Payflow Pro payments successfully when the shopper’s name contains accented letters. Previously, payment did not complete, and Magento logged this error: <code class="language-plaintext highlighter-rouge">report.CRITICAL: String to be escaped was not valid UTF-8 or could not be converted:</code>.</li>
+</ul>
+
+<!--- MC-34670-->
+
+<ul>
+  <li>Magento no longer saves credit card numbers when the <strong>Save for later use</strong> checkbox on the payment section of the checkout workflow is not selected.</li>
+</ul>
+
+<!--- MC-34343-->
+
+<ul>
+  <li>Magento now displays a message that prompts you to enter mandatory credit card data when you click <strong>Submit</strong> for an Admin order without entering valid payment information. Previously, the Braintree card validator did not throw an error when payment input fields were invalid, and the page became inactive.</li>
+</ul>
+
+<!--- MC-31924-->
+
+<ul>
+  <li>A shopper whose address book contains multiple addresses can now change shipping addresses during checkout when paying with Braintree. Previously, Magento displayed JavaScript code in the address field when the shopper selected a different address from the drop-down menu on the checkout workflow.</li>
+</ul>
+
+<!--- MC-31109-->
+
+<ul>
+  <li>You can now successfully use PayPal Express to pay for an order when persistent checkout cart is enabled and the <strong>Clear Persistence on Sign Out</strong> setting is set to <strong>no</strong>. Previously, Magento redirected you to the Login page.</li>
+</ul>
+
+<h3 id="product-alert">Product alert</h3>
+
+<!--- MC-31962-->
+
+<ul>
+  <li>Unsubscribe actions for product alerts now work as expected. Previously, when a customer clicked on the <strong>Click here to stop alerts for this product</strong> link, Magento displayed a 404 error.</li>
+</ul>
+
+<!--- MC-32839-->
+
+<ul>
+  <li>Product stock alert unsubscribe now works when a user’s session expired. Previously, when you clicked on the <strong>Click here to stop alerts for this product</strong> link, Magento displayed a 404 error.</li>
+</ul>
+
+<h3 id="reviews">Reviews</h3>
+
+<!--- MC-32155-->
+
+<ul>
+  <li>Magento no longer returns a 500 error when you try to open a Category page on the storefront when <strong>Layout = Product – Full Width</strong> has been set from the Design tab of the Category page.</li>
+</ul>
+
+<h3 id="sales">Sales</h3>
+
+<!--- MC-35930-->
+
+<ul>
+  <li>Order update emails that are sent to customers now include the correct order status. Previously, if an order status changed from <code class="language-plaintext highlighter-rouge">processing</code> to another state, the order email did not reflect the status change.</li>
+</ul>
+
+<!--- MC-35730-->
+
+<ul>
+  <li>The New Shipment email generated by  <code class="language-plaintext highlighter-rouge">POST /V1/order/:orderId/ship</code> now contains the same shipping and customer information as shipments that are created manually from the Admin. Previously, this email did not contain the customer name, tracking information, products ordered, and other order information.</li>
+</ul>
+
+<!--- MC-35554-->
+
+<ul>
+  <li>Magento no longer assigns a status of <code class="language-plaintext highlighter-rouge">Complete</code> after invoicing an order that requires zero payment.</li>
+</ul>
+
+<!--- MC-35309-->
+
+<ul>
+  <li>Localized region names that are displayed on the storefront Order page are now correctly translated. Previously, the region name was not based on the specified locale unless it was edited in the Admin.</li>
+</ul>
+
+<!--- MC-34787-->
+
+<ul>
+  <li>Email sent to customers that contain partial invoices now includes accurate item subtotals. Previously, the subtotal in this email contained was the total of the ordered quantity, not the total amount of the invoiced quantity.</li>
+</ul>
+
+<!--- MC-34782-->
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sales_clean_quotes</code> now efficiently deletes all expired quotes. Previously, <code class="language-plaintext highlighter-rouge">sales_clean_quotes</code> jobs did not complete due to memory issues, and Magento threw a fatal error.</li>
+</ul>
+
+<!--- MC-33127-->
+
+<ul>
+  <li>Magento now assigns the correct Group ID when a new customer creates an order in multi-site deployments. Previously, Magento applied the settings from the default customer group.</li>
+</ul>
+
+<!--- MC-31780-->
+
+<ul>
+  <li>Administrators with restricted permissions that include view permission for credit memos, invoices, and shipments can now view invoices and shipments from the Orders page as expected. Previously, when a restricted administrator tried to view an order, Magento displayed this error: <code class="language-plaintext highlighter-rouge">Something went wrong with processing the default view and we have restored the filter to its original state</code>.</li>
+</ul>
+
+<!--- MC-19751-->
+
+<ul>
+  <li>Magento no longer displays an error when a customer adds a quantity of a product to their cart that exceeds half of the existing product stock but does not exceed the total stock. Previously, under these circumstances, Magento displayed this error: <code class="language-plaintext highlighter-rouge">The requested qty is not available</code>. <a href="https://github.com/magento/magento2/issues/24365">GitHub-24365</a></li>
+</ul>
+
+<h3 id="sales-rule">Sales Rule</h3>
+
+<!--- MC-34778-->
+
+<ul>
+  <li>Coupon codes that have been applied based on shipping method are no longer applied when a shopper changes shipping method. Previously, Magento did not clear coupon codes when shoppers switched shipping methods.</li>
+</ul>
+
+<!--- MC-34733-->
+
+<ul>
+  <li>Coupon discounts are now calculated correctly when you add a bundle product to the cart after the coupon was applied. Previously, it was incorrectly calculated.</li>
+</ul>
+
+<!--- MC-34621-->
+
+<ul>
+  <li>Shoppers cannot apply a coupon code more frequently than the <strong>Uses Per Customer</strong> setting permits. Previously, if a shopper had multiple browser windows open and placed multiple orders concurrently, each order received the discount, even though the <strong>Uses Per Customer</strong> setting had a value of <strong>1</strong>.</li>
+</ul>
+
+<!--- MC-33723-->
+
+<ul>
+  <li>The order summary now displays the correct discount amount when a cart price rule has been applied. Previously, the rule did not correctly round amounts when calculating shipping discounts.</li>
+</ul>
+
+<!--- MC-32216-->
+
+<ul>
+  <li>Magento now displays category trees as expected when you try to create or edit a Cart Price rule. Previously, selecting a category in the Condition section while creating or editing a rule resulted in JavaScript errors.</li>
+</ul>
+
+<!--- MC-31800-->
+
+<ul>
+  <li>Magento now applies fixed-amount, whole-cart discounts correctly for orders being shipped to multiple addresses. Previously, this type of discount was applied multiple times when a customer checked out an order using Check Out with Multiple Addresses. <a href="https://github.com/magento/magento2/issues/25834">GitHub-25834</a></li>
+</ul>
+
+<h3 id="search">Search</h3>
+
+<!--- MC-33868-->
+
+<ul>
+  <li>Elasticsearch results now include the correct values for each store view’s attribute options. If a Dropdown or Multiple Select attribute has a different option value in the non-default store view than in the default store view, Elasticsearch now indexes that value or returns the product with that value in the results. Previously, Elasticsearch did not index that value or return the product with that value in the results.</li>
+</ul>
+
+<!--- MC-32420-->
+
+<ul>
+  <li>Price sorting now works correctly for out-of-stock configurable products.</li>
+</ul>
+
+<!--- MC-35409-->
+
+<ul>
+  <li>The performance of catalog search has improved. Disabling <strong>Enable Search Suggestions</strong>  (<strong>Stores</strong>  &gt;  <strong>Configuration</strong>  &gt;  <strong>Catalog</strong> &gt;  <strong>Catalog Search</strong>) works as expected. Previously, Magento queried the MySQL search_query table instead of Elasticsearch for autocomplete search suggestions. <a href="https://github.com/magento/magento2/issues/25534">GitHub-25534</a></li>
+</ul>
+
+<h3 id="shipping">Shipping</h3>
+
+<!--- MC-32819-->
+
+<ul>
+  <li>You can now ship an order to multiple addresses if one of the ordered products is a virtual product. Previously, Magento successfully placed the order for the physical products, but the virtual product order was empty.</li>
+</ul>
+
+<h3 id="sitemap">Sitemap</h3>
+
+<!--- MC-35182-->
+
+<ul>
+  <li>The sitemap generation process now uses custom URL rewrites as expected. Previously, the generated <code class="language-plaintext highlighter-rouge">sitemap.xml</code> did not include custom URLs.</li>
+</ul>
+
+<!--- MC-34598-->
+
+<ul>
+  <li>Encoded values are now correctly escaped in <code class="language-plaintext highlighter-rouge">sitemap.xml</code>. Previously, when you included encoded characters in a product name or image title, the generated sitemap was invalid.</li>
+</ul>
+
+<h3 id="store">Store</h3>
+
+<!--- MC-35381-->
+
+<ul>
+  <li>The store-view switcher now works correctly when the store views have different base URLs. Users are now redirected to the corresponding page, category, or product page on the new store view.</li>
+</ul>
+
+<!--- MC-32633-->
+
+<ul>
+  <li>You can now export <code class="language-plaintext highlighter-rouge">config.php</code> and default website code from one website to install and configure Magento on a second website in a multi-website deployment. Previously, the default store and view disappeared after the export, and errors occurred on the storefront.</li>
+</ul>
+
+<!--- MC-32280-->
+
+<ul>
+  <li>Magento installation now completes successfully, and stores are created as expected, when store configuration is pre-defined in <code class="language-plaintext highlighter-rouge">config.php</code>.</li>
+</ul>
+
+<h3 id="swatches">Swatches</h3>
+
+<!--- MC-35326-->
+
+<ul>
+  <li>You can now use  <code class="language-plaintext highlighter-rouge">POST /V1/products/attributes</code> to add a <code class="language-plaintext highlighter-rouge">text_swatch</code> type of product attribute. Previously, Magento did not add the option to the attribute and displayed an error.</li>
+</ul>
+
+<h3 id="target-rule">Target Rule</h3>
+
+<!--- MC-34965-->
+
+<ul>
+  <li>Loading of product details pages has been optimized. Indices for database tables that optimize target rule conditions queries for many cases have been added.</li>
+</ul>
+
+<h3 id="theme">Theme</h3>
+
+<!--- MC-34133-->
+
+<ul>
+  <li>Shoppers can now successfully change the number of orders per page in the order history multiple times. Previously, when a shopper changed this value more than once, Magento rendered the results page as expected for only the first value entered.</li>
+</ul>
+
+<!--- MC-34120-->
+
+<ul>
+  <li>Themes that are added in User Agent Rules are now affected as expected when you run <code class="language-plaintext highlighter-rouge">bin/magento catalog:images:resize</code>. Previously, only themes that were assigned to stores were affected when <code class="language-plaintext highlighter-rouge">bin/magento catalog:images:resize</code> was run.</li>
+</ul>
+
+<h3 id="translation-and-locales">Translation and locales</h3>
+
+<!--- MC-20127-->
+
+<ul>
+  <li>Inline translation now works as expected on the storefront when Admin <strong>Stores</strong> &gt; <strong>Configuration</strong> &gt; <strong>Advanced</strong> &gt; <strong>Developer</strong> &gt; <strong>Translate Inline</strong> &gt; <strong>Enabled for Storefront</strong> is set.</li>
+</ul>
+
+<h3 id="ui">UI</h3>
+
+<!--- MC-31875-->
+
+<ul>
+  <li>Magento now preserves an attribute’s value when you move the attribute from one group to another.</li>
+</ul>
+
+<h3 id="url-rewrites">URL rewrites</h3>
+
+<!--- MC-34439-->
+
+<ul>
+  <li>Moving a store view to a different website no longer resets URLs. Previously, Magento incorrectly regenerated CMS and product URL rewrites.</li>
+</ul>
+
+<!--- MC-32810-->
+
+<ul>
+  <li>Magento no longer changes a product’s URL in all stores when a merchant changes a product URL for one store in a multi-site deployment. Previously, if a merchant changed a URL key for one store view, Magento changed the URL for all stores.</li>
+</ul>
+
+<h3 id="vertex">Vertex</h3>
+
+<ul>
+  <li>
+    <p>Taxes are now calculated as expected on orders that contain both physical and virtual products.</p>
+  </li>
+  <li>
+    <p>Vertex now processes products with a price of 0 as expected. Previously, administrators could not create an order with a total of 0.</p>
+  </li>
+  <li>
+    <p>The checkout process now successfully progresses from shipping to payment when using Internet Explorer 11.x with Vertex. Previously, Magento threw a JavaScript error when the shopper tried to proceed from shipping to payment.</p>
+  </li>
+  <li>
+    <p>The process of submitting an invoice to Vertex has been optimized, and performance has improved.</p>
+  </li>
+  <li>
+    <p>Tax details are now included as expected in the database.</p>
+  </li>
+  <li>
+    <p>Log rotation now works as expected in production mode.</p>
+  </li>
+  <li>
+    <p>Vertex now calculates taxes correctly when a default ZIP code is provided for tax calculation.</p>
+  </li>
+  <li>
+    <p>Updating the billing address with Vertex’s recommendation no longer updates the fields on the shipping address.</p>
+  </li>
+</ul>
+
+<h3 id="visual-merchandiser">Visual Merchandiser</h3>
+
+<!--- MC-35000-->
+
+<ul>
+  <li>You can now add products to a category when implementing Level 2 cache.</li>
+</ul>
+
+<h3 id="web-api-framework">Web API framework</h3>
+
+<!--- MC-35299-->
+
+<ul>
+  <li>Invoices created using the REST API now include gift card information similar to the invoices that are created in the Admin. Previously, using POST <code class="language-plaintext highlighter-rouge">/V1/order/:id/invoice</code> to invoice the order did not display the gift card code or gift card amount applied.</li>
+</ul>
+
+<!--- MC-34654-->
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">default_sort_by</code> attribute now takes <code class="language-plaintext highlighter-rouge">String</code> instead of <code class="language-plaintext highlighter-rouge">String[]</code>.</li>
+</ul>
+
+<!--- MC-33529-->
+
+<ul>
+  <li>You can now use POST <code class="language-plaintext highlighter-rouge">http://&lt;domain&gt;/rest/V1/categories/</code> to create or update a category. Previously, Magento did not save the value if the <code class="language-plaintext highlighter-rouge">default_sort_by</code> value was set as an array. When the <code class="language-plaintext highlighter-rouge">default_sort_by</code> value was set as a string, Magento threw this error: <code class="language-plaintext highlighter-rouge">Error occurred during \"custom_attributes\" processing. Attribute \"default_sort_by\" has invalid value. The \"string\" value's type is invalid. The \"string[]\" type was expected. Verify and try again.</code></li>
+</ul>
+
+<!--- MC-31843-->
+
+<ul>
+  <li>Bulk order updates using <code class="language-plaintext highlighter-rouge">PUT /async/bulk/V1/orders/:id</code> now update the order status as expected. Previously, Magento threw this error: <code class="language-plaintext highlighter-rouge">report.ERROR: Property "AdditionalInformation" does not have accessor method "setAdditionalInformation" in class "Magento\Sales\Api\Data\OrderPaymentInterface".</code></li>
+</ul>
+
+<h3 id="wishlist">Wishlist</h3>
+
+<!--- MC-36090-->
+
+<ul>
+  <li>Administrators can now configure a configurable product that has been added by a customer to a wishlist from a non-default store. Previously, when the customer had also added the configurable product from a non-default store, Magento threw an error.</li>
+</ul>
+
+<!--- MC-35429-->
+
+<ul>
+  <li>The <strong>Add to cart</strong> button on the shared wishlist page now works as expected for anonymous, guest, and users who are not logged in.</li>
+</ul>
+
+<h2 id="known-issues">Known issues</h2>
+
+<p><strong>Issue</strong>: The new CAPTCHA feature for checkout does not work as expected on the Place Order page when using third-party payment providers. Merchants running Magento Open Source 2.3.6 or 2.4.1 who have enabled CAPTCHA protection on the Place Order storefront page will see this error when checking out using a third-party payment provider such as PayPal: <code class="language-plaintext highlighter-rouge">Please provide CAPTCHA code and try again</code>. <strong>Workaround</strong>: A fix for this issue is now available. See the <a href="https://support.magento.com/hc/en-us/articles/360051235772">Adobe Commerce v2.3.6/2.4.1 CAPTCHA in checkout not working</a> Knowledge Base article. A fix will also be included in our next quarterly patch (Q12021).</p>
+
+<p><strong>Issue</strong>: Merchants upgrading their stores from 2.3.5-p2 to 2.3.6 will note that two module versions downgrade. These messages reflect the incomplete delivery of two security fixes to the 2.3.x quarterly patches. These fixes for low severity issues are included in Magento Open Source 2.3.5-p2, 2.4.1, and 2.4.0-p1 but are missing from Magento Open Source 2.3.6. No hot fixes will be provided. These fixes will be merged along with the other security fixes in Magento Open Source 2.3.6-p1, which is scheduled for Q12021.</p>
+
+<p><strong>Issue</strong>: The <strong>Create an Account</strong> button on the Create New Account page remains disabled if a shopper has entered invalid data. This prevents shoppers from re-attempting to create an account after making an error. <strong>Workaround</strong>: Apply patch <code class="language-plaintext highlighter-rouge">MC-38509</code>. A fix will also be included in our next quarterly releases (2.4.2, 2.4.1-p1 and 2.3.6-p1), which are scheduled for release in Q1 2021. See the <a href="https://support.magento.com/hc/en-us/articles/360051130212">2.4.1 and 2.3.6 create an account button disabled hotfix</a> Knowledge Base article.  <a href="https://github.com/magento/magento2/issues/30513">GitHub-30513</a></p>
+
+<p><strong>Issue</strong>: Merchants cannot log in to dotdigital from the Admin when dotdigital is enabled. See the <a href="https://support.magento.com/hc/en-us/articles/360050092291">It’s impossible to login in the dotdigital via admin panel when dotdigital account is enabled</a> Knowledge Base article.<!--- BUNDLE-2704--></p>
+
+<h3 id="system-requirements">System requirements</h3>
+
+<p>Our technology stack is built on PHP and MySQL. For more information, see <a href="/devdocs/2.3/guides/v2.3/install-gde/system-requirements.html">System Requirements</a>.</p>
+
+<h3 id="installation-and-upgrade-instructions">Installation and upgrade instructions</h3>
+
+<p>You can install Magento Open Source 2.3.6 using Composer.</p>
+
+<h2 id="migration-toolkits">Migration toolkits</h2>
+
+<p>The Data Migration Tool helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see <a href="/devdocs/2.3/guides/v2.3/migration/migration-tool-install.html">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool">Magento Data Migration repository</a>.</p>
+
+<p>The <a href="https://github.com/magento/code-migration">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.</p>
+
+			</main>
+			<footer class="content-footer">
+				<button class="page-updated spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+  <img class="spectrum-Icon spectrum-Icon--sizeS" src="/devdocs/2.3/assets/i/icons/time.svg" alt="Updated" />
+  <time class="spectrum-ActionButton-label" id="last-modified-at" itemprop="dateModified"
+    datetime="2022-04-28">
+    Apr 28th, 2022
+  </time>
+</button>
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+</div>
+<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+    <div class="container">
+  
+      <div class="copyright-links">
+        
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="  " role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md" class=" ">Become a Contributor</a></li>
+
+  <li class="  " role="menuitem"><a href="https://glossary.magento.com/" class=" ">Glossary</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/privacy/" class=" ">Privacy Policy</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/" class=" ">Terms of Service</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/licensing/" class=" ">License/Trademark FAQ</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/bk-release-notes.html" class=" ">Release Notes</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-open-source.html" class=" ">Third-Party Licenses</a></li>
+
+</ul>
+
+      </div>
+  
+          <div class="copyright-date">&copy; 2023 Adobe. All rights reserved.</div>
+  
+    </div>
+  </div>
+  <!-- / #footer -->
+  
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.3/assets/js/app.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/editions.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/page-updated.min.js?ver=20"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.3/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+
+</html>

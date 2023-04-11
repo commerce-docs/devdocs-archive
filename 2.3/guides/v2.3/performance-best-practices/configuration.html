@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Configuration best practices | Archived 2.3 Magento Developer Guide</title>
+	<meta name="description" content="Magento Developer Guide">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/app.css?ver=20" />
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/print.css?ver=20" media="print" />
+	<script src="https://assets.adobedtm.com/a7d65461e54e/f87b70cb627a/launch-b042bff6c581.min.js" async></script>
+
+	<link rel="stylesheet" href="/devdocs/2.3/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.3";
+  var algolia = {
+    id: "E642SEDTHL",
+    index: "devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [{
+      label: "Results",
+      name: "devdocs",
+      facetFilters: [
+        ["guide_version: 2.3",
+          "versionless: true"
+        ]
+      ],
+      refinements: [{
+        label: "Functional areas",
+        attribute: "functional_areas"
+      }],
+      baseUrl: "/devdocs/2.3"
+    }
+  ];
+
+</script>
+
+
+
+
+	<link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://adobe.com/favicon.ico">
+
+</head>
+
+<body class="layout-default">
+
+	<header class="site-header">
+
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.3/">
+      <img class="logo-image" src="/devdocs/2.3/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Adobe</span>
+      <span class="site-logo">Commerce DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation --><ul class="nav-main spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" role="menubar"><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Cloud</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud basics</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html" class="spectrum-Menu-itemLabel ">Cloud Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html" class="spectrum-Menu-itemLabel ">Cloud Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/file-structure.html" class="spectrum-Menu-itemLabel ">Project Structure</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/best-practices.html" class="spectrum-Menu-itemLabel ">Upgrades and Patches</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html" class="spectrum-Menu-itemLabel ">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud development</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/" class="spectrum-Menu-itemLabel ">Local development</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/configure/" class="spectrum-Menu-itemLabel ">Configure and launch Docker</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/" class="spectrum-Menu-itemLabel ">Docker quick reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html" class="spectrum-Menu-itemLabel ">Configure Application</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html" class="spectrum-Menu-itemLabel ">Configure Environments</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Functional Testing</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/" class="spectrum-Menu-itemLabel ">Application testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/" class="spectrum-Menu-itemLabel ">Cloud code testing</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Setup</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-Menu-itemLabel ">Installation Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html" class="spectrum-Menu-itemLabel ">Extensions Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html" class="spectrum-Menu-itemLabel ">Software Update Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-Menu-itemLabel ">Configuration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-Menu-itemLabel ">Performance Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/migration/bk-migration-guide.html" class="spectrum-Menu-itemLabel ">Migration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html" class="spectrum-Menu-itemLabel ">Release Information</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/reference/cli/magento.html" class="spectrum-Menu-itemLabel ">Command-line Tools Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html" class="spectrum-Menu-itemLabel ">Tools</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Development</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Backend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-Menu-itemLabel ">Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html" class="spectrum-Menu-itemLabel ">PHP Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ext-best-practices/bk-ext-best-practices.html" class="spectrum-Menu-itemLabel ">Extension Developer Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/mrg/intro.html" class="spectrum-Menu-itemLabel ">Module Reference Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-Menu-itemLabel ">Coding Standards</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/guides/" class="spectrum-Menu-itemLabel ">Contributor Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/" class="spectrum-Menu-itemLabel ">Contribution Resources</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Frontend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html" class="spectrum-Menu-itemLabel ">Frontend Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ui_comp_guide/bk-ui_comps.html" class="spectrum-Menu-itemLabel ">UI Components Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html" class="spectrum-Menu-itemLabel ">JavaScript Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/pattern-library/bk-pattern.html" class="spectrum-Menu-itemLabel ">Admin Design Pattern Library</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/design-styleguide/bk-styleguide.html" class="spectrum-Menu-itemLabel ">Admin Style Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/pwa-studio/" class="spectrum-Menu-itemLabel ">PWA Documentation Site</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder Developer Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">API</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/bk-get-started-api.html" class="spectrum-Menu-itemLabel ">Get Started with our Web APIs</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/bk-rest.html" class="spectrum-Menu-itemLabel ">REST API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/soap/bk-soap.html" class="spectrum-Menu-itemLabel ">SOAP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/graphql/" class="spectrum-Menu-itemLabel ">GraphQL Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/" class="spectrum-Menu-itemLabel ">Marketplace EQP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/mbi/docs/getting-started.html" class="spectrum-Menu-itemLabel ">Commerce Reporting API</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Testing</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/testing.html" class="spectrum-Menu-itemLabel ">Application Testing Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://devdocs.magento.com/mftf/v2/docs/introduction.html" class="spectrum-Menu-itemLabel ">Functional Acceptance Testing (MFTF)</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/integration/integration_test_execution.html" class="spectrum-Menu-itemLabel ">Integration Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/js/jasmine.html" class="spectrum-Menu-itemLabel ">JavaScript Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/unit/unit_test_execution.html" class="spectrum-Menu-itemLabel ">PHP Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/web-api-functional-testing.html" class="spectrum-Menu-itemLabel ">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Functional Areas</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/advanced-reporting/overview.html" class="spectrum-Menu-itemLabel ">Advanced Reporting</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/b2b/bk-b2b.html" class="spectrum-Menu-itemLabel ">B2B</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html" class="spectrum-Menu-itemLabel ">Catalog Service</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/inventory/index.html" class="spectrum-Menu-itemLabel ">Inventory Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html" class="spectrum-Menu-itemLabel ">Live Search</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/" class="spectrum-Menu-itemLabel ">Commerce Marketplace</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html" class="spectrum-Menu-itemLabel ">Payment Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://omsdocs.magento.com/en/" class="spectrum-Menu-itemLabel ">Order Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/developer/development-overview.html" class="spectrum-Menu-itemLabel ">Product Recommendations Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html" class="spectrum-Menu-itemLabel ">Security and Compliance</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/services/shared-services/" class="spectrum-Menu-itemLabel ">Shared Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/staging.html" class="spectrum-Menu-itemLabel ">Staging</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Tutorials</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/tutorials/index.html" class="spectrum-Menu-itemLabel ">Rest Tutorials</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/custom-attributes/introduction.html" class="spectrum-Menu-itemLabel ">Custom Attributes</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/customize_product.html" class="spectrum-Menu-itemLabel ">Customize Product Creation Form</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Customize Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/support/" class="spectrum-Menu-itemLabel ">Support</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/overview.html" class="spectrum-Menu-itemLabel ">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      <div class="version-switcher">
+	<button class="spectrum-Picker spectrum-Picker--sizeM dropdown-toggle" disabled>
+		<span class="spectrum-Picker-label">Version 2.3</span>
+	</button>
+</div>
+
+      
+        <div class="search-btn">
+  <button class="search-trigger" aria-label="Search">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Search">
+      <rect opacity="0" width="18" height="18" /><path class="a" d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+    </svg>
+  </button>
+</div>
+
+<div class="quick-search">
+  <form class="spectrum-Search spectrum-Textfield search-form"
+      action="/devdocs/2.3/guides/v2.3/search.html">
+  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
+    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+    <rect fill="#ff13dc" opacity="0" width="18" height="18" />
+    <path class="a"
+      d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+  </svg>
+  <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+    <div class="spectrum-ClearButton-fill">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+        <path class="a"
+          d="M13.2425,3.343,9,7.586,4.7575,3.343a.5.5,0,0,0-.707,0L3.343,4.05a.5.5,0,0,0,0,.707L7.586,9,3.343,13.2425a.5.5,0,0,0,0,.707l.707.7075a.5.5,0,0,0,.707,0L9,10.414l4.2425,4.243a.5.5,0,0,0,.707,0l.7075-.707a.5.5,0,0,0,0-.707L10.414,9l4.243-4.2425a.5.5,0,0,0,0-.707L13.95,3.343a.5.5,0,0,0-.70711-.00039Z" />
+      </svg>
+    </div>
+  </button>
+</form>
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Performance Best Practices</h4>
+		
+		<div class="collapsible-navigation">
+		  <ul class="spectrum-SideNav spectrum-SideNav--multiLevel"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-SideNav-itemLink ">Introduction</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/hardware.html" class="spectrum-SideNav-itemLink ">Hardware recommendations</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/software.html" class="spectrum-SideNav-itemLink ">Software recommendations</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/reference-architecture.html" class="spectrum-SideNav-itemLink ">Reference architecture</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/development-environment.html" class="spectrum-SideNav-itemLink ">Development environment recommendations</a></li><li class="is-selected  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/configuration.html" class="spectrum-SideNav-itemLink ">Configuration best practices</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/deployment-flow.html" class="spectrum-SideNav-itemLink ">Deployment flow</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Advanced concepts</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/advanced-setup.html" class="spectrum-SideNav-itemLink ">Advanced setup</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/advanced-js-bundling.html" class="spectrum-SideNav-itemLink ">Advanced JavaScript bundling</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+
+  
+
+  
+  <div class="message-banner">
+    <center>Adobe Commerce 2.3 reached end of support in September 2022.</center>
+  </div>
+  
+
+  
+
+
+
+
+<!--   
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-itemLabel">Shantanu</span>
+  </div>
+</div> -->
+
+
+  <h1 class="page-title">Configuration best practices</h1>
+
+  
+
+  
+	<div class="github-links spectrum-ActionGroup--compact ActionGroup--justified"></div>
+	
+
+</section>
+
+			</header>
+			<main>
+				<p>Magento 2 provides many settings and tools that you can use to improve response time on the pages as well as provide higher throughput.</p>
+
+<h2 id="cron-jobs">Cron Jobs</h2>
+
+<p>All asynchronous operations in Magento Open Source are performed using the Linux <code class="language-plaintext highlighter-rouge">cron</code> command. See <a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html">Configure and run cron</a> to configure it correctly.</p>
+
+<h2 id="indexers">Indexers</h2>
+
+<p>An indexer can run in either <strong>Update on Save</strong> or <strong>Update on Schedule</strong> mode. The <strong>Update on Save</strong> mode immediately indexes whenever your catalog or other data changes. This mode assumes a low intensity of update and browsing operations in your store. It can lead to significant delays and data unavailability during high loads. We recommend using <strong>Update on Schedule</strong> mode in production, because it stores information about data updates and performs indexation by portions in the background through a specific cron job. You can change the mode of each Magento indexer separately on the  <strong>System</strong> &gt; Tools &gt; <strong>Index Management</strong> configuration page.</p>
+
+<!--  Add to docs in 2.3.1 - MAGEDOC-3020
+We recommend that you use index parallelization and that you set threads count for the index process based on:
+
+- Threads count >= max dimension count (across all indexers)
+- Threads count <= cores count
+
+See the [Reindex in parallel mode section](/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html#config-cli-subcommands-index-reindex-parallel) of [Manage the indexers](/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html) for more information.  -->
+
+<h2 id="caches">Caches</h2>
+
+<p>When you launch your store in production, activate all the caches from the <strong>System</strong> &gt; Tools &gt; <strong>Cache Management</strong> page. We highly recommend using Varnish, as it is an efficient production page cache solution.</p>
+
+<h2 id="asynchronous-email-notifications">Asynchronous email notifications</h2>
+
+<p>Enabling the “Asynchronous email notifications” setting moves processes that handle checkout and order processing email notifications to the background. To enable this feature, go to <strong>Stores &gt; Settings &gt; Configuration &gt; Sales &gt; Sales Emails &gt; General Settings &gt; Asynchronous Sending</strong>. See <a href="https://docs.magento.com/user-guide/v2.3/configuration/sales/sales-emails.html">Sales Emails</a> in the <em>Magento Open Source User Guide</em> for more information.</p>
+
+<h2 id="asynchronous-order-data-processing">Asynchronous order data processing</h2>
+
+<p>There can be times when intensive sales on a storefront occur at the same time that Magento is performing intensive order processing. You can configure Magento to distinguish these two traffic patterns on the database level to avoid conflicts between read and write operations in the corresponding tables. You can store and index order data asynchronously. Orders are placed in temporary storage and moved in bulk to the Order Management grid without any collisions. You can activate this option from <strong>Stores &gt; Settings &gt; Configuration &gt; Advanced &gt; Developer &gt; Grid Settings &gt; Asynchronous indexing</strong>. See <a href="https://docs.magento.com/user-guide/v2.3/sales/order-grid-updates-schedule.html">Scheduled Grid Updates</a> in the <em>Magento Open Source User Guide</em> for more information.</p>
+
+<p class="bs-callout-info">The <strong>Developer</strong> tab and options are only available in <a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-mode.html">Developer mode</a>. <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html">Adobe Commerce on cloud infrastructure</a> does not support <code class="language-plaintext highlighter-rouge">Developer</code> mode.</p>
+
+<h2 id="deferred-stock-update">Deferred stock update</h2>
+
+<p>In times of intensive sales,  Magento can defer stock updates related to orders. This minimizes the number of operations and speeds up the order placement process. However, this option is risky and can only be used when Backorders are activated in the store, because this option can lead to negative stock quantities. This option can bring significant performance improvement on Checkout flows for stores that can easily re-fill their stock on demand. To activate deferred stock updates on your site, go to <strong>Stores &gt; Settings &gt; Configuration &gt; Catalog &gt; Inventory &gt; Product Stock Options &gt; Use Deferred Stock Update</strong>. See <a href="https://docs.magento.com/user-guide/v2.3/catalog/inventory.html">Managing Inventory</a> in the <em>Adobe Commerce User Guide</em> for more information.</p>
+
+<p class="bs-callout-info">This option is available only if <strong>Backorder with any mode</strong> is activated.</p>
+
+<h2 id="client-side-optimization-settings">Client side optimization settings</h2>
+
+<p>To improve the storefront responsiveness of your Magento instance, go to the Admin in Default or Developer mode and change the following settings:</p>
+
+<p><strong>Stores -&gt; Configuration -&gt; Advanced -&gt; Developer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Settings Group</th>
+      <th>Setting</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Grid Settings</td>
+      <td>Asynchronous indexing</td>
+      <td>Enable</td>
+    </tr>
+    <tr>
+      <td>CSS Settings</td>
+      <td>Minify CSS Files</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>JavaScript Settings</td>
+      <td>Minify JavaScript Files</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>JavaScript Settings</td>
+      <td>Enable JavaScript Bundling</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Template Settings</td>
+      <td>Minify HTML</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="bs-callout-info">The <strong>Developer</strong> tab and options are only available in <a href="/devdocs/2.3/guides/v2.3/config-guide/cli/config-cli-subcommands-mode.html">Developer mode</a>. <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html">Adobe Commerce on cloud infrastructure</a> does not support <code class="language-plaintext highlighter-rouge">Developer</code> mode.</p>
+
+<p>When you activate the <strong>Enable JavaScript Bundling</strong> option, you allow Magento to merge all JS resources into one or a set of bundles that are loaded in storefront pages. Bundling JS results in fewer requests to the server, which improves page performance. It also helps the browser cache JS resources on the first call and reuse them for all further browsing. This option also brings lazy evaluation, as all JS is loaded as text. It initiates analysis and evaluation of code only after specific actions are triggered on the page. However, this setting is not recommended for stores where the first page load time is extremely critical, because all JS content will be loaded on the first call.</p>
+
+<h3 id="bundling-tips">Bundling tips</h3>
+
+<ul>
+  <li>We recommend that you use third-party tools for minification and bundling (like <a href="https://requirejs.org/">r.js</a>). Magento built-in mechanisms are not optimal and are shipped as fallback alternatives.</li>
+  <li>Activating the HTTP2 protocol can be a good alternative to using JS bundling. The protocol provides pretty much the same benefits.</li>
+  <li>We do not recommend using deprecated settings like merging JS and CSS files, as they were designed only for synchronously-loaded JS in the HEAD section of the page. Using this technique can cause bundling and requireJS logic to work incorrectly.</li>
+</ul>
+
+<h2 id="database">Database maintenance schedule</h2>
+
+<p>We recommend performing periodic database backups for your Staging and Production instances. Due to the I/O intensive nature of backup operations, you may encounter slower backups and potential issues. Running database processes for multiple environments at the same time may potentially run slower due to contention for available resources.</p>
+
+<p>For better performance, schedule your backups to run in succession, one at a time, at off-peak times. This method avoids I/O contention and reduces time to complete, especially for smaller instances, larger databases, and so on.</p>
+
+<p>For example, we recommend scheduling a backup of your Production database followed up by the Staging database when your stores encounter lower visits.</p>
+
+			</main>
+			<footer class="content-footer">
+				<button class="page-updated spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+  <img class="spectrum-Icon spectrum-Icon--sizeS" src="/devdocs/2.3/assets/i/icons/time.svg" alt="Updated" />
+  <time class="spectrum-ActionButton-label" id="last-modified-at" itemprop="dateModified"
+    datetime="2022-12-05">
+    Dec 5th, 2022
+  </time>
+</button>
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+</div>
+<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+    <div class="container">
+  
+      <div class="copyright-links">
+        
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="  " role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md" class=" ">Become a Contributor</a></li>
+
+  <li class="  " role="menuitem"><a href="https://glossary.magento.com/" class=" ">Glossary</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/privacy/" class=" ">Privacy Policy</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/" class=" ">Terms of Service</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/licensing/" class=" ">License/Trademark FAQ</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/bk-release-notes.html" class=" ">Release Notes</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-open-source.html" class=" ">Third-Party Licenses</a></li>
+
+</ul>
+
+      </div>
+  
+          <div class="copyright-date">&copy; 2023 Adobe. All rights reserved.</div>
+  
+    </div>
+  </div>
+  <!-- / #footer -->
+  
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.3/assets/js/app.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/editions.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/page-updated.min.js?ver=20"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.3/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+
+</html>

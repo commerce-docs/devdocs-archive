@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>JavaScript coding standard | Archived 2.3 Magento Developer Guide</title>
+	<meta name="description" content="Magento Developer Guide">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/app.css?ver=20" />
+	<link rel="stylesheet" href="/devdocs/2.3/assets/css/print.css?ver=20" media="print" />
+	<script src="https://assets.adobedtm.com/a7d65461e54e/f87b70cb627a/launch-b042bff6c581.min.js" async></script>
+
+	<link rel="stylesheet" href="/devdocs/2.3/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.3";
+  var algolia = {
+    id: "E642SEDTHL",
+    index: "devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [{
+      label: "Results",
+      name: "devdocs",
+      facetFilters: [
+        ["guide_version: 2.3",
+          "versionless: true"
+        ]
+      ],
+      refinements: [{
+        label: "Functional areas",
+        attribute: "functional_areas"
+      }],
+      baseUrl: "/devdocs/2.3"
+    }
+  ];
+
+</script>
+
+
+
+
+	<link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://adobe.com/favicon.ico">
+
+</head>
+
+<body class="layout-default">
+
+	<header class="site-header">
+
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.3/">
+      <img class="logo-image" src="/devdocs/2.3/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Adobe</span>
+      <span class="site-logo">Commerce DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation --><ul class="nav-main spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" role="menubar"><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Cloud</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud basics</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html" class="spectrum-Menu-itemLabel ">Cloud Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html" class="spectrum-Menu-itemLabel ">Cloud Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/file-structure.html" class="spectrum-Menu-itemLabel ">Project Structure</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/best-practices.html" class="spectrum-Menu-itemLabel ">Upgrades and Patches</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html" class="spectrum-Menu-itemLabel ">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud development</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/" class="spectrum-Menu-itemLabel ">Local development</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/configure/" class="spectrum-Menu-itemLabel ">Configure and launch Docker</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/" class="spectrum-Menu-itemLabel ">Docker quick reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html" class="spectrum-Menu-itemLabel ">Configure Application</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html" class="spectrum-Menu-itemLabel ">Configure Environments</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Functional Testing</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/" class="spectrum-Menu-itemLabel ">Application testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/" class="spectrum-Menu-itemLabel ">Cloud code testing</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Setup</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-Menu-itemLabel ">Installation Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html" class="spectrum-Menu-itemLabel ">Extensions Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html" class="spectrum-Menu-itemLabel ">Software Update Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-Menu-itemLabel ">Configuration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-Menu-itemLabel ">Performance Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/migration/bk-migration-guide.html" class="spectrum-Menu-itemLabel ">Migration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html" class="spectrum-Menu-itemLabel ">Release Information</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/reference/cli/magento.html" class="spectrum-Menu-itemLabel ">Command-line Tools Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html" class="spectrum-Menu-itemLabel ">Tools</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Development</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Backend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-Menu-itemLabel ">Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html" class="spectrum-Menu-itemLabel ">PHP Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ext-best-practices/bk-ext-best-practices.html" class="spectrum-Menu-itemLabel ">Extension Developer Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/mrg/intro.html" class="spectrum-Menu-itemLabel ">Module Reference Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-Menu-itemLabel ">Coding Standards</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/guides/" class="spectrum-Menu-itemLabel ">Contributor Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/" class="spectrum-Menu-itemLabel ">Contribution Resources</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Frontend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html" class="spectrum-Menu-itemLabel ">Frontend Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/ui_comp_guide/bk-ui_comps.html" class="spectrum-Menu-itemLabel ">UI Components Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html" class="spectrum-Menu-itemLabel ">JavaScript Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/pattern-library/bk-pattern.html" class="spectrum-Menu-itemLabel ">Admin Design Pattern Library</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/design-styleguide/bk-styleguide.html" class="spectrum-Menu-itemLabel ">Admin Style Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/pwa-studio/" class="spectrum-Menu-itemLabel ">PWA Documentation Site</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder Developer Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">API</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/bk-get-started-api.html" class="spectrum-Menu-itemLabel ">Get Started with our Web APIs</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/bk-rest.html" class="spectrum-Menu-itemLabel ">REST API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/soap/bk-soap.html" class="spectrum-Menu-itemLabel ">SOAP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/graphql/" class="spectrum-Menu-itemLabel ">GraphQL Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/" class="spectrum-Menu-itemLabel ">Marketplace EQP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/mbi/docs/getting-started.html" class="spectrum-Menu-itemLabel ">Commerce Reporting API</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Testing</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/testing.html" class="spectrum-Menu-itemLabel ">Application Testing Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://devdocs.magento.com/mftf/v2/docs/introduction.html" class="spectrum-Menu-itemLabel ">Functional Acceptance Testing (MFTF)</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/integration/integration_test_execution.html" class="spectrum-Menu-itemLabel ">Integration Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/js/jasmine.html" class="spectrum-Menu-itemLabel ">JavaScript Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/test/unit/unit_test_execution.html" class="spectrum-Menu-itemLabel ">PHP Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/get-started/web-api-functional-testing.html" class="spectrum-Menu-itemLabel ">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Functional Areas</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/advanced-reporting/overview.html" class="spectrum-Menu-itemLabel ">Advanced Reporting</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/b2b/bk-b2b.html" class="spectrum-Menu-itemLabel ">B2B</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html" class="spectrum-Menu-itemLabel ">Catalog Service</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/inventory/index.html" class="spectrum-Menu-itemLabel ">Inventory Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html" class="spectrum-Menu-itemLabel ">Live Search</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/" class="spectrum-Menu-itemLabel ">Commerce Marketplace</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html" class="spectrum-Menu-itemLabel ">Payment Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://omsdocs.magento.com/en/" class="spectrum-Menu-itemLabel ">Order Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/developer/development-overview.html" class="spectrum-Menu-itemLabel ">Product Recommendations Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html" class="spectrum-Menu-itemLabel ">Security and Compliance</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/services/shared-services/" class="spectrum-Menu-itemLabel ">Shared Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/extension-dev-guide/staging.html" class="spectrum-Menu-itemLabel ">Staging</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Tutorials</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/rest/tutorials/index.html" class="spectrum-Menu-itemLabel ">Rest Tutorials</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/custom-attributes/introduction.html" class="spectrum-Menu-itemLabel ">Custom Attributes</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/customize_product.html" class="spectrum-Menu-itemLabel ">Customize Product Creation Form</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Customize Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/support/" class="spectrum-Menu-itemLabel ">Support</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/overview.html" class="spectrum-Menu-itemLabel ">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      <div class="version-switcher">
+	<button class="spectrum-Picker spectrum-Picker--sizeM dropdown-toggle" disabled>
+		<span class="spectrum-Picker-label">Version 2.3</span>
+	</button>
+</div>
+
+      
+        <div class="search-btn">
+  <button class="search-trigger" aria-label="Search">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Search">
+      <rect opacity="0" width="18" height="18" /><path class="a" d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+    </svg>
+  </button>
+</div>
+
+<div class="quick-search">
+  <form class="spectrum-Search spectrum-Textfield search-form"
+      action="/devdocs/2.3/guides/v2.3/search.html">
+  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
+    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+    <rect fill="#ff13dc" opacity="0" width="18" height="18" />
+    <path class="a"
+      d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+  </svg>
+  <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+    <div class="spectrum-ClearButton-fill">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+        <path class="a"
+          d="M13.2425,3.343,9,7.586,4.7575,3.343a.5.5,0,0,0-.707,0L3.343,4.05a.5.5,0,0,0,0,.707L7.586,9,3.343,13.2425a.5.5,0,0,0,0,.707l.707.7075a.5.5,0,0,0,.707,0L9,10.414l4.2425,4.243a.5.5,0,0,0,.707,0l.7075-.707a.5.5,0,0,0,0-.707L10.414,9l4.243-4.2425a.5.5,0,0,0,0-.707L13.95,3.343a.5.5,0,0,0-.70711-.00039Z" />
+      </svg>
+    </div>
+  </button>
+</form>
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Coding Standards</h4>
+		
+		<div class="collapsible-navigation">
+		  <ul class="spectrum-SideNav spectrum-SideNav--multiLevel"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-SideNav-itemLink ">Coding Standards</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/code-standard-demarcation.html" class="spectrum-SideNav-itemLink ">Code demarcation standard</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/code-standard-php.html" class="spectrum-SideNav-itemLink ">PHP coding standard</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/docblock-standard-general.html" class="spectrum-SideNav-itemLink ">DocBlock standard</a></li><li class="is-selected  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/code-standard-javascript.html" class="spectrum-SideNav-itemLink ">JavaScript coding standard</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/docblock-standard-javascript.html" class="spectrum-SideNav-itemLink ">JavaScript DocBlock standard</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/code-standard-jquery-widgets.html" class="spectrum-SideNav-itemLink ">jQuery widget coding standard</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/code-standard-less.html" class="spectrum-SideNav-itemLink ">LESS coding standard</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/code-standard-html.html" class="spectrum-SideNav-itemLink ">HTML style guide</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/technical-guidelines.html" class="spectrum-SideNav-itemLink ">Technical guidelines</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/technical-vision/index.html" class="spectrum-SideNav-itemLink ">Technical vision</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs/2.3/guides/v2.3/coding-standards/technical-vision/webapi.html" class="spectrum-SideNav-itemLink ">Web Api</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+
+  
+
+  
+  <div class="message-banner">
+    <center>Adobe Commerce 2.3 reached end of support in September 2022.</center>
+  </div>
+  
+
+  
+
+
+
+
+<!--   
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-itemLabel">Shantanu</span>
+  </div>
+</div> -->
+
+
+  <h1 class="page-title">JavaScript coding standard</h1>
+
+  
+
+  
+	<div class="github-links spectrum-ActionGroup--compact ActionGroup--justified"></div>
+	
+
+</section>
+
+			</header>
+			<main>
+				<p>Use Magento’s <a href="https://github.com/magento/magento-coding-standard/blob/develop/eslint/.eslintrc-magento">ESLint Rules</a> to make sure your code adheres to Magento’s coding standards.
+Developers writing <a href="https://glossary.magento.com/javascript">JavaScript</a> and <a href="https://glossary.magento.com/jquery">jQuery</a> code for Magento must adhere to these guidelines and follow the standards listed in this document.</p>
+
+<p>Use <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a> to interpret the “must,” “must not,” “required,” “shall,” “shall not,” “should,” “should not,” “recommended,” “may,” and “optional” keywords.</p>
+
+<p>Magento uses the <a href="https://jquery.com/">jQuery library</a> including standard and custom <a href="https://api.jqueryui.com/category/widgets">jQuery widgets</a>.
+For the jQuery widget coding standard, see <a href="/devdocs/2.3/guides/v2.3/coding-standards/code-standard-jquery-widgets.html">jQuery widget coding standard</a>.</p>
+
+<h2 id="eslint-code-analysis">Eslint code analysis</h2>
+
+<p>Use <a href="https://eslint.org/">ESLint</a> to ensure the quality of your JavaScript code.</p>
+
+<p>ESLint is a community-driven tool that detects errors and potential problems in JavaScript code.
+It can use custom rules to enforce specific coding standards.</p>
+
+<ul>
+  <li><a href="https://github.com/magento/magento-coding-standard/blob/develop/eslint/.eslintrc-magento">Magento ESLint Rules</a></li>
+</ul>
+
+<h2 id="additional-formatting-standards">Additional formatting standards</h2>
+
+<h3 id="anonymous-function-calls">Anonymous function calls</h3>
+
+<p>When you declare an anonymous function as an argument in a function call, indent the body of the function by <em>four</em> spaces from the left edge of the statement or function <a href="https://glossary.magento.com/keyword">keyword</a> to increase readability.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="nx">myObject</span><span class="p">.</span><span class="nx">myFunction</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Function logic</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="end-of-file">End of file</h3>
+
+<p>The last line in a file must end with a single linefeed(LF) character(i.e. an empty line).</p>
+
+<p>This reduces the quantity of the changed lines in a diff and makes code safer in file concatenation processes.</p>
+
+<h3 id="indentation">Indentation</h3>
+
+<p>Indentation in Magento code uses four spaces.</p>
+
+<p>Tabs are not allowed as indentation.</p>
+
+<h4 id="wrapped-lines">Wrapped lines</h4>
+
+<p>Indent wrapped lines two spaces or left-aligned to the expression above.</p>
+
+<h3 id="max-line-length">Max line length</h3>
+
+<p>The recommended max line length is 80 characters.</p>
+
+<p>Source code lines must not exceed 120 characters.</p>
+
+<p>Comment lines that contain an example command or a literal <a href="https://glossary.magento.com/url">URL</a> longer than 120 characters may exceed the 120 character limit for ease of cutting and pasting.</p>
+
+<p>Do not be concerned about header guards that exceed 120 characters.</p>
+
+<h3 id="line-termination">Line termination</h3>
+
+<p>Line termination follows the UNIX text file convention.</p>
+
+<p>Lines must end with a single linefeed(LF) character represented as ordinal 10 or hexadecimal (<code class="language-plaintext highlighter-rouge">0x0A</code>).</p>
+
+<p><em>Do not</em> use carriage the Mac OS convention of carriage returns(CR or <code class="language-plaintext highlighter-rouge">0x0D</code>) or the carriage return-linefeed combination(CRLF or <code class="language-plaintext highlighter-rouge">0x0D</code> and <code class="language-plaintext highlighter-rouge">0x0A</code>) standard for Windows OS.</p>
+
+<h3 id="multi-line-string-literals">Multi-line string literals</h3>
+
+<p>Use string concatenation for multi-line string literals:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">myString</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">JavaScript was originally developed in Netscape, by Brendan Eich. </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">Battling with Microsoft over the Internet, Netscape considered their client-server solution </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">as a distributed OS, running a portable version of Sun Microsystem&amp;#8217;s Java. </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">Because Java was a competitor of C++ and aimed at professional programmers, </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">Netscape also wanted a lightweight interpreted language that would complement Java </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">by appealing to nonprofessional programmers, like Microsoft&amp;#8217;s VB.[9] (see JavaScript and Java)</span><span class="dl">'</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="parentheses">Parentheses</h3>
+
+<p>Use sparingly and in general where required by the syntax and semantics.</p>
+
+<p>Never use parentheses for:</p>
+
+<ul>
+  <li>Unary operators (e.g. <code class="language-plaintext highlighter-rouge">delete</code>, <code class="language-plaintext highlighter-rouge">typeof</code>, and <code class="language-plaintext highlighter-rouge">void</code>)</li>
+  <li>After keywords such as <code class="language-plaintext highlighter-rouge">return</code>, <code class="language-plaintext highlighter-rouge">throw</code></li>
+  <li>For <code class="language-plaintext highlighter-rouge">case</code>, <code class="language-plaintext highlighter-rouge">in</code>, or <code class="language-plaintext highlighter-rouge">new</code>, and others keywords like them</li>
+</ul>
+
+<h3 id="blocks">Blocks</h3>
+
+<p>Use braces with all multiline blocks. May only omit braces if entire block can be written in one line and improves readability.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="c1">// Wrong</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+    <span class="nx">blah</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// Correct</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">blah</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="semicolons">Semicolons</h3>
+
+<p>Always put semicolons as statement terminators.</p>
+
+<p>The following code examples show the dangers of missing semicolons:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c1">// Example 1: JavaScript Error</span>
+<span class="nx">MyClass</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">myMethod</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">42</span><span class="p">;</span>
+<span class="p">}</span>  <span class="c1">// &lt;-- Missing semicolon</span>
+
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Some initialization code wrapped in a function to create a scope for locals.</span>
+<span class="p">})();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Since there is semicolon to end the first statement, the first function returns 42 and the script interprets 42 as a function.
+When the script tries to call 42 as a function with the second function as a parameter, an error occurs.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c1">// Example 2: Trying to do one thing on Internet Explorer and another on Firefox.</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">i</span><span class="dl">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">j</span><span class="dl">'</span><span class="p">:</span> <span class="mi">2</span>
+ <span class="p">}</span>  <span class="c1">// &lt;-- Missing semicolon</span>
+
+<span class="p">[</span><span class="nx">normalVersion</span><span class="p">,</span> <span class="nx">ffVersion</span><span class="p">][</span><span class="nx">isIE</span><span class="p">]();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>A ‘no such property in undefined’ error appears during runtime when the script tries to call <code class="language-plaintext highlighter-rouge">x[ffVersion][isIE]()</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>
+<span class="c1">// Example 3: Conditional execution a la bash</span>
+<span class="kd">var</span> <span class="nx">THINGS_TO_EAT</span> <span class="o">=</span> <span class="p">[</span><span class="nx">apples</span><span class="p">,</span> <span class="nx">oysters</span><span class="p">,</span> <span class="nx">sprayOnCheese</span><span class="p">]</span>  <span class="c1">// &lt;-- Missing semicolon</span>
+
+<span class="o">-</span><span class="mi">1</span> <span class="o">==</span> <span class="nx">resultOfOperation</span><span class="p">()</span> <span class="o">||</span> <span class="nx">die</span><span class="p">();</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The script calls <code class="language-plaintext highlighter-rouge">die</code> unless <code class="language-plaintext highlighter-rouge">resultOfOperation)_</code> is <code class="language-plaintext highlighter-rouge">NaN</code> and assigns <code class="language-plaintext highlighter-rouge">THING_TO_EAT</code> the result of <code class="language-plaintext highlighter-rouge">die()</code>.</p>
+
+<h4 id="explanation">Explanation</h4>
+
+<p>JavaScript requires statements to end with a semicolon, except when it thinks it can safely infer their existence.</p>
+
+<p>In each of the examples above, a function declaration, or an object, or an array literal is used inside a statement.</p>
+
+<p>The closing brackets are not enough to indicate the end of the statement.
+JavaScript never ends a statement if the next token is an infix or bracket operator.</p>
+
+<h3 id="strings">Strings</h3>
+
+<p>Use single quotes instead of double quotes for consistency.</p>
+
+<p>This is helpful when creating strings that include HTML:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">&lt;span class="text"&gt;Hello World!&lt;/div&gt;</span><span class="dl">'</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="additional-naming-convention-standards">Additional naming convention standards</h2>
+
+<h3 id="general-naming-conventions">General naming conventions</h3>
+
+<ul>
+  <li>Avoid underscores and numbers in names.</li>
+  <li>Variables or methods should have names that accurately describe their purpose or behavior.</li>
+  <li>Object methods or variables that are declared <code class="language-plaintext highlighter-rouge">private</code> or <code class="language-plaintext highlighter-rouge">protected</code> should start with an underscore(<code class="language-plaintext highlighter-rouge">_</code>).</li>
+</ul>
+
+<h3 id="functions-and-methods">Functions and methods</h3>
+
+<ul>
+  <li>Class method names should start with an English verb in its infinitive form that describes the method.</li>
+  <li>Names for accessors for instance or static variables should always have the <code class="language-plaintext highlighter-rouge">get</code> or <code class="language-plaintext highlighter-rouge">set</code> prefix.</li>
+  <li>In <a href="https://glossary.magento.com/design-pattern">design pattern</a> classes, implementation method names should contain the pattern name where practical to provide better behavior description.</li>
+  <li>Methods that return status flags or Boolean values should have the <code class="language-plaintext highlighter-rouge">has</code> or <code class="language-plaintext highlighter-rouge">is</code> prefix.</li>
+</ul>
+
+<h3 id="variables-and-properties">Variables and properties</h3>
+
+<ul>
+  <li>Do not use short variable names such as <code class="language-plaintext highlighter-rouge">i</code> or <code class="language-plaintext highlighter-rouge">n</code> except in small loop contexts</li>
+  <li>If a loop contains more than 20 lines of code, the index variables should have more descriptive names.</li>
+</ul>
+
+<h2 id="additional-coding-construct-standards">Additional coding construct standards</h2>
+
+<h3 id="binary-and-ternary-operators">Binary and ternary operators</h3>
+
+<p>Always put the operator on the preceding line to avoid implicit semi-colon insertion issues.</p>
+
+<h3 id="custom-tostring-method">Custom <code class="language-plaintext highlighter-rouge">toString()</code> method</h3>
+
+<p>This method must always succeed without side effects.</p>
+
+<h3 id="function-declarations-within-blocks">Function declarations within blocks</h3>
+
+<p>Use a variable initialized with a function expression to define a function within a block.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c1">// Wrong</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="c1">// Correct</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="exceptions-and-custom-exceptions">Exceptions and custom exceptions</h3>
+
+<p>You cannot avoid exceptions if you are doing something non-trivial (using an application development framework, and so on).</p>
+
+<p>Without custom exceptions, returning error information from a function that also returns a value can be tricky, not to mention inelegant.
+Bad solutions include passing in a reference type to hold error information or always returning Objects with a potential error member.</p>
+
+<p>These basically amount to a primitive <a href="https://glossary.magento.com/exception">exception</a> handling hack.
+Feel free to use custom exceptions when appropriate.</p>
+
+<h3 id="standard-features">Standard features</h3>
+
+<p>For maximum portability and compatibility, use standard features whenever possible.</p>
+
+<p>For example, <code class="language-plaintext highlighter-rouge">string.charAt(3)</code> instead of <code class="language-plaintext highlighter-rouge">string[3]</code>, and element access with DOM functions instead of using an application-specific shorthand.</p>
+
+<h3 id="method-definitions">Method definitions</h3>
+
+<p>There are several ways to attach methods and properties to a constructor, but the preferred style is:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nx">Foo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">};</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Do not use:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="nx">Foo</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">bar</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">},</span>
+    <span class="na">circle</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Assignment operations to constructor prototypes creating temporal coupling and sometimes other unwanted side effects.</p>
+
+<h3 id="closures">Closures</h3>
+
+<p>A closure keeps a pointer to its enclosing scope, so attaching a closure to a DOM element can create a circular reference and thus, a memory leak.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c1">// Wrong</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// uses a and b</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The function closure keeps references to elements “a” and “b” even if it never uses them.</p>
+
+<p>Because elements also keep references to the closure, it is a cycle that will not be cleaned up by garbage collection.
+In these situations, the code can be structured as follows:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="c1">// Correct</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">bar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">bar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// uses a and b</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="additional-general-standards">Additional general standards</h2>
+
+<h3 id="array-and-object-initializers">Array and object initializers</h3>
+
+<p>Single-line array and object initializers are allowed when they fit on a line as follows:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>    <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>  <span class="c1">// No space after [ or before ].</span>
+    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">c</span><span class="p">:</span> <span class="mi">3</span><span class="p">};</span>  <span class="c1">// No space after { or before }.</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Long identifiers or values present problems for aligned initialization lists, so always prefer non-aligned initialization.</p>
+
+<p>For example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">a</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="na">b</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">lengthyName</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">};</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="associative-arrays">Associative arrays</h3>
+
+<p>Use <code class="language-plaintext highlighter-rouge">Object</code> instead of <code class="language-plaintext highlighter-rouge">Array</code> for associative arrays.</p>
+
+<h3 id="deferred-initialization">Deferred initialization</h3>
+
+<p>Use deferred initialization when it is not possible to initialize variables at the point of declaration.</p>
+
+<h3 id="explicit-scope">Explicit scope</h3>
+
+<p>Use explicit scope to increase code portability and clarity.</p>
+
+<h3 id="built-in-objects">Built-in objects</h3>
+
+<p>Modifying built-in like <code class="language-plaintext highlighter-rouge">Object.prototype</code> and <code class="language-plaintext highlighter-rouge">Array.prototype</code> is strictly forbidden.</p>
+
+<p>Modifying other built-ins like <code class="language-plaintext highlighter-rouge">Function.prototype</code> is less dangerous but leads to debugging issue in production.</p>
+
+<h3 id="variable-declarations">Variable declarations</h3>
+
+<p>Declare a variable with <code class="language-plaintext highlighter-rouge">var</code> wherever possible to avoid overwriting existing global values.</p>
+
+<p>Using only one var per scope promotes readability.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">bar</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+
+			</main>
+			<footer class="content-footer">
+				<button class="page-updated spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+  <img class="spectrum-Icon spectrum-Icon--sizeS" src="/devdocs/2.3/assets/i/icons/time.svg" alt="Updated" />
+  <time class="spectrum-ActionButton-label" id="last-modified-at" itemprop="dateModified"
+    datetime="2022-08-01">
+    Aug 1st, 2022
+  </time>
+</button>
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+</div>
+<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+    <div class="container">
+  
+      <div class="copyright-links">
+        
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="  " role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md" class=" ">Become a Contributor</a></li>
+
+  <li class="  " role="menuitem"><a href="https://glossary.magento.com/" class=" ">Glossary</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/privacy/" class=" ">Privacy Policy</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/" class=" ">Terms of Service</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/licensing/" class=" ">License/Trademark FAQ</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/bk-release-notes.html" class=" ">Release Notes</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs/2.3/guides/v2.3/release-notes/packages-open-source.html" class=" ">Third-Party Licenses</a></li>
+
+</ul>
+
+      </div>
+  
+          <div class="copyright-date">&copy; 2023 Adobe. All rights reserved.</div>
+  
+    </div>
+  </div>
+  <!-- / #footer -->
+  
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.3/assets/js/app.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/editions.min.js?ver=20"></script>
+<script src="/devdocs/2.3/assets/js/page-updated.min.js?ver=20"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.3/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+
+</html>

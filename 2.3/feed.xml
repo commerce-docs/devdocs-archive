@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archived 2.3 Magento Developer Guide</title>
+    <description>Magento Developer Guide</description>
+    <link>http://magento.github.io/devdocs/</link>
+    <atom:link href="http://magento.github.io/devdocs//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 11 Apr 2023 17:04:13 -0500</pubDate>
+    <lastBuildDate>Tue, 11 Apr 2023 17:04:13 -0500</lastBuildDate>
+    <generator>Jekyll v4.3.1</generator>
+    
+    
+        <item>
+          <title>Backward compatible development</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//contributor-guide/backward-compatible-development/</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Blackfire.io</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//cloud/project/project-integrate-blackfire.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Basic template</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//contributor-guide/templates/basic_template.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Usage</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//quality-patches/usage.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Maintainers</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//contributor-guide/maintainers.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Step 1. Start the procedure</title>
+          <description>Add the content for each step as you see fit. ## Metadata parameters The procedural steps of a tutorial use the `subtitle` [metadata](https://glossary.magento.com/metadata) parameter. Parameter | Description --- | --- `layout:` | Must be `tutorial`. `level3_subgroup:` | A group name that binds the tutorial topics together. This value must be specified on each topic in the tutorial. `title:` | The title of the topic. This value should be in the form _Step X. Perform this...</description>
+          <link>http://magento.github.io/devdocs//contributor-guide/templates/tutorial-template-middle.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Code Contributions</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//contributor-guide/contributing.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Commerce Definition of Done</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//contributor-guide/contributing_dod.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Sample template tutorial</title>
+          <description>A tutorial provides procedural information spread across multiple pages. It contains several design elements that differ from standard topics: * A tutorial replaces the navigation with a table of contents that is specific to the tutorial. * The bottom of the index page contains a **Begin Tutorial** button. * **Next** and **Previous** buttons are displayed at the bottom of each topic. ## Metadata parameters You must use the following metadata parameters on the tutorial index...</description>
+          <link>http://magento.github.io/devdocs//contributor-guide/templates/tutorial-template-first.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Step X. Finish the tutorial</title>
+          <description>The last page of a tutorial should acknowledge the reader has completed the tutorial and provide links to related information. Otherwise, add the content as you see fit. ## Metadata parameters The [metadata](https://glossary.magento.com/metadata) parameters for the last page of a tutorial are the same as a middle page. Parameter | Description --- | --- `layout:` | Must be `tutorial`. `level3_subgroup:` | A group name that binds the tutorial topics together. This value must be specified...</description>
+          <link>http://magento.github.io/devdocs//contributor-guide/templates/tutorial-template-last.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Contributors</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//contributor-guide/contributors.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>General CLI installation</title>
+          <description>Code that extends or customizes {{site.data.var.ee}} and {{site.data.var.ce}} behavior is called an extension. You can optionally package and distribute extensions on the [Commerce Marketplace](https://marketplace.magento.com) or another extension distribution system. Extensions include: - Modules (extend Magento capabilities) - Themes (change the look and feel of your [storefront](https://glossary.magento.com/storefront) and Admin) - Language packages (localize the storefront and Admin) {:.bs-callout-tip} This topic explains how to use the command line to install extensions you purchase from the Commerce Marketplace....</description>
+          <link>http://magento.github.io/devdocs//extensions/install/</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Cloud Patches for Commerce</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//cloud/release-notes/mcp-release-notes.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Payment Services Release Notes</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//payment-services/release-notes.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.7-p4 Release Notes</title>
+          <description>&lt;p&gt;Adobe Commerce 2.3.7-p4 provides 15 security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p3).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x will reach end of support in September 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce 2.4.x or Magento...</description>
+          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p4.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.7-p3 Release Notes</title>
+          <description>&lt;p&gt;Adobe Commerce 2.3.7-p3 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p2).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x will reach end of support in September 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe...</description>
+          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p3.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.7-p1 Release Notes</title>
+          <description>&lt;p&gt;Adobe Commerce 2.3.7-p1 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous patch release, Adobe Commerce 2.3.7 and Magento Open Source 2.3.7.&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x reaches end of support in April 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce...</description>
+          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p1.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//upgrade-compatibility-tool/introduction.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Deploy variables</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//cloud/env/variables-deploy.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Fastly</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//cloud/cdn/cloud-fastly.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Prepare Commerce for Docker</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//cloud/docker/docker-installation.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Configuration sources</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//cloud/docker/docker-config-sources.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>MFTF Vendor-supplied Tests</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//marketplace/sellers/mftf-vendor.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Docker services containers</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//cloud/docker/docker-containers-service.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Docker container architecture</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//cloud/docker/docker-containers.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Set up multiple websites or stores using Cloud Docker</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//cloud/docker/docker-multi-website.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>products query</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//catalog-service/products.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Catalog Service for Adobe Commerce</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//catalog-service/</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title></title>
+          <description>&lt;section class=&quot;home-features&quot;&gt; &lt;div class=&quot;bs-callout-warning&quot;&gt;&lt;center&gt;{{site.data.var.ee}} 2.3 reached end of support in September 2022.&lt;/center&gt;&lt;/div&gt; &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Setup&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/system-requirements.html&quot;&gt;System Requirements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/bk-install-guide.html&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/config-guide/bk-config-guide.html&quot;&gt;Configuration Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/cloud/bk-cloud.html&quot;&gt;{{site.data.var.ece}}&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Backend Development&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html&quot;&gt;PHP Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/b2b/bk-b2b.html&quot;&gt;B2B Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/bk-coding-standards.html&quot;&gt;Coding Standards&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/technical-guidelines.html&quot;&gt;Technical Guidelines&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Frontend Development&lt;/h2&gt;...</description>
+          <link>http://magento.github.io/devdocs//</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Inventory Management</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//extensions/inventory-management/</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.7-p2 Release Notes</title>
+          <description>&lt;p&gt;Adobe Commerce 2.3.7-p2 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p1).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x reaches end of support in April 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce...</description>
+          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p2.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Upgrade version</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//cloud/project/project-upgrade.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Add appearances</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/add-appearances.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Page Builder example modules</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/pagebuilder-examples.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Extend an appearance</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/extend-appearances.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Extend another appearance</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/extend-more-appearances.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a custom toolbar</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-custom-toolbar.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add viewports</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/add-viewports.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Search Results</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//guides/v2.3/search.html</link>
+          <pubDate>Fri, 20 Jan 2023 17:43:33 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI Import API</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mbi/docs/import-api.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI Libraries</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mbi/docs/libraries.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI Export API</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//mbi/docs/export-api.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI API Getting Started</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mbi/docs/getting-started.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Deactivate Page Builder</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/administration/deactivate-pagebuilder.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Page Builder data store</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/data-store.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Page Builder Architecture</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/overview.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Overview of content migration</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/migration/overview.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Override Page Builder styles</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/styles/override-pagebuilder-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Page Builder</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/contributors.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Configure the panel</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/configure-panel.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add form</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-form.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add icon</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-icon.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add icons and images</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-icons-images.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add an image uploader</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-image-uploader.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a storefront widget</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-storefront-widget.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add styles</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add templates</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-templates.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a text editor</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-text-editor.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Migrate other BlueFoot content</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/migration/migrate-other-bluefoot-content.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a visual selector</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-visual-selector.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Troubleshooting</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/troubleshooting.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Page Builder Knockout bindings</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/knockout-bindings.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction to creating content types</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction to extending content types</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>How Page Builder styles content</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/styles/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction to viewports for responsive content</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Apply product conditions</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/apply-product-conditions.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Migrate content from custom blocks</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/migration/migrate-content-custom-blocks.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Upgrade content types</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/administration/upgrade-content-types.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use breakpoints for widgets</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/use-breakpoints.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use Page Builder for product attributes</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/administration/use-for-product-attributes.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use HTML Code to override styles</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/styles/use-htmlcode-to-override-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use Modules to override styles</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/styles/use-modules-to-override-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use Themes to override styles</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/styles/use-themes-to-override-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Render server-side previews</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/render-server-side-preview.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Run the migration module</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/migration/run-migration-module.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add additional data</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-additional-data.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use viewports for forms</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/use-viewports.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a block chooser</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-block-chooser.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Install the migration module</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/migration/install-migration-module.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>What is Page Builder?</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add breakpoints</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/add-breakpoints.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>How content migration works</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/migration/how-content-migration-works.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Release notes for Page Builder</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/release-notes.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add components</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-components.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Page Builder events</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/events.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add configuration</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-configuration.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Change breakpoints and viewports</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/change-breakpoints-viewports.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Content type configurations</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/configurations.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Configuration</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//mftf/docs/configuration.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Action group best practices</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//mftf/docs/guides/action-groups.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Test actions</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//mftf/docs/test/actions.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Troubleshooting</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mftf/docs/troubleshooting.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Best practices</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//mftf/docs/best-practices.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Input testing data</title>
+          <description>
+</description>
+          <link>http://magento.github.io/devdocs//mftf/docs/data.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Tips and tricks</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mftf/docs/tips-tricks.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Metadata</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mftf/docs/metadata.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Suites</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mftf/docs/suite.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Using suites</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mftf/docs/guides/using-suites.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Test</title>
+          <description></description>
+          <link>http://magento.github.io/devdocs//mftf/docs/test.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:55:28 -0600</pubDate>
+        </item>
+    
+  </channel>
+</rss>
