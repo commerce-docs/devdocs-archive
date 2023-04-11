@@ -82,12 +82,12 @@ task build_and_deploy: %w[clean] do
   commit = `git log --pretty=format:"%h" -1`
 
   # Deploy the site
-  # `git checkout gh-pages-v2.3`
-  # `cp -R _site/ ./`
-  # `git add --all`
-  # `git commit --message "Deploy #{commit}"`
-  # `git push public`
-  # `git checkout -`
+  `git checkout gh-pages`
+  `cp -R _site/ 2.3/`
+  `git add 2.3/`
+  `git commit --message "Deploy archived-docs-v2.3: #{commit}"`
+  `git push public`
+  `git checkout -`
 
   puts 'Done!'.green
 end
