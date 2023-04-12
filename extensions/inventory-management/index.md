@@ -10,7 +10,7 @@ These features and extensions were developed as part of the [Magento Inventory (
 
 {{site.data.var.im}} installs with Magento {{site.data.var.ce}} and {{site.data.var.ee}} with all features enabled by default. No additional steps are required for enabling these inventory features. Upgrades from v2.1.x or 2.2.x may require additional steps. See [Upgrade Inventory Management](#upgrade-inventory-management).
 
-We recommend installing according to [Install Magento Using Composer]({{site.baseurl}}/guides/v2.3/install-gde/composer.html). You must install with a metapackage to receive all {{site.data.var.im}} modules.
+We recommend installing according to [Install Magento Using Composer](https://devdocs.magento.com/guides/v2.3/install-gde/composer.html). You must install with a metapackage to receive all {{site.data.var.im}} modules.
 
 The following line in the `composer.json` metapackage installs Inventory Management:
 
@@ -18,7 +18,7 @@ The following line in the `composer.json` metapackage installs Inventory Managem
         magento/inventory-composer-metapackage = 1.1.0
 ```
 
-For a list of {{site.data.var.im}} metapackage versions, see the [release notes]({{site.baseurl}}/guides/v2.3/inventory/release-notes.html).
+For a list of {{site.data.var.im}} metapackage versions, see the [release notes](https://devdocs.magento.com/guides/v2.3/inventory/release-notes.html).
 
 The {{site.data.var.im}} installation process adds all modules to the `<Magento_installation_directory>/app/etc/config.php` file. A `1` value indicates the corresponding module is enabled. The following list of modules are added (v1.1.2 Beta):
 
@@ -84,7 +84,7 @@ You may need to disable {{site.data.var.im}} modules to:
 * Use custom or third party inventory and order management modules.
 * Use [Magento Order Management](https://omsdocs.magento.com) for inventory and order management. The current Order Management connector does not support {{site.data.var.im}} interfaces. We plan to support this integration in a later release.
 
-To disable {{site.data.var.im}}, see the instructions for [Enable or disable modules]({{site.baseurl}}/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html). When complete, you should see the following modules and values in `<Magento_installation_directory>/app/etc/config.php` (v1.1.2 Beta):
+To disable {{site.data.var.im}}, see the instructions for [Enable or disable modules](https://devdocs.magento.com/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html). When complete, you should see the following modules and values in `<Magento_installation_directory>/app/etc/config.php` (v1.1.2 Beta):
 
 ```php
         'Magento_Inventory' => 0,
@@ -158,7 +158,7 @@ To enable {{site.data.var.im}} modules:
    bin/magento cache:clean
    ```
 
-We also recommend using [reservation inconsistencies commands]({{site.baseurl}}/guides/v2.3/inventory/inventory-cli-reference.html) after upgrading. When upgrading, all of your products will be added to the Default Stock. If you have pending orders, the commands correctly update your salable quantity and reservations for sales and order fulfillment.
+We also recommend using [reservation inconsistencies commands](https://devdocs.magento.com/guides/v2.3/inventory/inventory-cli-reference.html) after upgrading. When upgrading, all of your products will be added to the Default Stock. If you have pending orders, the commands correctly update your salable quantity and reservations for sales and order fulfillment.
 
 ### Previous {{site.data.var.im}} versions
 
@@ -172,13 +172,13 @@ For the latest, update your metapackage version:
 
 See the following guides for more information on upgrades:
 
-* [Software Update Guide]({{site.baseurl}}/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
-* [Enable or disable modules]({{site.baseurl}}/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html)
+* [Software Update Guide](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
+* [Enable or disable modules](https://devdocs.magento.com/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html)
 
 ## Additional information
 
 See the following guides for more information on {{site.data.var.im}}:
 
-* [Release Notes]({{site.baseurl}}/guides/v2.3/inventory/release-notes.html)
-* [Inventory Management]({{site.baseurl}}/guides/v2.3/inventory/index.html) overview for developer resources
+* [Release Notes](https://devdocs.magento.com/guides/v2.3/inventory/release-notes.html)
+* [Inventory Management](https://devdocs.magento.com/guides/v2.3/inventory/index.html) overview for developer resources
 * [Managing Inventory](https://docs.magento.com/m2/ce/user_guide/catalog/inventory-management.html) in the Magento 2 User Guides for merchant information

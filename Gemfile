@@ -3,8 +3,9 @@
 source 'https://rubygems.org'
 
 gem 'devdocs', git: 'https://github.com/commerce-docs/devdocs-theme.git', ref: '450a470'
-gem 'jekyll', '3.8.5'
+gem 'jekyll', '~> 3.8.5'
 gem 'whatsup_github'
+gem 'rake'
 
 group :test do
   gem 'html-proofer', '3.9.3'

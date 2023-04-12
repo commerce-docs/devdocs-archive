@@ -2,9 +2,6 @@
 group: extensions
 title: Install B2B
 ee_only: true
-redirect_from: 
- - guides/v2.2/comp-mgr/install-extensions/b2b-installation.html
- - guides/v2.3/comp-mgr/install-extensions/b2b-installation.html
 ---
 
 {: .bs-callout .bs-callout-warning }
@@ -29,7 +26,7 @@ The {{site.data.var.b2b}} extension is only available for {{site.data.var.ee}} v
     }
     ```
 
-1. When prompted, enter your [authentication keys]({{ site.baseurl }}/guides/v2.3/install-gde/prereq/connect-auth.html). Your *public key* is your username; your *private key* is your password. If you have stored your public and private keys in `auth.json`, you won't be asked to enter them here.
+1. When prompted, enter your [authentication keys](https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html). Your *public key* is your username; your *private key* is your password. If you have stored your public and private keys in `auth.json`, you won't be asked to enter them here.
 
 1. Run the following commands after Composer finishes updating modules:
 
@@ -94,7 +91,7 @@ The {{site.data.var.b2b}} extension uses MySQL for message queue management. If 
 {: .bs-callout .bs-callout-tip }
 Append `&` to the command to run it in the background, return to a prompt, and continue running commands. For example: `bin/magento queue:consumers:start sharedCatalogUpdatePrice &`.
 
-Refer to [Manage message queues]({{ site.baseurl }}/guides/v2.3/config-guide/mq/manage-message-queues.html) for more information.
+Refer to [Manage message queues](https://devdocs.magento.com/guides/v2.3/config-guide/mq/manage-message-queues.html) for more information.
 
 ### Add message consumers to cron
 
@@ -128,4 +125,4 @@ If you enable the **Shared Catalog** module, you must also enable the **Company*
 
 1. Click **Save Config**.
 
-Looking for more documentation? Checkout the [B2B Developer Guide]({{ site.baseurl }}/guides/v2.3/b2b/bk-b2b.html) and [User Guide](https://docs.magento.com/m2/b2b/user_guide/getting-started.html).
+Looking for more documentation? Checkout the [B2B Developer Guide](https://devdocs.magento.com/guides/v2.3/b2b/bk-b2b.html) and [User Guide](https://docs.magento.com/m2/b2b/user_guide/getting-started.html).

@@ -180,7 +180,7 @@ To build v2.0 documentation:
 
 ## Build using Vagrant
 
-You can deploy the devdocs site locally using [this Vagrant project](https://github.com/magento-devdocs/vagrant-for-magento-devdocs).
+You can deploy the devdocs site locally using [this Vagrant project](https://github.com/commerce-docs/vagrant-for-magento-devdocs).
 
 ***
 

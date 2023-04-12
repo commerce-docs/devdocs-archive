@@ -3,9 +3,6 @@ group: extensions
 title: General CLI installation
 redirect_from: 
  - guides/v2.1/comp-mgr/install-extensions.html
- - guides/v2.2/comp-mgr/install-extensions.html
- - guides/v2.3/comp-mgr/install-extensions.html
-
 ---
 
 Code that extends or customizes Magento behavior is called an extension. You can optionally package and distribute extensions on the [Magento Marketplace](https://marketplace.magento.com) or another Magento extension distribution system.
@@ -75,7 +72,7 @@ Add the extension's name and version to your `composer.json` file:
     composer require j2t/module-payplug:2.0.2
     ```
 
-1. Enter your [authentication keys]({{ site.baseurl }}/guides/v2.3/install-gde/prereq/connect-auth.html). Your public key is your username; your private key is your password.
+1. Enter your [authentication keys](https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html). Your public key is your username; your private key is your password.
 
 1. Wait for Composer to finish updating your project dependencies and make sure there aren't any errors:
 

@@ -33,13 +33,13 @@ Generating static content requires access to themes and locales. Magento stores 
 
 #### To configure your project to generate SCD on build:
 
-1.  Log in to your Cloud environment using SSH and move locales to the file system, then update the [`config.php` file]({{site.baseurl}}/guides/v2.2/cloud/project/project-upgrade.html#create-a-new-configphp-file).
+1.  Log in to your Cloud environment using SSH and move locales to the file system, then update the [`config.php` file](https://devdocs.magento.com/guides/v2.2/cloud/project/project-upgrade.html#create-a-new-configphp-file).
 
 1.  The `.magento.env.yaml` configuration file should contain the following values:
 
     -  [SKIP_HTML_MINIFICATION]({{page.baseurl}}/cloud/env/variables-global.html#skip_html_minification) is `true`
     -  [SKIP_SCD]({{page.baseurl}}/cloud/env/variables-build.html#skip_scd) on build stage is `false`
-    -  [SCD_STRATEGY]({{site.baseurl}}/guides/v2.2/cloud/env/variables-build.html#scd_strategy) is `compact`
+    -  [SCD_STRATEGY](https://devdocs.magento.com/guides/v2.2/cloud/env/variables-build.html#scd_strategy) is `compact`
 
 1.  Verify configuration of the [Post-deploy hook]({{page.baseurl}}/cloud/project/project-conf-files_magento-app.html#hooks) in the `.magento.app.yaml` file.
 

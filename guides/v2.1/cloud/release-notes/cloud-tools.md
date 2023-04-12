@@ -132,7 +132,7 @@ The `{{site.data.var.ct}}` version 2002.0.16 is required for Magento 2.1.17 and 
 
     -   <!-- MAGECLOUD-2883 -->Fixed an issue with web service permissions when generating the `docker-compose.yml` file.
 
--   {:.new}<!-- MAGECLOUD-2392 -->**Upgrade improvement**—Added validation to confirm that the `autoload` property in the `composer.json` file contains required configuration changes before upgrading to {{ site.data.var.ee }} v2.3. See [Upgrade Magento version]({{site.baseurl }}/guides/v2.3/cloud/project/project-upgrade.html).
+-   {:.new}<!-- MAGECLOUD-2392 -->**Upgrade improvement**—Added validation to confirm that the `autoload` property in the `composer.json` file contains required configuration changes before upgrading to {{ site.data.var.ee }} v2.3. See [Upgrade Magento version](https://devdocs.magento.com/guides/v2.3/cloud/project/project-upgrade.html).
 
 -   {:.new}<!-- MAGECLOUD-3104 -->The compression process in deploying static content now includes all assets—natively generated or customized—and occurs during the build phase at the beginning of the [`build:transfer` section]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html#hooks). Previously, the compression process occurred before applying custom minification and bundling of static assets. [Fix submitted by Rafael Garcia Lepper from Tryzens Limited](https://github.com/magento/ece-tools/pull/413).
 
@@ -300,7 +300,7 @@ The `{{site.data.var.ct}}` version 2002.0.16 is required for Magento 2.1.17 and 
 
     -   <!--MAGECLOUD-2445-->Improved the cron job management process during the deploy phase to prevent database locks and other critical issues. Now, all cron jobs stop during the deploy phase and restart after deployment completes.
 
-    -   <!--MAGECLOUD-2508-->Fixed an issue with the [`cron:unlock`]({{ site.baseurl }}/guides/v2.2/cloud/trouble/reset-cron-jobs.html) command so that it works in {{site.data.var.ee}} v2.1. Previously, the command was supported only in v2.1.
+    -   <!--MAGECLOUD-2508-->Fixed an issue with the [`cron:unlock`](https://devdocs.magento.com/guides/v2.2/cloud/trouble/reset-cron-jobs.html) command so that it works in {{site.data.var.ee}} v2.1. Previously, the command was supported only in v2.1.
 
 -   {:.fix}<!--MAGECLOUD-2491-->Fixed a Sitemap processing issue in the `{{site.data.var.ct}}` package that caused third-party extension conflicts after using the `{{site.data.var.ct}}` package to apply recent patches that included Sitemap-related changes.
 
@@ -410,7 +410,7 @@ The `{{site.data.var.ct}}` version 2002.0.11 now supports Magento 2.1.13.
 
 -   {:.new}<!-- MAGECLOUD-1751 -->**Deployment Logging**—Added the ability to enable Syslog and Graylog Extended Log Format (GELF) handlers for outputting logs during the deployment process. See [Logging handlers]({{ page.baseurl }}/cloud/env/log-handlers.html).
 
--   {:.new}Added the following [**Environment variables**]({{ site.baseurl }}/guides/v2.2/cloud/env/variables-intro.html):
+-   {:.new}Added the following [**Environment variables**](https://devdocs.magento.com/guides/v2.2/cloud/env/variables-intro.html):
 
     -   <!-- MAGECLOUD-1556 -->`CRYPT_KEY`—Provide a cryptographic key to another environment when moving a database.
 

@@ -228,4 +228,4 @@ _Data-table with Confirmation Message_
 
 ## Technical Implementation
 
-Technically slideouts and modals are implemented using the [modal widget]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html) or the [modal UI component]({{ site.baseurl }}/guides/v2.2/ui_comp_guide/components/ui-modal.html).
+Technically slideouts and modals are implemented using the [modal widget]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html) or the [modal UI component](https://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-modal.html).
