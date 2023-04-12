@@ -4,8 +4,6 @@ subgroup: 090_configure
 title: Custom Fastly VCL snippets
 redirect_from:
    - /guides/v2.1/cloud/configure/cloud-vcl-custom-snippets.html
-   - /guides/v2.2/cloud/configure/cloud-vcl-custom-snippets.html
-   - /guides/v2.3/cloud/configure/cloud-vcl-custom-snippets.html
 functional_areas:
   - Cloud
   - Setup
@@ -180,7 +178,7 @@ Before you can add or modify custom VCL snippets, you must create a copy of the 
 
 ```bash
 curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_VERSION_ACTIVE/clone -X PUT
-```	
+```    
 
 In the JSON response, the version number is incremented, and the *active* key value is `false`. You can modify the new, inactive VCL version locally.
 
@@ -230,7 +228,7 @@ The values include:
 -   `priority`—A value from `1` to `100` that determines when the custom VCL snippet code runs. Custom VCL snippets with lower values run first.
 
      All default VCL code from the Fastly VCL module has a `priority` of `50`. If you want an action to occur last or to override the default VCL code, use a higher number, such as `100`. To run custom VCL snippet code immediately, set the priority to a lower value, such as `5`.
-	 
+     
 -   `content`—The snippet of VCL code to run in one line, without line breaks. See [Example custom VCL snippet](#vcl-curl).
 
 #### Step 4: Add VCL snippet to Fastly configuration {#add-snippet}
@@ -293,11 +291,11 @@ Use these commands to manage snippets that you added using the Fastly API. If yo
 -  **Update a snippet**
 
    Modify the [prepared JSON file](#create-snippet) and send the following request:
-	
+    
    ```
    curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_VERSION/snippet/<snippet_name> -H 'Content-Type: application/json' -X PUT --data @<filename.json>
    ```  
-	 
+     
 -  **Delete an individual VCL snippet** 
 
     Get a list of snippets and use the following `curl` command with the specific snippet name to delete:

@@ -8,7 +8,6 @@ menu_order: 1
 menu_node: parent
 redirect_from:
   - /guides/v2.1/mktpl-quickstart/bk-marketplace-qs.html
-  - /guides/v2.2/mktpl-quickstart/intro-moreinfo.html
   - /guides/v2.1/mktpl-quickstart/intro-moreinfo.html
 ---
 
@@ -29,6 +28,6 @@ You must follow a [PSR-4 compliant](http://www.php-fig.org/psr/psr-4/) structure
 
 #### Related topics
 
-*	[Developer roadmap]({{ page.baseurl }}/extension-dev-guide/intro/developers_roadmap.html)
-*	[Introduction to Composer]({{ page.baseurl }}/extension-dev-guide/intro/intro-composer.html)
-*	[Glossary of common terms]({{ page.baseurl }}/extension-dev-guide/intro/intro-composer-gloss.html)
+*    [Developer roadmap]({{ page.baseurl }}/extension-dev-guide/intro/developers_roadmap.html)
+*    [Introduction to Composer]({{ page.baseurl }}/extension-dev-guide/intro/intro-composer.html)
+*    [Glossary of common terms]({{ page.baseurl }}/extension-dev-guide/intro/intro-composer-gloss.html)

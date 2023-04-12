@@ -91,6 +91,6 @@ The ActionsColumns component implements a table's column responsible for display
 
 ## Source files
 
-Extends [`Column`](/guides/v2.2/ui_comp_guide/components/ui-column.html):
+Extends [`Column`](https://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-column.html):
 
 - [`app/code/Magento/Ui/view/base/web/js/grid/columns/actions.js`]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/Ui/view/base/web/js/grid/columns/actions.js)

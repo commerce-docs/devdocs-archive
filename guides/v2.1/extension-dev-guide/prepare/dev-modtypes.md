@@ -7,7 +7,6 @@ menu_order: 2
 menu_node:
 redirect_from:
   - /guides/v2.1/mktpl-quickstart/dev-modtypes.html
-  - /guides/v2.2/mktpl-quickstart/dev-modtypes.html
 ---
 
 Each component type has a different [directory structure][directory-structure] and different contents for [`composer.json`][composer].

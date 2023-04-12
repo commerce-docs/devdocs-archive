@@ -3,11 +3,7 @@ group: cloud-guide
 title: Customize error pages
 redirect_from:
    - /guides/v2.1/cloud/configure/fastly-vcl-extend-timeout.html
-   - /guides/v2.2/cloud/configure/fastly-vcl-extend-timeout.html
-   - /guides/v2.3/cloud/configure/fastly-vcl-extend-timeout.html
    - /guides/v2.1/cloud/access-acct/fastly.html
-   - /guides/v2.2/cloud/access-acct/fastly.html
-   - /guides/v2.3/cloud/access-acct/fastly.html
 
 functional_areas:
   - Cloud
@@ -71,15 +67,15 @@ Verify that the modified source displays correctly in the browser. Then, add the
 
     ![Edit 503 error page]
 
-1.	Click **Set HTML**.
+1.    Click **Set HTML**.
 
-1.	Copy and paste the source code for your custom response page into the HTML field. 
+1.    Copy and paste the source code for your custom response page into the HTML field. 
 
     ![Update 503 error page]
 
-1.	Click **Upload** at the top of the page to upload the customized HTML source to the Fastly server.
+1.    Click **Upload** at the top of the page to upload the customized HTML source to the Fastly server.
 
-1.	Click **Save Config** at the top of the page to save the updated configuration file.
+1.    Click **Save Config** at the top of the page to save the updated configuration file.
 
 1. Refresh the cache.
 
@@ -139,9 +135,9 @@ The Edit WAF option is available only if the Managed Cloud WAF service is enable
     -  **MIME type**—Type `text/html`.
     -  **Content**—Edit the default HTML response to add custom CSS and update the title and messaging as needed.
 
-1.	Click **Upload** at the top of the page to upload the customized HTML source to the Fastly server.
+1.    Click **Upload** at the top of the page to upload the customized HTML source to the Fastly server.
 
-1.	Click **Save Config** at the top of the page to save the updated configuration file.
+1.    Click **Save Config** at the top of the page to save the updated configuration file.
 
 1. Refresh the cache.
 

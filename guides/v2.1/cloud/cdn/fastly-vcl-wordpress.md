@@ -4,9 +4,7 @@ subgroup: 090_configure
 title: Set up redirects to WordPress using Fastly
 redirect_from:
    - /guides/v2.1/cloud/configure/fastly-vcl-wordpress.html
-   - /guides/v2.2/cloud/configure/fastly-vcl-wordpress.html
-   - /guides/v2.3/cloud/configure/fastly-vcl-wordpress.html
-functional_areas:
+sfunctional_areas:
   - Cloud
   - Setup
 ---
@@ -32,10 +30,10 @@ We recommend adding custom VCL configurations to a Staging environment where you
    -  Attach the following request condition to the Wordpress backend.
 
      ```json
-      req.http.X-WP == “1”
+      req.http.X-WP == "1"
      ```
      Incoming requests that match this request condition, which is set through the [custom VCL snippet](#vcl), redirect to the WordPress backend. 
-	 
+     
 
 ## Create an Edge Dictionary of WordPress paths {#edge-dictionary}
 
@@ -65,14 +63,14 @@ Edge Dictionaries create key-value pairs accessible to VCL functions during VCL 
 
     -  Add and save key-value pairs in the new dictionary. For this example, each **Key** is a URL path to redirect to the WordPress backend, and the **Value** is 1.
        
-	   ![Add Edge Dictionary Items]
-	 
+       ![Add Edge Dictionary Items]
+     
     -  Click **Cancel** to return to the system configuration page.
-	
+    
 1.  Click **Save Config**.
 
 1.  Refresh the cache according to the notification at the top of the page.
-	
+    
 For more information about Edge Dictionaries, see [Creating and using Edge Dictionaries](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api) and [custom VCL snippets](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api#custom-vcl-examples) in the Fastly documentation.
 
 ## Create a VCL snippet for the WordPress redirect {#vcl}
@@ -112,7 +110,7 @@ Add the custom VCL snippet to your Fastly service configuration from the Admin U
 
 {% include cloud/admin-ui-login-step.md %}
 
-1.	Click **Stores** > **Settings** > **Configuration** > **Advanced** > **System**.
+1.    Click **Stores** > **Settings** > **Configuration** > **Advanced** > **System**.
 
 1.  Expand **Full Page Cache** > **Fastly Configuration** > **Custom VCL Snippets**.
 
@@ -120,27 +118,27 @@ Add the custom VCL snippet to your Fastly service configuration from the Admin U
 
 1.  Add the VCL snippet values:
 
-	- **Name**—`wordpress_redirect`
-	
-	- **Type**—`recv`
-	
-	- **Priority**—`5`
-	
-	- **VCL** snippet content:
+    - **Name**—`wordpress_redirect`
+    
+    - **Type**—`recv`
+    
+    - **Priority**—`5`
+    
+    - **VCL** snippet content:
 
       ```
       if ( req.url.path ~ "^/?([^/?]+)")
-	    {
-		  if ( table.lookup(wordpress_urls, re.group.1, \"NOTFOUND\") != \"NOTFOUND\" )
-	        {set req.http.X-WP = "1";
-		    }
+        {
+          if ( table.lookup(wordpress_urls, re.group.1, \"NOTFOUND\") != \"NOTFOUND\" )
+            {set req.http.X-WP = "1";
+            }
          }
       ```
 
 1.  Click **Create** to generate the VCL snippet file with the name pattern `type_priority_name.vcl`, for example `recv_5_wordpress_redirect.vcl`
 
     ![Create VCL Snippet]
-	
+    
 1.  After the page reloads, click **Upload VCL to Fastly** in the *Fastly Configuration* section to add the file to the Fastly service configuration.
 
 1.  After the upload completes, refresh the cache according to the notification at the top of the page.

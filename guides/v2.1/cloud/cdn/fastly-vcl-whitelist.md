@@ -4,8 +4,6 @@ subgroup: 090_configure
 title: Secure access to Magento Admin UI by client IP address
 redirect_from:
    - /guides/v2.1/cloud/configure/fastly-vcl-whitelist.html
-   - /guides/v2.2/cloud/configure/fastly-vcl-whitelist.html
-   - /guides/v2.3/cloud/configure/fastly-vcl-whitelist.html
 functional_areas:
   - Cloud
   - Setup
@@ -102,16 +100,16 @@ Add the custom VCL snippet to your Fastly service configuration from the Magento
 
     -  **Type**—`recv`
 
-	-  **Priority**—`5`
-	
+    -  **Priority**—`5`
+    
     -  Add the **VCL** snippet content:
 
-	   ```
-	   if ((req.url ~ "^/admin") && !(client.ip ~ allowlist) && !req.http.Fastly-FF) { error 403 "Forbidden";
-	   ```
+       ```
+       if ((req.url ~ "^/admin") && !(client.ip ~ allowlist) && !req.http.Fastly-FF) { error 403 "Forbidden";
+       ```
 
 1.  Click **Create** to generate the VCL snippet file with the name pattern `type_priority_name.vcl`, for example `recv_5_allowlist.vcl`
-	
+    
 1.  After the page reloads, click **Upload VCL to Fastly** in the *Fastly Configuration* section to add the file to the Fastly service configuration.
 
  1.  After the upload completes, refresh the cache according to the notification at the top of the page.

@@ -2,7 +2,6 @@
 group: javascript-developer-guide
 subgroup: 1_Javascript
 title: JavaScript resources in Magento
-redirect_from: /guides/v2.2/javascript-dev-guide/javascript/requirejs_concept.html
 ---
 
 ## Overview {#m2devgde-js-resources-intro}
@@ -20,9 +19,9 @@ RequireJS improves the perceived page load time because it allows JavaScript to 
 In Magento, you can find the JS components on the following levels:
 
 *   [Library](https://glossary.magento.com/library) level (`lib/web`). Resources located here are available in any place in Magento.
-*	Module level (`<module_dir>/view/<areaname>/web`). If the [module](https://glossary.magento.com/module) is enabled, resources added here are available in other modules and themes.
-*	Theme level, for a particular module (`<theme_dir>/<VendorName>_<ModuleName>/web`). Resources added here are available for [inheriting] themes.
-*	Theme level  (`<theme_dir>/web`). Resources added here are available for [inheriting] themes.
+*    Module level (`<module_dir>/view/<areaname>/web`). If the [module](https://glossary.magento.com/module) is enabled, resources added here are available in other modules and themes.
+*    Theme level, for a particular module (`<theme_dir>/<VendorName>_<ModuleName>/web`). Resources added here are available for [inheriting] themes.
+*    Theme level  (`<theme_dir>/web`). Resources added here are available for [inheriting] themes.
 
 {:.bs-callout .bs-callout-info}
 Library level can only contain core Magento resources. Do not put custom JS files in the \`lib/web\` directory.

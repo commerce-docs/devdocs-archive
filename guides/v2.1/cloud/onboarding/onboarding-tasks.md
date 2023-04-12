@@ -7,8 +7,6 @@ functional_areas:
   - Configuration
 redirect_from:
   - /guides/v2.1/cloud/before/before-project-owner.html
-  - /guides/v2.2/cloud/before/before-project-owner.html
-  - /guides/v2.3/cloud/before/before-project-owner.html
 ---
 
 After your company purchases a subscription plan for {{site.data.var.ece}}, the

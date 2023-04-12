@@ -7,7 +7,6 @@ menu_order: 1
 menu_node: parent
 redirect_from:
   - /guides/v2.1/cloud/live/stage-prod-over.html
-  - /guides/v2.2/cloud/live/stage-prod-over.html
 functional_areas:
   - Cloud
   - Deploy
@@ -80,8 +79,8 @@ To learn more, check the following:
 * [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
 * [Continuous integration]({{ page.baseurl }}/cloud/deploy/continuous-deployment.html)
 * [Protective block]({{ page.baseurl }}/cloud/live/live-prot.html)
-*	[Build and deploy to your local]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
-*	[Prepare to deploy]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
-*	[Migrate and deploy]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
-*	[Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
+*    [Build and deploy to your local]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
+*    [Prepare to deploy]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
+*    [Migrate and deploy]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
+*    [Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
 * [Go live and launch]({{ page.baseurl }}/cloud/live/live.html)

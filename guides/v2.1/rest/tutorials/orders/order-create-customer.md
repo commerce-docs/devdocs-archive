@@ -10,8 +10,6 @@ menu_order: 3
 level3_subgroup: order-tutorial
 redirect_from:
   - /guides/v2.1/get-started/order-tutorial/order-create-customer.html
-  - /guides/v2.2/get-started/order-tutorial/order-create-customer.html
-  - /guides/v2.3/get-started/order-tutorial/order-create-customer.html
 functional_areas:
   - Integration
   - Orders
@@ -50,27 +48,27 @@ It is recommended that you substitute the value of the `email` parameter with a 
 {% collapsible Show code sample %}
 ```json
 {
-	"customer": {
-		"email": "jdoe@example.com",
-		"firstname": "Jane",
-		"lastname": "Doe",
-		"addresses": [{
-			"defaultShipping": true,
-			"defaultBilling": true,
-			"firstname": "Jane",
-			"lastname": "Doe",
-			"region": {
-				"regionCode": "NY",
-				"region": "New York",
+    "customer": {
+        "email": "jdoe@example.com",
+        "firstname": "Jane",
+        "lastname": "Doe",
+        "addresses": [{
+            "defaultShipping": true,
+            "defaultBilling": true,
+            "firstname": "Jane",
+            "lastname": "Doe",
+            "region": {
+                "regionCode": "NY",
+                "region": "New York",
         "regionId":43
-			},
-			"postcode": "10755",
-			"street": ["123 Oak Ave"],
-			"city": "Purchase",
-			"telephone": "512-555-1111",
-			"countryId": "US"
-		}]
-	},
+            },
+            "postcode": "10755",
+            "street": ["123 Oak Ave"],
+            "city": "Purchase",
+            "telephone": "512-555-1111",
+            "countryId": "US"
+        }]
+    },
   "password": "Password1"
 }
 ```

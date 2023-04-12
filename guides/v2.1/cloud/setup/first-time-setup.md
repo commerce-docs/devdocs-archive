@@ -3,14 +3,10 @@ group: cloud-guide
 title: Local development
 redirect_from:
   - /guides/v2.1/cloud/before/before-setup-env-overview.html
-  - /guides/v2.2/cloud/before/before-setup-env-overview.html
-  - /guides/v2.3/cloud/before/before-setup-env-overview.html
   - /guides/v2.1/cloud/howtos/environment-tutorial-set-mage-vars.html
   - /guides/v2.1/cloud/env/environment-tutorial-set-mage-vars.html
   - /guides/v2.1/cloud/access-acct/admin-env-vars.html
   - /guides/v2.1/cloud/access-acct/first-time-setup.html
-  - /guides/v2.2/cloud/access-acct/first-time-setup.html
-  - /guides/v2.3/cloud/access-acct/first-time-setup.html
 functional_areas:
   - Cloud
   - Setup
@@ -18,8 +14,9 @@ functional_areas:
 
 {{site.data.var.ece}} environments are **Read Only**, including all Starter environments and all Pro Integration, Staging, and Production environments. In a local development environment, you can write and test code prior to pushing it to an Integration environment for further testing and deployment to Staging and Production. You must develop in a local workspace using a cloned Integration environment and push changes to the remote, read-only {{site.data.var.ece}} Git repository. You can choose one of two methods:
 
--  [Launch a Docker development environment](#docker)
--  [Create a local development environment](#local)
+- [Gather credentials {#credentials}](#gather-credentials-credentials)
+- [Launch a Docker environment {#docker}](#launch-a-docker-environment-docker)
+- [Create a local environment {#local}](#create-a-local-environment-local)
 
 ## Gather credentials {#credentials}
 

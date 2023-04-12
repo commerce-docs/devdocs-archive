@@ -3,11 +3,7 @@ group: cloud-guide
 title: Set up Fastly
 redirect_from:
    - /guides/v2.1/cloud/configure/fastly-vcl-extend-timeout.html
-   - /guides/v2.2/cloud/configure/fastly-vcl-extend-timeout.html
-   - /guides/v2.3/cloud/configure/fastly-vcl-extend-timeout.html
    - /guides/v2.1/cloud/access-acct/fastly.html
-   - /guides/v2.2/cloud/access-acct/fastly.html
-   - /guides/v2.3/cloud/access-acct/fastly.html
 functional_areas:
   - Cloud
   - Setup
@@ -70,7 +66,7 @@ When we provision your project environments for Fastly services, we add the Fast
     ```bash
     magento-cloud variable:get -e <environment ID>
     ```
-	
+    
 -  IaaS mounted shared directory—On Pro projects, use SSH to connect to your server and get the Fastly credentials from the `/mnt/shared/fastly_tokens.txt` file.
 
 {:.bs-callout .bs-callout-info}
@@ -137,28 +133,28 @@ are locked and cannot be edited in Staging and Production.
 We provide Fastly services only for your Staging and Production environments.
 You cannot use the Fastly service in Integration environments.
 
-1.	In your local environment root directory, use a terminal to enter the following
+1.    In your local environment root directory, use a terminal to enter the following
     commands in the order shown:
 
-		composer config repositories.fastly-magento2 git "https://github.com/fastly/fastly-magento2.git"
-		composer require fastly/magento2
+        composer config repositories.fastly-magento2 git "https://github.com/fastly/fastly-magento2.git"
+        composer require fastly/magento2
 
-2.	Wait for dependencies to be updated.
-3.	Enter the following command to fully update and clear the cache:
+2.    Wait for dependencies to be updated.
+3.    Enter the following command to fully update and clear the cache:
 
-		php bin/magento setup:upgrade && php bin/magento cache:clean
+        php bin/magento setup:upgrade && php bin/magento cache:clean
 4. Edit your composer.json and ensure the Fastly module is included with version.
 
-	* In the "require" section, you should have `"fastly/magento2": <version number>`
-	* In the "repositories" section, you should have:
+    * In the "require" section, you should have `"fastly/magento2": <version number>`
+    * In the "repositories" section, you should have:
 
-		"fastly-magento2": {
-					"url": "https://github.com/fastly/fastly-magento2.git"
-		}
-3.	Add, commit, and push the changes to your code repository with the following
+        "fastly-magento2": {
+                    "url": "https://github.com/fastly/fastly-magento2.git"
+        }
+3.    Add, commit, and push the changes to your code repository with the following
     command:
 
-		git add -A; git commit -m "Install Fastly"; git push origin <branch name>
+        git add -A; git commit -m "Install Fastly"; git push origin <branch name>
 
 4. Merge the branch code with the `master` Integration branch.
 
@@ -181,21 +177,21 @@ Make sure to use the correct credentials.
 
 Complete the following configuration steps in Staging and Production environments:
 
-1.	Log in to your Magento Admin UI.
+1.    Log in to your Magento Admin UI.
 
-1.	Click **Stores** > **Settings** > **Configuration** > **Advanced** > **System** and expand **Full Page Cache**.
+1.    Click **Stores** > **Settings** > **Configuration** > **Advanced** > **System** and expand **Full Page Cache**.
 
-	![Expand to select Fastly]({{ site.baseurl }}/common/images/cloud_fastly_menu.png){:width="650px"}
+    ![Expand to select Fastly]({{ site.baseurl }}/common/images/cloud_fastly_menu.png){:width="650px"}
 
-1.	For **Caching Application**, uncheck the **Use system value** checkbox and select **Fastly CDN** from the drop-down list.
+1.    For **Caching Application**, uncheck the **Use system value** checkbox and select **Fastly CDN** from the drop-down list.
 
-	![Choose Fastly]({{ site.baseurl }}/common/images/cloud-fastly_enable-admin.png){:width="550px"}
-	
-1.	Expand **Fastly Configuration** and [choose caching options](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module).
+    ![Choose Fastly]({{ site.baseurl }}/common/images/cloud-fastly_enable-admin.png){:width="550px"}
+    
+1.    Expand **Fastly Configuration** and [choose caching options](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module).
 
-1.	After configuring the caching options, click **Save Config** at the top of the page.
+1.    After configuring the caching options, click **Save Config** at the top of the page.
 
-1.	Clear the cache according to the notification. Then, navigate back to **Stores** > **Settings** > **Configuration** > **Advanced** > **System** >
+1.    Clear the cache according to the notification. Then, navigate back to **Stores** > **Settings** > **Configuration** > **Advanced** > **System** >
 **Fastly Configuration** to continue configuring Fastly.
 
 Configure the following features and enable additional [configuration options](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#further-configuration-options):
@@ -205,9 +201,9 @@ Configure the following features and enable additional [configuration options](h
 * [Customize response pages]({{ page.baseurl }}/cloud/cdn/cloud-fastly-custom-response.html)
 
 {:#info .bs-callout .bs-callout-info}
-*	Ignore the link to create a free Fastly account. We'll provide your Fastly
+*    Ignore the link to create a free Fastly account. We'll provide your Fastly
 credentials (Service ID and API token).
-*	With Fastly version 1.2.0 and later (we recommend 1.2.33 or later), use
+*    With Fastly version 1.2.0 and later (we recommend 1.2.33 or later), use
 the **Upload VCL to Fastly** button to upload your default [VCL snippets](#custom-vcl).
 
 ## Upload Fastly VCL snippets {#upload-vcl-snippets}
@@ -228,17 +224,17 @@ add [custom VCL snippets](#custom-vcl).
 To use snippets, you must upload the Fastly VCL using the Magento Admin as
 follows:
 
-1.	In the **Fastly Configuration** section, click **Upload VCL to Fastly** as
+1.    In the **Fastly Configuration** section, click **Upload VCL to Fastly** as
     the following figure shows.
 
-	![Upload a Magento VCL to Fastly]({{ site.baseurl }}/common/images/cloud_upload-vcl-to-fastly.png)
+    ![Upload a Magento VCL to Fastly]({{ site.baseurl }}/common/images/cloud_upload-vcl-to-fastly.png)
 
-	{:#info .bs-callout .bs-callout-info}
-  		If the **Upload VCL to Fastly** button does not display, you should
+    {:#info .bs-callout .bs-callout-info}
+          If the **Upload VCL to Fastly** button does not display, you should
       upgrade the Fastly extension to version 1.2.0 or later. We recommend 1.2.33
       or later. The Fastly Composer name is `fastly/magento2`.
 
-1.	Once the upload completes, the modal automatically closes with a success
+1.    Once the upload completes, the modal automatically closes with a success
     message.
 
 After the upload completes, you can create and upload custom VCL snippets with
@@ -270,29 +266,29 @@ handle your blog.
 1. Expand **Backend settings** and click the gear to configure the default
    backend. A modal opens with options to select and configure.
 
-	![Modify the backend]({{ site.baseurl }}/common/images/cloud_fastly-backend.png){:width="600px"}
+    ![Modify the backend]({{ site.baseurl }}/common/images/cloud_fastly-backend.png){:width="600px"}
 
 1. Select the **Shield** location (or datacenter) closest to your AWS region.
    For example, if Staging is on the west coast of the United States
    (us-west-1), select the `sjc-ca-us` Fastly shield location. This is the POP
    that provides caching services.
 
-	The following list shows which Faslty shield locations to use based an AWS
+    The following list shows which Faslty shield locations to use based an AWS
   region:
 
-	- ap-northeast-1 => tokyo-jp2
-	- ap-southeast-1 => singapore-sg
-	- ap-southeast-2 => sydney-au
-	- ap-south-1 => singapore-sg
-	- eu-central-1 => frankfurt-de
-	- eu-west-1 => london-uk, london_city-uk
-	- eu-west-2 => london-uk, london_city-uk
-	- eu-west-3 => cdg-par-fr
-	- sa-east-1	=> gru-br-sa
-	- us-east-1 => iad-va-us
-	- us-east-2 => iad-va-us
-	- us-west-1 => sjc-ca-us
-	- us-west-2 => sea-wa-us
+    - ap-northeast-1 => tokyo-jp2
+    - ap-southeast-1 => singapore-sg
+    - ap-southeast-2 => sydney-au
+    - ap-south-1 => singapore-sg
+    - eu-central-1 => frankfurt-de
+    - eu-west-1 => london-uk, london_city-uk
+    - eu-west-2 => london-uk, london_city-uk
+    - eu-west-3 => cdg-par-fr
+    - sa-east-1    => gru-br-sa
+    - us-east-1 => iad-va-us
+    - us-east-2 => iad-va-us
+    - us-west-1 => sjc-ca-us
+    - us-west-2 => sea-wa-us
 
 1. Modify the timeout values (in microseconds) for the connection to the
    shield, time between bytes, and time for the first byte. We recommend keeping
@@ -392,8 +388,8 @@ Fastly options.
 1. For **Country Mapping**, click **Add** to enter a two-letter country code to
    map with a specific Magento store from a list. For a list of country codes, see [this site](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
-	![Add GeoIP country maps]({{ site.baseurl }}/common/images/cloud_fastly-geo-code.png)
-	
+    ![Add GeoIP country maps]({{ site.baseurl }}/common/images/cloud_fastly-geo-code.png)
+    
 1. Click **Save Config** at the top of the page.
 
 1. After page reload, click **Upload VCL to Fastly** in the *Fastly Configuration* section.
@@ -417,11 +413,11 @@ provider that supports forwarding DNS queries to use an apex domain.
 The following list contains examples of DNS providers for informational purposes.
 Use your preferred DNS provider.
 
-*	CNAME with ALIAS record from [Dyn](http://dyn.com)
-*	ANAME record on [DNS Made Easy](http://www.dnsmadeeasy.com)
-*	ANAME at [easyDNS](https://www.easydns.com)
-*	ACNAME at [CloudFlare](https://www.cloudflare.com)
-*	ALIAS at [PointDNS](https://pointhq.com)
+*    CNAME with ALIAS record from [Dyn](http://dyn.com)
+*    ANAME record on [DNS Made Easy](http://www.dnsmadeeasy.com)
+*    ANAME at [easyDNS](https://www.easydns.com)
+*    ACNAME at [CloudFlare](https://www.cloudflare.com)
+*    ALIAS at [PointDNS](https://pointhq.com)
 
 Many other DNS providers also offer workarounds to accomplish this goal. The most
 common is to add a CNAME record for the `www` host on the domain and then use the

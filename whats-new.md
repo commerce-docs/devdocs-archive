@@ -3,8 +3,6 @@ layout: full-width
 title: What's new on DevDocs
 redirect_from:
   - /guides/v2.1/magento-devdocs-whatsnew.html
-  - /guides/v2.2/magento-devdocs-whatsnew.html
-  - /guides/v2.3/magento-devdocs-whatsnew.html
 ---
 
 {% assign whatsnew = site.data.whats-new %}
@@ -24,7 +22,7 @@ redirect_from:
 ## {{ group.name }}
 
 
-Description |	Versions |	Type	| Date
+Description |    Versions |    Type    | Date
 ---|---|---|---{% for item in group.items %}
 {{ item.description }} | {{ item.versions }} | {{ item.type }} |
 {%- if item.link -%}

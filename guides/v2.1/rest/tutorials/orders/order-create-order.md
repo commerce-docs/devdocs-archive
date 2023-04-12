@@ -10,8 +10,6 @@ menu_order: 7
 level3_subgroup: order-tutorial
 redirect_from:
   - /guides/v2.1/get-started/order-tutorial/order-create-order.html
-  - /guides/v2.2/get-started/order-tutorial/order-create-order.html
-  - /guides/v2.3/get-started/order-tutorial/order-create-order.html
 functional_areas:
   - Integration
   - Orders
@@ -40,22 +38,22 @@ When you submit payment information, Magento creates an order and sends an order
 
 ```json
 {
-	"paymentMethod": {
-    	    	"method": "banktransfer"
-	 },
-	"billing_address": {
-    	    	"email": "jdoe@example.com",
-  	      	"region": "New York",
-          	"region_id": 43,
-          	"region_code": "NY",
-    	    	"country_id": "US",
-    	    	"street": ["123 Oak Ave"],
-    	    	"postcode": "10577",
-    	    	"city": "Purchase",
-    	    	"telephone": "512-555-1111",
-    	    	"firstname": "Jane",
-    	    	"lastname": "Doe"
-	 }
+    "paymentMethod": {
+                "method": "banktransfer"
+     },
+    "billing_address": {
+                "email": "jdoe@example.com",
+                "region": "New York",
+              "region_id": 43,
+              "region_code": "NY",
+                "country_id": "US",
+                "street": ["123 Oak Ave"],
+                "postcode": "10577",
+                "city": "Purchase",
+                "telephone": "512-555-1111",
+                "firstname": "Jane",
+                "lastname": "Doe"
+     }
 }
 ```
 

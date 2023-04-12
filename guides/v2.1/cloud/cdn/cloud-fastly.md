@@ -3,8 +3,6 @@ group: cloud-guide
 title: Fastly
 redirect_from:
    - /guides/v2.1/cloud/basic-information/cloud-fastly.html
-   - /guides/v2.2/cloud/basic-information/cloud-fastly.html
-   - /guides/v2.3/cloud/basic-information/cloud-fastly.html
 functional_areas:
   - Cloud
   - Setup
@@ -13,9 +11,9 @@ functional_areas:
 Fastly provides the following services to optimize and secure content delivery operations for your {{ site.data.var.ece }} projects. These services are included with your {{ site.data.var.ece }} subscription at no additional cost.
 
 -  **Content delivery network (CDN)**—Varnish-based service that caches your site pages, assets, CSS, and more in backend data centers you set up. As customers access your site and stores, the requests hit Fastly to load cached pages faster. The CDN service provides the following features: 
-	
+    
    -  Cache your site pages, assets, CSS, and more in backend data centers that you set up to reduce bandwith load and costs
-	
+    
    -  Use [Fastly custom VCL snippets]({{ page.baseurl}}/cloud/cdn/cloud-vcl-custom-snippets.html) (Varnish 2.1 compliant) to modify how caching responds to requests
 
    -  Configure [purge options]({{ page.baseurl }}/cloud/cdn/configure-fastly.html#purge) to clear generated content
@@ -25,7 +23,7 @@ Fastly provides the following services to optimize and secure content delivery o
    -  [Force unencrypted requests over to TLS](#tls)
    
    -  [Customize Fastly timeout](#timeouts) settings to prevent 503 responses on bulk operation requests 
-	
+    
    -  Create [custom error response pages]({{ page.baseurl }}/cloud/cdn/cloud-fastly-custom-response.html)
    
 -  **Security**—After you set up your {{ site.data.var.ece }} project to use the Fastly CDN, additional security features are available to protect your sites and network.

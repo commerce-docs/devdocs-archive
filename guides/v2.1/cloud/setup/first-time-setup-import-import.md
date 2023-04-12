@@ -8,8 +8,6 @@ level3_menu_node: level3child
 level3_subgroup: import
 redirect_from:
   - /guides/v2.1/cloud/access-acct/first-time-setup_import-import.html
-  - /guides/v2.2/cloud/access-acct/first-time-setup_import-import.html
-  - /guides/v2.3/cloud/access-acct/first-time-setup_import-import.html
 functional_areas:
   - Cloud
   - Setup
@@ -103,7 +101,7 @@ After you have completed the git reference configuration, you can import the {{s
     ```
     git push -f cloud-project master
     ```
-	
+    
     If the import succeeds, the {{site.data.var.ece}} environment redeploys. 
 
     ```
