@@ -11,11 +11,8 @@ require 'kramdown'
 require 'launchy'
 require 'colorator'
 
-# Load ruby files with helper methods from the 'rakelib/' directory
-require_relative 'rakelib/lib/link-checker.rb'
-require_relative 'rakelib/lib/converter.rb'
-require_relative 'rakelib/lib/double-slash-check.rb'
-require_relative 'rakelib/lib/doc-config.rb'
+# Require helper methods from the 'lib' directory
+Dir.glob('lib/**/*.rb') { |file| require_relative(file) }
 
 desc "Same as 'rake', 'rake preview'"
 task default: %w[preview]
@@ -56,6 +53,35 @@ task build: %w[clean] do
   print 'Building the site with Jekyll: $ '.magenta
   sh 'bundle exec jekyll build --verbose --trace'
   puts 'Built!'.green
+end
+
+desc 'Build the entire website'
+task build_and_deploy: %w[clean] do
+  print 'Building the site with Jekyll: $ '.magenta
+
+  # Check for uncommitted messages
+  abort "\nCannot checkout. The branch contains uncommitted messages.".red unless `git status --short`.empty?
+
+  # Back up an environmental variable
+  jekyll_env = ENV['JEKYLL_ENV']
+  ENV['JEKYLL_ENV'] = 'production'
+  # Build the site
+  sh 'bundle exec jekyll build --verbose --baseurl=/devdocs/2.1'
+  # Restore the environmental variable
+  ENV['JEKYLL_ENV'] = jekyll_env
+
+  # Remember the SHA of the built commit
+  commit = `git log --pretty=format:"%h" -1`
+
+  # Deploy the site
+  `git checkout gh-pages`
+  `cp -R _site/ 2.1/`
+  `git add 2.1/`
+  `git commit --message "Deploy archived-docs-v2.1: #{commit}"`
+  `git push public`
+  `git checkout -`
+
+  puts 'Done!'.green
 end
 
 desc 'Pull docs from external repositories'
