@@ -7,7 +7,7 @@ logo: DevDocs
 description: Archived Magento 2.1.18 Developer Documentation.
 
 # the base protocol and domain
-url: https://dshevtsov.github.io/
+url: https://dshevtsov.github.io
 
 # Site theme. https://jekyllrb.com/docs/themes/
 theme: devdocs
@@ -170,6 +170,7 @@ exclude:
   - node_modules
   - vendor
   - .git
+  - .github
   - .idea
   - Gemfile
   - Gemfile.lock
@@ -179,3 +180,8 @@ exclude:
   - rakelib
   - README.md
   - _plugins
+  - src
+  - tmp
+  - scripts
+  - Docfile.yml
+  - redirects.json
