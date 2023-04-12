@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Configure Xdebug for Docker | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Commerce Cloud</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Overview</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/onboarding/onboarding-tasks.html">Onboarding tasks</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Architecture</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html">Starter architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">Starter develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html">Pro architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/requirements/cloud-requirements.html">Technologies and requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cloud-composer.html">Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/ece-tools-reference.html">ece-tools package</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/git-integration.html">Git</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-ssh.html">SSH and sFTP</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/new-relic.html">New Relic</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-integrate-blackfire.html">Blackfire.io</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/sendgrid.html">SendGrid</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html">Prepare for manual setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">Install Magento prerequisites</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-ssh.html">Enable SSH keys</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Set up the Magento file system owner</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html">Clone and branch the project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-install.html">Install Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-deploy.html">First time deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/debug.html">Optional - Configure Xdebug</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/sample-data.html">Optional - Install sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development.html">Docker development</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">Configure Xdebug for Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-database.html">Connect to the database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-testing.html">Functional testing in Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/cloud-integrations.html">Integrations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/bitbucket-integration.html">Bitbucket integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/github-integration.html">GitHub integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/health-notifications.html">Health notifications</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html">Import existing code into a project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html">Prepare your existing Magento Commerce system</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-import.html">Import Magento Commerce code</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configuration-overview.html">Configure your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configure-best-practices.html">Best practices for store configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/paypal-onboarding.html">Set up PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/custom-theme.html">Install a theme</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly.html">Configure Fastly services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize error pages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-waf-service.html">Managed Cloud WAF</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-image-optimization.html">Image Optimization</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom VCL snippets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-blacklist.html">Custom blacklist VCL</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/trouble-fastly.html">Fastly troubleshooting</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure environments</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html">Application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Build and deploy</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/setup-notifications.html">Set up notifications</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/log-handlers.html">Logging handlers</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-intro.html">Environment variables</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-build.html">Build variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html">Cloud variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-deploy.html">Deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/working-with-variables.html">Working with variables</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html">Routes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-cache.html">Caching</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-redir.html">Redirects</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-ssi.html">Server side includes</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-mysql.html">Set up MySQL service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-redis.html">Set up Redis service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-elastic.html">Set up Elasticsearch service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-rabbit.html">Set up RabbitMQ service</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration management for store settings</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-initial.html">Example of managing system-specific settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html">Manage your project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-basic.html">Configure your project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-start.html">Project structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/user-admin.html">Create and manage users</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html">Manage branches with the Interface</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html">Manage branches with the CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">Snapshots and backup management</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/optimize-cloud-deployment.html">Optimize deployment</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Cloud deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/reduce-downtime.html">Zero downtime deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/static-content-deployment.html">Static content deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/smart-wizards.html">Smart wizards</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/discover-deploy.html">Deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/continuous-deployment.html">Continuous deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-prot.html">Protective block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-sanity-check.html">Build and deploy on local</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate-prereq.html">Prepare to deploy to Staging and Production</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code and migrate static files and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-test.html">Test deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live.html">Go live and launch</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/launch-steps.html">Launch steps</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Troubleshooting</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/troubleshoot-deployment.html">Troubleshoot deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/environments-logs.html">View logs for troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_ce-creds.html">Incorrect credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_proj-startover.html">Resolve issues with a new project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_comp-deploy-fail.html">Component deployment failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/redis-troubleshooting.html">Redis troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/reset-cron-jobs.html">Reset cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-crypt-key-variable.html">Resolve issues with encryption key</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-error-html-minification.html">Resolve issues with HTML minification</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-google-analytics-deploy.html">Resolve issues with Google Analytics during deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/restore-configuration-files.html">Restore configuration files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/site-availability.html">Site availability</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/robots-sitemap.html">Add site map and search engine robots</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/theme-troubleshooting.html">Theme troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/message-queues.html">Message queues</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and patches</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release notes for ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html">Upgrade to use ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-update.html">Update ece-tools version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-patch.html">Apply custom patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade.html">Upgrade Magento version</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Configure Xdebug for Docker</h1>
+</section>
+
+			<p>Xdebug is an extension for debugging your PHP. The following explains how to configure Xdebug and PhpStorm to debug in your local Docker environment.</p>
+
+<p>If you use Microsoft Windows, take the following steps before continuing:</p>
+
+<ol>
+  <li>Open your Docker settings.</li>
+  <li>Select the <strong>Expose daemon on tcp://localhost:2375 without TLS</strong> checkbox.</li>
+  <li>Wait for the settings to apply.</li>
+</ol>
+
+<h2 id="enable-xdebug">Enable Xdebug</h2>
+
+<p>To enable Xdebug for your project, add <code class="highlighter-rouge">xdebug</code> to the <code class="highlighter-rouge">runtime:extensions</code> section of the <code class="highlighter-rouge">.magento.app.yaml</code> file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="na">runtime</span><span class="pi">:</span>
+    <span class="na">extensions</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">redis</span>
+        <span class="pi">-</span> <span class="s">xsl</span>
+        <span class="pi">-</span> <span class="s">json</span>
+        <span class="pi">-</span> <span class="s">blackfire</span>
+        <span class="pi">-</span> <span class="s">newrelic</span>
+        <span class="pi">-</span> <span class="s">xdebug</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="configure-xdebug">Configure Xdebug</h2>
+
+<ol>
+  <li>
+    <p>Rebuild the <code class="highlighter-rouge">docker-compose.yml</code> file by continuing to configure your local workstation to <a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">launch the Docker environment</a>. The following is an excerpt from the <code class="highlighter-rouge">docker-compose.yml</code> file that shows Docker global variables.</p>
+
+    <div class="language-yaml no-copy highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="na">generic</span><span class="pi">:</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">alpine</span>
+  <span class="na">environment</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">PHP_MEMORY_LIMIT=2048M</span>
+    <span class="pi">-</span> <span class="s">UPLOAD_MAX_FILESIZE=64M</span>
+    <span class="pi">-</span> <span class="s">MAGENTO_ROOT=/app</span>
+    <span class="pi">-</span> <span class="s">PHP_IDE_CONFIG=serverName=magento_cloud_docker</span>
+    <span class="pi">-</span> <span class="s">XDEBUG_CONFIG=remote_host=host.docker.internal</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">PHP_EXTENSIONS=bcmath</span><span class="nv"> </span><span class="s">bz2</span><span class="nv"> </span><span class="s">calendar</span><span class="nv"> </span><span class="s">exif</span><span class="nv"> </span><span class="s">gd</span><span class="nv"> </span><span class="s">gettext</span><span class="nv"> </span><span class="s">intl</span><span class="nv"> </span><span class="s">mysqli</span><span class="nv"> </span><span class="s">pcntl</span><span class="nv"> </span><span class="s">pdo_mysql</span><span class="nv"> </span><span class="s">soap</span><span class="nv"> </span><span class="s">sockets</span><span class="nv"> </span><span class="s">sysvmsg</span><span class="nv"> </span><span class="s">sysvsem</span><span class="nv"> </span><span class="s">sysvshm</span><span class="nv"> </span><span class="s">opcache</span><span class="nv"> </span><span class="s">zip</span><span class="nv"> </span><span class="s">redis</span><span class="nv"> </span><span class="s">xsl</span><span class="nv"> </span><span class="s">xdebug'</span>
+  <span class="na">env_file</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">./.docker/config.env</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Change any Xdebug configuration using the<code class="highlighter-rouge">XDEBUG_CONFIG</code> option. For example, to change the <code class="highlighter-rouge">xdebug.remote_port</code> option:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="s">XDEBUG_CONFIG='remote_host=host.docker.internal remote_port=9002'</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h4 id="to-configure-phpstorm-to-work-with-xdebug">To configure PhpStorm to work with Xdebug:</h4>
+
+<ol>
+  <li>
+    <p>In your PhpStorm project, open the settings panel.</p>
+
+    <ul>
+      <li><em>Mac OS X</em>—Select <strong>File</strong> &gt; <strong>Preferences</strong>.</li>
+      <li><em>Windows/Linux</em>—Select <strong>File</strong> &gt; <strong>Settings</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>In the <em>Settings</em> panel, expand and locate the <strong>Languages &amp; Frameworks</strong> &gt; <strong>PHP</strong> &gt; <strong>Servers</strong> section.</p>
+  </li>
+  <li>
+    <p>Click the <strong>+</strong> to add a server configuration. The project name is in grey at the top.</p>
+  </li>
+  <li>
+    <p>Configure the following settings for the new server configuration:</p>
+
+    <ul>
+      <li><strong>Name</strong>—Enter the name used for the <code class="highlighter-rouge">serverName</code> in <code class="highlighter-rouge">PHP_IDE_CONFIG</code> option from <code class="highlighter-rouge">docker-compose.yml</code> file.</li>
+      <li><strong>Host</strong>—Enter <code class="highlighter-rouge">localhost</code>.</li>
+      <li><strong>Port</strong>—Enter <code class="highlighter-rouge">80</code>.</li>
+      <li><strong>Debugger</strong>—Select <code class="highlighter-rouge">Xdebug</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Select <strong>Use path mappings</strong>. In the <em>File/Directory</em> pane, the root of the project for the <code class="highlighter-rouge">serverName</code> displays.</p>
+  </li>
+  <li>
+    <p>In the <strong>Absolute path on the server</strong> column, click <img src="/devdocs/2.1/common/images/install_docker_php-storm-edit.png" alt="Edit" width="15px" /> and add a value to the <code class="highlighter-rouge">MAGENTO_ROOT</code> option. The default value is <code class="highlighter-rouge">/app</code></p>
+  </li>
+  <li>
+    <p>Change the Xdebug port to 9001 in the <strong>Languages &amp; Frameworks</strong> &gt; <strong>PHP</strong> &gt; <strong>Debug</strong> &gt; <strong>Xdebug</strong> &gt; <strong>Debug Port</strong> panel.</p>
+  </li>
+  <li>
+    <p>Click <strong>Apply</strong>.</p>
+  </li>
+</ol>
+
+<h2 id="use-xdebug">Use Xdebug</h2>
+
+<p>The following steps describe debugging web requests and CLI commands.</p>
+
+<h4 id="to-debug-web-requests">To debug web requests:</h4>
+
+<ol>
+  <li>
+    <p>In your PhpStorm project, click <img src="/devdocs/2.1/common/images/install_docker_php-storm_xdebug-start-listening.png" alt="Start listening for connections" width="25px" /> (<strong>Start listening</strong>) in the top navigation bar.</p>
+  </li>
+  <li>
+    <p>Add breakpoints in the <code class="highlighter-rouge">pub/index.php</code> file.</p>
+  </li>
+  <li>
+    <p>Install the debug extension in the browser, and then click <strong>Debug</strong> to enable.</p>
+  </li>
+  <li>
+    <p>In the browser, open the <code class="highlighter-rouge">https://localhost</code> URL.</p>
+  </li>
+  <li>
+    <p>When PhpStorm recognizes the Xdebug connection, you can begin debugging web requests.</p>
+  </li>
+</ol>
+
+<h4 id="to-debug-cli-commands">To debug CLI commands:</h4>
+
+<p>You can debug any Magento command or PHP script using the following steps.</p>
+
+<ol>
+  <li>
+    <p>In your PhpStorm project, open the <strong>Build, Extension, Deployment</strong> &gt; <strong>Docker</strong> panel, and then click <code class="highlighter-rouge">+</code> to add a new Docker server and update the following settings:</p>
+
+    <ul>
+      <li><strong>Name</strong>—Enter a name for the server, for example <code class="highlighter-rouge">Docker Cloud</code>.</li>
+      <li><strong>Connect to Docker daemon with</strong>—
+        <ul>
+          <li><em>Windows</em>—Select <strong>TCP socket</strong> and update <strong>Engine Api Url</strong> with <code class="highlighter-rouge">tcp://localhost:2375</code>.</li>
+          <li><em>Mac OS X</em>—Select <strong>Docker for Mac</strong>. [<em>default</em>]</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>In the <strong>Languages &amp; Frameworks</strong> &gt; <strong>PHP</strong> &gt; <strong>Cli Interpreter</strong> panel, click <strong>[…]</strong>.</p>
+  </li>
+  <li>
+    <p>Click <strong>[+]</strong> to add and configure a new Cli Interpreter from your Docker image. Update the following settings:</p>
+
+    <ul>
+      <li><strong>Name</strong>—Enter a name for the new interpreter, such as <code class="highlighter-rouge">Magento cloud docker cli</code>.</li>
+      <li><strong>Remote</strong>—Select <code class="highlighter-rouge">Docker</code>.
+        <ul>
+          <li><strong>Server</strong>—Select <code class="highlighter-rouge">Docker Cloud</code> from the previous step.</li>
+          <li><strong>Image name</strong>—Select <code class="highlighter-rouge">magento/magento-cloud-docker-php:7.x-cli</code>.</li>
+        </ul>
+      </li>
+      <li><strong>Additional</strong> &gt; <strong>Debugger extension</strong>—
+        <ul>
+          <li>Windows—Enter <code class="highlighter-rouge">xdebug</code>.</li>
+          <li>Mac OS X/Linux—Enter <code class="highlighter-rouge">xdebug.so</code>.</li>
+        </ul>
+      </li>
+      <li>Click <strong>Refresh</strong> to verify that the interpreter and Xdebug extension are configured properly.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Click <strong>Save</strong>.</p>
+  </li>
+  <li>
+    <p>Open the <em>Run/Debug Configuration</em> window and add a new <strong>PHP script</strong> with the following settings:</p>
+
+    <ul>
+      <li><strong>Name</strong>—Enter <code class="highlighter-rouge">bin/magento</code>.</li>
+      <li><strong>Configuration</strong> &gt; <strong>File</strong>—Select the path to the <code class="highlighter-rouge">bin/magento</code> file in your local environment.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Add breakpoints in the <code class="highlighter-rouge">bin/magento</code> file and the debug PHP script created in the previous step.</p>
+  </li>
+</ol>
+
+<h2 id="using-xdebug-helper">Using Xdebug Helper</h2>
+
+<p>You can install and use the Xdebug Helper Chrome extension to debug your PhP code from the browser.</p>
+
+<h4 id="to-use-xdebug-helper-with-chrome">To use Xdebug Helper with Chrome:</h4>
+
+<ol>
+  <li>
+    <p>Install the <a href="https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en">Xdebug Helper extension</a> from the Chrome store.</p>
+  </li>
+  <li>
+    <p>Enable the extension in Chrome as shown in the following figure.</p>
+
+    <p><img src="/devdocs/2.1/common/images/install_docker_php-storm_xdebug-chrome.png" alt="Enable the Xdebug extension in Chrome" /></p>
+  </li>
+  <li>
+    <p>In <em>Chrome</em>, click <img src="/devdocs/2.1/common/images/cloud-xdebug_helper-icon.png" alt="Xdebug helper icon" width="25px" /> in the Chrome toolbar.</p>
+  </li>
+  <li>
+    <p>From the <em>Xdebug helper</em> menu, click <strong>Options</strong>.</p>
+  </li>
+  <li>
+    <p>From the <em>IDE Key</em> list, select <strong>PhpStorm</strong>.</p>
+  </li>
+  <li>
+    <p>Click <strong>Save</strong>.</p>
+
+    <p><img src="/devdocs/2.1/common/images/cloud-xdebug_helper-options.png" alt="Xdebug Helper options" width="400px" /></p>
+  </li>
+</ol>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-06-27">
+      Jun 27th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

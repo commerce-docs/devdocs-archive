@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Upcoming releases | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Release Information</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="active" role="menuitem"><a href="/devdocs/2.1/release/">Upcoming releases</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/release/policy">Release policy</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Upcoming releases</h1>
+</section>
+
+			<p>Magento continually strives to find the right balance between making product upgrades simple and predictable and delivering improvements and new features to early adopters faster. Over the last year, we have refined how we deliver software to support this balance. For additional information, refer to our <a href="/devdocs/2.1/release/policy/">release policy</a>.</p>
+
+<h2 id="availability">Availability</h2>
+
+<p>The following table describes the status of Magento software availability and where to get it, particularly for software that is available outside the conventional Magento Commerce Composer package.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Availability</th>
+      <th>How to get it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Magento Commerce 2.3.2 GA</strong></td>
+      <td>Available now</td>
+      <td><a href="https://devdocs.magento.com/guides/v2.3/install-gde/composer.html">Composer</a></td>
+    </tr>
+    <tr>
+      <td><strong>Magento Commerce Cloud Tools (aka ECE-Tools)</strong></td>
+      <td>Available now</td>
+      <td><a href="https://devdocs.magento.com/guides/v2.3/cloud/project/ece-tools-update.html">Composer</a></td>
+    </tr>
+    <tr>
+      <td><strong>PWA Studio</strong></td>
+      <td>Available now (including support for Magento Commerce Cloud)</td>
+      <td><a href="https://magento-research.github.io/pwa-studio/">Documentation</a> and <a href="https://github.com/magento-research/pwa-studio">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><strong>Magento Shipping</strong></td>
+      <td>Available now</td>
+      <td>Merchants on Magento 2.2.2+ can use the <a href="https://account.magento.com/shipping/onboarding/start">onboarding process</a></td>
+    </tr>
+    <tr>
+      <td><strong>Page Builder</strong></td>
+      <td>Available now</td>
+      <td>Bundled with Magento Commerce 2.3.x</td>
+    </tr>
+    <tr>
+      <td><strong>Amazon Sales Channel 2.0.0</strong></td>
+      <td>Available now for Magento Commerce Cloud 2.2.4+ and 2.3.x (US, Canada, Mexico)<br /><br />EMEA and APAC availability expected in second half of 2019</td>
+      <td>Magento Marketplace</td>
+    </tr>
+    <tr>
+      <td><strong>Google Shopping ads Channel 1.1.2</strong></td>
+      <td>Available now for Magento Commerce Cloud 2.2.4+ and 2.3.x</td>
+      <td><a href="http://marketplace.magento.com/magento-google-shopping-ads.html">Magento Marketplace</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="compatibility">Compatibility</h2>
+
+<p>Magento modules that have been built to be decoupled from the Magento Commerce core release process; this allows us to release iterations of these modules faster to merchants who are willing to accept a little risk in exchange for earlier access to new features.</p>
+
+<p>The following table shows the release status of Magento extension versions relative to Magento Commerce.</p>
+
+<p><strong class="status-light general-availability">General availability</strong> – version that has been thoroughly tested by Magento and is fully supported.</p>
+
+<p><strong class="status-light open-beta">Open beta</strong> – pre-release version that has been thoroughly tested by Magento, but is not yet included under Magento Support.</p>
+
+<p><strong class="status-light not-supported">Not supported</strong> - version that is not compatible with a Commerce release.</p>
+
+<table class="compatibility-table">
+  <thead>
+    <tr class="magento-version">
+      <th>&nbsp;</th>
+    
+      <th>Magento 2.2.4+</th>
+    
+      <th>Magento 2.3.0</th>
+    
+      <th>Magento 2.3.1</th>
+    
+      <th>Magento 2.3.2</th>
+    
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr class="extension-name">
+      <th colspan="5">Amazon Sales Channel</th>
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Amazon Sales Channel 2.0.0</td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+  </tbody>
+  
+  <tbody>
+    <tr class="extension-name">
+      <th colspan="5">Google Shopping ads Channel</th>
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Google Shopping ads Channel 1.1.2</td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Google Shopping ads Channel 1.1.1</td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+  </tbody>
+  
+  <tbody>
+    <tr class="extension-name">
+      <th colspan="5">Magento Shipping</th>
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Magento Shipping 1.5.3</td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Magento Shipping 1.5.1</td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Magento Shipping 1.4.6</td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+    </tr>
+    
+  </tbody>
+  
+  <tbody>
+    <tr class="extension-name">
+      <th colspan="5">Magento Inventory</th>
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Magento Inventory 1.1.2</td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Magento Inventory 1.1.0</td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Magento Inventory 1.0.3</td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+  </tbody>
+  
+  <tbody>
+    <tr class="extension-name">
+      <th colspan="5">Page Builder</th>
+    </tr>
+    
+    <tr class="extension-version">
+      <td>Page Builder 1.0.0</td>
+      
+      <td><span class="status-light not-supported">Not supported</span></td>
+      
+      <td><span class="status-light open-beta">Open beta</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+      <td><span class="status-light general-availability">General availability</span></td>
+      
+    </tr>
+    
+  </tbody>
+  
+</table>
+
+<style>
+.compatibility-table {
+  table-layout: auto;
+}
+
+.compatibility-table .magento-version th { 
+  padding: 5px 15px;
+  background: none;
+}
+.extension-version {
+  transition: all .2s;
+}
+.extension-version:hover {
+  background: rgba(20,115,230,10%);
+}
+
+.compatibility-table .extension-name th { 
+  padding: 5px 15px;
+}
+
+.status-light {
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.status-light::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 12px;
+}
+
+.status-light.general-availability::before {
+  background: rgb(45, 157, 120);
+}
+
+.status-light.open-beta::before {
+  background: rgb(230, 134, 25);
+}
+
+.status-light.not-supported {
+  font-style: italic;
+}
+
+.status-light.not-supported::before {
+  background: rgb(179, 179, 179);
+}
+
+</style>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-06-24">
+      Jun 24th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

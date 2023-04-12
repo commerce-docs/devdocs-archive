@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Suites | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Functional Testing Framework Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/introduction.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/getting-started.html">Getting started</a></li><li class="" role="menuitem"><span>Best practices</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/best-practices.html">Best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/tips-tricks.html">Tips and tricks</a></li></ul></li><li class="" role="menuitem"><span>CLI Commands</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/commands/mftf.html">mftf</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/commands/codeception.html">codecept</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/configuration.html">Configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/credentials.html">Credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/data.html">Data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/debugging.html">Debugging</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/extending.html">Extending</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/introduction.html">Merge points for extensions</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-action-groups.html">Extend action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-data.html">Extend data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-tests.html">Extend tests</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-action-groups.html">Merge action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-data.html">Merge data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-pages.html">Merge pages</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-sections.html">Merge sections</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-tests.html">Merge tests</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merging.html">Merging</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/metadata.html">Metadata</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/page.html">Page</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/reporting.html">Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section.html">Section</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section/parameterized-selectors.html">Parameterized selectors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section/locator-functions.html">Locator functions</a></li></ul></li><li class="active" role="menuitem"><a href="/devdocs/2.1/mftf/docs/suite.html">Suite</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test.html">Test</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/annotations.html">Annotations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/actions.html">Actions</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/action-groups.html">Action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/assertions.html">Assertions</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/troubleshooting.html">Troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/update.html">Update</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/versioning.html">Versioning</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/.github/CONTRIBUTING.md">Contribution guidelines</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/CHANGELOG.md">Changelog</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Suites</h1>
+</section>
+
+			<p>Suites are essentially groups of tests that run in specific conditions (preconditions and postconditions).
+They enable including, excluding, and grouping tests for a customized test run.
+You can form suites using separate tests, groups, and modules.</p>
+
+<p>Each suite must be defined in the <code class="highlighter-rouge">&lt;VendorName&gt;/&lt;ModuleName&gt;/Test/Mftf/Suite</code> directory.</p>
+
+<p>The tests for each suite are generated in a separate directory under <code class="highlighter-rouge">&lt;magento 2 root&gt;/dev/tests/acceptance/tests/functional/Magento/FunctionalTest/_generated/</code>.
+All tests that are not within a suite are generated in the <em>default</em> suite at <code class="highlighter-rouge">.../Magento/FunctionalTest/_generated/default/</code>.</p>
+
+<div class="bs-callout bs-callout-info">
+ If a test is generated into at least one custom suite, it will not appear in the _default_ suite.
+</div>
+
+<h2 id="format">Format</h2>
+
+<p>The format of a suite:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;suites</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../dev/tests/acceptance/vendor/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Suite/etc/suiteSchema.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;suite</span> <span class="na">name=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;before&gt;</span>
+        <span class="nt">&lt;/before&gt;</span>
+        <span class="nt">&lt;after&gt;</span>
+        <span class="nt">&lt;/after&gt;</span>
+        <span class="nt">&lt;include&gt;</span>
+            <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">""</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;group</span> <span class="na">name=</span><span class="s">""</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">""</span> <span class="na">file=</span><span class="s">""</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/include&gt;</span>
+        <span class="nt">&lt;exclude&gt;</span>
+            <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">""</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;group</span> <span class="na">name=</span><span class="s">""</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">""</span> <span class="na">file=</span><span class="s">""</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/exclude&gt;</span>
+    <span class="nt">&lt;/suite&gt;</span>
+<span class="nt">&lt;/suites&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="principles">Principles</h2>
+
+<ul>
+  <li>
+    <p>A suite name:</p>
+
+    <ul>
+      <li>must not match any existing group value.
+  For example, the suite <code class="highlighter-rouge">&lt;suite name="ExampleTest"&gt;</code> will fail during test run if any test contains in annotations <code class="highlighter-rouge">&lt;group value="ExampleTest"&gt;</code>.</li>
+      <li>must not be <code class="highlighter-rouge">default</code> or <code class="highlighter-rouge">skip</code>. Tests that are not in any suite are generated under the <code class="highlighter-rouge">default</code> suite.
+The suite name <code class="highlighter-rouge">skip</code> is synonymous to including a test in the <code class="highlighter-rouge">&lt;group value="skip"/&gt;</code>, which will be deprecated in MFTF 3.0.0.</li>
+      <li>can contain letters, numbers, and underscores.</li>
+      <li>should be upper camel case.</li>
+    </ul>
+  </li>
+  <li>A suite must contain at least one <code class="highlighter-rouge">&lt;include&gt;</code>, or one <code class="highlighter-rouge">&lt;exclude&gt;</code>, or both.</li>
+  <li>Using <code class="highlighter-rouge">&lt;before&gt;</code> in a suite, you must add the corresponding <code class="highlighter-rouge">&lt;after&gt;</code> to restore the initial state of your testing instance.</li>
+</ul>
+
+<h2 id="conditions">Conditions</h2>
+
+<p>Using suites enables test writers to consolidate conditions that are shared between tests.
+The code lives in one place and executes once per suite.</p>
+
+<ul>
+  <li>Set up preconditions and postconditions using <a href="/devdocs/2.1/mftf/docs/test/actions.html">actions</a> in <a href="#before-tag"><code class="highlighter-rouge">&lt;before&gt;</code></a> and <a href="#after-tag"><code class="highlighter-rouge">&lt;after&gt;</code></a> correspondingly, just similar to use in a <a href="/devdocs/2.1/mftf/docs/test.html">test</a>.</li>
+  <li>Clean up after suites just like after tests.
+  The MFTF enforces the presence of both <code class="highlighter-rouge">&lt;before&gt;</code> and <code class="highlighter-rouge">&lt;after&gt;</code> if either is present.</li>
+</ul>
+
+<h2 id="test-writing">Test writing</h2>
+
+<p>Since suites enable precondition consolidation, a common workflow for test writing is adding a new test to an existing suite.
+Such test is generated in context of the suite that contains it.
+You cannot isolate this test from preconditions of the suite; it cannot be used outside of the suite at the same time.</p>
+
+<p>There are several ways to generate and execute your new test in the context of a suite:</p>
+
+<ul>
+  <li>Edit the appropriate <code class="highlighter-rouge">suite.xml</code> to include your test only and run:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>  vendor/bin/mftf run:group &lt;suiteName&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Temporarily add a group to your test like <code class="highlighter-rouge">&lt;group value="foo"&gt;</code> and run:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>  vendor/bin/mftf run:group foo
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>To limit generation to your suite/test combination, run in conjunction with the above:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>  vendor/bin/mftf generate:suite &lt;suite&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>To generate any combination of suites and tests, use <a href="/devdocs/2.1/mftf/docs/commands/mftf.html#generatetests"><code class="highlighter-rouge">generate:tests</code></a> with the <code class="highlighter-rouge">--tests</code> flag.</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="enablingdisabling-wysiwyg-in-suite-conditions">Enabling/disabling WYSIWYG in suite conditions</h3>
+
+<!--  -->
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;suites</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../dev/tests/acceptance/vendor/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Suite/etc/suiteSchema.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;suite</span> <span class="na">name=</span><span class="s">"WYSIWYG"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;before&gt;</span>
+            <span class="nt">&lt;actionGroup</span> <span class="na">ref=</span><span class="s">"LoginAsAdmin"</span> <span class="na">stepKey=</span><span class="s">"login"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;amOnPage</span> <span class="na">url=</span><span class="s">"admin/admin/system_config/edit/section/cms/"</span> <span class="na">stepKey=</span><span class="s">"navigateToConfigurationPage"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;waitForPageLoad</span> <span class="na">stepKey=</span><span class="s">"wait1"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;conditionalClick</span> <span class="na">stepKey=</span><span class="s">"expandWYSIWYGOptions"</span> <span class="na">selector=</span><span class="s">"{{ContentManagementSection.WYSIWYGOptions}}"</span> <span class="na">dependentSelector=</span><span class="s">"{{ContentManagementSection.CheckIfTabExpand}}"</span> <span class="na">visible=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;waitForElementVisible</span> <span class="na">selector=</span><span class="s">"{{ContentManagementSection.EnableWYSIWYG}}"</span> <span class="na">stepKey=</span><span class="s">"waitForEnableWYSIWYGDropdown1"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;waitForElementVisible</span>  <span class="na">selector=</span><span class="s">"{{ContentManagementSection.EnableSystemValue}}"</span> <span class="na">stepKey=</span><span class="s">"waitForUseSystemValueVisible"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;uncheckOption</span> <span class="na">selector=</span><span class="s">"{{ContentManagementSection.EnableSystemValue}}"</span> <span class="na">stepKey=</span><span class="s">"uncheckUseSystemValue"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;selectOption</span> <span class="na">selector=</span><span class="s">"{{ContentManagementSection.EnableWYSIWYG}}"</span> <span class="na">userInput=</span><span class="s">"Enabled by Default"</span> <span class="na">stepKey=</span><span class="s">"selectOption1"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;click</span> <span class="na">selector=</span><span class="s">"{{ContentManagementSection.WYSIWYGOptions}}"</span> <span class="na">stepKey=</span><span class="s">"collapseWYSIWYGOptions"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;click</span> <span class="na">selector=</span><span class="s">"{{ContentManagementSection.Save}}"</span> <span class="na">stepKey=</span><span class="s">"saveConfig"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/before&gt;</span>
+        <span class="nt">&lt;after&gt;</span>
+            <span class="nt">&lt;actionGroup</span> <span class="na">ref=</span><span class="s">"LoginAsAdmin"</span> <span class="na">stepKey=</span><span class="s">"login"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;actionGroup</span> <span class="na">ref=</span><span class="s">"DisabledWYSIWYG"</span> <span class="na">stepKey=</span><span class="s">"disable"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/after&gt;</span>
+        <span class="nt">&lt;include&gt;</span>
+            <span class="nt">&lt;group</span> <span class="na">name=</span><span class="s">"WYSIWYG"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/include&gt;</span>
+    <span class="nt">&lt;/suite&gt;</span>
+<span class="nt">&lt;/suites&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<!--  -->
+<p>This example declares a suite with the name <code class="highlighter-rouge">WYSIWYG</code>.
+The suite enables WYSIWYG <em>before</em> running tests.
+It performs the following steps:</p>
+
+<ol>
+  <li>Log in to the backend.</li>
+  <li>Navigate to the <strong>Configuration</strong> page.</li>
+  <li>Enable <strong>WYSIWYG</strong> in the Magento instance.</li>
+</ol>
+
+<p><em>After</em> the testing, the suite returns the Magento instance to the initial state disabling WYSIWYG:</p>
+
+<ol>
+  <li>Log back in.</li>
+  <li>Disable <strong>WYSIWYG</strong> in the Magento instance.</li>
+</ol>
+
+<p>This suite includes all tests that contain the <code class="highlighter-rouge">&lt;group value="WYSIWYG"/&gt;</code> annotation.</p>
+
+<h3 id="execute-magento-cli-commands-in-suite-conditions">Execute Magento CLI commands in suite conditions</h3>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;suites</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../dev/tests/acceptance/vendor/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Suite/etc/suiteSchema.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;suite</span> <span class="na">name=</span><span class="s">"Cache"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;before&gt;</span>
+            <span class="nt">&lt;magentoCLI</span> <span class="na">stepKey=</span><span class="s">"disableCache"</span> <span class="na">command=</span><span class="s">"cache:disable"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/before&gt;</span>
+        <span class="nt">&lt;after&gt;</span>
+            <span class="nt">&lt;magentoCLI</span> <span class="na">stepKey=</span><span class="s">"enableCache"</span> <span class="na">command=</span><span class="s">"cache:enable"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/after&gt;</span>
+        <span class="nt">&lt;include&gt;</span>
+            <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">"SomeCacheRelatedTest"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;group</span> <span class="na">name=</span><span class="s">"CacheRelated"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/include&gt;</span>
+    <span class="nt">&lt;/suite&gt;</span>
+<span class="nt">&lt;/suites&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This example declares a suite with the name <code class="highlighter-rouge">Cache</code>.</p>
+
+<p>Preconditions:</p>
+
+<ol>
+  <li>It disables the Magento instance cache entirely before running the included tests.</li>
+  <li>After the testing, it re-enables the cache.</li>
+</ol>
+
+<p>The suite includes a specific test <code class="highlighter-rouge">SomeCacheRelatedTest</code> and every <code class="highlighter-rouge">&lt;test&gt;</code> that includes the <code class="highlighter-rouge">&lt;group value="CacheRelated"/&gt;</code> annotation.</p>
+
+<h3 id="change-magento-configurations-in-suite-conditions">Change Magento configurations in suite conditions</h3>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;suites</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../dev/tests/acceptance/vendor/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Suite/etc/suiteSchema.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;suite</span> <span class="na">name=</span><span class="s">"PaypalConfiguration"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;before&gt;</span>
+            <span class="nt">&lt;createData</span> <span class="na">entity=</span><span class="s">"SamplePaypalConfig"</span> <span class="na">stepKey=</span><span class="s">"createSamplePaypalConfig"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/before&gt;</span>
+        <span class="nt">&lt;after&gt;</span>
+            <span class="nt">&lt;createData</span> <span class="na">entity=</span><span class="s">"DefaultPayPalConfig"</span> <span class="na">stepKey=</span><span class="s">"restoreDefaultPaypalConfig"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/after&gt;</span>
+        <span class="nt">&lt;include&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Catalog"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/include&gt;</span>
+        <span class="nt">&lt;exclude&gt;</span>
+            <span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">"PaypalIncompatibleTest"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/exclude&gt;</span>
+    <span class="nt">&lt;/suite&gt;</span>
+<span class="nt">&lt;/suites&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This example declares a suite with the name <code class="highlighter-rouge">PaypalConfiguration</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;before&gt;</code> block persists a Paypal Configuration enabling all tests in this suite to run under the newly reconfigured Magento instance.</li>
+  <li><code class="highlighter-rouge">&lt;after&gt;</code> block deletes the persisted configuration, returning Magento to its initial state.</li>
+  <li>The suite includes all tests from the <code class="highlighter-rouge">Catalog</code> module, except the <code class="highlighter-rouge">PaypalIncompatibleTest</code> test.</li>
+</ul>
+
+<h2 id="elements-reference">Elements reference</h2>
+
+<h3 id="suites-tag">suites</h3>
+
+<p>The root element for suites.</p>
+
+<h3 id="suite-tag">suite</h3>
+
+<p>A set of “before” and “after” preconditions, and test filters to include and exclude tests in the scope of suite.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Type</th>
+      <th>Use</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>string</td>
+      <td>required</td>
+      <td>Unique suite name identifier.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">remove</code></td>
+      <td>boolean</td>
+      <td>optional</td>
+      <td>Removing the suite during merging.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It can contain <code class="highlighter-rouge">&lt;before&gt;</code>, <code class="highlighter-rouge">&lt;after&gt;</code>, <code class="highlighter-rouge">&lt;include&gt;</code>, and <code class="highlighter-rouge">&lt;exclude&gt;</code>.</p>
+
+<h3 id="before-tag">before</h3>
+
+<p>A suite hook with preconditions that executes once before the suite tests.</p>
+
+<p>It may contain test steps with any <a href="/devdocs/2.1/mftf/docs/test/actions.html">actions</a> and <a href="/devdocs/2.1/mftf/docs/test/action-groups.html">action groups</a>.</p>
+
+<div class="bs-callout bs-callout-info">
+Tests in the suite are not run and screenshots are not saved in case of a failure in the before hook.
+To troubleshoot the failure, run the suite locally.
+</div>
+
+<h3 id="after-tag">after</h3>
+
+<p>A suite hook with postconditions executed once after the suite tests.</p>
+
+<p>It may contain test steps with any <a href="/devdocs/2.1/mftf/docs/test/actions.html">actions</a> and <a href="/devdocs/2.1/mftf/docs/test/action-groups.html">action groups</a>.</p>
+
+<h3 id="include-tag">include</h3>
+
+<p>A set of filters that you can use to specify which tests to include in the test suite.</p>
+
+<p>It may contain filters by:</p>
+
+<ul>
+  <li>test which names a specific <code class="highlighter-rouge">&lt;test&gt;</code>.</li>
+  <li>group which refers to a declared <code class="highlighter-rouge">group</code> annotation.</li>
+  <li>module which refers to <code class="highlighter-rouge">test</code> files under a specific Magento Module.</li>
+</ul>
+
+<p>The element can contain <a href="#test-tag"><code class="highlighter-rouge">&lt;test&gt;</code></a>, <a href="#group-tag"><code class="highlighter-rouge">&lt;group&gt;</code></a>, and <a href="#module-tag"><code class="highlighter-rouge">&lt;module&gt;</code></a>.</p>
+
+<h3 id="exclude-tag">exclude</h3>
+
+<p>A set of filters that you can use to specify which tests to exclude in the test suite.</p>
+
+<p>There are two types of behavior:</p>
+
+<ol>
+  <li>Applying filters to the included tests when the suite contains <a href="#include-tag"><code class="highlighter-rouge">&lt;include&gt;</code></a> filters.
+The MFTF will exclude tests from the previously included set and generate the remaining tests in the suite.</li>
+  <li>Applying filters to all tests when the suite does not contain <a href="#include-tag"><code class="highlighter-rouge">&lt;include&gt;</code></a> filters.
+The MFTF will generate all existing tests except the excluded.
+In this case, the custom suite will contain all generated tests except excluded, and the <em>default</em> suite will contain the excluded tests only.</li>
+</ol>
+
+<p>It may contain filters by:</p>
+
+<ul>
+  <li>test which names a specific <code class="highlighter-rouge">&lt;test&gt;</code>.</li>
+  <li>group which refers to a declared <code class="highlighter-rouge">group</code> annotation.</li>
+  <li>module which refers to <code class="highlighter-rouge">test</code> files under a specific Magento Module.</li>
+</ul>
+
+<p>The element may contain <a href="#test-tag"><code class="highlighter-rouge">&lt;test&gt;</code></a>, <a href="#group-tag"><code class="highlighter-rouge">&lt;group&gt;</code></a>, and <a href="#module-tag"><code class="highlighter-rouge">&lt;module&gt;</code></a>.</p>
+
+<h3 id="test-tag">test</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Type</th>
+      <th>Use</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>string</td>
+      <td>required</td>
+      <td>Filtering a test by its name.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">remove</code></td>
+      <td>boolean</td>
+      <td>optional</td>
+      <td>Removing the filter during merging.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="group-tag">group</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Type</th>
+      <th>Use</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>string</td>
+      <td>required</td>
+      <td>Filtering tests by the <code class="highlighter-rouge">&lt;group&gt;</code> annotation.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">remove</code></td>
+      <td>boolean</td>
+      <td>optional</td>
+      <td>Removing the filter during merging.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="module-tag">module</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attributes</th>
+      <th>Type</th>
+      <th>Use</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>string</td>
+      <td>required</td>
+      <td>Filtering tests by their location in the corresponding module.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">file</code></td>
+      <td>string</td>
+      <td>optional</td>
+      <td>Filtering a specific test file in the module.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">remove</code></td>
+      <td>boolean</td>
+      <td>optional</td>
+      <td>Removing the filter during merging.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Link definitions -->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-12-04">
+      Dec 4th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

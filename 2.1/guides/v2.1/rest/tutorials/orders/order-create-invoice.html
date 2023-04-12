@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Step 8. Create an invoice | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-tutorial">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+  <aside class="sidebar">
+  	<button class="toc-toggler">Table of Contents</button>
+  	<div class="sidebar-wrapper">
+
+
+      
+      
+      <ul>
+        <li class="level-0">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">
+            &larr; REST tutorials
+          </a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-intro.html">Initial tasks</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-config-store.html">Step 1. Configure the store</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-admin-token.html">Step 2. Get the admin token</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-create-customer.html">Step 3. Create a customer</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-create-quote.html">Step 4. Create a quote</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-add-items.html">Step 5. Add items to the cart</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-prepare-checkout.html">Step 6. Prepare for checkout</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-create-order.html">Step 7. Create an order</a>
+        </li>
+      
+        <li class="level1  active">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-create-invoice.html">Step 8. Create an invoice</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-create-shipment.html">Step 9. Create a shipment</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-issue-refund.html">Step 10. Issue a partial refund</a>
+        </li>
+      
+      </ul>
+
+    </div>
+  </aside>
+  <!-- /.sidebar -->
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+		<h1 class="page-subtitle">Order processing tutorial</h1>
+	
+
+	<h1 class="page-heading">Step 8. Create an invoice</h1>
+</section>
+
+			<p>You create an <a href="https://glossary.magento.com/invoice">invoice</a> after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Magento that payment for the order has been captured.</p>
+
+<h3 id="capture-payment">Capture payment</h3>
+
+<p>This example creates a full invoice. You can create a partial invoice by adding to the payload an array of items to be invoiced.</p>
+
+<p><strong>Endpoint</strong></p>
+
+<p><code class="highlighter-rouge">POST &lt;host&gt;/rest/&lt;store_code&gt;/V1/order/3/invoice</code></p>
+
+<p>where <code class="highlighter-rouge">3</code> is the <code class="highlighter-rouge">orderid</code></p>
+
+<p><strong>Headers</strong></p>
+
+<p><code class="highlighter-rouge">Content-Type</code> <code class="highlighter-rouge">application/json</code></p>
+
+<p><code class="highlighter-rouge">Authorization</code> <code class="highlighter-rouge">Bearer &lt;administrator token&gt;</code></p>
+
+<p><strong>Payload</strong></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"capture"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notify"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<p>An invoice <code class="highlighter-rouge">id</code>, such as <code class="highlighter-rouge">3</code>.</p>
+
+<h3 id="view-invoice">View the invoice</h3>
+
+<p>An invoice is structurally similar to an order, but an order contains more details.</p>
+
+<p><strong>Endpoint</strong></p>
+
+<p><code class="highlighter-rouge">GET &lt;host&gt;/rest/&lt;store_code&gt;/V1/invoices/3</code></p>
+
+<p><strong>Headers</strong></p>
+
+<p><code class="highlighter-rouge">Content-Type</code> <code class="highlighter-rouge">application/json</code></p>
+
+<p><code class="highlighter-rouge">Authorization</code> <code class="highlighter-rouge">Bearer &lt;administrator token&gt;</code></p>
+
+<p><strong>Payload</strong></p>
+
+<p>Not applicable</p>
+
+<p><strong>Response</strong></p>
+
+<p>You will use the <code class="highlighter-rouge">order_item_id</code> values to create a <a href="https://glossary.magento.com/shipment">shipment</a> in the next step.</p>
+
+<div class="collapsible">
+    <b class="collapsible-title">Show code sample </b>
+    <div class="collapsible-content"><div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+    </span><span class="nl">"base_currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_grand_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">165</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_shipping_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_shipping_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_shipping_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mi">160</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_subtotal_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">160</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_to_global_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"base_to_order_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"billing_address_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"can_void_flag"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-21 22:36:02"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_sent"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"global_currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"grand_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">165</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"increment_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000003"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"order_currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shipping_address_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shipping_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shipping_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shipping_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shipping_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"store_currency_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"store_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"store_to_base_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"store_to_order_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mi">160</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subtotal_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">160</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-21 22:36:03"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Radiant Tee-M-Orange"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1553</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WS12-M-Orange"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advanced Pilates &amp; Yoga (Strength)"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">49</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"240-LV08"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sprite Yoga Companion Kit"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">51</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-WG080-24-WG084-24-WG088-24-WG082-blue-24-WG086"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sprite Stasis Ball 65 cm"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-WG082-blue"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sprite Foam Yoga Brick"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-WG084"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sprite Yoga Strap 8 foot"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-WG086"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sprite Foam Roller"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-WG088"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"base_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"discount_tax_compensation_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chaz Kangeroo Hoodie"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"row_total_incl_tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MH01-S-Gray"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"base_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"entity_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chaz Kangeroo Hoodie-S-Gray"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MH01-S-Gray"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"comments"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+</div>
+  </div>
+
+<h3 id="verify-step">Verify this step</h3>
+
+<p>Log in to <a href="https://glossary.magento.com/admin">Admin</a>. Click <strong>Sales</strong> &gt; <strong>Invoices</strong>. The invoice is displayed in the grid. The status is Paid. Then click <strong>Sales</strong> &gt; <strong>Orders</strong>. The status is Processing.</p>
+
+
+      <div class="horisontal-nav">
+        
+        
+          
+          
+
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-create-order.html" class="btn btn-large btn-secondary">Previous</a>
+          
+          <a href="/devdocs/2.1/guides/v2.1/rest/tutorials/orders/order-create-shipment.html" class="btn btn-large btn-primary">Next</a>
+          
+
+        
+      </div>
+      <!-- /.horisontal-nav -->
+
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2023-04-12">
+      Apr 12th, 2023
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

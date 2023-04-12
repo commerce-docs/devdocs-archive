@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>(Contributor) Clone the Magento repository | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Installation Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">How to get the Magento software</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install-flow-diagram.html">Installation flow diagram</a></li><li class="" role="menuitem"><span>Just the basics</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/basics/basics_magento-installed.html">Is the Magento software installed already?</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/basics/basics_os-version.html">What operating system is my server running?</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/basics/basics_login.html">How do I log in to my Magento server using a terminal, command prompt, or SSH?</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/basics/basics_module.html">What's the difference between a module and a component?</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/basics/basics_software.html">What is the software that the Magento server needs to run?</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/basics/basics_docroot.html">What is a docroot?</a></li></ul></li><li class="" role="menuitem"><span>Getting Started</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install-resources-parent.html">Helpful resources</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install-quick-ref.html">Installation quick reference (tutorial)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install-resource-diagram.html">Installation flow diagram</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install-roadmap_part1.html">Installation roadmap (reference)</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/system-requirements.html">Magento system requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/system-requirements-tech.html">Magento technology stack requirements</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/system-requirements_browsers.html">Supported browsers</a></li><li class="" role="menuitem"><span>Transport Layer Security (TLS) requirements</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/system-requirements_tls1-2.html">TLS 1.2 requirement for PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/system-requirements_repo-tls1-2.html">TLS requirement for repo.magento.com</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/prereq-overview.html">Prerequisites</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/apache.html">Apache</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/nginx.html">nginx</a></li><li class="" role="menuitem"><span>PHP</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/php-centos.html">PHP for Centos</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/php-ubuntu.html">PHP for Ubuntu</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/php-settings.html">Required PHP settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/mysql.html">MySQL</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/connect-auth.html">Get your authentication keys</a></li><li class="" role="menuitem"><span>Magento file system ownership and permissions</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">Overview of ownership and permissions</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/file-system-perms.html">Set pre-installation ownership and permissions</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/install-rabbitmq.html">RabbitMQ (Magento Commerce only)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/mysql_remote.html">Set up a remote MySQL database connection</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/security.html">SELinux and iptables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/optional.html">Optional software</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/prereq_updater.html">Set up the updater</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/get-software.html">Get the Magento software</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/composer.html">Install Magento using Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/zip_install.html">(Easy) Install the Magento archive on your server</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/dev_install.html">(Contributor) Clone the Magento repository</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/prepare-install.html">Update installation dependencies</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/get-help.html">Get help with your installation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/continue-to-install.html">Install options</a></li></ul></li><li class="" role="menuitem"><span>Setup Wizard Install</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install-roadmap_web.html">Installation roadmap (reference)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web-sample-data.html">Install optional sample data modules</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web-sample-data-composer.html">Install using Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web-sample-data-clone.html">Install by cloning repositories</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web.html">Setup Wizard installation</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web_1-readiness.html">Step 1. Readiness check</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web_2-db.html">Step 2. Add a Database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web_3-web-conf.html">Step 3. Web Configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web_4-customize-store.html">Step 4. Customize Your Store</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web_5-create-admin.html">Step 5. Create Admin Account</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/web/install-web_6-install.html">Step 6. Install</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/continue-to-verify.html">Post-installation</a></li></ul></li><li class="" role="menuitem"><span>Command Line Installation</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install-roadmap_cli.html">Installation roadmap (reference)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-sample-data.html">Install optional sample data modules</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-sample-data-composer.html">Install using Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-sample-data-clone.html">Install by cloning repositories</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli.html">Install the Magento software using the command line</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands.html">Get started with the command-line installation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-install.html">Install the Magento software</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-uninstall.html">Uninstall or reinstall Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-adminurl.html">Display or change the Admin URI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-sample-data-other.html">Remove sample data modules or update sample data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands-enable.html">Enable or disable modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-uninstall-mods.html">Uninstall modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands-deployment.html">Create or update the deployment configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands-maint.html">Enable or disable maintenance mode</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands-db.html">Create the Magento database schema</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands-db-upgr.html">Update the Magento database schema and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands-store.html">Configure the store</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-subcommands-admin.html">Create, edit, or unlock a Magento administrator account</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-backup.html">Back up and roll back the file system, media, and database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-theme-uninstall.html">Uninstall themes Composer packages</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/install-cli-uninstall-langpk.html">Uninstall language packages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/dev_options.html">Contributing developers—update, reinstall Magento</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/dev_update-magento.html">Update the Magento application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/dev_add-update.html">Add or update components</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/dev_downgrade.html">Change to a released version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/cli/dev_reinstall.html">Reinstall the Magento software</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/continue-to-verify_cli.html">Post-installation</a></li></ul></li><li class="" role="menuitem"><span>Post Installation</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/verify.html">Verify the installation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/post-install-config.html">Configure the Magento application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/post-install-umask.html">Optionally set a umask</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/legacy-file-system-perms.html">Appendix—Magento file system ownership and appendix (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/sample-data-after-magento.html">Install sample data after Magento</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/sample-data-after-composer.html">Install using Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/install/sample-data-after-clone.html">Install by cloning repositories</a></li></ul></li></ul></li><li class="" role="menuitem"><span>Troubleshooting</span><ul><li class="" role="menuitem"><span>Access issues</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_access-browser.html">Cannot access Magento software in a web browser</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_mod_access_compat.html">503 (Service Unavailable) errors accessing Magento software in a web browser</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_no-styles.html">After installing, images and stylesheets do not load; only text displays, no graphics</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_exceptions.html">Exceptions during installation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_var-gen-perms.html">Cannot write to the var/generation directory</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_install_depend.html">Installation dependencies not met</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_admin.html">Error after logging in to the Magento Admin</a></li></ul></li><li class="" role="menuitem"><span>Errors during installation</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_70pct.html">Installation stops at about 70%</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_nginx-port.html">Cannot install using nginx</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_pdo.html">During installation, fatal PDO error displays</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_wrong-mysql.html">During installation, Reflection Exception error</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_session.html">During installation, exception SessionHandler::read()</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_composer-fail.html">Download fails because of changes in Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_bundlesampledata.html">Unknown module Magento_BundleSampleData</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_install-log.html">Installation fails; cannot create install.log</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_sample-data.html">Errors installing optional sample data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_xdebug.html">During installation, xdebug maximum function nesting level error</a></li></ul></li><li class="" role="menuitem"><span>Readiness check issues</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/readiness/tshoot_rc_depend.html">Component dependency readiness issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/readiness/tshoot_rc_cron.html">cron readiness check issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/readiness/tshoot_rc_perms.html">File permissions readiness check issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/readiness/tshoot_rc_php.html">PHP version readiness check issues</a></li></ul></li><li class="" role="menuitem"><span>GitHub errors</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/git/tshoot_clone.html">Cannot clone the Magento GitHub repository</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/git/tshoot_git-pull-origin.html">git pull origin develop fails when updating the Magento software</a></li></ul></li><li class="" role="menuitem"><span>PHP errors</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_opcache.html">Resolve an illegal offset error</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_php-set.html">PHP settings errors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_mcrypt.html">The PHP mcrypt extension is not installed properly</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_php-date.html">During installation, PHP date warning</a></li></ul></li><li class="" role="menuitem"><span>Other issues</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_install-issues.html">Known issues that affect installation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_mysql_table-open-cache.html">Error 'MySQL server has gone away' during installation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_segfault.html">Segmentation fault during rollback</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/php/tshoot_phpini.html">SQLSTATE[HY000] [2002] No such file or directory</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/trouble/tshoot_composer-install.html">Cannot run 'composer install'</a></li></ul></li></ul></li><li class="" role="menuitem"><span>How Tos</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/tutorials/change-docroot-to-pub.html">Modify docroot to improve security</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">(Contributor) Clone the Magento repository</h1>
+</section>
+
+			<p class="bs-callout bs-callout-tip">Totally lost? Need a helping hand? Try our <a href="/devdocs/2.1/guides/v2.1/install-gde/install-quick-ref.html">installation quick reference (tutorial)</a> or <a href="/devdocs/2.1/guides/v2.1/install-gde/install-roadmap_part1.html">installation roadmap (reference)</a>.</p>
+
+<h2 id="integrator-aud">Intended audience</h2>
+
+<p>The audience for this topic is anyone who contributes to the Magento Open Source codebase.
+You should be highly technical, understand <a href="https://glossary.magento.com/composer">Composer</a> and Git commands, and be able to upgrade the Magento system software and extensions using those commands. If that isn’t you, go back and <a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">choose another starting point</a>.</p>
+
+<p class="bs-callout bs-callout-warning">If you clone the Magento 2 GitHub repository, you <em>cannot</em> use the Magento software in a production environment.
+You cannot have a live store that accepts orders and so on.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Before you continue, make sure you’ve done all of the following:</p>
+
+<ul>
+  <li>Set up a server that meets our <a href="/devdocs/2.1/guides/v2.1/install-gde/system-requirements.html">system requirements</a></li>
+  <li>Created the <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a></li>
+</ul>
+
+<p>We use <a href="https://getcomposer.org/" target="_blank">Composer</a> to manage Magento components and their dependencies. Using Composer to get the Magento software <a href="https://glossary.magento.com/metapackage">metapackage</a> provides the following advantages:</p>
+
+<ul>
+  <li>Reuse third-party libraries without bundling them with source code</li>
+  <li>Reduce extension conflicts and compatibility issues by using a component-based architecture with robust dependency management</li>
+  <li>Adhere to <a href="https://www.php-fig.org/">PHP-Framework Interoperability Group (FIG)</a> standards</li>
+  <li>Repackage Magento Open Source with other components</li>
+  <li>Use the Magento software in a production environment</li>
+</ul>
+
+<p class="bs-callout bs-callout-warning">You must create a Composer project from our metapackage if you want to use the Magento Web Setup Wizard to upgrade the Magento software and third-party extensions.</p>
+
+<h2 id="instgde-prereq-compose-install">Install Composer</h2>
+
+<p>First, check if Composer is already installed:</p>
+
+<p>In a command prompt, enter any of the following commands:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">composer --help</code></li>
+  <li><code class="highlighter-rouge">composer list --help</code></li>
+</ul>
+
+<p>If command help displays, Composer is already installed.</p>
+
+<p>If an error displays, use the following steps to install Composer.</p>
+
+<p>To install Composer:</p>
+
+<ol>
+  <li>
+    <p>Change to or create an empty directory on your Magento server.</p>
+  </li>
+  <li>
+    <p>Enter the following commands:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>For additional installation options, see the <a href="https://getcomposer.org/download/">Composer installation documentation</a>.</p>
+
+<h2 id="instgde-prereq-compose-clone">Clone the Magento repository</h2>
+
+<p>This section discusses how to get current code by cloning <a href="https://github.com/magento/magento2" target="_blank">Magento’s GitHub repository</a> and checking out branches.
+You can either checkout a release branch or a development branch:</p>
+
+<ul>
+  <li>
+    <p>Release branches, like <code class="highlighter-rouge">2.x.0</code>, are more stable. You <em>must</em> use a release branch with the <a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Data Migration Tool</a>.</p>
+  </li>
+  <li>
+    <p>Development branches, like <code class="highlighter-rouge">2.x-develop</code>, contain the latest changes.</p>
+  </li>
+</ul>
+
+<p>You can checkout a specific release branch after cloning the latest code.</p>
+
+<p class="bs-callout bs-callout-info">Refer to <a href="https://help.github.com/articles/cloning-a-repository-from-github/" target="_blank">GitHub’s documentation</a> for instructions on cloning a repository.</p>
+
+<h3 id="instgde-prereq-compose-clone-auth">Creating an authorization file</h3>
+
+<p>The Magento 2 GitHub repository requires you to authenticate. The <code class="highlighter-rouge">composer install</code> commands fails if you do not.</p>
+
+<h4 id="generate-magento-and-github-keys">Generate Magento and Github keys</h4>
+
+<p>To authenticate, you will need to generate <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/connect-auth.html">Magento authentication keys</a> and a <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">Github personal access token</a>.</p>
+
+<h4 id="create-authjson">Create <code class="highlighter-rouge">auth.json</code></h4>
+
+<p>Accessing the Magento 2 GitHub repository requires authentication. The command <code class="highlighter-rouge">composer install</code> fails without it. Requirements to authenticate include:</p>
+
+<ol>
+  <li>Magento authentication keys</li>
+  <li>GitHub personal access token</li>
+  <li>Composer <code class="highlighter-rouge">auth.json</code> file</li>
+</ol>
+
+<h3 id="create-magento-authentication-keys">Create Magento authentication keys</h3>
+
+<p>Follow this guide to <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/connect-auth.html">create Magento authentication keys</a>.</p>
+
+<h3 id="create-a-github-personal-access-token">Create a GitHub personal access token</h3>
+
+<p class="bs-callout bs-callout-warning">The Composer auth file requires the <code class="highlighter-rouge">github-oauth</code> property, but do not create a GitHub OAuth App. Create a personal access token instead.</p>
+
+<p>Follow this guide to <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">create a GitHub personal access token</a>.</p>
+
+<p class="bs-callout bs-callout-info">When choosing token permissions, select all checkboxes in the <code class="highlighter-rouge">repo</code> scope. Composer auth does not require other permissions.</p>
+
+<h3 id="create-authjson-file">Create <code class="highlighter-rouge">auth.json</code> file</h3>
+
+<ol>
+  <li>Log in to your Magento server as the <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a>.</li>
+  <li>Create the <code class="highlighter-rouge">auth.json</code> file in the user’s home directory. For example, if <code class="highlighter-rouge">magento_user</code> is your Unix username, then create <code class="highlighter-rouge">/home/magento_user/.composer/auth.json</code>.</li>
+</ol>
+
+<h3 id="edit-authjson-file">Edit <code class="highlighter-rouge">auth.json</code> file</h3>
+
+<p>Replace the <code class="highlighter-rouge">&lt;placeholder&gt;</code> values with your token and keys:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+    </span><span class="nl">"github-oauth"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"github.com"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;your GitHub personal access token&gt;"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"http-basic"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"repo.magento.com"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;public key&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;private key&gt;"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="next-step">Next step</h2>
+
+<p>After completing the tasks discussed on this page, see <a href="/devdocs/2.1/guides/v2.1/install-gde/install/prepare-install.html">Update installation dependencies</a>.</p>
+
+<!-- LINK DEFINITIONS -->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

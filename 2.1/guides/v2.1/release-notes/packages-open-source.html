@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Magento Open Source packages | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Release Information</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Introduction</a></li><li class="" role="menuitem"><span>Magento 2.1 Release Notes</span><ul><li class="" role="menuitem"><span>Magento Open Source 2.1.x Release Notes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html">Magento Open Source 2.1.18 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.17CE.html">Magento Open Source 2.1.17 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.16CE.html">Magento Open Source 2.1.16 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.15CE.html">Magento Open Source 2.1.15 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.14CE.html">Magento Open Source 2.1.14 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.13CE.html">Magento Open Source 2.1.13 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.12CE.html">Magento Open Source 2.1.12 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.11CE.html">Magento Open Source 2.1.11 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.10CE.html">Magento Open Source 2.1.10 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.9CE.html">Magento Open Source 2.1.9 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.8CE.html">Magento Open Source 2.1.8 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.7CE.html">Magento Open Source 2.1.7 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.6CE.html">Magento Open Source 2.1.6 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.5CE.html">Magento Open Source 2.1.5 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.4CE.html">Magento Open Source 2.1.4 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.3CE.html">Magento Open Source 2.1.3 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.2CE.html">Magento Open Source 2.1.2 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.1CE.html">Magento Open Source 2.1.1 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.0CE.html">Magento Open Source 2.1.0  Release Notes</a></li></ul></li><li class="" role="menuitem"><span>Magento Commerce 2.1.x Release Notes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.18EE.html">Magento Commerce 2.1.18 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.17EE.html">Magento Commerce 2.1.17 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.16EE.html">Magento Commerce 2.1.16 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.15EE.html">Magento Commerce 2.1.15 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.14EE.html">Magento Commerce 2.1.14 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.13EE.html">Magento Commerce 2.1.13 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.12EE.html">Magento Commerce 2.1.12 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.11EE.html">Magento Commerce 2.1.11 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.10EE.html">Magento Commerce 2.1.10 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.9EE.html">Magento Commerce 2.1.9 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.8EE.html">Magento Commerce 2.1.8 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.7EE.html">Magento Commerce 2.1.7 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.6EE.html">Magento Commerce 2.1.6 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.5EE.html">Magento Commerce 2.1.5 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.4EE.html">Magento Commerce 2.1.4 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.3EE.html">Magento Commerce 2.1.3 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.2EE.html">Magento Commerce 2.1.2 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.1EE.html">Magento Commerce 2.1.1 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/ReleaseNotes2.1.0EE.html">Magento Commerce 2.1.0 Release Notes</a></li></ul></li><li class="" role="menuitem"><span>Magento Commerce (Cloud) 2.1.x Release Notes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.9.html">magento-cloud-configuration release 101.9.x Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.8.html">magento-cloud-configuration release 101.8.x Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.7.html">magento-cloud-configuration release 101.7.x Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.6.html">magento-cloud-configuration release 101.6.x Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.5.html">magento-cloud-configuration release 101.5.x Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.4.html">magento-cloud-configuration release 101.4.x Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.6-2.1.11.html">Magento Commerce (Cloud) versions 2.1.6 through 2.1.11 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.5.html">Magento Commerce (Cloud) version 2.1.5 and 2.0.13 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.4.html">Magento Commerce (Cloud) version 2.1.4 and 2.0.12</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.3.html">Magento Commerce (Cloud) version 2.1.3 and 2.0.11</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.2.html">Magento Commerce (Cloud) version 2.1.2 and 2.0.10</a></li></ul></li></ul></li><li class="" role="menuitem"><span>Backward incompatible changes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/backward-incompatible-changes/index.html">Highlights</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/backward-incompatible-changes/reference.html">Reference</a></li></ul></li><li class="" role="menuitem"><span>Packages</span><ul><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Magento Open Source packages</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-commerce.html">Magento Commerce packages</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-cloud.html">Magento Commerce Cloud packages</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Magento Open Source packages</h1>
+</section>
+
+			<!-- The 'packages' variable contains the 'packages' node of the '_data/codebase/v2_1/open-source/composer_lock.json' file
+ -->
+
+<!-- The 'packages-dev' variable contains the 'packages-dev' node of the '_data/codebase/v2_1/open-source/composer_lock.json' file
+ -->
+
+<!-- The edition variable contains `ce` value from the the _data/var.yml file
+ -->
+
+<p>The Magento application uses Composer to manage PHP packages.
+The <code class="highlighter-rouge">composer.json</code> file declares the list of packages, whereas the <code class="highlighter-rouge">composer.lock</code> file stores a complete list of the packages (a full version of each package and its dependencies) used to build a release version of the Magento application. The following tables list packages from the <code class="highlighter-rouge">composer.lock</code> file for Magento Open Source 2.1.</p>
+
+<h2 id="magento-packages">Magento packages</h2>
+
+<p>This section contains information about the <a href="https://github.com/magento/">magento</a> packages for the latest Magento Open Source 2.1 release.
+Click the <strong>Name</strong> links to view the repository and the license agreement.</p>
+
+<h3 id="required-packages">Required packages</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Version</th>
+      <th>License</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/magento/composer.git">magento/composer</a></td>
+      <td>1.2.0</td>
+      <td>OSL-3.0AFL-3.0</td>
+      <td>Magento composer library helps to instantiate Composer application and run composer commands.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/magento/magento-composer-installer.git">magento/magento-composer-installer</a></td>
+      <td>0.1.13</td>
+      <td>OSL-3.0</td>
+      <td>Composer installer for Magento modules</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/magento/zf1.git">magento/zendframework1</a></td>
+      <td>1.13.1</td>
+      <td>BSD-3-Clause</td>
+      <td>Magento Zend Framework 1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="third-party-packages">Third party packages</h2>
+
+<p>This section contains information about third party packages for the latest Magento Open Source 2.1 release.
+Click the <strong>Name</strong> links to view the repository and the license agreement.</p>
+
+<h3 id="required-packages-1">Required packages</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Version</th>
+      <th>License</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/braintree/braintree_php.git">braintree/braintree_php</a></td>
+      <td>3.22.0</td>
+      <td>MIT</td>
+      <td>Braintree PHP Client Library</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/colinmollenhour/Cm_Cache_Backend_File.git">colinmollenhour/cache-backend-file</a></td>
+      <td>1.4</td>
+      <td>BSD-3-Clause</td>
+      <td>The stock Zend_Cache_Backend_File backend has extremely poor performance for cleaning by tags making it become unusable as the number of cached items increases. This backend makes many changes resulting in a huge performance boost, especially for tag cleaning.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git">colinmollenhour/cache-backend-redis</a></td>
+      <td>1.10.2</td>
+      <td>BSD-3-Clause</td>
+      <td>Zend_Cache backend using Redis with full support for tags.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/colinmollenhour/credis.git">colinmollenhour/credis</a></td>
+      <td>1.8.2</td>
+      <td>MIT</td>
+      <td>Credis is a lightweight interface to the Redis key-value store which wraps the phpredis library when available for better performance.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/colinmollenhour/php-redis-session-abstract.git">colinmollenhour/php-redis-session-abstract</a></td>
+      <td>v1.3.4</td>
+      <td>BSD-3-Clause</td>
+      <td>A Redis-based session handler with optimistic locking</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/composer/ca-bundle.git">composer/ca-bundle</a></td>
+      <td>1.1.4</td>
+      <td>MIT</td>
+      <td>Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/composer/composer.git">composer/composer</a></td>
+      <td>1.4.1</td>
+      <td>MIT</td>
+      <td>Composer helps you declare, manage and install dependencies of PHP projects, ensuring you have the right stack everywhere.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/composer/semver.git">composer/semver</a></td>
+      <td>1.5.0</td>
+      <td>MIT</td>
+      <td>Semver library that offers utilities, version constraint parsing and validation.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/composer/spdx-licenses.git">composer/spdx-licenses</a></td>
+      <td>1.5.1</td>
+      <td>MIT</td>
+      <td>SPDX licenses list and validation library.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/justinrainbow/json-schema.git">justinrainbow/json-schema</a></td>
+      <td>5.2.8</td>
+      <td>MIT</td>
+      <td>A library to validate a json schema.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/thephpleague/climate.git">league/climate</a></td>
+      <td>2.6.1</td>
+      <td>MIT</td>
+      <td>PHP’s best friend for the terminal. CLImate allows you to easily output colored text, special formats, and more.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Seldaek/monolog.git">monolog/monolog</a></td>
+      <td>1.16.0</td>
+      <td>MIT</td>
+      <td>Sends your logs to files, sockets, inboxes, databases and various web services</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/oyejorge/less.php.git">oyejorge/less.php</a></td>
+      <td>v1.7.0.14</td>
+      <td>Apache-2.0</td>
+      <td>PHP port of the Javascript version of LESS http://lesscss.org (Originally maintained by Josh Schmidt)</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/paragonie/random_compat.git">paragonie/random_compat</a></td>
+      <td>v2.0.18</td>
+      <td>MIT</td>
+      <td>PHP 5.x polyfill for random_bytes() and random_int() from PHP 7</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/MyIntervals/emogrifier.git">pelago/emogrifier</a></td>
+      <td>v0.1.1</td>
+      <td>MIT</td>
+      <td>Converts CSS styles into inline style attributes in your HTML code</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/phpseclib/phpseclib.git">phpseclib/phpseclib</a></td>
+      <td>2.0.17</td>
+      <td>MIT</td>
+      <td>PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/php-fig/log.git">psr/log</a></td>
+      <td>1.1.0</td>
+      <td>MIT</td>
+      <td>Common interface for logging libraries</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Seldaek/cli-prompt.git">seld/cli-prompt</a></td>
+      <td>1.0.3</td>
+      <td>MIT</td>
+      <td>Allows you to prompt for user input on the command line, and optionally hide the characters they type</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Seldaek/jsonlint.git">seld/jsonlint</a></td>
+      <td>1.7.1</td>
+      <td>MIT</td>
+      <td>JSON Linter</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Seldaek/phar-utils.git">seld/phar-utils</a></td>
+      <td>1.0.1</td>
+      <td>MIT</td>
+      <td>PHAR file format utilities, for when PHP phars you up</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sjparkinson/static-review.git">sjparkinson/static-review</a></td>
+      <td>4.1.1</td>
+      <td>MIT</td>
+      <td>An extendable framework for version control hooks.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/console.git">symfony/console</a></td>
+      <td>v2.8.50</td>
+      <td>MIT</td>
+      <td>Symfony Console Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/debug.git">symfony/debug</a></td>
+      <td>v3.0.9</td>
+      <td>MIT</td>
+      <td>Symfony Debug Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/event-dispatcher.git">symfony/event-dispatcher</a></td>
+      <td>v2.8.50</td>
+      <td>MIT</td>
+      <td>Symfony EventDispatcher Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/filesystem.git">symfony/filesystem</a></td>
+      <td>v3.4.28</td>
+      <td>MIT</td>
+      <td>Symfony Filesystem Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/finder.git">symfony/finder</a></td>
+      <td>v3.4.28</td>
+      <td>MIT</td>
+      <td>Symfony Finder Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-ctype</a></td>
+      <td>v1.11.0</td>
+      <td>MIT</td>
+      <td>Symfony polyfill for ctype functions</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/polyfill-mbstring.git">symfony/polyfill-mbstring</a></td>
+      <td>v1.11.0</td>
+      <td>MIT</td>
+      <td>Symfony polyfill for the Mbstring extension</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/process.git">symfony/process</a></td>
+      <td>v2.8.50</td>
+      <td>MIT</td>
+      <td>Symfony Process Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/tedious/JShrink.git">tedivm/jshrink</a></td>
+      <td>v1.1.0</td>
+      <td>BSD-3-Clause</td>
+      <td>Javascript Minifier built in PHP</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git">tubalmartin/cssmin</a></td>
+      <td>v3.0.0</td>
+      <td>BSD-3-Clause</td>
+      <td>A PHP port of the YUI CSS compressor</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-code.git">zendframework/zend-code</a></td>
+      <td>2.5.3</td>
+      <td>BSD-3-Clause</td>
+      <td>provides facilities to generate arbitrary code using an object oriented interface</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-config.git">zendframework/zend-config</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td>provides a nested object property based user interface for accessing this configuration data within application code</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-console.git">zendframework/zend-console</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-crypt.git">zendframework/zend-crypt</a></td>
+      <td>2.5.2</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-di.git">zendframework/zend-di</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-escaper.git">zendframework/zend-escaper</a></td>
+      <td>2.6.0</td>
+      <td>BSD-3-Clause</td>
+      <td>Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-eventmanager.git">zendframework/zend-eventmanager</a></td>
+      <td>2.5.2</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-filter.git">zendframework/zend-filter</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td>provides a set of commonly needed data filters</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-form.git">zendframework/zend-form</a></td>
+      <td>2.5.3</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-http.git">zendframework/zend-http</a></td>
+      <td>2.5.6</td>
+      <td>BSD-3-Clause</td>
+      <td>provides an easy interface for performing Hyper-Text Transfer Protocol (HTTP) requests</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-i18n.git">zendframework/zend-i18n</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-inputfilter.git">zendframework/zend-inputfilter</a></td>
+      <td>2.5.5</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-json.git">zendframework/zend-json</a></td>
+      <td>2.5.2</td>
+      <td>BSD-3-Clause</td>
+      <td>provides convenience methods for serializing native PHP to JSON and decoding JSON to native PHP</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-loader.git">zendframework/zend-loader</a></td>
+      <td>2.6.0</td>
+      <td>BSD-3-Clause</td>
+      <td>Autoloading and plugin loading strategies</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-log.git">zendframework/zend-log</a></td>
+      <td>2.5.2</td>
+      <td>BSD-3-Clause</td>
+      <td>component for general purpose logging</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-math.git">zendframework/zend-math</a></td>
+      <td>2.7.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-modulemanager.git">zendframework/zend-modulemanager</a></td>
+      <td>2.5.3</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-mvc.git">zendframework/zend-mvc</a></td>
+      <td>2.5.3</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-serializer.git">zendframework/zend-serializer</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td>provides an adapter based interface to simply generate storable representation of PHP types by different facilities, and recover</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-server.git">zendframework/zend-server</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-servicemanager.git">zendframework/zend-servicemanager</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-soap.git">zendframework/zend-soap</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-stdlib.git">zendframework/zend-stdlib</a></td>
+      <td>2.5.2</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-text.git">zendframework/zend-text</a></td>
+      <td>2.5.1</td>
+      <td>BSD-3-Clause</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-uri.git">zendframework/zend-uri</a></td>
+      <td>2.5.2</td>
+      <td>BSD-3-Clause</td>
+      <td>a component that aids in manipulating and validating » Uniform Resource Identifiers (URIs)</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-validator.git">zendframework/zend-validator</a></td>
+      <td>2.5.4</td>
+      <td>BSD-3-Clause</td>
+      <td>provides a set of commonly needed validators</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zendframework/zend-view.git">zendframework/zend-view</a></td>
+      <td>2.5.3</td>
+      <td>BSD-3-Clause</td>
+      <td>provides a system of helpers, output filters, and variable escaping</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="supported-packages-for-development">Supported packages for development</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Version</th>
+      <th>License</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/doctrine/instantiator.git">doctrine/instantiator</a></td>
+      <td>1.0.5</td>
+      <td>MIT</td>
+      <td>A small, lightweight utility to instantiate objects in PHP without invoking their constructors</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer.git">fabpot/php-cs-fixer</a></td>
+      <td>v1.13.3</td>
+      <td>MIT</td>
+      <td>A tool to automatically fix PHP code style</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Lusitanian/PHPoAuthLib.git">lusitanian/oauth</a></td>
+      <td>v0.8.11</td>
+      <td>MIT</td>
+      <td>PHP 5.3+ oAuth 1/2 Library</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/pdepend/pdepend.git">pdepend/pdepend</a></td>
+      <td>2.5.0</td>
+      <td>BSD-3-Clause</td>
+      <td>Official version of pdepend to be handled with Composer</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/phpmd/phpmd.git">phpmd/phpmd</a></td>
+      <td>2.6.0</td>
+      <td>BSD-3-Clause</td>
+      <td>PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/php-code-coverage.git">phpunit/php-code-coverage</a></td>
+      <td>2.2.4</td>
+      <td>BSD-3-Clause</td>
+      <td>Library that provides collection, processing, and rendering functionality for PHP code coverage information.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/php-file-iterator.git">phpunit/php-file-iterator</a></td>
+      <td>1.3.4</td>
+      <td>BSD-3-Clause</td>
+      <td>FilterIterator implementation that filters files based on a list of suffixes.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/php-text-template.git">phpunit/php-text-template</a></td>
+      <td>1.2.1</td>
+      <td>BSD-3-Clause</td>
+      <td>Simple template engine.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/php-timer.git">phpunit/php-timer</a></td>
+      <td>1.0.9</td>
+      <td>BSD-3-Clause</td>
+      <td>Utility class for timing</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/php-token-stream.git">phpunit/php-token-stream</a></td>
+      <td>1.4.12</td>
+      <td>BSD-3-Clause</td>
+      <td>Wrapper around PHP’s tokenizer extension.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/phpunit.git">phpunit/phpunit</a></td>
+      <td>4.1.0</td>
+      <td>BSD-3-Clause</td>
+      <td>The PHP Unit Testing framework.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/phpunit-mock-objects.git">phpunit/phpunit-mock-objects</a></td>
+      <td>2.3.8</td>
+      <td>BSD-3-Clause</td>
+      <td>Mock Object library for PHPUnit</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/comparator.git">sebastian/comparator</a></td>
+      <td>1.2.4</td>
+      <td>BSD-3-Clause</td>
+      <td>Provides the functionality to compare PHP values for equality</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/diff.git">sebastian/diff</a></td>
+      <td>1.4.3</td>
+      <td>BSD-3-Clause</td>
+      <td>Diff implementation</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/environment.git">sebastian/environment</a></td>
+      <td>1.3.8</td>
+      <td>BSD-3-Clause</td>
+      <td>Provides functionality to handle HHVM/PHP environments</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/exporter.git">sebastian/exporter</a></td>
+      <td>1.2.2</td>
+      <td>BSD-3-Clause</td>
+      <td>Provides the functionality to export PHP variables for visualization</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/finder-facade.git">sebastian/finder-facade</a></td>
+      <td>1.2.2</td>
+      <td>BSD-3-Clause</td>
+      <td>FinderFacade is a convenience wrapper for Symfony’s Finder component.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/phpcpd.git">sebastian/phpcpd</a></td>
+      <td>2.0.4</td>
+      <td>BSD-3-Clause</td>
+      <td>Copy/Paste Detector (CPD) for PHP code.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/recursion-context.git">sebastian/recursion-context</a></td>
+      <td>1.0.5</td>
+      <td>BSD-3-Clause</td>
+      <td>Provides functionality to recursively process PHP variables</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sebastianbergmann/version.git">sebastian/version</a></td>
+      <td>1.0.6</td>
+      <td>BSD-3-Clause</td>
+      <td>Library that helps with managing the version number of Git-hosted PHP projects</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/squizlabs/PHP_CodeSniffer.git">squizlabs/php_codesniffer</a></td>
+      <td>1.5.3</td>
+      <td>BSD-3-Clause</td>
+      <td>PHP_CodeSniffer tokenises PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/config.git">symfony/config</a></td>
+      <td>v3.2.14</td>
+      <td>MIT</td>
+      <td>Symfony Config Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/dependency-injection.git">symfony/dependency-injection</a></td>
+      <td>v3.1.10</td>
+      <td>MIT</td>
+      <td>Symfony DependencyInjection Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/stopwatch.git">symfony/stopwatch</a></td>
+      <td>v3.4.28</td>
+      <td>MIT</td>
+      <td>Symfony Stopwatch Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/symfony/yaml.git">symfony/yaml</a></td>
+      <td>v2.8.50</td>
+      <td>MIT</td>
+      <td>Symfony Yaml Component</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/theseer/fDOMDocument.git">theseer/fdomdocument</a></td>
+      <td>1.6.6</td>
+      <td>BSD-3-Clause</td>
+      <td>The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

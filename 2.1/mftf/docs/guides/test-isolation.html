@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Test Isolation | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Functional Testing Framework Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/introduction.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/getting-started.html">Getting started</a></li><li class="" role="menuitem"><span>Best practices</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/best-practices.html">Best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/tips-tricks.html">Tips and tricks</a></li></ul></li><li class="" role="menuitem"><span>CLI Commands</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/commands/mftf.html">mftf</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/commands/codeception.html">codecept</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/configuration.html">Configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/credentials.html">Credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/data.html">Data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/debugging.html">Debugging</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/extending.html">Extending</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/introduction.html">Merge points for extensions</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-action-groups.html">Extend action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-data.html">Extend data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-tests.html">Extend tests</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-action-groups.html">Merge action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-data.html">Merge data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-pages.html">Merge pages</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-sections.html">Merge sections</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-tests.html">Merge tests</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merging.html">Merging</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/metadata.html">Metadata</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/page.html">Page</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/reporting.html">Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section.html">Section</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section/parameterized-selectors.html">Parameterized selectors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section/locator-functions.html">Locator functions</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/suite.html">Suite</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test.html">Test</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/annotations.html">Annotations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/actions.html">Actions</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/action-groups.html">Action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/assertions.html">Assertions</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/troubleshooting.html">Troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/update.html">Update</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/versioning.html">Versioning</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/.github/CONTRIBUTING.md">Contribution guidelines</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/CHANGELOG.md">Changelog</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Test Isolation</h1>
+</section>
+
+			<p>Because MFTF is a framework for testing a highly customizable and ever changing application, MFTF tests need to be properly isolated.</p>
+
+<h2 id="what-is-test-isolation">What is test isolation?</h2>
+
+<p>Test isolation refers to a test that does not leave behind any data or configuration changes in the Magento instance.</p>
+
+<p>An MFTF test is considered fully isolated if:</p>
+
+<ol>
+  <li>It does not leave data behind.</li>
+  <li>It does not leave Magento configured in a different state than when the test started.</li>
+  <li>It does not affect a following test’s outcome.</li>
+  <li>It does not rely on an irregular configuration to start its preconditions.</li>
+</ol>
+
+<h3 id="deleting-versus-restoring">Deleting versus restoring</h3>
+
+<p>In the above list, points 1 and 2 refer to leaving things behind during test execution. This means you are either deleting or restoring entities in Magento after your test’s execution.</p>
+
+<p>Some examples of entities to be deleted include:</p>
+
+<ol>
+  <li>Products</li>
+  <li>Categories</li>
+  <li>Rules (Price, Related Products)</li>
+</ol>
+
+<p>The list of entities to restore is much simpler:</p>
+
+<ol>
+  <li>Application Configuration</li>
+</ol>
+
+<p>The distinction above is because MFTF tests expect the environment to be in a completely clean state, outside of a test or suite’s preconditions. Data must be cleaned up and any application configuration must go back to the default.</p>
+
+<h2 id="why-is-isolation-important">Why is isolation important?</h2>
+
+<p>As mentioned above, isolation is important because poor isolation can lead to other test failures. For a test to be useful, you must have high confidence in the test’s outcome, and by introducing test isolation issues it can invalidate a test’s result.</p>
+
+<h2 id="how-can-i-achieve-test-isolation">How can I achieve test isolation?</h2>
+
+<p>This is difficult to do given how large the Magento application is, but a systematic approach can ensure a high level of confidence in you test’s isolation.</p>
+
+<h3 id="cleaning-up-data">Cleaning up data</h3>
+
+<p>If your test creates any data via <code class="highlighter-rouge">&lt;createData&gt;</code> then a subsequent <code class="highlighter-rouge">&lt;deleteData&gt;</code> action <em>must</em> exist in the test’s <code class="highlighter-rouge">&lt;after&gt;</code> block.</p>
+
+<p>This includes both <code class="highlighter-rouge">&lt;createData&gt;</code> actions in the test’s <code class="highlighter-rouge">&lt;before&gt;</code> as well as in the test body.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">"SampleTest"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;before&gt;</span>
+        <span class="nt">&lt;createData</span> <span class="na">entity=</span><span class="s">"SimpleSubCategory"</span> <span class="na">stepKey=</span><span class="s">"category"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/before&gt;</span>
+    <span class="nt">&lt;after&gt;</span>
+        <span class="nt">&lt;deleteData</span> <span class="na">createDataKey=</span><span class="s">"category"</span> <span class="na">stepKey=</span><span class="s">"deleteCategory"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;deleteData</span> <span class="na">createDataKey=</span><span class="s">"entityCreatedDuringWorkflow"</span> <span class="na">stepKey=</span><span class="s">"deleteCategory"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/after&gt;</span>
+    ...
+    <span class="nt">&lt;createData</span> <span class="na">entity=</span><span class="s">"SimpleSubCategory"</span> <span class="na">stepKey=</span><span class="s">"entityCreatedDuringWorkflow"</span><span class="nt">/&gt;</span>
+    ...
+<span class="nt">&lt;/test&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Other test data can be more difficult to detect, and requires an understanding of what the test does in its workflow.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">"AdminAddImageForCategoryTest"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;before&gt;</span>
+        <span class="nt">&lt;actionGroup</span> <span class="na">ref=</span><span class="s">"LoginAsAdmin"</span> <span class="na">stepKey=</span><span class="s">"loginAsAdmin"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/before&gt;</span>
+    <span class="nt">&lt;after&gt;</span>
+        <span class="nt">&lt;actionGroup</span> <span class="na">ref=</span><span class="s">"DeleteCategory"</span> <span class="na">stepKey=</span><span class="s">"DeleteCategory"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"categoryEntity"</span> <span class="na">value=</span><span class="s">"SimpleSubCategory"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/actionGroup&gt;</span>
+        <span class="nt">&lt;actionGroup</span> <span class="na">ref=</span><span class="s">"logout"</span> <span class="na">stepKey=</span><span class="s">"logout"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/after&gt;</span>
+    <span class="c">&lt;!-- Go to create a new category with image --&gt;</span>
+    <span class="nt">&lt;actionGroup</span> <span class="na">ref=</span><span class="s">"goToCreateCategoryPage"</span> <span class="na">stepKey=</span><span class="s">"goToCreateCategoryPage"</span><span class="nt">/&gt;</span>
+    ...
+<span class="nt">&lt;/test&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Note that the test contains a context setting comment describing the workflow; this is very helpful in determining that a new category will be created, which will need to be cleaned up in the test <code class="highlighter-rouge">&lt;after&gt;</code> block.</p>
+
+<h3 id="cleaning-up-configuration">Cleaning up configuration</h3>
+
+<p>Similarly, configuration changes can be easily identified by <code class="highlighter-rouge">&lt;magentoCLI&gt;</code> actions.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">"AddOutOfStockProductToCompareListTest"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;before&gt;</span>
+        <span class="nt">&lt;magentoCLI</span> <span class="na">command=</span><span class="s">"config:set cataloginventory/options/show_out_of_stock 0"</span> <span class="na">stepKey=</span><span class="s">"displayOutOfStockNo"</span><span class="nt">/&gt;</span>
+        ...
+    <span class="nt">&lt;/before&gt;</span>
+    <span class="nt">&lt;after&gt;</span>
+        <span class="nt">&lt;magentoCLI</span> <span class="na">command=</span><span class="s">"config:set cataloginventory/options/show_out_of_stock 1"</span> <span class="na">stepKey=</span><span class="s">"displayOutOfStockNo"</span><span class="nt">/&gt;</span>
+        ...
+    <span class="nt">&lt;/after&gt;</span>
+    ...
+<span class="nt">&lt;/test&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Configuration changes can also be done via <code class="highlighter-rouge">&lt;createData&gt;</code> actions, but that is not recommended as it is much easier to identify <code class="highlighter-rouge">&lt;magentoCLI&gt;</code> commands.</p>
+
+<p>A test’s workflow can also alter the application’s configuration, and much like data cleanup, this can only be identified by understanding a test’s workflow:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;test</span> <span class="na">name=</span><span class="s">"AdminMoveProductBetweenCategoriesTest"</span><span class="nt">&gt;</span>
+    ...
+    <span class="c">&lt;!-- Enable `Use Categories Path for Product URLs` on Stores -&gt; Configuration -&gt; Catalog -&gt; Catalog -&gt; Search Engine Optimization --&gt;</span>
+    <span class="nt">&lt;amOnPage</span> <span class="na">url=</span><span class="s">""</span> <span class="na">stepKey=</span><span class="s">"onConfigPage"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;waitForPageLoad</span> <span class="na">stepKey=</span><span class="s">"waitForLoading"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;conditionalClick</span> <span class="na">selector=</span><span class="s">""</span> <span class="na">dependentSelector=</span><span class="s">""</span> <span class="na">visible=</span><span class="s">"false"</span> <span class="na">stepKey=</span><span class="s">"clickEngineOptimization"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;uncheckOption</span> <span class="na">selector=</span><span class="s">""</span> <span class="na">stepKey=</span><span class="s">"uncheckDefault"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;selectOption</span> <span class="na">userInput=</span><span class="s">"Yes"</span> <span class="na">selector=</span><span class="s">""</span> <span class="na">stepKey=</span><span class="s">"selectYes"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;click</span> <span class="na">selector=</span><span class="s">""</span> <span class="na">stepKey=</span><span class="s">"saveConfig"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;waitForPageLoad</span> <span class="na">stepKey=</span><span class="s">"waitForSaving"</span><span class="nt">/&gt;</span>
+    ...
+<span class="nt">&lt;/test&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>One thing to note, unless a test is specifically testing the configuration page’s frontend capabilities, configuring the application should always be done with a <code class="highlighter-rouge">&lt;magentoCLI&gt;</code> action.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-10-07">
+      Oct 7th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>GitHub integration | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Commerce Cloud</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Overview</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/onboarding/onboarding-tasks.html">Onboarding tasks</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Architecture</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html">Starter architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">Starter develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html">Pro architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/requirements/cloud-requirements.html">Technologies and requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cloud-composer.html">Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/ece-tools-reference.html">ece-tools package</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/git-integration.html">Git</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-ssh.html">SSH and sFTP</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/new-relic.html">New Relic</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-integrate-blackfire.html">Blackfire.io</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/sendgrid.html">SendGrid</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html">Prepare for manual setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">Install Magento prerequisites</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-ssh.html">Enable SSH keys</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Set up the Magento file system owner</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html">Clone and branch the project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-install.html">Install Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-deploy.html">First time deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/debug.html">Optional - Configure Xdebug</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/sample-data.html">Optional - Install sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development.html">Docker development</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">Configure Xdebug for Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-database.html">Connect to the database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-testing.html">Functional testing in Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/cloud-integrations.html">Integrations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/bitbucket-integration.html">Bitbucket integration</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/github-integration.html">GitHub integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/health-notifications.html">Health notifications</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html">Import existing code into a project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html">Prepare your existing Magento Commerce system</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-import.html">Import Magento Commerce code</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configuration-overview.html">Configure your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configure-best-practices.html">Best practices for store configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/paypal-onboarding.html">Set up PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/custom-theme.html">Install a theme</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly.html">Configure Fastly services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize error pages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-waf-service.html">Managed Cloud WAF</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-image-optimization.html">Image Optimization</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom VCL snippets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-blacklist.html">Custom blacklist VCL</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/trouble-fastly.html">Fastly troubleshooting</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure environments</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html">Application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Build and deploy</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/setup-notifications.html">Set up notifications</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/log-handlers.html">Logging handlers</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-intro.html">Environment variables</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-build.html">Build variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html">Cloud variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-deploy.html">Deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/working-with-variables.html">Working with variables</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html">Routes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-cache.html">Caching</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-redir.html">Redirects</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-ssi.html">Server side includes</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-mysql.html">Set up MySQL service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-redis.html">Set up Redis service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-elastic.html">Set up Elasticsearch service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-rabbit.html">Set up RabbitMQ service</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration management for store settings</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-initial.html">Example of managing system-specific settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html">Manage your project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-basic.html">Configure your project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-start.html">Project structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/user-admin.html">Create and manage users</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html">Manage branches with the Interface</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html">Manage branches with the CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">Snapshots and backup management</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/optimize-cloud-deployment.html">Optimize deployment</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Cloud deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/reduce-downtime.html">Zero downtime deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/static-content-deployment.html">Static content deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/smart-wizards.html">Smart wizards</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/discover-deploy.html">Deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/continuous-deployment.html">Continuous deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-prot.html">Protective block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-sanity-check.html">Build and deploy on local</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate-prereq.html">Prepare to deploy to Staging and Production</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code and migrate static files and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-test.html">Test deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live.html">Go live and launch</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/launch-steps.html">Launch steps</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Troubleshooting</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/troubleshoot-deployment.html">Troubleshoot deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/environments-logs.html">View logs for troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_ce-creds.html">Incorrect credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_proj-startover.html">Resolve issues with a new project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_comp-deploy-fail.html">Component deployment failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/redis-troubleshooting.html">Redis troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/reset-cron-jobs.html">Reset cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-crypt-key-variable.html">Resolve issues with encryption key</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-error-html-minification.html">Resolve issues with HTML minification</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-google-analytics-deploy.html">Resolve issues with Google Analytics during deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/restore-configuration-files.html">Restore configuration files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/site-availability.html">Site availability</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/robots-sitemap.html">Add site map and search engine robots</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/theme-troubleshooting.html">Theme troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/message-queues.html">Message queues</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and patches</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release notes for ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html">Upgrade to use ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-update.html">Update ece-tools version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-patch.html">Apply custom patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade.html">Upgrade Magento version</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">GitHub integration</h1>
+</section>
+
+			<p>The GitHub integration enables you to manage your Magento Commerce Cloud environments directly from your GitHub repository. The integration manages content already in GitHub and synchronizes it with Magento Commerce. Before you begin, your project and environments must be in a GitHub repository.</p>
+
+<p class="bs-callout bs-callout-info">We <em>strongly</em> recommend using a private repository for your Magento Commerce Cloud project to protect any proprietary information or development work, such as extensions and sensitive configurations.</p>
+
+<p>This integration enables you to:</p>
+
+<ul>
+  <li>Create a new environment when you create a branch</li>
+  <li>Redeploy the environment when you merge a pull request</li>
+  <li>Delete the environment when you delete the branch</li>
+</ul>
+
+<p>You must obtain a GitHub token and a webhook to continue the process.</p>
+
+<h2 id="generate-a-github-token">Generate a GitHub token</h2>
+
+<p>You must be a member of a group with write-access to the GitHub repository, so that you can <em>push</em> to the repository. See <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">GitHub: Create</a>.</p>
+
+<h2 id="prepare-your-repository">Prepare your repository</h2>
+
+<p>You need to clone your Magento Commerce Cloud project from an existing environment and migrate the project branches to a new, empty GitHub repository, preserving the same branch names. It is <strong>critical</strong> to retain an identical Git tree, so that you do not lose any existing environments or branches in your Magento Commerce Cloud project.</p>
+
+<ol>
+  <li>
+    <p>From the terminal, log in to your Magento Commerce Cloud project.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud login
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>List your projects and copy the project ID.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud project:list
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Clone the project to your local environment.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud project:get &lt;project-ID&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add your GitHub repository as a remote.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git remote add origin git@github.com:&lt;user-name&gt;/&lt;repo-name&gt;.git
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Delete the default <code class="highlighter-rouge">magento</code> remote.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git remote remove magento
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Verify that you added the GitHub remote correctly.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git remote <span class="nt">-v</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>You should see the following:</p>
+
+    <div class="language-terminal no-copy highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="gp">origin git@github.com:&lt;user-name&gt;</span>/&lt;repo-name&gt;.git <span class="o">(</span>fetch<span class="o">)</span>
+<span class="gp">origin git@github.com:&lt;user-name&gt;</span>/&lt;repo-name&gt;.git <span class="o">(</span>push<span class="o">)</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Push the project files to your new GitHub repository. Remember to keep all branch names the same.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git push <span class="nt">-u</span> origin master
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>If you are starting with a new GitHub repository, you may have to use the <code class="highlighter-rouge">-f</code> option, because the remote repository does not match your local copy.</p>
+  </li>
+  <li>
+    <p>Verify that your GitHub repository contains all of your project files.</p>
+  </li>
+</ol>
+
+<h2 id="enable-the-github-integration">Enable the GitHub integration</h2>
+
+<p>The following enables the GitHub integration and provides a Payload URL to use when creating a webhook.</p>
+
+<p class="bs-callout bs-callout-warning">The following command overwrites <em>all</em> code in your Magento Commerce Cloud project with code from your GitHub repository. This includes all branches, including the Production branch. This action happens instantly and cannot be undone. As a best practice, it is very important to clone all of your branches from your Magento Commerce Cloud project and push them to your GitHub repository <strong>before</strong> adding the GitHub integration.</p>
+
+<h4 id="to-enable-the-github-integration">To enable the GitHub integration:</h4>
+
+<ol>
+  <li>
+    <p>Enable the integration.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud integration:add <span class="nt">--type</span><span class="o">=</span>github <span class="nt">--project</span><span class="o">=</span>&lt;project-ID&gt; <span class="nt">--token</span><span class="o">=</span>&lt;your-GitHub-token&gt; <span class="o">{</span><span class="nt">--repository</span><span class="o">=</span>USER/REPOSITORY | <span class="nt">--repository</span><span class="o">=</span>ORGANIZATION/REPOSITORY<span class="o">}</span> <span class="o">[</span><span class="nt">--build-pull-requests</span><span class="o">={</span><span class="nb">true</span>|false<span class="o">}</span> <span class="nt">--fetch-branches</span><span class="o">={</span><span class="nb">true</span>|false<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <ul>
+      <li><code class="highlighter-rouge">&lt;project-ID&gt;</code>—Your Magento Commerce Cloud project ID</li>
+      <li><code class="highlighter-rouge">&lt;your-GitHub-token&gt;</code>—The personal access token you generated for GitHub</li>
+      <li><code class="highlighter-rouge">--repository=USER/REPOSITORY</code>—Your personal GitHub repository name</li>
+      <li><code class="highlighter-rouge">--repository=ORGANIZATION/REPOSITORY</code>—The organization repository name</li>
+      <li><code class="highlighter-rouge">--build-pull-requests</code>—An <em>optional</em> parameter that instructs Magento Commerce Cloud to deploy after you merge a pull request (<code class="highlighter-rouge">true</code> by default)</li>
+      <li><code class="highlighter-rouge">--fetch-branches</code>—An <em>optional</em> parameter that causes Magento Commerce Cloud to track branches and deploy after you update a branch (<code class="highlighter-rouge">true</code> by default)</li>
+    </ul>
+
+    <p><strong>Example 1</strong>: Enable the GitHub integration for a personal, private repository:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud integration:add <span class="nt">--type</span><span class="o">=</span>github <span class="nt">--project</span><span class="o">=</span>ov58dlacU2e <span class="nt">--token</span><span class="o">=</span>&lt;token&gt; <span class="nt">--repository</span><span class="o">=</span>myUserName/myrepo
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p><strong>Example 2</strong>: Enable the GitHub integration for an organization repository:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud integration:add <span class="nt">--type</span><span class="o">=</span>github <span class="nt">--project</span><span class="o">=</span>ov58dlacU2e <span class="nt">--token</span><span class="o">=</span>&lt;token&gt; <span class="nt">--repository</span><span class="o">=</span>Magento/teamrepo
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Enter the required information when prompted.</p>
+  </li>
+  <li>
+    <p>Copy the <strong>Payload URL</strong> displayed by the return output.</p>
+
+    <div class="language-terminal no-copy highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="go">Created integration wp2f2thlmxwcg (type: github)
+Repository: myUserName/myrepo
+Build PRs: yes
+Fetch branches: yes
+Payload URL: https://us.magento.cloud/api/projects/ov58dlacU2e/integrations/wO8a0eoamxwcg/hook
+</span></pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="add-the-webhook-in-github">Add the webhook in GitHub</h2>
+
+<p>In order to communicate events—such as a push—with your Cloud Git server, you need to create a webhook for your GitHub repository:</p>
+
+<ol>
+  <li>
+    <p>In your GitHub repository, click the <strong>Settings</strong> tab.</p>
+  </li>
+  <li>
+    <p>In the left navigation bar, click <strong>Webhooks</strong>.</p>
+  </li>
+  <li>
+    <p>In the <em>Webhooks</em> pane, click <strong>Add webhook</strong>.</p>
+  </li>
+  <li>
+    <p>In the <em>Webhooks/Add webhook</em> form, edit the following fields:</p>
+
+    <ul>
+      <li><strong>Payload URL</strong>: Enter the URL returned when you enabled the GitHub integration.</li>
+      <li><strong>Content type</strong>: Choose <strong>application/json</strong> from the list.</li>
+      <li><strong>Secret</strong>: Enter a verification secret.</li>
+      <li><strong>Which events would you like to trigger this webhook?</strong>: Select <strong>Send me everything</strong>.</li>
+      <li>Select the <strong>Active</strong> checkbox.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Click <strong>Add webhook</strong>.</p>
+  </li>
+</ol>
+
+<h2 id="test-the-integration">Test the integration</h2>
+
+<p>To verify the integration works, make a change in the GitHub repository and use the magento-cloud CLI to pull the change into the local environment.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-03-01">
+      Mar 1st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

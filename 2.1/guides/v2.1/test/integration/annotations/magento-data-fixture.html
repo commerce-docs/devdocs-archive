@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Data fixture annotation | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Testing</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Introduction</a></li><li class="" role="menuitem"><span>Integration testing</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Running integration tests</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations.html">Using DocBlock annotations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/depends.html">@depends</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/magento-app-area.html">@magentoAppArea</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/magento-app-isolation.html">@magentoAppIsolation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/magento-cache.html">@magentoCache</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/magento-components-dir.html">@magentoComponentsDir</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/magento-config-fixture.html">@magentoConfigFixture</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/magento-data-fixture.html">@magentoDataFixture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/annotations/magento-db-isolation.html">@magentoDbIsolation</a></li></ul></li></ul></li><li class="" role="menuitem"><span>JavaScript Unit Testing</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">Jasmine</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/test_js-unit.html">JsTestDriver</a></li></ul></li><li class="" role="menuitem"><span>PHP Unit Testing</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">Running Unit Tests</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution_cli.html">Running Unit Tests in CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution_phpstorm.html">Running Unit Tests in PhpStorm</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/writing_testable_code.html">Writing Testable Code</a></li><li class="" role="menuitem"><span>Using DocBlock annotations</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/annotations/data-provider.html">@dataProvider</a></li></ul></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Data fixture annotation</h1>
+</section>
+
+			<p>A data fixture is a PHP script that sets data you want to reuse in your test.
+The script can be defined in a separate file or as a local test case method.</p>
+
+<p>Use data fixtures to prepare a database for tests.
+The Integration Testing Framework (ITF) reverts the database to its initial state automatically.
+To set up a date fixture, use the <code class="highlighter-rouge">@magentoDataFixture</code> annotation.</p>
+
+<h2 id="format">Format</h2>
+
+<p><code class="highlighter-rouge">@magentoDataFixture</code> takes an argument that points to the data fixture as a filename or local method.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="cd">/**
+ * @magentoDataFixture &lt;script_filename&gt;|&lt;method_name&gt;
+ */</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;script_filename&gt;</code> is a filename of the PHP script.</li>
+  <li><code class="highlighter-rouge">&lt;method_name&gt;</code> is a name of the method declared in the current class.</li>
+</ul>
+
+<h2 id="principles">Principles</h2>
+
+<ol>
+  <li>Do not use a direct database connection in fixtures to avoid dependencies on the database structure and vendor.</li>
+  <li>Use an application API to implement your data fixtures.</li>
+  <li>A method that implements a data fixture must be declared as <code class="highlighter-rouge">public</code> and <code class="highlighter-rouge">static</code>.</li>
+  <li>Fixtures declared at a test level have a higher priority then fixtures declared at a test case level.</li>
+  <li>Test case fixtures are applied to each test in the test case, unless a test has its own fixtures declared.</li>
+  <li>Annotation declaration at a test case level does not affect tests that have their own annotation declarations.</li>
+</ol>
+
+<h2 id="usage">Usage</h2>
+
+<p>As was mentioned above, there are two ways to declare fixtures:</p>
+
+<ul>
+  <li>as a PHP script file that is used by other tests and test cases.</li>
+  <li>as a local method that is used by other tests in the test cases.</li>
+</ul>
+
+<h3 id="fixture-as-a-separate-file">Fixture as a separate file</h3>
+
+<p>Define the fixture in a separate file when you want to reuse it in different test cases.
+To declare the fixture, use the following conventions for a path</p>
+
+<ul>
+  <li>Relative to <code class="highlighter-rouge">dev/tests/integration/&lt;test suite directory&gt;</code></li>
+  <li>With forward slashes <code class="highlighter-rouge">/</code></li>
+  <li>No leading slash
+Example: <code class="highlighter-rouge">Magento/Cms/_files/pages.php</code></li>
+</ul>
+
+<p>The ITF includes the declared PHP script to your test and executes it during test run.</p>
+
+<p>The following example demonstrates a simple implementation of a Cms module page test from the Magento codebase.</p>
+
+<p>Data fixture to test a Cms module page (<code class="highlighter-rouge">dev/tests/integration/testsuite/Magento/Cms/_files/pages.php</code>):</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span>
+<span class="cd">/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+
+<span class="cd">/** @var $page \Magento\Cms\Model\Page */</span>
+<span class="nv">$page</span> <span class="o">=</span> <span class="err">\</span><span class="nc">Magento\TestFramework\Helper\Bootstrap</span><span class="o">::</span><span class="nf">getObjectManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">create</span><span class="p">(</span><span class="s1">'Magento\Cms\Model\Page'</span><span class="p">);</span>
+<span class="nv">$page</span><span class="o">-&gt;</span><span class="nf">setTitle</span><span class="p">(</span><span class="s1">'Cms Page 100'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setIdentifier</span><span class="p">(</span><span class="s1">'page100'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setStores</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">-&gt;</span><span class="nf">setIsActive</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setContent</span><span class="p">(</span><span class="s1">'&lt;h1&gt;Cms Page 100 Title&lt;/h1&gt;'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setPageLayout</span><span class="p">(</span><span class="s1">'1column'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">save</span><span class="p">();</span>
+
+<span class="nv">$page</span> <span class="o">=</span> <span class="err">\</span><span class="nc">Magento\TestFramework\Helper\Bootstrap</span><span class="o">::</span><span class="nf">getObjectManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">create</span><span class="p">(</span><span class="s1">'Magento\Cms\Model\Page'</span><span class="p">);</span>
+<span class="nv">$page</span><span class="o">-&gt;</span><span class="nf">setTitle</span><span class="p">(</span><span class="s1">'Cms Page Design Blank'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setIdentifier</span><span class="p">(</span><span class="s1">'page_design_blank'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setStores</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">-&gt;</span><span class="nf">setIsActive</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setContent</span><span class="p">(</span><span class="s1">'&lt;h1&gt;Cms Page Design Blank Title&lt;/h1&gt;'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setPageLayout</span><span class="p">(</span><span class="s1">'1column'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">setCustomTheme</span><span class="p">(</span><span class="s1">'Magento/blank'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="nf">save</span><span class="p">();</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Test case that uses the above data fixture (<code class="highlighter-rouge">dev/tests/integration/testsuite/Magento/Cms/Block/PageTest.php</code>):</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span>
+<span class="cd">/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+<span class="kn">namespace</span> <span class="nn">Magento\Cms\Block</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">PageTest</span> <span class="k">extends</span> <span class="err">\</span><span class="n">PHPUnit_Framework_TestCase</span>
+<span class="p">{</span>
+    <span class="cd">/**
+     * @magentoAppIsolation enabled
+     * @magentoDataFixture Magento/Cms/_files/pages.php
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">testGetPage</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$page</span> <span class="o">=</span> <span class="err">\</span><span class="nc">Magento\TestFramework\Helper\Bootstrap</span><span class="o">::</span><span class="nf">getObjectManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'Magento\Cms\Model\Page'</span><span class="p">);</span>
+        <span class="nv">$page</span><span class="o">-&gt;</span><span class="nf">load</span><span class="p">(</span><span class="s1">'page100'</span><span class="p">,</span> <span class="s1">'identifier'</span><span class="p">);</span>
+        <span class="nv">$layout</span> <span class="o">=</span> <span class="err">\</span><span class="nc">Magento\TestFramework\Helper\Bootstrap</span><span class="o">::</span><span class="nf">getObjectManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span>
+            <span class="s1">'Magento\Framework\View\LayoutInterface'</span>
+        <span class="p">);</span>
+        <span class="nv">$pageBlock</span> <span class="o">=</span> <span class="nv">$layout</span><span class="o">-&gt;</span><span class="nf">createBlock</span><span class="p">(</span><span class="s1">'Magento\Cms\Block\Page'</span><span class="p">);</span>
+        <span class="nv">$pageBlock</span><span class="o">-&gt;</span><span class="nf">setData</span><span class="p">(</span><span class="s1">'page'</span><span class="p">,</span> <span class="nv">$page</span><span class="p">);</span>
+        <span class="nv">$pageBlock</span><span class="o">-&gt;</span><span class="nf">toHtml</span><span class="p">();</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">assertEquals</span><span class="p">(</span><span class="nv">$page</span><span class="p">,</span> <span class="nv">$pageBlock</span><span class="o">-&gt;</span><span class="nf">getPage</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="fixture-as-a-method">Fixture as a method</h3>
+
+<p>The following is an example of the <code class="highlighter-rouge">testCreatePageWithSameModuleName()</code> test method that uses data from the <code class="highlighter-rouge">cmsPageWithSystemRouteFixture()</code> data fixture.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span>
+<span class="cd">/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+
+<span class="cd">/**
+ * Test class for \Magento\Cms\Controller\Page.
+ */</span>
+<span class="kn">namespace</span> <span class="nn">Magento\Cms\Controller</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">PageTest</span> <span class="k">extends</span> <span class="err">\</span><span class="nc">Magento\TestFramework\TestCase\AbstractController</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">testViewAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">dispatch</span><span class="p">(</span><span class="s1">'/enable-cookies'</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">assertContains</span><span class="p">(</span><span class="s1">'What are Cookies?'</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getResponse</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getBody</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="n">testViewRedirectWithTrailingSlash</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">dispatch</span><span class="p">(</span><span class="s1">'/enable-cookies/'</span><span class="p">);</span>
+        <span class="nv">$code</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getResponse</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getStatusCode</span><span class="p">();</span>
+        <span class="nv">$location</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getResponse</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getHeader</span><span class="p">(</span><span class="s1">'Location'</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">getFieldValue</span><span class="p">();</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">assertEquals</span><span class="p">(</span><span class="mi">301</span><span class="p">,</span> <span class="nv">$code</span><span class="p">,</span> <span class="s1">'Invalid response code'</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">assertStringEndsWith</span><span class="p">(</span><span class="s1">'/enable-cookies'</span><span class="p">,</span> <span class="nv">$location</span><span class="p">,</span> <span class="s1">'Invalid location header'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cd">/**
+     * Test \Magento\Cms\Block\Page::_addBreadcrumbs
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">testAddBreadcrumbs</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">dispatch</span><span class="p">(</span><span class="s1">'/enable-cookies'</span><span class="p">);</span>
+        <span class="nv">$layout</span> <span class="o">=</span> <span class="err">\</span><span class="nc">Magento\TestFramework\Helper\Bootstrap</span><span class="o">::</span><span class="nf">getObjectManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span>
+            <span class="s1">'Magento\Framework\View\LayoutInterface'</span>
+        <span class="p">);</span>
+        <span class="nv">$breadcrumbsBlock</span> <span class="o">=</span> <span class="nv">$layout</span><span class="o">-&gt;</span><span class="nf">getBlock</span><span class="p">(</span><span class="s1">'breadcrumbs'</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">assertContains</span><span class="p">(</span><span class="nv">$breadcrumbsBlock</span><span class="o">-&gt;</span><span class="nf">toHtml</span><span class="p">(),</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getResponse</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getBody</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="cd">/**
+     * @magentoDataFixture cmsPageWithSystemRouteFixture
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">testCreatePageWithSameModuleName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">dispatch</span><span class="p">(</span><span class="s1">'/shipping'</span><span class="p">);</span>
+        <span class="nv">$content</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getResponse</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getBody</span><span class="p">();</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">assertContains</span><span class="p">(</span><span class="s1">'Shipping Test Page'</span><span class="p">,</span> <span class="nv">$content</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">cmsPageWithSystemRouteFixture</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="cd">/** @var $page \Magento\Cms\Model\Page */</span>
+        <span class="nv">$page</span> <span class="o">=</span> <span class="err">\</span><span class="nc">Magento\TestFramework\Helper\Bootstrap</span><span class="o">::</span><span class="nf">getObjectManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">create</span><span class="p">(</span><span class="s1">'Magento\Cms\Model\Page'</span><span class="p">);</span>
+        <span class="nv">$page</span><span class="o">-&gt;</span><span class="nf">setTitle</span><span class="p">(</span><span class="s1">'Test title'</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="nf">setIdentifier</span><span class="p">(</span><span class="s1">'shipping'</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="nf">setStores</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+            <span class="o">-&gt;</span><span class="nf">setIsActive</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="nf">setContent</span><span class="p">(</span><span class="s1">'&lt;h1&gt;Shipping Test Page&lt;/h1&gt;'</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="nf">setPageLayout</span><span class="p">(</span><span class="s1">'1column'</span><span class="p">)</span>
+            <span class="o">-&gt;</span><span class="nf">save</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="test-case-and-test-method-scopes">Test case and test method scopes</h3>
+
+<p>The <code class="highlighter-rouge">@magentoDataFixture</code> can be specified for a particular test or for an entire test case.
+The basic rules for fixture annotation at different levels are:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@magentoDataFixture</code> at a test case level makes the framework to apply the declared fixtures to each test in the test case.
+When the final test is complete, all class-level fixtures are reverted.</li>
+  <li><code class="highlighter-rouge">@magentoDataFixture</code> for a particular test signals the framework to revert the fixtures declared on a test case level and applies the fixtures declared at a test method level instead.
+When the test is complete, the ITF reverts the applied fixtures.</li>
+</ul>
+
+<p class="bs-callout bs-callout-info">The integration testing framework interacts with a database to revert the applied fixtures.</p>
+
+<h3 id="fixture-rollback">Fixture rollback</h3>
+
+<p>A fixture that contain database transactions only are reverted automatically.
+Otherwise, when a fixture creates files or performs any actions other than database transaction, provide the corresponding rollback logic.
+Rollbacks are run after reverting all the fixtures related to database transactions.</p>
+
+<p>A fixture rollback must be of the same format as the corresponding fixture: a script or a method:</p>
+
+<ul>
+  <li>A rollback script must be named according to the corresponding fixture suffixed with <code class="highlighter-rouge">_rollback</code> and stored in the same directory.</li>
+  <li>Rollback methods must be of the same class as the corresponding fixture and suffixed with <code class="highlighter-rouge">Rollback</code>.</li>
+</ul>
+
+<p>Examples:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fixture/Rollback</th>
+      <th>Fixture name</th>
+      <th>Rollback name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Script</td>
+      <td><code class="highlighter-rouge">Magento/Catalog/_files/categories.php</code></td>
+      <td><code class="highlighter-rouge">Magento/Catalog/_files/categories_rollback.php</code></td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td><code class="highlighter-rouge">\Magento\Catalog\Model\ProductTest::prepareProduct</code></td>
+      <td><code class="highlighter-rouge">\Magento\Catalog\Model\ProductTest::prepareProductRollback</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="restrictions">Restrictions</h3>
+
+<p>Do not rely on and do not modify an application state from within a fixture, because <a href="magento-app-isolation.html">application isolation annotation</a> can reset the application state at any moment.</p>
+
+<!-- Link definitions -->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-01-09">
+      Jan 9th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

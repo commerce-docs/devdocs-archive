@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Less coding standard | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Coding Standards</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/code-standard-demarcation.html">Code demarcation standard</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/code-standard-php.html">PHP coding standard</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/docblock-standard-general.html">DocBlock standard</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/code-standard-javascript.html">JavaScript coding standard</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/docblock-standard-javascript.html">JavaScript DocBlock standard</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/code-standard-jquery-widgets.html">jQuery widget coding standard</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/code-standard-less.html">LESS coding standard</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/code-standard-html.html">HTML style guide</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/technical-guidelines.html">Technical guidelines</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/technical-vision/index.html">Technical vision</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/technical-vision/webapi.html">Web Api</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Less coding standard</h1>
+</section>
+
+			<p>This standard defines Magento internal requirements for code formatting and style for teams that develop Less and <a href="https://glossary.magento.com/css">CSS</a> code.</p>
+
+<p>Some parts of Magento code might not comply with this coding standard yet, but we are working to gradually improve this.</p>
+
+<p>This coding standard is optional for third-party Magento developers.</p>
+
+<h2 id="general-rules">General rules</h2>
+
+<h3 id="indentation">Indentation</h3>
+
+<p>Use only spaces for indentation:</p>
+
+<ul>
+  <li>Tab size: 4 spaces</li>
+  <li>Indent size: 4 spaces</li>
+  <li>Continuation indent: 4 spaces</li>
+</ul>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>.nav {
+    .nav-item {
+        ...
+    }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="formatting">Formatting</h3>
+
+<h4 id="braces">Braces</h4>
+
+<p>Add one space before opening braces and a line break after. Add a line break before closing braces.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav {
+    color: @nav__color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>.nav{color: @nav__color;}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="selector-delimiters">Selector delimiters</h4>
+
+<p>Add a line break after each selector delimiter. Do not add spaces before or after delimiters.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>.nav,
+.bar {
+    color: @color__base;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav, .bar {
+    color: @color__base;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="quotes">Quotes</h4>
+
+<p>Use single quotes.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav {
+    content: 'lorem ipsum';
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav {
+    content: "lorem ipsum";
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="combinator-indents">Combinator indents</h4>
+
+<p>Add spaces before and after combinators.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav + .bar {
+    color: @bar__color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>.nav+.bar {
+    color: @bar__color;
+}
+
+.nav +.bar {
+    color: @bar__color;
+}
+
+.nav+ .bar {
+    color: @bar__color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="properties-line-break">Properties line break</h4>
+
+<p>Start each property declaration in a new line.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>.nav {
+    background-color: @nav__background-color;
+    color: @nav__color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav {
+    color: @nav__color; background-color: @nav__background-color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="properties-colon-indents">Properties colon indents</h4>
+
+<p>Add space after but not before the colon that separates property names from values.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav {
+    color: @nav__color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>.nav {
+    color : @nav__color;
+}
+
+.bar {
+    color:@bar__color;
+}
+
+.item {
+    color :@item__color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="end-of-file">End of file</h4>
+
+<p>Add a blank line at the end of file.</p>
+
+<h4 id="end-of-selector">End of selector</h4>
+
+<p>Add a blank line after a selector.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>css
+    .nav {
+        background-color: @nav__background-color;
+    }
+
+    .bar {
+        background-color: @bar__background-color;
+    }
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>css
+    .nav {
+        background-color: @nav__background-color;
+    }
+    .bar {
+        background-color: @bar__background-color;
+    }
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="end-of-the-property-line">End of the property line</h4>
+
+<p>Add a semicolon after property.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav {
+    background-color: @nav__background-color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav {
+    background-color: @nav__background-color
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="important-property">!important property</h4>
+
+<p>Avoid using the <code class="highlighter-rouge">!important</code> property if possible. If it is required, add a space before the property.</p>
+
+<p><strong>Correct</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.jquery-ui-calendar-item {
+    background-color: @nav__background-color !important;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>    .jquery-ui-calendar-item {
+        background-color: @nav__background-color!important;
+    }
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="comments">Comments</h3>
+
+<p>First and second level comments must be surrounded by empty lines.
+First, second and third level comments should have two spaces after “//”. Inline comments should have one space after “//”.</p>
+
+<p><strong>Correct</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre>//
+//  First level comment
+//  _____________________________________________
+
+.nav {
+    background-color: @nav__background-color;
+}
+
+//
+//  Second level comment
+//  ---------------------------------------------
+
+.nav {
+    background-color: @nav__background-color;
+}
+
+//  Comment
+.nav {
+    //  New line comment
+    background-color: @nav__background-color; // ToDo UI: todo inline comment
+    color: @nav__color; // inline comment
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="selectors">Selectors</h3>
+
+<h4 id="types">Types</h4>
+
+<p>Magento supports the two most recent versions of all major browsers. Internet Explorer is supported from version 9 and later.</p>
+
+<p>You can use almost all CSS3 selectors: descendants, attributes, pseudo classes, structural, pseudo elements, and so on.</p>
+
+<p>Exception: Avoid the <code class="highlighter-rouge">id</code> selector.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>.nav {
+    ...
+}
+
+.nav + bar {
+    ...
+}
+
+.nav:not(.bar) {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>#foo {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="classes-naming">Classes Naming</h3>
+
+<h4 id="standard-classes">Standard classes</h4>
+
+<p>Class names should be lowercase, start with a letter (except helper classes), words should be separated with dash ‘-‘.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav-bar {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.navBar {
+   ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>: underscore separation</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav_bar {
+   ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="helper-classes">Helper classes</h4>
+
+<p>Helper class names should be lowercase and start with underscore (“_”).</p>
+
+<p>Some parts of Magento code might not comply with this standard yet. You might still find helper names with no underscores. We are working to gradually remove the inconsistency.</p>
+
+<p><strong>Example</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>._active {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="size">Size</h4>
+
+<p>Use class names that are as short as possible, but as long as necessary.
+Try to convey what class is about while being as brief as possible.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav-bar {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>: too long</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.navigation-panel-in-footer {
+   ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>: too short</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nvpf {
+   ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="meaning">Meaning</h4>
+
+<p>Use meaningful, specific class names that reflect the purpose of the element. Class names should not be presentational or cryptic.</p>
+
+<p><strong>Correct</strong>: specific</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>.category {
+    ...
+}
+.category-title {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>: cryptic</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.foo-1901 {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>: presentational</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>.button-green {
+   ...
+}
+
+.clear {
+   ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="selectors-naming">Selectors naming</h3>
+
+<h4 id="type-selectors">Type selectors</h4>
+
+<p>Avoid qualifying class names with type selectors.</p>
+
+<p>Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.error {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>div.error {
+   ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Type selectors must be lowercase.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav &gt; li {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.nav &gt; LI {
+   ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="formatting-1">Formatting</h4>
+
+<p>Write selector in one line, do not use concatenation.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>.product-list-item {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>.product {
+    ...
+    &amp;-list {
+        ...
+        &amp;-item {
+            ...
+        }
+    }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="nesting">Nesting</h4>
+
+<p>Avoid using more than three levels of nesting.</p>
+
+<p>Exceptions are pseudo elements and states.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>.footer {
+    ...
+    .nav {
+        ...
+    }
+    .nav-list {
+        ...
+        .nav-list-item {
+            ...
+        }
+    }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>.footer {
+    ...
+    .nav {
+        ...
+        .nav-list {
+            ...
+            .nav-list-item {
+                ...
+            }
+        }
+    }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="properties">Properties</h2>
+
+<h3 id="sorting">Sorting</h3>
+
+<p>Sort all properties in the alphabetical order. Mixins, variables, and so on should go first.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>.nav {
+    background-color: @nav__background-color;
+    color: @nav__color;
+    text-align: center;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>.nav {
+    color: @nav__color;
+    text-align: center;
+    background-color: @nav__background-color;
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="shorthand">Shorthand</h3>
+
+<p>Use shorthand properties where possible.</p>
+
+<p>CSS offers a variety of shorthand properties that should be used whenever possible, even in cases where only one value is explicitly set.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>border-top: 0;
+padding: 0 1em 2em;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>border-top-style: none;
+padding-bottom: 2rem;
+padding-left: 1rem;
+padding-right: 1rem;
+padding-top: 0;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="0-and-units">0 and units</h3>
+
+<p>Do not specify units “0” value.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>border-width: 0;
+margin: 0;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>border-width: 0px;
+margin: 0rem;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="floating-values">Floating values</h3>
+
+<p>Omit leading “0”s in values, use dot instead.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> margin-left: .5rem;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>margin-left: 0.5rem;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="hexadecimal-notation">Hexadecimal notation</h3>
+
+<ul>
+  <li>Use lowercase only.</li>
+  <li>Use three-character hexadecimal notation where possible.</li>
+  <li>Avoid using hexadecimal values for color in properties, use only variables instead.</li>
+</ul>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>@nav__color: #fafafa;
+@nav-item__color: #f00;
+...
+color: @nav-item__color;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>color: #ff0000;
+@nav__color: #FAFAFA;
+@nav-item__color: red;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="variables">Variables</h2>
+
+<h3 id="location">Location</h3>
+
+<h4 id="local-variables">Local variables</h4>
+
+<p>If variables are local and used only in a <a href="https://glossary.magento.com/module">module</a> scope, they should be located in the module file, in the beginning of the general comment.</p>
+
+<p><strong>Example</strong> <code class="highlighter-rouge">_module.less</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>...
+
+//
+//  Variables
+//  _____________________________________________
+
+    //  Colors
+@btn__color: @color-brownie;
+@btn-primary__color: @color-white;
+@btn-secondary__color: @color-white;
+...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="theme-variables">Theme variables</h4>
+
+<p>If variables are common for several modules they should be specified in the <code class="highlighter-rouge">_theme.less</code> file</p>
+
+<h3 id="naming">Naming</h3>
+
+<p>All variable names must be lowercase.</p>
+
+<h4 id="value-variables">Value variables</h4>
+
+<p>General model is the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>@property-name
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Examples</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>@primary__color: @color-phoenix;
+@indent__base: 2rem;
+@border-radius-round: 100%;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="parameter-variables">Parameter variables</h4>
+
+<p>General model is the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>@component-element__state__property__modifier
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Component name must meaningful. It can contain the <code class="highlighter-rouge">primary</code>, <code class="highlighter-rouge">secondary</code>, <code class="highlighter-rouge">tertiary</code> names.</p>
+
+<p><code class="highlighter-rouge">base</code> is a modifier.</p>
+
+<p><strong>Examples</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre>@color-orange: '';
+
+@link__hover__color: '';
+
+@nav-element__background-color: '';
+
+@secondary__color: '';
+
+@side-nav__indent__s: '';
+
+@side-nav-el__background-color: '';
+
+@side-nav-el__active__background-color: '';
+
+@side-nav-el__active-focus__background-color: '';
+
+@side-nav-el__active-focus__font-size__xl: '';
+
+@text__color__base: '';
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="mixins">Mixins</h2>
+
+<h3 id="location-1">Location</h3>
+
+<p><a href="https://glossary.magento.com/theme">Theme</a> mixins (except extends) should be located in the <code class="highlighter-rouge">source/utilities</code> directory.</p>
+
+<h3 id="naming-1">Naming</h3>
+
+<p>For <a href="https://glossary.magento.com/mixin">mixin</a> naming apply the class naming rules.</p>
+
+<p>For mixins grouping use the double underscore “__” prefix.</p>
+
+<p><strong>Example</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>.extend__clearfix (...) {
+    ...
+}
+
+.vendor-prefix__flex-direction (...) {
+    ...
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="extends">Extends</h2>
+
+<h3 id="location-2">Location</h3>
+
+<p>Local extends used only in one file, should be specified in this file.
+Extends that are used in several files should be specified in the theme’s <code class="highlighter-rouge">source/_extend.less</code> file.</p>
+
+<h3 id="naming-2">Naming</h3>
+
+<p>Extend names should start with the <code class="highlighter-rouge">.abs-</code> prefix.</p>
+
+<h2 id="import-directive"><code class="highlighter-rouge">@import</code> directive</h2>
+
+<p>Always add the file <a href="https://glossary.magento.com/extension">extension</a> of the imported resource.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>@import 'source/lib/_lib.less';
+@import (css) 'styles.css';
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>@import 'source/lib/_lib';
+@import (css) 'styles';
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Use single quotes.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>@import 'source/lib/_lib.less';
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>@import "source/lib/_lib.less";
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

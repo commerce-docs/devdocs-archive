@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Step 3: Add components (optional) | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Page Builder</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/">What is Page Builder?</a></li><li class="" role="menuitem"><span>Getting started</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/install-pagebuilder.html">Install Page Builder</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/view-pagebuilder.html">View Page Builder</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/install-pagebuilder-examples.html">Install Page Builder Examples</a></li></ul></li><li class="" role="menuitem"><span>Extend a content type</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/overview.html">Overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-1-create-extension-module.html">Step 1. Create extension module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-2-extend-appearances.html">Step 2. Extend appearances</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-3-extend-forms.html">Step 3. Extend forms</a></li></ul></li><li class="" role="menuitem"><span>Create a content type</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/overview.html">Overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-1-add-configuration.html">Step 1. Add configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-2-add-templates.html">Step 2. Add templates</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-3-add-components.html">Step 3. Add components</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-4-add-form.html">Step 4. Add form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-5-add-styles.html">Step 5. Add styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-6-add-icon.html">Step 6. Add an icon</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/summary.html">Summary</a></li></ul></li><li class="" role="menuitem"><span>How-Tos</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-customize-panel.html">How to customize the panel</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-image-uploader.html">How to add an image uploader</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-storefront-widget.html">How to add a storefront widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-text-editor.html">How to add a text editor</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-custom-toolbar.html">How to add a custom toolbar</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-icons-images.html">How to add icons and images</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-change-breakpoints.html">How to change breakpoints</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-additional-configurations.html">How to add additional configurations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-block-chooser.html">How to add a block chooser</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-full-width-layouts.html">How to use full-width layouts</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-customize-selectors.html">How to customize selectors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-apply-product-conditions.html">How to apply product conditions</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-server-side-previews.html">How to use server-side previews</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-pagebuilder-for-product-attributes.html">How to use Page Builder for product attributes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-deactivate-pagebuilder.html">How to deactivate Page Builder</a></li></ul></li><li class="" role="menuitem"><span>BlueFoot content migration</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/">Overview of content migration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/install-migration-module.html">Install the migration module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/run-migration-module.html">Run the migration module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/how-content-migration-works.html">How content migration works</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/migrate-content-custom-blocks.html">Migrate content from custom blocks</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/migrate-other-bluefoot-content.html">Migrate other BlueFoot content</a></li></ul></li><li class="" role="menuitem"><span>Reference</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/configurations.html">Configurations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/data-store.html">Datastore</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/events.html">Events</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/knockout-bindings.html">Knockout bindings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/release-notes.html">Release notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/comp-status2.html">Component status</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-page-builder/blob/1.0-develop/CONTRIBUTING.md">Contribution guide</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Step 3: Add components (optional)</h1>
+</section>
+
+			<p>In this step, we will create a preview component in order to customize the options menu for our Quote. The options menu is the popup menu that appears when you mouseover a content type, as shown here:</p>
+
+<p><img src="/devdocs/2.1/page-builder/docs/images/options-menu-default.png" alt="Create config file" /></p>
+
+<p>The options menu provides end-users with several functions, including a button to open the content type’s form editor, which we will add in <a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-4-add-form.html">Step 4: Add form</a>.</p>
+
+<h2 id="about-components">About components</h2>
+
+<p>Components are JavaScript files that define the behaviors of your content type when they appear on the Admin stage (using the <code class="highlighter-rouge">preview.js</code> component) and in the storefront (using the <code class="highlighter-rouge">master.js</code> component). As such, they are complementary to the templates you added previously in Step 2, acting as the view models to the template’s views.</p>
+
+<p>Adding custom component files to your content types is completely optional. Whether you need one or not will depend on the complexity of your content type. If you do not add components to your content type, Page Builder will use these defaults:</p>
+
+<ul>
+  <li>Default preview component: <code class="highlighter-rouge">Magento_PageBuilder/js/content-type/preview</code></li>
+  <li>Default master component: <code class="highlighter-rouge">Magento_PageBuilder/js/content-type/master</code></li>
+</ul>
+
+<p>When you start developing more complex content types, you will need to create custom preview components in order to make these and other functions available on the Admin stage:</p>
+
+<ul>
+  <li>Initiating and using additional 3rd party libraries like sliders and tabs.</li>
+  <li>Adding image uploader support.</li>
+  <li>Providing dynamic data into your preview templates from the back-end.</li>
+  <li>Allowing the back-end to conduct rendering (such as our block and dynamic block content types).</li>
+  <li>Declaring special states based on the data stored, for example, showing a disabled state when certain fields are set to specific values.</li>
+</ul>
+
+<p>Examples of implementing these functions will be add to future tutorials and other topics in this documentation.</p>
+
+<p>Adding your own master component is far less common. The master component is only necessary if you want to manipulate the final output of your content type before it is persisted to the database.</p>
+
+<h2 id="component-conventions">Component conventions</h2>
+
+<p>The conventions for naming your components and adding them to your module are as follows:</p>
+
+<ul>
+  <li>Your preview component must be named <code class="highlighter-rouge">preview.js</code> and placed here in your module (<code class="highlighter-rouge">view/adminhtml/web/js/content-type/example-quote/</code>):</li>
+</ul>
+
+<p><img src="/devdocs/2.1/page-builder/docs/images/step3-add-component.png" alt="Create config file" /></p>
+
+<ul>
+  <li>
+    <p>Your master component must be named <code class="highlighter-rouge">master.js</code> and placed here in your module (<code class="highlighter-rouge">view/frontend/web/js/content-type/example-quote/</code>):</p>
+
+    <p><img src="/devdocs/2.1/page-builder/docs/images/step3-add-master-component.png" alt="Create config file" /></p>
+  </li>
+</ul>
+
+<p>We will not create a master component for our Quote example, but the location is given here if you need to include one for more complex content types.</p>
+
+<p>Before continuing, add the preview component file (<code class="highlighter-rouge">preview.js</code>) to your <code class="highlighter-rouge">PageBuilderQuote</code> module within the directory structure noted.</p>
+
+<h2 id="component-configuration">Component configuration</h2>
+
+<p>In your configuration file, reference your Admin <code class="highlighter-rouge">preview_component</code> (<code class="highlighter-rouge">preview.js</code>) as shown here:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> 
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_PageBuilder:etc/content_type.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;type</span> <span class="na">name=</span><span class="s">"example_quote"</span>
+        <span class="na">label=</span><span class="s">"Quote"</span>
+        <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/content-type"</span>
+        <span class="na">preview_component=</span><span class="s">"Example_PageBuilderQuote/js/content-type/example_quote/preview"</span>
+        <span class="na">master_component=</span><span class="s">"Magento_PageBuilder/js/content-type/master"</span><span class="nt">&gt;</span>
+        ...
+    <span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>A description of each component-related attribute from the Quote configuration follows:</p>
+
+<table style="table-layout:auto">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">component</code></td>
+      <td>Page Builder provides two component types to choose from: <code class="highlighter-rouge">content-type</code> and <code class="highlighter-rouge">content-type-collection</code>. Use <code class="highlighter-rouge">Magento_PageBuilder/js/content-type</code> for static content types that do not have children (like our Quote). Use <code class="highlighter-rouge">Magento_PageBuilder/js/content-type-collection</code> for content types that can contain children (container content types). You can also create and specify your own component implementations, provided they conform to the Page Builder interfaces.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">preview_component</code></td>
+      <td>Optional. The <code class="highlighter-rouge">preview.js</code> file provides rendering logic to the Admin preview template. If your content type does not require any changes to Page Builder’s standard rendering logic, you can omit this attribute from the the <code class="highlighter-rouge">type</code> element. When you omit the attribute, Page Builder will use <code class="highlighter-rouge">Magento_PageBuilder/js/content-type/preview</code> by default.<br /><br />However, if you want to make changes to the option menu for your content type, or other customize other user-interactivity in the Admin, you need to create your own preview component as we have done for the Quote content type.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">master_component</code></td>
+      <td>Optional. The <code class="highlighter-rouge">master.js</code> file provides rendering logic to the master format storefront template. As with the <code class="highlighter-rouge">preview_component</code>, if your content type does not require any specific user-interactivity or other behavior when it’s displayed in the storefront, you can simply omit this attribute from the the <code class="highlighter-rouge">type</code> element. When you omit the attribute, Page Builder will use <code class="highlighter-rouge">Magento_PageBuilder/js/content-type/master</code> by default. <br /><br />In the Quote configuration, the <code class="highlighter-rouge">master_component</code> attribute is only included for discussion. It simply points to the Page Builder default <code class="highlighter-rouge">master.js</code> component that would be used the attribute was omitted.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="quote-preview_component">Quote <code class="highlighter-rouge">preview_component</code></h2>
+
+<p>The Quote <code class="highlighter-rouge">preview_component</code>  (<code class="highlighter-rouge">preview.js</code>) example is shown here in full for you to copy into your <code class="highlighter-rouge">preview.js</code> file, followed by an explanation of its key parts.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="nx">define</span><span class="p">([</span>
+  <span class="dl">'</span><span class="s1">Magento_PageBuilder/js/content-type/preview</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">PreviewBase</span><span class="p">)</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">$super</span><span class="p">;</span>
+    
+    <span class="kd">function</span> <span class="nx">Preview</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">PreviewBase</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">PreviewBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+    <span class="nx">$super</span> <span class="o">=</span> <span class="nx">PreviewBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+    
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">retrieveOptions</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">retrieveOptions</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">$super</span><span class="p">.</span><span class="nx">retrieveOptions</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+    
+    <span class="c1">// Change option menu icons</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">remove</span><span class="p">.</span><span class="nx">icon</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;i class='icon-admin-pagebuilder-error'&gt;&lt;/i&gt;</span><span class="dl">"</span><span class="p">;</span>
+    
+    <span class="c1">// Change tooltips</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">edit</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Open Editor</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">remove</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Delete</span><span class="dl">"</span><span class="p">;</span>
+    <span class="c1">// options.move.title = "Move";</span>
+    <span class="c1">// options.duplicate.title = "Duplicate";</span>
+    
+    <span class="c1">// Remove menu options</span>
+    <span class="c1">// delete options.move;</span>
+    <span class="c1">// delete options.duplicate;</span>
+    <span class="c1">// delete options.edit;</span>
+    <span class="c1">// delete options.remove;</span>
+    
+    <span class="k">return</span> <span class="nx">options</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="k">return</span> <span class="nx">Preview</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="extend-from-preview">Extend from <code class="highlighter-rouge">Preview</code></h3>
+
+<p>The first thing we do in our preview component is extend Page Builder’s <code class="highlighter-rouge">Preview</code> class (<code class="highlighter-rouge">magento2-page-builder/app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type/preview.ts</code>) by declaring it as a dependency and calling it from the preview component’s constructor as follows:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="nx">define</span><span class="p">([</span>
+  <span class="dl">'</span><span class="s1">Magento_PageBuilder/js/content-type/preview</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">PreviewBase</span><span class="p">)</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">$super</span><span class="p">;</span>
+    
+    <span class="kd">function</span> <span class="nx">Preview</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">PreviewBase</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">PreviewBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+    <span class="nx">$super</span> <span class="o">=</span> <span class="nx">PreviewBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You don’t have to extend <code class="highlighter-rouge">Preview</code> this way, but if you do, you get access to both its public and protected functions. In our Quote example, we need access to one protected function, discussed next.</p>
+
+<h3 id="customize-the-options-menu">Customize the options menu</h3>
+
+<p>Our goal for the Quote preview component is to customize the default Page Builder options menu for a content type, as shown here:</p>
+
+<p><img src="/devdocs/2.1/page-builder/docs/images/options-menu-default.png" alt="Create config file" /></p>
+
+<p>To do this, we need to override the protected <code class="highlighter-rouge">retrieveOptions()</code> function from the <code class="highlighter-rouge">Preview</code> class so we can change various options as shown here:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">retrieveOptions</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">retrieveOptions</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">$super</span><span class="p">.</span><span class="nx">retrieveOptions</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+    
+    <span class="c1">// Change option menu icons</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">remove</span><span class="p">.</span><span class="nx">icon</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;i class='icon-admin-pagebuilder-error'&gt;&lt;/i&gt;</span><span class="dl">"</span><span class="p">;</span>
+    
+    <span class="c1">// Change tooltips</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">edit</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Open Editor</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">remove</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Delete</span><span class="dl">"</span><span class="p">;</span>
+    <span class="c1">// options.move.title = "Move";</span>
+    <span class="c1">// options.duplicate.title = "Duplicate";</span>
+    
+    <span class="c1">// Remove menu options</span>
+    <span class="c1">// delete options.move;</span>
+    <span class="c1">// delete options.duplicate;</span>
+    <span class="c1">// delete options.edit;</span>
+    <span class="c1">// delete options.remove;</span>
+    
+    <span class="k">return</span> <span class="nx">options</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In the preceding code, we made changes to the options menu icons and tooltips. You can also remove options from the menu. For example, if you don’t want end-users to move or duplicate your content type, you can remove those options from your menu using <code class="highlighter-rouge">delete options.move</code> and <code class="highlighter-rouge">delete options.duplicate</code> as shown commented out in the code.</p>
+
+<p><img src="/devdocs/2.1/page-builder/docs/images/options-menu-custom.png" alt="Create config file" /></p>
+
+<p class="bs-callout bs-callout-info">Even though you can change the base option menu properties as described, we suggest you stick the the default options as much as possible to provide end-users with a consistent experience across Magento’s content types and other third-party content types that are included as time goes on.</p>
+
+<h2 id="quote-master_component">Quote <code class="highlighter-rouge">master_component</code></h2>
+
+<p>As mentioned previously, our Quote content type has no need for a master component. We are using Page Builder’s default master component file: <code class="highlighter-rouge">Magento_PageBuilder/js/content-type/master</code>.</p>
+
+<h2 id="next">Next</h2>
+
+<p><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-4-add-form.html">Step 4: Add form</a></p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-03-27">
+      Mar 27th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Application | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Commerce Cloud</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Overview</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/onboarding/onboarding-tasks.html">Onboarding tasks</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Architecture</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html">Starter architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">Starter develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html">Pro architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/requirements/cloud-requirements.html">Technologies and requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cloud-composer.html">Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/ece-tools-reference.html">ece-tools package</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/git-integration.html">Git</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-ssh.html">SSH and sFTP</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/new-relic.html">New Relic</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-integrate-blackfire.html">Blackfire.io</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/sendgrid.html">SendGrid</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html">Prepare for manual setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">Install Magento prerequisites</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-ssh.html">Enable SSH keys</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Set up the Magento file system owner</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html">Clone and branch the project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-install.html">Install Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-deploy.html">First time deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/debug.html">Optional - Configure Xdebug</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/sample-data.html">Optional - Install sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development.html">Docker development</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">Configure Xdebug for Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-database.html">Connect to the database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-testing.html">Functional testing in Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/cloud-integrations.html">Integrations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/bitbucket-integration.html">Bitbucket integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/github-integration.html">GitHub integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/health-notifications.html">Health notifications</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html">Import existing code into a project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html">Prepare your existing Magento Commerce system</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-import.html">Import Magento Commerce code</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configuration-overview.html">Configure your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configure-best-practices.html">Best practices for store configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/paypal-onboarding.html">Set up PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/custom-theme.html">Install a theme</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly.html">Configure Fastly services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize error pages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-waf-service.html">Managed Cloud WAF</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-image-optimization.html">Image Optimization</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom VCL snippets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-blacklist.html">Custom blacklist VCL</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/trouble-fastly.html">Fastly troubleshooting</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure environments</a><ul><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html">Application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Build and deploy</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/setup-notifications.html">Set up notifications</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/log-handlers.html">Logging handlers</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-intro.html">Environment variables</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-build.html">Build variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html">Cloud variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-deploy.html">Deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/working-with-variables.html">Working with variables</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html">Routes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-cache.html">Caching</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-redir.html">Redirects</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-ssi.html">Server side includes</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-mysql.html">Set up MySQL service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-redis.html">Set up Redis service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-elastic.html">Set up Elasticsearch service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-rabbit.html">Set up RabbitMQ service</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration management for store settings</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-initial.html">Example of managing system-specific settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html">Manage your project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-basic.html">Configure your project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-start.html">Project structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/user-admin.html">Create and manage users</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html">Manage branches with the Interface</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html">Manage branches with the CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">Snapshots and backup management</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/optimize-cloud-deployment.html">Optimize deployment</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Cloud deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/reduce-downtime.html">Zero downtime deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/static-content-deployment.html">Static content deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/smart-wizards.html">Smart wizards</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/discover-deploy.html">Deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/continuous-deployment.html">Continuous deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-prot.html">Protective block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-sanity-check.html">Build and deploy on local</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate-prereq.html">Prepare to deploy to Staging and Production</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code and migrate static files and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-test.html">Test deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live.html">Go live and launch</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/launch-steps.html">Launch steps</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Troubleshooting</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/troubleshoot-deployment.html">Troubleshoot deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/environments-logs.html">View logs for troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_ce-creds.html">Incorrect credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_proj-startover.html">Resolve issues with a new project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_comp-deploy-fail.html">Component deployment failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/redis-troubleshooting.html">Redis troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/reset-cron-jobs.html">Reset cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-crypt-key-variable.html">Resolve issues with encryption key</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-error-html-minification.html">Resolve issues with HTML minification</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-google-analytics-deploy.html">Resolve issues with Google Analytics during deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/restore-configuration-files.html">Restore configuration files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/site-availability.html">Site availability</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/robots-sitemap.html">Add site map and search engine robots</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/theme-troubleshooting.html">Theme troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/message-queues.html">Message queues</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and patches</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release notes for ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html">Upgrade to use ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-update.html">Update ece-tools version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-patch.html">Apply custom patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade.html">Upgrade Magento version</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Application</h1>
+</section>
+
+			<p>The <code class="highlighter-rouge">.magento.app.yaml</code> file controls the way your application builds and deploys. Although Magento Commerce Cloud supports multiple applications per project, typically, a project has a single application with the <code class="highlighter-rouge">.magento.app.yaml</code> file at the root of the repository.</p>
+
+<p>The <code class="highlighter-rouge">.magento.app.yaml</code> has many default values, see <a href="https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml">a sample <code class="highlighter-rouge">.magento.app.yaml</code> file</a>. Always review the <code class="highlighter-rouge">.magento.app.yaml</code> for your installed version. This file can differ across Magento Commerce Cloud versions.</p>
+
+<p class="bs-callout bs-callout-info">For Pro projects <strong>created before October 23, 2017</strong>, the changes you make using this YAML file affects your Integration environment only. To make these changes in a Staging or Production environment, you must <a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a>.</p>
+
+<h2 id="properties">Properties</h2>
+
+<p>Use the following properties to build your application configuration file. The <code class="highlighter-rouge">name</code>, <code class="highlighter-rouge">type</code>, <code class="highlighter-rouge">disk</code>, and one <code class="highlighter-rouge">web</code> or <code class="highlighter-rouge">worker</code> block is required.</p>
+
+<h3 id="name"><code class="highlighter-rouge">name</code></h3>
+
+<p>Magento Commerce supports multiple applications in a project, so you need a unique name that identifies the application in the project. You must use lower case alphanumeric characters, such as <code class="highlighter-rouge">a</code> to <code class="highlighter-rouge">z</code> and <code class="highlighter-rouge">0</code> to <code class="highlighter-rouge">9</code> for the name.</p>
+
+<p>The name is used in the <a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html"><code class="highlighter-rouge">routes.yaml</code></a> file to define the HTTP upstream (by default, <code class="highlighter-rouge">php:http</code>). For example, if the value of <code class="highlighter-rouge">name</code> is <code class="highlighter-rouge">app</code>, you must use <code class="highlighter-rouge">app:http</code> in the upstream field. You can also use this name in multi-application relationships.</p>
+
+<p class="bs-callout bs-callout-info">Do not change the name of an application after it has been deployed.</p>
+
+<h3 id="type-and-build"><code class="highlighter-rouge">type</code> and <code class="highlighter-rouge">build</code></h3>
+
+<p>The <code class="highlighter-rouge">type</code>  and <code class="highlighter-rouge">build</code> properties provide information about the base container image to build and run the project.</p>
+
+<p>The supported <code class="highlighter-rouge">type</code> language is <a href="https://glossary.magento.com/php">PHP</a>. Specify the PHP version as follows:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="na">type</span><span class="pi">:</span> <span class="s">php:7.1</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">build</code> property determines what happens by default when building the project. The <code class="highlighter-rouge">flavor</code> specifies a default set of build tasks to run. The supported flavor is <code class="highlighter-rouge">composer</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="na">build</span><span class="pi">:</span>
+    <span class="na">flavor</span><span class="pi">:</span> <span class="s">composer</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="access"><code class="highlighter-rouge">access</code></h3>
+
+<p>The <em>access</em> property indicates a minimum user role level that is allowed SSH access to the environments. The available user roles are:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">admin</code>—Can change settings and execute actions in the environment. Also has <em>contributor</em> and <em>viewer</em> rights.</li>
+  <li><code class="highlighter-rouge">contributor</code>—Can push code to this environment and branch from the environment. Also has <em>viewer</em> rights.</li>
+  <li><code class="highlighter-rouge">viewer</code>—Can view the environment only.</li>
+</ul>
+
+<p>The default user role is <code class="highlighter-rouge">contributor</code>, which restricts the SSH access from users with only <em>viewer</em> rights. You can change the user role to <code class="highlighter-rouge">viewer</code> to allow SSH access for users with only <em>viewer</em> rights:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="na">access</span><span class="pi">:</span>
+    <span class="na">ssh</span><span class="pi">:</span> <span class="s">viewer</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="relationships"><code class="highlighter-rouge">relationships</code></h3>
+
+<p>Defines the service mapping in your application.</p>
+
+<p>The left-hand side is the name of the relationship as it will be exposed to the application in the <code class="highlighter-rouge">MAGENTO_CLOUD_RELATIONSHIPS</code> environment variable. The right-hand side is in the form <code class="highlighter-rouge">&lt;service-name&gt;:&lt;endpoint-name&gt;</code>, where <code class="highlighter-rouge">&lt;service-name&gt;</code> comes from <code class="highlighter-rouge">.magento/services.yaml</code> and  <code class="highlighter-rouge">&lt;endpoint-name&gt;</code> should be the same as the value of <code class="highlighter-rouge">type</code>  declared in that same file.</p>
+
+<p>Example of valid options are:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>database: "mysql:mysql"
+database2: "mysql2:mysql"
+cache: "arediscache:redis"
+search: "searchengine:solr"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>See <a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a> for a full list of currently supported service types and endpoints.</p>
+
+<h3 id="web"><code class="highlighter-rouge">web</code></h3>
+
+<p>The <code class="highlighter-rouge">web</code> property defines how your application is exposed to the web (in HTTP). It determines how the web application serves content— from the front-controller script to a non-static request to an <code class="highlighter-rouge">index.php</code> file on the root. We support any directory structure so the static file can be in a sub directory, and the <code class="highlighter-rouge">index.php</code> file can be further down.</p>
+
+<p>You can specify the following attributes for the <code class="highlighter-rouge">web</code> property:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">document_root</code></td>
+      <td>The path relative to the root of the application that is exposed on the web. Typical values include <code class="highlighter-rouge">/public</code> and <code class="highlighter-rouge">/web</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">passthru</code></td>
+      <td>The URL used in the event that a static file or PHP file cannot be found. This URL is typically the front controller for your applications, often <code class="highlighter-rouge">/index.php</code> or <code class="highlighter-rouge">/app.php</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">index_files</code></td>
+      <td>Static files, such as <code class="highlighter-rouge">index.html</code>, to serve your application. This key expects a collection. You must include the static file(s) in the whitelist as an index file, like <code class="highlighter-rouge">- \.html$</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">blacklist</code></td>
+      <td>A list of files that should never be executed. Has no effect on static files.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">whitelist</code></td>
+      <td>A list of static files (as regular expressions) that can be served. Dynamic files (for example, PHP files) are treated as static files and have their source code served, but they are not executed.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">expires</code></td>
+      <td>The number of seconds to cache whitelisted content in the browser. This attribute enables the cache-control and expires headers for static content. If this value is not set, the <code class="highlighter-rouge">expires</code> directive and resulting headers are not included when serving static content files.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Contrary to standard <code class="highlighter-rouge">.htaccess</code> approaches that accept a <em>blacklist</em> and allow access to everything not on a specific list, we accept a <em>whitelist</em>, which means that any request that does not match triggers a 404 error and passes through to the  URL specified by the <code class="highlighter-rouge">passthru</code> attribute.</p>
+
+<p>Our default configuration allows the following:</p>
+
+<ul>
+  <li>
+    <p>From the root (<code class="highlighter-rouge">/</code>) path, only web and media can be accessed.<br />
+ For versions 2.1.4 to 2.1.10, the following example shows the required rules entry for the <code class="highlighter-rouge">robots.txt</code> file:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> <span class="na">/robots\.txt$</span><span class="pi">:</span>
+     <span class="na">passthru</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/media/robots.txt"</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>From the <code class="highlighter-rouge">~/pub/static</code> and <code class="highlighter-rouge">~/pub/media</code> paths, any file can be accessed</p>
+  </li>
+</ul>
+
+<p>The following example shows the default configuration for a set of web-accessible locations associated with an entry in the <a href="#mounts"><code class="highlighter-rouge">mounts</code> property</a>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre> <span class="c1"># The configuration of app when it is exposed to the web.</span>
+<span class="na">web</span><span class="pi">:</span>
+    <span class="na">locations</span><span class="pi">:</span>
+        <span class="s2">"</span><span class="s">/"</span><span class="err">:</span>
+            <span class="c1"># The public directory of the app, relative to its root.</span>
+            <span class="na">root</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pub"</span>
+            <span class="c1"># The front-controller script to send non-static requests to.</span>
+            <span class="na">passthru</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/index.php"</span>
+            <span class="na">index</span><span class="pi">:</span>
+                <span class="pi">-</span> <span class="s">index.php</span>
+            <span class="na">expires</span><span class="pi">:</span> <span class="s">-1</span>
+            <span class="na">scripts</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">allow</span><span class="pi">:</span> <span class="no">false</span>
+            <span class="na">rules</span><span class="pi">:</span>
+                <span class="s">\.(css|js|map|hbs|gif|jpe?g|png|tiff|wbmp|ico|jng|bmp|svgz|midi?|mp?ga|mp2|mp3|m4a|ra|weba|3gpp?|mp4|mpe?g|mpe|ogv|mov|webm|flv|mng|asx|asf|wmv|avi|ogx|swf|jar|ttf|eot|woff|otf|html?)$</span><span class="err">:</span>
+                    <span class="na">allow</span><span class="pi">:</span> <span class="no">true</span>
+                <span class="na">^/sitemap(.*)\.xml$</span><span class="pi">:</span>
+                    <span class="na">passthru</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/media/sitemap$1.xml"</span>
+    <span class="err">    </span><span class="s2">"</span><span class="s">/media"</span><span class="err">:</span>
+            <span class="na">root</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pub/media"</span>
+            <span class="na">allow</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">scripts</span><span class="pi">:</span> <span class="no">false</span>
+            <span class="na">expires</span><span class="pi">:</span> <span class="s">1y</span>
+            <span class="na">passthru</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/get.php"</span>
+    <span class="err">    </span><span class="s2">"</span><span class="s">/static"</span><span class="err">:</span>
+            <span class="na">root</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pub/static"</span>
+            <span class="na">allow</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">scripts</span><span class="pi">:</span> <span class="no">false</span>
+            <span class="na">expires</span><span class="pi">:</span> <span class="s">1y</span>
+            <span class="na">passthru</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/front-static.php"</span>
+            <span class="na">rules</span><span class="pi">:</span>
+                <span class="s">^/static/version\d+/(?&lt;resource&gt;.*)$</span><span class="err">:</span>
+                    <span class="na">passthru</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/static/$resource"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="disk"><code class="highlighter-rouge">disk</code></h3>
+
+<p>Defines the persistent disk size of the application in MB.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="na">disk</span><span class="pi">:</span> <span class="m">2048</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p class="bs-callout bs-callout-info">The minimal recommended disk size is 256MB. If you see the error <code class="highlighter-rouge">UserError: Error building the project: Disk size may not be smaller than 128MB</code>, increase the size to 256MB.</p>
+
+<h3 id="mounts"><code class="highlighter-rouge">mounts</code></h3>
+
+<p>An object whose keys are paths relative to the root of the application. The mount is a writable area on the disk for files. The following is a default list of mounts configured in the <code class="highlighter-rouge">magento.app.yaml</code> file using the <code class="highlighter-rouge">volume_id[/subpath]</code> syntax:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre> <span class="c1"># The mounts that will be performed when the package is deployed.</span>
+<span class="na">mounts</span><span class="pi">:</span>
+    <span class="s2">"</span><span class="s">var"</span><span class="err">:</span> <span class="s2">"</span><span class="s">shared:files/var"</span>
+    <span class="s2">"</span><span class="s">app/etc"</span><span class="err">:</span> <span class="s2">"</span><span class="s">shared:files/etc"</span>
+    <span class="s2">"</span><span class="s">pub/media"</span><span class="err">:</span> <span class="s2">"</span><span class="s">shared:files/media"</span>
+    <span class="s2">"</span><span class="s">pub/static"</span><span class="err">:</span> <span class="s2">"</span><span class="s">shared:files/static"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The format for adding your mount to this list is as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>"/public/sites/default/files": "shared:files/files"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">shared</code>—Shares a volume between your applications inside an environment.</li>
+  <li><code class="highlighter-rouge">disk</code>—Defines the size available for the shared volume.</li>
+</ul>
+
+<p class="bs-callout bs-callout-warning">Important: The subpath portion of the mount is the unique identifier of the files area. If changed, files at the old location will be permanently lost. Do not change this value once your site has data unless you really want to lose all existing data.</p>
+
+<p>You can make the mount web accessible by adding it to the <a href="#web"><code class="highlighter-rouge">web</code></a> block of locations.</p>
+
+<h3 id="dependencies"><code class="highlighter-rouge">dependencies</code></h3>
+
+<p>Enables you to specify dependencies that your application might need during the build process.</p>
+
+<p>Magento Commerce supports dependencies on the following
+languages:</p>
+
+<ul>
+  <li>PHP</li>
+  <li>Ruby</li>
+  <li>NodeJS</li>
+</ul>
+
+<p>Those dependencies are independent of the eventual dependencies of your application, and are available in the <code class="highlighter-rouge">PATH</code>, during the build process and in the runtime environment of your application.</p>
+
+<p>You can specify those dependencies as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>ruby:
+   sass: "~3.4"
+nodejs:
+   grunt-cli: "~0.3"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="hooks"><code class="highlighter-rouge">hooks</code></h3>
+
+<p>Use the <code class="highlighter-rouge">hooks</code> section to run shell commands during the build, deploy, and post-deploy phases:</p>
+
+<ul>
+  <li>
+    <p><strong><code class="highlighter-rouge">build</code></strong>—Execute commands <em>before</em> packaging your application. Services, such as the database or Redis, are not available at this time since the application has not been deployed yet. You must add custom commands <em>before</em> the default <code class="highlighter-rouge">php ./vendor/bin/ece-tools</code> command so that custom-generated content continues to the deployment phase.</p>
+  </li>
+  <li>
+    <p><strong><code class="highlighter-rouge">deploy</code></strong>—Execute commands <em>after</em> packaging and deploying your application. You can access other services at this point. Since the default <code class="highlighter-rouge">php ./vendor/bin/ece-tools</code> command copies the <code class="highlighter-rouge">app/etc</code> directory to the correct location, you must add custom commands <em>after</em> the deploy command to prevent custom commands from failing.</p>
+  </li>
+  <li>
+    <p><strong><code class="highlighter-rouge">post_deploy</code></strong>—Execute commands <em>after</em> deploying your application and <em>after</em> the container begins accepting connections. The <code class="highlighter-rouge">post_deploy</code> hook clears the cache and preloads (warms) the cache. You can customize the list of pages using the <code class="highlighter-rouge">WARM_UP_PAGES</code> variable in the <a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy stage</a>. It is available only for Pro projects that contain <a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Staging and Production environments in the Project Web UI</a> and for Starter projects. Although not required, this works in tandem with the <code class="highlighter-rouge">SCD_ON_DEMAND</code> environment variable.</p>
+  </li>
+</ul>
+
+<p>Add CLI commands under the <code class="highlighter-rouge">build</code>, <code class="highlighter-rouge">deploy</code>, or <code class="highlighter-rouge">post_deploy</code> sections <em>before</em> the <code class="highlighter-rouge">ece-tools</code> command:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="na">hooks</span><span class="pi">:</span>
+    <span class="c1"># We run build hooks before your application has been packaged.</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">php ./vendor/bin/ece-tools build</span>
+    <span class="c1"># We run deploy hook after your application has been deployed and started.</span>
+    <span class="na">deploy</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">php ./vendor/bin/ece-tools deploy</span>
+    <span class="c1"># We run post deploy hook to clean and warm the cache. Available with ECE-Tools 2002.0.10.</span>
+    <span class="na">post_deploy</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">php ./vendor/bin/ece-tools post-deploy</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Also, you can customize the build phase further by using the <code class="highlighter-rouge">generate</code> and <code class="highlighter-rouge">transfer</code> commands to perform additional actions when specifically building code or moving files.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="na">hooks</span><span class="pi">:</span>
+    <span class="c1"># We run build hooks before your application has been packaged.</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">set -e</span>
+        <span class="s">php ./vendor/bin/ece-tools build:generate</span>
+        <span class="s"># php /path/to/your/script</span>
+        <span class="s">php ./vendor/bin/ece-tools build:transfer</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">set -e</code>—causes hooks to fail on the first failed command, instead of the final failed command.</li>
+  <li><code class="highlighter-rouge">build:generate</code>—applies patches, validates configuration, generates DI, and generates static content if SCD is enabled for build phase.</li>
+  <li><code class="highlighter-rouge">build:transfer</code>—transfers generated code and static content to the final destination.</li>
+</ul>
+
+<p>The commands run from the application (<code class="highlighter-rouge">/app</code>) directory. You can use the <code class="highlighter-rouge">cd</code> command to change the directory. The hooks fail if the final command in them fails. To cause them to fail on the first failed command, add <code class="highlighter-rouge">set -e</code> to the beginning of the hook.</p>
+
+<h4 id="to-compile-sass-files-using-grunt">To compile Sass files using grunt:</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="na">dependencies</span><span class="pi">:</span>
+    <span class="na">ruby</span><span class="pi">:</span>
+        <span class="na">sass</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.4.7"</span>
+    <span class="na">nodejs</span><span class="pi">:</span>
+        <span class="na">grunt-cli</span><span class="pi">:</span> <span class="s2">"</span><span class="s">~0.1.13"</span>
+
+<span class="na">hooks</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">cd public/profiles/project_name/themes/custom/theme_name</span>
+        <span class="s">npm install</span>
+        <span class="s">grunt</span>
+        <span class="s">cd</span>
+        <span class="s">php ./vendor/bin/ece-tools</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You must compile Sass files using <code class="highlighter-rouge">grunt</code> before static content deployment, which happens during the build. Place the <code class="highlighter-rouge">grunt</code> command before the <code class="highlighter-rouge">build</code> command.</p>
+
+<h3 id="crons"><code class="highlighter-rouge">crons</code></h3>
+
+<p>Describes processes that are triggered on a schedule. We recommend you run <code class="highlighter-rouge">cron</code> as the <a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Magento file system owner</a>. Do <em>not</em> run cron as <code class="highlighter-rouge">root</code> or as the web server user.</p>
+
+<p><code class="highlighter-rouge">crons</code> support the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">spec</code>—The cron specification. For Starter environments and Pro Integration environments, the minimum interval is once per five minutes and once per one minute in Pro Staging and Production environments. You need to complete <a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html#add-cron">additional configurations</a> for crons in those environments.</li>
+  <li><code class="highlighter-rouge">cmd</code>—The command to execute.</li>
+</ul>
+
+<p>A cron job is well suited for the following tasks:</p>
+
+<ul>
+  <li>They need to happen on a fixed schedule, not continually.</li>
+  <li>The task itself is not especially long, as a running cron job will block a new deployment.</li>
+  <li>Or it is long, but can be easily divided into many small queued tasks.</li>
+  <li>A delay between when a task is registered and when it actually happens is acceptable.</li>
+</ul>
+
+<p>A sample Magento cron job follows:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="na">crons</span><span class="pi">:</span>
+    <span class="na">cronrun</span><span class="pi">:</span>
+        <span class="na">spec</span><span class="pi">:</span> <span class="s2">"</span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*"</span>
+        <span class="na">cmd</span><span class="pi">:</span> <span class="s2">"</span><span class="s">php</span><span class="nv"> </span><span class="s">bin/magento</span><span class="nv"> </span><span class="s">cron:run"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For Magento Commerce Cloud 2.1.X, you can use only workers and <a href="#crons">cron jobs</a>. For Magento Commerce Cloud 2.2.X, cron jobs launch consumers to process batches of messages, and do not require additional configuration.</p>
+
+<p>For more information, see <a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a>.</p>
+
+<h2 id="variables">Variables</h2>
+
+<p>The following environment variables are included in <code class="highlighter-rouge">.magento.app.yaml</code>. These are required for Magento Commerce Cloud 2.2.X.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="na">variables</span><span class="pi">:</span>
+    <span class="na">env</span><span class="pi">:</span>
+        <span class="na">CONFIG__DEFAULT__PAYPAL_ONBOARDING__MIDDLEMAN_DOMAIN</span><span class="pi">:</span> <span class="s1">'</span><span class="s">payment-broker.magento.com'</span>
+        <span class="na">CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Magento_Enterprise_Cloud_BT'</span>
+        <span class="na">CONFIG__STORES__DEFAULT__PAYPAL__NOTATION_CODE</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Magento_Enterprise_Cloud'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="configure-php-options">Configure PHP options</h2>
+
+<p>You can choose which version of PHP to run in your <code class="highlighter-rouge">.magento.app.yaml</code> file:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>name: mymagento
+type: php:7.1
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p class="bs-callout bs-callout-info">Magento Commerce Cloud supports PHP 7.1 and later. For Pro projects <strong>created before October 23, 2017</strong>, you must open a <a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">support ticket</a> to use PHP 7.1 on your Pro Staging and Production environments.</p>
+
+<h3 id="php-extensions">PHP extensions</h3>
+
+<p>You can enable additional PHP extensions in the <code class="highlighter-rouge">runtime:extension</code> section. Also, the extensions specified become available in the Docker PHP containers.</p>
+
+<blockquote>
+  <p>.magento.app.yaml</p>
+</blockquote>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="na">runtime</span><span class="pi">:</span>
+    <span class="na">extensions</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">sockets</span>
+        <span class="pi">-</span> <span class="s">sodium</span>
+        <span class="pi">-</span> <span class="s">ssh2</span>
+    <span class="na">disabled_extensions</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">bcmath</span>
+        <span class="pi">-</span> <span class="s">bz2</span>
+        <span class="pi">-</span> <span class="s">calendar</span>
+        <span class="pi">-</span> <span class="s">exif</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="to-view-the-current-list-of-php-extensions">To view the current list of PHP extensions:</h4>
+
+<p>Use SSH to log in to an environment and list the PHP extensions.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php <span class="nt">-m</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For details about a specific PHP extension, see the <a href="https://www.php.net/manual/en/extensions.alphabetical.php">PHP Extension List</a>.</p>
+
+<p>Magento Commerce Cloud supports the following extensions:</p>
+
+<ul>
+  <li>Default extensions:
+    <ul>
+      <li><code class="highlighter-rouge">bcmath</code></li>
+      <li><code class="highlighter-rouge">bz2</code></li>
+      <li><code class="highlighter-rouge">calendar</code></li>
+      <li><code class="highlighter-rouge">exif</code></li>
+      <li><code class="highlighter-rouge">gd</code></li>
+      <li><code class="highlighter-rouge">gettext</code></li>
+      <li><code class="highlighter-rouge">intl</code></li>
+      <li><code class="highlighter-rouge">mysqli</code></li>
+      <li><code class="highlighter-rouge">pcntl</code></li>
+      <li><code class="highlighter-rouge">pdo_mysql</code></li>
+      <li><code class="highlighter-rouge">soap</code></li>
+      <li><code class="highlighter-rouge">sockets</code></li>
+      <li><code class="highlighter-rouge">sysvmsg</code></li>
+      <li><code class="highlighter-rouge">sysvsem</code></li>
+      <li><code class="highlighter-rouge">sysvshm</code></li>
+      <li><code class="highlighter-rouge">opcache</code></li>
+      <li><code class="highlighter-rouge">zip</code></li>
+    </ul>
+  </li>
+  <li>Extensions that are installed and cannot be uninstalled:
+    <ul>
+      <li><code class="highlighter-rouge">ctype</code></li>
+      <li><code class="highlighter-rouge">curl</code></li>
+      <li><code class="highlighter-rouge">date</code></li>
+      <li><code class="highlighter-rouge">dom</code></li>
+      <li><code class="highlighter-rouge">fileinfo</code></li>
+      <li><code class="highlighter-rouge">filter</code></li>
+      <li><code class="highlighter-rouge">ftp</code></li>
+      <li><code class="highlighter-rouge">hash</code></li>
+      <li><code class="highlighter-rouge">iconv</code></li>
+      <li><code class="highlighter-rouge">json</code></li>
+      <li><code class="highlighter-rouge">mbstring</code></li>
+      <li><code class="highlighter-rouge">mysqlnd</code></li>
+      <li><code class="highlighter-rouge">openssl</code></li>
+      <li><code class="highlighter-rouge">pcre</code></li>
+      <li><code class="highlighter-rouge">pdo</code></li>
+      <li><code class="highlighter-rouge">pdo_sqlite</code></li>
+      <li><code class="highlighter-rouge">phar</code></li>
+      <li><code class="highlighter-rouge">posix</code></li>
+      <li><code class="highlighter-rouge">readline</code></li>
+      <li><code class="highlighter-rouge">session</code></li>
+      <li><code class="highlighter-rouge">sqlite3</code></li>
+      <li><code class="highlighter-rouge">tokenizer</code></li>
+      <li><code class="highlighter-rouge">xml</code></li>
+      <li><code class="highlighter-rouge">xmlreader</code></li>
+      <li><code class="highlighter-rouge">xmlwriter</code></li>
+    </ul>
+  </li>
+  <li>Extensions that can be installed and uninstalled as needed:
+    <ul>
+      <li><code class="highlighter-rouge">bcmath</code></li>
+      <li><code class="highlighter-rouge">bz2</code></li>
+      <li><code class="highlighter-rouge">calendar</code></li>
+      <li><code class="highlighter-rouge">exif</code></li>
+      <li><code class="highlighter-rouge">gd</code></li>
+      <li><code class="highlighter-rouge">geoip</code></li>
+      <li><code class="highlighter-rouge">gettext</code></li>
+      <li><code class="highlighter-rouge">gmp</code></li>
+      <li><code class="highlighter-rouge">igbinary</code></li>
+      <li><code class="highlighter-rouge">imagick</code></li>
+      <li><code class="highlighter-rouge">imap</code></li>
+      <li><code class="highlighter-rouge">intl</code></li>
+      <li><code class="highlighter-rouge">ldap</code></li>
+      <li><code class="highlighter-rouge">mailparse</code></li>
+      <li><code class="highlighter-rouge">mcrypt</code></li>
+      <li><code class="highlighter-rouge">msgpack</code></li>
+      <li><code class="highlighter-rouge">mysqli</code></li>
+      <li><code class="highlighter-rouge">oauth</code></li>
+      <li><code class="highlighter-rouge">opcache</code></li>
+      <li><code class="highlighter-rouge">pdo_mysql</code></li>
+      <li><code class="highlighter-rouge">propro</code></li>
+      <li><code class="highlighter-rouge">pspell</code></li>
+      <li><code class="highlighter-rouge">raphf</code></li>
+      <li><code class="highlighter-rouge">recode</code></li>
+      <li><code class="highlighter-rouge">redis</code></li>
+      <li><code class="highlighter-rouge">shmop</code></li>
+      <li><code class="highlighter-rouge">soap</code></li>
+      <li><code class="highlighter-rouge">sockets</code></li>
+      <li><code class="highlighter-rouge">sodium</code></li>
+      <li><code class="highlighter-rouge">ssh2</code></li>
+      <li><code class="highlighter-rouge">sysvmsg</code></li>
+      <li><code class="highlighter-rouge">sysvsem</code></li>
+      <li><code class="highlighter-rouge">sysvshm</code></li>
+      <li><code class="highlighter-rouge">tidy</code></li>
+      <li><code class="highlighter-rouge">xdebug</code></li>
+      <li><code class="highlighter-rouge">xmlrpc</code></li>
+      <li><code class="highlighter-rouge">xsl</code></li>
+      <li><code class="highlighter-rouge">yaml</code></li>
+      <li><code class="highlighter-rouge">zip</code></li>
+      <li><code class="highlighter-rouge">pcntl</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p class="bs-callout-warning">PHP compiled with debug is not supported and the Probe may conflict with XDebug or XHProf. Disable those extensions when enabling the Probe. The Probe conflicts with some PHP extensions like Pinba or IonCube.</p>
+
+<h3 id="customize-phpini-settings">Customize <code class="highlighter-rouge">php.ini</code> settings</h3>
+
+<p>You can also create and push a <code class="highlighter-rouge">php.ini</code> file that is appended to the configuration maintained by Magento Commerce.</p>
+
+<p>In your repository, the <code class="highlighter-rouge">php.ini</code> file should be added to the root of the application (the repository root).</p>
+
+<p class="bs-callout bs-callout-info">Configuring PHP settings improperly can cause issues. We recommend only advanced administrators set these options.</p>
+
+<p>For example, if you need to increase the PHP memory limit:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>memory_limit <span class="o">=</span> 756M
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For a list of recommended PHP configuration settings, see <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/php-settings.html">Required PHP settings</a>.</p>
+
+<p>After pushing your file, you can check that the custom PHP configuration has been added to your environment by <a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html#env-start-tunn">creating an SSH tunnel</a> to your environment and entering:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cat</span> /etc/php5/fpm/php.ini
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2023-04-12">
+      Apr 12th, 2023
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

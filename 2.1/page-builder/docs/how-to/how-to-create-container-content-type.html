@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>How to create a container content type | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Page Builder</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/">What is Page Builder?</a></li><li class="" role="menuitem"><span>Getting started</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/install-pagebuilder.html">Install Page Builder</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/view-pagebuilder.html">View Page Builder</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/install-pagebuilder-examples.html">Install Page Builder Examples</a></li></ul></li><li class="" role="menuitem"><span>Extend a content type</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/overview.html">Overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-1-create-extension-module.html">Step 1. Create extension module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-2-extend-appearances.html">Step 2. Extend appearances</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-3-extend-forms.html">Step 3. Extend forms</a></li></ul></li><li class="" role="menuitem"><span>Create a content type</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/overview.html">Overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-1-add-configuration.html">Step 1. Add configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-2-add-templates.html">Step 2. Add templates</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-3-add-components.html">Step 3. Add components</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-4-add-form.html">Step 4. Add form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-5-add-styles.html">Step 5. Add styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-6-add-icon.html">Step 6. Add an icon</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/summary.html">Summary</a></li></ul></li><li class="" role="menuitem"><span>How-Tos</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-customize-panel.html">How to customize the panel</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-image-uploader.html">How to add an image uploader</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-storefront-widget.html">How to add a storefront widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-text-editor.html">How to add a text editor</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-custom-toolbar.html">How to add a custom toolbar</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-icons-images.html">How to add icons and images</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-change-breakpoints.html">How to change breakpoints</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-additional-configurations.html">How to add additional configurations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-block-chooser.html">How to add a block chooser</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-full-width-layouts.html">How to use full-width layouts</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-customize-selectors.html">How to customize selectors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-apply-product-conditions.html">How to apply product conditions</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-server-side-previews.html">How to use server-side previews</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-pagebuilder-for-product-attributes.html">How to use Page Builder for product attributes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-deactivate-pagebuilder.html">How to deactivate Page Builder</a></li></ul></li><li class="" role="menuitem"><span>BlueFoot content migration</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/">Overview of content migration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/install-migration-module.html">Install the migration module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/run-migration-module.html">Run the migration module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/how-content-migration-works.html">How content migration works</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/migrate-content-custom-blocks.html">Migrate content from custom blocks</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/migrate-other-bluefoot-content.html">Migrate other BlueFoot content</a></li></ul></li><li class="" role="menuitem"><span>Reference</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/configurations.html">Configurations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/data-store.html">Datastore</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/events.html">Events</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/knockout-bindings.html">Knockout bindings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/release-notes.html">Release notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/comp-status2.html">Component status</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-page-builder/blob/1.0-develop/CONTRIBUTING.md">Contribution guide</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">How to create a container content type</h1>
+</section>
+
+			<p>This tutorial takes you through the process of creating a module with the name <code class="highlighter-rouge">VendorName_CustomContainer</code>.</p>
+
+<p>The module creates a new custom container group content type with a <code class="highlighter-rouge">left</code> and <code class="highlighter-rouge">right</code> appearance.
+It also creates a new custom container content type for the container group.</p>
+
+<p>Each container group has 3 containers in a grid and styled differently based on the appearance of the container group.</p>
+
+<h2 id="before-you-begin">Before you begin</h2>
+
+<p>For creating a generic content type and content type collection, see [How to develop a new content type][].</p>
+
+<p>Make sure you know how to register your custom module.
+See <a href="https://devdocs.magento.com/guides/v2.2/extension-dev-guide/build/component-registration.html">Register your component</a> in devdocs.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<h3 id="custom-container-group">Custom container group</h3>
+
+<p>Create the following file to hold the configuration for the custom container group:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>view/base/pagebuilder/content_type/custom_container_group.xml
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Write the following content into this configuration file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_PageBuilder:etc/content_type.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;type</span> <span class="na">name=</span><span class="s">"custom-container-group"</span>
+          <span class="na">label=</span><span class="s">"Custom Containers"</span>
+          <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/content-type-collection"</span>
+          <span class="na">preview_component=</span><span class="s">"VendorName_CustomContainer/js/content-type/custom-container-group/preview"</span>
+          <span class="na">master_component=</span><span class="s">"Magento_PageBuilder/js/content-type/master-collection"</span>
+          <span class="na">form=</span><span class="s">"pagebuilder_custom_container_group_form"</span>
+          <span class="na">menu_section=</span><span class="s">"general"</span>
+          <span class="na">icon=</span><span class="s">"icon-pagebuilder-row"</span>
+          <span class="na">sortOrder=</span><span class="s">"1"</span>
+          <span class="na">translate=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;parents</span> <span class="na">default_policy=</span><span class="s">"deny"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;parent</span> <span class="na">name=</span><span class="s">"stage"</span> <span class="na">policy=</span><span class="s">"allow"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/parents&gt;</span>
+        <span class="nt">&lt;children</span> <span class="na">default_policy=</span><span class="s">"deny"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"custom-container"</span> <span class="na">policy=</span><span class="s">"allow"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/children&gt;</span>
+        <span class="nt">&lt;appearances&gt;</span>
+            <span class="nt">&lt;appearance</span> <span class="na">default=</span><span class="s">"true"</span>
+                        <span class="na">name=</span><span class="s">"left"</span>
+                        <span class="na">preview_template=</span><span class="s">"VendorName_CustomContainer/content-type/custom-container-group/left/preview"</span>
+                        <span class="na">master_template=</span><span class="s">"VendorName_CustomContainer/content-type/custom-container-group/left/master"</span>
+                        <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/master-format/read/configurable"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;elements&gt;</span>
+                    <span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"text_align"</span> <span class="na">source=</span><span class="s">"text_align"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border"</span> <span class="na">source=</span><span class="s">"border_style"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/border-style"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_color"</span> <span class="na">source=</span><span class="s">"border_color"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/color"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_width"</span> <span class="na">source=</span><span class="s">"border_width"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/remove-px"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_radius"</span> <span class="na">source=</span><span class="s">"border_radius"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/remove-px"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"margins"</span> <span class="na">storage_key=</span><span class="s">"margins_and_padding"</span> <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/property/margins"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/margins"</span> <span class="na">preview_converter=</span><span class="s">"Magento_PageBuilder/js/content-type/row/converter/style/margins"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"padding"</span> <span class="na">storage_key=</span><span class="s">"margins_and_padding"</span> <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/property/paddings"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/paddings"</span> <span class="na">preview_converter=</span><span class="s">"Magento_PageBuilder/js/content-type/row/converter/style/paddings"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">source=</span><span class="s">"data-content-type"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"appearance"</span> <span class="na">source=</span><span class="s">"data-appearance"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;css</span> <span class="na">name=</span><span class="s">"css_classes"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/element&gt;</span>
+                <span class="nt">&lt;/elements&gt;</span>
+            <span class="nt">&lt;/appearance&gt;</span>
+            <span class="nt">&lt;appearance</span> <span class="na">name=</span><span class="s">"right"</span>
+                        <span class="na">preview_template=</span><span class="s">"VendorName_CustomContainer/content-type/custom-container-group/right/preview"</span>
+                        <span class="na">master_template=</span><span class="s">"VendorName_CustomContainer/content-type/custom-container-group/right/master"</span>
+                        <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/master-format/read/configurable"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;elements&gt;</span>
+                    <span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"text_align"</span> <span class="na">source=</span><span class="s">"text_align"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border"</span> <span class="na">source=</span><span class="s">"border_style"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/border-style"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_color"</span> <span class="na">source=</span><span class="s">"border_color"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/color"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_width"</span> <span class="na">source=</span><span class="s">"border_width"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/remove-px"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_radius"</span> <span class="na">source=</span><span class="s">"border_radius"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/remove-px"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"margins"</span> <span class="na">storage_key=</span><span class="s">"margins_and_padding"</span> <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/property/margins"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/margins"</span> <span class="na">preview_converter=</span><span class="s">"Magento_PageBuilder/js/content-type/row/converter/style/margins"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"padding"</span> <span class="na">storage_key=</span><span class="s">"margins_and_padding"</span> <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/property/paddings"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/paddings"</span> <span class="na">preview_converter=</span><span class="s">"Magento_PageBuilder/js/content-type/row/converter/style/paddings"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">source=</span><span class="s">"data-content-type"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"appearance"</span> <span class="na">source=</span><span class="s">"data-appearance"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;css</span> <span class="na">name=</span><span class="s">"css_classes"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/element&gt;</span>
+                <span class="nt">&lt;/elements&gt;</span>
+            <span class="nt">&lt;/appearance&gt;</span>
+        <span class="nt">&lt;/appearances&gt;</span>
+    <span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Some important configurations to note:</p>
+
+<ul>
+  <li>
+    <p>The “left” and “right” appearances have different custom preview components:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>preview_template="VendorName_CustomContainer/content-type/custom-container-group/left/preview"
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>preview_template="VendorName_CustomContainer/content-type/custom-container-group/right/preview"
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>The icon used for this component is the custom container icon:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>icon="icon-pagebuilder-custom-container"
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>This content type cannot be used anywhere except the stage:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;parents</span> <span class="na">default_policy=</span><span class="s">"deny"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent</span> <span class="na">name=</span><span class="s">"stage"</span> <span class="na">policy=</span><span class="s">"allow"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/parents&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>This content type only accepts <a href="#custom-container">custom container</a> content types as children:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;children</span> <span class="na">default_policy=</span><span class="s">"deny"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"custom-container"</span> <span class="na">policy=</span><span class="s">"allow"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/children&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="custom-container">Custom container</h3>
+
+<p>Create the following file to hold the configuration for the custom container:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>view/base/pagebuilder/content_type/custom_container.xml
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Write the following content into this configuration file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_PageBuilder:etc/content_type.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;type</span> <span class="na">name=</span><span class="s">"custom-container"</span>
+          <span class="na">label=</span><span class="s">"Container"</span>
+          <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/content-type-collection"</span>
+          <span class="na">preview_component=</span><span class="s">"VendorName_CustomContainer/js/content-type/custom-container/preview"</span>
+          <span class="na">master_component=</span><span class="s">"Magento_PageBuilder/js/content-type/master-collection"</span>
+          <span class="na">form=</span><span class="s">"pagebuilder_custom_container_form"</span>
+          <span class="na">menu_section=</span><span class="s">"general"</span>
+          <span class="na">icon=</span><span class="s">"icon-pagebuilder-row"</span>
+          <span class="na">sortOrder=</span><span class="s">"1"</span>
+          <span class="na">translate=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;parents</span> <span class="na">default_policy=</span><span class="s">"deny"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;parent</span> <span class="na">name=</span><span class="s">"custom-container-group"</span> <span class="na">policy=</span><span class="s">"allow"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/parents&gt;</span>
+        <span class="nt">&lt;children</span> <span class="na">default_policy=</span><span class="s">"allow"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"custom-container-group"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"row"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"column"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"column-group"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"tabs"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"tab-item"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/children&gt;</span>
+        <span class="nt">&lt;is_system&gt;</span>false<span class="nt">&lt;/is_system&gt;</span>
+        <span class="nt">&lt;appearances&gt;</span>
+            <span class="nt">&lt;appearance</span> <span class="na">default=</span><span class="s">"true"</span>
+                        <span class="na">name=</span><span class="s">"default"</span>
+                        <span class="na">preview_template=</span><span class="s">"VendorName_CustomContainer/content-type/custom-container/default/preview"</span>
+                        <span class="na">master_template=</span><span class="s">"VendorName_CustomContainer/content-type/custom-container/default/master"</span>
+                        <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/master-format/read/configurable"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;elements&gt;</span>
+                    <span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"background_color"</span> <span class="na">source=</span><span class="s">"background_color"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/color"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"background_image"</span> <span class="na">source=</span><span class="s">"background_image"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/background-image"</span> <span class="na">preview_converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/preview/background-image"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"background_position"</span> <span class="na">source=</span><span class="s">"background_position"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"background_size"</span> <span class="na">source=</span><span class="s">"background_size"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"background_repeat"</span> <span class="na">source=</span><span class="s">"background_repeat"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"background_attachment"</span> <span class="na">source=</span><span class="s">"background_attachment"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"text_align"</span> <span class="na">source=</span><span class="s">"text_align"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border"</span> <span class="na">source=</span><span class="s">"border_style"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/border-style"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_color"</span> <span class="na">source=</span><span class="s">"border_color"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/color"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_width"</span> <span class="na">source=</span><span class="s">"border_width"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/remove-px"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"border_radius"</span> <span class="na">source=</span><span class="s">"border_radius"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/remove-px"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"margins"</span> <span class="na">storage_key=</span><span class="s">"margins_and_padding"</span> <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/property/margins"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/margins"</span> <span class="na">preview_converter=</span><span class="s">"Magento_PageBuilder/js/content-type/row/converter/style/margins"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"padding"</span> <span class="na">storage_key=</span><span class="s">"margins_and_padding"</span> <span class="na">reader=</span><span class="s">"Magento_PageBuilder/js/property/paddings"</span> <span class="na">converter=</span><span class="s">"Magento_PageBuilder/js/converter/style/paddings"</span> <span class="na">preview_converter=</span><span class="s">"Magento_PageBuilder/js/content-type/row/converter/style/paddings"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">source=</span><span class="s">"data-content-type"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"appearance"</span> <span class="na">source=</span><span class="s">"data-appearance"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;attribute</span> <span class="na">name=</span><span class="s">"background_color_format"</span> <span class="na">source=</span><span class="s">"data-background-color-format"</span> <span class="na">persistence_mode=</span><span class="s">"write"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;css</span> <span class="na">name=</span><span class="s">"css_classes"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/element&gt;</span>
+                <span class="nt">&lt;/elements&gt;</span>
+                <span class="nt">&lt;converters&gt;</span>
+                    <span class="nt">&lt;converter</span> <span class="na">name=</span><span class="s">"preferred_color_format"</span> <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/mass-converter/preferred-color-format"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;config&gt;</span>
+                            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"background_color_format"</span> <span class="na">value=</span><span class="s">"background_color_format"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;/config&gt;</span>
+                    <span class="nt">&lt;/converter&gt;</span>
+                <span class="nt">&lt;/converters&gt;</span>
+            <span class="nt">&lt;/appearance&gt;</span>
+        <span class="nt">&lt;/appearances&gt;</span>
+    <span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Some important configurations to note:</p>
+
+<ul>
+  <li>
+    <p>This content type can only be used inside a <a href="#custom-container-group">custom container group</a>.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;parents</span> <span class="na">default_policy=</span><span class="s">"deny"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent</span> <span class="na">name=</span><span class="s">"custom-container-group"</span> <span class="na">policy=</span><span class="s">"allow"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/parents&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>This content type can contain all content types except:</p>
+
+    <ul>
+      <li>custom container groups</li>
+      <li>columns</li>
+      <li>rows</li>
+      <li>tabs</li>
+    </ul>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;children</span> <span class="na">default_policy=</span><span class="s">"allow"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"custom-container-group"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"row"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"column"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"column-group"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"tabs"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;child</span> <span class="na">name=</span><span class="s">"tab-item"</span> <span class="na">policy=</span><span class="s">"deny"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/children&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="form">Form</h2>
+
+<p>Forms let users edit attributes in the admin panel.</p>
+
+<h3 id="layout">Layout</h3>
+
+<p>Create the following layout files with the given content:</p>
+
+<h4 id="custom-container-group-layout">Custom container group layout</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/layout/pagebuilder_custom_container_group_form.xml</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">layout=</span><span class="s">"admin-1column"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;update</span> <span class="na">handle=</span><span class="s">"styles"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;referenceContainer</span> <span class="na">name=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;uiComponent</span> <span class="na">name=</span><span class="s">"pagebuilder_custom_container_group_form"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/referenceContainer&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="custom-container-layout">Custom container layout</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/layout/pagebuilder_custom_container_form.xml</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">layout=</span><span class="s">"admin-1column"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;update</span> <span class="na">handle=</span><span class="s">"styles"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;referenceContainer</span> <span class="na">name=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;uiComponent</span> <span class="na">name=</span><span class="s">"pagebuilder_custom_container_form"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/referenceContainer&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="custom-container-group-form-layout">Custom container group form layout</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/ui_component/pagebuilder_custom_container_group_form.xml</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;form</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_Ui:etc/ui_configuration.xsd"</span>  <span class="na">extends=</span><span class="s">"pagebuilder_base_form"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"js_config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"provider"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>pagebuilder_custom_container_group_form.pagebuilder_custom_container_group_form_data_source<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span> <span class="na">translate=</span><span class="s">"true"</span><span class="nt">&gt;</span>Custom Container Group<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;settings&gt;</span>
+        <span class="nt">&lt;deps&gt;</span>
+            <span class="nt">&lt;dep&gt;</span>pagebuilder_custom_container_group_form.pagebuilder_custom_container_group_form_data_source<span class="nt">&lt;/dep&gt;</span>
+        <span class="nt">&lt;/deps&gt;</span>
+        <span class="nt">&lt;namespace&gt;</span>pagebuilder_custom_container_group_form<span class="nt">&lt;/namespace&gt;</span>
+    <span class="nt">&lt;/settings&gt;</span>
+    <span class="nt">&lt;dataSource</span> <span class="na">name=</span><span class="s">"pagebuilder_custom_container_group_form_data_source"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"js_config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"component"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Magento_PageBuilder/js/form/provider<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;dataProvider</span> <span class="na">name=</span><span class="s">"pagebuilder_custom_container_group_form_data_source"</span> <span class="na">class=</span><span class="s">"Magento\PageBuilder\Model\ContentType\DataProvider"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;settings&gt;</span>
+                <span class="nt">&lt;requestFieldName/&gt;</span>
+                <span class="nt">&lt;primaryFieldName/&gt;</span>
+            <span class="nt">&lt;/settings&gt;</span>
+        <span class="nt">&lt;/dataProvider&gt;</span>
+    <span class="nt">&lt;/dataSource&gt;</span>
+    <span class="nt">&lt;fieldset</span> <span class="na">name=</span><span class="s">"appearance_fieldset"</span> <span class="na">sortOrder=</span><span class="s">"10"</span> <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/form/element/dependent-fieldset"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;settings&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">translate=</span><span class="s">"true"</span><span class="nt">&gt;</span>Appearance<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;additionalClasses&gt;</span>
+                <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">"admin__fieldset-visual-select-large"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/class&gt;</span>
+            <span class="nt">&lt;/additionalClasses&gt;</span>
+            <span class="nt">&lt;collapsible&gt;</span>false<span class="nt">&lt;/collapsible&gt;</span>
+            <span class="nt">&lt;opened&gt;</span>true<span class="nt">&lt;/opened&gt;</span>
+            <span class="nt">&lt;imports&gt;</span>
+                <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">"hideFieldset"</span><span class="nt">&gt;</span>${$.name}.appearance:options<span class="nt">&lt;/link&gt;</span>
+                <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">"hideLabel"</span><span class="nt">&gt;</span>${$.name}.appearance:options<span class="nt">&lt;/link&gt;</span>
+            <span class="nt">&lt;/imports&gt;</span>
+        <span class="nt">&lt;/settings&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"appearance"</span> <span class="na">formElement=</span><span class="s">"select"</span> <span class="na">sortOrder=</span><span class="s">"10"</span> <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/form/element/dependent-select"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"default"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>left<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/argument&gt;</span>
+            <span class="nt">&lt;settings&gt;</span>
+                <span class="nt">&lt;additionalClasses&gt;</span>
+                    <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">"admin__field-wide"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/class&gt;</span>
+                    <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">"admin__field-visual-select-container"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/class&gt;</span>
+                <span class="nt">&lt;/additionalClasses&gt;</span>
+                <span class="nt">&lt;dataType&gt;</span>text<span class="nt">&lt;/dataType&gt;</span>
+                <span class="nt">&lt;validation&gt;</span>
+                    <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">"required-entry"</span> <span class="na">xsi:type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/rule&gt;</span>
+                <span class="nt">&lt;/validation&gt;</span>
+                <span class="nt">&lt;elementTmpl&gt;</span>Magento_PageBuilder/form/element/visual-select<span class="nt">&lt;/elementTmpl&gt;</span>
+            <span class="nt">&lt;/settings&gt;</span>
+            <span class="nt">&lt;formElements&gt;</span>
+                <span class="nt">&lt;select&gt;</span>
+                    <span class="nt">&lt;settings&gt;</span>
+                        <span class="nt">&lt;options</span> <span class="na">class=</span><span class="s">"VendorName\CustomContainers\Model\Source\AppearanceSourceCustomContainerGroup"</span> <span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/settings&gt;</span>
+                <span class="nt">&lt;/select&gt;</span>
+            <span class="nt">&lt;/formElements&gt;</span>
+        <span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="custom-container-form-layout">Custom container form layout</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/ui_component/pagebuilder_custom_container_form.xml</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;form</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_Ui:etc/ui_configuration.xsd"</span>  <span class="na">extends=</span><span class="s">"pagebuilder_base_form_with_background_attributes"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"js_config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"provider"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>pagebuilder_custom_container_form.pagebuilder_custom_container_form_data_source<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span> <span class="na">translate=</span><span class="s">"true"</span><span class="nt">&gt;</span>Custom Container<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;settings&gt;</span>
+        <span class="nt">&lt;deps&gt;</span>
+            <span class="nt">&lt;dep&gt;</span>pagebuilder_custom_container_form.pagebuilder_custom_container_form_data_source<span class="nt">&lt;/dep&gt;</span>
+        <span class="nt">&lt;/deps&gt;</span>
+        <span class="nt">&lt;namespace&gt;</span>pagebuilder_custom_container_form<span class="nt">&lt;/namespace&gt;</span>
+    <span class="nt">&lt;/settings&gt;</span>
+    <span class="nt">&lt;dataSource</span> <span class="na">name=</span><span class="s">"pagebuilder_custom_container_form_data_source"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"js_config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"component"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Magento_PageBuilder/js/form/provider<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;dataProvider</span> <span class="na">name=</span><span class="s">"pagebuilder_custom_container_form_data_source"</span> <span class="na">class=</span><span class="s">"Magento\PageBuilder\Model\ContentType\DataProvider"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;settings&gt;</span>
+                <span class="nt">&lt;requestFieldName/&gt;</span>
+                <span class="nt">&lt;primaryFieldName/&gt;</span>
+            <span class="nt">&lt;/settings&gt;</span>
+        <span class="nt">&lt;/dataProvider&gt;</span>
+    <span class="nt">&lt;/dataSource&gt;</span>
+    <span class="nt">&lt;fieldset</span> <span class="na">name=</span><span class="s">"appearance_fieldset"</span> <span class="na">sortOrder=</span><span class="s">"10"</span> <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/form/element/dependent-fieldset"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;settings&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">translate=</span><span class="s">"true"</span><span class="nt">&gt;</span>Appearance<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;additionalClasses&gt;</span>
+                <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">"admin__fieldset-visual-select-large"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/class&gt;</span>
+            <span class="nt">&lt;/additionalClasses&gt;</span>
+            <span class="nt">&lt;collapsible&gt;</span>false<span class="nt">&lt;/collapsible&gt;</span>
+            <span class="nt">&lt;opened&gt;</span>true<span class="nt">&lt;/opened&gt;</span>
+            <span class="nt">&lt;imports&gt;</span>
+                <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">"hideFieldset"</span><span class="nt">&gt;</span>${$.name}.appearance:options<span class="nt">&lt;/link&gt;</span>
+                <span class="nt">&lt;link</span> <span class="na">name=</span><span class="s">"hideLabel"</span><span class="nt">&gt;</span>${$.name}.appearance:options<span class="nt">&lt;/link&gt;</span>
+            <span class="nt">&lt;/imports&gt;</span>
+        <span class="nt">&lt;/settings&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"appearance"</span> <span class="na">formElement=</span><span class="s">"select"</span> <span class="na">sortOrder=</span><span class="s">"10"</span> <span class="na">component=</span><span class="s">"Magento_PageBuilder/js/form/element/dependent-select"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"default"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>default<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/argument&gt;</span>
+            <span class="nt">&lt;settings&gt;</span>
+                <span class="nt">&lt;additionalClasses&gt;</span>
+                    <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">"admin__field-wide"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/class&gt;</span>
+                    <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">"admin__field-visual-select-container"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/class&gt;</span>
+                <span class="nt">&lt;/additionalClasses&gt;</span>
+                <span class="nt">&lt;dataType&gt;</span>text<span class="nt">&lt;/dataType&gt;</span>
+                <span class="nt">&lt;validation&gt;</span>
+                    <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">"required-entry"</span> <span class="na">xsi:type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/rule&gt;</span>
+                <span class="nt">&lt;/validation&gt;</span>
+                <span class="nt">&lt;elementTmpl&gt;</span>Magento_PageBuilder/form/element/visual-select<span class="nt">&lt;/elementTmpl&gt;</span>
+            <span class="nt">&lt;/settings&gt;</span>
+            <span class="nt">&lt;formElements&gt;</span>
+                <span class="nt">&lt;select&gt;</span>
+                    <span class="nt">&lt;settings&gt;</span>
+                        <span class="nt">&lt;options</span> <span class="na">class=</span><span class="s">"VendorName\CustomContainers\Model\Source\AppearanceSource"</span> <span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/settings&gt;</span>
+                <span class="nt">&lt;/select&gt;</span>
+            <span class="nt">&lt;/formElements&gt;</span>
+        <span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><em><strong>Note:</strong> The custom container group extends from <code class="highlighter-rouge">pagebuilder_base_form</code> while the custom container extends from <code class="highlighter-rouge">pagebuilder_base_form_with_background_attributes</code>.</em></p>
+
+<h2 id="appearance-source">Appearance source</h2>
+
+<p>The layout file for a <a href="#custom-container-group-form-layout">custom container group form</a> and <a href="#custom-container-form-layout">custom container form</a> specify which data source to use to populate the option elements in the <code class="highlighter-rouge">appearance</code> select list field.</p>
+
+<p>Example:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;formElements&gt;</span>
+    <span class="nt">&lt;select&gt;</span>
+        <span class="nt">&lt;settings&gt;</span>
+            <span class="nt">&lt;options</span> <span class="na">class=</span><span class="s">"VendorName\CustomContainers\Model\Source\AppearanceSource"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/settings&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/formElements&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The data sources are virtual types of the <code class="highlighter-rouge">VisualSelect</code> class and defined in your module’s <code class="highlighter-rouge">etc/adminhtml/di.xml</code> file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:ObjectManager/etc/config.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;virtualType</span> <span class="na">name=</span><span class="s">"VendorName\CustomContainers\Model\Source\AppearanceSourceCustomContainerGroup"</span> <span class="na">type=</span><span class="s">"Magento\PageBuilder\Model\Source\VisualSelect"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"optionsSize"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>large<span class="nt">&lt;/argument&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"optionsData"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"10"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>left<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span> <span class="na">translate=</span><span class="s">"true"</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"icon"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>VendorName_CustomContainer/css/images/content-type/custom-container-group/appearance/left.svg<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"20"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>right<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span> <span class="na">translate=</span><span class="s">"true"</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"icon"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>VendorName_CustomContainer/css/images/content-type/custom-container-group/appearance/right.svg<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+    <span class="nt">&lt;/virtualType&gt;</span>
+    <span class="nt">&lt;virtualType</span> <span class="na">name=</span><span class="s">"VendorName\CustomContainers\Model\Source\AppearanceSource"</span> <span class="na">type=</span><span class="s">"Magento\PageBuilder\Model\Source\VisualSelect"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"optionsSize"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>large<span class="nt">&lt;/argument&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"optionsData"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>default<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span> <span class="na">translate=</span><span class="s">"true"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+    <span class="nt">&lt;/virtualType&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Create the icon files in the following locations inside your module to match the deployed location specified in the configuration:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">view/adminhtml/web/css/images/content-type/custom-container-group/appearance/left.svg</code></li>
+  <li><code class="highlighter-rouge">view/adminhtml/web/css/images/content-type/custom-container-group/appearance/right.svg</code></li>
+</ul>
+
+<h2 id="templates">Templates</h2>
+
+<p>Templates define the HTML used to render the content type on the store front and in preview mode.</p>
+
+<h3 id="container-group-templates">Container group templates</h3>
+
+<p>The following sections describe the preview and master templates for the left and right views for container groups.</p>
+
+<h4 id="container-group-left-preview-template">Container group left preview template</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/template/content-type/custom-container-group/left/preview.html</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagebuilder-content-type type-container pagebuilder-custom-container-group"</span>
+     <span class="na">attr=</span><span class="s">"data.main.attributes"</span>
+     <span class="na">ko-style=</span><span class="s">"data.main.style"</span>
+     <span class="na">css=</span><span class="s">"data.main.css"</span>
+     <span class="na">event=</span><span class="s">"{ mouseover: onMouseOver, mouseout: onMouseOut }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"getOptions().template"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"childTemplate"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="container-group-left-master-template">Container group left master template</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/template/content-type/custom-container-group/left/master.html</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">attr=</span><span class="s">"data.main.attributes"</span> <span class="na">ko-style=</span><span class="s">"data.main.style"</span> <span class="na">css=</span><span class="s">"data.main.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"masterTemplate"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="container-group-right-preview-template">Container group right preview template</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/template/content-type/custom-container-group/right/preview.html</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagebuilder-content-type type-container pagebuilder-custom-container-group"</span>
+     <span class="na">attr=</span><span class="s">"data.main.attributes"</span>
+     <span class="na">ko-style=</span><span class="s">"data.main.style"</span>
+     <span class="na">css=</span><span class="s">"data.main.css"</span>
+     <span class="na">event=</span><span class="s">"{ mouseover: onMouseOver, mouseout: onMouseOut }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"getOptions().template"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"childTemplate"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="container-group-right-master-template">Container group right master template</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/template/content-type/custom-container-group/right/master.html</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">attr=</span><span class="s">"data.main.attributes"</span> <span class="na">ko-style=</span><span class="s">"data.main.style"</span> <span class="na">css=</span><span class="s">"data.main.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"masterTemplate"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="container-templates">Container templates</h3>
+
+<p>The following sections describe the preview and master templates for the container types.</p>
+
+<h4 id="container-preview-template">Container preview template</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/template/content-type/custom-container/default/preview.html</code></p>
+
+<p>Content:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagebuilder-content-type type-container pagebuilder-custom-container"</span>
+     <span class="na">attr=</span><span class="s">"data.main.attributes"</span>
+     <span class="na">ko-style=</span><span class="s">"data.main.style"</span>
+     <span class="na">css=</span><span class="s">"Object.assign(data.main.css(), {'empty-container': parent.children().length == 0})"</span>
+     <span class="na">event=</span><span class="s">"{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"getOptions().template"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"childTemplate"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagebuilder-display-label"</span> <span class="na">html=</span><span class="s">"function () { return displayLabel().toUpperCase(); }()"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagebuilder-empty-container"</span> <span class="na">css=</span><span class="s">"{visible: parent.children().length == 0}"</span> <span class="na">translate=</span><span class="s">"'Empty Container'"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagebuilder-drop-indicator"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="container-master-template">Container master template</h4>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/template/content-type/custom-container/default/master.html</code></p>
+
+<p>Content:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">attr=</span><span class="s">"data.main.attributes"</span> <span class="na">ko-style=</span><span class="s">"data.main.style"</span> <span class="na">css=</span><span class="s">"data.main.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;render</span> <span class="na">args=</span><span class="s">"masterTemplate"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="javascript-components">JavaScript components</h2>
+
+<p>The following JavaScript components add logic to the preview for the custom container group and custom container types.</p>
+
+<h3 id="custom-container-group-js-component">Custom container group JS component</h3>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/js/content-type/custom-container-group/preview.js</code></p>
+
+<p>Content:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+</pre></td><td class="rouge-code"><pre><span class="nx">define</span><span class="p">([</span>
+    <span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">knockout</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">Magento_PageBuilder/js/events</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">underscore</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">Magento_PageBuilder/js/content-type/preview-collection</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">Magento_PageBuilder/js/content-type-factory</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">Magento_PageBuilder/js/config</span><span class="dl">'</span>
+<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">ko</span><span class="p">,</span> <span class="nx">events</span><span class="p">,</span> <span class="nx">underscore</span><span class="p">,</span> <span class="nx">PreviewCollection</span><span class="p">,</span> <span class="nx">createContentType</span><span class="p">,</span> <span class="nx">pageBuilderConfig</span><span class="p">)</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * Preview Constructor
+     *
+     * @param parent
+     * @param config
+     * @param stageId
+     * @constructor
+     */</span>
+    <span class="kd">function</span> <span class="nx">Preview</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+        <span class="nx">PreviewCollection</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">);</span>
+
+        <span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">custom-container-group:dropAfter</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">args</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nb">self</span><span class="p">.</span><span class="nx">parent</span><span class="p">.</span><span class="nx">id</span> <span class="o">&amp;&amp;</span> <span class="nb">self</span><span class="p">.</span><span class="nx">parent</span><span class="p">.</span><span class="nx">children</span><span class="p">().</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// Once the grid is ready, let's add in our children</span>
+                <span class="nb">self</span><span class="p">.</span><span class="nx">populateContainerGroup</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">PreviewCollection</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+
+    <span class="cm">/**
+     * Populate the custom container group with 3 children
+     */</span>
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">populateContainerGroup</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+
+        <span class="c1">// Create 3 containers inside container group</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">createContentType</span><span class="p">(</span>
+                <span class="nx">pageBuilderConfig</span><span class="p">.</span><span class="nx">getContentTypeConfig</span><span class="p">(</span><span class="dl">"</span><span class="s2">custom-container</span><span class="dl">"</span><span class="p">),</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">parent</span><span class="p">,</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">parent</span><span class="p">.</span><span class="nx">stageId</span>
+            <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">container</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nb">self</span><span class="p">.</span><span class="nx">parent</span><span class="p">.</span><span class="nx">addChild</span><span class="p">(</span><span class="nx">container</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="cm">/**
+     * Mark as not a standard container
+     *
+     * @returns {boolean}
+     */</span>
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">isContainer</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">Preview</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The code for this component does the following:</p>
+
+<ul>
+  <li>Since custom container group is a collection content type, the component extends the <code class="highlighter-rouge">PreviewCollection</code> component in the constructor.</li>
+  <li>An event listener is added during construction to listen for when the container group is dropped onto the stage.
+The <code class="highlighter-rouge">populateContainerGroup()</code> method executes when this event occurs.</li>
+  <li>The <code class="highlighter-rouge">populateContainerGroup()</code> method adds 3 containers inside the container group when executed.</li>
+  <li>The <code class="highlighter-rouge">isContainer()</code> method marks this content type as not a standard container.</li>
+</ul>
+
+<h3 id="custom-container-js-component">Custom container JS component</h3>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/js/content-type/custom-container/preview.js</code></p>
+
+<p>Content:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre><span class="nx">define</span><span class="p">([</span>
+    <span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">underscore</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">Magento_PageBuilder/js/content-type/preview-collection</span><span class="dl">'</span>
+<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">PreviewCollection</span><span class="p">)</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">$super</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * Preview Constructor
+     *
+     * @param parent
+     * @param config
+     * @param stageId
+     * @constructor
+     */</span>
+    <span class="kd">function</span> <span class="nx">Preview</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">PreviewCollection</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">parent</span><span class="p">,</span> <span class="nx">config</span><span class="p">,</span> <span class="nx">stageId</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">PreviewCollection</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+    <span class="nx">$super</span> <span class="o">=</span> <span class="nx">PreviewCollection</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+
+    <span class="cm">/**
+     * Remove move, duplicate and remove options
+     *
+     * @returns {*}
+     */</span>
+    <span class="nx">Preview</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">retrieveOptions</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">retrieveOptions</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">$super</span><span class="p">.</span><span class="nx">retrieveOptions</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">option</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">option</span><span class="p">.</span><span class="nx">code</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">move</span><span class="dl">"</span> <span class="o">&amp;&amp;</span>  <span class="nx">option</span><span class="p">.</span><span class="nx">code</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">duplicate</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">option</span><span class="p">.</span><span class="nx">code</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">remove</span><span class="dl">"</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">Preview</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The code for this component does the following:</p>
+
+<ul>
+  <li>Since custom container is a collection content type, the component extends the <code class="highlighter-rouge">PreviewCollection</code> component in the constructor.</li>
+  <li>The <code class="highlighter-rouge">retrieveOptions()</code> method overwrites the content types options list and removes the <code class="highlighter-rouge">move</code>, <code class="highlighter-rouge">duplicate</code> , and <code class="highlighter-rouge">remove</code> options.</li>
+</ul>
+
+<h2 id="styling">Styling</h2>
+
+<p>The following sections describe files that add styles to the content types for the admin panel and storefront.</p>
+
+<h3 id="admin-panel-styles">Admin panel styles</h3>
+
+<p>Lets start with custom-containers left appearance styling.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/css/source/content-type/custom-container/_left.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">.pagebuilder-custom-container-group.pagebuilder-content-type.type-container {
+    border: none;
+    outline: none;
+
+    &gt; .element-children {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+
+        .pagebuilder-content-type-wrapper {
+            height: 100%;
+
+            .pagebuilder-custom-container {
+                height: 100%;
+
+                &gt; .element-children {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &amp;[data-appearance='left'] {
+        &gt; .element-children {
+            .pagebuilder-content-type-wrapper {
+                &amp;:nth-child(1) {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                &amp;:nth-child(2) {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                &amp;:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: ~"1 / 3";
+                }
+            }
+        }
+    }
+}
+
+.icon-pagebuilder-custom-container:before {
+    content: '\e912';
+}
+</code></pre>
+
+<p>Next create custom-containers right appearance styling.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/css/source/content-type/custom-container/_right.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">.pagebuilder-custom-container-group.pagebuilder-content-type.type-container {
+    border: none;
+    outline: none;
+
+    &gt; .element-children {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+
+        .pagebuilder-content-type-wrapper {
+            height: 100%;
+
+            .pagebuilder-custom-container {
+                height: 100%;
+
+                &gt; .element-children {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &amp;[data-appearance='right'] {
+        &gt; .element-children {
+            .pagebuilder-content-type-wrapper {
+                &amp;:nth-child(1) {
+                    grid-column: 1;
+                    grid-row: ~"1 / 3";
+                }
+                &amp;:nth-child(2) {
+                    grid-column: 2;
+                    grid-row: 1;
+                }
+                &amp;:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+            }
+        }
+    }
+}
+
+.icon-pagebuilder-custom-container:before {
+    content: '\e912';
+}
+</code></pre>
+
+<p>Then create an import styling sheet to merge the 2 appearance styles.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/css/source/content-type/custom-container/_import.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">@import './_left.less';
+@import './_right.less';
+</code></pre>
+
+<p>Then create the module style that will grab the imported styles.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/adminhtml/web/css/source/module.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">@import 'content-type/custom-container/_import.less';
+</code></pre>
+
+<p><em><strong>Note:</strong> The <code class="highlighter-rouge">.icon-pagebuilder-custom-container:before</code> entry creates the custom icon for the content type.</em></p>
+
+<h3 id="storefront-styles">Storefront styles</h3>
+
+<p>Lets start with custom-containers left appearance styling.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/frontend/web/css/source/content-type/custom-container/_left.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">div[data-content-type='custom-container-group'] {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+
+    &amp;[data-appearance='left'] {
+        div[data-content-type='custom-container'] {
+            &amp;:nth-child(1) {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            &amp;:nth-child(2) {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            &amp;:nth-child(3) {
+                grid-column: 2;
+                grid-row: ~"1 / 3";
+            }
+        }
+    }
+}
+
+@media all and (max-width: @screen__m) {
+    div[data-content-type='custom-container-group'] {
+        grid-template-columns: 1fr;
+
+
+        &amp;[data-appearance='left'] {
+            grid-template-rows: 200px 200px 400px;
+        }
+
+        &amp;[data-appearance='left'] {
+            div[data-content-type='custom-container'] {
+                &amp;:nth-child(1) {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                &amp;:nth-child(2) {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                &amp;:nth-child(3) {
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+            }
+        }
+
+    }
+}
+</code></pre>
+
+<p>Next create custom-containers right appearance styling.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/frontend/web/css/source/content-type/custom-container/_right.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">div[data-content-type='custom-container-group'] {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+
+    &amp;[data-appearance='right'] {
+        div[data-content-type='custom-container'] {
+            &amp;:nth-child(1) {
+                grid-column: 1;
+                grid-row: ~"1 / 3";
+            }
+            &amp;:nth-child(2) {
+                grid-column: 2;
+                grid-row: 1;
+            }
+            &amp;:nth-child(3) {
+                grid-column: 2;
+                grid-row: 2;
+            }
+        }
+    }
+}
+
+@media all and (max-width: @screen__m) {
+    div[data-content-type='custom-container-group'] {
+        grid-template-columns: 1fr;
+
+        &amp;[data-appearance='right'] {
+            grid-template-rows: 400px 200px 200px;
+        }
+
+        &amp;[data-appearance='right'] {
+            div[data-content-type='custom-container'] {
+                &amp;:nth-child(1) {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                &amp;:nth-child(2) {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                &amp;:nth-child(3) {
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+            }
+        }
+
+    }
+}
+</code></pre>
+
+<p>Then create an import styling sheet to merge the 2 appearance styles.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/frontend/web/css/source/content-type/custom-container/_import.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">@import './_left.less';
+@import './_right.less';
+</code></pre>
+
+<p>Then create the module style that will grab the imported styles.</p>
+
+<p>File name and location: <code class="highlighter-rouge">view/frontend/web/css/source/module.less</code></p>
+
+<p>Content:</p>
+
+<pre><code class="language-less">@import 'content-type/custom-container/_import.less';
+</code></pre>
+
+<p><em><strong>Note:</strong> The @media section sets up the responsive design feature of stacking the containers.</em></p>
+
+<h2 id="final-steps">Final steps</h2>
+
+<p>Enable and install your component using the following commands:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>bin/magento module:enable --clear-static-content VendorName_CustomContainer
+bin/magento setup:upgrade
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You should now see a new custom content type in Page Builder called <strong>Custom Container</strong> with a default appearance of <strong>left</strong>.</p>
+
+<p><img src="/devdocs/2.1/page-builder/docs/images/custom-containers-panel.png" alt="Custom Containers Panel" /></p>
+
+<p>When you place it onto the stage, it should be filled with 3 container content types that have only one option to edit.</p>
+
+<p>The left appearance will have 2 rows of containers on the left side and the right appearance will have 2 rows on the right side.</p>
+
+<p>Left:
+<img src="/devdocs/2.1/page-builder/docs/images/custom-containers-left.png" alt="Custom Containers Left Appearance" /></p>
+
+<p>Right:
+<img src="/devdocs/2.1/page-builder/docs/images/custom-containers-right.png" alt="Custom Containers Right Appearance" /></p>
+
+<p>Use the configuration form in the container group’s edit panel to switch between the left and right appearances.</p>
+
+<p><img src="/devdocs/2.1/page-builder/docs/images/custom-containers-form.png" alt="Custom Containers Form" /></p>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-03-14">
+      Mar 14th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

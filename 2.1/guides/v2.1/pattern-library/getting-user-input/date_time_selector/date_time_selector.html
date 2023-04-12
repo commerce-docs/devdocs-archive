@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Date and Time Selector | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Admin Pattern Library</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Introduction</a></li><li class="" role="menuitem"><span>Container</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/containers/staticContentContainer/contentContainer.html">Static Content Container</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html">Slide-out, Modals, and Overlays</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/containers/tabs/tabs.html">Tabs</a></li></ul></li><li class="" role="menuitem"><span>Controls</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/controls/buttons/buttons.html">Buttons</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/controls/button-bar/button-bar.html">Button Bar</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/controls/Expandable_Sections/expand-collapse.html">Expandable Sections</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/controls/viewcontroller/viewcontroller.html">View Controller</a></li></ul></li><li class="" role="menuitem"><span>Displaying and Dealing with Data</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/filters/data-table-filters/filtering.html">Filters</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/displaying-data/tile/tile.html">Tile</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/displaying-data/datatable/datatable.html">Data Table</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/displaying-data/tree/tree.html">Tree</a></li></ul></li><li class="" role="menuitem"><span>Feedback to User</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/feedbackToUser/progressIndicator/progressIndicator.html">Progress Indicator</a></li></ul></li><li class="" role="menuitem"><span>General</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/general/accessibilityguideline/accessibilityGuideline.html">Accessibility Guideline</a></li></ul></li><li class="" role="menuitem"><span>Getting User Input</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/getting-user-input/form_elements/form_elements.html">Form Elements</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/getting-user-input/image_uploader/image_uploader.html">Image Uploader</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/getting-user-input/date_time_selector/date_time_selector.html">Date and Time Selector</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/getting-user-input/row_pattern/row_pattern.html">Row Pattern (Table)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/getting-user-input/use_default_config/use_default_config.html">Use Default Config</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/getting-user-input/select_from_list/select_from_list.html">Select From List</a></li></ul></li><li class="" role="menuitem"><span>Graphics</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/graphics/iconography/iconography.html">Iconography</a></li></ul></li><li class="" role="menuitem"><span>Navigation</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/navigation/links/links.html">Links</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/navigation/wizard/wizard.html">Wizard</a></li></ul></li><li class="" role="menuitem"><span>Staging Patterns</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/staging-patterns/TimelineDashboard/Timeline-Dashboard.html">Timeline Dashboard</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/staging-patterns/ScheduledChangesModule/module.html">Scheduled Changes Module</a></li></ul></li><li class="" role="menuitem"><span>Templates</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/templates/address-form/address-form.html">Address Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/templates/sign-in-form/sign-in-form.html">Sign In Form</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Date and Time Selector</h1>
+</section>
+
+			<p>This topic discusses design standards and rules for date and time selection in Magento. This article is related to the Form Elements pattern. Please refer to <a href="../form_elements/form_elements.html">Form Elements</a> for general rules on form usage and placement.</p>
+
+<h2 id="when-to-use">When to Use</h2>
+
+<p>Use this element whenever a date, date range, time or time range needs to be gathered from the user.</p>
+
+<h2 id="variations">Variations</h2>
+
+<h3 id="single-date-picker">Single Date Picker</h3>
+
+<p><img src="img/w-singledate.png" alt="" /></p>
+
+<h3 id="date-range-picker">Date Range Picker</h3>
+
+<p><img src="img/w-daterange.png" alt="" /></p>
+
+<h3 id="single-time-picker">Single Time Picker</h3>
+
+<p><img src="img/w-timepicker.png" alt="" /></p>
+
+<h3 id="time-range-picker">Time Range Picker</h3>
+
+<p><img src="img/w-timerange.png" alt="" /></p>
+
+<h3 id="single-date-and-time-picker">Single Date and Time Picker</h3>
+
+<p><img src="img/w-date&amp;time.png" alt="" /></p>
+
+<h3 id="date-and-time-range-picker">Date and Time Range Picker</h3>
+
+<p><img src="img/w-date&amp;timerange.png" alt="" /></p>
+
+<h2 id="formats">Formats</h2>
+
+<p>Date:</p>
+
+<ul>
+  <li>DD MMM YYYY (ie. 01 JAN 2014) The letters should be localized.</li>
+</ul>
+
+<p>Time:</p>
+
+<ul>
+  <li>The examples in this article use the 12 hour clock format. It should be noted that the 24 hour format will be supported as well.</li>
+  <li>Time Zones are in UTC offset</li>
+</ul>
+
+<h2 id="interaction">Interaction</h2>
+
+<ul>
+  <li>Tabbing to or clicking into the field activates the <a href="https://glossary.magento.com/widget">widget</a>
+    <ul>
+      <li>The Date/Time widget should animate down and be displayed underneath the field</li>
+    </ul>
+  </li>
+  <li>The user is free to select available dates by clicking on the date</li>
+  <li>Days in the calendar will have the following states, each with unique styles:
+    <ul>
+      <li>Current day</li>
+      <li>Selected day(s)</li>
+      <li>Disabled day(s)</li>
+      <li>Hover state for days</li>
+    </ul>
+  </li>
+  <li>Month and Year will behave as drop selectors</li>
+  <li>Clicking the “Done” button, clicking outside the widget, or clicking outside the text field completes the entry with the field still in focus</li>
+  <li>The user has the ability to edit date/time via text field</li>
+  <li>For Ranges, the calendars will be sequential</li>
+  <li>When selecting a month/year in the To area, the month/year in the From area should update to the month immediately following the month/year selected in the To area</li>
+</ul>
+
+<h2 id="disabled-state">Disabled State</h2>
+
+<p>The following applies to ranges only:</p>
+
+<ul>
+  <li>Months will appear in sequential order</li>
+  <li>The calendar/time widget will require a unique style for active and inactive areas</li>
+  <li>User will not be able to select date or time on the To area until selection is made on the From area first</li>
+</ul>
+
+<p><img src="img/disabled-state.png" alt="" /></p>
+
+<p>(Styles will support a disabled state for areas which depend on sequence for ranges)</p>
+
+<h2 id="time-selection-behaviors">Time Selection Behaviors</h2>
+
+<p>Within the calendar widget, the following will apply to time fields:</p>
+
+<ul>
+  <li>Tab order will be applied to time fields</li>
+  <li>(HH:MM:SS) and TimeZone Offset will assume text field behavior</li>
+  <li>Limited to numeric entry only
+    <ul>
+      <li>1-12 for Hour (12 hour format), 1-24 for Hour (24 hour format)</li>
+      <li>1-60 for Minutes and Seconds</li>
+    </ul>
+  </li>
+  <li>(12 hour format) AM/PM will behave as a dropdown</li>
+  <li>AM/PM should be removed for 24 hour format</li>
+  <li>Time Zone will be a dropdown selection</li>
+</ul>
+
+<h2 id="text-field-entry--validation">Text Field Entry &amp; Validation</h2>
+
+<ul>
+  <li>Users have the ability to click-in to the text field to add/edit the Date/Time at any time when the field is active
+    <ul>
+      <li>Format will be enforced</li>
+      <li>Validation will require post-back</li>
+      <li>Refer to the Form Error Messaging pattern for additional details</li>
+    </ul>
+  </li>
+  <li>Tabbing out completes the entry, removing focus from the field</li>
+  <li>For date fields, user have the ability to enter any formats besides DD MMM YYY, and the system should automatically correct the date format. (For example: user enter 10/3/2013, and the system will make a guess and reformat to 3 OCT 2013 once on keystroke up.)</li>
+  <li>Date format input accepted:
+    <ul>
+      <li>MM/DD/YYYY **</li>
+      <li>MMM DD YYYY</li>
+      <li>DD MMM YYYY</li>
+      <li>DD/MM/YYYY **</li>
+      <li>YYYY/MM/DD</li>
+    </ul>
+  </li>
+  <li>Date automatically correct for user and display:
+    <ul>
+      <li>DD MMM YYYY</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Note:</strong></p>
+
+<p>MM/DD/YYYY can be confused with DD/MM/YYYY, so please assume the following:</p>
+
+<ul>
+  <li>If either MM or DD is above 12, then we can tell which one is the date vs month.</li>
+  <li>If both slots are below 12, make a guess based on the region. For example, if the user is in the US, guess MM/DD/YYYY format. If the user is in the London, guess DD/MM/YYYY. The more commonly used ones are DD/MM/YYYY.</li>
+</ul>
+
+<p>Field selection works the same as a typical text field with</p>
+
+<p><img src="img/selection-state.png" alt="" /></p>
+
+<h2 id="style">Style</h2>
+
+<p><strong>Single Date Picker</strong></p>
+
+<p><img src="img/datepicker.png" alt="" /></p>
+
+<p><strong>Date Range Picker</strong></p>
+
+<p><img src="img/rangedatepicker.png" alt="" /></p>
+
+<p><strong>Single Time Picker</strong></p>
+
+<p><img src="img/timepicker.png" alt="" /></p>
+
+<p><strong>Time Range Picker</strong></p>
+
+<p><img src="img/timerangepicker.png" alt="" /></p>
+
+<p><strong>Single Date and Time Picker</strong></p>
+
+<p><img src="img/date&amp;timepicker.png" alt="" /></p>
+
+<p><strong>Date and Time Range Picker</strong></p>
+
+<p><img src="img/rangedate&amp;timepicker.png" alt="" /></p>
+
+<h2 id="accessibility">Accessibility</h2>
+
+<h3 id="date-or-time-input-fields">Date or Time Input Fields</h3>
+
+<p>The initial text field assumes the typical tab orders used in form field pattern.</p>
+
+<h3 id="date-picker-widget">Date Picker Widget</h3>
+
+<p>Reference: <a href="http://www.w3.org/TR/2009/WD-wai-aria-practices-20091215/#datepicker">Date Picker Widget</a></p>
+
+<p>As a general rule the actual calendar portion of the date picker should follow a table structure where days of the week and calendar day numbers are laid out in table cells. This provides context so an assistive technology can render the day of the week; its corresponding numeric calendar day, and week number if necessary. Consequently, it is best to start with an <a href="https://glossary.magento.com/html">HTML</a> table and apply WAI-ARIA semantics for a grid. However, should the author wish to uses a div or span to represent the cells then the DOM structure for a table should be duplicated with rows marked with role=”row.”</p>
+
+<h3 id="keyboard-interactions">Keyboard Interactions</h3>
+
+<p>Keyboard navigation on days that are not included the currently displayed month should move to the month automatically and lead to the day in the next or previous month.</p>
+
+<ul>
+  <li>Space and/or Enter selects a day and deletes all multiple or range selection.</li>
+  <li>Left Arrow moves the focus to the left, continued to previous week and previous month.</li>
+  <li>Right Arrow moves the focus to right, continued to the next week and next month.</li>
+  <li>Up Arrow moves the focus to the same weekday in the previous week, continued to the previous month.</li>
+  <li>Down Arrow moves the focus to same weekday in the next week, continued to the next month.</li>
+  <li>Page Up moves the focus to same day in the previous month.</li>
+  <li>Page Down moves the focus to same day in the next month.</li>
+  <li>Shift+Page Up moves the focus to same day in the previous year.</li>
+  <li>Shift+Page Down moves the focus to same day in the next year.</li>
+  <li>Home moves the focus to the first day of the month.</li>
+  <li>End moves the focus to the last day of the month.</li>
+  <li>Ctrl+Home moves the focus to the first day of the year.</li>
+  <li>Ctrl+End moves the focus to the last day of the year.</li>
+  <li>Shift+Arrow performs continuous selection to the next/previous day/week/month.</li>
+  <li>Ctrl+Space multiple selection of certain days.</li>
+  <li>Esc closes a DatePicker that is opened as a Popup.</li>
+</ul>
+
+<p>Do not implement keyboard navigation schemes that would place more than one calendar day in the tab order at any time as this impacts the <a href="https://glossary.magento.com/usability">usability</a> of keyboard navigation. For example, using HTML anchors for the gridcells places them all in the tab order impacting the usability of keyboard navigation.</p>
+
+<h3 id="wai-aria-roles-states-and-properties">WAI-ARIA Roles, States, and Properties</h3>
+
+<ul>
+  <li>The current month should have a label representing the month and year. This should have a role header but is not essential. This “label” should have a unique ID.</li>
+  <li>If the author would like to ensure that a label is announced by a screen reader, as the label changes, the label should include live region properties: aria-live=”assertive” and aria-atomic=”true”</li>
+  <li>The container for the day of week headers and numeric days of the week should have a role of grid</li>
+  <li>The grid should have an aria-labelled by property with a value equivalent to the id of the label for the grid</li>
+  <li>Each name for the day of the week should have a role columnheader and they should not be navigable via the keyboard.</li>
+  <li>Each numeric day of the week should have the role gridcell.</li>
+  <li>When a day is selected it should have aria-selected=”true” otherwise it should be set to “false” or removed.</li>
+  <li>Changes in aria states, identified here, as well as focus, should be clearly styled to show the user where their point of regard is and what days are selected.</li>
+</ul>
+
+<p>When the datepicker is active a calendar day of the week should always have focus. This can be achieved by setting the tabindex on that day as appropriate and then using script to give it focus. Alternatively, the grid container could set aria-activedescendant to the id of the currently focused gridcell. Keep in mind that older browsers may not support aria-activedescendant.</p>
+
+<h3 id="time-picker-widget">Time Picker Widget</h3>
+
+<ul>
+  <li>(HH:MM:SS) will assume text field‘s accessibility behavior</li>
+  <li>TimeZone Offset will assume dropdown accessibility behavior</li>
+  <li>AM/PM will assume dropdown accessibility behavior</li>
+</ul>
+
+<h2 id="assets">Assets</h2>
+
+<p><a href="src/date&amp;timepicker.psd">Download Date&amp;Time PSD source</a>.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>Date and time selectors are implemented using the standard <a href="https://jqueryui.com/datepicker/">jQuery UI datepicker widget</a> and Magento <a href="https://github.com/magento/magento2/blob/2.1/lib/web/jquery/jquery-ui-timepicker-addon.js">addon</a>.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

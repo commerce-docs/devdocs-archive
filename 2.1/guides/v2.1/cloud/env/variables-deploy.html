@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Deploy variables | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Commerce Cloud</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Overview</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/onboarding/onboarding-tasks.html">Onboarding tasks</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Architecture</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html">Starter architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">Starter develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html">Pro architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/requirements/cloud-requirements.html">Technologies and requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cloud-composer.html">Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/ece-tools-reference.html">ece-tools package</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/git-integration.html">Git</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-ssh.html">SSH and sFTP</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/new-relic.html">New Relic</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-integrate-blackfire.html">Blackfire.io</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/sendgrid.html">SendGrid</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html">Prepare for manual setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">Install Magento prerequisites</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-ssh.html">Enable SSH keys</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Set up the Magento file system owner</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html">Clone and branch the project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-install.html">Install Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-deploy.html">First time deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/debug.html">Optional - Configure Xdebug</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/sample-data.html">Optional - Install sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development.html">Docker development</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">Configure Xdebug for Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-database.html">Connect to the database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-testing.html">Functional testing in Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/cloud-integrations.html">Integrations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/bitbucket-integration.html">Bitbucket integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/github-integration.html">GitHub integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/health-notifications.html">Health notifications</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html">Import existing code into a project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html">Prepare your existing Magento Commerce system</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-import.html">Import Magento Commerce code</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configuration-overview.html">Configure your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configure-best-practices.html">Best practices for store configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/paypal-onboarding.html">Set up PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/custom-theme.html">Install a theme</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly.html">Configure Fastly services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize error pages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-waf-service.html">Managed Cloud WAF</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-image-optimization.html">Image Optimization</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom VCL snippets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-blacklist.html">Custom blacklist VCL</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/trouble-fastly.html">Fastly troubleshooting</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure environments</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html">Application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Build and deploy</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/setup-notifications.html">Set up notifications</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/log-handlers.html">Logging handlers</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-intro.html">Environment variables</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-build.html">Build variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html">Cloud variables</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-deploy.html">Deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/working-with-variables.html">Working with variables</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html">Routes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-cache.html">Caching</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-redir.html">Redirects</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-ssi.html">Server side includes</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-mysql.html">Set up MySQL service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-redis.html">Set up Redis service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-elastic.html">Set up Elasticsearch service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-rabbit.html">Set up RabbitMQ service</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration management for store settings</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-initial.html">Example of managing system-specific settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html">Manage your project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-basic.html">Configure your project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-start.html">Project structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/user-admin.html">Create and manage users</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html">Manage branches with the Interface</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html">Manage branches with the CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">Snapshots and backup management</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/optimize-cloud-deployment.html">Optimize deployment</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Cloud deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/reduce-downtime.html">Zero downtime deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/static-content-deployment.html">Static content deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/smart-wizards.html">Smart wizards</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/discover-deploy.html">Deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/continuous-deployment.html">Continuous deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-prot.html">Protective block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-sanity-check.html">Build and deploy on local</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate-prereq.html">Prepare to deploy to Staging and Production</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code and migrate static files and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-test.html">Test deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live.html">Go live and launch</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/launch-steps.html">Launch steps</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Troubleshooting</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/troubleshoot-deployment.html">Troubleshoot deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/environments-logs.html">View logs for troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_ce-creds.html">Incorrect credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_proj-startover.html">Resolve issues with a new project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_comp-deploy-fail.html">Component deployment failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/redis-troubleshooting.html">Redis troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/reset-cron-jobs.html">Reset cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-crypt-key-variable.html">Resolve issues with encryption key</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-error-html-minification.html">Resolve issues with HTML minification</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-google-analytics-deploy.html">Resolve issues with Google Analytics during deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/restore-configuration-files.html">Restore configuration files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/site-availability.html">Site availability</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/robots-sitemap.html">Add site map and search engine robots</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/theme-troubleshooting.html">Theme troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/message-queues.html">Message queues</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and patches</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release notes for ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html">Upgrade to use ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-update.html">Update ece-tools version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-patch.html">Apply custom patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade.html">Upgrade Magento version</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Deploy variables</h1>
+</section>
+
+			<p>The following <em>deploy</em> variables control actions in the deploy phase and can inherit and override values from the <a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a>. Also, you can override the <a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a>. Insert these variables in the <code class="highlighter-rouge">deploy</code> stage of the <code class="highlighter-rouge">.magento.env.yaml</code> file:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">DEPLOY_VARIABLE_NAME</span><span class="pi">:</span> <span class="s">value</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For more information about customizing the build and deploy process:</p>
+
+<ul>
+  <li><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Manage build and deploy actions</a></li>
+  <li><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Deployment process</a></li>
+</ul>
+
+<h3 id="cache_configuration"><code class="highlighter-rouge">CACHE_CONFIGURATION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Configure Redis page and default caching. When setting the <code class="highlighter-rouge">cm_cache_backend_redis</code> parameter, you must specify the <code class="highlighter-rouge">server</code>, <code class="highlighter-rouge">port</code>, and <code class="highlighter-rouge">database</code> options.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">CACHE_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">frontend</span><span class="pi">:</span>
+        <span class="na">default</span><span class="pi">:</span>
+          <span class="na">backend</span><span class="pi">:</span> <span class="s">file</span>
+        <span class="na">page_cache</span><span class="pi">:</span>
+          <span class="na">backend</span><span class="pi">:</span> <span class="s">file</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By default, the deployment process overwrites all settings in the <code class="highlighter-rouge">env.php</code> file; however, you can choose to merge one or more values for a service configuration without overwriting all of the values.</p>
+
+<p>Set the <code class="highlighter-rouge">_merge</code> option to one of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">true</code>—<strong>Merge</strong> the configured service values with the environment variable values.</li>
+  <li><code class="highlighter-rouge">false</code>—<strong>Overwrite</strong> the configured service values with the environment variable values.</li>
+</ul>
+
+<p>The following example merges new values to an existing configuration:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">CACHE_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">_merge</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">frontend</span><span class="pi">:</span>
+        <span class="na">default</span><span class="pi">:</span>
+          <span class="na">backend</span><span class="pi">:</span>
+            <span class="na">database</span><span class="pi">:</span> <span class="m">10</span>
+        <span class="na">page_cache</span><span class="pi">:</span>
+          <span class="na">backend</span><span class="pi">:</span>
+            <span class="na">database</span><span class="pi">:</span> <span class="m">11</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="clean_static_files"><code class="highlighter-rouge">CLEAN_STATIC_FILES</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">true</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Enables or disables cleaning <a href="/devdocs/2.1/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview">static content files</a> generated during the build or deploy phase. We recommend the default value <em>true</em> in development. If you make modifications to static content through a separate process, set the value to <em>false</em>.</p>
+
+<ul>
+  <li><strong><code class="highlighter-rouge">true</code></strong>—Removes all existing static content before deploying the updated static content.</li>
+  <li><strong><code class="highlighter-rouge">false</code></strong>—The deployment only overwrites existing static content files if the generated content contains a newer version.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">CLEAN_STATIC_FILES</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Failure to clean static view files before deploying can cause problems if you
+deploy updates to existing files without removing the previous versions. Because of <a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/cache_for_frontdevs.html#clean_static_cache">static file fallback</a> rules, fallback operations can display the wrong file if the directory contains multiple versions of the same file.</p>
+
+<h3 id="crypt_key"><code class="highlighter-rouge">CRYPT_KEY</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Use the Project Web UI to set this value. When you move the database from one environment to another without an installation process, you need the corresponding cryptographic information. Magento uses the encryption key value set in the Web UI as the <code class="highlighter-rouge">crypt/key</code> value in the <code class="highlighter-rouge">env.php</code> file. This does not overwrite an existing encryption key value in the <code class="highlighter-rouge">env.php</code> file.</p>
+
+<h3 id="database_configuration"><code class="highlighter-rouge">DATABASE_CONFIGURATION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>If you defined a database in the <a href="https://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_magento-app.html#relationships">relationships property</a> of the <code class="highlighter-rouge">.magento.app.yaml</code> file, you can customize your database connections for deployment.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">DATABASE_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">some_config</span><span class="pi">:</span> <span class="s1">'</span><span class="s">some_value'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By default, the deployment process overwrites all settings in the <code class="highlighter-rouge">env.php</code> file; however, you can choose to merge one or more values for a service configuration without overwriting all of the values.</p>
+
+<p>Set the <code class="highlighter-rouge">_merge</code> option to one of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">true</code>—<strong>Merge</strong> the configured service values with the environment variable values.</li>
+  <li><code class="highlighter-rouge">false</code>—<strong>Overwrite</strong> the configured service values with the environment variable values.</li>
+</ul>
+
+<p>The following example merges new values to an existing configuration:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">DATABASE_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">some_config</span><span class="pi">:</span> <span class="s1">'</span><span class="s">some_new_value'</span>
+      <span class="na">_merge</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Also, you can configure a table prefix.</p>
+
+<p class="bs-callout bs-callout-warning">If you do not use the merge option with the table prefix, you must provide default connection settings or the deploy fails validation.</p>
+
+<p>The following example uses the <code class="highlighter-rouge">ece_</code> table prefix with default connection settings instead of using the <code class="highlighter-rouge">_merge</code> option:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">DATABASE_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">connection</span><span class="pi">:</span>
+        <span class="na">default</span><span class="pi">:</span>
+          <span class="na">username</span><span class="pi">:</span> <span class="s">user</span> 
+          <span class="na">host</span><span class="pi">:</span> <span class="s">host</span>
+          <span class="na">dbname</span><span class="pi">:</span> <span class="s">magento</span>
+          <span class="na">password</span><span class="pi">:</span> <span class="s">password</span>
+      <span class="na">table_prefix</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ece_'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Sample output:</p>
+
+<div class="language-terminal no-copy highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="gp">MariaDB [main]&gt;</span><span class="w"> </span>SHOW TABLES<span class="p">;</span>
+<span class="go">+-------------------------------------+
+| Tables_in_main                      |
++-------------------------------------+
+| ece_admin_passwords                 |
+| ece_admin_system_messages           |
+| ece_admin_user                      |
+| ece_admin_user_session              |
+| ece_adminnotification_inbox         |
+| ece_amazon_customer                 |
+| ece_authorization_rule              |
+| ece_cache                           |
+| ece_cache_tag                       |
+| ece_captcha_log                     |
+</span><span class="c">.....
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="enable_google_analytics"><code class="highlighter-rouge">ENABLE_GOOGLE_ANALYTICS</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">false</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Enables and disables Google Analytics when deploying to Staging and Integration environments. By default, Google Analytics is true only for the Production environment. Set this value to <code class="highlighter-rouge">true</code> to enable Google Analytics in the Staging and Integration environments.</p>
+
+<ul>
+  <li><strong><code class="highlighter-rouge">true</code></strong>—Enables Google Analytics on Staging and Integration environments.</li>
+  <li><strong><code class="highlighter-rouge">false</code></strong>—Disables Google Analytics on Staging and Integration environments.</li>
+</ul>
+
+<p>Add the <code class="highlighter-rouge">ENABLE_GOOGLE_ANALYTICS</code> environment variable to the <code class="highlighter-rouge">deploy</code> stage in the <code class="highlighter-rouge">.magento.env.yaml</code> file:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">ENABLE_GOOGLE_ANALYTICS</span><span class="pi">:</span> <span class="no">true</span> 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p class="bs-callout bs-callout-info">The Magento Commerce Cloud deploy process always enables Google Analytics on Production environments.</p>
+
+<h3 id="force_update_urls"><code class="highlighter-rouge">FORCE_UPDATE_URLS</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">true</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>On deployment to Pro and Starter Staging and Production environments, this variable replaces Magento base URLs in the database with the project URLs specified by the <a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html"><code class="highlighter-rouge">MAGENTO_CLOUD_ROUTES</code></a> variable. Use this setting to override the default behavior, which is to ignore the <a href="#update_urls">UPDATE_URLS</a> variable when deploying to Staging and Production environments.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">FORCE_UPDATE_URLS</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="generated_code_symlink"><code class="highlighter-rouge">GENERATED_CODE_SYMLINK</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">true</code></li>
+  <li><strong>Version</strong>—Magento 2.1.x</li>
+</ul>
+
+<p>Generates symlinks for the <code class="highlighter-rouge">var/generation</code> and <code class="highlighter-rouge">var/di</code> generated folders.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">GENERATED_CODE_SYMLINK</span><span class="pi">:</span> <span class="no">false</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="mysql_use_slave_connection"><code class="highlighter-rouge">MYSQL_USE_SLAVE_CONNECTION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">false</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Magento can read multiple databases asynchronously. Set to <code class="highlighter-rouge">true</code> to automatically use a <em>read-only</em> connection to the database to receive read-only traffic on a non-master node. This improves performance through load balancing, because only one node needs to handle read-write traffic. Set to <code class="highlighter-rouge">false</code> to remove any existing read-only connection array from the <code class="highlighter-rouge">env.php</code> file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">MYSQL_USE_SLAVE_CONNECTION</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="queue_configuration"><code class="highlighter-rouge">QUEUE_CONFIGURATION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Use this environment variable to retain customized AMQP service settings between deployments. For example, if you prefer using an existing message queue service, like RabbitMQ, instead of relying on Magento Commerce Cloud to create it for you, use the <code class="highlighter-rouge">QUEUE_CONFIGURATION</code> environment variable to connect it to your site:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">QUEUE_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">amqp</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">test.host</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">1234</span>
+      <span class="na">amqp2</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">test.host2</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">12345</span>
+      <span class="na">mq</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">mq.host</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">1234</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By default, the deployment process overwrites all settings in the <code class="highlighter-rouge">env.php</code> file; however, you can choose to merge one or more values for a service configuration without overwriting all of the values.</p>
+
+<p>Set the <code class="highlighter-rouge">_merge</code> option to one of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">true</code>—<strong>Merge</strong> the configured service values with the environment variable values.</li>
+  <li><code class="highlighter-rouge">false</code>—<strong>Overwrite</strong> the configured service values with the environment variable values.</li>
+</ul>
+
+<p>The following example merges new values to an existing configuration:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">QUEUE_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">_merge</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">amqp</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">changed1.host</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">5672</span>
+      <span class="na">amqp2</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">changed2.host2</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">12345</span>
+      <span class="na">mq</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">changedmq.host</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">1234</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="redis_use_slave_connection"><code class="highlighter-rouge">REDIS_USE_SLAVE_CONNECTION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">false</code></li>
+  <li><strong>Version</strong>—Magento 2.1.16 and later</li>
+</ul>
+
+<p>Magento can read multiple Redis instances asynchronously. Set to <code class="highlighter-rouge">true</code> to automatically use a <em>read-only</em> connection to a Redis instance to receive read-only traffic on a non-master node. This improves performance through load balancing, because only one node needs to handle read-write traffic. Set to <code class="highlighter-rouge">false</code> to remove any existing read-only connection array from the <code class="highlighter-rouge">env.php</code> file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">REDIS_USE_SLAVE_CONNECTION</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You must have a Redis service configured in the <code class="highlighter-rouge">.magento.app.yaml</code> file and in the <code class="highlighter-rouge">services.yaml</code> file.</p>
+
+<p><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html#v2002018">ece-tools version 2002.0.18</a> and later uses more fault-tolerant settings. If Magento 2 cannot read data from the Redis <em>slave</em> instance, then it reads data from the Redis <em>master</em> instance.</p>
+
+<p>The read-only connection is not available for use in the Integration environment or if you use the <a href="#cache_configuration"><code class="highlighter-rouge">CACHE_CONFIGURATION</code> variable</a>.</p>
+
+<h3 id="resource_configuration"><code class="highlighter-rouge">RESOURCE_CONFIGURATION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—Not set</li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Maps a resource name to a database connection. This configuration corresponds to the <code class="highlighter-rouge">resource</code> section of the <code class="highlighter-rouge">env.php</code> file.</p>
+
+<p>By default, the deployment process overwrites all settings in the <code class="highlighter-rouge">env.php</code> file; however, you can choose to merge one or more values for a service configuration without overwriting all of the values.</p>
+
+<p>Set the <code class="highlighter-rouge">_merge</code> option to one of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">true</code>—<strong>Merge</strong> the configured service values with the environment variable values.</li>
+  <li><code class="highlighter-rouge">false</code>—<strong>Overwrite</strong> the configured service values with the environment variable values.</li>
+</ul>
+
+<p>The following example merges new values to an existing configuration:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">RESOURCE_CONFIGURATION</span><span class="pi">:</span> 
+      <span class="na">_merge</span><span class="pi">:</span> <span class="no">false</span> 
+      <span class="na">default_setup</span><span class="pi">:</span>
+        <span class="na">connection</span><span class="pi">:</span> <span class="s">default</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="scd_compression_level"><code class="highlighter-rouge">SCD_COMPRESSION_LEVEL</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">4</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Specifies which <a href="https://www.gnu.org/software/gzip">gzip</a> compression level (<code class="highlighter-rouge">0</code> to <code class="highlighter-rouge">9</code>) to use when compressing static content; <code class="highlighter-rouge">0</code> disables compression.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SCD_COMPRESSION_LEVEL</span><span class="pi">:</span> <span class="m">5</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="scd_compression_timeout"><code class="highlighter-rouge">SCD_COMPRESSION_TIMEOUT</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">600</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>When the time it takes to compress the static assets exceeds the compression timeout limit, it interrupts the deployment process. Set the maximum execution time, in seconds, for the static content compression command.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SCD_COMPRESSION_TIMEOUT</span><span class="pi">:</span> <span class="m">800</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="scd_exclude_themes"><code class="highlighter-rouge">SCD_EXCLUDE_THEMES</code></h3>
+
+<p class="bs-callout bs-callout-warning">The <code class="highlighter-rouge">SCD_EXCLUDE_THEMES</code> environment variable is deprecated in <a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html#v2002016">ece-tools version 2002.0.16</a>. Use the <a href="#scd_matrix">SCD_MATRIX variable</a> to control theme configuration.</p>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Themes include numerous files. Set this variable to <code class="highlighter-rouge">true</code> if you want to skip copying over theme files during deployment. For example, the Luma theme is included with Magento Commerce Cloud. You may not need to constantly deploy this theme with your code updates and deployments. To exclude the <code class="highlighter-rouge">magento/luma</code> theme:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SCD_EXCLUDE_THEMES</span><span class="pi">:</span> <span class="s2">"</span><span class="s">magento/luma,</span><span class="nv"> </span><span class="s">magento/my-theme"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="scd_matrix"><code class="highlighter-rouge">SCD_MATRIX</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>You can configure specific locales per theme as long as the theme is not excluded using the <a href="#scd_exclude_themes"><code class="highlighter-rouge">SCD_EXCLUDE_THEMES</code> variable</a> during deployment. This configuration is ideal to speed up the deployment process by reducing the amount of unnecessary theme files. For example, you can deploy the <em>magento/backend</em> theme in English and a custom theme in other languages.</p>
+
+<p>The following example deploys the <code class="highlighter-rouge">Magento/backend</code> theme with three locales:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SCD_MATRIX</span><span class="pi">:</span>
+      <span class="s2">"</span><span class="s">Magento/backend"</span><span class="err">:</span>
+        <span class="na">language</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">en_US</span>
+          <span class="pi">-</span> <span class="s">fr_FR</span>
+          <span class="pi">-</span> <span class="s">af_ZA</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Also, you can choose to <em>not</em> deploy a theme:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SCD_MATRIX</span><span class="pi">:</span>
+      <span class="s2">"</span><span class="s">Magento/backend"</span><span class="err">:</span> <span class="pi">[</span> <span class="pi">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="scd_threads"><code class="highlighter-rouge">SCD_THREADS</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—Automatic</li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Sets the number of threads for static content deployment. The default value is set based on the detected CPU thread count and does not exceed a value of 4. Increasing the number of threads speeds up static content deployment; decreasing the number of threads slows it down. You can set the thread value, for example:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SCD_THREADS</span><span class="pi">:</span> <span class="m">2</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For Magento version 2.1.11 and earlier, the default value is 1.</p>
+
+<p>To further reduce deployment time, we recommend using <a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration Management</a> with the <code class="highlighter-rouge">scd-dump</code> command to move static deployment into the build phase.</p>
+
+<h3 id="search_configuration"><code class="highlighter-rouge">SEARCH_CONFIGURATION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Use this environment variable to retain customized search service settings between deployments. For example:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SEARCH_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">engine</span><span class="pi">:</span> <span class="s">elasticsearch</span>
+      <span class="na">elasticsearch_server_hostname</span><span class="pi">:</span> <span class="s">hostname</span>
+      <span class="na">elasticsearch_server_port</span><span class="pi">:</span> <span class="s1">'</span><span class="s">123456'</span>
+      <span class="na">elasticsearch_index_prefix</span><span class="pi">:</span> <span class="s">magento</span>
+      <span class="na">elasticsearch_server_timeout</span><span class="pi">:</span> <span class="s1">'</span><span class="s">15'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By default, the deployment process overwrites all settings in the <code class="highlighter-rouge">env.php</code> file; however, you can choose to merge one or more values for a service configuration without overwriting all of the values.</p>
+
+<p>Set the <code class="highlighter-rouge">_merge</code> option to one of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">true</code>—<strong>Merge</strong> the configured service values with the environment variable values.</li>
+  <li><code class="highlighter-rouge">false</code>—<strong>Overwrite</strong> the configured service values with the environment variable values.</li>
+</ul>
+
+<p>The following example merges a new value to the existing configuration:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SEARCH_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">engine</span><span class="pi">:</span> <span class="s">elasticsearch</span>
+      <span class="na">elasticsearch_server_port</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1234'</span>
+      <span class="na">_merge</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="session_configuration"><code class="highlighter-rouge">SESSION_CONFIGURATION</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Configure Redis session storage. You must specify the <code class="highlighter-rouge">save</code>, <code class="highlighter-rouge">redis</code>, <code class="highlighter-rouge">host</code>, <code class="highlighter-rouge">port</code>, and <code class="highlighter-rouge">database</code> options for the session storage variable. For example:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SESSION_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">redis</span><span class="pi">:</span>
+        <span class="na">bot_first_lifetime</span><span class="pi">:</span> <span class="m">100</span>
+        <span class="na">bot_lifetime</span><span class="pi">:</span> <span class="m">10001</span>
+        <span class="na">database</span><span class="pi">:</span> <span class="m">0</span>
+        <span class="na">disable_locking</span><span class="pi">:</span> <span class="m">1</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">redis.internal</span>
+        <span class="na">max_concurrency</span><span class="pi">:</span> <span class="m">10</span>
+        <span class="na">max_lifetime</span><span class="pi">:</span> <span class="m">10001</span>
+        <span class="na">min_lifetime</span><span class="pi">:</span> <span class="m">100</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">6379</span>
+      <span class="na">save</span><span class="pi">:</span> <span class="s">redis</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By default, the deployment process overwrites all settings in the <code class="highlighter-rouge">env.php</code> file; however, you can choose to merge one or more values for a service configuration without overwriting all of the values.</p>
+
+<p>Set the <code class="highlighter-rouge">_merge</code> option to one of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">true</code>—<strong>Merge</strong> the configured service values with the environment variable values.</li>
+  <li><code class="highlighter-rouge">false</code>—<strong>Overwrite</strong> the configured service values with the environment variable values.</li>
+</ul>
+
+<p>The following example merges a new value to the existing configuration:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SESSION_CONFIGURATION</span><span class="pi">:</span>
+      <span class="na">_merge</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">redis</span><span class="pi">:</span>
+        <span class="na">max_concurrency</span><span class="pi">:</span> <span class="m">10</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="skip_scd"><code class="highlighter-rouge">SKIP_SCD</code></h3>
+
+<ul>
+  <li><strong>Default</strong>— <em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Set to <code class="highlighter-rouge">true</code> to skip static content deployment during the deploy phase.</p>
+
+<p>We recommend setting this option to <code class="highlighter-rouge">true</code> because running static content deployment during the deploy phase can significantly increase deployment times and downtime for your live site.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">SKIP_SCD</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="static_content_symlink"><code class="highlighter-rouge">STATIC_CONTENT_SYMLINK</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">true</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Generates symlinks for static content. This setting is vital in the Pro Production environment for the three-node cluster. When this variable is set to <code class="highlighter-rouge">false</code>, it must copy every file during the deployment, which increases deployment time. Setting the <a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html#scd_on_demand"><code class="highlighter-rouge">SCD_ON_DEMAND</code> variable</a> to <code class="highlighter-rouge">true</code> disables this variable.</p>
+
+<p>If you generate static content during the build phase, it creates a symlink to the content folder.
+If you generate static content during the deploy phase, it writes directly to the content folder.
+Generating static content on demand disables this variable.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">STATIC_CONTENT_SYMLINK</span><span class="pi">:</span> <span class="no">false</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="update_urls"><code class="highlighter-rouge">UPDATE_URLS</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<code class="highlighter-rouge">true</code></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>On deployment, replace Magento base URLs in the database with the project URLs specified by the <a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html"><code class="highlighter-rouge">MAGENTO_CLOUD_ROUTES</code></a> variable. This is useful for local development, where base URLs are set up for your local environment. 
+When you deploy to a Cloud environment, we change the URLs so you can access your storefront and Magento Admin using project URLs.</p>
+
+<p>If you need to update URLs when deploying to Pro or Starter Staging and Production environments,  use the <a href="#force_update_urls"><code class="highlighter-rouge">FORCE_UPDATE_URLS</code></a> variable.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">UPDATE_URLS</span><span class="pi">:</span> <span class="no">false</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="verbose_commands"><code class="highlighter-rouge">VERBOSE_COMMANDS</code></h3>
+
+<ul>
+  <li><strong>Default</strong>—<em>Not set</em></li>
+  <li><strong>Version</strong>—Magento 2.1.4 and later</li>
+</ul>
+
+<p>Enables or disables the <a href="https://symfony.com/doc/current/console/verbosity.html">Symfony</a> debug verbosity level for your logs. Choose the level of detail provided in the logs: <code class="highlighter-rouge">-v</code>, <code class="highlighter-rouge">-vv</code>, or <code class="highlighter-rouge">-vvv</code>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="na">stage</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">VERBOSE_COMMANDS</span><span class="pi">:</span> <span class="s2">"</span><span class="s">-vv"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2023-04-12">
+      Apr 12th, 2023
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

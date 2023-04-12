@@ -1,0 +1,5733 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-full-width">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+	<section class="full-width-content content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading"></h1>
+</section>
+
+			
+<h1 id="magento-cli">Magento CLI</h1>
+
+<p>This reference contains 65 commands available through the <code class="highlighter-rouge">bin/magento</code> command-line tool.
+The initial list is auto generated using <code class="highlighter-rouge">bin/magento list</code> command at the Magento Open Source edition.</p>
+
+<h2 id="help"><code class="highlighter-rouge">help</code></h2>
+
+<p>Displays help for a command</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento <span class="nb">help</span> <span class="o">[</span><span class="nt">--xml</span><span class="o">]</span> <span class="o">[</span><span class="nt">--format</span> FORMAT] <span class="o">[</span><span class="nt">--raw</span><span class="o">]</span> <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;command_name&gt;]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments">Arguments</h3>
+
+<h4 id="command_name"><code class="highlighter-rouge">command_name</code></h4>
+
+<ul>
+  <li>
+    <p>Description: The command name</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">help</code></p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options">Options</h3>
+
+<h4 id="xml">xml</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--xml</code></p>
+  </li>
+  <li>
+    <p>Description: To output help as XML</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="format">format</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--format</code></p>
+  </li>
+  <li>
+    <p>Description: The output format (txt, xml, json, or md)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">txt</code></p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="raw">raw</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--raw</code></p>
+  </li>
+  <li>
+    <p>Description: To output raw command help</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-1">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="list"><code class="highlighter-rouge">list</code></h2>
+
+<p>Lists commands</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento list <span class="o">[</span><span class="nt">--xml</span><span class="o">]</span> <span class="o">[</span><span class="nt">--raw</span><span class="o">]</span> <span class="o">[</span><span class="nt">--format</span> FORMAT] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;namespace&gt;]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-1">Arguments</h3>
+
+<h4 id="namespace"><code class="highlighter-rouge">namespace</code></h4>
+
+<ul>
+  <li>Description: The namespace name</li>
+</ul>
+
+<h3 class="no_toc" id="options-1">Options</h3>
+
+<h4 id="xml-1">xml</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--xml</code></p>
+  </li>
+  <li>
+    <p>Description: To output list as XML</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="raw-1">raw</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--raw</code></p>
+  </li>
+  <li>
+    <p>Description: To output raw command list</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="format-1">format</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--format</code></p>
+  </li>
+  <li>
+    <p>Description: The output format (txt, xml, json, or md)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">txt</code></p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h2 id="adminusercreate"><code class="highlighter-rouge">admin:user:create</code></h2>
+
+<p>Creates an administrator</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento admin:user:create <span class="o">[</span><span class="nt">--admin-user</span> ADMIN-USER] <span class="o">[</span><span class="nt">--admin-password</span> ADMIN-PASSWORD] <span class="o">[</span><span class="nt">--admin-email</span> ADMIN-EMAIL] <span class="o">[</span><span class="nt">--admin-firstname</span> ADMIN-FIRSTNAME] <span class="o">[</span><span class="nt">--admin-lastname</span> ADMIN-LASTNAME] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="adminuserunlock"><code class="highlighter-rouge">admin:user:unlock</code></h2>
+
+<p>Unlock Admin Account</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento admin:user:unlock &lt;username&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-2">Arguments</h3>
+
+<h4 id="username"><code class="highlighter-rouge">username</code></h4>
+
+<ul>
+  <li>
+    <p>Description: The admin username to unlock</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-2">Options</h3>
+
+<h4 id="help-2">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-1">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-1">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-1">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-1">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-1">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-1">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="appconfigdump"><code class="highlighter-rouge">app:config:dump</code></h2>
+
+<p>Create dump of application</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento app:config:dump
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="cacheclean"><code class="highlighter-rouge">cache:clean</code></h2>
+
+<p>Cleans cache type(s)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:clean <span class="o">[</span><span class="nt">--bootstrap</span> BOOTSTRAP] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;types&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-3">Arguments</h3>
+
+<h4 id="types"><code class="highlighter-rouge">types</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of cache types or omit to apply to all cache types.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-3">Options</h3>
+
+<h4 id="bootstrap">bootstrap</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--bootstrap</code></p>
+  </li>
+  <li>
+    <p>Description: add or override parameters of the bootstrap</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-3">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-2">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-2">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-2">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-2">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-2">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-2">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="cachedisable"><code class="highlighter-rouge">cache:disable</code></h2>
+
+<p>Disables cache type(s)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:disable <span class="o">[</span><span class="nt">--bootstrap</span> BOOTSTRAP] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;types&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-4">Arguments</h3>
+
+<h4 id="types-1"><code class="highlighter-rouge">types</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of cache types or omit to apply to all cache types.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-4">Options</h3>
+
+<h4 id="bootstrap-1">bootstrap</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--bootstrap</code></p>
+  </li>
+  <li>
+    <p>Description: add or override parameters of the bootstrap</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-4">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-3">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-3">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-3">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-3">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-3">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-3">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="cacheenable"><code class="highlighter-rouge">cache:enable</code></h2>
+
+<p>Enables cache type(s)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:enable <span class="o">[</span><span class="nt">--bootstrap</span> BOOTSTRAP] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;types&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-5">Arguments</h3>
+
+<h4 id="types-2"><code class="highlighter-rouge">types</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of cache types or omit to apply to all cache types.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-5">Options</h3>
+
+<h4 id="bootstrap-2">bootstrap</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--bootstrap</code></p>
+  </li>
+  <li>
+    <p>Description: add or override parameters of the bootstrap</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-5">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-4">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-4">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-4">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-4">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-4">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-4">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="cacheflush"><code class="highlighter-rouge">cache:flush</code></h2>
+
+<p>Flushes cache storage used by cache type(s)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:flush <span class="o">[</span><span class="nt">--bootstrap</span> BOOTSTRAP] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;types&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-6">Arguments</h3>
+
+<h4 id="types-3"><code class="highlighter-rouge">types</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of cache types or omit to apply to all cache types.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-6">Options</h3>
+
+<h4 id="bootstrap-3">bootstrap</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--bootstrap</code></p>
+  </li>
+  <li>
+    <p>Description: add or override parameters of the bootstrap</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-6">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-5">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-5">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-5">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-5">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-5">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-5">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="cachestatus"><code class="highlighter-rouge">cache:status</code></h2>
+
+<p>Checks cache status</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:status <span class="o">[</span><span class="nt">--bootstrap</span> BOOTSTRAP]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="catalogimagesresize"><code class="highlighter-rouge">catalog:images:resize</code></h2>
+
+<p>Creates resized product images</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento catalog:images:resize
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="catalogproductattributescleanup"><code class="highlighter-rouge">catalog:product:attributes:cleanup</code></h2>
+
+<p>Removes unused product attributes.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento catalog:product:attributes:cleanup
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="croninstall"><code class="highlighter-rouge">cron:install</code></h2>
+
+<p>Generates and installs crontab for current user</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cron:install <span class="o">[</span><span class="nt">-f</span>|--force]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="cronremove"><code class="highlighter-rouge">cron:remove</code></h2>
+
+<p>Removes tasks from crontab</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cron:remove
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="cronrun"><code class="highlighter-rouge">cron:run</code></h2>
+
+<p>Runs jobs by schedule</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cron:run <span class="o">[</span><span class="nt">--group</span> GROUP] <span class="o">[</span><span class="nt">--bootstrap</span> BOOTSTRAP]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="customerhashupgrade"><code class="highlighter-rouge">customer:hash:upgrade</code></h2>
+
+<p>Upgrade customer’s hash according to the latest algorithm</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento customer:hash:upgrade
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="deploymodeset"><code class="highlighter-rouge">deploy:mode:set</code></h2>
+
+<p>Set application mode.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento deploy:mode:set <span class="o">[</span><span class="nt">-s</span>|--skip-compilation] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;mode&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-7">Arguments</h3>
+
+<h4 id="mode"><code class="highlighter-rouge">mode</code></h4>
+
+<ul>
+  <li>
+    <p>Description: The application mode to set. Available options are “developer” or “production”</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-7">Options</h3>
+
+<h4 id="skip-compilation">skip-compilation</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--skip-compilation</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-s</code></p>
+  </li>
+  <li>
+    <p>Description: Skips the clearing and regeneration of static content (generated code, preprocessed CSS, and assets in pub/static/)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-7">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-6">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-6">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-6">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-6">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-6">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-6">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="deploymodeshow"><code class="highlighter-rouge">deploy:mode:show</code></h2>
+
+<p>Displays current application mode.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento deploy:mode:show
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="devsource-themedeploy"><code class="highlighter-rouge">dev:source-theme:deploy</code></h2>
+
+<p>Collects and publishes source files for theme.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento dev:source-theme:deploy <span class="o">[</span><span class="nt">--type</span> TYPE] <span class="o">[</span><span class="nt">--locale</span> LOCALE] <span class="o">[</span><span class="nt">--area</span> AREA] <span class="o">[</span><span class="nt">--theme</span> THEME] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;file&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-8">Arguments</h3>
+
+<h4 id="file"><code class="highlighter-rouge">file</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Files to pre-process (file should be specified without extension)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">css/styles-mcss/styles-l</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-8">Options</h3>
+
+<h4 id="type">type</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--type</code></p>
+  </li>
+  <li>
+    <p>Description: Type of source files: [less]</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">less</code></p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="locale">locale</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--locale</code></p>
+  </li>
+  <li>
+    <p>Description: Locale: [en_US]</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">en_US</code></p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="area">area</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--area</code></p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Description: Area: [frontend</td>
+          <td>adminhtml]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">frontend</code></p>
+  </li>
+  <li>Requires a value</li>
+</ul>
+
+<h4 id="theme">theme</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--theme</code></p>
+  </li>
+  <li>
+    <p>Description: Theme: [Vendor/theme]</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">Magento/luma</code></p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-8">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-7">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-7">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-7">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-7">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-7">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-7">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="devtestsrun"><code class="highlighter-rouge">dev:tests:run</code></h2>
+
+<p>Runs tests</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento dev:tests:run <span class="o">[</span>&lt;<span class="nb">type</span><span class="o">&gt;]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-9">Arguments</h3>
+
+<h4 id="type-1"><code class="highlighter-rouge">type</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Type of test to run. Available types: all, unit, integration, integration-all, static, static-all, integrity, legacy, default</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">default</code></p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-9">Options</h3>
+
+<h4 id="help-9">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-8">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-8">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-8">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-8">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-8">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-8">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="devurn-cataloggenerate"><code class="highlighter-rouge">dev:urn-catalog:generate</code></h2>
+
+<p>Generates the catalog of URNs to *.xsd mappings for the IDE to highlight xml.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento dev:urn-catalog:generate <span class="o">[</span><span class="nt">--ide</span> IDE] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;path&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-10">Arguments</h3>
+
+<h4 id="path"><code class="highlighter-rouge">path</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Path to file to output the catalog. For PhpStorm use .idea/misc.xml</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-10">Options</h3>
+
+<h4 id="ide">ide</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ide</code></p>
+  </li>
+  <li>
+    <p>Description: Format in which catalog will be generated. Supported: [phpstorm]</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">phpstorm</code></p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-10">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-9">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-9">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-9">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-9">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-9">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-9">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="devxmlconvert"><code class="highlighter-rouge">dev:xml:convert</code></h2>
+
+<p>Converts XML file using XSL style sheets</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento dev:xml:convert <span class="o">[</span><span class="nt">-o</span>|--overwrite] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;xml-file&gt; &lt;processor&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-11">Arguments</h3>
+
+<h4 id="xml-file"><code class="highlighter-rouge">xml-file</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Path to XML file that going to be transformed</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h4 id="processor"><code class="highlighter-rouge">processor</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Path to XSL style sheet that going to be applied to XML file</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-11">Options</h3>
+
+<h4 id="overwrite">overwrite</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--overwrite</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-o</code></p>
+  </li>
+  <li>
+    <p>Description: Overwrite XML file</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-11">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-10">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-10">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-10">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-10">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-10">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-10">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="i18ncollect-phrases"><code class="highlighter-rouge">i18n:collect-phrases</code></h2>
+
+<p>Discovers phrases in the codebase</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento i18n:collect-phrases <span class="o">[</span><span class="nt">-o</span>|--output OUTPUT] <span class="o">[</span><span class="nt">-m</span>|--magento] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;directory&gt;]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-12">Arguments</h3>
+
+<h4 id="directory"><code class="highlighter-rouge">directory</code></h4>
+
+<ul>
+  <li>Description: Directory path to parse. Not needed if –magento flag is set</li>
+</ul>
+
+<h3 class="no_toc" id="options-12">Options</h3>
+
+<h4 id="output">output</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--output</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-o</code></p>
+  </li>
+  <li>
+    <p>Description: Path (including filename) to an output file. With no file specified, defaults to stdout.</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="magento">magento</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--magento</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-m</code></p>
+  </li>
+  <li>
+    <p>Description: Use the –magento parameter to parse the current Magento codebase. Omit the parameter if a directory is specified.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-12">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-11">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-11">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-11">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-11">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-11">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-11">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="i18npack"><code class="highlighter-rouge">i18n:pack</code></h2>
+
+<p>Saves language package</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento i18n:pack <span class="o">[</span><span class="nt">-m</span>|--mode MODE] <span class="o">[</span><span class="nt">-d</span>|--allow-duplicates] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;<span class="nb">source</span><span class="o">&gt;</span> &lt;locale&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-13">Arguments</h3>
+
+<h4 id="source"><code class="highlighter-rouge">source</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Path to source dictionary file with translations</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h4 id="locale-1"><code class="highlighter-rouge">locale</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Target locale for dictionary, for example “de_DE”</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-13">Options</h3>
+
+<h4 id="mode-1">mode</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--mode</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-m</code></p>
+  </li>
+  <li>
+    <p>Description: Save mode for dictionary - “replace” - replace language pack by new one - “merge” - merge language packages, by default “replace”</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">replace</code></p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="allow-duplicates">allow-duplicates</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--allow-duplicates</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-d</code></p>
+  </li>
+  <li>
+    <p>Description: Use the –allow-duplicates parameter to allow saving duplicates of translate. Otherwise omit the parameter.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-13">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-12">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-12">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-12">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-12">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-12">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-12">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="i18nuninstall"><code class="highlighter-rouge">i18n:uninstall</code></h2>
+
+<p>Uninstalls language packages</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento i18n:uninstall <span class="o">[</span><span class="nt">-b</span>|--backup-code] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;package&gt; <span class="o">(</span>&lt;package&gt;<span class="o">)</span>...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-14">Arguments</h3>
+
+<h4 id="package"><code class="highlighter-rouge">package</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Language package name</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-14">Options</h3>
+
+<h4 id="backup-code">backup-code</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--backup-code</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-b</code></p>
+  </li>
+  <li>
+    <p>Description: Take code and configuration files backup (excluding temporary files)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-14">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-13">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-13">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-13">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-13">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-13">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-13">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="indexerinfo"><code class="highlighter-rouge">indexer:info</code></h2>
+
+<p>Shows allowed Indexers</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento indexer:info
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="indexerreindex"><code class="highlighter-rouge">indexer:reindex</code></h2>
+
+<p>Reindexes Data</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento indexer:reindex <span class="o">[</span>&lt;index&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-15">Arguments</h3>
+
+<h4 id="index"><code class="highlighter-rouge">index</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of index types or omit to apply to all indexes.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-15">Options</h3>
+
+<h4 id="help-15">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-14">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-14">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-14">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-14">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-14">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-14">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="indexerreset"><code class="highlighter-rouge">indexer:reset</code></h2>
+
+<p>Resets indexer status to invalid</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento indexer:reset <span class="o">[</span>&lt;index&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-16">Arguments</h3>
+
+<h4 id="index-1"><code class="highlighter-rouge">index</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of index types or omit to apply to all indexes.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-16">Options</h3>
+
+<h4 id="help-16">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-15">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-15">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-15">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-15">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-15">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-15">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="indexerset-mode"><code class="highlighter-rouge">indexer:set-mode</code></h2>
+
+<p>Sets index mode type</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento indexer:set-mode <span class="o">[</span>&lt;mode&gt;] <span class="o">[</span>&lt;index&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-17">Arguments</h3>
+
+<h4 id="mode-2"><code class="highlighter-rouge">mode</code></h4>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Description: Indexer mode type [realtime</td>
+          <td>schedule]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h4 id="index-2"><code class="highlighter-rouge">index</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of index types or omit to apply to all indexes.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-17">Options</h3>
+
+<h4 id="help-17">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-16">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-16">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-16">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-16">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-16">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-16">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="indexershow-mode"><code class="highlighter-rouge">indexer:show-mode</code></h2>
+
+<p>Shows Index Mode</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento indexer:show-mode <span class="o">[</span>&lt;index&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-18">Arguments</h3>
+
+<h4 id="index-3"><code class="highlighter-rouge">index</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of index types or omit to apply to all indexes.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-18">Options</h3>
+
+<h4 id="help-18">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-17">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-17">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-17">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-17">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-17">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-17">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="indexerstatus"><code class="highlighter-rouge">indexer:status</code></h2>
+
+<p>Shows status of Indexer</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento indexer:status <span class="o">[</span>&lt;index&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-19">Arguments</h3>
+
+<h4 id="index-4"><code class="highlighter-rouge">index</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of index types or omit to apply to all indexes.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-19">Options</h3>
+
+<h4 id="help-19">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-18">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-18">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-18">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-18">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-18">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-18">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="infoadminuri"><code class="highlighter-rouge">info:adminuri</code></h2>
+
+<p>Displays the Magento Admin URI</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:adminuri
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="infobackupslist"><code class="highlighter-rouge">info:backups:list</code></h2>
+
+<p>Prints list of available backup files</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:backups:list
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="infocurrencylist"><code class="highlighter-rouge">info:currency:list</code></h2>
+
+<p>Displays the list of available currencies</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:currency:list
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="infodependenciesshow-framework"><code class="highlighter-rouge">info:dependencies:show-framework</code></h2>
+
+<p>Shows number of dependencies on Magento framework</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:dependencies:show-framework <span class="o">[</span><span class="nt">-o</span>|--output OUTPUT]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="infodependenciesshow-modules"><code class="highlighter-rouge">info:dependencies:show-modules</code></h2>
+
+<p>Shows number of dependencies between modules</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:dependencies:show-modules <span class="o">[</span><span class="nt">-o</span>|--output OUTPUT]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="infodependenciesshow-modules-circular"><code class="highlighter-rouge">info:dependencies:show-modules-circular</code></h2>
+
+<p>Shows number of circular dependencies between modules</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:dependencies:show-modules-circular <span class="o">[</span><span class="nt">-o</span>|--output OUTPUT]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="infolanguagelist"><code class="highlighter-rouge">info:language:list</code></h2>
+
+<p>Displays the list of available language locales</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:language:list
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="infotimezonelist"><code class="highlighter-rouge">info:timezone:list</code></h2>
+
+<p>Displays the list of available timezones</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento info:timezone:list
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="maintenanceallow-ips"><code class="highlighter-rouge">maintenance:allow-ips</code></h2>
+
+<p>Sets maintenance mode exempt IPs</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento maintenance:allow-ips <span class="o">[</span><span class="nt">--none</span><span class="o">]</span> <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;ip&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-20">Arguments</h3>
+
+<h4 id="ip"><code class="highlighter-rouge">ip</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Allowed IP addresses</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-20">Options</h3>
+
+<h4 id="none">none</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--none</code></p>
+  </li>
+  <li>
+    <p>Description: Clear allowed IP addresses</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="magento-init-params">magento-init-params</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--magento-init-params</code></p>
+  </li>
+  <li>
+    <p>Description: Add to any command to customize Magento initialization parameters For example: “MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache”</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-20">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-19">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-19">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-19">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-19">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-19">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-19">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="maintenancedisable"><code class="highlighter-rouge">maintenance:disable</code></h2>
+
+<p>Disables maintenance mode</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento maintenance:disable <span class="o">[</span><span class="nt">--ip</span> IP] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="maintenanceenable"><code class="highlighter-rouge">maintenance:enable</code></h2>
+
+<p>Enables maintenance mode</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento maintenance:enable <span class="o">[</span><span class="nt">--ip</span> IP] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="maintenancestatus"><code class="highlighter-rouge">maintenance:status</code></h2>
+
+<p>Displays maintenance mode status</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento maintenance:status <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="moduledisable"><code class="highlighter-rouge">module:disable</code></h2>
+
+<p>Disables specified modules</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento module:disable <span class="o">[</span><span class="nt">-f</span>|--force] <span class="o">[</span><span class="nt">--all</span><span class="o">]</span> <span class="o">[</span><span class="nt">-c</span>|--clear-static-content] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;module&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-21">Arguments</h3>
+
+<h4 id="module"><code class="highlighter-rouge">module</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Name of the module</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-21">Options</h3>
+
+<h4 id="force">force</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--force</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-f</code></p>
+  </li>
+  <li>
+    <p>Description: Bypass dependencies check</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="all">all</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--all</code></p>
+  </li>
+  <li>
+    <p>Description: Disable all modules</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="clear-static-content">clear-static-content</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--clear-static-content</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-c</code></p>
+  </li>
+  <li>
+    <p>Description: Clear generated static view files. Necessary, if the module(s) have static view files</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="magento-init-params-1">magento-init-params</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--magento-init-params</code></p>
+  </li>
+  <li>
+    <p>Description: Add to any command to customize Magento initialization parameters For example: “MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache”</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-21">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-20">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-20">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-20">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-20">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-20">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-20">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="moduleenable"><code class="highlighter-rouge">module:enable</code></h2>
+
+<p>Enables specified modules</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento module:enable <span class="o">[</span><span class="nt">-f</span>|--force] <span class="o">[</span><span class="nt">--all</span><span class="o">]</span> <span class="o">[</span><span class="nt">-c</span>|--clear-static-content] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;module&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-22">Arguments</h3>
+
+<h4 id="module-1"><code class="highlighter-rouge">module</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Name of the module</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-22">Options</h3>
+
+<h4 id="force-1">force</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--force</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-f</code></p>
+  </li>
+  <li>
+    <p>Description: Bypass dependencies check</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="all-1">all</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--all</code></p>
+  </li>
+  <li>
+    <p>Description: Enable all modules</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="clear-static-content-1">clear-static-content</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--clear-static-content</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-c</code></p>
+  </li>
+  <li>
+    <p>Description: Clear generated static view files. Necessary, if the module(s) have static view files</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="magento-init-params-2">magento-init-params</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--magento-init-params</code></p>
+  </li>
+  <li>
+    <p>Description: Add to any command to customize Magento initialization parameters For example: “MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache”</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-22">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-21">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-21">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-21">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-21">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-21">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-21">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="modulestatus"><code class="highlighter-rouge">module:status</code></h2>
+
+<p>Displays status of modules</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento module:status <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="moduleuninstall"><code class="highlighter-rouge">module:uninstall</code></h2>
+
+<p>Uninstalls modules installed by composer</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento module:uninstall <span class="o">[</span><span class="nt">-r</span>|--remove-data] <span class="o">[</span><span class="nt">--backup-code</span><span class="o">]</span> <span class="o">[</span><span class="nt">--backup-media</span><span class="o">]</span> <span class="o">[</span><span class="nt">--backup-db</span><span class="o">]</span> <span class="o">[</span><span class="nt">-c</span>|--clear-static-content] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;module&gt; <span class="o">(</span>&lt;module&gt;<span class="o">)</span>...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-23">Arguments</h3>
+
+<h4 id="module-2"><code class="highlighter-rouge">module</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Name of the module</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-23">Options</h3>
+
+<h4 id="remove-data">remove-data</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--remove-data</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-r</code></p>
+  </li>
+  <li>
+    <p>Description: Remove data installed by module(s)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="backup-code-1">backup-code</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--backup-code</code></p>
+  </li>
+  <li>
+    <p>Description: Take code and configuration files backup (excluding temporary files)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="backup-media">backup-media</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--backup-media</code></p>
+  </li>
+  <li>
+    <p>Description: Take media backup</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="backup-db">backup-db</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--backup-db</code></p>
+  </li>
+  <li>
+    <p>Description: Take complete database backup</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="clear-static-content-2">clear-static-content</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--clear-static-content</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-c</code></p>
+  </li>
+  <li>
+    <p>Description: Clear generated static view files. Necessary, if the module(s) have static view files</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="magento-init-params-3">magento-init-params</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--magento-init-params</code></p>
+  </li>
+  <li>
+    <p>Description: Add to any command to customize Magento initialization parameters For example: “MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache”</p>
+  </li>
+  <li>
+    <p>Requires a value</p>
+  </li>
+</ul>
+
+<h4 id="help-23">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-22">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-22">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-22">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-22">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-22">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-22">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="sampledatadeploy"><code class="highlighter-rouge">sampledata:deploy</code></h2>
+
+<p>Deploy sample data modules</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento sampledata:deploy
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="sampledataremove"><code class="highlighter-rouge">sampledata:remove</code></h2>
+
+<p>Remove all sample data packages from composer.json</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento sampledata:remove
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="sampledatareset"><code class="highlighter-rouge">sampledata:reset</code></h2>
+
+<p>Reset all sample data modules for re-installation</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento sampledata:reset
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupbackup"><code class="highlighter-rouge">setup:backup</code></h2>
+
+<p>Takes backup of Magento Application code base, media and database</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:backup <span class="o">[</span><span class="nt">--code</span><span class="o">]</span> <span class="o">[</span><span class="nt">--media</span><span class="o">]</span> <span class="o">[</span><span class="nt">--db</span><span class="o">]</span> <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupconfigset"><code class="highlighter-rouge">setup:config:set</code></h2>
+
+<p>Creates or modifies the deployment configuration</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:config:set <span class="o">[</span><span class="nt">--backend-frontname</span> BACKEND-FRONTNAME] <span class="o">[</span><span class="nt">--key</span> KEY] <span class="o">[</span><span class="nt">--session-save</span> SESSION-SAVE] <span class="o">[</span><span class="nt">--definition-format</span> DEFINITION-FORMAT] <span class="o">[</span><span class="nt">--db-host</span> DB-HOST] <span class="o">[</span><span class="nt">--db-name</span> DB-NAME] <span class="o">[</span><span class="nt">--db-user</span> DB-USER] <span class="o">[</span><span class="nt">--db-engine</span> DB-ENGINE] <span class="o">[</span><span class="nt">--db-password</span> DB-PASSWORD] <span class="o">[</span><span class="nt">--db-prefix</span> DB-PREFIX] <span class="o">[</span><span class="nt">--db-model</span> DB-MODEL] <span class="o">[</span><span class="nt">--db-init-statements</span> DB-INIT-STATEMENTS] <span class="o">[</span><span class="nt">-s</span>|--skip-db-validation] <span class="o">[</span><span class="nt">--http-cache-hosts</span> HTTP-CACHE-HOSTS] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupcronrun"><code class="highlighter-rouge">setup:cron:run</code></h2>
+
+<p>Runs cron job scheduled for setup application</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:cron:run <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupdb-dataupgrade"><code class="highlighter-rouge">setup:db-data:upgrade</code></h2>
+
+<p>Installs and upgrades data in the DB</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:db-data:upgrade <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupdb-schemaupgrade"><code class="highlighter-rouge">setup:db-schema:upgrade</code></h2>
+
+<p>Installs and upgrades the DB schema</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:db-schema:upgrade <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupdbstatus"><code class="highlighter-rouge">setup:db:status</code></h2>
+
+<p>Checks if DB schema or data requires upgrade</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:db:status <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupdicompile"><code class="highlighter-rouge">setup:di:compile</code></h2>
+
+<p>Generates DI configuration and all missing classes that can be auto-generated</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:di:compile
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupinstall"><code class="highlighter-rouge">setup:install</code></h2>
+
+<p>Installs the Magento application</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:install <span class="o">[</span><span class="nt">--backend-frontname</span> BACKEND-FRONTNAME] <span class="o">[</span><span class="nt">--key</span> KEY] <span class="o">[</span><span class="nt">--session-save</span> SESSION-SAVE] <span class="o">[</span><span class="nt">--definition-format</span> DEFINITION-FORMAT] <span class="o">[</span><span class="nt">--db-host</span> DB-HOST] <span class="o">[</span><span class="nt">--db-name</span> DB-NAME] <span class="o">[</span><span class="nt">--db-user</span> DB-USER] <span class="o">[</span><span class="nt">--db-engine</span> DB-ENGINE] <span class="o">[</span><span class="nt">--db-password</span> DB-PASSWORD] <span class="o">[</span><span class="nt">--db-prefix</span> DB-PREFIX] <span class="o">[</span><span class="nt">--db-model</span> DB-MODEL] <span class="o">[</span><span class="nt">--db-init-statements</span> DB-INIT-STATEMENTS] <span class="o">[</span><span class="nt">-s</span>|--skip-db-validation] <span class="o">[</span><span class="nt">--http-cache-hosts</span> HTTP-CACHE-HOSTS] <span class="o">[</span><span class="nt">--base-url</span> BASE-URL] <span class="o">[</span><span class="nt">--language</span> LANGUAGE] <span class="o">[</span><span class="nt">--timezone</span> TIMEZONE] <span class="o">[</span><span class="nt">--currency</span> CURRENCY] <span class="o">[</span><span class="nt">--use-rewrites</span> USE-REWRITES] <span class="o">[</span><span class="nt">--use-secure</span> USE-SECURE] <span class="o">[</span><span class="nt">--base-url-secure</span> BASE-URL-SECURE] <span class="o">[</span><span class="nt">--use-secure-admin</span> USE-SECURE-ADMIN] <span class="o">[</span><span class="nt">--admin-use-security-key</span> ADMIN-USE-SECURITY-KEY] <span class="o">[</span><span class="nt">--admin-user</span> ADMIN-USER] <span class="o">[</span><span class="nt">--admin-password</span> ADMIN-PASSWORD] <span class="o">[</span><span class="nt">--admin-email</span> ADMIN-EMAIL] <span class="o">[</span><span class="nt">--admin-firstname</span> ADMIN-FIRSTNAME] <span class="o">[</span><span class="nt">--admin-lastname</span> ADMIN-LASTNAME] <span class="o">[</span><span class="nt">--cleanup-database</span><span class="o">]</span> <span class="o">[</span><span class="nt">--sales-order-increment-prefix</span> SALES-ORDER-INCREMENT-PREFIX] <span class="o">[</span><span class="nt">--use-sample-data</span><span class="o">]</span> <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupperformancegenerate-fixtures"><code class="highlighter-rouge">setup:performance:generate-fixtures</code></h2>
+
+<p>Generates fixtures</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:performance:generate-fixtures <span class="o">[</span><span class="nt">-s</span>|--skip-reindex] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;profile&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-24">Arguments</h3>
+
+<h4 id="profile"><code class="highlighter-rouge">profile</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Path to profile configuration file</p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-24">Options</h3>
+
+<h4 id="skip-reindex">skip-reindex</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--skip-reindex</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-s</code></p>
+  </li>
+  <li>
+    <p>Description: Skip reindex</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-24">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-23">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-23">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-23">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-23">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-23">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-23">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="setuprollback"><code class="highlighter-rouge">setup:rollback</code></h2>
+
+<p>Rolls back Magento Application codebase, media and database</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:rollback <span class="o">[</span><span class="nt">-c</span>|--code-file CODE-FILE] <span class="o">[</span><span class="nt">-m</span>|--media-file MEDIA-FILE] <span class="o">[</span><span class="nt">-d</span>|--db-file DB-FILE] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupstatic-contentdeploy"><code class="highlighter-rouge">setup:static-content:deploy</code></h2>
+
+<p>Deploys static view files</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:static-content:deploy <span class="o">[</span><span class="nt">-d</span>|--dry-run] <span class="o">[</span><span class="nt">--no-javascript</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-css</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-less</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-images</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-fonts</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-html</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-misc</span><span class="o">]</span> <span class="o">[</span><span class="nt">--no-html-minify</span><span class="o">]</span> <span class="o">[</span><span class="nt">-t</span>|--theme <span class="o">[</span>THEME]] <span class="o">[</span><span class="nt">--exclude-theme</span> <span class="o">[</span>EXCLUDE-THEME]] <span class="o">[</span><span class="nt">-l</span>|--language <span class="o">[</span>LANGUAGE]] <span class="o">[</span><span class="nt">--exclude-language</span> <span class="o">[</span>EXCLUDE-LANGUAGE]] <span class="o">[</span><span class="nt">-a</span>|--area <span class="o">[</span>AREA]] <span class="o">[</span><span class="nt">--exclude-area</span> <span class="o">[</span>EXCLUDE-AREA]] <span class="o">[</span><span class="nt">-j</span>|--jobs <span class="o">[</span>JOBS]] <span class="o">[</span><span class="nt">--symlink-locale</span><span class="o">]</span> <span class="o">[</span><span class="nt">--</span><span class="o">]</span> <span class="o">[</span>&lt;languages&gt;]...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-25">Arguments</h3>
+
+<h4 id="languages"><code class="highlighter-rouge">languages</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Space-separated list of ISO-636 language codes for which to output static view files.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-25">Options</h3>
+
+<h4 id="dry-run">dry-run</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--dry-run</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-d</code></p>
+  </li>
+  <li>
+    <p>Description: If specified, then no files will be actually deployed.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-javascript">no-javascript</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-javascript</code></p>
+  </li>
+  <li>
+    <p>Description: Do not deploy JavaScript files</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-css">no-css</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-css</code></p>
+  </li>
+  <li>
+    <p>Description: Do not deploy CSS files.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-less">no-less</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-less</code></p>
+  </li>
+  <li>
+    <p>Description: Do not deploy LESS files.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-images">no-images</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-images</code></p>
+  </li>
+  <li>
+    <p>Description: Do not deploy images.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-fonts">no-fonts</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-fonts</code></p>
+  </li>
+  <li>
+    <p>Description: Do not deploy font files.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-html">no-html</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-html</code></p>
+  </li>
+  <li>
+    <p>Description: Do not deploy HTML files.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-misc">no-misc</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-misc</code></p>
+  </li>
+  <li>
+    <p>Description: Do not deploy other types of files (.md, .jbf, .csv, etc…).</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-html-minify">no-html-minify</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-html-minify</code></p>
+  </li>
+  <li>
+    <p>Description: Do not minify HTML files.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="theme-1">theme</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--theme</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-t</code></p>
+  </li>
+  <li>
+    <p>Description: Generate static view files for only the specified themes.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">all</code></p>
+  </li>
+  <li>
+    <p>Accepts multiple values</p>
+  </li>
+</ul>
+
+<h4 id="exclude-theme">exclude-theme</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--exclude-theme</code></p>
+  </li>
+  <li>
+    <p>Description: Do not generate files for the specified themes.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">none</code></p>
+  </li>
+  <li>
+    <p>Accepts multiple values</p>
+  </li>
+</ul>
+
+<h4 id="language">language</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--language</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-l</code></p>
+  </li>
+  <li>
+    <p>Description: Generate files only for the specified languages.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">all</code></p>
+  </li>
+  <li>
+    <p>Accepts multiple values</p>
+  </li>
+</ul>
+
+<h4 id="exclude-language">exclude-language</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--exclude-language</code></p>
+  </li>
+  <li>
+    <p>Description: Do not generate files for the specified languages.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">none</code></p>
+  </li>
+  <li>
+    <p>Accepts multiple values</p>
+  </li>
+</ul>
+
+<h4 id="area-1">area</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--area</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-a</code></p>
+  </li>
+  <li>
+    <p>Description: Generate files only for the specified areas.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">all</code></p>
+  </li>
+  <li>
+    <p>Accepts multiple values</p>
+  </li>
+</ul>
+
+<h4 id="exclude-area">exclude-area</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--exclude-area</code></p>
+  </li>
+  <li>
+    <p>Description: Do not generate files for the specified areas.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">none</code></p>
+  </li>
+  <li>
+    <p>Accepts multiple values</p>
+  </li>
+</ul>
+
+<h4 id="jobs">jobs</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--jobs</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-j</code></p>
+  </li>
+  <li>
+    <p>Description: Enable parallel processing using the specified number of jobs.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">4</code></p>
+  </li>
+  <li>
+    <p>Accepts a value</p>
+  </li>
+</ul>
+
+<h4 id="symlink-locale">symlink-locale</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--symlink-locale</code></p>
+  </li>
+  <li>
+    <p>Description: Create symlinks for the files of those locales, which are passed for deployment, but have no customizations</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-25">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-24">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-24">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-24">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-24">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-24">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-24">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h2 id="setupstore-configset"><code class="highlighter-rouge">setup:store-config:set</code></h2>
+
+<p>Installs the store configuration</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:store-config:set <span class="o">[</span><span class="nt">--base-url</span> BASE-URL] <span class="o">[</span><span class="nt">--language</span> LANGUAGE] <span class="o">[</span><span class="nt">--timezone</span> TIMEZONE] <span class="o">[</span><span class="nt">--currency</span> CURRENCY] <span class="o">[</span><span class="nt">--use-rewrites</span> USE-REWRITES] <span class="o">[</span><span class="nt">--use-secure</span> USE-SECURE] <span class="o">[</span><span class="nt">--base-url-secure</span> BASE-URL-SECURE] <span class="o">[</span><span class="nt">--use-secure-admin</span> USE-SECURE-ADMIN] <span class="o">[</span><span class="nt">--admin-use-security-key</span> ADMIN-USE-SECURITY-KEY] <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupuninstall"><code class="highlighter-rouge">setup:uninstall</code></h2>
+
+<p>Uninstalls the Magento application</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:uninstall <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setupupgrade"><code class="highlighter-rouge">setup:upgrade</code></h2>
+
+<p>Upgrades the Magento application, DB data, and schema</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:upgrade <span class="o">[</span><span class="nt">--keep-generated</span><span class="o">]</span> <span class="o">[</span><span class="nt">--magento-init-params</span> MAGENTO-INIT-PARAMS]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="themeuninstall"><code class="highlighter-rouge">theme:uninstall</code></h2>
+
+<p>Uninstalls theme</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento theme:uninstall <span class="o">[</span><span class="nt">--backup-code</span><span class="o">]</span> <span class="o">[</span><span class="nt">-c</span>|--clear-static-content] <span class="o">[</span><span class="nt">--</span><span class="o">]</span> &lt;theme&gt; <span class="o">(</span>&lt;theme&gt;<span class="o">)</span>...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 class="no_toc" id="arguments-26">Arguments</h3>
+
+<h4 id="theme-2"><code class="highlighter-rouge">theme</code></h4>
+
+<ul>
+  <li>
+    <p>Description: Path of the theme. Theme path should be specified as full path which is area/vendor/name. For example, frontend/Magento/blank</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">[]</code></p>
+  </li>
+  <li>
+    <p>Required</p>
+  </li>
+  <li>
+    <p>Array</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="options-26">Options</h3>
+
+<h4 id="backup-code-2">backup-code</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--backup-code</code></p>
+  </li>
+  <li>
+    <p>Description: Take code backup (excluding temporary files)</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="clear-static-content-3">clear-static-content</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--clear-static-content</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-c</code></p>
+  </li>
+  <li>
+    <p>Description: Clear generated static view files.</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="help-26">help</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--help</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-h</code></p>
+  </li>
+  <li>
+    <p>Description: Display this help message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="quiet-25">quiet</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--quiet</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-q</code></p>
+  </li>
+  <li>
+    <p>Description: Do not output any message</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="verbose-25">verbose</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--verbose</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-v|-vv|-vvv</code></p>
+  </li>
+  <li>
+    <p>Description: Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="version-25">version</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--version</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-V</code></p>
+  </li>
+  <li>
+    <p>Description: Display this application version</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="ansi-25">ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Force ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-ansi-25">no-ansi</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-ansi</code></p>
+  </li>
+  <li>
+    <p>Description: Disable ANSI output</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+<h4 id="no-interaction-25">no-interaction</h4>
+
+<ul>
+  <li>
+    <p>Option: <code class="highlighter-rouge">--no-interaction</code></p>
+  </li>
+  <li>
+    <p>Shortcut: <code class="highlighter-rouge">-n</code></p>
+  </li>
+  <li>
+    <p>Description: Do not ask any interactive question</p>
+  </li>
+  <li>
+    <p>Default: <code class="highlighter-rouge">false</code></p>
+  </li>
+  <li>
+    <p>Does not accept a value</p>
+  </li>
+</ul>
+
+
+		</div>
+		<div class="page-info">
+		</div>
+	</section>
+<!-- /main content -->
+</div> <!-- container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

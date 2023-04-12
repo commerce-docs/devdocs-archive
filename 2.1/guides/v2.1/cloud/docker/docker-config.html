@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Launch Docker | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Commerce Cloud</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Overview</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/onboarding/onboarding-tasks.html">Onboarding tasks</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Architecture</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html">Starter architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">Starter develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html">Pro architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/requirements/cloud-requirements.html">Technologies and requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cloud-composer.html">Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/ece-tools-reference.html">ece-tools package</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/git-integration.html">Git</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-ssh.html">SSH and sFTP</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/new-relic.html">New Relic</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-integrate-blackfire.html">Blackfire.io</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/sendgrid.html">SendGrid</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html">Prepare for manual setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">Install Magento prerequisites</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-ssh.html">Enable SSH keys</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Set up the Magento file system owner</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html">Clone and branch the project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-install.html">Install Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-deploy.html">First time deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/debug.html">Optional - Configure Xdebug</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/sample-data.html">Optional - Install sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development.html">Docker development</a><ul><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">Configure Xdebug for Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-database.html">Connect to the database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-testing.html">Functional testing in Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/cloud-integrations.html">Integrations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/bitbucket-integration.html">Bitbucket integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/github-integration.html">GitHub integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/health-notifications.html">Health notifications</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html">Import existing code into a project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html">Prepare your existing Magento Commerce system</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-import.html">Import Magento Commerce code</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configuration-overview.html">Configure your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configure-best-practices.html">Best practices for store configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/paypal-onboarding.html">Set up PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/custom-theme.html">Install a theme</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly.html">Configure Fastly services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize error pages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-waf-service.html">Managed Cloud WAF</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-image-optimization.html">Image Optimization</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom VCL snippets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-blacklist.html">Custom blacklist VCL</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/trouble-fastly.html">Fastly troubleshooting</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure environments</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html">Application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Build and deploy</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/setup-notifications.html">Set up notifications</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/log-handlers.html">Logging handlers</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-intro.html">Environment variables</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-build.html">Build variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html">Cloud variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-deploy.html">Deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/working-with-variables.html">Working with variables</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html">Routes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-cache.html">Caching</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-redir.html">Redirects</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-ssi.html">Server side includes</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-mysql.html">Set up MySQL service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-redis.html">Set up Redis service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-elastic.html">Set up Elasticsearch service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-rabbit.html">Set up RabbitMQ service</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration management for store settings</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-initial.html">Example of managing system-specific settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html">Manage your project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-basic.html">Configure your project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-start.html">Project structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/user-admin.html">Create and manage users</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html">Manage branches with the Interface</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html">Manage branches with the CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">Snapshots and backup management</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/optimize-cloud-deployment.html">Optimize deployment</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Cloud deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/reduce-downtime.html">Zero downtime deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/static-content-deployment.html">Static content deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/smart-wizards.html">Smart wizards</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/discover-deploy.html">Deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/continuous-deployment.html">Continuous deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-prot.html">Protective block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-sanity-check.html">Build and deploy on local</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate-prereq.html">Prepare to deploy to Staging and Production</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code and migrate static files and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-test.html">Test deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live.html">Go live and launch</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/launch-steps.html">Launch steps</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Troubleshooting</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/troubleshoot-deployment.html">Troubleshoot deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/environments-logs.html">View logs for troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_ce-creds.html">Incorrect credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_proj-startover.html">Resolve issues with a new project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_comp-deploy-fail.html">Component deployment failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/redis-troubleshooting.html">Redis troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/reset-cron-jobs.html">Reset cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-crypt-key-variable.html">Resolve issues with encryption key</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-error-html-minification.html">Resolve issues with HTML minification</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-google-analytics-deploy.html">Resolve issues with Google Analytics during deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/restore-configuration-files.html">Restore configuration files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/site-availability.html">Site availability</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/robots-sitemap.html">Add site map and search engine robots</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/theme-troubleshooting.html">Theme troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/message-queues.html">Message queues</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and patches</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release notes for ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html">Upgrade to use ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-update.html">Update ece-tools version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-patch.html">Apply custom patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade.html">Upgrade Magento version</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Launch Docker</h1>
+</section>
+
+			<p>The <code class="highlighter-rouge">ece-tools</code> package (version 2002.0.13 or later) deploys to a read-only file system by default in the Docker environment, which mirrors the read-only file system deployed in the Production environment. You can use the <code class="highlighter-rouge">docker:build</code> command in the <code class="highlighter-rouge">ece-tools</code> package to generate the Docker Compose configuration and deploy Magento Commerce Cloud in a Docker container.</p>
+
+<h2 id="launch-modes">Launch modes</h2>
+
+<p><em>Mode</em> is an additional configuration option for the Docker configuration generator (the <code class="highlighter-rouge">docker:build</code> command). This mode does not affect the Magento mode. It determines the Magento Commerce Cloud file system installation and read-only or read-write behavior.</p>
+
+<p>You can launch your Docker environment in one of the following modes:</p>
+
+<ul>
+  <li><strong>production</strong>—Production mode is the default configuration setting for launching the Docker environment with read-only filesystem permissions. This option builds the Docker environment in production mode and verifies configured service versions.</li>
+  <li><strong>developer</strong>—Developer mode supports an active development environment with full, writable filesystem permissions. This option builds the Docker environment in developer mode and verifies configured service versions. System performance is slower in developer mode because of additional file synchronization operations.</li>
+</ul>
+
+<p>For example, the following command starts the Docker configuration generator for the developer mode:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>./vendor/bin/ece-tools docker:build <span class="nt">--mode</span><span class="o">=</span><span class="s2">"developer"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To skip the interactive mode, use the <code class="highlighter-rouge">-n, --no-interaction</code> option.</p>
+
+<h2 id="service-versions">Service versions</h2>
+
+<p>Magento Commerce Cloud references the <code class="highlighter-rouge">.magento.app.yaml</code> and <code class="highlighter-rouge">.magento/services.yaml</code> configuration files to determine the services you need. When you start the Docker configuration generator (the <code class="highlighter-rouge">docker:build</code> command), you can overwrite a service version with the following optional parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Key</th>
+      <th>Available versions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Elasticsearch</td>
+      <td><code class="highlighter-rouge">--es</code></td>
+      <td>1.7, 2.4, 5.2, 6.5</td>
+    </tr>
+    <tr>
+      <td>MariaDB</td>
+      <td><code class="highlighter-rouge">--db</code></td>
+      <td>10.0, 10.1, 10.2</td>
+    </tr>
+    <tr>
+      <td>NGINX</td>
+      <td><code class="highlighter-rouge">--nginx</code></td>
+      <td>1.9, latest</td>
+    </tr>
+    <tr>
+      <td>Node</td>
+      <td><code class="highlighter-rouge">--node</code></td>
+      <td>6, 8, 10, 11</td>
+    </tr>
+    <tr>
+      <td>PHP</td>
+      <td><code class="highlighter-rouge">--php</code></td>
+      <td>7.0, 7.1, 7.2</td>
+    </tr>
+    <tr>
+      <td>RabbitMQ</td>
+      <td><code class="highlighter-rouge">--rmq</code></td>
+      <td>3.5, 3.7</td>
+    </tr>
+    <tr>
+      <td>Redis</td>
+      <td><code class="highlighter-rouge">--redis</code></td>
+      <td>3.2, 4.0, 5.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="highlighter-rouge">docker:build</code> command runs in interactive mode and verifies the configured service versions. To skip the interactive mode, use the <code class="highlighter-rouge">-n, --no-interaction</code> option.</p>
+
+<p>For example, the following command starts the Docker configuration generator for the developer mode and specifies the PHP version 7.2:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>./vendor/bin/ece-tools docker:build <span class="nt">--mode</span><span class="o">=</span><span class="s2">"developer"</span> <span class="nt">--php</span> 7.2
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ol>
+  <li>
+    <p>You must have the following software installed on your local workstation:</p>
+
+    <ul>
+      <li>PHP version 7.1 or later
+        <ul>
+          <li><a href="https://formulae.brew.sh/formula/php@7.1">php@7.1</a></li>
+          <li><a href="https://formulae.brew.sh/formula/php@7.2">php@7.2</a></li>
+        </ul>
+      </li>
+      <li><a href="https://getcomposer.org">Composer</a></li>
+      <li><a href="https://www.docker.com/get-started">Docker</a></li>
+      <li>File synchronization required for developer mode—use one of the following:
+        <ul>
+          <li><a href="https://docker-sync.readthedocs.io/en/latest/getting-started/installation.html">docker-sync</a></li>
+          <li><a href="https://mutagen.io/documentation/installation/#installation">mutagen</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Update the hosts file.</p>
+
+    <p>Before you begin, you must add the following hostname to your <code class="highlighter-rouge">/etc/hosts</code> file:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>127.0.0.1 magento2.docker
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>Alternatively, you can run the following command to add it to the file:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s2">"127.0.0.1 magento2.docker"</span> | <span class="nb">sudo tee</span> <span class="nt">-a</span> /etc/hosts
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Stop the default Apache instance on Mac OS.</p>
+
+    <p>Because Mac OS provides built-in Apache service, and may occupy port <code class="highlighter-rouge">80</code>, you must stop the service with the following command:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apachectl stop
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Optionally, <a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html#enable-xdebug">enable Xdebug</a>.</p>
+  </li>
+</ol>
+
+<h2 id="launch-the-docker-environment">Launch the Docker environment</h2>
+
+<ol>
+  <li>
+    <p>Download a Magento application template from the <a href="https://github.com/magento/magento-cloud">Magento Cloud repository</a>. Be careful to select the branch that corresponds with the Magento version.</p>
+  </li>
+  <li>
+    <p>Add your <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/connect-auth.html">Magento access credentials</a> to the <code class="highlighter-rouge">auth.json</code> file.</p>
+  </li>
+  <li>
+    <p>Install the template dependencies.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer <span class="nb">install</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Continue with steps for <a href="#production-mode">Production mode</a> or <a href="#developer-mode">Developer mode</a>.</p>
+  </li>
+</ol>
+
+<h3 id="production-mode">Production mode</h3>
+
+<p>Continue launching your Docker environment in the default <em>production</em> mode.</p>
+
+<ol>
+  <li>
+    <p>In your local environment, start the Docker configuration generator. You can use the service keys, such as <code class="highlighter-rouge">--php</code>, to <a href="#service-versions">specify a version</a>.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>./vendor/bin/ece-tools docker:build
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><em>Optional</em>: If you have a custom PHP configuration file, copy the default configuration DIST file to your custom configuration file and make any necessary changes.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cp</span> .docker/config.php.dist .docker/config.php
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>Convert custom PHP configuration files to Docker ENV files.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>./vendor/bin/ece-tools docker:config:convert
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>This generates the following Docker ENV files:</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">.docker/config.env</code></li>
+    </ul>
+
+    <p class="bs-callout bs-callout-info">The <code class="highlighter-rouge">ece-tools</code> version 2002.0.12 package does not support the <code class="highlighter-rouge">docker:config:convert</code> command.</p>
+  </li>
+  <li>
+    <p><em>Optional</em>: Configure the Docker global variables in the <code class="highlighter-rouge">docker-compose.yml</code> file. For example, you can <a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html#configure-xdebug">configure Xdebug</a>.</p>
+  </li>
+  <li>
+    <p>Build files to containers and run in the background.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose up <span class="nt">-d</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Install Magento in your Docker environment.</p>
+
+    <ul>
+      <li>
+        <p>Build Magento in the Docker container:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose run build cloud-build
+</pre></td></tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Deploy Magento in the Docker container:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose run deploy cloud-deploy
+</pre></td></tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <p class="bs-callout bs-callout-info">For <code class="highlighter-rouge">ece-tools</code> v2002.0.12, install Magento with the <code class="highlighter-rouge">docker-compose run cli magento-installer</code> command.</p>
+  </li>
+  <li>
+    <p>Configure and connect Varnish.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose run deploy magento-command config:set system/full_page_cache/caching_application 2 <span class="nt">--lock-env</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Clear the cache.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose run deploy magento-command cache:clean
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><a href="#access-magento-instance">Access the Magento instance</a>.</p>
+  </li>
+</ol>
+
+<h3 id="developer-mode">Developer mode</h3>
+
+<p>Continue launching your Docker environment in the <em>developer</em> mode. The developer mode supports active development on your local environment.</p>
+
+<p class="bs-callout bs-callout-info">The <code class="highlighter-rouge">ece-tools</code> version 2002.0.18 and later supports developer mode.</p>
+
+<ol>
+  <li>
+    <p>Install the <code class="highlighter-rouge">docker-sync</code> tool using the <a href="https://docker-sync.readthedocs.io/en/latest/getting-started/installation.html">Installation instructions</a>. If you have it installed, continue to the next step.</p>
+  </li>
+  <li>
+    <p>In your local environment, start the Docker configuration generator. You can use the service keys, such as <code class="highlighter-rouge">--php</code>, to <a href="#service-versions">specify a version</a>.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>./vendor/bin/ece-tools docker:build <span class="nt">--mode</span><span class="o">=</span><span class="s2">"developer"</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><em>Optional</em>: If you have a custom PHP configuration file, copy the default configuration DIST file to your custom configuration file and make any necessary changes.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cp</span> .docker/config.php.dist .docker/config.php
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>Convert custom PHP configuration files to Docker ENV files.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>./vendor/bin/ece-tools docker:config:convert
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>This generates the following Docker ENV files:</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">.docker/config.env</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><em>Optional</em>: Configure the Docker global variables in the <code class="highlighter-rouge">docker-compose.yml</code> file. For example, you can <a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">enable and configure Xdebug</a>.</p>
+  </li>
+  <li>
+    <p>Start the file synchronization.</p>
+
+    <p>For the <code class="highlighter-rouge">docker-sync</code> tool:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-sync start
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>For the <code class="highlighter-rouge">mutagen</code> tool:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bash ./mutagen.sh 
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Build files to containers and run in the background.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose up <span class="nt">-d</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Install Magento in your Docker environment.</p>
+
+    <ul>
+      <li>
+        <p>Deploy Magento in the Docker container:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>  docker-compose run deploy cloud-deploy <span class="o">&amp;&amp;</span> <span class="se">\</span>
+  docker-compose run deploy magento-command deploy:mode:set developer
+</pre></td></tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <p class="bs-callout bs-callout-info">Developer mode does not require the <code class="highlighter-rouge">build</code> operation.</p>
+  </li>
+  <li>
+    <p>Configure and connect Varnish.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose run deploy magento-command config:set system/full_page_cache/caching_application 2 <span class="nt">--lock-env</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Clear the cache.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose run deploy magento-command cache:clean
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><a href="#access-magento-instance">Access the Magento instance</a>.</p>
+  </li>
+</ol>
+
+<h2 id="access-magento-instance">Access Magento instance</h2>
+
+<p>You can access the local Magento Cloud template by opening one of the following URLs in a browser:</p>
+
+<ul>
+  <li>
+    <p><a href="http://magento2.docker"><code class="highlighter-rouge">http://magento2.docker</code></a></p>
+  </li>
+  <li>
+    <p><a href="https://magento2.docker"><code class="highlighter-rouge">https://magento2.docker</code></a></p>
+  </li>
+</ul>
+
+<h2 id="stop-and-start-containers">Stop and start containers</h2>
+
+<p>You can stop containers and restore them afterwards using the following methods.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Suspend containers to continue your work later</td>
+      <td><code class="highlighter-rouge">docker-compose stop</code></td>
+    </tr>
+    <tr>
+      <td>Start containers from a suspended state</td>
+      <td><code class="highlighter-rouge">docker-compose start</code></td>
+    </tr>
+    <tr>
+      <td>Stop the synchronization daemon</td>
+      <td><code class="highlighter-rouge">docker-sync stop</code></td>
+    </tr>
+    <tr>
+      <td>Start the synchronization daemon</td>
+      <td><code class="highlighter-rouge">docker-sync start</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="to-stop-and-remove-the-docker-configuration">To stop and remove the Docker configuration:</h4>
+
+<p>Remove all components of your local Docker instance including containers, networks, volumes, and images.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose down <span class="nt">-v</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="to-stop-docker-sync-daemon">To stop <code class="highlighter-rouge">docker-sync</code> daemon:</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-sync stop
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="advanced-usage">Advanced usage</h2>
+
+<h3 id="extend-the-docker-configuration">Extend the Docker configuration</h3>
+
+<p>You can use the built-in extension mechanism of Docker to <a href="https://docs.docker.com/compose/reference/overview/#specifying-multiple-compose-files">specify multiple compose files</a>. The following example replaces the default value of the <code class="highlighter-rouge">ENABLE_SENDMAIL</code> environment variable.</p>
+
+<ol>
+  <li>
+    <p>Create a <code class="highlighter-rouge">docker-compose-dev.yml</code> file inside your project root directory and add the following content:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">ENABLE_SENDMAIL=true</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Pass both configuration files while executing your commands. For example:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose <span class="nt">-f</span> docker-compose.yml <span class="nt">-f</span> docker-compose-dev.yml run deploy bash
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2023-04-12">
+      Apr 12th, 2023
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

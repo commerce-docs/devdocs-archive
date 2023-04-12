@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Release Notes | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Page Builder</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/">What is Page Builder?</a></li><li class="" role="menuitem"><span>Getting started</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/install-pagebuilder.html">Install Page Builder</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/view-pagebuilder.html">View Page Builder</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/getting-started/install-pagebuilder-examples.html">Install Page Builder Examples</a></li></ul></li><li class="" role="menuitem"><span>Extend a content type</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/overview.html">Overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-1-create-extension-module.html">Step 1. Create extension module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-2-extend-appearances.html">Step 2. Extend appearances</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/extend-existing-content-type/step-3-extend-forms.html">Step 3. Extend forms</a></li></ul></li><li class="" role="menuitem"><span>Create a content type</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/overview.html">Overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-1-add-configuration.html">Step 1. Add configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-2-add-templates.html">Step 2. Add templates</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-3-add-components.html">Step 3. Add components</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-4-add-form.html">Step 4. Add form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-5-add-styles.html">Step 5. Add styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/step-6-add-icon.html">Step 6. Add an icon</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/create-custom-content-type/summary.html">Summary</a></li></ul></li><li class="" role="menuitem"><span>How-Tos</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-customize-panel.html">How to customize the panel</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-image-uploader.html">How to add an image uploader</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-storefront-widget.html">How to add a storefront widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-text-editor.html">How to add a text editor</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-custom-toolbar.html">How to add a custom toolbar</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-icons-images.html">How to add icons and images</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-change-breakpoints.html">How to change breakpoints</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-additional-configurations.html">How to add additional configurations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-add-block-chooser.html">How to add a block chooser</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-full-width-layouts.html">How to use full-width layouts</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-customize-selectors.html">How to customize selectors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-apply-product-conditions.html">How to apply product conditions</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-server-side-previews.html">How to use server-side previews</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-use-pagebuilder-for-product-attributes.html">How to use Page Builder for product attributes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/how-to/how-to-deactivate-pagebuilder.html">How to deactivate Page Builder</a></li></ul></li><li class="" role="menuitem"><span>BlueFoot content migration</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/">Overview of content migration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/install-migration-module.html">Install the migration module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/run-migration-module.html">Run the migration module</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/how-content-migration-works.html">How content migration works</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/migrate-content-custom-blocks.html">Migrate content from custom blocks</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder-migration/docs/migrate-other-bluefoot-content.html">Migrate other BlueFoot content</a></li></ul></li><li class="" role="menuitem"><span>Reference</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/configurations.html">Configurations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/data-store.html">Datastore</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/events.html">Events</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/reference/knockout-bindings.html">Knockout bindings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/release-notes.html">Release notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/page-builder/docs/comp-status2.html">Component status</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-page-builder/blob/1.0-develop/CONTRIBUTING.md">Contribution guide</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Release Notes</h1>
+</section>
+
+			<h2 id="beta-8---february-19-2019">Beta 8 - February 19, 2019</h2>
+
+<ul>
+  <li>Resolved: Analytics module sequence issue.</li>
+</ul>
+
+<h2 id="beta-7---february-14-2019">Beta 7 - February 14, 2019</h2>
+
+<p>Beta 7 has breaking changes due to renaming of several critical variables and parameters in Page Builder’s code and configuration. Please refer to the <a href="https://devdocs.magedevteam.com/ds_pagebuilder/page-builder/breaking-changes.html">breaking changes document</a> for details on how to update your custom content types.</p>
+
+<ul>
+  <li>Resolved: Content type markup within Text content type causes whole stage to become HTML <!--MC-13917--></li>
+  <li>Resolved: Hard-coded margins on individual Button <!--MC-13925--></li>
+  <li>Resolved: Various TypeScript errors <!--MC-10833--></li>
+  <li>Resolved: Column rearranging drop zone indicators are too small and sometimes hard to activate <!--MC-4262--></li>
+  <li>Resolved: Collect Page Builder content type data for Page Builder analytics <!--MC-1426--></li>
+  <li>Resolved: Improve naming of the critical variables/parameters in the code and configuration <!--MC-5810--></li>
+  <li>Resolved: Text height inconsistency on stage and storefront <!--MC-4254--></li>
+  <li>Resolved: Option menus, Heading inline editor, and tinyMCE inline editor are cut off on full screen view <!--MC-5383--></li>
+  <li>Resolved: Anchor tags for TinyMCE links are not added to the storefront for Banners and Slides (Added notification for when link attribute is entered) <!--MC-5386--></li>
+  <li>Resolved: <code class="highlighter-rouge">WidgetInitializerConfig</code> only supports &lt;div /&gt; elements <!--MC-13770--></li>
+  <li>Resolved: Slide dots are hard to see against certain backgrounds on storefront <!--MC-5701--></li>
+  <li>Resolved: Missing validation message when uploading big image <!--MC-5184--></li>
+  <li>Resolved: Security issues <!--MC-10871, MC-13922--></li>
+</ul>
+
+<h2 id="beta-6---february-4-2019">Beta 6 - February 4, 2019</h2>
+
+<ul>
+  <li>Resolved: Background attachments of “fixed” do not work in storefront on Android or iPhone mobile devices<!-- MC-5419 --></li>
+  <li>Resolved: Minimum height issues with Columns <!-- MC-5405 --></li>
+  <li>Resolved: Parallax fixed settings should work in admin and storefront <!-- MC-11066 --></li>
+  <li>Resolved: Move data migration into its own module <!-- MC-5824 --></li>
+  <li>Resolved: Changing row appearance with two rows on stage breaks admin <!-- MC-11821 --></li>
+  <li>Resolved: Banner and Slider TinyMCE menus display inconsistently in admin <!-- MC-13691 --></li>
+  <li>Improved: Test coverage for CMS Blocks and Catalog Product <!-- MC-3328, MC3329 --></li>
+</ul>
+
+<h2 id="beta-5---january-28-2019">Beta 5 - January 28, 2019</h2>
+
+<ul>
+  <li>Resolved: Prefixed field names with section name to avoid field name collision <!-- MC-5232 --></li>
+  <li>Resolved: MFTF: Rewrite Selectors/ActionGroups to allow using Page Builder in non-CMS page areas <!-- MC-4231 --></li>
+  <li>Resolved: Right/Left Margin Not Working For Content Types <!-- MC-5025 --></li>
+  <li>Resolved: Alignment doesn’t work for Slide, Banners, &amp; Text Placeholders &amp; for Slide Content &amp; Banner Poster Content <!-- MMC-4290 --></li>
+  <li>Resolved: Implement better developer error reporting <!-- MC-5691 --></li>
+  <li>Resolved: Banner placeholder disappears when user switching between different appearances <!-- MC-5727 --></li>
+</ul>
+
+<h2 id="beta-4---january-14-2019">Beta 4 - January 14, 2019</h2>
+
+<ul>
+  <li>Resolved: Collage Center/Left/Right does not work correctly in a container smaller than 100% width <!-- MC-5372 --></li>
+  <li>Resolved: Contained row appearance renders too small when in smaller container or in Block/Dynamic Block <!-- MC-5432 --></li>
+  <li>Resolved: XSS Vulnerability in Page Builder <!-- MC-5835 --></li>
+</ul>
+
+<h2 id="beta-3---december-19-2018">Beta 3 - December 19, 2018</h2>
+
+<ul>
+  <li>Improved: Handling of invalid Google Maps API keys <!-- MC-5723 --></li>
+  <li>Removed: Legacy overlay transparency field from banner &amp; slider in favor of using the color picker <!-- MC-3895 --></li>
+  <li>Resolved: Box sizing issues on storefront and Admin <!-- MC-5079 --></li>
+  <li>Resolved: Issue with initiation of tabs breaking in certain scenarios <!-- MC-5363 --></li>
+  <li>Resolved: Performance issues with “Edit with Page Builder” button in category and product areas <!-- MC-5403 --></li>
+  <li>Resolved: Numerous issues within staging slide out <!-- MC-5423 --></li>
+</ul>
+
+<h2 id="beta-2---december-10-2018">Beta 2 - December 10, 2018</h2>
+
+<ul>
+  <li>Resolved: Image inside Text Content Type is scaled on stage <!-- MC-3509 --></li>
+  <li>Resolved: Padding is not respected on Text <!-- MC-3713 --></li>
+  <li>Resolved: Saving Slide Button Type As Secondary Or Link Will Still Show As Primary On Edit Form <!-- MC-3818 --></li>
+  <li>Resolved: Columns Widths Are Not Consistent Between Stage &amp; Storefront <!-- MC-3992 --></li>
+  <li>Resolved: Review Information Covered By Add To Cart Button On Products On Stage <!-- MC-4130 --></li>
+  <li>Resolved: Hard Coded Padding On Button Groups &amp; On Text <!-- MC-4278 --></li>
+  <li>Resolved: Remove Reset Button From Slide Outs For All Content Types <!-- MC-5790 --></li>
+  <li>Resolved: Remove is_hideable option from content type configuration <!-- MC-4959 --></li>
+  <li>Resolved: IE11 - Cannot Use Slide Item Option Menu <!-- MC-5443 --></li>
+</ul>
+
+<h2 id="beta-1---november-27-2018">Beta 1 - November 27, 2018</h2>
+
+<ul>
+  <li>Initial beta release</li>
+</ul>
+
+<h2 id="known-issues">Known Issues</h2>
+
+<ul>
+  <li>Degraded admin experience when using IE 11.</li>
+  <li>Product does not display in admin when it is assigned to a specific website. <!-- MC-5373 --></li>
+  <li>Issues with padding, margins, and box-sizing on numerous content types. <!-- MC-11021 --></li>
+  <li>Floating option menus and other controls can be displayed off screen when content types are rendered near the edge of the screen. <!-- MC-5383 --></li>
+  <li>Degraded Parallax performance on storefront and in admin within some browsers. <!-- MC-5480 --></li>
+  <li>Using Page Builder within a slide out form has a degraded experience.
+    <ul>
+      <li>Left-side panel will not scroll with the user.</li>
+      <li>Dragging and dropping can become broken due to another instance of Page Builder being loaded.</li>
+    </ul>
+  </li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-03-26">
+      Mar 26th, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

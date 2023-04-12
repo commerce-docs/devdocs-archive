@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Set up Fastly | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Commerce Cloud</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Overview</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/onboarding/onboarding-tasks.html">Onboarding tasks</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Architecture</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html">Starter architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">Starter develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html">Pro architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/requirements/cloud-requirements.html">Technologies and requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cloud-composer.html">Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/ece-tools-reference.html">ece-tools package</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/git-integration.html">Git</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-ssh.html">SSH and sFTP</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/new-relic.html">New Relic</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-integrate-blackfire.html">Blackfire.io</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/sendgrid.html">SendGrid</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html">Prepare for manual setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">Install Magento prerequisites</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-ssh.html">Enable SSH keys</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Set up the Magento file system owner</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html">Clone and branch the project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-install.html">Install Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-deploy.html">First time deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/debug.html">Optional - Configure Xdebug</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/sample-data.html">Optional - Install sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development.html">Docker development</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">Configure Xdebug for Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-database.html">Connect to the database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-testing.html">Functional testing in Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/cloud-integrations.html">Integrations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/bitbucket-integration.html">Bitbucket integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/github-integration.html">GitHub integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/health-notifications.html">Health notifications</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html">Import existing code into a project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html">Prepare your existing Magento Commerce system</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-import.html">Import Magento Commerce code</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configuration-overview.html">Configure your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configure-best-practices.html">Best practices for store configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/paypal-onboarding.html">Set up PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/custom-theme.html">Install a theme</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly.html">Configure Fastly services</a><ul><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize error pages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-waf-service.html">Managed Cloud WAF</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-image-optimization.html">Image Optimization</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom VCL snippets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-blacklist.html">Custom blacklist VCL</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/trouble-fastly.html">Fastly troubleshooting</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure environments</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html">Application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Build and deploy</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/setup-notifications.html">Set up notifications</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/log-handlers.html">Logging handlers</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-intro.html">Environment variables</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-build.html">Build variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html">Cloud variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-deploy.html">Deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/working-with-variables.html">Working with variables</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html">Routes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-cache.html">Caching</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-redir.html">Redirects</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-ssi.html">Server side includes</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-mysql.html">Set up MySQL service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-redis.html">Set up Redis service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-elastic.html">Set up Elasticsearch service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-rabbit.html">Set up RabbitMQ service</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration management for store settings</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-initial.html">Example of managing system-specific settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html">Manage your project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-basic.html">Configure your project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-start.html">Project structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/user-admin.html">Create and manage users</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html">Manage branches with the Interface</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html">Manage branches with the CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">Snapshots and backup management</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/optimize-cloud-deployment.html">Optimize deployment</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Cloud deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/reduce-downtime.html">Zero downtime deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/static-content-deployment.html">Static content deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/smart-wizards.html">Smart wizards</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/discover-deploy.html">Deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/continuous-deployment.html">Continuous deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-prot.html">Protective block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-sanity-check.html">Build and deploy on local</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate-prereq.html">Prepare to deploy to Staging and Production</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code and migrate static files and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-test.html">Test deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live.html">Go live and launch</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/launch-steps.html">Launch steps</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Troubleshooting</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/troubleshoot-deployment.html">Troubleshoot deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/environments-logs.html">View logs for troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_ce-creds.html">Incorrect credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_proj-startover.html">Resolve issues with a new project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_comp-deploy-fail.html">Component deployment failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/redis-troubleshooting.html">Redis troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/reset-cron-jobs.html">Reset cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-crypt-key-variable.html">Resolve issues with encryption key</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-error-html-minification.html">Resolve issues with HTML minification</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-google-analytics-deploy.html">Resolve issues with Google Analytics during deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/restore-configuration-files.html">Restore configuration files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/site-availability.html">Site availability</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/robots-sitemap.html">Add site map and search engine robots</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/theme-troubleshooting.html">Theme troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/message-queues.html">Message queues</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and patches</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release notes for ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html">Upgrade to use ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-update.html">Update ece-tools version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-patch.html">Apply custom patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade.html">Upgrade Magento version</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Set up Fastly</h1>
+</section>
+
+			<p><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/cloud-fastly.html">Fastly</a> is required for Magento Commerce Cloud, and is used in Staging and Production environments. It works with Varnish to provide fast caching capabilities and a <a href="https://glossary.magento.com/content-delivery-network">Content Delivery Network</a> (CDN) for static assets. Fastly is not available in Integration environments.</p>
+
+<p>This information gets you started with installing and configuring Fastly.
+We provide additional information for configuring backends and Origin shields, customizing
+error pages, and adding custom VCL snippets.</p>
+
+<p>For VCL snippets, experience developing that code is required for advanced
+configurations.</p>
+
+<p>The process for configuring Fastly includes:</p>
+
+<ul>
+  <li>Install Fastly module in Integration</li>
+  <li>Deploy code across Staging and Production</li>
+  <li>Configure Fastly credentials and settings</li>
+  <li>Advanced configurations including VCL snippets</li>
+  <li>Enable and configure the Fastly image optimization feature (Fastly IO)</li>
+</ul>
+
+<h2 id="cloud-fastly-creds">Get Fastly credentials</h2>
+
+<p>Magento Commerce Cloud projects do not require a dedicated Fastly account or account owner. Instead, each project environment has unique Fastly credentials (API key and service ID) that you use to configure and manage Fastly services from the Magento Admin UI. You also use these credentials to submit requests to the Fastly API service.</p>
+
+<p>Before you can set up and use Fastly services for your project, Magento needs to link your project to the Fastly service account for Magento Commerce Cloud and add the Fastly account credentials to your project environment configurations.</p>
+
+<p class="bs-callout bs-callout-warning">If your project domains link to an existing Fastly service account, you must modify the configuration for the existing account before requesting Fastly credentials for your Magento Commerce Cloud project. See <a href="#domain">Multiple Fastly accounts and assigned domains</a>.</p>
+
+<h4 id="to-add-your-project-to-the-fastly-service-account">To add your project to the Fastly service account:</h4>
+
+<p>Submit a <a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">support ticket</a> to add your environments to the Fastly service account for Magento Commerce Cloud:</p>
+
+<ul>
+  <li>
+    <p>For Pro projects, include the URLs for your Production and Staging sites.</p>
+  </li>
+  <li>
+    <p>For Starter projects, include the URLs for your Master and Staging sites.</p>
+  </li>
+</ul>
+
+<h4 id="to-view-your-fastly-credentials">To view your Fastly credentials:</h4>
+
+<p>When we provision your project environments for Fastly services, we add the Fastly credentials to your project environment configuration. You can get these credentials using any of the following methods:</p>
+
+<ul>
+  <li>
+    <p><em>Fastly configuration</em> section in the Magento Admin UI— View the credentials after you <a href="#cloud-fastly-config">enable the Fastly module</a>.</p>
+
+    <p><img src="/devdocs/2.1/common/images/cloud/cloud-fastly-credentials-admin-ui.png" alt="Fastly credentials Admin UI" width="650px" /></p>
+  </li>
+  <li>
+    <p>Project Web UI—Check the following environment variables in the <em><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html#environment-configuration-variables">Environment configuration</a></em> section.</p>
+
+    <ul>
+      <li>
+        <p><code class="highlighter-rouge">CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Local workspace—Use the following Magento Cloud CLI command to <a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html#variablelist">list and review</a> Fastly environment variables.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> magento-cloud variable:get <span class="nt">-e</span> &lt;environment ID&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>IaaS mounted shared directory—On Pro projects, use SSH to connect to your server and get the Fastly credentials from the <code class="highlighter-rouge">/mnt/shared/fastly_tokens.txt</code> file.</p>
+  </li>
+</ul>
+
+<p class="bs-callout bs-callout-info">If you need to change the Fastly API key credential for a project environment for security reasons, you can request a new API key from support.  See <a href="https://support.magento.com/hc/en-us/articles/360006935271-Change-account-owner-access-credentials-via-API-tokens-for-Fastly-on-Cloud">Change Fastly credentials</a>.</p>
+
+<h3 id="domain">Multiple Fastly accounts and assigned domains</h3>
+
+<p>Fastly only allows you to assign an apex domain and associated subdomains to one Fastly service and account. If you have an existing Fastly account that links the same apex and subdomains used for your Magento Commerce Cloud, you have the following options:</p>
+
+<ul>
+  <li>
+    <p>Remove the apex and subdomains from the existing account before requesting Fastly service credentials for your Magento Commerce Cloud project environments. See <a href="https://docs.fastly.com/guides/basic-configuration/working-with-domains">Working with Domains</a> in the Fastly documentation.</p>
+
+    <p>Use this option to link the apex domain and all subdomains to the Fastly service account for Magento Commerce Cloud.</p>
+  </li>
+  <li>
+    <p>Submit a support ticket to request domain delegation so that apex and subdomains can be linked to different accounts.</p>
+
+    <p>Use this option if your apex domain has multiple subdomains for Magento and non-Magento sites that you want to link to different Fastly accounts.</p>
+  </li>
+</ul>
+
+<h4 id="request-domain-delegation">Request domain delegation</h4>
+
+<p><em>Scenario 1</em></p>
+
+<p>The apex domain (<code class="highlighter-rouge">testweb.com</code> and <code class="highlighter-rouge">www.testweb.com</code>) is linked to an existing Fastly account. You have a Magento Commerce Cloud project configured with the following subdomains: <code class="highlighter-rouge">mcstaging.testweb.com</code> and <code class="highlighter-rouge">mcprod.testweb.com</code>. You do not want to move the apex domain to the Fastly service account for Magento Commerce Cloud Magento.</p>
+
+<p>Submit a <a href="https://docs.fastly.com/guides/detailed-product-descriptions/support-description-and-sla#support-requests">Fastly support ticket</a> requesting that the subdomains be delegated from the existing Fastly account to the Fastly account for Magento Commerce Cloud. Include your Magento project ID in the ticket.</p>
+
+<p>After the delegation is complete, your project subdomains can be added to the Fastly service account for Magento Commerce Cloud. See <a href="#cloud-fastly-creds">Get Fastly credentials</a>.</p>
+
+<p><em>Scenario 2</em></p>
+
+<p>The apex domain (<code class="highlighter-rouge">testweb.com</code> and <code class="highlighter-rouge">www.testweb.com</code>) is linked to the Magento Commerce Cloud Fastly service account. You want to manage Fastly services for the <code class="highlighter-rouge">service.testweb.com</code> and <code class="highlighter-rouge">product-updates.testweb.com</code> subdomains from a different Fastly account.</p>
+
+<p>Submit a <a href="https://support.magento.com/hc/en-us/articles/360000913794#submit-ticket">Magento support ticket</a> requesting that the subdomains be delegated from the Magento Commerce Cloud Fastly service account to the Fastly account. Include the service ID for the Fastly account in the ticket.</p>
+
+<h2 id="cloud-fastly-start">Get started</h2>
+
+<p>You need to install Fastly in its own branch. Fine-tuning Fastly can be a
+complex process, depending on your needs and store size. If you already have a
+branch to work in, or know how to create a branch, continue to
+<a href="#cloud-fastly-setup">installing Fastly</a>.</p>
+
+<p>To create a branch:</p>
+
+<ol>
+  <li>Log in to your local development system, or switch to, the <a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Magento file system owner</a>.</li>
+  <li>Change to a directory to which the Magento file system owner has write access.</li>
+  <li>
+    <p>Enter the following command in a terminal to log in to your project:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud login
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>List your projects. With the project ID, you can complete additional commands.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud project:list
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If necessary, clone the project to your local. You should have cloned when setting up your local development workspace.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud project:get &lt;project ID&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Change to a project directory. For example, <code class="highlighter-rouge">cd /var/www/html/magento2</code></li>
+  <li>
+    <p>List environments in the project. Every environment includes an active Git branch of your code, database, environment variables, configurations, and services.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud environment:list
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+  	<code class="highlighter-rouge">magento-cloud environment:list</code>—displays environment hierarchies whereas the <code class="highlighter-rouge">git branch</code> command does not.
+  </li>
+  <li>
+    <p>Fetch origin branches to get the latest code:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git fetch origin
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Check out, or switch to, a specific branch and environment. Git commands only checkout the Git branch. The Magento Cloud command also switches to the active environment.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud environment:checkout &lt;environment ID&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>To create a new environment, use <code class="highlighter-rouge">magento-cloud environment:branch &lt;environment name&gt; &lt;parent environment ID&gt;</code></p>
+  </li>
+  <li>
+    <p>Pull any updated code to your local for the environment ID (which is the Git branch):</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git pull origin &lt;environment ID&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create a <a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">snapshot</a> of the environment as a backup:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento-cloud snapshot:create -e &lt;environment ID&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="cloud-fastly-setup">Install Fastly in an Integration branch and deploy</h2>
+
+<p>You should install the Fastly module on your local, pushing the code to
+Integration and deploying across to your Staging and Production environments.
+For Magento Commerce Cloud 2.2, install Fastly module 1.2.33 or later for all
+updated settings and full VCL snippet uploading support.</p>
+
+<p class="bs-callout bs-callout-warning">Don’t configure the module in your local before building and deploying. You’ll
+configure the module in those environments.</p>
+
+<p>We recommend using the <code class="highlighter-rouge">bin/magento magento-cloud:scd-dump</code> command for
+Configuration Management(<a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html#cloud-config-specific-recomm">2.1.X</a>,
+<a href="https://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html#cloud-config-specific-recomm">2.2.X</a>).
+When you use the <code class="highlighter-rouge">app:config:dump</code> command, all configuration options for Fastly
+are locked and cannot be edited in Staging and Production.</p>
+
+<p>We provide Fastly services only for your Staging and Production environments.
+You cannot use the Fastly service in Integration environments.</p>
+
+<ol>
+  <li>
+    <p>In your local environment root directory, use a terminal to enter the following
+    commands in the order shown:</p>
+
+    <p>composer config repositories.fastly-magento2 git “https://github.com/fastly/fastly-magento2.git”
+  composer require fastly/magento2</p>
+  </li>
+  <li>Wait for dependencies to be updated.</li>
+  <li>
+    <p>Enter the following command to fully update and clear the cache:</p>
+
+    <p>php bin/magento setup:upgrade &amp;&amp; php bin/magento cache:clean</p>
+  </li>
+  <li>
+    <p>Edit your composer.json and ensure the Fastly module is included with version.</p>
+
+    <ul>
+      <li>In the “require” section, you should have <code class="highlighter-rouge">"fastly/magento2": &lt;version number&gt;</code></li>
+      <li>
+        <p>In the “repositories” section, you should have:</p>
+
+        <p>“fastly-magento2”: {
+              “url”: “https://github.com/fastly/fastly-magento2.git”
+  }</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Add, commit, and push the changes to your code repository with the following
+    command:</p>
+
+    <p>git add -A; git commit -m “Install Fastly”; git push origin <branch name=""></branch></p>
+  </li>
+  <li>
+    <p>Merge the branch code with the <code class="highlighter-rouge">master</code> Integration branch.</p>
+  </li>
+  <li><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy</a> the code to
+Staging and Production.</li>
+</ol>
+
+<p>After deployment, you can log in to the Admin in Staging and Production to
+configure Fastly credentials and settings. This gives you the flexibility to have
+different caching features as needed in both environments, including VCL snippets.</p>
+
+<h2 id="cloud-fastly-config">Enable and configure Fastly using the Magento Admin</h2>
+
+<p>To begin configuring Fastly, you need to enter and test Fastly credentials in
+Staging and Production. After successfully testing the credentials, you can
+continue with advanced configurations and <a href="#custom-vcl">VCL snippets</a>.</p>
+
+<p>We provide your Fastly Service ID and API key (or token) for Staging and
+Production environments. These credentials are different for each environment.
+Make sure to use the correct credentials.</p>
+
+<p>Complete the following configuration steps in Staging and Production environments:</p>
+
+<ol>
+  <li>
+    <p>Log in to your Magento Admin UI.</p>
+  </li>
+  <li>
+    <p>Click <strong>Stores</strong> &gt; <strong>Settings</strong> &gt; <strong>Configuration</strong> &gt; <strong>Advanced</strong> &gt; <strong>System</strong> and expand <strong>Full Page Cache</strong>.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>![Expand to select Fastly](/devdocs/2.1/common/images/cloud_fastly_menu.png){:width="650px"}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ol>
+  <li>For <strong>Caching Application</strong>, uncheck the <strong>Use system value</strong> checkbox and select <strong>Fastly CDN</strong> from the drop-down list.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>![Choose Fastly](/devdocs/2.1/common/images/cloud-fastly_enable-admin.png){:width="550px"}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Expand <strong>Fastly Configuration</strong> and <a href="https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module">choose caching options</a>.</p>
+  </li>
+  <li>
+    <p>After configuring the caching options, click <strong>Save Config</strong> at the top of the page.</p>
+  </li>
+  <li>
+    <p>Clear the cache according to the notification. Then, navigate back to <strong>Stores</strong> &gt; <strong>Settings</strong> &gt; <strong>Configuration</strong> &gt; <strong>Advanced</strong> &gt; <strong>System</strong> &gt;
+<strong>Fastly Configuration</strong> to continue configuring Fastly.</p>
+  </li>
+</ol>
+
+<p>Configure the following features and enable additional <a href="https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#further-configuration-options">configuration options</a>:</p>
+
+<ul>
+  <li><a href="#upload-vcl-snippets">Upload Fastly VCL snippets</a></li>
+  <li><a href="#backend">Configure backends and Origin shielding</a></li>
+  <li><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize response pages</a></li>
+</ul>
+
+<ul id="info" class="bs-callout bs-callout-info">
+  <li>Ignore the link to create a free Fastly account. We’ll provide your Fastly
+credentials (Service ID and API token).</li>
+  <li>With Fastly version 1.2.0 and later (we recommend 1.2.33 or later), use
+the <strong>Upload VCL to Fastly</strong> button to upload your default <a href="#custom-vcl">VCL snippets</a>.</li>
+</ul>
+
+<h2 id="upload-vcl-snippets">Upload Fastly VCL snippets</h2>
+
+<p>You don’t have to create or code VCL snippets. We provide a default set of snippets for
+Fastly. You only need to click <strong>Upload VCL to Fastly</strong> to finish this step.</p>
+
+<p>The installed Fastly module includes the following default <a href="https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets">VCL snippets</a>
+that drive the integration with Fastly. These VCL snippets are not available
+until you upload them. When you click Upload, you push a set of these default
+VCL snippets to Fastly for your specific Service ID and extension.</p>
+
+<p>For VCL snippet developers, these default snippets are prepended with
+<code class="highlighter-rouge">magentomodule_</code> with a priority of 50. You should not use this prepended name
+for your own snippets. For full details, see our guide to create and
+add <a href="#custom-vcl">custom VCL snippets</a>.</p>
+
+<p>To use snippets, you must upload the Fastly VCL using the Magento Admin as
+follows:</p>
+
+<ol>
+  <li>In the <strong>Fastly Configuration</strong> section, click <strong>Upload VCL to Fastly</strong> as
+    the following figure shows.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>![Upload a Magento VCL to Fastly](/devdocs/2.1/common/images/cloud_upload-vcl-to-fastly.png)
+
+{:#info .bs-callout .bs-callout-info}
+      If the **Upload VCL to Fastly** button does not display, you should
+  upgrade the Fastly extension to version 1.2.0 or later. We recommend 1.2.33
+  or later. The Fastly Composer name is `fastly/magento2`.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ol>
+  <li>Once the upload completes, the modal automatically closes with a success
+    message.</li>
+</ol>
+
+<p>After the upload completes, you can create and upload custom VCL snippets with
+advanced settings and options. You use APIs to add these VCL snippets, further
+adding them in your site code depending on the actions.</p>
+
+<p>For more information, see <a href="https://docs.fastly.com/guides/vcl/guide-to-vcl">Fastly VCL documentation</a> and <a href="https://docs.fastly.com/guides/vcl-snippets/about-vcl-snippets">Fastly VCL snippets</a>.</p>
+
+<h2 id="backend">Configure backends and Origin shielding</h2>
+
+<p>Backend settings provide fine tuning for Fastly performance with Origin
+shielding and timeouts. A <em>backend</em> is a specific location (IP or domain) with
+configured Origin shield and timeout settings for checking and providing cached
+content.</p>
+
+<p><em>Origin shielding</em> routes all requests for your store to a specific Point of
+Presence (POP). When a request is received, the POP checks for cached content
+and provides it. If it is not cached, it continues to the Shield POP, then to
+the Origin server which caches the content. The shields reduce traffic directly
+to the origin.</p>
+
+<p>You can add multiple backends. Repeat these instructions to create multiple
+backends. For example, you may need a backend specifically for
+<a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Wordpress</a> to
+handle your blog.</p>
+
+<ol>
+  <li>
+    <p>Access and expand <strong>Fastly Configuration</strong>.</p>
+  </li>
+  <li>
+    <p>Expand <strong>Backend settings</strong> and click the gear to configure the default
+backend. A modal opens with options to select and configure.</p>
+
+    <p><img src="/devdocs/2.1/common/images/cloud_fastly-backend.png" alt="Modify the backend" width="600px" /></p>
+  </li>
+  <li>
+    <p>Select the <strong>Shield</strong> location (or datacenter) closest to your AWS region.
+For example, if Staging is on the west coast of the United States
+(us-west-1), select the <code class="highlighter-rouge">sjc-ca-us</code> Fastly shield location. This is the POP
+that provides caching services.</p>
+
+    <p>The following list shows which Faslty shield locations to use based an AWS
+  region:</p>
+
+    <ul>
+      <li>ap-northeast-1 =&gt; tokyo-jp2</li>
+      <li>ap-southeast-1 =&gt; singapore-sg</li>
+      <li>ap-southeast-2 =&gt; sydney-au</li>
+      <li>ap-south-1 =&gt; singapore-sg</li>
+      <li>eu-central-1 =&gt; frankfurt-de</li>
+      <li>eu-west-1 =&gt; london-uk, london_city-uk</li>
+      <li>eu-west-2 =&gt; london-uk, london_city-uk</li>
+      <li>eu-west-3 =&gt; cdg-par-fr</li>
+      <li>sa-east-1    =&gt; gru-br-sa</li>
+      <li>us-east-1 =&gt; iad-va-us</li>
+      <li>us-east-2 =&gt; iad-va-us</li>
+      <li>us-west-1 =&gt; sjc-ca-us</li>
+      <li>us-west-2 =&gt; sea-wa-us</li>
+    </ul>
+  </li>
+  <li>
+    <p>Modify the timeout values (in microseconds) for the connection to the
+shield, time between bytes, and time for the first byte. We recommend keeping
+the default timeout settings.</p>
+  </li>
+  <li>
+    <p>Optionally, select to Activate the backend and Shield after editing or saving.</p>
+  </li>
+  <li>
+    <p>Click <strong>Upload</strong> to save. The settings are communicated to Fastly.</p>
+  </li>
+  <li>
+    <p>In the Magento Admin, click <strong>Save Config</strong>.</p>
+  </li>
+</ol>
+
+<p>For more information from Fastly, see the Magento 2 <a href="https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/Guides/BACKEND-SETTINGS.md">Backend settings guide</a>.</p>
+
+<h2 id="purge">Configure purge options</h2>
+
+<p>Fastly provides multiple types of purge options on your Magento Cache Management
+page including purging product category, product assets, and content. When enabled,
+Fastly watches for events to automatically purge those caches. If you disable a
+purge option, you can manually purge Fastly aches after finishing updates
+through the Cache Management page.</p>
+
+<p>The options include:</p>
+
+<ul>
+  <li>
+    <p><strong>Purge category</strong>: Purges product category content (not product content) when
+you add and update a single product. You may want to keep this disabled and
+enable purge product, which purges products and product categories.</p>
+  </li>
+  <li><strong>Purge product</strong>: Purges all product and product category content when
+saving a single modification to a product. Enabling purge product can be helpful
+to immediately get updates to customers when changing a price, adding a product
+option, and when product inventory is out-of-stock.</li>
+  <li><strong>Purge CMS page</strong>: Purges page content when updating and adding pages to the
+Magento CMS. For example, you may want to purge when updating your Terms and
+Conditions or Return policy. If you rarely make these changes, you could disable
+automatic purging.</li>
+  <li><strong>Soft purge</strong>: Sets changed content to stale and purges according to the
+stale timing. In combination with the stale timings your customers will be
+served stale content very fast while Fastly is updating the content in the
+background.</li>
+</ul>
+
+<p><img src="/devdocs/2.1/common/images/cloud_fastly-purgeoptions.png" alt="Configure purge options" width="650px" /></p>
+
+<p>To configure Fastly purge options:</p>
+
+<ol>
+  <li>
+    <p>In the <em>Fastly Configuration</em> section, expand <strong>Advanced</strong>.</p>
+  </li>
+  <li>
+    <p>All purge options display. Select “Yes” per purge option to enable automatic
+purging. Select “No” to disable automatic purging, allowing you to manually
+purge caches through the Cache Management page.</p>
+  </li>
+  <li>
+    <p>Click <strong>Save Config</strong> at the top of the page.</p>
+  </li>
+  <li>
+    <p>After the page reloads, click <strong>Upload VCL to Fastly</strong> in the
+   <em>Fastly Configuration</em> section.</p>
+  </li>
+</ol>
+
+<p>For more information, see <a href="https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/CONFIGURATION.md#further-configuration-options">the Fastly configuration options</a>.</p>
+
+<h2 id="custom-vcl">Create custom VCL snippets</h2>
+
+<p>For extensive instructions to create custom VCL snippets and needed edge
+dictionaries or ACLs, see <a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom Fastly VCL snippets</a></p>
+
+<h2 id="bulkaction">Extend Fastly timeout for the Magento Admin</h2>
+
+<p>Fastly sets a 180 second-timeout for HTTPS requests to the Magento Admin, so you
+may encounter timeouts if you need to complete bulk actions that take longer than
+3 minutes. You can manage timeouts using Fastly 1.2.41.</p>
+
+<ol>
+  <li>
+    <p>In the <em>Fastly Configuration</em> section, expand <strong>Advanced</strong>.</p>
+  </li>
+  <li>
+    <p>Set the <strong>Admin path timeout</strong> value in seconds. This value cannot be more
+   than one hour (3600 seconds).</p>
+  </li>
+  <li>
+    <p>Click <strong>Save Config</strong> at the top of the page.</p>
+  </li>
+  <li>
+    <p>After the page reloads, click <strong>Upload VCL to Fastly</strong> in the
+   <em>Fastly Configuration</em> section.</p>
+  </li>
+</ol>
+
+<p>Since version 1.2.39, Fastly gets the Magento Admin path for generating the VCL
+file from the <code class="highlighter-rouge">app/etc/env.php</code> configuration file.</p>
+
+<h2 id="geoip">Configure GeoIP handling</h2>
+
+<p>The Fastly module includes GeoIP handling to automatically redirect visitors or
+provide a list of stores matching their obtained country code. If you already use
+a Magento extension for GeoIP handling, you may need to verify the features with
+Fastly options.</p>
+
+<ol>
+  <li>
+    <p>In the <em>Fastly Configuration</em> section, expand <strong>Advanced</strong>.</p>
+  </li>
+  <li>
+    <p>Scroll down and select <strong>Yes</strong> to <strong>Enable GeoIP</strong>. Additional configuration
+options display.</p>
+  </li>
+  <li>
+    <p>For GeoIP Action, select if the visitor is automatically redirected with
+<strong>Redirect</strong> or provided a list of stores to select from with <strong>Dialog</strong>.</p>
+  </li>
+  <li>
+    <p>For <strong>Country Mapping</strong>, click <strong>Add</strong> to enter a two-letter country code to
+map with a specific Magento store from a list. For a list of country codes, see <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">this site</a>.</p>
+
+    <p><img src="/devdocs/2.1/common/images/cloud_fastly-geo-code.png" alt="Add GeoIP country maps" /></p>
+  </li>
+  <li>
+    <p>Click <strong>Save Config</strong> at the top of the page.</p>
+  </li>
+  <li>
+    <p>After page reload, click <strong>Upload VCL to Fastly</strong> in the <em>Fastly Configuration</em> section.</p>
+  </li>
+</ol>
+
+<p>Fastly also provides a series of <a href="https://docs.fastly.com/guides/vcl/geolocation-related-vcl-features">geolocation-related VCL features</a>
+for customized geolocation coding.</p>
+
+<h2 id="fastly-dns">Configure DNS for Fastly</h2>
+
+<p>You must complete these steps when you go live.</p>
+
+<p>After checking with your registrar about where to change your DNS settings,
+add a CNAME record for your website that points to the Fastly service:
+<code class="highlighter-rouge">prod.magentocloud.map.fastly.net</code>. If you use multiple hostnames for your site,
+you must add a CNAME record for each one.</p>
+
+<p id="info" class="bs-callout bs-callout-info">This does not work for an <a href="https://blog.cloudflare.com/zone-apex-naked-domain-root-domain-cname-supp">apex domain</a> (also referred to as a <em>naked</em> domain). You must use a DNS
+provider that supports forwarding DNS queries to use an apex domain.</p>
+
+<p>The following list contains examples of DNS providers for informational purposes.
+Use your preferred DNS provider.</p>
+
+<ul>
+  <li>CNAME with ALIAS record from <a href="http://dyn.com">Dyn</a></li>
+  <li>ANAME record on <a href="http://www.dnsmadeeasy.com">DNS Made Easy</a></li>
+  <li>ANAME at <a href="https://www.easydns.com">easyDNS</a></li>
+  <li>ACNAME at <a href="https://www.cloudflare.com">CloudFlare</a></li>
+  <li>ALIAS at <a href="https://pointhq.com">PointDNS</a></li>
+</ul>
+
+<p>Many other DNS providers also offer workarounds to accomplish this goal. The most
+common is to add a CNAME record for the <code class="highlighter-rouge">www</code> host on the domain and then use the
+DNS provider’s redirect service to redirect the apex over to the <code class="highlighter-rouge">www</code> version of
+the domain. Consult your DNS provider for more information.</p>
+
+<p>Another option for apex domain is to add A records, which maps a domain name to
+the Fastly IP addresses:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">151.101.1.124</code></li>
+  <li><code class="highlighter-rouge">151.101.65.124</code></li>
+  <li><code class="highlighter-rouge">151.101.129.124</code></li>
+  <li><code class="highlighter-rouge">151.101.193.124</code></li>
+</ul>
+
+<p>Refer to <a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a>
+for more information.</p>
+
+<h3 id="fastly-tls">TLS and Fastly</h3>
+
+<p>If you use TLS with Fastly enabled in your environment, you must provide your
+DNS provider with a TXT record from Fastly. We provide a Domain Validated SSL
+certificate with Subject Alternative Name enabled, issued by GlobalSign. When
+entering your <a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Support ticket</a> for
+DNS information and going live, let us know you are using TLS, provide your
+domain names, and request the TXT record. You can then send this record to your
+DNS provider. The domain validation process is executed by Fastly.</p>
+
+<p>For details on this TXT record, see the Fastly <a href="https://docs.fastly.com/guides/securing-communications/domain-validation-for-tls-certificates#dns-text-record-verification">DNS TXT record validation</a>.</p>
+
+<h2 id="upgrade">Upgrade Fastly</h2>
+
+<p>Fastly updates the Magento module to resolve issues, increase performance, and
+provide new features. You can check the <a href="https://marketplace.magento.com/fastly-magento2.html">Magento Marketplace</a>
+and <a href="https://github.com/fastly/fastly-magento2/releases">GitHub</a>
+for updates on the latest releases.</p>
+
+<p>When you upgrade Fastly, you get the upgraded subset of default VCL snippets.
+When you finish upgrading, you must <a href="#upload-vcl-snippets">upload upgraded default VCL snippets to Fastly</a>:</p>
+
+<ol>
+  <li>In the <em>Fastly Configuration</em> section, click <strong>Upload VCL to Fastly</strong>.</li>
+  <li>After the upload completes, the modal automatically closes with a success message.</li>
+</ol>
+
+<p>When you upgrade, the default VCL snippets you uploaded should not be affected or require any additional steps.</p>
+
+<p>For information on upgrading modules, refer to <a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>.</p>
+
+<p>If you created a custom VCL snippet using the same name as a default snippet,
+you may need to verify and update those snippets. We do not recommend replacing
+existing default snippets with custom snippets of the same name. For details on
+custom VCL, see <a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom Fastly VCL snippets</a>.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2023-04-12">
+      Apr 12th, 2023
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

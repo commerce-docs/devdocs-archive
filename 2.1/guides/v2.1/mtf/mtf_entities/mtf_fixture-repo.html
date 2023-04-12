@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Fixture repository | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Functional Testing Framework Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_installation.html">Installation</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_quickstart.html">Quick Start</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_quickstart/mtf_quickstart_config.html">Adjust configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_quickstart/mtf_quickstart_magento.html">Prepare Magento application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_quickstart/mtf_quickstart_environment.html">Prepare environment for test run</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_quickstart/mtf_quickstart_runtest.html">Test run</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_quickstart/mtf_quickstart_logs.html">See logs for failed tests</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/create_test.html">Create a Test</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/create_test/out-of-the-box.html">Out-of-the-box test</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/create_test/new_test.html">New functional test. Theory</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/create_test/create_new_test.html">New functional test. Practice</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/features.html">Features</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/features/isolation.html">Isolation management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/features/modularity.html">Modularity</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/features/parallel_execution.html">Parallel execution flow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/features/reporting.html">Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/features/test_suite.html">Test suite</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/features/webdriver.html">Web driver replacement</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities.html">Entities</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_fixture.html">Fixture</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_fixture-repo.html">Fixture Repository</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_handler.html">Handler</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_block.html">Block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_typified-element.html">Typified element</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_page.html">Page</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_constraint.html">Constraint</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_dataset.html">Data set</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_testcase.html">Test case</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_scenariotest.html">Scenario test</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/configuration.html">Configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_update.html">Update</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/troubleshooting.html">Troubleshooting</a></li><li class="" role="menuitem"><a href="https://github.com/magento/mtf/blob/develop/CHANGELOG.md">Changelog</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Fixture repository</h1>
+</section>
+
+			<p>The repository stores pre-defined data for the fixture.
+It contains only data sets that are used in the test along with the associated field data.
+Repositories are stored in the <code class="highlighter-rouge">Repository</code> directory in the <a href="https://glossary.magento.com/module">module</a> to which they belong.
+Reference to the repository is placed in the fixture <a href="https://glossary.magento.com/xml">XML</a> file in attribute named <code class="highlighter-rouge">repository</code>.</p>
+
+<p>In this topic you will learn how to create, use, and merge a repository.</p>
+
+<h2 id="mtf_repository_create">Create a repository for the entire fixture</h2>
+
+<p>Let’s create a repository for the Widget fixture <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Fixture/Widget.xml</code>.</p>
+
+<p><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_fixture.html">More details about fixtures</a>.</p>
+
+<p>Assume that we have the following fixture:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+</pre></td><td class="rouge-code"><pre>
+<span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../../vendor/magento/mtf/etc/fixture.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;fixture</span> <span class="na">name=</span><span class="s">"widget"</span>
+             <span class="na">module=</span><span class="s">"Magento_Widget"</span>
+             <span class="na">type=</span><span class="s">"flat"</span>
+             <span class="na">entity_type=</span><span class="s">"widget_instance"</span>
+             <span class="na">collection=</span><span class="s">"Magento\Widget\Model\Resource\Widget\Instance\Collection"</span>
+             <span class="na">identifier=</span><span class="s">"parameters"</span>
+             <span class="na">repository_class=</span><span class="s">"Magento\Widget\Test\Repository\Widget"</span>
+             <span class="na">handler_interface=</span><span class="s">"Magento\Widget\Test\Handler\Widget\WidgetInterface"</span>
+             <span class="na">class=</span><span class="s">"Magento\Widget\Test\Fixture\Widget"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"code"</span> <span class="na">group=</span><span class="s">"settings"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"theme_id"</span> <span class="na">group=</span><span class="s">"settings"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"anchor_text"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">group=</span><span class="s">"frontend_properties"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"template"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"chosen_option"</span> <span class="na">source=</span><span class="s">"Magento\Widget\Test\Fixture\Widget\ChosenOption"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"display_type"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"show_pager"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"products_count"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"cache_lifetime"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"page_size"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"store_ids"</span> <span class="na">source=</span><span class="s">"Magento\Widget\Test\Fixture\Widget\StoreIds"</span> <span class="na">group=</span><span class="s">"frontend_properties"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"widget_instance"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"parameters"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"id"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"page_id"</span> <span class="na">source=</span><span class="s">"Magento\Widget\Test\Fixture\Widget\PageIds"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"layout"</span> <span class="na">source=</span><span class="s">"Magento\Widget\Test\Fixture\Widget\LayoutUpdates"</span> <span class="na">repository=</span><span class="s">"Magento\Widget\Test\Repository\Widget\LayoutUpdates"</span> <span class="na">group=</span><span class="s">"layout_updates"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"widgetOptions"</span> <span class="na">source=</span><span class="s">"Magento\Widget\Test\Fixture\Widget\WidgetOptions"</span> <span class="na">repository=</span><span class="s">"Magento\Widget\Test\Repository\Widget\WidgetOptions"</span> <span class="na">group=</span><span class="s">"widget_options"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/fixture&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">repository_class="Magento\Widget\Test\Repository\Widget"</code> attribute tells us that this fixture uses data from the <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Repository/Widget.xml</code> repository.</p>
+
+<p>In this section we will show the logic of how to create this repository.</p>
+
+<p>Also <code class="highlighter-rouge">layout</code> and <code class="highlighter-rouge">widgetOptions</code> fields use <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Repository/Widget/LayoutUpdates.xml</code> and <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Repository/Widget/WidgetOptions.xml</code> repositories respectively.</p>
+
+<p><a href="#mtf_repository_create-field"> Learn how to create repository for the fixture field</a>.</p>
+
+<p>We want to specify data sets for two cases of submitting <a href="https://glossary.magento.com/widget">Widget</a> forms: <code class="highlighter-rouge">default</code> with minimum data, and <code class="highlighter-rouge">cms_page_link</code> with data needed to create new <a href="https://glossary.magento.com/cms">CMS</a> page link.</p>
+
+<p>To create a new CMS page link the user must enter data of all required fields. The widget has three forms with fields to specify: <a href="#mtf_repo_ex_set"><strong>Settings</strong></a>, <a href="#mtf_repo_ex_store"><strong>Storefront Properties</strong></a>, <a href="#mtf_repo_ex_front"><strong>Frontend Apps Options</strong></a>. The following text along with screenshots gives an example of how to create a data set of the repository.</p>
+
+<p><a href="#mtf_repo_widgetxml">See entire repository code</a>.</p>
+
+<h4 id="mtf_repo_ex_set">Settings form</h4>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui.png" alt="cms_page_link &quot;Settings&quot; data set for entire fixture view on GUI" /></p>
+
+<ul>
+  <li>Set the <strong>Type</strong> field (<code class="highlighter-rouge">field name="code"</code>) to “CMS Page Link”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;field name="code" xsi:type="string"&gt;CMS Page Link&lt;/field&gt;</code>.</li>
+  <li>Set the <strong>Design Theme</strong> field (<code class="highlighter-rouge">field name="theme_id"</code>) to “Magento Blank”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;field name="theme_id" xsi:type="string"&gt;Magento Blank&lt;/field&gt;</code>.</li>
+</ul>
+
+<h4 id="mtf_repo_ex_store">Storefront Properties form</h4>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui_storefront.png" alt="cms_page_link &quot;Storefront properties&quot; data set for entire fixture view on GUI" /></p>
+
+<ul>
+  <li>Set the <strong>Frontend App Title</strong> field to “Cms Page Link [random integer value]”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;field name="title" xsi:type="string"&gt;Cms Page Link %isolation%&lt;/field&gt;</code>.</li>
+  <li>Set the <strong>Assign to Store Views</strong> field to “All Store Views”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a>:</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+ <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"store_ids"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"dataset"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>all_store_views<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Provide data for the <strong>Layout Updates</strong> complex field. In the repository code, complex fields are represented as arrays of items. An item can be an array of items also, depending on the hierarchy of fields. This field is defined as <code class="highlighter-rouge">&lt;field name="widget_instance" xsi:type="array"&gt;&lt;/field&gt;</code>. As it is possible to create more than one instance of a layout update, we define our instance as the first element of an array with index “0” as <code class="highlighter-rouge">&lt;item name="0" xsi:type="array"&gt;&lt;/item&gt;</code>.
+    <ul>
+      <li>Set the <strong>Display on</strong> field to “All pages:. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="page_group" xsi:type="string"&gt;All Pages&lt;/item&gt;</code>. Daughter fields are appeared, when <strong>Display on</strong> field is specified. All daughter fields must be wrapped in <code class="highlighter-rouge">&lt;item name="all_pages" xsi:type="array"&gt;&lt;/item&gt;</code>.
+        <ul>
+          <li>Set the <strong>Container</strong> field to “Main content area”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="block" xsi:type="string"&gt;Main Content Area&lt;/item&gt;</code>.</li>
+          <li>Set the <strong>Template</strong> field to “CMS Page Link Block Template”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="template" xsi:type="string"&gt;CMS Page Link Block Template&lt;/item&gt;</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="mtf_repo_ex_front">Frontend App Options</h4>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui_frontend-app.png" alt="cms_page_link &quot;Frontend App Options&quot; data set for entire fixture view on GUI" /></p>
+
+<ul>
+  <li>Set the <strong>Anchor Custom Text</strong> field to “text”.</li>
+  <li>Set the <strong>Anchor Custom Title</strong> field to “anchor title”.</li>
+  <li>Choose in the <strong>CMS Page</strong> grid newly created CMS page.</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"widgetOptions"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"type_id"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>cmsPageLink<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This simple code contains a bit more complex logic, where <a href="#mtf_repository_create-field">the repository is applied to the fixture field</a>. Just to remind you, how this field is represented in the fixture: <code class="highlighter-rouge">&lt;field name="widgetOptions" source="Magento\Widget\Test\Fixture\Widget\WidgetOptions" repository="Magento\Widget\Test\Repository\Widget\WidgetOptions" group="widget_options" /&gt;</code>.</p>
+
+<p>In brief, we reference another repository <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Repository/Widget/WidgetOptions.xml</code>, and a <a href="/devdocs/2.1/guides/v2.1/mtf/mtf_entities/mtf_fixture.html#mtf_fixture_source">source</a> that is <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Fixture/Widget/WidgetOptions.php</code>.</p>
+
+<p>The <code class="highlighter-rouge">WidgetOptions.xml</code> repository includes <code class="highlighter-rouge">cmsPageLink</code> data set:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>
+<span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"cmsPageLink"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"anchor_text"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>text<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>anchor title/field&gt;
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"entities"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>cmsPage::default<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/dataset&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The source understands the <code class="highlighter-rouge">entities</code> field as an instruction to create a CMS Page using <code class="highlighter-rouge">&lt;dataset name="default"&gt;</code> from the <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Cms/Test/Repository/CmsPage.xml</code> repository.</p>
+
+<h4 id="mtf_repo_widgetxml">Widget.xml</h4>
+
+<p>Now we can create a repository XML file <code class="highlighter-rouge">Widget.xml</code>. In our case the file should be placed in <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Repository</code>. The full name must be specified in the <code class="highlighter-rouge">repository_class</code> attribute of the fixture: <code class="highlighter-rouge">repository_class="Magento\Widget\Test\Repository\Widget"</code>.</p>
+
+<p>See the entire repository sample so far:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+</pre></td><td class="rouge-code"><pre>
+<span class="cp">&lt;?xml version="1.0" ?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../../vendor/magento/mtf/Magento/Mtf/Repository/etc/repository.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;repository</span> <span class="na">class=</span><span class="s">"Magento\Widget\Test\Repository\Widget"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"default"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Test Frontend App<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"store_ids"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>All Store Views<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"widget_instance"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"page_group"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>all_pages<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"all_pages"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"layout_handle"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>default<span class="nt">&lt;/item&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"for"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>all<span class="nt">&lt;/item&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"block"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>content<span class="nt">&lt;/item&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"template"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>widget/block.phtml<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"theme_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"cms_page_link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"code"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>CMS Page Link<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Cms Page Link %isolation%<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"store_ids"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"dataset"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>all_store_views<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"widget_instance"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"page_group"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>All Pages<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"all_pages"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"block"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Main Content Area<span class="nt">&lt;/item&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"template"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>CMS Page Link Block Template<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"theme_id"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Magento Blank<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"widgetOptions"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"type_id"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>cmsPageLink<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="mtf_repository_structure">Repository structure</h3>
+
+<p>Let’s look at the repository structure.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;config&gt;</code> is a root node that defines the path to the <code class="highlighter-rouge">repository.xsd</code> schema.</li>
+  <li><code class="highlighter-rouge">&lt;repository&gt;</code> specifies a repository class in the required <code class="highlighter-rouge">class</code> attribute and stores data sets. <code class="highlighter-rouge">class</code> contains the full name of the repository class. The repository contains data sets.
+    <ul>
+      <li>In case of an entire fixture repository, the full name of the class (including the namespace) must be built as <code class="highlighter-rouge">&lt;path to module where the fixture is placed&gt;\Repository\&lt;file with the name of fixture&gt;</code>. Example: <code class="highlighter-rouge">Magento\Widget\Test\Repository\Widget</code></li>
+      <li>In case of a fixture field repository, the full name of the class (including the namespace) must be built as <code class="highlighter-rouge">&lt;path to module where the fixture is placed&gt;\Repository\&lt;directory with the name of fixture&gt;\&lt;file with the name of field&gt;</code>. Example: <code class="highlighter-rouge">Magento\Widget\Test\Repository\Widget\LayoutUpdates</code>.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">&lt;dataset&gt;</code> specifies the name of data set in the required <code class="highlighter-rouge">name</code> attribute. This name serves as a reference to the data set that will be used in the test. Each data set contains fields.</li>
+  <li><code class="highlighter-rouge">&lt;field&gt;</code> defines the value of the field. Field can contain either value, or items if the field is complex.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">field</code> attribute</th>
+      <th>Semantics</th>
+      <th>Is required?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>Field name in fixture</td>
+      <td>Required</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">xsi:type</code></td>
+      <td>Type of field value</td>
+      <td>Required</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">field</code> daughter element</th>
+      <th>Semantics</th>
+      <th>Is required?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;item&gt;</code></td>
+      <td>Element of complex field. Items can be complex like fields. Complex items contain items. Item has <code class="highlighter-rouge">key=&gt;value</code> structure.</td>
+      <td>Required if <code class="highlighter-rouge">&lt;field xsi:type="array" ...&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">item</code> attribute</th>
+      <th>Semantics</th>
+      <th>Is required?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>Key name of the item</td>
+      <td>Required</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">xsi:type</code></td>
+      <td>Type of the item value</td>
+      <td>Required</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="highlighter-rouge">default</code> data set is used in the test when the repository hasn’t been specified in the test, although you can explicitly specify <code class="highlighter-rouge">default</code>. If repository name in the test is <code class="highlighter-rouge">cms_page_link</code>, then fields will be filled with data from <code class="highlighter-rouge">&lt;dataset name="cms_page_link"&gt;</code>.</p>
+
+<h2 id="mtf_repository_create-field">Create a repository for the fixture field</h2>
+
+<p>In the preceding section, the Widget fixture code contains fields with the links for repositories. Let’s consider the field <code class="highlighter-rouge">layout</code> with <code class="highlighter-rouge">repository="Magento\Widget\Test\Repository\Widget\LayoutUpdates</code>.</p>
+
+<p>The repository value is a reference to the repository XML file. Therefore, we should create <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Widget/Test/Repository/Widget/LayoutUpdates.xml</code>. The XML structure of this repository is the same as of <a href="#mtf_repository_create">repository for the entire fixture</a>.</p>
+
+<p>Assume that we want to provide data for the <a href="https://glossary.magento.com/layout">Layout</a> Update block for the following cases shown on the screenshots (name of data sets have orange font, fields defined in repository are highlighted in orange).</p>
+
+<p>Case 1. <strong>all_pages</strong> data set:</p>
+
+<ul>
+  <li>Set the <strong>Display on</strong> field (<code class="highlighter-rouge">item name="page_group"</code>) to “All Pages”, which is the subcategory of “Generic Pages” (see drop-down menu on the following screenshot). It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="page_group" xsi:type="string"&gt;Generic Pages/All Pages&lt;/item&gt;</code></li>
+  <li>Set the <strong>Container</strong> field (<code class="highlighter-rouge">item name="block"</code>) to “Main content Area”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a>  <code class="highlighter-rouge">&lt;item name="block" xsi:type="string"&gt;Main Content Area&lt;/item&gt;</code></li>
+</ul>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_repository_layout-allpages_w_dropd.png" alt="all_pages data set view on GUI" /></p>
+
+<p>Case 2. <strong>on_category</strong> data set:</p>
+
+<ul>
+  <li>Set the <strong>Display on</strong> field (<code class="highlighter-rouge">item name="page_group"</code>) to “Non-Anchor Categories” that is item of “Categories”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="page_group" xsi:type="string"&gt;Categories/Non-Anchor Categories&lt;/item&gt;</code>.</li>
+  <li>Set the <strong>Categories</strong> field (<code class="highlighter-rouge">item name="for"</code>) to “Specific Categories”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="for" xsi:type="string"&gt;Yes&lt;/item&gt;</code>.</li>
+  <li>Set the in a tree of categories the <strong>Default Category</strong> (<code class="highlighter-rouge">item name="entities"</code>). It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="entities" xsi:type="string"&gt;category::default_subcategory&lt;/item&gt;</code>.</li>
+  <li>Set the <strong>Container</strong> field (<code class="highlighter-rouge">item name="block"</code>) to “Main content Area”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="block" xsi:type="string"&gt;Main Content Area&lt;/item&gt;</code>.</li>
+</ul>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_repository_layout-oncategory_w_dropd.png" alt="on_category data set view on GUI" /></p>
+
+<p>Case 3. <strong>for_cms_page_link</strong> data set:</p>
+
+<ul>
+  <li>Set the <strong>Display on</strong> field (<code class="highlighter-rouge">item name="page_group"</code>) to “All Pages” that is item of “Generic Pages”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="page_group" xsi:type="string"&gt;Generic Pages/All Pages&lt;/item&gt;</code>.</li>
+  <li>Set the <strong>Container</strong> field (<code class="highlighter-rouge">item name="block"</code>) to “Main content Area”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;item name="block" xsi:type="string"&gt;Main Content Area&lt;/item&gt;</code>.</li>
+  <li>Set the <strong>Template</strong> field (<code class="highlighter-rouge">item name="template"</code>) to “CMS Page Link Block Template”. It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> <code class="highlighter-rouge">&lt;</code>item name=”template” xsi:type=”string”<code class="highlighter-rouge">&gt;CMS Page Link Block Template&lt;/item&gt;</code>.</li>
+</ul>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_repository_layout-for-cms-page-link_w_dropd.png" alt="layout_for_cms_page_link data set view on GUI" /></p>
+
+<p>The repository code for these cases follows:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" ?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../../../vendor/magento/mtf/Magento/Mtf/Repository/etc/repository.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;repository</span> <span class="na">class=</span><span class="s">"Magento\Widget\Test\Repository\Widget\LayoutUpdates"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"all_pages"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"page_group"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Generic Pages/All Pages<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"block"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Main Content Area<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"on_category"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"page_group"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Categories/Non-Anchor Categories<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"for"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Yes<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"entities"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>category::default_subcategory<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"block"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Main Content Area<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"for_cms_page_link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"0"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"page_group"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Generic Pages/All Pages<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"block"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Main Content Area<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"template"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>CMS Page Link Block Template<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="mtf_repository_config">Configuration repository</h2>
+
+<p>The configuration repository stores predefined data sets for Magento configuration settings. It is the repository for the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Config">Magento_Config module</a> and is named <code class="highlighter-rouge">ConfigData.xml</code>.</p>
+
+<p>Let’s see the following example of configuration settings for <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Authorizenet">Authorize.Net module</a> <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/tests/app/Magento/Authorizenet/Test/Repository/ConfigData.xml</code>.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+</pre></td><td class="rouge-code"><pre>
+<span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../../vendor/magento/mtf/Magento/Mtf/Repository/etc/repository.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;repository</span> <span class="na">class=</span><span class="s">"Magento\Config\Test\Repository\ConfigData"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"authorizenet"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/active"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Yes<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/login"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>PAYMENT_AUTHORIZENET_LOGIN<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/trans_key"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>PAYMENT_AUTHORIZENET_TRANS_KEY<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/test"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>No<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/cgi_url"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>https://test.authorize.net/gateway/transact.dll<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/debug"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Yes<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/useccv"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Yes<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"authorizenet_rollback"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"payment/authorizenet/active"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>payment<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>No<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Path to the <code class="highlighter-rouge">Authorizenet</code> UI form in <a href="https://glossary.magento.com/admin">Admin</a> is <strong>STORES &gt; Settings &gt; Configuration &gt; SALES &gt; Payment Methods &gt; Authorize.net Direct Post</strong>.</p>
+
+<p>This repository contains two data sets: <code class="highlighter-rouge">authorizenet</code> that covers seven fields, and <code class="highlighter-rouge">authorizenet_rollback</code> that covers one field.</p>
+
+<p>Semantics of the field attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">field</code> attribute</th>
+      <th>Semantics</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>Path to the Magento UI element</td>
+      <td>Example: <code class="highlighter-rouge">payment/authorizenet/active</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">xsi:type</code></td>
+      <td>Type of the field content</td>
+      <td><code class="highlighter-rouge">array</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each field contains 4 items:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item name</th>
+      <th>Semantics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">scope</code></td>
+      <td>Magento configuration section</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scope_id</code></td>
+      <td>Magento scope identifier. UI representation is shown on the screenshot following this table.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">label</code></td>
+      <td>Text represented in the UI field</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>Value of the field</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following screenshot helps to understand the <code class="highlighter-rouge">scope_id</code> attribute.</p>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_ent_fixt_repo_config_scope-id.png" alt="authorizenet data set view on GUI" /></p>
+
+<p>Let’s see the <code class="highlighter-rouge">authorizenet</code> data set in action. Fields defined in repository are in orange. Other fields are set in default values.</p>
+
+<p><img src="/devdocs/2.1/common/images/ftf/mtf_repo_config_ex.png" alt="authorizenet data set view on GUI" /></p>
+
+<h2 id="mtf_repository_merge">Merging repositories</h2>
+
+<p>The FTF enables you to split data sets among different modules. The configuration repository is a good example.</p>
+
+<p>Modules that require configuration adjustment store <code class="highlighter-rouge">ConfigData.xml</code> in their <code class="highlighter-rouge">Repository</code> directory. All <code class="highlighter-rouge">ConfigData.xml</code> repositories have reference to the <code class="highlighter-rouge">Config</code> repository class. See the example on the following screenshot:</p>
+
+<p><a href="/devdocs/2.1/common/images/ftf/mtf_repo_merge_ex.png"><img src="/devdocs/2.1/common/images/ftf/mtf_repo_merge_ex.png" alt="" /></a></p>
+
+<p>As you can see, the <code class="highlighter-rouge">ConfigData.xml</code> of the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Authorizenet"><code class="highlighter-rouge">Magento_Authorizenet</code> module</a> and the <code class="highlighter-rouge">ConfigData.xml</code> of the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Backend"><code class="highlighter-rouge">Magento_Backend</code> module</a> have the same reference to the repository class; that is <code class="highlighter-rouge">Magento\Config\Test\Repository\ConfigData</code>.</p>
+
+<p><code class="highlighter-rouge">ConfigData.php</code> will be generated in <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/generated/Magento/Config/Test/Repository</code>. This PHP repository will contain repository data sets from all Magento modules that have a <code class="highlighter-rouge">ConfigData.xml</code> repository.</p>
+
+<p>To run the generator, enter the following command in your terminal:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php &lt;magento2&gt;/dev/tests/functional/utils/generate.php
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The preceding is an example of repository merging. Using the approach from the example you can merge repositories for any other fixture, not <code class="highlighter-rouge">Config</code> only.</p>
+
+<h3 id="dataset-replacement">Data set replacement</h3>
+
+<p>You can modify your data set without changing the name of the data set. Simply use a <code class="highlighter-rouge">replace</code> attribute. For example,</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre> 
+ <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"customer_new_default"</span> <span class="na">replace=</span><span class="s">"default"</span><span class="nt">&gt;</span>
+ 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This node means that <code class="highlighter-rouge">customer_new_default</code> data set replaces <code class="highlighter-rouge">default</code> data set.</p>
+
+<p>Let’s see a use case example. Assume that the Customer fixture in the Magento_Customer module has a repository with the <code class="highlighter-rouge">default</code> data set:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre>  
+ <span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../../vendor/magento/mtf/Magento/Mtf/Repository/etc/repository.xsd"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;repository</span> <span class="na">class=</span><span class="s">"Magento\Customer\Test\Repository\Customer"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"default"</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"firstname"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>John<span class="nt">&lt;/field&gt;</span>
+             <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"lastname"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Doe<span class="nt">&lt;/field&gt;</span>
+             <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"group_id"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"dataset"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>General<span class="nt">&lt;/item&gt;</span>
+             <span class="nt">&lt;/field&gt;</span>
+             <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>JohnDoe_%isolation%@example.com<span class="nt">&lt;/field&gt;</span>
+             <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>123123q<span class="nt">&lt;/field&gt;</span>
+             <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"password_confirmation"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>123123q<span class="nt">&lt;/field&gt;</span>
+         <span class="nt">&lt;/dataset&gt;</span>
+     <span class="nt">&lt;/repository&gt;</span>
+ <span class="nt">&lt;/config&gt;</span>
+  
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Later you installed a new module Magento_CustomerNew module that changed Customer fixture. You don’t want to change the <code class="highlighter-rouge">default</code> data set name in the test. Instead, you can simply replace the <code class="highlighter-rouge">default</code> data set, without changing the name:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre>  
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../../vendor/magento/mtf/Magento/Mtf/Repository/etc/repository.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;repository</span> <span class="na">class=</span><span class="s">"Magento\Customer\Test\Repository\Customer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;dataset</span> <span class="na">name=</span><span class="s">"customer_new_default"</span> <span class="na">replace=</span><span class="s">"default"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"firstname"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>John<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"lastname"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Doe<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>JohnDoe_%isolation%@example.com<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"new_field"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Some value<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>123123q<span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"password_confirmation"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>123123q<span class="nt">&lt;/field&gt;</span>
+        <span class="nt">&lt;/dataset&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+  
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>After the repository generation</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php &lt;magento2&gt;/dev/tests/functional/utils/generate.php
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>you have the following code in the Customer repository (<code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/generated/Magento/Customer/Test/Repository/Customer.php</code>):</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>  
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="n">_data</span><span class="p">[</span><span class="s1">'default'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">'firstname'</span> <span class="o">=&gt;</span> <span class="s1">'John'</span><span class="p">,</span>
+  <span class="s1">'lastname'</span> <span class="o">=&gt;</span> <span class="s1">'Doe'</span><span class="p">,</span>
+  <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'JohnDoe_%isolation%@example.com'</span><span class="p">,</span>
+  <span class="s1">'new_field'</span> <span class="o">=&gt;</span> <span class="s1">'Some value'</span><span class="p">,</span>
+  <span class="s1">'password'</span> <span class="o">=&gt;</span> <span class="s1">'123123q'</span><span class="p">,</span>
+  <span class="s1">'password_confirmation'</span> <span class="o">=&gt;</span> <span class="s1">'123123q'</span><span class="p">,</span>
+<span class="p">];</span>
+  
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>As you can see, a repository with the name <code class="highlighter-rouge">default</code> contains data from the <code class="highlighter-rouge">customer_new_default</code> repository.</p>
+
+<h2 id="mtf_repository_credent_iso">Credentials and <code class="highlighter-rouge">%isolation%</code> in repository</h2>
+
+<p>Credentials are stored in an <code class="highlighter-rouge">*.xml</code> file that is specified in <code class="highlighter-rouge">phpunit.xml</code>.</p>
+
+<p>You can find a template for credentials in <a href="https://github.com/magento/magento2/blob/2.1/dev/tests/functional/credentials.xml.dist"><code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/credentials.xml.dist</code></a>.</p>
+
+<p>Credentials always should stay invisible for security reasons. The FTF implicitly pastes credentials during the test run only.
+There are two ways to paste credentials:</p>
+
+<ul>
+  <li><strong>Using path</strong>. If a field in a repository has a <code class="highlighter-rouge">name</code> that matches field <code class="highlighter-rouge">path</code> in <code class="highlighter-rouge">credentials.xml</code>, then the value of this field will be substituted for the value from <code class="highlighter-rouge">credential.xml</code> during the test.</li>
+  <li><strong>Using placeholder</strong>. If a field in a repository has value wrapped in <code class="highlighter-rouge">% %</code> that matches the value of the <code class="highlighter-rouge">replace</code> field attribute in <code class="highlighter-rouge">credentials.xml</code>, then the value of this field will be substituted for the value from <code class="highlighter-rouge">credential.xml</code> during the test.</li>
+</ul>
+
+<h3 id="mtf_repo_credent_path">Example with substitution by <code>path</code></h3>
+
+<p>Assume, that you have the following credentials in <code class="highlighter-rouge">credentials.xml</code>.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>
+<span class="nt">&lt;field</span> <span class="na">path=</span><span class="s">"carriers/ups/password"</span> <span class="na">value=</span><span class="s">"strong_password"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">path=</span><span class="s">"carriers/ups/username"</span> <span class="na">value=</span><span class="s">"my_name"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">path=</span><span class="s">"carriers/ups/access_license_number"</span> <span class="na">value=</span><span class="s">"20150825"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">path=</span><span class="s">"carriers/ups/shipper_number"</span> <span class="na">value=</span><span class="s">"321852741789"</span> <span class="nt">/&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In the repository these fields can be defined as:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="rouge-code"><pre>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"carriers/ups/password"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>carriers<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>CARRIERS_UPS_PASSWORD<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"carriers/ups/username"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>carriers<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>CARRIERS_UPS_USERNAME<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"carriers/ups/access_license_number"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>carriers<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>CARRIERS_UPS_ACCESS_LICENSE_NUMBER<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"carriers/ups/shipper_number"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>carriers<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>CARRIERS_UPS_SHIPPER_NUMBER<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>During the test run these fields are filled with values from <code class="highlighter-rouge">credentials.xml</code>.</p>
+
+<h3 id="mtf_repo_credent_replace">Example with replacement by <code>replace</code></h3>
+
+<p>For example, you have the following credentials in <code class="highlighter-rouge">credentials.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+<span class="nt">&lt;field</span> <span class="na">replace=</span><span class="s">"carriers_dhl_id_eu"</span> <span class="na">value=</span><span class="s">"123654987"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">replace=</span><span class="s">"carriers_dhl_password_eu"</span> <span class="na">value=</span><span class="s">"my_dh1_pas$worD"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">replace=</span><span class="s">"carriers_dhl_account_eu"</span> <span class="na">value=</span><span class="s">"8521236987452"</span> <span class="nt">/&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Then you should define repository fields as the following:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"carriers/dhl/id"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>carriers<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>%carriers_dhl_id_eu%<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"carriers/dhl/password"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>carriers<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>%carriers_dhl_password_eu%<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"carriers/dhl/account"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>carriers<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"scope_id"</span> <span class="na">xsi:type=</span><span class="s">"number"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>%carriers_dhl_account_eu%<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/field&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>When the test is run, credentials from <code class="highlighter-rouge">credentials.xml</code> are transferred to the defined fields.</p>
+
+<h3 id="mtf_repo_isolation"><code class="highlighter-rouge">%isolation%</code> placeholder</h3>
+
+<p>You can use <code class="highlighter-rouge">%isolation%</code> placeholder where you want to put a random value. It is useful when you need a unique value, for example <code class="highlighter-rouge">sku</code>, that has to be unique each test cycle.</p>
+
+<p>Some examples:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Cms Page Link %isolation%<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"sku"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>sku_simple_product_%isolation%<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"url_key"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>simple-product-%isolation%<span class="nt">&lt;/field&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>All placeholders <code class="highlighter-rouge">%isolation%</code> will be replaced with <a href="http://php.net/manual/en/function.mt-rand.php"><code class="highlighter-rouge">mt_rand()</code></a> function during the test run.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Custom Fastly VCL snippets | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Commerce Cloud</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Overview</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/onboarding/onboarding-tasks.html">Onboarding tasks</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Architecture</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html">Starter architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">Starter develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html">Pro architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/requirements/cloud-requirements.html">Technologies and requirements</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cloud-composer.html">Composer</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/ece-tools-reference.html">ece-tools package</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/git-integration.html">Git</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-ssh.html">SSH and sFTP</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/new-relic.html">New Relic</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-integrate-blackfire.html">Blackfire.io</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/sendgrid.html">SendGrid</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html">Prepare for manual setup</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">Install Magento prerequisites</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-ssh.html">Enable SSH keys</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html">Set up the Magento file system owner</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html">Clone and branch the project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-install.html">Install Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-deploy.html">First time deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/debug.html">Optional - Configure Xdebug</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/sample-data.html">Optional - Install sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development.html">Docker development</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-debug.html">Configure Xdebug for Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-database.html">Connect to the database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-development-testing.html">Functional testing in Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/cloud-integrations.html">Integrations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/bitbucket-integration.html">Bitbucket integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/github-integration.html">GitHub integration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/integrations/health-notifications.html">Health notifications</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html">Import existing code into a project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html">Prepare your existing Magento Commerce system</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup-import-import.html">Import Magento Commerce code</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configuration-overview.html">Configure your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/configure-best-practices.html">Best practices for store configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/paypal-onboarding.html">Set up PayPal</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/configure/setup-cron-jobs.html">Set up cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/howtos/custom-theme.html">Install a theme</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly.html">Configure Fastly services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html">Customize error pages</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-waf-service.html">Managed Cloud WAF</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-image-optimization.html">Image Optimization</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html">Custom VCL snippets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-blacklist.html">Custom blacklist VCL</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/trouble-fastly.html">Fastly troubleshooting</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure environments</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html">Application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/magento-env-yaml.html">Build and deploy</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/setup-notifications.html">Set up notifications</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/log-handlers.html">Logging handlers</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-intro.html">Environment variables</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environment-vars_magento.html">ADMIN variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-global.html">Global variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-build.html">Build variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-cloud.html">Cloud variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-deploy.html">Deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/variables-post-deploy.html">Post-deploy variables</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/working-with-variables.html">Working with variables</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_routes.html">Routes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-cache.html">Caching</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-redir.html">Redirects</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-routes-more-ssi.html">Server side includes</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services.html">Services</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-mysql.html">Set up MySQL service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-redis.html">Set up Redis service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-elastic.html">Set up Elasticsearch service</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_services-rabbit.html">Set up RabbitMQ service</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-over.html">Configuration management for store settings</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/sens-data-initial.html">Example of managing system-specific settings</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/projects.html">Manage your project</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-basic.html">Configure your project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-start.html">Project structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/user-admin.html">Create and manage users</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html">Manage branches with the Interface</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments-start.html">Manage branches with the CLI</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-webint-snap.html">Snapshots and backup management</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/optimize-cloud-deployment.html">Optimize deployment</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/cloud-deployment-process.html">Cloud deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/reduce-downtime.html">Zero downtime deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/static-content-deployment.html">Static content deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/smart-wizards.html">Smart wizards</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-live.html">Deploy your store</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/reference/discover-deploy.html">Deployment process</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/deploy/continuous-deployment.html">Continuous deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-prot.html">Protective block</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live-sanity-check.html">Build and deploy on local</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate-prereq.html">Prepare to deploy to Staging and Production</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code and migrate static files and data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/stage-prod-test.html">Test deployment</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/live.html">Go live and launch</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/go-live-checklist.html">Go live checklist</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/live/launch-steps.html">Launch steps</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble.html">Troubleshooting</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/troubleshoot-deployment.html">Troubleshoot deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/environments-logs.html">View logs for troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_ce-creds.html">Incorrect credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_proj-startover.html">Resolve issues with a new project</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble_comp-deploy-fail.html">Component deployment failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/redis-troubleshooting.html">Redis troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/reset-cron-jobs.html">Reset cron jobs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-crypt-key-variable.html">Resolve issues with encryption key</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-error-html-minification.html">Resolve issues with HTML minification</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/trouble-google-analytics-deploy.html">Resolve issues with Google Analytics during deployment</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/restore-configuration-files.html">Restore configuration files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/site-availability.html">Site availability</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/robots-sitemap.html">Add site map and search engine robots</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/theme-troubleshooting.html">Theme troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/trouble/message-queues.html">Message queues</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and patches</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release notes for ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html">Upgrade to use ece-tools</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-update.html">Update ece-tools version</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-patch.html">Apply custom patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade.html">Upgrade Magento version</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Custom Fastly VCL snippets</h1>
+</section>
+
+			<p>Custom VCL snippets are blocks of VCL logic added to the active VCL version. A custom VCL snippet modifies how Fastly caching services respond to request traffic. For example, you can add a custom VCL snippet to allow request traffic only from specified client IP addresses, or to block traffic from websites known for sending referral spam to your Magento Commerce Cloud sites.</p>
+
+<p>Custom VCL snippets—generated, compiled, and transmitted to all Fastly caches—load and activate without server downtime.</p>
+
+<p>Fastly supports two types of custom VCL snippets:</p>
+
+<ul>
+  <li>
+    <p><a href="https://docs.fastly.com/guides/vcl-snippets/using-regular-vcl-snippets">Regular snippets</a>—Custom regular VCL snippets are dependent on a specific VCL version. You can create, modify, and deploy regular VCL snippets from the Magento Admin UI or the Fastly API.</p>
+  </li>
+  <li>
+    <p><a href="https://docs.fastly.com/guides/vcl-snippets/using-dynamic-vcl-snippets">Dynamic snippets</a>—VCL snippets created using the Fastly API. You can modify and deploy dynamic snippets without having to update the Fastly VCL version for your service.</p>
+  </li>
+</ul>
+
+<p>We recommend using custom VCL snippets with Edge Dictionaries and Access Control Lists (ACL) to store data used in your custom code.</p>
+
+<ul>
+  <li>
+    <p><a href="https://docs.fastly.com/guides/edge-dictionaries/about-edge-dictionaries"><strong>Edge dictionary</strong></a>—Stores data as key-value pairs in a dictionary container that can be referenced from custom VCL snippets</p>
+  </li>
+  <li>
+    <p><a href="https://docs.fastly.com/guides/access-control-lists/about-acls"><strong>Edge ACL</strong></a>—Stores the client IP address data that defines the access control list for block or allow rules implemented using custom VCL snippets</p>
+  </li>
+</ul>
+
+<p>The dictionary and ACL data is deployed to the Fastly Edge nodes accessible across network regions. Additionally, the data can be updated dynamically across the network without requiring you to redeploy the VCL code for your staging or production environment.</p>
+
+<p class="bs-callout bs-callout-info">You must <a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">set up Fastly</a> before you can add custom VCL snippets.</p>
+
+<h2 id="custom-vcl-snippet-examples-and-tutorials">Custom VCL snippet examples and tutorials</h2>
+
+<p>The examples and instructions in the Magento Commerce Cloud documentation explain how to use regular custom VCL snippets with edge dictionaries and edge ACLs. For detailed VCL tutorial, reference, and troubleshooting information, see the following Fastly documentation:</p>
+
+<ul>
+  <li><a href="https://docs.fastly.com/guides/vcl/guide-to-vcl">Guide to Fastly VCL</a>—High level information about the Fastly Varnish implementation, Fastly VCL extensions, and resources for learning more about Varnish and VCL.</li>
+  <li><a href="https://docs.fastly.com/guides/vcl/">Fastly VCL reference</a>—Detailed programming reference to develop and troubleshoot Fastly custom VCL and custom VCL snippets.</li>
+</ul>
+
+<p>You can create and manage custom VCL snippets from the Magento Admin UI or by using the Fastly API:</p>
+
+<ul>
+  <li>
+    <p><a href="#manage-custom-vcl-snippets-from-the-magento-admin-ui">Magento Admin UI</a>—We recommend using the Magento Admin UI to manage custom VCL snippets because it automates the process to validate and upload the custom snippet and apply your changes to the Fastly service configuration. Additionally, you can view and edit the custom VCL snippets added to the Fastly service configuration from the Admin UI.</p>
+  </li>
+  <li>
+    <p><a href="#manage-custom-vcl-snippets-using-the-api">Fastly API</a>—Manage custom VCL snippets using the API if you cannot access the Magento Admin UI. For example, if the site is down and you need to troubleshoot the Fastly service configuration or add a custom VCL snippet. Additionally, some operations can only be completed using the API, for example reactivating an older VCL version or viewing all the VCL snippets included in a specified the VCL version. See <a href="#manage-vcl">API quick reference for VCL snippets</a>.</p>
+  </li>
+</ul>
+
+<h3 id="vcl-curl">Example VCL snippet code</h3>
+
+<p>The following example shows the JSON code for a custom VCL snippet that filters traffic by client IP address.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"service_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FASTLY_SERVICE_ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{Editable Version #}"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apply_acl"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dynamic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hit"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"if ((client.ip ~ {ACLNAME}) &amp;&amp; !req.http.Fastly-FF){ error 403; }"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The VCL logic in the <code class="highlighter-rouge">content</code> field performs the following actions:</p>
+
+<ul>
+  <li>
+    <p>Checks the incoming IP address, <code class="highlighter-rouge">client.ip</code> on each request</p>
+  </li>
+  <li>
+    <p>Blocks any request with an IP address included in the <em>ACLNAME</em> edge ACL, returning a <code class="highlighter-rouge">403 Forbidden</code> error</p>
+  </li>
+</ul>
+
+<p>The following table provides details about key data for custom VCL snippets.  For a more detailed reference, see the <a href="https://docs.fastly.com/api/config#api-section-snippet">VCL snippets</a> reference in the Fastly documentation.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">service_id</code></td>
+      <td>The Fastly Service ID for a specific Staging or Production environment. This ID is assigned when your project is added to the Magento Commerce Cloud Fastly service account. See <a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Get credentials</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">API_KEY</code></td>
+      <td>The API Key to access your Fastly account. See <a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Get credentials</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">number</code></td>
+      <td>The number of the VCL version that the snippet is added to. Fastly uses <em>Editable Version #</em> in their example values. If you add custom snippets from the API, you include the version number in the API request. If you add custom VCL from the Magento Admin UI, the version is provided for you.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">type</code></td>
+      <td>Specifies a location for inserting the generated snippet, such as init (above subroutines) and recv (within subroutines). See Fastly VCL snippet object values for information on these values. See the Fastly <a href="https://docs.fastly.com/api/config#api-section-snippet">VCL snippets</a> reference.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content</code></td>
+      <td>The snippet of VCL code to run. Fastly does not support all VCL language features, and it also provides extensions with custom functionality. See the <a href="https://docs.fastly.com/vcl/reference/">Fastly VCL programming reference</a> for information about supported VCL code features.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">priority</code></td>
+      <td>Numeric value from <code class="highlighter-rouge">1</code> to <code class="highlighter-rouge">100</code> that specifies when the custom VCL snippet code runs. Snippets with lower priority values run first. If not specified, the <code class="highlighter-rouge">priority </code> value defaults to <code class="highlighter-rouge">100</code>.<br /><br /> Any custom VCL snippet with a priority value of <code class="highlighter-rouge">5</code> runs immediately, which is best for VCL code that implements request routing (block and allow lists and redirects). Priority <code class="highlighter-rouge">100</code> is best for overriding default VCL snippet code. <br /><br />All <a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html#upload-vcl-snippets">default VCL snippets</a> included in the Magento-Fastly module have <code class="highlighter-rouge">priority=50</code>.<br />-  Assign a high priority like <code class="highlighter-rouge">100</code> to run custom VCL code after all other VCL functions and override the default VCL code.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">dynamic</code></td>
+      <td>Indicates if this is a <a href="https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/">regular snippet</a> which is included in the versioned VCL for the Fastly service configuration, or a <a href="https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/">dynamic snippet</a> which can be modified and deployed without requiring a new VCL version.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">active</code></td>
+      <td>Indicates if the snippet or version is activated and in use. Returns <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>. Make note of the version number for an active snippet. Use this to clone the version.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="manage-custom-vcl-snippets-from-the-magento-admin-ui">Manage custom VCL snippets from the Magento Admin UI</h2>
+
+<p>You can <a href="https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md">add custom VCL snippets</a> from the <em>Fastly Configuration</em> &gt; <em>Custom VCL Snippets</em> section in the Magento Admin UI.</p>
+
+<p><img width="650px" src="/devdocs/2.1/common/images/cloud/cloud-fastly-edit-snippets.png" alt="Manage custom VCL snippets" /></p>
+
+<p>The <em>Custom VCL snippets</em> view shows only the snippets added through the Magento Admin UI. If snippets are added using the Fastly API, use the API to <a href="#manage-custom-vcl-snippets-using-the-api">manage them</a>.</p>
+
+<p>See the following examples that show how to create and manage custom VCL snippets from the Magento Admin UI:</p>
+
+<ul>
+  <li><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html">Secure access to the Magento Admin UI</a></li>
+  <li><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html">Set up redirects to WordPress using Fastly</a></li>
+  <li><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html">Block referral spam</a></li>
+</ul>
+
+<h2 id="manage-custom-vcl-snippets-using-the-api">Manage custom VCL snippets using the API</h2>
+
+<p>The following walk-through shows you how to create regular VCL snippet files and add them to your Fastly service configuration using the Fastly API. You can create and manage the snippets from the <em>terminal</em> application. You do not need an SSH connection into a specific environment.</p>
+
+<p><strong>Prerequisites</strong></p>
+
+<ul>
+  <li>
+    <p>Configure your  environment for Fastly services. See <a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Set up Fastly</a>.</p>
+  </li>
+  <li>
+    <p><a href="/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html">Get Fastly API credentials</a> to authenticate requests to the Fastly API. Make sure that you get the credentials for the correct environment: Staging or Production.</p>
+  </li>
+  <li>
+    <p>Save Fastly service credentials as bash environment variables that you can use in cURL commands:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">export </span><span class="nv">FASTLY_SERVICE_ID</span><span class="o">=</span>&lt;Service ID&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">export </span><span class="nv">FASTLY_API_TOKEN</span><span class="o">=</span>&lt;API Token&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>The exported environment variables are available only in the current bash session and are lost when you close the terminal. You can redefine variables by exporting a new value. To view the list of exported variables related to Fastly:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">export</span> | <span class="nb">grep </span>FASTLY
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="add-vcl-snippets-using-the-fastly-api">Add VCL snippets using the Fastly API</h3>
+
+<p>Complete the following steps to add custom VCL snippets using the Fastly API.</p>
+
+<ol>
+  <li>
+    <p><a href="#list">Locate the active VCL version</a>. Use this version to clone.</p>
+  </li>
+  <li>
+    <p><a href="#clone">Clone the active VCL version</a>. All changes save to this new version. It remains <em>inactive</em> until you <em>activate</em> it.</p>
+  </li>
+  <li>
+    <p><a href="#create-snippet">Create custom VCL snippets</a> in JSON files.</p>
+  </li>
+  <li>
+    <p><a href="#add-snippet">Add custom VCL snippet to the Fastly configuration</a>. Repeat this step for all JSON files.</p>
+  </li>
+  <li>
+    <p><a href="#validate">Validate and activate</a> the new configuration and all associated VCL snippets.</p>
+  </li>
+</ol>
+
+<h4 id="list">Step 1: Locate the active VCL  version</h4>
+
+<p>Use the Fastly API <a href="https://docs.fastly.com/api/config#version_dfde9093f4eb0aa2497bbfd1d9415987">get version</a> operation to get the active VCL version number:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/active
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In the JSON response, note the active VCL version number returned in the <code class="highlighter-rouge">number</code> key, for example <code class="highlighter-rouge">"number": 99</code>. You need the version number when you clone the VCL for editing.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"testing"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"service_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"872zhjyxhto5SIRb3GAE0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"staging"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-29T22:38:53Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magento Module uploaded VCL"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-29T22:39:06Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deployed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Save the active version number in a bash environment variable for use in subsequent API requests:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">export </span><span class="nv">FASTLY_VERSION_ACTIVE</span><span class="o">=</span>&lt;Version&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="clone">Step 2: Clone the active VCL version and all snippets</h4>
+
+<p>Before you can add or modify custom VCL snippets, you must create a copy of the active VCL version for editing. Use the Fastly API <a href="https://docs.fastly.com/api/config#version_7f4937d0663a27fbb765820d4c76c709">clone </a> operation:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/<span class="nv">$FASTLY_VERSION_ACTIVE</span>/clone <span class="nt">-X</span> PUT
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In the JSON response, the version number is incremented, and the <em>active</em> key value is <code class="highlighter-rouge">false</code>. You can modify the new, inactive VCL version locally.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"testing"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"service_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vW2bLFWhhto5SIRb3GAE0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"staging"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-29T22:38:53Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magento Module uploaded VCL"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-29T22:39:06Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deployed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Save the new version number in a bash environment variable for use in subsequent commands:</p>
+
+<p><code class="highlighter-rouge">export FASTLY_EDIT_VERSION=&lt;Version&gt;</code></p>
+
+<h4 id="create-snippet">Step 3: Create a custom VCL snippets</h4>
+
+<p>Create and save your custom VCL code in a JSON file with the following content and format:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;name&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dynamic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;type&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;code all in one line&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The values include:</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">name</code>—Name for the VCL snippet.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">dynamic</code>—Indicates if this is a <a href="https://docs.fastly.com/guides/vcl-snippets/using-regular-vcl-snippets">regular snippet</a> or a <a href="https://docs.fastly.com/guides/vcl-snippets/using-dynamic-vcl-snippets">dynamic snippet</a>.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">type</code>—Specifies the location for inserting the generated snippet, such as <code class="highlighter-rouge">init</code> (above subroutines) and <code class="highlighter-rouge">recv</code> (within subroutines). See <a href="https://docs.fastly.com/api/config#snippet">Fastly VCL snippet object values</a> for information on these values.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">priority</code>—A value from <code class="highlighter-rouge">1</code> to <code class="highlighter-rouge">100</code> that determines when the custom VCL snippet code runs. Custom VCL snippets with lower values run first.</p>
+
+    <p>All default VCL code from the Fastly VCL module has a <code class="highlighter-rouge">priority</code> of <code class="highlighter-rouge">50</code>. If you want an action to occur last or to override the default VCL code, use a higher number, such as <code class="highlighter-rouge">100</code>. To run custom VCL snippet code immediately, set the priority to a lower value, such as <code class="highlighter-rouge">5</code>.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">content</code>—The snippet of VCL code to run in one line, without line breaks. See <a href="#vcl-curl">Example custom VCL snippet</a>.</p>
+  </li>
+</ul>
+
+<h4 id="add-snippet">Step 4: Add VCL snippet to Fastly configuration</h4>
+
+<p>Use the Fastly API <a href="https://docs.fastly.com/api/config#snippet_41e0e11c662d4d56adada215e707f30d">create snippet</a> operation to add the custom VCL snippet to the VCL version.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/<span class="nv">$FASTLY_EDIT_VERSION</span>/snippet <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-X</span> POST <span class="nt">--data</span> @&lt;filename.json&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">&lt;filename.vcl&gt;</code> is the name of the file you prepared in the previous step. Repeat this command for each VCL snippet.</p>
+
+<p>If you receive a <code class="highlighter-rouge">500 Internal Server Error</code> response from the Fastly service, check the JSON file syntax to make sure you are uploading a valid file.</p>
+
+<h4 id="validate">Step 5: Validate and activate custom VCL snippets</h4>
+
+<p>After you add a custom VCL snippet, Fastly inserts the snippet in the VCL version that you are editing. To apply your changes, complete the following steps to validate the VCL snippet code and activate the VCL version.</p>
+
+<ol>
+  <li>
+    <p>Use the Fastly API <a href="https://docs.fastly.com/api/config#version_97f8cf7bfd5dc2e5ea1933d94dc5a9a6">validate VCL version</a> operation to verify the updated VCL code.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/<span class="nv">$FASTLY_EDIT_VERSION</span>/validate
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>If the Fastly API returns an error, fix the issue and validate the updated VCL version again.</p>
+  </li>
+  <li>
+    <p>Use the Fastly API <a href="https://docs.fastly.com/api/config#version_0b79ae1ba6aee61d64cc4d43fed1e0d5">activate</a> operation to activate the new VCL version.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/<span class="nv">$FASTLY_EDIT_VERSION</span>/activate <span class="nt">-X</span> PUT
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="manage-vcl">API quick reference for VCL snippets</h3>
+
+<p>These API request examples use exported environment variables to provide the credentials to authenticate with Fastly. For details on these commands, see the <a href="https://docs.fastly.com/api/config#vcl">Fastly API reference</a>.</p>
+
+<p class="bs-callout bs-callout-info">Use these commands to manage snippets that you added using the Fastly API. If you added snippets from the Magento Admin UI, see <a href="#manage-custom-vcl-snippets-from-the-magento-admin-ui">Manage VCL snippets using the Admin UI</a>.</p>
+
+<ul>
+  <li>
+    <p><strong>Get active VCL version number</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/active
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>List all regular VCL snippets attached to a service</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/<span class="nv">$FASTLY_VERSION</span>/snippet
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Review an individual snippet</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">-H</span> <span class="s2">"Fastly-Key: </span><span class="nv">$FASTLY_API_TOKEN</span><span class="s2">"</span> https://api.fastly.com/service/<span class="nv">$FASTLY_SERVICE_ID</span>/version/<span class="nv">$FASTLY_VERSION</span>/snippet/&lt;snippet_name&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>The <code class="highlighter-rouge">&lt;snippet_name&gt;</code> is the name of a snippet, such as <code class="highlighter-rouge">my_regular_snippet</code>.</p>
+  </li>
+  <li>
+    <p><strong>Update a snippet</strong></p>
+
+    <p>Modify the <a href="#create-snippet">prepared JSON file</a> and send the following request:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_VERSION/snippet/&lt;snippet_name&gt; -H 'Content-Type: application/json' -X PUT --data @&lt;filename.json&gt;
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Delete an individual VCL snippet</strong></p>
+
+    <p>Get a list of snippets and use the following <code class="highlighter-rouge">curl</code> command with the specific snippet name to delete:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_VERSION/snippet/&lt;snippet_name&gt; -X DELETE
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Override values in the <a href="https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets">default Fastly VCL code</a></strong></p>
+
+    <p>Create a new snippet with updated values and assign a priority of <code class="highlighter-rouge">100</code>.</p>
+  </li>
+</ul>
+
+<!-- Link definitions -->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2023-04-12">
+      Apr 12th, 2023
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Getting started | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Magento Functional Testing Framework Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/introduction.html">Introduction</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/mftf/docs/getting-started.html">Getting started</a></li><li class="" role="menuitem"><span>Best practices</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/best-practices.html">Best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/tips-tricks.html">Tips and tricks</a></li></ul></li><li class="" role="menuitem"><span>CLI Commands</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/commands/mftf.html">mftf</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/commands/codeception.html">codecept</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/configuration.html">Configuration</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/credentials.html">Credentials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/data.html">Data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/debugging.html">Debugging</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/extending.html">Extending</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/introduction.html">Merge points for extensions</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-action-groups.html">Extend action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-data.html">Extend data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/extend-tests.html">Extend tests</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-action-groups.html">Merge action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-data.html">Merge data</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-pages.html">Merge pages</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-sections.html">Merge sections</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merge_points/merge-tests.html">Merge tests</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/merging.html">Merging</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/metadata.html">Metadata</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/page.html">Page</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/reporting.html">Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section.html">Section</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section/parameterized-selectors.html">Parameterized selectors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/section/locator-functions.html">Locator functions</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/suite.html">Suite</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test.html">Test</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/annotations.html">Annotations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/actions.html">Actions</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/action-groups.html">Action groups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/test/assertions.html">Assertions</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/troubleshooting.html">Troubleshooting</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/update.html">Update</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mftf/docs/versioning.html">Versioning</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/.github/CONTRIBUTING.md">Contribution guidelines</a></li><li class="" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/CHANGELOG.md">Changelog</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Getting started</h1>
+</section>
+
+			<div class="bs-callout bs-callout-info">
+  <p><a href="introduction.html#find-your-mftf-version">Find your MFTF version</a> of the MFTF.
+The latest Magento 2.3.x release supports MFTF 2.5.3.
+The latest Magento 2.2.x release supports MFTF 2.4.5.</p>
+</div>
+
+<h2 id="prepare-environment">Prepare environment</h2>
+
+<p>Make sure that you have the following software installed and configured on your development environment:</p>
+
+<ul>
+  <li><a href="https://devdocs.magento.com/guides/v2.3/install-gde/system-requirements.html">PHP version supported by the Magento instance under test</a></li>
+  <li><a href="https://getcomposer.org/download/">Composer 1.3 or later</a></li>
+  <li><a href="https://www.oracle.com/java/technologies/downloads/">Java 1.8 or later</a></li>
+  <li><a href="https://www.seleniumhq.org/download/">Selenium Server Standalone 3.1 or later</a> and <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">ChromeDriver 2.33 or later</a> or other webdriver in the same directory</li>
+</ul>
+
+<div class="bs-callout bs-callout-tip">
+  <p><a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> supports <a href="https://blog.jetbrains.com/phpstorm/2017/03/codeception-support-comes-to-phpstorm-2017-1/">Codeception test execution</a>, which is helpful when debugging.</p>
+</div>
+
+<h2 id="install-magento">Install Magento</h2>
+
+<p>Use instructions below to install Magento.</p>
+
+<h3 id="clone-magento">Step 1. Clone the <code class="highlighter-rouge">magento2</code> source code repository</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/magento/magento2.git
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git clone git@github.com:magento/magento2.git
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="install-dependencies">Step 2. Install dependencies</h3>
+
+<p>Checkout the Magento version that you are going to test.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cd </span>magento2/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git checkout 2.3-develop
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Install the Magento application.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer <span class="nb">install</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="prepare-magento">Prepare Magento</h2>
+
+<p>Configure the following settings in Magento as described below.</p>
+
+<h3 id="wysiwyg-settings">WYSIWYG settings</h3>
+
+<p>A Selenium web driver cannot enter data to fields with WYSIWYG.</p>
+
+<p>To disable the WYSIWYG and enable the web driver to process these fields as simple text areas:</p>
+
+<ol>
+  <li>Log in to the Magento Admin as an administrator.</li>
+  <li>Navigate to <strong>Stores</strong> &gt; Settings &gt; <strong>Configuration</strong> &gt; <strong>General</strong> &gt; <strong>Content Management</strong>.</li>
+  <li>In the WYSIWYG Options section set the <strong>Enable WYSIWYG Editor</strong> option to <strong>Disabled Completely</strong>.</li>
+  <li>Click <strong>Save Config</strong>.</li>
+</ol>
+
+<p>or via command line:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento config:set cms/wysiwyg/enabled disabled
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Clean the cache after changing the configuration values:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:clean config full_page
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="bs-callout bs-callout-tip">
+When you want to test the WYSIWYG functionality, re-enable WYSIWYG in your test suite.
+</div>
+
+<h3 id="security-settings">Security settings</h3>
+
+<p>To enable the <strong>Admin Account Sharing</strong> setting, to avoid unpredictable logout during a testing session, and disable the <strong>Add Secret Key in URLs</strong> setting, to open pages using direct URLs:</p>
+
+<ol>
+  <li>Navigate to <strong>Stores</strong> &gt; Settings &gt; <strong>Configuration</strong> &gt; <strong>Advanced</strong> &gt; <strong>Admin</strong> &gt; <strong>Security</strong>.</li>
+  <li>Set <strong>Admin Account Sharing</strong> to <strong>Yes</strong>.</li>
+  <li>Set <strong>Add Secret Key to URLs</strong> to <strong>No</strong>.</li>
+  <li>Click <strong>Save Config</strong>.</li>
+</ol>
+
+<p>or via command line:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento config:set admin/security/admin_account_sharing 1
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento config:set admin/security/use_form_key 0
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Clean the cache after changing the configuration values:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:clean config full_page
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="web-server-configuration">Webserver configuration</h3>
+
+<p>The MFTF does not support executing CLI commands if your web server points to <code class="highlighter-rouge">&lt;MAGE_ROOT_DIR&gt;/pub</code> directory as recommended in the <a href="https://devdocs.magento.com/guides/v2.3/install-gde/tutorials/change-docroot-to-pub.html">Installation Guide</a>. For the MFTF to execute the CLI commands, the web server must point to the Magento root directory.</p>
+
+<h3 id="nginx-settings">Nginx settings</h3>
+
+<p>If the Nginx Web server is used on your development environment, then <strong>Use Web Server Rewrites</strong> setting in <strong>Stores</strong> &gt; Settings &gt; <strong>Configuration</strong> &gt; <strong>General</strong> &gt; <strong>Web</strong> &gt; <strong>Search Engine Optimization</strong> must be set to <strong>Yes</strong>.</p>
+
+<p>To be able to run Magento command line commands in tests, add the following location block to the Nginx configuration file in the Magento root directory:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="n">location</span> ~* ^/<span class="n">dev</span>/<span class="n">tests</span>/<span class="n">acceptance</span>/<span class="n">utils</span>($|/) {
+  <span class="n">root</span> $<span class="n">MAGE_ROOT</span>;
+  <span class="n">location</span> ~ ^/<span class="n">dev</span>/<span class="n">tests</span>/<span class="n">acceptance</span>/<span class="n">utils</span>/<span class="n">command</span>.<span class="n">php</span> {
+      <span class="n">fastcgi_pass</span>   <span class="n">fastcgi_backend</span>;
+      <span class="n">fastcgi_index</span>  <span class="n">index</span>.<span class="n">php</span>;
+      <span class="n">fastcgi_param</span>  <span class="n">SCRIPT_FILENAME</span>  $<span class="n">document_root</span>$<span class="n">fastcgi_script_name</span>;
+      <span class="n">include</span>        <span class="n">fastcgi_params</span>;
+  }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="setup-framework">Set up an embedded MFTF</h2>
+
+<p>This is the default setup of the MFTF that you would need to cover your Magento project with functional tests.
+It installs the framework using an existing Composer dependency such as <code class="highlighter-rouge">magento/magento2-functional-testing-framework</code>.
+If you want to set up the MFTF as a standalone tool, refer to <a href="#set-up-a-standalone-mftf">Set up a standalone MFTF</a>.</p>
+
+<p>Install the MFTF.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer <span class="nb">install</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="build-project">Step 1. Build the project</h3>
+
+<p>In the Magento project root, run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vendor/bin/mftf build:project
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>If you use PhpStorm, generate a URN catalog:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vendor/bin/mftf generate:urn-catalog .idea/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>If the file does not exist, add the <code class="highlighter-rouge">--force</code> option to create it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vendor/bin/mftf generate:urn-catalog <span class="nt">--force</span> .idea/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>See <a href="commands/mftf.html#generateurn-catalog"><code class="highlighter-rouge">generate:urn-catalog</code></a> for more details.</p>
+
+<div class="bs-callout bs-callout-tip">
+  <p>You can simplify command entry by adding the  absolute  path to the <code class="highlighter-rouge">vendor/bin</code> directory path to your PATH environment variable.
+After adding the path, you can run <code class="highlighter-rouge">mftf</code> without having to include <code class="highlighter-rouge">vendor/bin</code>.</p>
+</div>
+
+<h3 id="environment-settings">Step 2. Edit environmental settings</h3>
+
+<p>In the <code class="highlighter-rouge">magento2/dev/tests/acceptance/</code> directory, edit the <code class="highlighter-rouge">.env</code> file to match your system.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vim dev/tests/acceptance/.env
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Specify the following parameters, which are required to launch tests:</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">MAGENTO_BASE_URL</code> must contain a domain name of the Magento instance that will be tested.
+  Example: <code class="highlighter-rouge">MAGENTO_BASE_URL=http://magento.test</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">MAGENTO_BACKEND_NAME</code> must contain the relative path for the Admin area.
+  Example: <code class="highlighter-rouge">MAGENTO_BACKEND_NAME=admin</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">MAGENTO_ADMIN_USERNAME</code> must contain the username required for authorization in the Admin area.
+  Example: <code class="highlighter-rouge">MAGENTO_ADMIN_USERNAME=admin</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">MAGENTO_ADMIN_PASSWORD</code> must contain the user password required for authorization in the Admin area.
+  Example: <code class="highlighter-rouge">MAGENTO_ADMIN_PASSWORD=123123q</code></p>
+  </li>
+</ul>
+
+<div class="bs-callout bs-callout-info">
+  <p>If the <code class="highlighter-rouge">MAGENTO_BASE_URL</code> contains a subdirectory like <code class="highlighter-rouge">http://magento.test/magento2ce</code>, specify <code class="highlighter-rouge">MAGENTO_CLI_COMMAND_PATH</code>.</p>
+</div>
+
+<p>Learn more about environmental settings in <a href="configuration.html">Configuration</a>.</p>
+
+<h3 id="step-3-enable-the-magento-cli-commands">Step 3. Enable the Magento CLI commands</h3>
+
+<p>In the Magento project root, run the following command to enable the MFTF to send Magento CLI commands to your Magento instance.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cp </span>dev/tests/acceptance/.htaccess.sample dev/tests/acceptance/.htaccess
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="run-tests">Step 4. Generate and run tests</h3>
+
+<p>To run tests, you need a running Selenium server and <a href="commands/mftf.html"><code class="highlighter-rouge">mftf</code></a> commands.</p>
+
+<h4 id="selenium-server">Run the Selenium server</h4>
+
+<p>Run the Selenium server in terminal.
+For example, the following commands run the Selenium server for Google Chrome:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> &lt;path_to_directory_with_selenium_server_and_webdriver&gt;/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>java <span class="nt">-Dwebdriver</span>.chrome.driver<span class="o">=</span>chromedriver <span class="nt">-jar</span> selenium-server-standalone-3.14.0.jar
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="run-all-tests">Generate and run all tests</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vendor/bin/mftf generate:tests
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cd </span>dev/tests/acceptance
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vendor/bin/codecept run functional <span class="nt">-c</span> dev/tests/acceptance/codeception.yml
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>See more commands in <a href="commands/codeception.html"><code class="highlighter-rouge">codecept</code></a>.</p>
+
+<h4 id="run-test">Run a simple test</h4>
+
+<p>To clean up the previously generated tests, and then generate and run a single test <code class="highlighter-rouge">AdminLoginTest</code>, run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vendor/bin/mftf run:test AdminLoginTest <span class="nt">--remove</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>See more commands in <a href="commands/mftf.html"><code class="highlighter-rouge">mftf</code></a>.</p>
+
+<h3 id="reports">Step 5. Generate reports</h3>
+
+<p>During testing, the MFTF generates test reports in CLI.
+You can generate visual representations of the report data using <a href="https://github.com/allure-framework">Allure Framework</a>.
+To view the reports in GUI:</p>
+
+<ul>
+  <li><a href="https://github.com/allure-framework/allure2#download">Install Allure</a></li>
+  <li>Run the tool to serve the artifacts in <code class="highlighter-rouge">dev/tests/acceptance/tests/_output/allure-results/</code>:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>allure serve dev/tests/acceptance/tests/_output/allure-results/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Learn more about Allure in the <a href="https://docs.qameta.io/allure/">official documentation</a>.</p>
+
+<h2 id="set-up-a-standalone-mftf">Set up a standalone MFTF</h2>
+
+<p>The MFTF is a root level Magento dependency, but it is also available for use as a standalone application.
+You may want to use a standalone application when you develop for or contribute to MFTF, which facilitates debugging and tracking changes.
+These guidelines demonstrate how to set up and run Magento acceptance functional tests using standalone MFTF.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>This installation requires a local instance of the Magento application.
+The MFTF uses the <a href="introduction.html#mftf-tests">tests from Magento modules</a> as well as the <code class="highlighter-rouge">app/autoload.php</code> file.</p>
+
+<h3 id="step-1-clone-the-mftf-repository">Step 1. Clone the MFTF repository</h3>
+
+<p>If you develop or contribute to the MFTF, it makes sense to clone your fork of the MFTF repository.
+For contribution guidelines, refer to the <a href="https://github.com/magento/magento2-functional-testing-framework/blob/develop/.github/CONTRIBUTING.md">Contribution Guidelines for the Magento Functional Testing Framework</a>.</p>
+
+<h3 id="step-2-install-the-mftf">Step 2. Install the MFTF</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cd </span>magento2-functional-testing-framework
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer <span class="nb">install</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="step-3-build-the-project">Step 3. Build the project</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/mftf build:project
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="step-4-edit-environment-settings">Step 4. Edit environment settings</h3>
+
+<p>In the <code class="highlighter-rouge">dev/.env</code> file, define the <a href="configuration.html#basic-configuration">basic configuration</a> and <a href="configuration.html#magento_bp"><code class="highlighter-rouge">MAGENTO_BP</code></a> parameters.</p>
+
+<h3 id="add-cli-commands">Step 5. Enable the Magento CLI commands</h3>
+
+<p>Copy the <code class="highlighter-rouge">etc/config/command.php</code> file into your Magento installation at <code class="highlighter-rouge">&lt;magento root directory&gt;/dev/tests/acceptance/utils/</code>.
+Create the <code class="highlighter-rouge">utils/</code> directory, if you didn’t find it.</p>
+
+<h3 id="step-6-remove-the-mftf-package-dependency-in-magento">Step 6. Remove the MFTF package dependency in Magento</h3>
+
+<p>The MFTF uses the Magento <code class="highlighter-rouge">app/autoload.php</code> file to read Magento modules.
+The MFTF dependency in Magento supersedes the standalone registered namespaces unless it is removed at a Composer level.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer remove magento/magento2-functional-testing-framework <span class="nt">--dev</span> <span class="nt">-d</span> &lt;path to the Magento root directory&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="step-7-run-a-simple-test">Step 7. Run a simple test</h3>
+
+<p>Generate and run a single test that will check your logging to the Magento Admin functionality:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/mftf run:test AdminLoginTest
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You can find the generated test at <code class="highlighter-rouge">dev/tests/functional/tests/MFTF/_generated/default/</code>.</p>
+
+<h3 id="step-8-generate-allure-reports">Step 8. Generate Allure reports</h3>
+
+<p>The standalone MFTF generates Allure reports at <code class="highlighter-rouge">dev/tests/_output/allure-results/</code>.
+Run the Allure server pointing to this directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>allure serve dev/tests/_output/allure-results/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<!-- Link definitions -->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2022-08-01">
+      Aug 1st, 2022
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

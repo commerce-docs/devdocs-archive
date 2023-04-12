@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Copying fieldsets | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Extension Best Practices</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/admin/admin-best-practices.html">Admin</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/admin/placement-and-design.html">Admin Panel Placement and Design</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/admin/ext-best-practices_admin_FAQ.html">Admin FAQ</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/extension-coding/coding-best-practices.html">Extension Coding</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/extension-coding/common-programming-bp.html">Programming best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/extension-coding/working-with-arch-bp.html">Working with the Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/extension-coding/security-performance-data-bp.html">Security, performance, and data handling</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/extension-coding/observers-bp.html">Observers best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/extension-coding/coding-faq.html">Coding FAQ</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/storefront/storefront-best-practices.html">Storefront</a></li><li class="" role="menuitem"><span>Security</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/security/writing-secure-code.html">Writing secure code</a></li></ul></li><li class="" role="menuitem"><span>Tutorials</span><ul><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/tutorials/copy-fieldsets.html">Copying fieldsets</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/extension-coding/example-module-adminpage.html">Creating a Magento admin page</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Copying fieldsets</h1>
+</section>
+
+			<h2 id="overview">Overview</h2>
+
+<p>In this tutorial, you will learn to copy custom data from a <a href="https://glossary.magento.com/quote">quote</a> object to an order object using the <a href="https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/DataObject/Copy.php" target="_blank">Magento/Framework/DataObject/Copy</a> class.</p>
+
+<h2 id="step-1">Step 1: Define your attributes</h2>
+
+<p>The following code defines a simple <a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/attributes.html">extension attribute</a> named <code class="highlighter-rouge">demo</code> for the Cart and Order objects.</p>
+
+<p><strong>etc/extension_attributes.xml</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"Api/etc/extension_attributes.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;extension_attributes</span> <span class="na">for=</span><span class="s">"Magento\Quote\Api\Data\CartInterface"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;attribute</span> <span class="na">code=</span><span class="s">"demo"</span> <span class="na">type=</span><span class="s">"string"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/extension_attributes&gt;</span>
+  <span class="nt">&lt;extension_attributes</span> <span class="na">for=</span><span class="s">"Magento\Sales\Api\Data\OrderInterface"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;attribute</span> <span class="na">code=</span><span class="s">"demo"</span> <span class="na">type=</span><span class="s">"string"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/extension_attributes&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="step-2">Step 2: Configure the fieldset</h2>
+
+<p>The following code adds the <code class="highlighter-rouge">demo</code> field to the <code class="highlighter-rouge">sales_convert_quote</code> fieldset with the <code class="highlighter-rouge">to_order</code> aspect.
+The code snippet in the next step uses the name of the fieldset and aspect to specify which fields to copy.</p>
+
+<p><strong>etc/fieldset.xml</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"DataObject/etc/fieldset.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;scope</span> <span class="na">id=</span><span class="s">"global"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;fieldset</span> <span class="na">id=</span><span class="s">"sales_convert_quote"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"demo"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;aspect</span> <span class="na">name=</span><span class="s">"to_order"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+  <span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="step-3">Step 3: Copy the fieldset</h2>
+
+<p>For copying the fieldset, we’ll observe the <code class="highlighter-rouge">sales_model_service_quote_submit_before</code> event by using the following code in our <code class="highlighter-rouge">etc/events.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:Event/etc/events.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">"sales_model_service_quote_submit_before"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;observer</span> <span class="na">name=</span><span class="s">"[vendor]_[module]_sales_model_service_quote_submit_before"</span> <span class="na">instance=</span><span class="s">"Vendor\Module\Observer\SaveOrderBeforeSalesModelQuoteObserver"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/event&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The following code snippets highlight the code pieces needed to copy a fieldset using the <code class="highlighter-rouge">\Magento\Framework\DataObject\Copy</code> class.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span>
+<span class="kn">namespace</span> <span class="nn">Vendor\Module\Observer</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="nc">Magento\Framework\Event\ObserverInterface</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">SaveOrderBeforeSalesModelQuoteObserver</span> <span class="kd">implements</span> <span class="nc">ObserverInterface</span>
+<span class="p">{</span>
+    <span class="mf">...</span>
+    
+    <span class="cd">/**
+     * @var \Magento\Framework\DataObject\Copy
+     */</span>
+    <span class="k">protected</span> <span class="nv">$objectCopyService</span><span class="p">;</span>
+
+    <span class="mf">...</span>
+
+    <span class="cd">/**
+     * @param \Magento\Framework\DataObject\Copy $objectCopyService
+     * ...
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">__construct</span><span class="p">(</span>
+      <span class="err">\</span><span class="nc">Magento\Framework\DataObject\Copy</span> <span class="nv">$objectCopyService</span><span class="p">,</span>
+      <span class="mf">...</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">objectCopyService</span> <span class="o">=</span> <span class="nv">$objectCopyService</span><span class="p">;</span>
+        <span class="mf">...</span>
+    <span class="p">}</span>
+
+    <span class="cd">/**
+     * @param \Magento\Framework\Event\Observer $observer
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">execute</span><span class="p">(</span><span class="err">\</span><span class="nc">Magento\Framework\Event\Observer</span> <span class="nv">$observer</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="cm">/* @var \Magento\Sales\Model\Order $order */</span>
+      <span class="nv">$order</span> <span class="o">=</span> <span class="nv">$observer</span><span class="o">-&gt;</span><span class="nf">getEvent</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getData</span><span class="p">(</span><span class="s1">'order'</span><span class="p">);</span>
+      <span class="cm">/* @var \Magento\Quote\Model\Quote $quote */</span>
+      <span class="nv">$quote</span> <span class="o">=</span> <span class="nv">$observer</span><span class="o">-&gt;</span><span class="nf">getEvent</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getData</span><span class="p">(</span><span class="s1">'quote'</span><span class="p">);</span>
+      
+      <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">objectCopyService</span><span class="o">-&gt;</span><span class="nf">copyFieldsetToTarget</span><span class="p">(</span><span class="s1">'sales_convert_quote'</span><span class="p">,</span> <span class="s1">'to_order'</span><span class="p">,</span> <span class="nv">$quote</span><span class="p">,</span> <span class="nv">$order</span><span class="p">);</span>
+      <span class="mf">...</span>
+      
+      <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In the code, an instance of the <code class="highlighter-rouge">Copy</code> class is obtained from the constructor using <a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/depend-inj.html">dependency injection</a>.
+The <code class="highlighter-rouge">copyFieldsetToTarget</code> function call with the <code class="highlighter-rouge">$quote</code> and <code class="highlighter-rouge">$order</code> parameters copies the fieldset for the two objects..</p>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

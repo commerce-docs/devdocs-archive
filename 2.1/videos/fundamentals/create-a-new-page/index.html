@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Create a New Page | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-video">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container video-page">
+
+	<aside class="sidebar">
+		<button class="toc-toggler">Table of Contents</button>
+		<div class="sidebar-wrapper">
+
+			<ul>
+				<li class="level-0"><a href="/devdocs/2.1/videos/">&larr; All Videos</a></li>
+
+				
+				
+
+				
+				
+					<li class="playlist-name">
+						<a href="/videos/fundamentals/">Fundamentals of Magento 2 Development</a>
+					</li>
+				
+
+				
+				
+          <li class="">
+          
+            <a href="/devdocs/2.1/videos/fundamentals/add-a-new-table-to-database/">
+          
+              How to Add a New Table to a Database
+              <span class="video-duration">6:11 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/devdocs/2.1/videos/fundamentals/add-a-javascript-module/">
+          
+              How to Add a JavaScript Module
+              <span class="video-duration">4:20 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/devdocs/2.1/videos/fundamentals/add-new-product-attribute/">
+          
+              How to Add a New Product Attribute
+              <span class="video-duration">7:36 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/devdocs/2.1/videos/fundamentals/create-a-new-module/">
+          
+              Create a New Module
+              <span class="video-duration">5:18 </span>
+            </a>
+          </li>
+				
+          <li class="active">
+          
+            <a href="/devdocs/2.1/videos/fundamentals/create-a-new-page/">
+          
+              Create a New Page
+              <span class="video-duration">4:02 </span>
+            </a>
+          </li>
+				
+			</ul>
+
+		</div>
+	</aside>
+
+	<section class="content">
+		<div class="content-wrap">
+
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Create a New Page</h1>
+</section>
+
+
+			<div id="video-player" class="video-player-wrap">
+				<div class="video-player">
+					<div class="embed-responsive embed-responsive-16by9">
+		      	<iframe class="embed-responsive-item" src='https://www.youtube.com/embed/l33T2-YC4tk'
+		      		        itemprop='embedUrl'
+		      		        frameborder='0'
+		      	          allowfullscreen>
+		      	</iframe>
+					</div>
+				</div>
+			</div>
+
+			<p>In this video on how to create a new page, we’ll create a page which returns JSON with one parameter: the message “HELLO WORLD!”</p>
+
+<p>To add a new page in Magento 2, you need to create a new controller. In Magento 2, a controller is a file located at a specific place which responds to a specific route. A route in Magento 2 is a standard URL that consists of three parts:</p>
+
+<ul>
+  <li>frontName</li>
+  <li>controllerName</li>
+  <li>actionName</li>
+</ul>
+
+<p>We’ll look at how those three parts of a route correspond to a certain file.</p>
+
+<p>So the steps we need to take to add a new page are:</p>
+
+<ol>
+  <li>Create a new module.</li>
+  <li>Add a routes.xml file.</li>
+  <li>Add a controller (action) file.</li>
+</ol>
+
+<p>To create a module, you need to complete the following high-level steps:</p>
+
+<ol>
+  <li>Create the module folder.</li>
+  <li>Create the etc/module.xml file.</li>
+  <li>Create the registration.php file.</li>
+  <li>Run the “bin/magento setup:upgrade” script to install the new module.</li>
+  <li>Check that the module is working.</li>
+</ol>
+
+<p>Let’s go through each step.</p>
+
+<h2 id="create-a-new-module">Create a new module</h2>
+
+<p>We will create a new module called <code class="highlighter-rouge">Learning_HelloPage</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> &lt;magento2_root&gt;/app/code
+<span class="nb">mkdir </span>Learning
+<span class="nb">mkdir </span>Learning/HelloPage
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now create two files:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="go">Learning/HelloPage/registration.php
+Learning/HelloPage/etc/module.xml
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="registrationphp">registration.php</h4>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span> <span class="cd">/**
+* Copyright © 2016 Magento. All rights reserved. * See COPYING.txt for license details.
+*/</span>
+<span class="err">\</span><span class="nc">Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="nf">register</span><span class="p">(</span> <span class="err">\</span><span class="nc">Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="no">MODULE</span><span class="p">,</span> <span class="s1">'Learning_HelloPage'</span><span class="p">,</span>
+<span class="k">__DIR__</span>
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="modulexml">module.xml</h4>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+* Copyright © 2016 Magento. All rights reserved. * See COPYING.txt for license details.
+*/
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:Module/etc/module.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Learning_HelloPage"</span> <span class="na">setup_version=</span><span class="s">"0.0.1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/module&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="add-a-routesxml-file">Add a routes.xml file</h2>
+
+<p>Before we create the file, let’s take a brief look at how routing works in Magento 2. Each area (in our case, frontend and adminhtml) has a corresponding merged <code class="highlighter-rouge">routes.xml</code> file, which is merged from the <code class="highlighter-rouge">etc/&amp;lt;area&amp;gt;/routes.xml</code> file from every module. That <code class="highlighter-rouge">routes.xml</code> file contains information about all registered routes and frontNames. Recall that a frontName is the first part of a route.</p>
+
+<p>So, we should register it in the <code class="highlighter-rouge">routes.xml</code> file and associate it with a module. It is possible to have multiple modules associated with one route, so we can create pages under the catalog <code class="highlighter-rouge">frontName</code>.</p>
+
+<p>Now, since we’re working in the frontend area, we’ll add the <code class="highlighter-rouge">etc/frontend/routes.xml</code> file for our <code class="highlighter-rouge">Learning_HelloPage</code> module:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+* Copyright © 2016 Magento. All rights reserved. * See COPYING.txt for license details.
+*/
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:App/etc/routes.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;router</span> <span class="na">id=</span><span class="s">"standard"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;route</span> <span class="na">id=</span><span class="s">"learning"</span> <span class="na">frontName=</span><span class="s">"test"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Learning_HelloPage"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/route&gt;</span>
+    <span class="nt">&lt;/router&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>We added a new route here called “learning” (note it does not have to match the module name) and a new <code class="highlighter-rouge">frontName</code>. Often the route and <code class="highlighter-rouge">frontName</code> are the same – for example, “catalog” – but it is not required.
+When Magento 2 sees a URL like <code class="highlighter-rouge">test/chunk2/chunk3</code>, it will check whether our module <code class="highlighter-rouge">Learning_HelloPage</code> has a folder, <code class="highlighter-rouge">Controller/Chunk2</code>, and an action file, <code class="highlighter-rouge">Chunk3.php</code>.</p>
+
+<p>Our route will be <code class="highlighter-rouge">test/page/view</code>.</p>
+
+<h2 id="add-a-controller-action-file">Add a controller (action) file</h2>
+
+<p>Let’s add the controller now.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> &lt;magento2_root&gt;/app/code/Learning/HelloPage
+<span class="nb">mkdir </span>Controller
+<span class="nb">mkdir </span>Controller/Page
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Let’s create an action file <code class="highlighter-rouge">Controller/Page/View.php</code>:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span> <span class="cd">/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+<span class="kn">namespace</span> <span class="nn">Learning\HelloPage\Controller\Page</span><span class="p">;</span>
+<span class="kd">class</span> <span class="nc">View</span> <span class="k">extends</span> <span class="err">\</span><span class="nc">Magento\Framework\App\Action\Action</span>
+<span class="p">{</span>
+    <span class="cd">/**
+     * @var \Magento\Framework\Controller\Result\JsonFactory
+     */</span>
+    <span class="k">protected</span> <span class="nv">$resultJsonFactory</span><span class="p">;</span>
+    <span class="cd">/**
+     * @param \Magento\Framework\App\Action\Context $context
+     * @param \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">__construct</span><span class="p">(</span>
+       <span class="err">\</span><span class="nc">Magento\Framework\App\Action\Context</span> <span class="nv">$context</span><span class="p">,</span>
+       <span class="err">\</span><span class="nc">Magento\Framework\Controller\Result\JsonFactory</span> <span class="nv">$resultJsonFactory</span><span class="p">)</span>
+<span class="p">{</span>
+       <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">resultJsonFactory</span> <span class="o">=</span> <span class="nv">$resultJsonFactory</span><span class="p">;</span>
+       <span class="k">parent</span><span class="o">::</span><span class="nf">__construct</span><span class="p">(</span><span class="nv">$context</span><span class="p">);</span>
+<span class="p">}</span>
+    <span class="cd">/**
+     * View  page action
+     *
+     * @return \Magento\Framework\Controller\ResultInterface
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">execute</span><span class="p">()</span>
+    <span class="p">{</span>
+       <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">resultJsonFactory</span><span class="o">-&gt;</span><span class="nf">create</span><span class="p">();</span>
+       <span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'message'</span> <span class="o">=&gt;</span> <span class="s1">'Hello world!'</span><span class="p">];</span>
+
+<span class="k">return</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="nf">setData</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+<span class="p">}</span> <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Note we created a JSON-type page. This can be seen in the results factory that we specify in our constructor. In order to activate our module and our page we should run the Magento setup upgrade:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> &lt;magento2_root&gt;
+php bin/magento setup:upgrade
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now we need to verify that <code class="highlighter-rouge">Learning_HelloPage</code> is present in the output. If you examine the <code class="highlighter-rouge">/test/page/view</code> page, you should see the message:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="go">{"message":"Hello world!"}
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This is because we returned a <code class="highlighter-rouge">ResultJson</code> object. Magento 2 has different result objects for different cases – ResultPage for a regular page, Forward result, and so on.</p>
+
+<p>We used a JSON result here because the goal was to illustrate how to create a new page, not to dig into the view layer, which would require activation to use the Page result object.</p>
+
+
+			<div class="adjaced-pages">
+				<div class="playlist-name">Fundamentals of Magento 2 Development</div>
+			
+			
+				<div class="previous-page">
+                    
+                    <a href="/devdocs/2.1/videos/fundamentals/create-a-new-module/">
+                    
+						<span class="arrow">&larr; Previous</span>
+						<span class="title">Create a New Module</span>
+					</a>
+				</div>
+			
+
+			
+			
+			</div>
+
+
+
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Add custom input mask for ZIP code | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-tutorial">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+  <aside class="sidebar">
+  	<button class="toc-toggler">Table of Contents</button>
+  	<div class="sidebar-wrapper">
+
+
+      
+      
+      <ul>
+        <li class="level-0">
+          <a href="/devdocs/2.1/guides/v2.1/">
+            &larr; 
+          </a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Initial Tasks</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_new_step.html">Add a new checkout step</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_customize.html">Customize the view of a checkout step</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_payment.html">Add a custom payment method to checkout</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_order.html">Add custom validations before order placement</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout-add-custom-carrier.html">Add custom shipping carrier</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_carrier.html">Add custom shipping carrier validations</a>
+        </li>
+      
+        <li class="level1  active">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_zip.html">Add custom input mask for ZIP code</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_edit_form.html">Add a custom template for a form field on Checkout page</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_form.html">Add a new input form to checkout</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_new_field.html">Add a new field in address form</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_address.html">Add a custom shipping address renderer</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_custom_checkbox.html">Add custom fields that influence other Checkout fields</a>
+        </li>
+      
+      </ul>
+
+    </div>
+  </aside>
+  <!-- /.sidebar -->
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+		<h1 class="page-subtitle">Customize Checkout</h1>
+	
+
+	<h1 class="page-heading">Add custom input mask for ZIP code</h1>
+</section>
+
+			<p>This topic describes how a developer can add custom input masks.</p>
+
+<p>When a shopper specifies the country and ZIP code in the shipping address during <a href="https://glossary.magento.com/checkout">checkout</a> or in the shopping cart, Magento checks if the format of the entered code is valid for the specified country. This validation is implemented using the input masks for the ZIP code field. In Magento, these input masks are regular expressions which define which format is allowed.</p>
+
+<p>In Magento the input masks for the <strong>ZIP code</strong> field are specified in the <code class="highlighter-rouge">&lt;Magento_Directory_module_dir&gt;/etc/zip_codes.xml</code>. Input masks are specified per country, and are entered in the form of regular expressions.
+The syntax of defined by the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Directory/etc/zip_codes.xsd">zip_code.xsd</a> scheme.</p>
+
+<p>The following table defines the <code class="highlighter-rouge">zip</code> node attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute name</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">countryCode</code></td>
+      <td>Yes</td>
+      <td>The country code (Alpha-2 format) for which the zip is defined</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>    <span class="nt">&lt;zip</span> <span class="na">countryCode=</span><span class="s">"US"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Here we add the zip codes --&gt;</span>
+    <span class="nt">&lt;/zip&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The following table defines the <code class="highlighter-rouge">code</code> node attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute name</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">id</code></td>
+      <td>Yes</td>
+      <td>A random unique name within the same list.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">example</code></td>
+      <td>Yes</td>
+      <td>An example of the allowed pattern.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">active</code></td>
+      <td>No</td>
+      <td>Defines if this zip pattern is active or not.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can define several zip <code class="highlighter-rouge">code</code> patterns for the same country, by passing a list of <code class="highlighter-rouge">codes</code>.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>    <span class="nt">&lt;codes&gt;</span>
+        <span class="nt">&lt;code</span> <span class="na">id=</span><span class="s">"pattern_1"</span> <span class="na">active=</span><span class="s">"true"</span> <span class="na">example=</span><span class="s">"12345"</span><span class="nt">&gt;</span>^[0-9]{5}$<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;code</span> <span class="na">id=</span><span class="s">"pattern_2"</span> <span class="na">active=</span><span class="s">"true"</span> <span class="na">example=</span><span class="s">"AB1234"</span><span class="nt">&gt;</span>^[a-zA-z]{2}[0-9]{4}$<span class="nt">&lt;/code&gt;</span>
+    <span class="nt">&lt;/codes&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For the sake of compatibility, upgradability, and easy maintenance, do not edit the default Magento code. Add your customizations in a separate, custom module. For your ZIP code input mask customization to be applied correctly, your custom module should depend on the <code class="highlighter-rouge">Magento_Directory</code> module. Do not use <code class="highlighter-rouge">Ui</code> for your custom module name, because <code class="highlighter-rouge">%Vendor%_Ui</code> notation, required when specifying paths, might cause issues.</p>
+
+<h2 id="add">Add custom ZIP code input masks</h2>
+
+<p>To add custom ZIP code input masks or change the default ones, create a new <code class="highlighter-rouge">zip_code.xml</code> in the <code class="highlighter-rouge">&lt;your_module_dir&gt;/etc</code> directory.</p>
+
+<p>The content of the file should be similar to the following sample:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_Directory:etc/zip_codes.xsd"</span><span class="nt">&gt;</span>
+
+	<span class="c">&lt;!-- Specify the country ISO code--&gt;</span>
+	<span class="nt">&lt;zip</span> <span class="na">countryCode=</span><span class="s">"US"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- You can specify several patterns for one country --&gt;</span>
+    	<span class="nt">&lt;codes&gt;</span>
+	        <span class="nt">&lt;code</span> <span class="na">id=</span><span class="s">"pattern_1"</span> <span class="na">active=</span><span class="s">"true"</span> <span class="na">example=</span><span class="s">"12345-6789"</span><span class="nt">&gt;</span>^[0-9]{5}\-[0-9]{4}$<span class="nt">&lt;/code&gt;</span>
+    	    <span class="nt">&lt;code</span> <span class="na">id=</span><span class="s">"pattern_2"</span> <span class="na">active=</span><span class="s">"true"</span> <span class="na">example=</span><span class="s">"12345"</span><span class="nt">&gt;</span>^[0-9]{5}$<span class="nt">&lt;/code&gt;</span>
+    	<span class="nt">&lt;/codes&gt;</span>
+	<span class="nt">&lt;/zip&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="modify">Modify default values in existing mask</h2>
+
+<p>To change (override the default value) the existing mask:</p>
+
+<ol>
+  <li>Open <code class="highlighter-rouge">zip_codes.xml</code>.</li>
+  <li>Copy in the related nodes.</li>
+  <li>Change the regular expression defining the mask and the value of <code class="highlighter-rouge">example</code> correspondingly.</li>
+</ol>
+
+<p>Example of changing the default input mask:</p>
+
+<p>In the default <code class="highlighter-rouge">&lt;Magento_Directory_module_dir&gt;/etc/zip_codes.xml</code> the following mask is set for France:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_Directory:etc/zip_codes.xsd"</span><span class="nt">&gt;</span>
+...
+	<span class="nt">&lt;zip</span> <span class="na">countryCode=</span><span class="s">"FR"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;codes&gt;</span>
+            <span class="nt">&lt;code</span> <span class="na">id=</span><span class="s">"pattern_1"</span> <span class="na">active=</span><span class="s">"true"</span> <span class="na">example=</span><span class="s">"12345"</span><span class="nt">&gt;</span>^[0-9]{5}$<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/codes&gt;</span>
+    <span class="nt">&lt;/zip&gt;</span>
+...
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To change this mask, add the following code in your <code class="highlighter-rouge">zip_codes.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_Directory:etc/zip_codes.xsd"</span><span class="nt">&gt;</span>
+...
+	<span class="nt">&lt;zip</span> <span class="na">countryCode=</span><span class="s">"FR"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;codes&gt;</span>
+            <span class="c">&lt;!-- Changed the regexp defining the mask, and the value of "example" --&gt;</span>
+            <span class="nt">&lt;code</span> <span class="na">id=</span><span class="s">"pattern_1"</span> <span class="na">active=</span><span class="s">"true"</span> <span class="na">example=</span><span class="s">"A123"</span><span class="nt">&gt;</span>^[a-zA-Z]{1}[0-9]{3}$<span class="nt">&lt;/code&gt;</span>
+        <span class="nt">&lt;/codes&gt;</span>
+    <span class="nt">&lt;/zip&gt;</span>
+...
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="remove">Remove a mask</h2>
+
+<p>To remove a mask, in your <code class="highlighter-rouge">zip_codes.xml</code> add the corresponding node and set <code class="highlighter-rouge">active</code> attribute of <code class="highlighter-rouge">&lt;code/&gt;</code> to <code class="highlighter-rouge">false</code>.</p>
+
+
+      <div class="horisontal-nav">
+        
+        
+          
+          
+
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_carrier.html" class="btn btn-large btn-secondary">Previous</a>
+          
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_edit_form.html" class="btn btn-large btn-primary">Next</a>
+          
+
+        
+      </div>
+      <!-- /.horisontal-nav -->
+
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

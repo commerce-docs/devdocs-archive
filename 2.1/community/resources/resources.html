@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Community Resources | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title"></h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="active" role="menuitem"><a href="/devdocs/2.1/community/resources/resources.html">Community resources</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/best-practices.html">Community contributed best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/multi-repo-docs.html">Multi-repo docs</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Community Resources</h1>
+</section>
+
+			<p>This Community collection of resources links to blog posts, podcasts, presentations, and books created by members of the <a href="https://glossary.magento.com/magento">Magento</a> community and core developers separated into popular topics.</p>
+
+<p>New items will be added incrementally, and older links rotated out. Keep an eye on this space for the latest community resources!</p>
+
+<p>Another community-based resource, focused on describing the Magento 2 environment, is the <a href="https://github.com/DavidLambauer/awesome-magento2">Magento 2 Awesome List</a>.</p>
+
+<p>Do you know of a popular resource about Magento 2 that has been released/published within the past year?
+Does it fill gaps in our current docs and provide important information?
+<a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Let us know</a>!</p>
+
+<p class="bs-callout bs-callout-info">Magento does not officially endorse any of the linked blogs, books, presentation, or podcasts linked below.
+They are listed here because the content has been well received within the Magento community.</p>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<p>See our collection of best and leading practices, common solutions, and more in the <a href="/devdocs/2.1/community/resources/best-practices.html">Community contributed best practices</a> guide. If you have excellent best practices, tips and tricks, and work-arounds, feel free to <a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">contribute</a>!</p>
+
+<h2 id="community-engineering-slack">Community Engineering Slack</h2>
+
+<p>To connect with Magento and the Community, join us on the <a href="https://magentocommeng.slack.com">Magento Community Engineering Slack</a>. If you are interested in joining Slack, or a specific channel, send us a request at <a href="mailto:engcom@adobe.com">engcom@adobe.com</a> or <a href="https://tinyurl.com/engcom-slack">self signup</a>.</p>
+
+<p>We have <a href="https://github.com/magento/magento2/wiki/Slack-Channels">channels</a> for each project, but the following channels are recommended for new members:</p>
+
+<ul>
+  <li><a href="https://magentocommeng.slack.com/messages/C7FA71S3V">announcements</a>: Introduce yourself and get quick updates for Magento Community Engineering</li>
+  <li><a href="https://magentocommeng.slack.com/messages/C4YS78WE6">general</a>: Open chat for introductions and Magento 2 questions</li>
+  <li><a href="https://magentocommeng.slack.com/messages/CBSL1DF8B">appdesign</a>: Open chat for Magento architecture and <a href="https://devdocs.magento.com/guides/v2.3/coding-standards/technical-guidelines.html">technical guidelines</a></li>
+  <li><a href="https://magentocommeng.slack.com/messages/CFC88F1C6">coding-standards</a>: Open chat for developing <a href="https://devdocs.magento.com/guides/v2.3/coding-standards/bk-coding-standards.html">coding standards</a> for Magento</li>
+  <li><a href="https://magentocommeng.slack.com/messages/C7KB93M32">github</a>: Support for GitHub issues, pull requests, and processes</li>
+  <li><a href="https://magentocommeng.slack.com/messages/CCV3J3RV5">public-backlog</a>: Discussions of the Magento 2 backlog</li>
+  <li><a href="https://magentocommeng.slack.com/messages/CAN932A3H">devdocs</a>: Documentation contribution support</li>
+</ul>
+
+<h2 id="resources-and-guides">Resources and guides</h2>
+
+<ul>
+  <li><em>Video</em> <a href="https://www.youtube.com/watch?v=ceNeYpCEmys">How to contribute during Magento Contribution Days</a> by <a href="https://twitter.com/max_pronko">Max Pronko</a></li>
+  <li><em>GitHub</em> <a href="https://github.com/aleron75/mageres">Magento Resources</a> curated list by <a href="https://twitter.com/aleron75">Alessandro Ronchi</a></li>
+  <li><em>Blog posts</em> <a href="https://markshust.com/">Thoughts on Magento, PHP, JavaScript, Laravel, React, Docker, and user interface design</a> by <a href="https://twitter.com/markshust">Mark Shust</a></li>
+  <li><em>Videos</em> <a href="https://www.mage2.tv">Mage2.tv</a> by <a href="https://twitter.com/VinaiKopp">Vinai Kopp</a></li>
+  <li><em>Podcast</em> <a href="https://magetalk.com/">MageTalk</a> by <a href="https://magetalk.com/about/">Phillip Jackson and Kalen</a></li>
+  <li><em>Vlog</em> <a href="https://www.youtube.com/channel/UCSH4_56yf5khLwTK9q71IGw">eCommerceAholic</a> by <a href="https://twitter.com/ecommerceaholic">TJ Gamble</a></li>
+  <li><em>Statistics</em> <a href="https://magestats.net/">Magestats</a> by <a href="https://twitter.com/mhauri">Marcel Hauri</a></li>
+  <li><em>Videos</em> <a href="https://www.youtube.com/maxpronko">Magento Dev Channel with Max Pronko</a> by <a href="https://twitter.com/max_pronko">Max Pronko</a></li>
+  <li><em>Courses</em> <a href="https://www.maxpronko.com/all-courses/">Magento Courses</a> by <a href="https://twitter.com/max_pronko">Max Pronko</a></li>
+  <li><em>Videos</em> <a href="http://mage2katas.com/">Mage2Katas</a> by <a href="https://twitter.com/VinaiKopp">Vinai Kopp</a></li>
+  <li><em>Blog posts</em> <a href="https://store.fooman.co.nz/blog">The Magento Blog</a>  by Fooman</li>
+</ul>
+
+<h2 id="magento-apis">Magento APIs</h2>
+
+<ul>
+  <li><em>Presentation</em> <a href="http://www.slideshare.net/StaceyWhitney1/mage-titans-usa-2016-joshua-warren-magento-2-integrations">Magento 2 Integrations</a> by <a href="https://twitter.com/JoshuaSWarren">Joshua Warren</a></li>
+  <li><em>Presentation</em> <a href="http://www.slideshare.net/vrann/mage-titans-usa-2016-magentofacebookrabbitmq">Integrations with Magento, end to end story: RabbitMQ, APIs</a> by Eugene Tulika</li>
+</ul>
+
+<h2 id="installdeploy">Install/deploy</h2>
+
+<ul>
+  <li><em>GitHub</em> <a href="https://github.com/markshust/docker-magento">Magento 2 Docker</a> by <a href="https://twitter.com/markshust">Mark Shust</a> (supports Magento 2.3.0, PHP 7.2, Elasticsearch)</li>
+  <li><em>Presentation</em> <a href="https://creatuity.com/m/download-joshua-warrens-magetitans-2018-presentation">48 Hour Launches and Other Lessons Learned With Large-Scale Digital Transformations</a> by Joshua Warren of Creatuity</li>
+  <li><em>Blog post</em> <a href="https://magenticians.com/magento-2-launch-checklist/">Magento 2 - Launch Checklist</a> by <a href="https://twitter.com/syed_muneebb">Syed Muneeb Ul Hasan</a></li>
+  <li><em>Presentation</em> <a href="http://www.slideshare.net/OlgaKopylova2/m2-deployment">Magento 2 Deployment: What you should know</a> by <a href="https://twitter.com/buskamuza">Olga KopyLova</a></li>
+  <li><em>Blog post</em> <a href="https://www.c3media.co.uk/blog/c3-news/magento-2-deployment-without-downtime/">Magento 2 deployment without the downtime</a> by Robert Egginton</li>
+  <li><em>Blog post</em> <a href="https://dev98.de/2017/01/06/deploying-magento2-history-overview-14/">Deploying Magento 2 - History &amp; Overview</a> by <a href="https://twitter.com/mat_walter">Matthias Walter</a></li>
+  <li><em>Blog post</em> <a href="http://davidalger.com/development/magento/deploying-magento-2-using-capistrano/">Deploying Magento 2 using Capistrano</a> by <a href="https://twitter.com/blackbooker">David Alger</a></li>
+  <li><em>Blog post</em> <a href="https://nickrigby.uk/magento/deploying-magento-2-with-composer-and-envoyer.html">Deploying Magento 2 with Composer and Envoyer</a> by <a href="https://twitter.com/nick_rigby">Nick Rigby</a></li>
+  <li><em>GitHub</em> <a href="https://github.com/meanbee/docker-magento2">Magento 2 Docker</a> by meanbee</li>
+  <li><em>GitHub</em> <a href="https://github.com/ModestCoders/magento2-dockergento">Magento 2 Dockergento</a> by ModestCoders</li>
+  <li><em>Presentation</em> <a href="https://www.slideshare.net/OscarRecioSoria/zero-downtime-in-magento-2-is-it-possible">Zero Downtime in Magento 2, Is it Possible?</a> by <a href="https://twitter.com/osrecio">Óscar Recio</a></li>
+</ul>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+  <li><em>Blog post</em> <a href="https://inchoo.net/magento-2/unit-testing-magento-2/">Unit testing in Magento 2</a> by [Inchoo]</li>
+  <li><em>Blog post</em> <a href="https://webkul.com/blog/magento2-functional-testing-mftf/">Magento2 Functional Testing Framework(MFTF)</a> by <a href="https://webkul.com/blog/">WelKul</a></li>
+  <li><em>Blog post</em> <a href="https://bsscommerce.com/confluence/a-quick-guide-to-automation-test-in-magento-2/">A Quick Guide to Automation Test in Magento 2</a> by Luong Ngoc Son</li>
+  <li><em>Presentation</em> <a href="http://www.slideshare.net/vinaikopp/writing-testable-code-for-magento-1-and-2-2016-romaina">Writing testable code</a> by <a href="https://twitter.com/VinaiKopp">Vinai Kopp</a> (<strong>Bonus:</strong> <a href="https://www.youtube.com/watch?v=eF2EoF0WKoo">Video Presentation</a>)</li>
+  <li><em>Blog post</em> <a href="https://www.integer-net.com/integration-tests-with-magento-2/">Integration Tests with Magento 2</a> by Andreas von Studnitz</li>
+</ul>
+
+<h2 id="mastering-magento-2">Mastering Magento 2</h2>
+
+<ul>
+  <li><em>Blog post</em> <a href="https://medium.com/@maxpronko/10-practical-rules-to-build-high-quality-magento-2-module-e6fe2c9461ac">10 Practical Rules to Build High Quality Magento 2 Module</a> by Max Pronko</li>
+  <li><em>Presentation</em> <a href="https://docs.google.com/presentation/d/1NdtNz_LBxk-JsCBy8AvekZAkSPWOE0WCzE14Y9ki-5Q/mobilepresent?slide=id.g3444c1e91c_0_10">Stop Flushing the F#@king Cache, Indexing and Caching in Magento 2</a> by John Hughes]</li>
+  <li><em>Blog</em> <a href="https://alanstorm.com/">Alan Storm blog</a></li>
+  <li><em>Book</em> <a href="https://leanpub.com/magento2diy">Magento 2 DIY</a> by Viktor Khliupko</li>
+  <li><em>Book</em> <a href="https://www.packtpub.com/web-development/magento-2-cookbook">Magento 2 Cookbook</a> by Ray Bogman and Vladimir Kerkhoff</li>
+  <li><em>Presentation</em> <a href="http://www.slideshare.net/StaceyWhitney1/mage-titans-usa-2016-igor-melnykov-staging-and-preview">Staging and Preview</a> by Igor Melnykov</li>
+  <li><em>Blog post</em> <a href="http://alanstorm.com/magento_2_introducing_ui_components/">Introducing UI Components</a> by Alan Storm</li>
+  <li><em>Presentation</em> <a href="https://www.dropbox.com/s/j9a65kmqo5s4zys/MageTitansUSA%202016%20-%20Creating%20Micro-Services%20for%20Magento%202.pdf?dl=0">Micro Services</a> by Ivan Chepurnyi</li>
+</ul>
+
+<h2 id="performance">Performance</h2>
+
+<ul>
+  <li><em>Presentation</em> <a href="http://www.slideshare.net/StaceyWhitney1/mage-titans-usa-2016-miguel-balparda-magento-2-premium-performance-with-php-7-and-varnish">Premium performance with PHP 7 and Varnish</a> by Miguel Balparda</li>
+</ul>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

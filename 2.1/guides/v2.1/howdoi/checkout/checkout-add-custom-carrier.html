@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Add custom shipping carrier | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-tutorial">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+  <aside class="sidebar">
+  	<button class="toc-toggler">Table of Contents</button>
+  	<div class="sidebar-wrapper">
+
+
+      
+      
+      <ul>
+        <li class="level-0">
+          <a href="/devdocs/2.1/guides/v2.1/">
+            &larr; 
+          </a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Initial Tasks</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_new_step.html">Add a new checkout step</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_customize.html">Customize the view of a checkout step</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_payment.html">Add a custom payment method to checkout</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_order.html">Add custom validations before order placement</a>
+        </li>
+      
+        <li class="level1  active">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout-add-custom-carrier.html">Add custom shipping carrier</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_carrier.html">Add custom shipping carrier validations</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_zip.html">Add custom input mask for ZIP code</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_edit_form.html">Add a custom template for a form field on Checkout page</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_form.html">Add a new input form to checkout</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_new_field.html">Add a new field in address form</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_address.html">Add a custom shipping address renderer</a>
+        </li>
+      
+        <li class="level1">
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_custom_checkbox.html">Add custom fields that influence other Checkout fields</a>
+        </li>
+      
+      </ul>
+
+    </div>
+  </aside>
+  <!-- /.sidebar -->
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+		<h1 class="page-subtitle">Customize Checkout</h1>
+	
+
+	<h1 class="page-heading">Add custom shipping carrier</h1>
+</section>
+
+			<p>This topic describes how to add a custom shipping carrier.</p>
+
+<p>To add a new shipping carrier to the Magento checkout:</p>
+
+<ol>
+  <li><a href="#create-module">Create a new module</a></li>
+  <li><a href="#create-configuration">Add the carrier configuration</a></li>
+  <li><a href="#carrier-model">Create the carrier model</a></li>
+  <li><a href="#enable-module">Enable the module</a></li>
+</ol>
+
+<h2 id="create-module">Step 1: Create a new module</h2>
+
+<p>The example module for use here is <code class="highlighter-rouge">Vendor_CustomShipping</code>.</p>
+
+<h3 id="source-code-of-appcodevendorcustomshippingregistrationphp">Source code of <code class="highlighter-rouge">app/code/Vendor/CustomShipping/registration.php</code></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span>
+
+<span class="kn">use</span> <span class="nc">Magento\Framework\Component\ComponentRegistrar</span><span class="p">;</span>
+
+<span class="nc">ComponentRegistrar</span><span class="o">::</span><span class="nf">register</span><span class="p">(</span>
+    <span class="nc">ComponentRegistrar</span><span class="o">::</span><span class="no">MODULE</span><span class="p">,</span>
+    <span class="s1">'Vendor_CustomShipping'</span><span class="p">,</span>
+    <span class="k">__DIR__</span>
+<span class="p">);</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="source-code-of-appcodevendorcustomshippingcomposerjson">Source code of <code class="highlighter-rouge">app/code/Vendor/CustomShipping/composer.json</code></h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vendor/custom-shipping"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom shipping module"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"require"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"php"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-config"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-store"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-backend"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-shipping"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-catalog"</span><span class="p">:</span><span class="w"> </span><span class="s2">"101.0.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-sales-rule"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/module-quote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"magento/framework"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.*"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"magento2-module"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"OSL-3.0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"AFL-3.0"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"autoload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"registration.php"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"Vendor\\CustomShipping\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="source-code-of-appcodevendorcustomshippingetcmodulexml">Source code of <code class="highlighter-rouge">app/code/Vendor/CustomShipping/etc/module.xml</code></h3>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:Module/etc/module.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Vendor_CustomShipping"</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;sequence&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Magento_Store"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Magento_Sales"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Magento_Quote"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Magento_SalesRule"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/sequence&gt;</span>
+    <span class="nt">&lt;/module&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="create-configuration">Step 2: Add the module configuration</h2>
+
+<p>To add a module configuration use the following source code snippets.</p>
+
+<h3 id="source-code-of-appcodevendorcustomshippingetcadminhtmlsystemxml">Source code of <code class="highlighter-rouge">app/code/Vendor/CustomShipping/etc/adminhtml/system.xml</code></h3>
+
+<p>The <code class="highlighter-rouge">system.xml</code> source code declares custom shipping module options:</p>
+<ul>
+  <li>Enabled</li>
+  <li>Title</li>
+  <li>Method Name</li>
+  <li>Shipping Cost</li>
+  <li>Ship to Applicable Countries</li>
+  <li>Ship to Specific Countries</li>
+  <li>Show Method if Not Applicable</li>
+  <li>Sort Order</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_Config:etc/system_file.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;system&gt;</span>
+        <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"carriers"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">sortOrder=</span><span class="s">"320"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;group</span> <span class="na">id=</span><span class="s">"customshipping"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">sortOrder=</span><span class="s">"900"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Custom Shipping Module<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"active"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"select"</span> <span class="na">sortOrder=</span><span class="s">"10"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span> <span class="na">canRestore=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Enabled<span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;source_model&gt;</span>Magento\Config\Model\Config\Source\Yesno<span class="nt">&lt;/source_model&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"title"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">sortOrder=</span><span class="s">"20"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Title<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">sortOrder=</span><span class="s">"30"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Method Name<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"shipping_cost"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">sortOrder=</span><span class="s">"40"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span> <span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Shipping Cost<span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;validate&gt;</span>validate-number validate-zero-or-greater<span class="nt">&lt;/validate&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"sallowspecific"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"select"</span> <span class="na">sortOrder=</span><span class="s">"60"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span> <span class="na">canRestore=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Ship to Applicable Countries<span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;frontend_class&gt;</span>shipping-applicable-country<span class="nt">&lt;/frontend_class&gt;</span>
+                    <span class="nt">&lt;source_model&gt;</span>Magento\Shipping\Model\Config\Source\Allspecificcountries<span class="nt">&lt;/source_model&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"specificcountry"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"multiselect"</span> <span class="na">sortOrder=</span><span class="s">"70"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Ship to Specific Countries<span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;source_model&gt;</span>Magento\Directory\Model\Config\Source\Country<span class="nt">&lt;/source_model&gt;</span>
+                    <span class="nt">&lt;can_be_empty&gt;</span>1<span class="nt">&lt;/can_be_empty&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"showmethod"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"select"</span> <span class="na">sortOrder=</span><span class="s">"80"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Show Method if Not Applicable<span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;source_model&gt;</span>Magento\Config\Model\Config\Source\Yesno<span class="nt">&lt;/source_model&gt;</span>
+                    <span class="nt">&lt;frontend_class&gt;</span>shipping-skip-hide<span class="nt">&lt;/frontend_class&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+                <span class="nt">&lt;field</span> <span class="na">id=</span><span class="s">"sort_order"</span> <span class="na">translate=</span><span class="s">"label"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">sortOrder=</span><span class="s">"90"</span> <span class="na">showInDefault=</span><span class="s">"1"</span> <span class="na">showInWebsite=</span><span class="s">"1"</span> <span class="na">showInStore=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label&gt;</span>Sort Order<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;/field&gt;</span>
+            <span class="nt">&lt;/group&gt;</span>
+        <span class="nt">&lt;/section&gt;</span>
+    <span class="nt">&lt;/system&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="source-code-of-appcodevendorcustomshippingetcconfigxml">Source code of <code class="highlighter-rouge">app/code/Vendor/CustomShipping/etc/config.xml</code></h3>
+
+<p>The <code class="highlighter-rouge">config.xml</code> file specifies default values for custom shipping module options and the shipping module model, <code class="highlighter-rouge">Vendor\CustomShipping\Model\Carrier\Customshipping</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_Store:etc/config.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;default&gt;</span>
+        <span class="nt">&lt;carriers&gt;</span>
+            <span class="nt">&lt;customshipping&gt;</span>
+                <span class="nt">&lt;active&gt;</span>0<span class="nt">&lt;/active&gt;</span>
+                <span class="nt">&lt;title&gt;</span>Custom Shipping Title<span class="nt">&lt;/title&gt;</span>
+                <span class="nt">&lt;name&gt;</span>Custom Shipping Method Name<span class="nt">&lt;/name&gt;</span>
+                <span class="nt">&lt;shipping_cost&gt;</span>10<span class="nt">&lt;/shipping_cost&gt;</span>
+                <span class="nt">&lt;sallowspecific&gt;</span>0<span class="nt">&lt;/sallowspecific&gt;</span>
+                <span class="nt">&lt;sort_order&gt;</span>15<span class="nt">&lt;/sort_order&gt;</span>
+                <span class="nt">&lt;model&gt;</span>Vendor\CustomShipping\Model\Carrier\Customshipping<span class="nt">&lt;/model&gt;</span>
+            <span class="nt">&lt;/customshipping&gt;</span>
+        <span class="nt">&lt;/carriers&gt;</span>
+    <span class="nt">&lt;/default&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="carrier-model">Step 3: Create the carrier model</h2>
+
+<p>In this example, the <code class="highlighter-rouge">Vendor\CustomShipping\Model\Carrier\Customshipping</code> class is a skeleton of a carrier model. You can extend it to fit your needs.</p>
+
+<p>The carrier class implements the <code class="highlighter-rouge">CarrierInterface</code> interface and retrieves all available shipping methods in the <code class="highlighter-rouge">getAllowedMethods</code> function. The <code class="highlighter-rouge">collectRates</code> function returns the <code class="highlighter-rouge">\Magento\Shipping\Model\Rate\Result</code> object if the carrier method is available on checkout. Otherwise, it returns <code class="highlighter-rouge">false</code>—the carrier method is not applicable to the shopping cart.</p>
+
+<h3 id="source-code-of-appcodevendorcustomshippingmodelcarriercustomshippingphp">Source code of <code class="highlighter-rouge">app/code/Vendor/CustomShipping/Model/Carrier/Customshipping.php</code></h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span>
+
+<span class="kn">namespace</span> <span class="nn">Vendor\CustomShipping\Model\Carrier</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="nc">Magento\Quote\Model\Quote\Address\RateRequest</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">Magento\Shipping\Model\Carrier\AbstractCarrier</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">Magento\Shipping\Model\Carrier\CarrierInterface</span><span class="p">;</span>
+
+<span class="cd">/**
+ * Custom shipping model
+ */</span>
+<span class="kd">class</span> <span class="nc">Customshipping</span> <span class="kd">extends</span> <span class="nc">AbstractCarrier</span> <span class="kd">implements</span> <span class="nc">CarrierInterface</span>
+<span class="p">{</span>
+    <span class="cd">/**
+     * @var string
+     */</span>
+    <span class="k">protected</span> <span class="nv">$_code</span> <span class="o">=</span> <span class="s1">'customshipping'</span><span class="p">;</span>
+
+    <span class="cd">/**
+     * @var bool
+     */</span>
+    <span class="k">protected</span> <span class="nv">$_isFixed</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+    <span class="cd">/**
+     * @var \Magento\Shipping\Model\Rate\ResultFactory
+     */</span>
+    <span class="k">private</span> <span class="nv">$rateResultFactory</span><span class="p">;</span>
+
+    <span class="cd">/**
+     * @var \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory
+     */</span>
+    <span class="k">private</span> <span class="nv">$rateMethodFactory</span><span class="p">;</span>
+
+    <span class="cd">/**
+     * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+     * @param \Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory $rateErrorFactory
+     * @param \Psr\Log\LoggerInterface $logger
+     * @param \Magento\Shipping\Model\Rate\ResultFactory $rateResultFactory
+     * @param \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory $rateMethodFactory
+     * @param array $data
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">__construct</span><span class="p">(</span>
+        <span class="err">\</span><span class="nc">Magento\Framework\App\Config\ScopeConfigInterface</span> <span class="nv">$scopeConfig</span><span class="p">,</span>
+        <span class="err">\</span><span class="nc">Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory</span> <span class="nv">$rateErrorFactory</span><span class="p">,</span>
+        <span class="err">\</span><span class="nc">Psr\Log\LoggerInterface</span> <span class="nv">$logger</span><span class="p">,</span>
+        <span class="err">\</span><span class="nc">Magento\Shipping\Model\Rate\ResultFactory</span> <span class="nv">$rateResultFactory</span><span class="p">,</span>
+        <span class="err">\</span><span class="nc">Magento\Quote\Model\Quote\Address\RateResult\MethodFactory</span> <span class="nv">$rateMethodFactory</span><span class="p">,</span>
+        <span class="k">array</span> <span class="nv">$data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="nf">__construct</span><span class="p">(</span><span class="nv">$scopeConfig</span><span class="p">,</span> <span class="nv">$rateErrorFactory</span><span class="p">,</span> <span class="nv">$logger</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">rateResultFactory</span> <span class="o">=</span> <span class="nv">$rateResultFactory</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">rateMethodFactory</span> <span class="o">=</span> <span class="nv">$rateMethodFactory</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cd">/**
+     * Custom Shipping Rates Collector
+     *
+     * @param RateRequest $request
+     * @return \Magento\Shipping\Model\Rate\Result|bool
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">collectRates</span><span class="p">(</span><span class="kt">RateRequest</span> <span class="nv">$request</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getConfigFlag</span><span class="p">(</span><span class="s1">'active'</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cd">/** @var \Magento\Shipping\Model\Rate\Result $result */</span>
+        <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">rateResultFactory</span><span class="o">-&gt;</span><span class="nf">create</span><span class="p">();</span>
+
+        <span class="cd">/** @var \Magento\Quote\Model\Quote\Address\RateResult\Method $method */</span>
+        <span class="nv">$method</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">rateMethodFactory</span><span class="o">-&gt;</span><span class="nf">create</span><span class="p">();</span>
+
+        <span class="nv">$method</span><span class="o">-&gt;</span><span class="nf">setCarrier</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">_code</span><span class="p">);</span>
+        <span class="nv">$method</span><span class="o">-&gt;</span><span class="nf">setCarrierTitle</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getConfigData</span><span class="p">(</span><span class="s1">'title'</span><span class="p">));</span>
+
+        <span class="nv">$method</span><span class="o">-&gt;</span><span class="nf">setMethod</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">_code</span><span class="p">);</span>
+        <span class="nv">$method</span><span class="o">-&gt;</span><span class="nf">setMethodTitle</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getConfigData</span><span class="p">(</span><span class="s1">'name'</span><span class="p">));</span>
+
+        <span class="nv">$shippingCost</span> <span class="o">=</span> <span class="p">(</span><span class="n">float</span><span class="p">)</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getConfigData</span><span class="p">(</span><span class="s1">'shipping_cost'</span><span class="p">);</span>
+
+        <span class="nv">$method</span><span class="o">-&gt;</span><span class="nf">setPrice</span><span class="p">(</span><span class="nv">$shippingCost</span><span class="p">);</span>
+        <span class="nv">$method</span><span class="o">-&gt;</span><span class="nf">setCost</span><span class="p">(</span><span class="nv">$shippingCost</span><span class="p">);</span>
+
+        <span class="nv">$result</span><span class="o">-&gt;</span><span class="nf">append</span><span class="p">(</span><span class="nv">$method</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cd">/**
+     * @return array
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">getAllowedMethods</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">_code</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">getConfigData</span><span class="p">(</span><span class="s1">'name'</span><span class="p">)];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="enable-module">Step 4: Enable the module</h2>
+
+<p>Run the commands below to register <code class="highlighter-rouge">Vendor_CustomShipping</code> module:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento module:enable Vendor_CustomShipping
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento setup:upgrade
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<p>The backend settings for the custom shipping carrier appear as shown below.</p>
+
+<p><img src="/devdocs/2.1/guides/v2.1/howdoi/checkout/images/checkout-add-custom-carrier-01.png" alt="Custom shipping carrier backend settings" /></p>
+
+<p>The custom shipping carrier will appear on checkout as shown below.</p>
+
+<p><img src="/devdocs/2.1/guides/v2.1/howdoi/checkout/images/checkout-add-custom-carrier-02.png" alt="Custom shipping carrier on checkout" /></p>
+
+
+      <div class="horisontal-nav">
+        
+        
+          
+          
+
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_order.html" class="btn btn-large btn-secondary">Previous</a>
+          
+          <a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_carrier.html" class="btn btn-large btn-primary">Next</a>
+          
+
+        
+      </div>
+      <!-- /.horisontal-nav -->
+
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-20">
+      May 20th, 2019
+    </time>
+  </div>
+  
+
+  
+    <div class="page-contributor">
+      <a href="https://www.atwix.com/" target="_blank">
+        Thanks to Atwix for contributing this topic
+      </a>
+    </div>
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

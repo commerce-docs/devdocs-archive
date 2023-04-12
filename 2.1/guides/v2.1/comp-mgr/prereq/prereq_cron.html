@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Set up cron for update and upgrade | Archived Magento 2.1 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2.1.18 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.1/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.1/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+	<script>
+  var baseUrl = "/devdocs/2.1";
+  var algolia = {
+    id : "",
+    index:  "",
+    key:  "",
+    facetFilters: [["guide_version: 2.1", "versionless: true"]]
+  };
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/devdocs/2.1/">
+      <img src="/devdocs/2.1/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.1/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.1
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/mbi/docs/getting-started.html">Business Intelligence Import API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <button class="search-trigger search-icon" aria-label="Search"></button>
+    </div>
+
+    <form class="quick-search" action="/devdocs/2.1/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <button class="quick-search-close" aria-label="Close Search">&times;</button>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+    <div class="message-banner">
+       <a href="http://devdocs.magento.com/guides/v2.1/release-notes/ReleaseNotes2.1.18CE.html" target="_blank">Magento 2.1.18</a> is the final 2.1.x release. After June 2019, Magento 2.1.x will no longer receive security patches, quality fixes, or documentation updates.</br>To maintain your site's performance, security, and PCI compliance, upgrade to the latest version of Magento.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Software Update Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Upgrade the Magento application and modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/prereq/prereq_compman.html">Prerequisites</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/prereq/prereq_auth-token.html">Enter your authentication keys in the Admin</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/prereq/prereq_compman-ulimit.html">Set ulimit for the web server user</a></li><li class="active" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/prereq/prereq_cron.html">Set up cron for update and upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/prereq/prereq_compman-checklist.html">Update and upgrade checklist</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/marketplace/marketplace.html">Magento Marketplace example</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-checklist.html">Run the Component Manager</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-start.html">Start the Component Manager</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-main-pg.html">Manage your components</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-readiness.html">Step 1. Readiness check</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-backup.html">Step 2. Back up the file system and database</a></li><li class="" role="menuitem"><span>Step 3</span><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-new-purchase.html">Component Install</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-update.html">Component Update</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-enable-disable.html">Enable/Disable</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-uninst-data.html">Data Option</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/module-man/compman-uninst-final.html">Step 4. Uninstall</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/upgrader/ce-ee-upgrade-start.html">Upgrade from Magento Open Source to Magento Commerce</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/cli/cli-upgrade.html">Command-line upgrade</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/cli/cli-rc1-samp.html">Command-line upgrade with sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/upgrader/upgrade-checklist.html">Run System Upgrade</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/upgrader/upgrade-start.html">Start System Upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/upgrader/upgrade-main-pg.html">Step 1. Select versions to upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/upgrader/upgrade-readiness.html">Step 2. Readiness check</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/upgrader/upgrade-backup.html">Step 3. Back up the file system and database</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/upgrader/upgrade.html">Step 4. Upgrade</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/patching.html">Applying patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/updater/update-updater.html">Update the updater application</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/updater/updater.html">Updater application</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/tshoot.html">Troubleshooting suggestions</a><ul><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/were-sorry.html">Sorry, we can't take that action right now</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/out-of-memory.html">Out of memory errors</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/gitignore.html">Missing .gitignore files</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/upgrade_51431.html">Troubleshoot upgrade issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/cron.html">Troubleshoot cron</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/updater.html">Troubleshoot the updater application</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/php-version.html">PHP version readiness check issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/rc_perms.html">File permissions readiness check issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/update-fail.html">Roll back after update failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/component-depend.html">Resolve component dependency readiness check issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/maint-mode.html">Maintenance mode options for upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/tshoot_backup.html">Troubleshoot backups</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/ce-ee-upgrade.html">Error upgrading from Magento Open Source to Magento Commerce</a></li><li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/comp-mgr/trouble/cman/doc.html">magento/theme-doc-blank failure</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+	
+
+	<h1 class="page-heading">Set up cron for update and upgrade</h1>
+</section>
+
+			<p>To enable us to update or upgrade your system, you must configure two cron jobs. Each cron job should run every minute.</p>
+
+<p>The cron jobs schedule tasks for the Setup Wizard and for the updater application. These applications work together to install, update, and upgrade the Magento application and components.</p>
+
+<p>Enable the cron jobs as <a href="http://ss64.com/bash/crontab.html" target="_blank">crontabs</a> for the <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a> because that user runs the updater application for the Web Setup Wizard.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>Magento uses cron for two sets of tasks, and for each, cron can run with a different configuration:</p>
+
+<ul>
+  <li>
+    <p>PHP command-line configuration: The general cron job that reindexes indexers, generates e-mails, generates the sitemap, and so on.</p>
+
+    <p>You can find the command-line configuration using the command <code class="highlighter-rouge">php --ini</code>.</p>
+  </li>
+  <li>
+    <p>Web server PHP plug-in configuration: Two other cron jobs are used by the <a href="/devdocs/2.1/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade utilities</a>.</p>
+
+    <p>You can find the web server plug-in configuration using <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/optional.html#install-optional-phpinfo"><code class="highlighter-rouge">phpinfo.php</code></a>.</p>
+  </li>
+</ul>
+
+<ul class="bs-callout bs-callout-warning">
+  <li>To avoid issues during installation and upgrade, we strongly recommend you apply the same PHP settings to both the PHP command-line configuration and to the PHP web server plug-in’s configuration. For more information, see <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/php-settings.html">Required PHP settings</a>.</li>
+  <li>In a multi-node system, crontab can run on only one node. This applies to you only if you set up more than one webnode for reasons related to performance or scalability.</li>
+</ul>
+
+<h4 id="find-the-php-binary-and-phpini-path">Find the PHP binary and php.ini path</h4>
+
+<p>To display the path to your PHP binary, enter</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>which php
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>A sample result follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/usr/bin/php
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="create-the-cron-job">Create the cron job</h4>
+
+<p>To create a cron job for the Magento file system owner, enter the following command as a user with <code class="highlighter-rouge">root</code> privileges:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>crontab -u &lt;Magento file system owner username&gt; -e
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For example,</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>crontab -u magento_user -e
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>A text editor displays. (You might need to choose a text editor first.)</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="gp">* * * * * &lt;path to php binary&gt;</span><span class="w"> </span>&lt;magento <span class="nb">install dir</span><span class="o">&gt;</span>/bin/magento cron:run | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">"Ran jobs by schedule"</span> <span class="o">&gt;&gt;</span> &lt;magento <span class="nb">install dir</span><span class="o">&gt;</span>/var/log/magento.cron.log
+<span class="gp">* * * * * &lt;path to php binary&gt;</span><span class="w"> </span>&lt;magento <span class="nb">install dir</span><span class="o">&gt;</span>/update/cron.php <span class="o">&gt;&gt;</span> &lt;magento <span class="nb">install dir</span><span class="o">&gt;</span>/var/log/update.cron.log
+<span class="gp">* * * * * &lt;path to php binary&gt;</span><span class="w"> </span>&lt;magento <span class="nb">install dir</span><span class="o">&gt;</span>/bin/magento setup:cron:run <span class="o">&gt;&gt;</span> &lt;magento <span class="nb">install dir</span><span class="o">&gt;</span>/var/log/setup.cron.log
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;path to php binary&gt;</code> is the absolute file system path to your PHP binary</li>
+  <li><code class="highlighter-rouge">&lt;magento install dir&gt;</code> is the directory in which you installed the Magento software; for example, <code class="highlighter-rouge">/var/www</code></li>
+  <li><code class="highlighter-rouge">| grep -v "Ran jobs by schedule"</code> filters this message from the log, making any errors easier to spot</li>
+</ul>
+
+<p>The first command (<code class="highlighter-rouge">magento cron:run</code>) reindexes indexers, sends automated e-mails, generates the sitemap, and so on. Usually it’s associated with the PHP command line <code class="highlighter-rouge">.ini</code> file. The other two commands are used by the Component Manager and System Upgrade.</p>
+
+<p class="bs-callout bs-callout-info">If you’re a contributing developer (that is, you <a href="/devdocs/2.1/guides/v2.1/install-gde/prereq/dev_install.html">cloned the Magento 2 GitHub repository</a>), only the first line applies to you. See the examples that follow for details.</p>
+
+<p><strong>Example 1:</strong> Everyone except contributing developers</p>
+
+<p>For example, if the PHP binary is located in <code class="highlighter-rouge">/usr/bin</code>, you installed Magento in <code class="highlighter-rouge">/var/www/magento2</code>, enter</p>
+
+<p>Example:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="gp">* * * * * /usr/bin/php /var/www/magento2/bin/magento cron:run | grep -v "Ran jobs by schedule" &gt;</span><span class="o">&gt;</span> /var/www/magento2/var/log/magento.cron.log
+<span class="gp">* * * * * /usr/bin/php /var/www/magento2/update/cron.php &gt;</span><span class="o">&gt;</span> /var/www/magento2/var/log/update.cron.log
+<span class="gp">* * * * * /usr/bin/php /var/www/magento2/bin/magento setup:cron:run &gt;</span><span class="o">&gt;</span> /var/www/magento2/var/log/setup.cron.log
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Example 2:</strong> Contributing developers only (that is, you cloned the Magento 2 GitHub repository):</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="gp">* * * * * /usr/bin/php /var/www/magento2/bin/magento cron:run | grep -v "Ran jobs by schedule" &gt;</span><span class="o">&gt;</span> /var/www/magento2/var/log/magento.cron.log
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The preceding works for contributing developers because if you cloned the GitHub repository you don’t have an <code class="highlighter-rouge">update</code> directory and errors result if you run <code class="highlighter-rouge">magento setup:cron:run</code>. These cron jobs work in the Web Setup Wizard, which contributing developers cannot use for installing or updating the Magento application or components.</p>
+
+<p>Save your changes to the crontab and exit the editor.</p>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.1/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-05-31">
+      May 31st, 2019
+    </time>
+  </div>
+  
+
+  
+
+
+  
+
+    
+
+    
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.1/guides/v2.1/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.1/assets/js/app.min.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.1/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.1/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+
