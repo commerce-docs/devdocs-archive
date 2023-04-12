@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Multiselect widget | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">JavaScript Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/conventions_js.html">Conventional notations used in this Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_overview.html">JavaScript</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js-resources.html">JavaScript resources in Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/requirejs.html">RequireJS in Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_init.html">Calling and initializing JavaScript</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html">Frontend product repository</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/custom_js.html">Use custom JavaScript</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_debug.html">Locate JavaScript components</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_practice.html">Customizing JavaScript illustration</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_mixins.html">Using JavaScript mixins</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/jquery-widgets-about.html">Magento jQuery widgets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_accordion.html">Accordion widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_alert.html">Alert widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-breadcrumbs.html">Breadcrumbs widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_calendar.html">Calendar widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_collapsible.html">Collapsible widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_confirm.html">Confirmation widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_dropdown.html">Dropdown widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_dialog.html">DropdownDialog widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-folder-tree.html">FolderTree widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_gallery.html">Gallery widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_list.html">List widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_gallery_mg.html">Magnifier widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_loader.html">Loader widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-media-uploader.html">MediaUploader widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_menu.html">Menu widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_modal.html">Modal widget</a></li><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-multiselect.html">Multiselect widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_navigation.html">Navigation widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_password_strength_indicator.html">PasswordStrengthIndicator widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-popup-window.html">PopupWindow widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_prompt.html">Prompt widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_quickSearch.html">QuickSearch widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_redirectUrl.html">RedirectUrl widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-remaining-characters.html">RemainingCharacters widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-row-builder.html">RowBuilder widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-sortable.html">Sortable widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_sticky.html">Sticky widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_tabs.html">Tabs widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_toggle.html">ToggleAdvanced widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-trim-input.html">TrimInput widget</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+
+
+
+
+
+<h1 class="page-heading">Multiselect widget</h1>
+</section>
+
+			<p>This <a href="https://glossary.magento.com/widget/">widget</a> enables multiple select capability in the search field to help users choose different options.</p>
+
+<p>The Multiselect widget source is the <a href="https://github.com/magento/magento2/blob/2.2/lib/web/mage/multiselect.js">lib/web/mage/multiselect.js</a> file.</p>
+
+<h2 id="initialize-the-multiselect-widget">Initialize the Multiselect widget</h2>
+
+<p>For information about how to initialize a widget in a JS component or <code class="language-plaintext highlighter-rouge">.phtml</code> template, see the <a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_init.html">Initialize JavaScript</a> topic.</p>
+
+<p>The following example shows how to instantiate the Multiselect widget:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#multiselect</span><span class="dl">"</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">({});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>where <code class="language-plaintext highlighter-rouge">#multiselect</code> is the selector of the select element for which Multiselect is initialized.</p>
+
+<p>The following example shows a PHTML file using the script:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;script&gt;</span>
+    <span class="nf">require</span><span class="p">([</span>
+        <span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span><span class="p">,</span>
+        <span class="dl">'</span><span class="s1">mage/multiselect</span><span class="dl">'</span>
+    <span class="p">],</span> <span class="nf">function </span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+        <span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+        <span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#multiselect</span><span class="dl">"</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">({});</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="options">Options</h2>
+
+<p>The RedirectUrl widget has the following options:</p>
+
+<ul>
+  <li><a href="#containerclass">containerClass</a></li>
+  <li><a href="#currentpage">currentPage</a></li>
+  <li><a href="#lastappendvalue">lastAppendValue</a></li>
+  <li><a href="#mselectcheckedclass">mselectCheckedClass</a></li>
+  <li><a href="#mselectcontainer">mselectContainer</a></li>
+  <li><a href="#mselectitemswrapperclass">mselectItemsWrapperClass</a></li>
+  <li><a href="#nextpageurl">nextPageUrl</a></li>
+  <li><a href="#searchinputclass">searchInputClass</a></li>
+  <li><a href="#selecteditemscountclass">selectedItemsCountClass</a></li>
+  <li><a href="#updatedelay">updateDelay</a></li>
+</ul>
+
+<h3 id="containerclass"><code class="language-plaintext highlighter-rouge">containerClass</code></h3>
+
+<p>The class which is attached to the container with <a href="#mselectcontainer">multi-select container selector</a>.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">'paginated'</code></p>
+
+<h3 id="currentpage"><code class="language-plaintext highlighter-rouge">currentPage</code></h3>
+
+<p>Current page of multi-select items.</p>
+
+<p><strong>Type</strong>: Integer</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">1</code></p>
+
+<h3 id="lastappendvalue"><code class="language-plaintext highlighter-rouge">lastAppendValue</code></h3>
+
+<p>The value of the last added multi-select item.</p>
+
+<p><strong>Type</strong>: Integer, String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">0</code></p>
+
+<h3 id="mselectcheckedclass"><code class="language-plaintext highlighter-rouge">mselectCheckedClass</code></h3>
+
+<p>The class which is attached to a checked multi-select item.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">'mselect-checked'</code></p>
+
+<h3 id="mselectcontainer"><code class="language-plaintext highlighter-rouge">mselectContainer</code></h3>
+
+<p>Multiselect container selector.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">'section.mselect-list'</code></p>
+
+<h3 id="mselectitemswrapperclass"><code class="language-plaintext highlighter-rouge">mselectItemsWrapperClass</code></h3>
+
+<p>Multiselect items wrapper class.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">'mselect-items-wrapper'</code></p>
+
+<h3 id="nextpageurl"><code class="language-plaintext highlighter-rouge">nextPageUrl</code></h3>
+
+<p>The url of the controller or API which returns the JSON response.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multi-select item label #1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multi-select item label #2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>An example of the controller: <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Tax/Controller/Adminhtml/Rule/AjaxLoadRates.php"><code class="language-plaintext highlighter-rouge">&lt;Magento_Tax_module_dir&gt;/Controller/Adminhtml/Rule/AjaxLoadRates.php</code></a></p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">undefined</code></p>
+
+<h3 id="searchinputclass"><code class="language-plaintext highlighter-rouge">searchInputClass</code></h3>
+
+<p>Class of the search input.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">'admin__action-multiselect-search'</code></p>
+
+<h3 id="selecteditemscountclass"><code class="language-plaintext highlighter-rouge">selectedItemsCountClass</code></h3>
+
+<p>Class of the selected items counter.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">'admin__action-multiselect-search'</code></p>
+
+<h3 id="updatedelay"><code class="language-plaintext highlighter-rouge">updateDelay</code></h3>
+
+<p>The search field update delay.</p>
+
+<p><strong>Type</strong>: Integer, String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">0</code></p>
+
+<h2 id="methods">Methods</h2>
+
+<p>The Multiselect methods are the following:</p>
+
+<ul>
+  <li><a href="#appendoptions">appendOptions()</a></li>
+  <li><a href="#clearmultiselectoptions">clearMultiselectOptions()</a></li>
+  <li><a href="#getcurrentpage">getCurrentPage()</a></li>
+  <li><a href="#getsearchcriteria">getSearchCriteria()</a></li>
+  <li><a href="#isoptionsloaded">isOptionsLoaded()</a></li>
+  <li><a href="#loadoptions">loadOptions()</a></li>
+  <li><a href="#setcurrentpage">setCurrentPage()</a></li>
+</ul>
+
+<h3 id="appendoptions"><code class="language-plaintext highlighter-rouge">appendOptions</code></h3>
+
+<p>The method appends multi-select items to the multi-select.</p>
+
+<p>Code example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">(</span><span class="dl">'</span><span class="s1">appendOptions</span><span class="dl">'</span><span class="p">,</span> <span class="p">[{</span><span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">label</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Label #1</span><span class="dl">"</span><span class="p">},</span> <span class="p">{</span><span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">label</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Label #2</span><span class="dl">"</span><span class="p">}]);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="clearmultiselectoptions"><code class="language-plaintext highlighter-rouge">clearMultiselectOptions</code></h3>
+
+<p>The method removes all multi-select items.</p>
+
+<p>Code example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">(</span><span class="dl">'</span><span class="s1">clearMultiselectOptions</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="getcurrentpage"><code class="language-plaintext highlighter-rouge">getCurrentPage</code></h3>
+
+<p>The method returns the number of the current page.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">(</span><span class="dl">'</span><span class="s1">getCurrentPage</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="getsearchcriteria"><code class="language-plaintext highlighter-rouge">getSearchCriteria</code></h3>
+
+<p>The method returns the trimmed value of the search input.</p>
+
+<p>Code example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">(</span><span class="dl">'</span><span class="s1">getSearchCriteria</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="isoptionsloaded"><code class="language-plaintext highlighter-rouge">isOptionsLoaded</code></h3>
+
+<p>The method checks if all multi-select items are already loaded.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">(</span><span class="dl">'</span><span class="s1">isOptionsLoaded</span><span class="dl">'</span><span class="p">,</span> <span class="p">[{</span><span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">label</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Label #2</span><span class="dl">"</span><span class="p">}]);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This method returns <code class="language-plaintext highlighter-rouge">true</code> if multiple selection items are loaded, and it returns <code class="language-plaintext highlighter-rouge">false</code> if they are not loaded.</p>
+
+<h3 id="loadoptions"><code class="language-plaintext highlighter-rouge">loadOptions</code></h3>
+
+<p>The method loads the next page with multi-select items from <a href="#nextpageurl">nextPageUrl</a> according to the <a href="#getsearchcriteria">search criteria</a>.
+The multi-select items from the Ajax response are appended to the multi-select.</p>
+
+<p>Code example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadOptions</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="setcurrentpage"><code class="language-plaintext highlighter-rouge">setCurrentPage</code></h3>
+
+<p>The method configures the current page number.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">(</span><span class="dl">'</span><span class="s1">setCurrentPage</span><span class="dl">'</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="code-sample">Code sample</h2>
+
+<p>The following example shows the multiselect field with search bar and <strong>Add new value</strong> button.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select-example"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"multiselect"</span> <span class="na">name=</span><span class="s">"multiselect-field"</span> <span class="na">multiple=</span><span class="s">"multiple"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Option 3<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Option 4<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>Option 5<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Option 6<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+        <span class="nf">require</span><span class="p">([</span><span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">mage/multiselect</span><span class="dl">'</span><span class="p">],</span> <span class="nf">function </span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#multiselect</span><span class="dl">'</span><span class="p">).</span><span class="nf">multiselect2</span><span class="p">({</span><span class="na">selectedValues</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]});</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="result">Result</h2>
+
+<p>As a result, we see the multiselect field with search bar and <strong>Add new value</strong> button.
+You can now search for an option in the search bar and the <strong>Add new value</strong> button allows you to add a new option to the multiselect feature.</p>
+
+<p><img src="/devdocs/2.2/common/images/widget/multiselect-widget-result.png" alt="Multiselect Widget Example" /></p>
+
+<!-- Link Definitions -->
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-11-27">
+      Nov 27th, 2019
+    </time>
+  </div>
+  
+
+  
+    <div class="page-contributor">
+      <a href="https://www.atwix.com/" target="_blank">
+        Thanks to Atwix for contributing this topic
+      </a>
+    </div>
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

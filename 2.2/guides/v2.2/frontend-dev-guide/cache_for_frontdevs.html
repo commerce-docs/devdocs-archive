@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Magento cache overview | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Frontend Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/conventions.html">Conventional notations used in this Guide</a></li><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/cache_for_frontdevs.html">Magento cache overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/theme-best-practice.html">Theme development best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-general.html">Themes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-overview.html">Themes overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-install.html">Install a third-party storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-uninstall.html">Uninstall a storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/admin_theme_create.html">Create an Admin theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/admin_theme_apply.html">Apply an Admin theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-create.html">Create a new storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-apply.html">Apply and configure a storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/debug-theme.html">Locate templates, layouts, and styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-structure.html">Magento theme structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-inherit.html">Theme inheritance</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/favicon.html">Adding custom favicons</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-images.html">Configure theme properties</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/product-video.html">Configure product video</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/js-bundling.html">JavaScript Bundling</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-overview.html">Layout</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html">Layout instructions</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-types.html">Layout file types</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/product-layouts.html">Product layouts</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-extend.html">Extend a layout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-override.html">Override a layout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/xml-manage.html">Common layout customization tasks</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-practice.html">Customizing layout illustration</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-overview.html">Templates</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-override.html">Templates basic concepts</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-walkthrough.html">Templates customization walkthrough</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-sample.html">Templates customization sample</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-email.html">Email templates</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-overview.html">Cascading style sheets (CSS)</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-themes.html">Include CSS</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html">CSS and LESS preprocessing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css_debug.html">Compile LESS using Grunt</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-jquery.html">Using jQuery UI styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-practice.html">Customizing styles illustration</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/using-fonts.html">Using custom fonts</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-critical-path.html">CSS critical path</a></li><li class="" role="menuitem"><span>Using custom CSS preprocessor</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/custom_preprocess.html">Add custom CSS preprocessor</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/gulp-sass.html">Use Sass preprocessor and Gulp task runner</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_overview.html">Quick start guide to styles</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_approach.html">Simple ways to customize a theme's styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_mode.html">Simple style changes with client-side LESS compilation vs. server-side</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_overview.html">How to Make Your Theme Responsive and Mobile</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_css.html">CSS in responsive design</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_js.html">JavaScript in Magento responsive design</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_mobile.html">Create a responsive mobile theme based on a default theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_practice.html">Customizing RWD illustration</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd-breakpoints.html">Add a custom breakpoint</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/xlate.html">Translations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/theme_dictionary.html">Use translation dictionary to customize strings</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/translate_theory.html">Translate theme strings</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/translate_practice.html">Example theme translation dictionary</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/validations/form-validation.html">Form validation</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/tools/tools_overview.html">Tools</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/tools/using_grunt.html">Using Grunt for Magento tasks</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+
+
+
+
+
+<h1 class="page-heading">Magento cache overview</h1>
+</section>
+
+			<div>
+
+  <p>Caching is one of the most effective ways to improve website performance. Generally speaking, there are two methods of caching content:</p>
+
+  <ul>
+    <li>Client-side (browser)</li>
+    <li>Server-side</li>
+  </ul>
+
+  <p>Retrieving stored (<a href="https://glossary.magento.com/cache">cached</a>) content from a previous request for the same client instead of requesting files from your server every time someone visits your site is a more efficient use of network bandwidth.</p>
+
+  <p>The Magento page cache library contains a simple PHP reverse proxy that enables full page caching out of the box. A reverse proxy acts as an intermediary between visitors and your application and can reduce the load on your server.</p>
+
+  <p>We recommend using <a href="/devdocs/2.2/guides/v2.2/config-guide/varnish/config-varnish.html">Varnish</a>, but you can use Magento’s default caching mechanism instead, which stores cache files in any of the following:</p>
+
+  <ul>
+    <li>File system (You don’t need to do anything to use file-based caching.)</li>
+    <li><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/cache/partial-caching/database-caching.html">Database</a></li>
+    <li><a href="/devdocs/2.2/guides/v2.2/config-guide/redis/redis-pg-cache.html">Redis</a></li>
+  </ul>
+
+  <h2 id="cache-over-cacheable">Cacheable and uncacheable pages</h2>
+
+  <p><em>Cacheable</em> and <em>uncacheable</em> are terms we use to indicate whether or not a page should be cached at all. (By default, all pages are cacheable.) If any block in a <a href="https://glossary.magento.com/layout">layout</a> is designated as uncacheable, the entire page is uncacheable.</p>
+
+  <p>To create an uncacheable page, mark any block on that page as uncacheable in the layout using <code class="language-plaintext highlighter-rouge">cacheable="false"</code>.</p>
+
+  <p>Examples of uncacheable pages include the compare products, cart, <a href="https://glossary.magento.com/checkout">checkout</a> pages, and so on.</p>
+
+  <p><a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Paypal/view/frontend/layout/paypal_payflow_returnurl.xml" target="_blank">Example</a></p>
+
+  <p class="bs-callout-warning">Do not configure content pages (i.e., catalog, product, and CMS pages) to be uncacheable. Doing so has an adverse affect on performance.</p>
+
+  <h2 id="public-and-private-content">Public and private content</h2>
+
+  <p>Reverse proxies serve “public” or shared content to more than one user. However, most Magento websites generate dynamic and personalized “private” content that should only be served to one user, which presents unique caching challenges. To address these challenges, Magento can distinguish between two types of content:</p>
+
+  <ul>
+    <li>
+      <p><strong><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/cache/page-caching/public-content.html">Public</a></strong> - Public content is stored server side in your reverse proxy cache storage (e.g., file system, database, Redis, or Varnish) and is available to multiple customers. Examples of public content include header, footer, and category listing.</p>
+    </li>
+    <li>
+      <p><strong><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/cache/page-caching/private-content.html">Private</a></strong> - Private content is stored client side (e.g., browser) and is specific to an individual customer. Examples of private content include wishlist, shopping cart, customer name, and address. You should limit stored private content to a small portion of the page’s total content.</p>
+    </li>
+  </ul>
+
+  <h2 id="cache-types">Cache types</h2>
+
+  <p>The following cache types mostly have impact on frontend development process:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Cache type “friendly” name</th>
+        <th>Cache type code name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Layout</td>
+        <td><code class="language-plaintext highlighter-rouge">layout</code></td>
+        <td>Compiled page layouts (that is, the layout components from all components). Clean or flush this cache type after modifying layout files.</td>
+      </tr>
+      <tr>
+        <td>Block HTML output</td>
+        <td><code class="language-plaintext highlighter-rouge">block_html</code></td>
+        <td>HTML page fragments per block. Clean or flush this cache type after modifying the view layer.</td>
+      </tr>
+      <tr>
+        <td>Page cache</td>
+        <td><code class="language-plaintext highlighter-rouge">full_page</code></td>
+        <td>Generated HTML pages. If necessary, Magento cleans up this cache automatically, but third-party developers can put any data in any segment of the cache. Clean or flush this cache type after modifying code level that affects HTML output. It’s recommended to keep this cache enabled because caching HTML improves performance significantly.</td>
+      </tr>
+      <tr>
+        <td>Translations</td>
+        <td><code class="language-plaintext highlighter-rouge">translate</code></td>
+        <td>Merged translations from all modules.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="bs-callout-info">The full list of cache types can be found in the <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean-over">Overview of cache types</a> topic.</p>
+
+  <h2 id="clean_cache">Clean cache</h2>
+
+  <p>To clean cache, run</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>magento cache:clean &lt;<span class="nb">type</span><span class="o">&gt;</span> ... &lt;<span class="nb">type</span><span class="o">&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div>  </div>
+
+  <p>To view the status of the cache, run:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bin/magento cache:status
+</pre></td></tr></tbody></table></code></pre></div>  </div>
+
+  <p>For more details about working with cache, see <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-cache.html">Manage the cache</a></p>
+
+  <h2 id="clean_static_cache">Clean static files cache</h2>
+
+  <p>You can clean generated static view files in any of the following ways:</p>
+
+  <ul>
+    <li>
+      <p>In the <a href="https://glossary.magento.com/magento-admin">Magento Admin</a>. Go to <strong>System</strong> &gt; <strong>Tools</strong> &gt; <strong>Cache Management</strong> and click <strong>Flush <a href="https://glossary.magento.com/static-files">Static Files</a> Cache</strong>.</p>
+
+      <p class="bs-callout-info">This option is only available in <code class="language-plaintext highlighter-rouge">developer</code> mode. Refer to the <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview">static view files overview</a> for more information.</p>
+    </li>
+    <li>
+      <p>Manually by clearing the <code class="language-plaintext highlighter-rouge">pub/static</code> and <code class="language-plaintext highlighter-rouge">var/view_preprocessed</code> directories and subdirectories <em>except</em> for <code class="language-plaintext highlighter-rouge">pub/static/.htaccess</code>.</p>
+
+      <p>To clear the <code class="language-plaintext highlighter-rouge">pub/static</code> directory of all files except <code class="language-plaintext highlighter-rouge">.htaccess</code> (which is a hidden file), enter the following command:</p>
+
+      <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">rm</span> <span class="nt">-rf</span> pub/static/<span class="k">*</span>
+</pre></td></tr></tbody></table></code></pre></div>      </div>
+
+      <p>To clear the <code class="language-plaintext highlighter-rouge">var/view_preprocessed</code>, enter the following command:</p>
+
+      <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">rm</span> <span class="nt">-rf</span> var/view_preprocessed/<span class="k">*</span>
+</pre></td></tr></tbody></table></code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Several commands support an optional parameter <code class="language-plaintext highlighter-rouge">--clear-static-content</code>, which cleans generated static view files:</p>
+
+      <ul>
+        <li><a href="/devdocs/2.2/guides/v2.2/install-gde/install/cli/install-cli-subcommands-enable.html"><code class="language-plaintext highlighter-rouge">magento module:enable</code> and <code class="language-plaintext highlighter-rouge">magento module:disable</code></a></li>
+        <li><a href="/devdocs/2.2/guides/v2.2/install-gde/install/cli/install-cli-theme-uninstall.html"><code class="language-plaintext highlighter-rouge">magento theme:uninstall</code></a></li>
+        <li><a href="/devdocs/2.2/guides/v2.2/install-gde/install/cli/install-cli-uninstall-mods.html"><code class="language-plaintext highlighter-rouge">magento module:uninstall</code></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="clean_static">Clean static files</h2>
+
+  <p>Besides the cached files, in theme development process developers also deal with other saved files - static view files that are preprocessed and published to the <code class="language-plaintext highlighter-rouge">var/view_preprocessed</code> and <code class="language-plaintext highlighter-rouge">pub/static</code> directories correspondingly. In most cases when working on a custom theme, for example, if you are only working on styles, you do not need to clean cache, but need to clean the previously preprocessed and published static view files. To clean them, run  <code class="language-plaintext highlighter-rouge">grunt clean &lt;theme&gt;</code> or manually clear the <code class="language-plaintext highlighter-rouge">pub/static</code> and <code class="language-plaintext highlighter-rouge">var/view_preprocessed</code> directories.</p>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-12-03">
+      Dec 3rd, 2019
+    </time>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

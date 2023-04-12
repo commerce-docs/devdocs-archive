@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Magento Open Source 2.2.11 Release Notes | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Release Information</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Introduction</a></li><li class="" role="menuitem"><span>2.2 Release Notes</span><ul><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-11-open-source.html">Magento Open Source 2.2.11 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-11-commerce.html">Magento Commerce 2.2.11 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-10-open-source.html">Magento Open Source 2.2.10 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-10-commerce.html">Magento Commerce 2.2.10 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.9CE.html">Magento Open Source 2.2.9 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.9EE.html">Magento Commerce 2.2.9 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.8CE.html">Magento Open Source 2.2.8 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.8EE.html">Magento Commerce 2.2.8 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.7CE.html">Magento Open Source 2.2.7 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.7EE.html">Magento Commerce 2.2.7 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.6CE.html">Magento Open Source 2.2.6 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.6EE.html">Magento Commerce 2.2.6 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.5CE.html">Magento Open Source 2.2.5 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.5EE.html">Magento Commerce 2.2.5 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.4CE.html">Magento Open Source 2.2.4 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.4EE.html">Magento Commerce 2.2.4 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.3CE.html">Magento Open Source 2.2.3 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.3EE.html">Magento Commerce 2.2.3 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.2CE.html">Magento Open Source 2.2.2 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.2EE.html">Magento Commerce 2.2.2 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.1CE.html">Magento Open Source 2.2.1 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.1EE.html">Magento Commerce 2.2.1 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.0CE.html">Magento Open Source 2.2.0 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.0EE.html">Magento Commerce 2.2.0 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/CloudReleaseNotes2.2.html">Magento Commerce (Cloud) 2.2.0 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-candidate/component-status.html">Component Status</a></li></ul></li><li class="" role="menuitem"><span>Backward incompatible changes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/backward-incompatible-changes/index.html">Highlights</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/backward-incompatible-changes/reference.html">Reference</a></li></ul></li><li class="" role="menuitem"><span>Packages</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Magento Open Source packages</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-commerce.html">Magento Commerce packages</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-cloud.html">Magento Commerce Cloud packages</a></li></ul></li><li class="" role="menuitem"><span>Sales Channels</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/amazon-sales/release-notes/">Amazon</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/google-shopping-ads/release-notes/">Google Shopping ads</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+
+
+
+
+
+<h1 class="page-heading">Magento Open Source 2.2.11 Release Notes</h1>
+</section>
+
+			<p><strong>This release (Magento 2.2.11) marks the final supported software release for Magento version 2.2. Magento 2.2 will no longer receive security updates or product quality fixes now that its support window has expired</strong>.</p>
+
+<p>Magento Open Source 2.2.11 offers platform upgrades and substantial security changes. This release includes 24 functional fixes and enhancements to the core product and 30 security enhancements.</p>
+
+<p>Magento 2.2.11 has not been tested with PHP 7.1. PHP 7.1 reached EOL (End of Life) on December 1, 2019. We recommend updating your deployment to a supported version of PHP.</p>
+
+<h2 id="functional-fixes">Functional fixes</h2>
+
+<p>In addition to security enhancements, this release contains the following functional fixes.</p>
+
+<h3 id="cart-and-checkout">Cart and checkout</h3>
+
+<!--- MC-18720  -->
+
+<ul>
+  <li>Administrators with appropriate but restricted privileges can now view the list of CMS pages at <strong>Content</strong> &gt; <strong>Pages</strong>.  Previously, Magento displayed this error: <code class="language-plaintext highlighter-rouge">You cannot define a correlation namestore_table more than once</code>.</li>
+</ul>
+
+<!--- MC-18903 -->
+
+<ul>
+  <li>A shopping cart that contains items no longer displays a subtotal and order total of zero when the <strong>Clear Persistence on Sign Out</strong> setting is disabled and the <strong>Redirect Customer to Account Dashboard after Logging in</strong> setting is enabled.</li>
+</ul>
+
+<h3 id="cms-content">CMS content</h3>
+
+<!--- MC-18985  -->
+
+<ul>
+  <li>You can now upload a video from the WYSIWYG editor.</li>
+</ul>
+
+<h3 id="configurable-products">Configurable products</h3>
+
+<!--- MC-19539  -->
+
+<ul>
+  <li>You can now add new options with new images to an existing configurable product. Previously, when you clicked <strong>Save</strong>, Magento threw an error and did not save the new variations.</li>
+</ul>
+
+<!--- MC-19672  -->
+
+<ul>
+  <li>Simple products no longer disappear from the Admin configurable product list when you set the product quantity to 0.</li>
+</ul>
+
+<!--- MC-18809  -->
+
+<ul>
+  <li>Out-of-stock configurable product options are now listed as expected on the storefront when the <strong>Display Out of Stock Products</strong> setting is enabled on <strong>Admin</strong> &gt; <strong>Store</strong> &gt; <strong>Configuration</strong> &gt; <strong>Inventory</strong> &gt; <strong>Stock Options</strong>.</li>
+</ul>
+
+<h3 id="inventory">Inventory</h3>
+
+<!--- MC-17605  -->
+
+<ul>
+  <li>You can now save an edited product when <code class="language-plaintext highlighter-rouge">max_sale_qty</code> is set to the Magento default value. <a href="https://github.com/magento/magento2/issues/23319">GitHub-23319</a></li>
+</ul>
+
+<h3 id="importexport">Import/export</h3>
+
+<!--- MC-18741  -->
+
+<ul>
+  <li>Magento now adds newly imported images after previously imported ones. Previously, Magento added these most recently imported images randomly.</li>
+</ul>
+
+<!--- MC-18201  -->
+
+<ul>
+  <li>The import process now maintains custom option prices that were assigned to different websites and scope before import. Previously, after import, these custom option prices were set to the default scope values.</li>
+</ul>
+
+<!--- MC-18711  -->
+
+<ul>
+  <li>Magento now correctly processes product prices during export when the <strong>All Store Views</strong> scope is set. Previously, the logic for updating the price of custom options in non-default websites was missing when the <strong>Catalog</strong> &gt; <strong>Price</strong> setting was set to <strong>Website</strong>.</li>
+</ul>
+
+<h3 id="indexing">Indexing</h3>
+
+<!--- MC-18631  -->
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">POST /V1/products/tier-prices</code> endpoint now considers account indexer mode as expected.</li>
+</ul>
+
+<h3 id="infrastructure">Infrastructure</h3>
+
+<p>Magento 2.2.11 has not been tested with PHP 7.1. PHP 7.1 reached EOL (End of Life) on December 1, 2019. We recommend updating your deployment to a supported version of PHP. See <a href="https://devdocs.magento.com/guides/v2.2/install-gde/system-requirements-tech.html">Magento 2.2 technology stack requirements</a> for information about supported versions.</p>
+
+<h3 id="payment-methods">Payment methods</h3>
+
+<!--- MC-19773  -->
+
+<ul>
+  <li>You can now successfully complete an order using Braintree with PayPal when Shipping Flat Rate is activated. Previously, Magento displayed an informative error.</li>
+</ul>
+
+<!--- MC-18283  -->
+
+<ul>
+  <li>For orders paid with Payflow Pro, if the <strong>Vault Enabled</strong> option is set to Yes, Magento now displays accurate stored card information as expected on the order information page.</li>
+</ul>
+
+<h3 id="persistent">Persistent</h3>
+
+<!--- MC-19019  -->
+
+<ul>
+  <li>Guest users can now check out after persistent shopping cart has been disabled. Previously, Magento displayed this error: <code class="language-plaintext highlighter-rouge">No cart with such entityId=0</code>.</li>
+</ul>
+
+<!--- MC-17137  -->
+
+<ul>
+  <li>Magento no longer creates a persistent cart session for logged-in users when the persistent cart feature has been disabled. Previously, Magento did not empty shopping carts for users when the user logged out.</li>
+</ul>
+
+<h3 id="sales-rule">Sales Rule</h3>
+
+<!--- MC-18290  -->
+
+<ul>
+  <li><strong>Select All</strong> on the coupon list of the Manage Coupon Codes page now works as expected.</li>
+</ul>
+
+<h3 id="shipping">Shipping</h3>
+
+<!--- MC-18551  -->
+
+<ul>
+  <li>Shipping notification emails sent to customers now contain a link to order tracking.</li>
+</ul>
+
+<!--- MC-18534  -->
+
+<ul>
+  <li>Magento now displays the correct cost for shipping in the shopping cart when you return to the cart from the checkout page for an order being shipped to multiple addresses.</li>
+</ul>
+
+<h3 id="search">Search</h3>
+
+<!--- MC-19065  -->
+
+<ul>
+  <li>Magento no longer throws an exception when search queries contain decimals.</li>
+</ul>
+
+<h3 id="url-rewrite">URL rewrite</h3>
+
+<!--- MC-19199  -->
+
+<ul>
+  <li>Category-specific URL rewrites are now generated as expected when importing and assigning a product to a category.</li>
+</ul>
+
+<!--- MC-18790  -->
+
+<ul>
+  <li>A category schedule update no longer unchecks the <strong>Use default value</strong> setting on the URL key for the store view.</li>
+</ul>
+
+<h3 id="wishlist">Wishlist</h3>
+
+<!--- MC-18801  -->
+
+<ul>
+  <li>Wishlists now accurately reflect product availability when a product has been added to a wishlist and then subsequently disabled. Previously, the wishlist displayed these contradictory messages: <code class="language-plaintext highlighter-rouge">You have no items in your wish list</code> and <code class="language-plaintext highlighter-rouge">1 item in wish list</code>.</li>
+</ul>
+
+<!--- MC-18287  -->
+
+<ul>
+  <li>Products that are deleted from a wishlist from the Admin are now deleted from the storefront wishlist.</li>
+</ul>
+
+<h3 id="installation-and-upgrade-instructions">Installation and upgrade instructions</h3>
+
+<p>See <a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">How to get the Magento software</a> for complete installation and upgrade information.</p>
+
+<h2 id="migration-toolkits">Migration toolkits</h2>
+
+<p>The Data Migration Tool helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see <a href="https://devdocs.magento.com/guides/v2.3/migration/migration-tool-install.html">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool">Magento Data Migration repository</a>.</p>
+
+<p>The <a href="https://github.com/magento/code-migration">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.2.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2020-01-27">
+      Jan 27th, 2020
+    </time>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

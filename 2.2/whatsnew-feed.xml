@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    
+        
+    <title>Whats New on Devdocs</title>
+    <description>This page contains recent changes that we think you'd like to know about.
+We exclude from this list proofreading, spelling checks, and all minor updates.
+</description>
+    <link href="https://magento.github.io//devdocs/2.2/whats-new.html"/>
+    <updated>Mon, 27 Jan 2020 21:17:38 -0600</updated>
+    <lastBuildDate>Wed, 12 Apr 2023 15:18:05 -0500</lastBuildDate>
+    <generator>Jekyll v4.3.2</generator>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Fri, 17 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6223"/>
+                <summary>&lt;p&gt;Added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@method&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@link&lt;/code&gt; information to &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/coding-standards/docblock-standard-general.html&quot;&gt;Coding Standards&lt;/a&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Technical changes</title>
+                <updated>Thu, 09 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6353"/>
+                <summary>&lt;p&gt;Updated the &lt;a href=&quot;https://devdocs.magento.com/cloud/architecture/pro-architecture.html#pro-cluster-scaling&quot;&gt;Pro architecture topic&lt;/a&gt; topic in the &lt;em&gt;Cloud Guide&lt;/em&gt; to include information about scaling the architecture.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Technical changes</title>
+                <updated>Thu, 09 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6358"/>
+                <summary>&lt;p&gt;Added the ‘Set body attributes’ section to the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/layouts/xml-manage.html&quot;&gt;Common layout customization tasks&lt;/a&gt; topic in the &lt;em&gt;Frontend Developer Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Tue, 07 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6350"/>
+                <summary>&lt;p&gt;Added a new section about PHPStan to the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/test/testing.html&quot;&gt;Magento Testing Guide&lt;/a&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Tue, 07 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6224"/>
+                <summary>&lt;p&gt;Added additional information and an example code snippet for each node in the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/config-guide/prod/config-reference-configphp.html&quot;&gt;config.php reference&lt;/a&gt; topic in the &lt;em&gt;Configuration Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>New topic</title>
+                <updated>Tue, 07 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6119"/>
+                <summary>&lt;p&gt;Added a topic to the &lt;em&gt;Cloud Guide&lt;/em&gt; describing the new &lt;a href=&quot;https://devdocs.magento.com/cloud/architecture/scaled-architecture.html&quot;&gt;Scaled architecture&lt;/a&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Fri, 03 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6291"/>
+                <summary>&lt;p&gt;Added a new section about &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/css-guide/css_quick_guide_approach.html&quot;&gt;extending module styles&lt;/a&gt; to the &lt;em&gt;Frontend Developer Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Thu, 02 Jan 2020 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6184"/>
+                <summary>&lt;p&gt;Added &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/extension-dev-guide/prepare/prepare_file-str.html&quot;&gt;clarification&lt;/a&gt; about required component files to the &lt;em&gt;Extension Developer Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>New topic</title>
+                <updated>Thu, 19 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6191"/>
+                <summary>&lt;p&gt;Created a new &lt;a href=&quot;https://devdocs.magento.com/compliance/industry-compliance.html&quot;&gt;Compliance&lt;/a&gt; section and added information about &lt;a href=&quot;https://devdocs.magento.com/compliance/privacy/ccpa.html&quot;&gt;CCPA&lt;/a&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>New topic</title>
+                <updated>Thu, 19 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6226"/>
+                <summary>&lt;p&gt;Added a new &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/validations/form-validation.html&quot;&gt;Form Validation&lt;/a&gt; topic to the &lt;em&gt;Frontend Developer Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>New topic</title>
+                <updated>Thu, 19 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6233"/>
+                <summary>&lt;p&gt;Added a new topic about using the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/ui_comp_guide/components/ui-checkbox-toggle-notice.html&quot;&gt;CheckboxToggleNotice&lt;/a&gt; UI component.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Tue, 17 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6142"/>
+                <summary>&lt;p&gt;Added substantial new information about plugin execution order in the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/extension-dev-guide/plugins.html&quot;&gt;Plugins (Interceptors)&lt;/a&gt; topic in the &lt;em&gt;Extension Developer Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Mon, 16 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6209"/>
+                <summary>&lt;p&gt;Added the “Reset indexer” section to the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html&quot;&gt;Manage the indexers&lt;/a&gt; topic in the &lt;em&gt;Configuration Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Technical changes</title>
+                <updated>Thu, 12 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6192"/>
+                <summary>&lt;p&gt;Added instructions for configuring the PHP APCu extension to the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/performance-best-practices/software.html&quot;&gt;Software recommendations&lt;/a&gt; and &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/performance-best-practices/deployment-flow.html&quot;&gt;Deployment flow&lt;/a&gt; topics in the &lt;em&gt;Performance Best Practices Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Thu, 12 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6167"/>
+                <summary>&lt;p&gt;Added reference information to the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/config-guide/prod/config-reference-envphp.html&quot;&gt;env.php reference&lt;/a&gt; topic in the &lt;em&gt;Configuration Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Technical changes</title>
+                <updated>Thu, 05 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6135"/>
+                <summary>&lt;p&gt;Updated the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/contributor-guide/contributing.html&quot;&gt;Contributor Guide&lt;/a&gt; with guidance about accepting contributions to the 2.4 release line only.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Thu, 05 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6086"/>
+                <summary>&lt;p&gt;Updated information about guest REST endpoints in several steps in the &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/rest/tutorials/orders/order-intro.html&quot;&gt;Order Processing Tutorial&lt;/a&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>New topic</title>
+                <updated>Thu, 05 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6115"/>
+                <summary>&lt;p&gt;Added a new topic for the &lt;a href=&quot;http://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-dynamicrows-dnd.html&quot;&gt;DynamicRowsDragAndDrop component&lt;/a&gt; in the &lt;em&gt;UI Components Guide&lt;/em&gt;.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Technical changes</title>
+                <updated>Thu, 05 Dec 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6130"/>
+                <summary>&lt;p&gt;Updated the &lt;em&gt;Cloud Guide&lt;/em&gt; with more information about the &lt;a href=&quot;https://devdocs.magento.com/cloud/live/live.html#security-scan&quot;&gt;Magento Security Scanner&lt;/a&gt;, including which IP addresses, ports, and user agent strings it uses.&lt;/p&gt;
+ </summary>
+        </entry>
+        
+        
+                
+        <entry>
+                <title>Major update</title>
+                <updated>Wed, 27 Nov 2019 00:00:00 -0600</updated>
+                <link href="https://github.com/magento/devdocs/pull/6075"/>
+                <summary>&lt;p&gt;Added the following sections to the &lt;em&gt;Cloud Guide&lt;/em&gt; with information about using Adobe-generated alert policies:&lt;br /&gt;- &lt;a href=&quot;https://devdocs.magento.com/cloud/project/new-relic.html#monitor-performance-with-alert-policies&quot;&gt;New Relic &amp;gt; Monitor performance with New Relic alert policies&lt;/a&gt;&lt;br /&gt;- &lt;a href=&quot;https://devdocs.magento.com/cloud/project/monitor-performance.html&quot;&gt;Monitor performance&lt;/a&gt;&lt;/p&gt;
+ </summary>
+        </entry>
+        
+</feed>

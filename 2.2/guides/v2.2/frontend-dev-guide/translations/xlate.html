@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Translations overview | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Frontend Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/conventions.html">Conventional notations used in this Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/cache_for_frontdevs.html">Magento cache overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/theme-best-practice.html">Theme development best practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-general.html">Themes</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-overview.html">Themes overview</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-install.html">Install a third-party storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-uninstall.html">Uninstall a storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/admin_theme_create.html">Create an Admin theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/admin_theme_apply.html">Apply an Admin theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-create.html">Create a new storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-apply.html">Apply and configure a storefront theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/debug-theme.html">Locate templates, layouts, and styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-structure.html">Magento theme structure</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-inherit.html">Theme inheritance</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/favicon.html">Adding custom favicons</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-images.html">Configure theme properties</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/product-video.html">Configure product video</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/js-bundling.html">JavaScript Bundling</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-overview.html">Layout</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html">Layout instructions</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-types.html">Layout file types</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/product-layouts.html">Product layouts</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-extend.html">Extend a layout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-override.html">Override a layout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/xml-manage.html">Common layout customization tasks</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/layouts/layout-practice.html">Customizing layout illustration</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-overview.html">Templates</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-override.html">Templates basic concepts</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-walkthrough.html">Templates customization walkthrough</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-sample.html">Templates customization sample</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/templates/template-email.html">Email templates</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-overview.html">Cascading style sheets (CSS)</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-themes.html">Include CSS</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html">CSS and LESS preprocessing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css_debug.html">Compile LESS using Grunt</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-jquery.html">Using jQuery UI styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-practice.html">Customizing styles illustration</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/using-fonts.html">Using custom fonts</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/css-critical-path.html">CSS critical path</a></li><li class="" role="menuitem"><span>Using custom CSS preprocessor</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/custom_preprocess.html">Add custom CSS preprocessor</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-topics/gulp-sass.html">Use Sass preprocessor and Gulp task runner</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_overview.html">Quick start guide to styles</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_approach.html">Simple ways to customize a theme's styles</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_mode.html">Simple style changes with client-side LESS compilation vs. server-side</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_overview.html">How to Make Your Theme Responsive and Mobile</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_css.html">CSS in responsive design</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_js.html">JavaScript in Magento responsive design</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_mobile.html">Create a responsive mobile theme based on a default theme</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_practice.html">Customizing RWD illustration</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd-breakpoints.html">Add a custom breakpoint</a></li></ul></li><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/xlate.html">Translations</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/theme_dictionary.html">Use translation dictionary to customize strings</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/translate_theory.html">Translate theme strings</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/translate_practice.html">Example theme translation dictionary</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/validations/form-validation.html">Form validation</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/tools/tools_overview.html">Tools</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/tools/using_grunt.html">Using Grunt for Magento tasks</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+
+
+
+
+
+<h1 class="page-heading">Translations overview</h1>
+</section>
+
+			<p>The Magento application enables you to localize your store for multiple regions and markets. We improved the localization and customization of Magento instances by making translation dictionaries easier to update and by maintaining a reduced amount of code coupling and duplication.</p>
+
+<p>Also, we accept <a href="#translations-project">Community Engineering contributions</a> using CrowdIn for translations. The project may include package creation and further support using the contributed translations.</p>
+
+<h2 id="translate_terms">Translations terms</h2>
+
+<p>A <em>translation dictionary</em> is a comma-separated value (.csv) file with at least two columns: the original phrase in the <code class="language-plaintext highlighter-rouge">en_US</code> locale and a translation of that phrase in an another locale. Sample translation from English (<code class="language-plaintext highlighter-rouge">en_US</code>) to German (<code class="language-plaintext highlighter-rouge">de_DE</code>):</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>"Add to Cart","Zum Warenkorb hinzufügen"
+"Add to Compare","Hinzufügen um zu vergleichen"
+"Add to Wishlist","Zum Wunschzettel hinzufügen"
+"Additional Product Info","Zusätzliche Angaben zum Produkt"
+"Address","Adresse"
+"Address %1 of %2","Adresse %1 von %2"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><em>UI text strings</em> are the text elements in the Magento Admin, including field names, instructions, notifications, and table and grid labels. When localizing Magento, you replace these strings with translation dictionary content.</p>
+
+<p>A <em>language package</em> is basically a collection of translation dictionaries for a particular language together with meta-information. You can also distribute language packages to other merchants if you wish. <a href="#m2devgde-xlate-languagepack">More information about language packages</a>.</p>
+
+<p class="bs-callout-info">To create a language package, the <code class="language-plaintext highlighter-rouge">.csv</code> file requires additional columns that specify the themes or modules in which the translations were found. For more information, see <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">Generate a translation dictionary</a>.</p>
+
+<h2 id="benefits-of-translations">Benefits of Translations</h2>
+
+<p>Localizing Magento storefronts and the Admin panel gives your company global presence for support and sales.</p>
+
+<ul>
+  <li>
+    <p>Magento supports two types of language packages:</p>
+
+    <ul>
+      <li>
+        <p>Translated Module and theme packages. Magento auto-discovers packages included in the <code class="language-plaintext highlighter-rouge">i18n</code> directory of a module or theme. When installing themes and extensions, consider checking for multiple language versions to download and use.</p>
+      </li>
+      <li>
+        <p>An entire dictionary in one directory. Use and distribute the dictionary as a standalone component (similar to modules and themes).</p>
+      </li>
+    </ul>
+  </li>
+  <li>Customize the default strings in Magento. For example, changing “Add to Wish List” to “Wish List”.</li>
+  <li>Use ready-to-use language packages prepared by other users or create your own. The <a href="https://marketplace.magento.com/catalogsearch/result/?q=language%20packs#q=language%20pack&amp;idx=m2_cloud_prod_default_products&amp;p=0&amp;nR%5Bvisibility_search%5D%5B%3D%5D%5B0%5D=1">Magento Marketplace</a> offers language packs to download and install.</li>
+  <li>Localize strings based on existing, or parent, translations using <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html#m2devgde-xlate-inheritancework">language inheritance</a>.</li>
+  <li>Customize your translations further by creating more than one version of a translation for the same language to cover dialects and different phrasing.</li>
+  <li>Contribute to <a href="#translations-project">Magento translations</a> through <a href="https://crowdin.com/project/magento-2">Magento CrowdIn project</a> with Magento Community Engineering. We encourage translation contributions and efforts in the project for future language packs.</li>
+</ul>
+
+<p>Depending on your needs, you can use the existing <a href="#m2devgde-xlate-languagepack">language packages</a>, <a href="#m2devgde-xlate-translating">translate Magento by yourself</a>, or <a href="#translations-project">contribute</a>.</p>
+
+<h2 id="programming-notes">Programming notes</h2>
+
+<ul>
+  <li>It is recommended, but not enforced, that you do not place variables inside <code class="language-plaintext highlighter-rouge">__()</code> functions or <code class="language-plaintext highlighter-rouge">new Phrase()</code> calls. The scanner that collects the phrases from the code cannot interpret and collect the value of the variable when it is in these locations. Instead, you should place the full text in the <code class="language-plaintext highlighter-rouge">__()</code> function or <code class="language-plaintext highlighter-rouge">new Phrase()</code> call. If you need to specify a variable in these cases, ensure that it is translated correctly wherever it is defined as a string literal.</li>
+  <li>The <a href="https://glossary.magento.com/language-package">language package</a> (<code class="language-plaintext highlighter-rouge">i18n</code> directory) can be saved to any directory of your <a href="https://glossary.magento.com/extension">extension</a>.</li>
+  <li>The phrases for translations are enabled in the [Phrase] class.</li>
+</ul>
+
+<h2 id="m2devgde-xlate-themes">Theme dictionaries</h2>
+
+<p>You might need to add a dictionary for the default language (en_US) in the following cases:</p>
+
+<ul>
+  <li>To replace or customize strings in the <a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/themes/theme-inherit.html">parent theme</a>. For example, use “Compare” instead of “Add to Compare”.</li>
+  <li>To prepare your <a href="https://glossary.magento.com/theme">theme</a> for localization. More merchants may use your theme if it supports localization.</li>
+</ul>
+
+<p>For an example of creating a dictionary for a theme for both cases, see <a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/translate_practice.html">Example theme translation dictionary</a>.</p>
+
+<h2 id="m2devgde-xlate-translating">Manually translate words and phrases</h2>
+
+<p>To translate names, titles, and phrases used in Magento:</p>
+
+<ol>
+  <li>Generate a dictionary of your instance using the <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">translation dictionary tool</a>. Fully review <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html">Translation dictionaries and packages</a> to understand all steps, commands, and best practices for generating the dictionary.</li>
+  <li>Translate the terms.</li>
+  <li>If desired, package your translations in a <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-pack">language package</a>.</li>
+</ol>
+
+<p class="bs-callout-info">Only one variant of translation can be used for a word or phrase in a package. Otherwise, Magento returns an error.</p>
+
+<p>Anyone can submit inline translations on the <a href="https://glossary.magento.com/storefront">storefront</a> using the Text Editor. These inline translations overwrite a dictionary and save to your database (not in an instance’s dictionary). Inline translations are theme-specific and do not apply if another theme is assigned.</p>
+
+<p>To save and reuse translations, we recommend localizing in a dictionary.</p>
+
+<h2 id="m2devgde-xlate-dictionaries">Translation dictionaries</h2>
+
+<p>Magento translates words and phrases when all of the following conditions are met:</p>
+
+<ul>
+  <li>The Magento code base has the necessary translation dictionaries for a language.</li>
+  <li>This language is configured by the store administrator to be used in specified scope (that is, storefront).</li>
+</ul>
+
+<p>The Magento application automatically assembles translation dictionaries located in the modules’ <code class="language-plaintext highlighter-rouge">i18n</code> directory into a dictionary per language. For example, Brazilian Portuguese (<code class="language-plaintext highlighter-rouge">pt_BR</code>) translation dictionaries might be located in <a href="https://glossary.magento.com/module">module</a> and theme directories similar to the following:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;Magento_Checkout_module_dir&gt;/i18n/pt_BR.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;Magento_Checkout_module_dir&gt;/&lt;theme&gt;/i18n/pt_BR.csv</code></li>
+</ul>
+
+<p class="bs-callout-info"><code class="language-plaintext highlighter-rouge">&lt;Magento_Checkout_module_dir&gt;</code> stands for the <code class="language-plaintext highlighter-rouge">Magento_Checkout</code> module directory. The location of this directory depends on the way Magento was installed. See <a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/conventions.html">Conventional notations for paths to modules and themes</a> for details.</p>
+
+<p>Assembling the preceding <code class="language-plaintext highlighter-rouge">pt_BR.csv</code> files across all modules and the current theme results in a Portuguese translation of the entire application area (storefront or the Admin).</p>
+
+<h3 id="m2devgde-xlate-generatortool">Dictionary generator tool</h3>
+
+<p>You can generate a translation dictionary to use by itself (for example, to translate words and phrases in a custom module) or for use by a <a href="https://glossary.magento.com/language-package">language package</a>. See <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">dictionary generator tool</a>.</p>
+
+<h2 id="m2devgde-xlate-languagepack">Language packages</h2>
+
+<p>Magento enables you to create the following types of language packages:</p>
+
+<ul>
+  <li>
+    <p>A set of <code class="language-plaintext highlighter-rouge">.csv</code> files for modules and themes. These packages files are intended to be deployed in modules. For example:</p>
+
+    <pre><code class="language-tree">__/app
+ |__/code
+ | |__/Magento
+ |   |__/Catalog
+ |   | |__/i18n
+ |   |   |-- pt_BR.csv
+ |   |__/Checkout
+ |   | |__/i18n
+ |   |   |-- pt_BR.csv
+ |   |__/Customer
+ |     |__/i18n
+ |       |-- pt_BR.csv
+ |__/design
+   |__/frontend
+     |__/&lt;Vendor&gt;
+       |__/&lt;theme&gt;
+    |__/i18n
+      |-- pt_BR.csv
+</code></pre>
+  </li>
+  <li>
+    <p>Language packages that contain a entire dictionary in one directory.</p>
+  </li>
+</ul>
+
+<p>You can distribute this language package as a standalone component (similar to modules and themes). Interestingly, it violates Magento’s modularity principles on purpose; that is, so that a system integrator can translate variations provided by extensions.</p>
+
+<p>In addition to the <code class="language-plaintext highlighter-rouge">.csv</code> file that contains the language dictionary, the language package contains meta-information:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">composer.json</code> that contains any dependencies for the language package and a mapping to its defined <a href="https://glossary.magento.com/locale">locale</a>. <a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/package/package_module.html#sample-composerjson-file">Sample composer.json</a>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">language.xml</code>, in which you declare a language package. <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-example2">Sample language.xml</a>.</p>
+  </li>
+</ul>
+
+<h2 id="translations-project">Community Engineering Translations project</h2>
+
+<p>Community Engineering accepts translation contributions through the <a href="https://crowdin.com/project/magento-2">Magento CrowdIn project</a> to localize all UI strings. Various Meet Magento and Contribution Day events include developers contributing translations.</p>
+
+<ol>
+  <li>Create a <a href="https://crowdin.com/join">CrowdIn account</a> and join the <a href="https://crowdin.com/project/magento-2">Magento CrowdIn project</a>.</li>
+  <li>Browse and select a language. A percentage displays tracking translation progress overall and per section of the Magento Admin.</li>
+  <li>Expand and locate an area of UI text strings to translate. Strings marked red need a translation, and marked green have existing translations.</li>
+  <li>Enter or review translations for strings as described in the <a href="https://support.crowdin.com/online-editor">CrowdIn knowledge base</a>.</li>
+</ol>
+
+<p>Magento admins will review and approve translations as available. The project may include package creation and further support using the contributed and approved translations.</p>
+
+<p>If you need help understanding the context or meaning of a UI string, or have questions about the project, chat with us in the Community Engineering <a href="https://magentocommeng.slack.com/messages/CD97DKBHS">Translations Slack channel</a>. To join, send a request to <a href="mailto:engcom@magento.com">engcom@magento.com</a> or <a href="https://tinyurl.com/engcom-slack">self signup</a>.</p>
+
+<h2 id="additional-information">Additional information</h2>
+
+<ul>
+  <li><a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html">Translation dictionaries and packages</a></li>
+  <li><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/theme_dictionary.html">Use translation dictionary to customize strings</a></li>
+  <li><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/translate_theory.html">Translate theme strings</a></li>
+  <li><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/translations/translate_practice.html">Example theme translation dictionary</a></li>
+  <li><a href="https://github.com/magento-l10n">Magento translations GitHub project</a></li>
+</ul>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-12-19">
+      Dec 19th, 2019
+    </time>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

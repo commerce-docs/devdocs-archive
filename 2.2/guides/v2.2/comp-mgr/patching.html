@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Applying patches | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Software Update Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Upgrade the Magento application and modules</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/prereq/prereq_compman.html">Prerequisites</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/prereq/prereq_compman-ulimit.html">Set ulimit for the web server user</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/prereq/prereq_cron.html">Set up cron for update and upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/prereq/prereq_compman-checklist.html">Update and upgrade checklist</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/marketplace/marketplace.html">Magento Marketplace example</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/module-man/compman-checklist.html">Run the Module Manager</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/module-man/compman-start.html">Start the Module Manager</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/module-man/compman-readiness.html">Step 1. Readiness check</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/module-man/compman-backup.html">Step 2. Back up the file system and database</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/module-man/modman-enable-disable.html">Enable/Disable</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-checklist.html">Run the Extension Manager</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-main-pg.html">Start the Extension Manager</a></li><li class="" role="menuitem"><span>Step 1. Readiness check</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-readiness-success.html">Readiness check success</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-readiness-fail.html">Readiness check failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-readiness-multi.html">Readiness check with multiple extension updates</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-backup.html">Step 2. Back up the file system and database</a></li><li class="" role="menuitem"><span>Step 3</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-new-purchase.html">Install</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-update.html">Extension Update</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-uninst-data.html">Remove or Keep Data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/extens-man/extensman-uninst-final.html">Step 4. Uninstall</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/upgrader/ce-ee-upgrade-start.html">Upgrade from Magento Open Source to Magento Commerce</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/cli/cli-upgrade.html">Command-line upgrade</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/cli/cli-rc1-samp.html">Upgrade with sample data</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/upgrader/upgrade-checklist.html">Run System Upgrade</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/upgrader/upgrade-start.html">Start System Upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/upgrader/upgrade-main-pg.html">Step 1. Select versions to upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/upgrader/upgrade-readiness.html">Step 2. Readiness check</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/upgrader/upgrade-backup.html">Step 3. Back up the file system and database</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/upgrader/upgrade.html">Step 4. Upgrade</a></li></ul></li><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/patching.html">Applying patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/updater/update-updater.html">Update the updater application</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/tshoot.html">Troubleshooting suggestions</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/were-sorry.html">Sorry, we can't take that action right now</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/out-of-memory.html">Out of memory errors</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/cron.html">Troubleshoot cron</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/updater.html">Troubleshoot the updater application</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/php-version.html">PHP version readiness check issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/update-fail.html">Roll back after update failure</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/component-depend.html">Resolve component dependency readiness check issues</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/maint-mode.html">Maintenance mode options for upgrade</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/trouble/cman/tshoot_backup.html">Troubleshoot backups</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+
+
+
+
+
+<h1 class="page-heading">Applying patches</h1>
+</section>
+
+			<p class="bs-callout-warning">We strongly recommend that test all patches in a staging/development environment before deploying to production. We also strongly recommend that you back up your data before applying a patche. See <a href="/devdocs/2.2/guides/v2.2/install-gde/install/cli/install-cli-backup.html">Back up and roll back the file system</a>.</p>
+
+<h2 id="how-patches-work">How patches work</h2>
+
+<p>There are two types of patches:</p>
+
+<ul>
+  <li><strong>Official patches</strong>—patches that Magento publishes on the <a href="https://magento.com/security/patches">Magento Security Center</a>.</li>
+  <li><strong>Custom patches</strong>—unofficial patches that you can create from a git commit.</li>
+</ul>
+
+<p>Patch (or diff) files are text files that note:</p>
+
+<ul>
+  <li>The file(s) to be changed.</li>
+  <li>The line number to begin the change and the number of lines to be changed.</li>
+  <li>The new code to swap in.</li>
+</ul>
+
+<p>When the <a href="https://en.wikipedia.org/wiki/Patch_(Unix)">patch</a> program is run, this file is read in and the specified changes are made to the file(s).</p>
+
+<h2 id="official-patches">Official patches</h2>
+
+<p>You can find official Magento patches in the <a href="https://magento.com/security/patches">Magento Security Center</a>. Follow the instructions on the page to download the patch file, depending on your version and installation type.</p>
+
+<h2 id="custom-patches">Custom patches</h2>
+
+<p>Sometimes it takes a while for the Magento Engineering Team to include a bug fix made on GitHub in a Magento 2 Composer release. In the meantime, you can create a patch from GitHub and use the <a href="https://github.com/cweagans/composer-patches/"><code class="language-plaintext highlighter-rouge">cweagans/composer-patches</code></a> plugin to apply it to your Composer-based Magento 2 installation.</p>
+
+<p>There are many ways to create patch files. The example below focuses on creating a patch from a known commit.</p>
+
+<p>To create a custom patch:</p>
+
+<ol>
+  <li>Create a <code class="language-plaintext highlighter-rouge">patches/composer</code> directory in your local project.</li>
+  <li>Identify the GitHub commit or pull request to use for the patch. This example uses the <a href="https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede"><code class="language-plaintext highlighter-rouge">2d31571</code></a> commit, linked to Magento 2 GitHub issue <a href="https://github.com/magento/magento2/issues/6474">#6474</a>.</li>
+  <li>Append the <code class="language-plaintext highlighter-rouge">.patch</code> or the <code class="language-plaintext highlighter-rouge">.diff</code> extensions to the commit URL. Use <code class="language-plaintext highlighter-rouge">.diff</code> for a smaller file size. For example: <a href="https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff">https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff</a></li>
+  <li>Save the page as a file in the <code class="language-plaintext highlighter-rouge">patches/composer</code> directory. For example, <code class="language-plaintext highlighter-rouge">github-issue-6474.diff</code>.</li>
+  <li>
+    <p>Edit the file and remove <code class="language-plaintext highlighter-rouge">app/code/&lt;VENDOR&gt;/&lt;PACKAGE&gt;</code> from all paths so that they are relative to the <code class="language-plaintext highlighter-rouge">vendor/&lt;VENDOR&gt;/&lt;PACKAGE&gt;</code> directory.</p>
+
+    <p class="bs-callout-info">Text editors that automatically remove trailing whitespace or add new lines can break the patch. Use a simple text editor to make these changes.</p>
+  </li>
+</ol>
+
+<p>The following example shows the previously mentioned diff file after removing all instances of <code class="language-plaintext highlighter-rouge">app/code/Magento/Payment</code>:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="gh">diff --git a/view/frontend/web/js/view/payment/iframe.js b/view/frontend/web/js/view/payment/iframe.js
+index c8a6fef58d31..7d01c195791e 100644
+</span><span class="gd">--- a/view/frontend/web/js/view/payment/iframe.js
+</span><span class="gi">+++ b/view/frontend/web/js/view/payment/iframe.js
+</span><span class="p">@@ -154,6 +154,7 @@</span> define(
+              */
+              clearTimeout: function () {
+                  clearTimeout(this.timeoutId);
+                  this.fail();
+                  return this;
+            },
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="applying-patches">Applying patches</h2>
+
+<p>There are two ways to apply patches:</p>
+
+<ul>
+  <li>Using the command line</li>
+  <li>Using Composer</li>
+</ul>
+
+<h3 id="command-line">Command line</h3>
+
+<ol>
+  <li>Upload the local file into the <code class="language-plaintext highlighter-rouge">&lt;Magento_root&gt;</code> on the server using FTP, SFTP, SSH or your normal transport method.</li>
+  <li>Login to the server as the <a href="/devdocs/2.2/guides/v2.2/config-guide/cli/config-cli.html#config-install-cli-first">Magento admin user</a> and verify the file is in the correct directory.</li>
+  <li>
+    <p>In the command line interface, run the following commands according to the patch extension:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>patch &lt; patch_file_name.patch
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>The command assumes the file to be patched is located relative to the patch file.</p>
+
+    <p class="bs-callout-info">If the command line shows: <code class="language-plaintext highlighter-rouge">File to patch:</code>, it means it cannot locate the intended file, even if the path seems correct. In the box displayed in the command line terminal, the first line shows the file to be patched. Copy the file path and paste it into the <code class="language-plaintext highlighter-rouge">File to patch:</code> prompt and press <code class="language-plaintext highlighter-rouge">Enter</code> and the patch should complete.</p>
+  </li>
+  <li>For the changes to be reflected, refresh the cache in the Admin under <strong>System</strong> &gt; Tools &gt; <strong>Cache Management</strong>.</li>
+</ol>
+
+<p>Alternatively, the patch can be applied locally with the same command, then committed and pushed normally.</p>
+
+<h3 id="composer">Composer</h3>
+
+<p class="bs-callout-warning">Always perform comprehensive testing before deploying any custom patch.</p>
+
+<p>To apply a custom patch using Composer:</p>
+
+<ol>
+  <li>Open your command line application and navigate to your project directory.</li>
+  <li>
+    <p>Add the <code class="language-plaintext highlighter-rouge">cweagans/composer-patches</code> plugin to the <code class="language-plaintext highlighter-rouge">composer.json</code> file.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer require cweagans/composer-patches
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Edit the <code class="language-plaintext highlighter-rouge">composer.json</code> file and add the following section to specify:
+    <ul>
+      <li><strong>Module:</strong> <em>"magento/module-payment"</em></li>
+      <li><strong>Title:</strong> <em>"MAGETWO-56934: Checkout page freezes when ordering with Authorize.net with invalid credit card"</em></li>
+      <li><strong>Path to patch:</strong> <em>"patches/composer/github-issue-6474.diff"</em></li>
+    </ul>
+
+    <p>For example:</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="w">  </span><span class="nl">"extra"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"composer-exit-on-patch-failure"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"patches"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"magento/module-payment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"MAGETWO-56934: Checkout page freezes when ordering with Authorize.net with invalid credit card"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patches/composer/github-issue-6474.diff"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>If a patch affects multiple modules, you must create multiple patch files targeting multiple modules.</p>
+  </li>
+  <li>
+    <p>Apply the patch. Use the <code class="language-plaintext highlighter-rouge">-v</code> option only if you want to see debugging information.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer <span class="nt">-v</span> <span class="nb">install</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Update the <code class="language-plaintext highlighter-rouge">composer.lock</code> file. The lock file tracks which patches have been applied to each Composer package in an object.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>composer update <span class="nt">--lock</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<!-- Link Definitions -->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-12-03">
+      Dec 3rd, 2019
+    </time>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

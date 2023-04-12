@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archived Magento 2.2 Developer Documentation</title>
+    <description>Archived Magento 2 Developer Documentation.</description>
+    <link>https://magento.github.io/</link>
+    <atom:link href="https://magento.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 12 Apr 2023 15:18:05 -0500</pubDate>
+    <lastBuildDate>Wed, 12 Apr 2023 15:18:05 -0500</lastBuildDate>
+    <generator>Jekyll v4.3.2</generator>
+    
+    
+        <item>
+          <title>Deploy variables</title>
+          <description>The following _deploy_ variables control actions in the deploy phase and can inherit and override values from the [Global variables]({{ site.baseurl }}/cloud/env/variables-global.html). Insert these variables in the `deploy` stage of the `.magento.env.yaml` file: ```yaml stage: deploy: DEPLOY_VARIABLE_NAME: value ``` {% include cloud/customize-build-deploy.md %} ### `CACHE_CONFIGURATION` - **Default**—_Not set_ - **Version**—Magento 2.1.4 and later Configure Redis page and default caching. When setting the `cm_cache_backend_redis` parameter, you must specify the `server`, `port`, and `database` options. ```yaml stage:...</description>
+          <link>https://magento.github.io//cloud/env/variables-deploy.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Global variables</title>
+          <description>The following _global_ variables control actions across each phase: build, deploy, and post-deploy. Because global variables impact every phase, you must set them in the `global` stage of the `.magento.env.yaml` file: ```yaml stage: global: GLOBAL_VARIABLE_NAME: value ``` {% include cloud/customize-build-deploy.md %} ### `MIN_LOGGING_LEVEL` - **Default**—_Not set_ - **Version**—Magento 2.1.4 and later Overrides the minimum logging level for all output streams without making changes to the code. This helps when troubleshooting problems with deployment. For example,...</description>
+          <link>https://magento.github.io//cloud/env/variables-global.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Zero downtime deployment</title>
+          <description>{{site.data.var.ece}} runs Magento in [_maintenance_ mode](https://devdocs.magento.com/guides/v2.3/config-guide/bootstrap/magento-modes.html#maintenance-mode) during the deploy phase, which takes your site offline until the deployment is complete. The length of time your Production site is in maintenance mode depends on the size of the site, the number of changes applied during the deployment, and the configuration for static content deployment. It is possible to configure your project so that it deploys with a **zero** downtime effect. During the deployment process, all connections...</description>
+          <link>https://magento.github.io//cloud/deploy/reduce-downtime.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Incorrect credentials</title>
+          <description>## Incorrect credentials This topic discusses how to resolve issues with incorrect credentials in your `auth.json`. You might have entered {{site.data.var.ce}} credentials or shared keys for {{site.data.var.ee}}. ### Symptom The most common symptom of incorrect credentials is a deployment failure with an authentication error similar to the following: ```text The 'https://repo.magento.com/archives/magento/magento-cloud-configuration/magento-magento-cloud-configuration-1.0.3.0.zip' URL could not be accessed: HTTP/1.1 403 Forbidden ``` To see the error log: 1. [Log in to your project]({{ site.baseurl }}/cloud/project/project-webint-basic.html#project-access). 1. Click...</description>
+          <link>https://magento.github.io//cloud/trouble/trouble_ce-creds.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Troubleshoot deployment</title>
+          <description>This topic discusses how to recover if you deployed the Magento application with the incorrect [Magento authentication keys](https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html). For example, you might have used the keys for another account or you might have used {{site.data.var.ce}} keys instead of {{site.data.var.ee}} keys. If you used the incorrect keys, deployment fails. To recover, you must clone the project, add the correct keys to `auth.json`, and push the change to the master branch. {:.bs-callout-info} In this section, we assume...</description>
+          <link>https://magento.github.io//cloud/trouble/troubleshoot-deployment.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Inventory Management</title>
+          <description>{{site.data.var.im}} modules provide all inventory features and options for Single and Multi Source merchants to manage product quantities and stock for sales channels. These features are available in 2.3.x {{site.data.var.ce}}, {{site.data.var.ee}}, and {{site.data.var.ece}}. These features and extensions were developed as part of the [Magento Inventory (MSI) project](https://github.com/magento/inventory) through the Magento Community Engineering program. {{site.data.var.im}} installs with Magento {{site.data.var.ce}} and {{site.data.var.ee}} with all features enabled by default. No additional steps are required for enabling these inventory...</description>
+          <link>https://magento.github.io//extensions/inventory-management/</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Set up multiple websites or stores</title>
+          <description>You can configure {{site.data.var.ee}} to have multiple websites or stores, such as an English store, a French store, and a German store. See [Understanding websites, stores, and store views]({{ site.baseurl }}/cloud/configure/configure-best-practices.html#sites). The process to set up multiple stores depends on whether you choose to use unique domains or share the same domain. Multiple stores with unique domains: ```terminal https://first.store.com/ https://second.store.com/ ``` {:.no-copy} Multiple stores with the same domain: ```terminal https://store.com/first/ https://store.com/second/ ``` {:.no-copy} {:.bs-callout-tip} To...</description>
+          <link>https://magento.github.io//cloud/project/project-multi-sites.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Install B2B</title>
+          <description>{:.bs-callout-warning} The {{site.data.var.b2b}} extension is only available for {{site.data.var.ee}} v2.2.0 or later. You must install it after installing {{site.data.var.ee}}. 1. Change to your Magento installation directory and enter the following command to update your `composer.json` file and install the {{site.data.var.b2b}} extension: ```bash composer require magento/extension-b2b ``` If you get an error when trying to install the B2B module for a local instance of {{site.data.var.ee}} for example: ```terminal [InvalidArgumentException] Could not find a matching version of...</description>
+          <link>https://magento.github.io//extensions/b2b/</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Magento</title>
+          <description>&lt;p class=&quot;ref-header&quot;&gt;Previous step&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.2/cloud/before/before-setup-env-2_clone.html&quot;&gt;Clone and branch the project&lt;/a&gt;&lt;/p&gt; &lt;p&gt;With your workspace prepared, install Magento on your local to verify custom code, extensions, and more. This section includes the installation prep, options, and post-installation configuration you should complete.&lt;/p&gt; &lt;h2 id=&quot;prepare&quot;&gt;Prepare to install Magento&lt;/h2&gt; &lt;p&gt;To customize the Magento software on your local workstation, prepare the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Hostname or IP address of your machine&lt;/li&gt; &lt;li&gt;Admin username, password, and URL created earlier&lt;/li&gt; &lt;li&gt;Magento authentication keys for installing...</description>
+          <link>https://magento.github.io//cloud/before/before-setup-env-install.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction</title>
+          <description>Magento extensions allow you to add custom features, functionality, services, and integrations to your Magento Admin and storefront. Extension developers package and install custom code as extensions, modules, components, addons, etc. You can design and develop extensions or purchase and install extensions from the Magento Marketplace or third-party providers. The [Magento Marketplace](https://marketplace.magento.com/) is the global eCommerce resource for applications and services that expand Magento solutions with powerful new features and functionality. Marketplace reviews and verifies...</description>
+          <link>https://magento.github.io//extensions/</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Log locations</title>
+          <description>Logs are useful for troubleshooting problems related to {{site.data.var.ece}} [build and deploy hooks][hook]. {:.bs-callout-info} Magento-specific logs are in the `&lt;magento-root-dir&gt;/var/` directory. See [Magento Logging][configlog] in the _Configuration guide_. {:.bs-callout-tip} You can [set up log-based Slack and email notifications][slacklog] when configuring your Cloud environment. ## Viewing logs There are three ways to view logs: file system, project web UI, or the `magento-cloud` CLI. - **Log directories**—The `/var/log` system directory contains logs for all environments. The `var/log/`...</description>
+          <link>https://magento.github.io//cloud/project/log-locations.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Community Resources</title>
+          <description>## Magento DevBlog The [Magento DevBlog][0] is a great resource for news about Magento, new community resources (articles, tutorials, etc.), events and other Magento-related items. ## Best practices See our collection of best and leading practices, common solutions, and more in the [Community contributed best practices]({{ site.baseurl }}/community/resources/best-practices.html) guide. If you have excellent best practices, tips and tricks, and work-arounds, feel free to [contribute][]! ## Community Engineering Slack To connect with Magento and the Community,...</description>
+          <link>https://magento.github.io//community/resources/resources.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Community contributed best practices</title>
+          <description>&lt;p&gt;This section covers a broad scope of Community contributed best and leading practices, common solutions, and recommendations for Magento.&lt;/p&gt; &lt;p&gt;Topics and areas include:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Project setup&lt;/li&gt; &lt;li&gt;Theme development&lt;/li&gt; &lt;li&gt;Composer use and repos&lt;/li&gt; &lt;li&gt;Local environment options&lt;/li&gt; &lt;li&gt;And much more&lt;/li&gt; &lt;/ul&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;Magento does not officially endorse these best practices. They are available in DevDocs because the content has been well received within the Magento community.&lt;/p&gt; &lt;h2 id=&quot;magento-approved-best-practices&quot;&gt;Magento approved best practices&lt;/h2&gt; &lt;p&gt;The DevDocs and Magento teams verified...</description>
+          <link>https://magento.github.io//community/resources/best-practices.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Set up cron jobs</title>
+          <description>Magento uses cron jobs for numerous features to schedule activities. This topic provides information for configuring crons for {{site.data.var.ece}} projects using the [`.magento.app.yaml`]({{ site.baseurl }}/cloud/project/project-conf-files_magento-app.html) file. The `.magento.app.yaml` file specifies the configuration for the default Magento cron jobs as well as any custom crons that you add to the following environments. - Starter plan–All environments including `Master` - Pro plan–Integration, Staging, and Production environments including `Master` The `.magento.app.yaml` file includes the following default crons configuration,...</description>
+          <link>https://magento.github.io//cloud/configure/setup-cron-jobs.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Set up Redis service</title>
+          <description>[Redis](http://redis.io) is an optional, backend cache solution that replaces the Zend Framework [Zend_Cache_Backend_File](http://framework.zend.com/apidoc/1.0/Zend_Cache/Backend/Zend_Cache_Backend_File.html), which is used in Magento 2 by default. We support Redis versions 3.2 and 5.0. See [Configure Redis](https://devdocs.magento.com/guides/v2.3/config-guide/redis/config-redis.html). {% include cloud/service-config-integration-starter.md %} {:.procedure} To enable Redis: 1. Add the required name and type to the `.magento/services.yaml` file. ```yaml myredis: type: redis:&lt;version&gt; ``` To provide your own Redis configuration, add a `core_config` key in your `.magento/services.yaml` file: ```yaml cache: type: redis:&lt;version&gt; ``` 1....</description>
+          <link>https://magento.github.io//cloud/project/project-conf-files_services-redis.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>General Data Protection Regulation</title>
+          <description>{: .bs-callout-info} This is one in a series of topics to help Magento merchants and developers understand the implications of the General Data Protection Regulation (GDPR). The information is intended for informational purposes only and should not be construed as legal advice. Consult with your legal counsel to determine whether and how your business should comply with any legal obligations. The European Union (EU) enacted [General Data Protection Regulation](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR) to give its citizens more...</description>
+          <link>https://magento.github.io//compliance/privacy/gdpr.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento Commerce Cloud package updates</title>
+          <description>The release information in this section relates to [Composer packages]({{ site.baseurl }}/cloud/reference/cloud-composer.html) used by {{site.data.var.ece}} only. For general release information, refer to the main Magento [v2.3 Release Notes](https://devdocs.magento.com/guides/v2.3/release-notes/bk-release-notes.html) page.
+
+Use this section to learn about updates to the following Composer packages:
+
+-  `vendor/magento/magento-cloud-metapackage`
+-  [`vendor/magento/ece-patches`]({{ site.baseurl }}/cloud/composer-packages/ece-patches.html)
+-  [`vendor/magento/ece-tools`]({{ site.baseurl }}/cloud/release-notes/cloud-tools.html)
+-  `vendor/magento/product-enterprise-edition`
+
+{:.bs-callout-info}
+You must [update these packages]({{ site.baseurl }}/cloud/project/project-patch.html) to get new features and fixes.
+</description>
+          <link>https://magento.github.io//cloud/composer-packages/patch-notes.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Cloud deployment process</title>
+          <description>&lt;p&gt;The deployment process begins when you perform a merge, push, or synchronization of your environment, or when you trigger a &lt;a href=&quot;/devdocs/2.2/cloud/reference/cli-ref-topic.html#git-commands&quot;&gt;manual redeployment&lt;/a&gt;. The deployment process takes time, but there are ways to optimize deployment that depend on whether you are developing and testing or working with a live site. Most notably, you can control the &lt;a href=&quot;/devdocs/2.2/cloud/deploy/static-content-deployment.html&quot;&gt;static content deployment&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;There are three, distinct phases of the deployment process: build, deploy, and post-deploy. Each phase...</description>
+          <link>https://magento.github.io//cloud/deploy/cloud-deployment-process.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>General CLI installation</title>
+          <description>Code that extends or customizes Magento behavior is called an extension. You can optionally package and distribute extensions on the [Magento Marketplace](https://marketplace.magento.com) or another Magento extension distribution system. Extensions include: - Modules (extend Magento capabilities) - Themes (change the look and feel of your [storefront](https://glossary.magento.com/storefront) and Admin) - Language packages (localize the storefront and Admin) {:.bs-callout-tip} This topic explains how to use the command line to install extensions you purchase from the Magento Marketplace. You...</description>
+          <link>https://magento.github.io//extensions/install/</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title></title>
+          <description>&lt;section class=&quot;home-features&quot;&gt; &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;feature&quot;&gt; &lt;img src=&quot;{{ site.baseurl }}/i/icons/install.svg&quot; alt=&quot;&quot; /&gt; &lt;h2 class=&quot;title&quot;&gt;Setup&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/system-requirements.html&quot;&gt;System Requirements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/bk-install-guide.html&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/config-guide/bk-config-guide.html&quot;&gt;Configuration Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/cloud/bk-cloud.html&quot;&gt;{{site.data.var.ece}}&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;img src=&quot;{{ site.baseurl }}/i/icons/backend.svg&quot; alt=&quot;&quot; /&gt; &lt;h2 class=&quot;title&quot;&gt;Backend Development&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html&quot;&gt;PHP Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/b2b/bk-b2b.html&quot;&gt;B2B Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/bk-coding-standards.html&quot;&gt;Coding Standards&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/technical-guidelines.html&quot;&gt;Technical Guidelines&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;img...</description>
+          <link>https://magento.github.io//</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Go live and launch</title>
+          <description>When you have completed deployment and testing in Integration and Staging environments, you can start going live. First, you should complete all development and testing prior to touching Production. Feel ready to launch? Review our checklists, best practices, and final steps to go live. If you checked this information prior to deploying and testing in Staging, consider reviewing the benefits of testing in Staging first in the next section. Staging is a near-production environment running...</description>
+          <link>https://magento.github.io//cloud/live/live.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Import existing code into a project</title>
+          <description>You can create a {{site.data.var.ece}} project from a blank template or by importing existing code. We recommend starting with a blank template first, and then importing existing Magento code on top of it. ## Prerequisites for importing code {#prereqs} Before you begin, do the following: - Add the existing {{site.data.var.ee}} code to a Git repository. We recommend using [GitHub]({{ site.baseurl }}/cloud/integrations/github-integration.html). - Set up your [local development environment]({{ site.baseurl }}/cloud/setup/first-time-setup.html). - Gather required information: -...</description>
+          <link>https://magento.github.io//cloud/setup/first-time-setup-import-first-steps.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Configuration management for store settings</title>
+          <description>Configuration management, or [Pipeline Deployment](https://devdocs.magento.com/guides/v2.3/config-guide/deployment/pipeline/), provides a way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. Add this file to your commit and push it across all of your environments to keep consistent settings and reduce downtime. It provides the following benefits: * Better way to [manage and synchronize](#cloud-confman-over) the configuration across your Integration, Staging, and Production environments. * Less time...</description>
+          <link>https://magento.github.io//cloud/live/sens-data-over.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Example of managing system-specific settings</title>
+          <description>Configuration management exports your configurations to a file for pushing across your environments. This file, `config.php`, keeps your configurations consistent across all environments, decreases downtime by moving static deploy to build, and much more. This information details an example for configuring your settings, exporting the file, and deploying it. This example shows how to use the [recommended procedure]({{ site.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm) for managing the configuration: 1. Enter your configurations in your Integration environment Admin panel. 1....</description>
+          <link>https://magento.github.io//cloud/live/sens-data-initial.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Set up RabbitMQ service</title>
+          <description>The [Message Queue Framework (MQF)](https://devdocs.magento.com/guides/v2.3/config-guide/mq/rabbitmq-overview.html) is a system within {{site.data.var.ee}} that allows a [module](https://glossary.magento.com/module) to publish messages to queues. It also defines the consumers that will receive the messages asynchronously. The MQF uses [RabbitMQ](http://www.rabbitmq.com) as the messaging broker, which provides a scalable platform for sending and receiving messages. It also includes a mechanism for storing undelivered messages. RabbitMQ is based on the Advanced Message Queuing Protocol (AMQP) 0.9.1 specification. {:.bs-callout-warning} If you prefer using an...</description>
+          <link>https://magento.github.io//cloud/project/project-conf-files_services-rabbit.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Build and deploy on local</title>
+          <description>Before pushing your code to your [Starter]({{ site.baseurl }}/cloud/basic-information/starter-architecture.html) or [Pro]({{ site.baseurl }}/cloud/architecture/pro-architecture.html) Staging and Production environments, you should fully build on your local. Fully testing builds and deploys along with full site testing can reduce the risk of issues or delays for your final site deployment, and expose any issues early for debugging. These tasks walk through: * Complete development on your local * Complete a full build and deploy process on your local...</description>
+          <link>https://magento.github.io//cloud/live/live-sanity-check.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title></title>
+          <description>To find individual system requirements for the Magento 2.2.x releases, see the following pages:
+
+*  [Magento 2.2.x system requirements]({{ site.baseurl }}/guides/v2.2/install-gde/system-requirements.html)</description>
+          <link>https://magento.github.io//system-requirements.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Project structure</title>
+          <description>All {{site.data.var.ece}} projects include essential files for credentials and application configuration: File | Description ------------------------- | ----------- `/.magento/routes.yaml` | Configuration file that redirects `www` to the naked domain and `php` application to serve HTTP. See [Configure environments]({{ site.baseurl }}/cloud/env/environments.html). `/.magento/services.yaml` | Configuration file that defines a MySQL instance, Redis, and ElasticSearch. See [Configure environments]({{ site.baseurl }}/cloud/env/environments.html). `/app` | The `code` folder is used for custom modules. The `design` folder is used for custom themes. See...</description>
+          <link>https://magento.github.io//cloud/project/project-start.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Prepare your existing Magento Commerce install</title>
+          <description>You need to prepare your existing {{site.data.var.ee}} implementation to import it into a new {{site.data.var.ece}} project. This includes updating and adding files, transferring media files, and migrating data. Before preparing your project and importing code, push all pending changes from your local workstation to your remote {{site.data.var.ece}} repository. When you push, the build and deploy scripts run to update code, static content, and environment services. The import preparation steps include the following: - [Prepare and...</description>
+          <link>https://magento.github.io//cloud/setup/first-time-setup-import-prepare.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Magento prerequisites</title>
+          <description>&lt;p class=&quot;ref-header&quot;&gt;Previous step&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.2/cloud/before/before-workspace.html&quot;&gt;Prepare for local environment setup&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Install the following software packages and tools on your local to prepare for Magento code development. If you already have these packages installed, check for any recommendations or notes and continue to the next step.&lt;/p&gt; &lt;p&gt;To begin, install and set up a VM on your host computer (Windows, Mac OS, Linux-based system). A VM gives you an environment to install a different Operating System, tools, software,...</description>
+          <link>https://magento.github.io//cloud/before/before-workspace-magento-prereqs.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Configure your store</title>
+          <description>&lt;p&gt;The following information walks you through the options for configuring your store on your local and in all environments. You may need to configure files and settings in your local, pushing settings with your code. For specific services, you configure settings directly in Staging and Production environments.&lt;/p&gt; &lt;p&gt;You can set up &lt;a href=&quot;/devdocs/2.2/cloud/project/project-multi-sites.html&quot;&gt;multiple websites and stores&lt;/a&gt; in your Magento instance, creating and configuring them in your local branch and deploying the settings across your environments.&lt;/p&gt;...</description>
+          <link>https://magento.github.io//cloud/configure/configuration-overview.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Install, manage, and upgrade extensions</title>
+          <description>This information includes information for [adding extensions](#install) to {{site.data.var.ece}}, [managing](#manage) enabled and disabled extensions, and [upgrading extension code](#update). When adding extensions to {{site.data.var.ece}}, you should add the code to a Git branch, test in Integration, deploy and test in Staging, before finally pushing and using in Production. Extensions include the following: * Modules to extend Magento capabilities, with options through Magento Marketplace and directly through company sites * Themes to change the look and feel...</description>
+          <link>https://magento.github.io//cloud/howtos/install-components.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Go live checklist</title>
+          <description>Before you deploy to the Production environment, download the [Go live checklist]({{ site.baseurl }}/common/pdf/magento-commerce-cloud-prelaunch-checklist.pdf), and use it with these instructions to confirm that you have completed all required configuration and testing. See an overview of the complete deployment process for Starter and Pro at [Deploy your store]({{ site.baseurl }}/cloud/live/stage-prod-live.html). ## Completely test in Production {#test} See [Test deployment]({{ site.baseurl }}/cloud/live/stage-prod-test.html) for testing all aspects of your sites, stores, and environments. These tests include verifying Fastly,...</description>
+          <link>https://magento.github.io//cloud/live/go-live-checklist.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Set up Elasticsearch service</title>
+          <description>[Elasticsearch](https://www.elastic.co) is an open source product that enables you to take data from any source, any format, and search and visualize it in real time. - Elasticsearch performs quick and advanced searches on products in the product catalog - Elasticsearch Analyzers support multiple languages - Supports stop words and synonyms - Indexing does not impact customers until the reindex operation completes {% include cloud/service-config-integration-starter.md %} {:.bs-callout-tip} Magento recommends that you always set up Elasticsearch for...</description>
+          <link>https://magento.github.io//cloud/project/project-conf-files_services-elastic.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Application</title>
+          <description>The `.magento.app.yaml` file controls the way your application builds and deploys. Although {{site.data.var.ece}} supports multiple applications per project, typically, a project has a single application with the `.magento.app.yaml` file at the root of the repository. The `.magento.app.yaml` has many default values, see [a sample `.magento.app.yaml` file](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml). Always review the `.magento.app.yaml` for your installed version. This file can differ across {{site.data.var.ece}} versions. ## Properties Use the following properties to build your application configuration file. The `name`,...</description>
+          <link>https://magento.github.io//cloud/project/project-conf-files_magento-app.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento Commerce (Cloud) 2.2.0 Release Notes</title>
+          <description>&lt;p&gt;We are pleased to present Magento Commerce Cloud 2.2.0 General Availability. This release includes numerous functional fixes and enhancements.&lt;/p&gt; &lt;p&gt;To fully upgrade Magento Commerce Cloud, see &lt;a href=&quot;/devdocs/2.2/cloud/project/project-upgrade.html&quot;&gt;Upgrade Magento Commerce (Cloud)&lt;/a&gt;. Specific steps and vital information for upgrading from 2.0.X and 2.1.X are included. For specific changes for deployments, see &lt;a href=&quot;#deploy&quot;&gt;Changes in Deployment&lt;/a&gt;.&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;For current Magento Commerce Cloud release information, see &lt;a href=&quot;/devdocs/2.2/cloud/release-notes/cloud-tools.html&quot;&gt;Release notes for ece-tools&lt;/a&gt;.&lt;/p&gt; &lt;h2 id=&quot;highlights&quot;&gt;Highlights&lt;/h2&gt; &lt;p&gt;Magento Commerce Cloud 2.2.0 includes...</description>
+          <link>https://magento.github.io//cloud/release-notes/CloudReleaseNotes2.2.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento Commerce (Cloud) 2.2.1 Release Notes</title>
+          <description>&lt;p&gt;We are pleased to present Magento Commerce Cloud 2.2.1. This release includes numerous functional fixes and enhancements.&lt;/p&gt; &lt;p class=&quot;bs-callout-warning&quot;&gt;We strongly recommend upgrading to Fastly v1.2.33 module for all Magento Commerce (Cloud) implementations that run on 2.0.x, 2.1.x, and 2.2.x. This version includes updates and additions to increase stability, performance, and resolve issues with caching shopping carts. This version of Fastly has specific updates for Magento.&lt;/p&gt; &lt;h2 id=&quot;highlights&quot;&gt;Highlights&lt;/h2&gt; &lt;p&gt;Magento Commerce Cloud 2.2.1 includes multiple new features,...</description>
+          <link>https://magento.github.io//cloud/release-notes/CloudReleaseNotes2.2.1.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>ADMIN variables</title>
+          <description>&lt;p&gt;Users that have administrative access to the Magento Commerce Cloud project can use the following project environment variables to override the configuration settings for the administrative user account to access the Admin UI. See &lt;a href=&quot;/devdocs/2.2/cloud/before/before-setup-env-2_clone.html#change-the-magento-admin-variables&quot;&gt;Change the Magento ADMIN variables&lt;/a&gt;.&lt;/p&gt; &lt;h2 id=&quot;admin-credentials&quot;&gt;Admin credentials&lt;/h2&gt; &lt;p&gt;Use the ADMIN variables in the following table to override credentials for the Magento Admin user during installation.&lt;/p&gt; &lt;p&gt;If you want to change the values after installation, connect to your environment using...</description>
+          <link>https://magento.github.io//cloud/env/environment-vars_magento.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Local development</title>
+          <description>{{site.data.var.ece}} environments are **Read Only**, including all Starter environments and all Pro Integration, Staging, and Production environments. In a local development environment, you can write and test code prior to pushing it to an Integration environment for further testing and deployment to Staging and Production. You must develop in a local workspace using a cloned Integration environment and push changes to the remote, read-only {{site.data.var.ece}} Git repository. You can choose one of two methods: -...</description>
+          <link>https://magento.github.io//cloud/setup/first-time-setup.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Release notes for ece-tools</title>
+          <description>&lt;p&gt;The following updates describe the latest improvements to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package, which uses the following version sequence: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;200&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;&lt;/code&gt;. See &lt;a href=&quot;/devdocs/2.2/cloud/project/project-upgrade-parent.html&quot;&gt;Upgrades and patches&lt;/a&gt; for information about updating to the latest release of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package.&lt;/p&gt; &lt;p&gt;The release notes include:&lt;/p&gt; &lt;ul&gt; &lt;li class=&quot;new&quot;&gt;New features&lt;/li&gt; &lt;li class=&quot;fix&quot;&gt;Fixes and improvements&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;v2002022&quot;&gt;v2002.0.22&lt;/h2&gt; &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; 2002.0.22 release changes the structure of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package to decouple the release...</description>
+          <link>https://magento.github.io//cloud/release-notes/cloud-tools.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Release policy</title>
+          <description>{{site.data.var.ee}} uses [semantic versioning](https://semver.org/) on the individual module level (for example magento/framework 101.1.1) but not for the Magento marketing version number. For example: - **MAJOR**—2 - **MINOR**—2.3 - **PATCH**—2.3.1 - **SECURITY**—2.3.2-p1 ## MINOR release Magento releases a large, minor version of {{site.data.var.ee}} about once a year. The following guidelines apply to minor releases: - Breaking changes are possible; code written for 2.2.x may no longer work with 2.3.x. For example, minor releases can introduce support...</description>
+          <link>https://magento.github.io//release/policy/</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Upcoming releases</title>
+          <description>Magento continually strives to find the right balance between making product upgrades simple and predictable and delivering improvements and new features to early adopters faster. Over the last year, we have refined how we deliver software to support this balance. For additional information, refer to our [release policy]({{site.baseurl}}/release/policy/). ## Availability The following table describes the status of Magento software availability and where to get it, particularly for software that is available outside the conventional {{site.data.var.ee}}...</description>
+          <link>https://magento.github.io//release/</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Prepare for local environment setup</title>
+          <description>&lt;p&gt;To develop, deploy, and test Magento Commerce Cloud, you need to setup your local environment and clone your project’s master Git branch. This local environment provides a development system for your custom code, extensions, and configurations to push for active testing in one of the Integration environments.&lt;/p&gt; &lt;p&gt;This section walks through the steps for first time merchants with Magento, Magento SIs, and existing Magento merchants moving to the cloud. If you already completed some of...</description>
+          <link>https://magento.github.io//cloud/before/before-workspace.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Technologies and requirements</title>
+          <description>&lt;p&gt;This topic describes technologies, knowledge, accounts, and steps to complete when working with your Magento Commerce Cloud code, environments, and store(s) and site(s). If you are not experienced with a technology, we provide additional links and information to get you started.&lt;/p&gt; &lt;h2 id=&quot;cloud-req-pre&quot;&gt;Technologies&lt;/h2&gt; &lt;p&gt;The following technologies are requirements for developing and deploying your store code:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Git&lt;/li&gt; &lt;li&gt;Composer&lt;/li&gt; &lt;li&gt;Magento 2&lt;/li&gt; &lt;li&gt;Continuous Integration&lt;/li&gt; &lt;li&gt;Architectures including Starter or Pro architecture&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Here are some advanced technologies we...</description>
+          <link>https://magento.github.io//cloud/requirements/cloud-requirements.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Starter develop and deploy workflow</title>
+          <description>The {{site.data.var.ece}} includes a single Git repository with a master branch for the Production environment that can be branched to create Staging and Integration environments for testing and development work. You can have up to four active environments, including a `master` environment for your production server. See [Starter architecture]({{ site.baseurl }}/cloud/basic-information/starter-architecture.html) for an overview. For your environments, we recommend following a Development &gt; Staging &gt; Production workflow to develop and deploy your site. * **Production...</description>
+          <link>https://magento.github.io//cloud/basic-information/starter-develop-deploy-workflow.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Deployment process</title>
+          <description>&lt;p&gt;Build and deploy scripts activate when you merge code to a remote environment. These scripts use the environment configuration files and application code to prepare data and configurations to provision Cloud infrastructure and services, and to install or update the application and third-party and custom extensions in the Cloud environment.&lt;/p&gt; &lt;p&gt;The build and deploy process is slightly different for each plan:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;strong&gt;Starter plans&lt;/strong&gt;—For the Integration environment, every active branch builds and deploys to...</description>
+          <link>https://magento.github.io//cloud/reference/discover-deploy.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Upgrade Magento version</title>
+          <description>You can upgrade the core {{site.data.var.ee}} code base to a newer version. It is best to review the summary of the updated [technology stack](https://devdocs.magento.com/guides/v2.3/install-gde/system-requirements-tech.html) before upgrading your project. If you need to upgrade from a version older than 2.1, you must upgrade to a supported version first. See [Upgrades and patches]({{ site.baseurl }}/cloud/project/project-upgrade-parent.html) for upgrade path details. {% include cloud/note-upgrade.md %} {% include cloud/note-ece-tools-package.md %} ## Upgrading from older versions of the Magento application If...</description>
+          <link>https://magento.github.io//cloud/project/project-upgrade.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Apply custom patches</title>
+          <description>Sometimes we provide a [custom patch](https://devdocs.magento.com/guides/v2.3/comp-mgr/patching.html#custom-patches) to address a specific issue. Also, third-party extension developers can provide a custom patch. Copy the custom patch to the `/m2-hotfixes` directory and test it on your local workstation. {% include cloud/note-upgrade.md %} {:.procedure} To apply and test a custom patch: You can only apply patches during the build phase of redeployment. 1. On your local workstation, create a branch based on the `integration` branch. ```bash magento-cloud environment:branch &lt;branch-name&gt;...</description>
+          <link>https://magento.github.io//cloud/project/project-patch.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Using custom fonts</title>
+          <description>The Magento application contains a set of built-in fonts, but you can easily include custom fonts. This topic describes how to include a locally stored custom font in your Magento [theme](https://glossary.magento.com/theme). {:.bs-callout-tip} If you are new to Magento theme development, see [Create a theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html) to get familiar with the basics. To ensure the stability of your customizations and prevent upgrades from overwriting your customizations, do not change the default Magento theme files. You...</description>
+          <link>https://magento.github.io//guides/v2.2/frontend-dev-guide/css-topics/using-fonts.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Onboarding tasks</title>
+          <description>After your company purchases a subscription plan for {{site.data.var.ece}}, the only person who initially has access to the project and code is the Project Owner. The _Project Owner_ is the person in your business or finance organization that manages payments and other business-related issues for the {{site.data.var.ece}} account. The Project Owner serves as the point of contact with Magento. To quickly onboard your project so you can develop your site for live deployment, you need...</description>
+          <link>https://magento.github.io//cloud/onboarding/onboarding-tasks.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Launch Docker</title>
+          <description>&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package (version 2002.0.13 or later) deploys to a read-only file system by default in the Docker environment, which mirrors the read-only file system deployed in the Production environment. You can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker:build&lt;/code&gt; command in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package to generate the Docker Compose configuration and deploy Magento Commerce Cloud in a Docker container.&lt;/p&gt; &lt;h2 id=&quot;launch-modes&quot;&gt;Launch modes&lt;/h2&gt; &lt;p&gt;&lt;em&gt;Mode&lt;/em&gt; is an additional configuration option for the Docker configuration generator...</description>
+          <link>https://magento.github.io//cloud/docker/docker-config.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Set up the Magento file system owner</title>
+          <description>&lt;p class=&quot;ref-header&quot;&gt;Previous step&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.2/cloud/before/before-workspace-ssh.html&quot;&gt;Enable SSH keys&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;This step is optional if you installed nginx as your web server.&lt;/strong&gt; The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.3/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner&quot;&gt;Magento file system owner&lt;/a&gt; provides root access and permissions, for security reasons on a hosted system. Apache installations require&lt;/p&gt; &lt;p&gt;To enable the web server (Apache) to write files and directories in the Magento file system but to also maintain &lt;em&gt;ownership&lt;/em&gt; by the &lt;a href=&quot;https://glossary.magento.com/magento-file-system-owner&quot;&gt;Magento file system owner&lt;/a&gt;, both users must be in the same...</description>
+          <link>https://magento.github.io//cloud/before/before-workspace-file-sys-owner.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento UI library</title>
+          <description>The Magento UI [library](https://glossary.magento.com/library) is a flexible [Less]-based [frontend](https://glossary.magento.com/frontend) library designed to assist Magento [theme](https://glossary.magento.com/theme) developers. It employs a set of mixins for base elements to ease frontend theme development and customization. This topic describes how the library is organized, and how to use it. For more information, see the [Magento UI library documentation] that reflects the latest [embedded documentation]. ## Components provided by the UI library {#library_elements} The Magento UI library provides the ability...</description>
+          <link>https://magento.github.io//guides/v2.2/frontend-dev-guide/css-topics/theme-ui-lib.html</link>
+          <pubDate>Wed, 12 Apr 2023 14:05:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Extend an appearance</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/extend/extend-appearances.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Page Builder example modules</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/pagebuilder-examples.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Extend another appearance</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/extend/extend-more-appearances.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add appearances</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/extend/add-appearances.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a custom toolbar</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-custom-toolbar.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add viewports</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/viewports/add-viewports.html</link>
+          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI Import API</title>
+          <description></description>
+          <link>https://magento.github.io//mbi/docs/import-api.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI API Getting Started</title>
+          <description></description>
+          <link>https://magento.github.io//mbi/docs/getting-started.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI Export API</title>
+          <description>
+</description>
+          <link>https://magento.github.io//mbi/docs/export-api.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento BI Libraries</title>
+          <description></description>
+          <link>https://magento.github.io//mbi/docs/libraries.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use HTML Code to override styles</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/styles/use-htmlcode-to-override-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add form</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/add-form.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Page Builder events</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/architecture/events.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add styles</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/add-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add templates</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/add-templates.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a text editor</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-text-editor.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>How Page Builder styles content</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/styles/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction to creating content types</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction to extending content types</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/content-types/extend/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction to viewports for responsive content</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/viewports/introduction.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Troubleshooting</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/troubleshooting.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add icon</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/add-icon.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use breakpoints for widgets</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/viewports/use-breakpoints.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a visual selector</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-visual-selector.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a storefront widget</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-storefront-widget.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use Themes to override styles</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/styles/use-themes-to-override-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>What is Page Builder?</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use viewports for forms</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/viewports/use-viewports.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add configuration</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/add-configuration.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Configure the panel</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/configure-panel.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Content type configurations</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/architecture/configurations.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Override Page Builder styles</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/styles/override-pagebuilder-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Page Builder Architecture</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/architecture/overview.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Overview of content migration</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/migration/overview.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Apply product conditions</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/apply-product-conditions.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add components</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/create/add-components.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add breakpoints</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/viewports/add-breakpoints.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add a block chooser</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-block-chooser.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Use Modules to override styles</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/styles/use-modules-to-override-styles.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add additional data</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-additional-data.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Migrate content from custom blocks</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/migration/migrate-content-custom-blocks.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Page Builder data store</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/architecture/data-store.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Upgrade content types</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/administration/upgrade-content-types.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Migrate other BlueFoot content</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/migration/migrate-other-bluefoot-content.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>How content migration works</title>
+          <description></description>
+          <link>https://magento.github.io//page-builder/docs/migration/how-content-migration-works.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add an image uploader</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-image-uploader.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Add icons and images</title>
+          <description>
+</description>
+          <link>https://magento.github.io//page-builder/docs/content-types/customize/add-icons-images.html</link>
+          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
+        </item>
+    
+  </channel>
+</rss>

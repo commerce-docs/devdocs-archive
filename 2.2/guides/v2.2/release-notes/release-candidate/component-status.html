@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Component Status | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Release Information</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Introduction</a></li><li class="" role="menuitem"><span>2.2 Release Notes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-11-open-source.html">Magento Open Source 2.2.11 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-11-commerce.html">Magento Commerce 2.2.11 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-10-open-source.html">Magento Open Source 2.2.10 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-notes-2-2-10-commerce.html">Magento Commerce 2.2.10 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.9CE.html">Magento Open Source 2.2.9 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.9EE.html">Magento Commerce 2.2.9 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.8CE.html">Magento Open Source 2.2.8 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.8EE.html">Magento Commerce 2.2.8 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.7CE.html">Magento Open Source 2.2.7 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.7EE.html">Magento Commerce 2.2.7 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.6CE.html">Magento Open Source 2.2.6 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.6EE.html">Magento Commerce 2.2.6 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.5CE.html">Magento Open Source 2.2.5 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.5EE.html">Magento Commerce 2.2.5 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.4CE.html">Magento Open Source 2.2.4 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.4EE.html">Magento Commerce 2.2.4 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.3CE.html">Magento Open Source 2.2.3 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.3EE.html">Magento Commerce 2.2.3 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.2CE.html">Magento Open Source 2.2.2 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.2EE.html">Magento Commerce 2.2.2 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.1CE.html">Magento Open Source 2.2.1 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.1EE.html">Magento Commerce 2.2.1 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.0CE.html">Magento Open Source 2.2.0 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/ReleaseNotes2.2.0EE.html">Magento Commerce 2.2.0 Release Notes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/CloudReleaseNotes2.2.html">Magento Commerce (Cloud) 2.2.0 Release Notes</a></li><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/release-candidate/component-status.html">Component Status</a></li></ul></li><li class="" role="menuitem"><span>Backward incompatible changes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/backward-incompatible-changes/index.html">Highlights</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/backward-incompatible-changes/reference.html">Reference</a></li></ul></li><li class="" role="menuitem"><span>Packages</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Magento Open Source packages</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-commerce.html">Magento Commerce packages</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-cloud.html">Magento Commerce Cloud packages</a></li></ul></li><li class="" role="menuitem"><span>Sales Channels</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/amazon-sales/release-notes/">Amazon</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/google-shopping-ads/release-notes/">Google Shopping ads</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+
+
+
+
+
+<h1 class="page-heading">Component Status</h1>
+</section>
+
+			<p><strong>Last Updated:</strong> November 7, 2017</p>
+
+<p>This page shows the status of each component for the Magento 2.2.x release and is intended to show you the readiness of different components.</p>
+
+<p>Each status color indicates the severity and amount of 2.2-related issues for a particular component.</p>
+
+<ul>
+  <li><span class="status red">Red</span> - The module has critical and blocking issues that make this module unstable.</li>
+  <li><span class="status yellow">Yellow</span> - The module has some issues that may cause problems, but it is still functional.</li>
+  <li><span class="status green">Green</span> - The module has no significant or outstanding issues.</li>
+</ul>
+
+<p>The issues used to generate the status of these components come from verified internal and GitHub reports for Magento 2.2.
+Issues that are not related to the 2.2 release are not part of this report.</p>
+
+<h2 id="magento-open-source-modules">Magento Open Source Modules</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Module/ AdminNotification</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ AdvancedPricingImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Analytics</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Authorization</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Authorizenet</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Backend/ Dashboard</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Backup</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Braintree</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Bundle</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ BundleImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CacheInvalidate</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Captcha</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Catalog</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Catalog/ Pricing</td>
+      <td><span class="status green">Green</span> <strong>(since 2.2.1)</strong></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogInventory</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogRule</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogRuleConfigurable</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogSearch/ Search Frontend</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogSearch/ Search Terms</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogUrlRewrite</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogWidget</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Checkout/ Guest Checkout</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Checkout/ Mini Shopping Cart</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Checkout/ One Page Checkout</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Checkout/ Shopping Cart</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CheckoutAgreements</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Cms/ Blog</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Cms/ CMS Content</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Cms/ CMS Hierarchy</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CmsUrlRewrite</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Config</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ConfigurableImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ConfigurableProduct</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Contact</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Cookie</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Cron</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CurrencySymbol</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Customer/ Customer Account</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Customer/ Customer Groups</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Customer/ Customers</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Customer/ VAT ID</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CustomerAnalytics</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CustomerImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Deploy</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Developer</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ DHL</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Directory</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Downloadable</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ DownloadableImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Eav</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Email</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ EncryptionKey</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ FedEx</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftMessage</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GoogleAdwords</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GoogleAnalytics</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GoogleOptimizer</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GroupedImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GroupedProduct</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Indexer</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Integration</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ LayeredNavigation</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Marketplace</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Msrp</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Multishipping</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ NewRelicReporting</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Newsletter</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ OfflinePayments</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ OfflineShipping</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Pagecache</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Payment/ Fraud</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Payment/ Payment Methods</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Paypal</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ PayPal/ Billing Agreement</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Persistent</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ProductAlert</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ProductVideo</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Quote</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Reports</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ RequireJs</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Review</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Rss</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Rule</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Sales/ Order Management</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ SalesAnalytics</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ SalesRule</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ SalesSequence</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Sample Data</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Search</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ PasswordManagement</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Sales/ Order Management</td>
+      <td><span class="status green">Green</span> <strong>(since 2.2.1)</strong></td>
+    </tr>
+    <tr>
+      <td>Module/ Sendfriend</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Shipping</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Sitemap</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Store</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Swagger</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Swatches</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Tax</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ TaxImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Theme</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Translation</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ UI</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ UPS</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ UrlRewrite</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ User</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ USPS</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Variable</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Vault</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Webapi/ Web API Framework</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Webapi/ Web Hooks</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Weee</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Widget</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Wishlist</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Tools/ MediaStorage</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="magento-commerce-modules">Magento Commerce Modules</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Module/ AdminGWS</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ AdvancedCatalog</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ AdvancedCheckout</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ AdvancedSearch</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ AsynchronousOperations</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Banner</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ BannerCustomerSegment</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ BundleStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogEvent</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogImportExportStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogInventoryStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogPermissions</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogRuleStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CatalogUrlRewriteStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CheckoutStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CmsStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ConfigurableProductStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CustomAttributeManagement</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CustomerBalance</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CustomerCustomAttributes</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CustomerFinance</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CustomerSegment</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Cybersource</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ DownloadableStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ElasticSearch</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Enterprise</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Eway</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftCard</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftCardAccount</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftCardImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftCardStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftMessageStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftRegistry</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftWrapping</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GiftWrappingStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GoogleOptimizerStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GoogleTagManager</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ GroupedProductStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Invitation</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ LayeredNavigationStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Logging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ MsrpStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ MultipleWishlist</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ PaymentStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ PersistentHistory</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ PricePermissions</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ProductVideoStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ PromotionPermissions</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Reminder</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ResourceConnections</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ReviewStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Reward</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Rma</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ RmaStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ SalesArchive</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ SalesRuleStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ScalableCheckout</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ScalableOMS</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ ScheduledImportExport</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ SearchStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Signifyd</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Solr</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Staging</td>
+      <td><span class="status green">Green</span> <strong>(since 2.2.1)</strong></td>
+    </tr>
+    <tr>
+      <td>Module/ Support</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ TargetRule</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ VersionsCms</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ VisualMerchandiser</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ WebsiteRestriction</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ WeeeStaging</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Worldpay</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="b2b-modules">B2B Modules</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Module/ Company</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CompanyCredit</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ CompanyPayment</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ NegotiableQuote</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ QuickOrder</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ Requisition Lists</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+    <tr>
+      <td>Module/ SharedCatalog</td>
+      <td><span class="status green">Green</span></td>
+    </tr>
+  </tbody>
+</table>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-11-27">
+      Nov 27th, 2019
+    </time>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

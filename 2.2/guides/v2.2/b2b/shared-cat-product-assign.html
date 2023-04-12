@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Assign categories and products to a shared catalog | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">B2B Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/integrations.html">Integrate with B2B using REST</a><ul><li class="" role="menuitem"><span>Company</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/company.html">Integrate with the Company module</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/company-object.html">Manage company objects</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/company-users.html">Manage company users</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/roles.html">Manage company roles</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/company-structures.html">Manage company structures</a></li></ul></li><li class="" role="menuitem"><span>Company credit</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/company-credit.html">Integrate with the CompanyCredit module</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/credit-manage.html">Manage company credit</a></li></ul></li><li class="" role="menuitem"><span>Shared Catalog</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/shared-catalog.html">Integrate with the SharedCatalog module</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/shared-cat-manage.html">Manage shared catalogs</a></li><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/shared-cat-product-assign.html">Assign categories and products</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/shared-cat-company.html">Assign companies</a></li></ul></li><li class="" role="menuitem"><span>Negotiable Quotes</span><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/negotiable-quote.html">Integrate with the NegotiableQuote module</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/negotiable-manage.html">Manage negotiable quotes</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/negotiable-update.html">Update a negotiable quote</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/negotiable-checkout.html">Negotiable quote checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/negotiable-order-workflow.html">Place a negotiable quote order</a></li></ul></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/extensions.html">Develop B2B extensions</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+<span class="ee-only">Magento Commerce only</span>
+
+
+
+
+
+
+<h1 class="page-heading">Assign categories and products to a shared catalog</h1>
+</section>
+
+			<p>The shared catalog configuration process includes assigning categories and products to the shared catalog. To assign these items to a shared catalog, the following conditions must be met:</p>
+
+<ul>
+  <li>
+    <p>The category structure must already be defined. You cannot create a new category to be included in a shared catalog. Use endpoints like <code class="language-plaintext highlighter-rouge">POST /V1/categories</code> to create a new category.</p>
+  </li>
+  <li>
+    <p>Each category must already be populated with products. You cannot add a new product to a category to be included in a shared catalog. Use endpoints like <code class="language-plaintext highlighter-rouge">POST /V1/products</code> to create a new product.</p>
+  </li>
+</ul>
+
+<h2 id="assign-categories">Assign categories</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">sharedCatalogCategoryManagementV1</code> service is based on <code class="language-plaintext highlighter-rouge">catalogCategoryManagementV1</code>. To view a store’s category structure, call <code class="language-plaintext highlighter-rouge">GET /V1/categories</code>.</p>
+
+<p class="bs-callout-info">Products that are defined within a category are not included when you assign a category to a shared catalog. You must add products separately.</p>
+
+<p><strong>Service name:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">sharedCatalogCategoryManagementV1</code></p>
+
+<p><strong>REST Endpoints:</strong></p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="go">POST /V1/sharedCatalog/:id/assignCategories
+POST /V1/sharedCatalog/:id/unassignCategories
+GET  /V1/sharedCatalog/:id/categories
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Category parameters:</strong></p>
+
+<p class="bs-callout-info">Although you can specify other parameters defined within a <code class="language-plaintext highlighter-rouge">categories</code> object, the <code class="language-plaintext highlighter-rouge">id</code> is the only one used to assign or unassign a category to a shared catalog.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Format</th>
+      <th>Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>The category ID number</td>
+      <td>integer</td>
+      <td>Required to assign or unassign a category</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="assign-categories-to-shared-catalog">Assign categories to shared catalog</h3>
+
+<p>The following example adds the Luma Gear category (<code class="language-plaintext highlighter-rouge">id=3</code>) as well as its subcategories (<code class="language-plaintext highlighter-rouge">id=4,5,6</code>) to a custom shared catalog.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">POST &lt;host&gt;/rest/&lt;store_code&gt;/V1/sharedCatalog/2/assignCategories</code></p>
+
+<p><strong>Payload:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">true</code>, indicating the operation was successful</p>
+
+<h3 id="unassign-categories-from-a-shared-catalog">Unassign categories from a shared catalog</h3>
+
+<p>When you unassign a category from a shared catalog, Magento also removes its products from the shared catalog. If a product is assigned to multiple categories, then Magento removes the product from the unassigned category only.</p>
+
+<p>The following example removes two categories from the shared catalog.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">POST &lt;host&gt;/rest/&lt;store_code&gt;/V1/sharedCatalog/2/unassignCategories</code></p>
+
+<p><strong>Payload:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">true</code>, indicating the operation was successful</p>
+
+<h3 id="list-the-shared-catalog-categories">List the shared catalog categories</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">GET</code> call returns an array of catalog IDs.</p>
+
+<p><strong>Sample Usage:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET &lt;host&gt;/rest/&lt;store_code&gt;/V1/sharedCatalog/2/categories</code></p>
+
+<p><strong>Payload:</strong></p>
+
+<p>Not applicable</p>
+
+<p><strong>Response:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="p">[</span><span class="w">
+  </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="mi">6</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="assign-products">Assign products</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">sharedCatalogProductManagementV1</code> service is based on <code class="language-plaintext highlighter-rouge">catalogProductManagementV1</code>. To return a list of products defined within a category, call <code class="language-plaintext highlighter-rouge">GET /V1/categories/:categoryId/products</code>.</p>
+
+<p><strong>Service name:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">sharedCatalogProductManagementV1</code></p>
+
+<p><strong>REST endpoints:</strong></p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="go">POST  /V1/sharedCatalog/:id/assignProducts
+POST  /V1/sharedCatalog/:id/unassignProducts
+GET  /V1/sharedCatalog/:id/products
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Category parameters:</strong></p>
+
+<p class="bs-callout-info">Although you can specify other parameters defined within a <code class="language-plaintext highlighter-rouge">products</code> object, the <code class="language-plaintext highlighter-rouge">sku</code> is the only one used to assign or unassign a product to a shared catalog.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Format</th>
+      <th>Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sku</code></td>
+      <td>The product’s SKU identifier</td>
+      <td>string</td>
+      <td>Required to assign or unassign a product to a shared catalog</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="assign-products-to-shared-catalog">Assign products to shared catalog</h3>
+
+<p>The following example adds two products each in the Bags, Fitness Equipment, and Watches categories to a custom shared catalog. The specified products do not have to be in the same category.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">POST &lt;host&gt;/rest/&lt;store_code&gt;/V1/sharedCatalog/2/assignProducts</code></p>
+
+<p><strong>Payload:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+ </span><span class="nl">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-MB01"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-MB04"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-UG06"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-UG07"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-MG04"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-MG01"</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+ </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">true</code>, indicating the operation was successful</p>
+
+<h3 id="unassign-products-from-the-shared-catalog">Unassign products from the shared catalog</h3>
+
+<p>Unassigning a product does not remove it from its category or categories.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">POST &lt;host&gt;/rest/&lt;store_code&gt;/V1/sharedCatalog/2/unassignProducts</code></p>
+
+<p><strong>Payload:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-MG01"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">true</code>, indicating the operation was successful</p>
+
+<h3 id="list-the-shared-catalog-products">List the shared catalog products</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">GET</code> call returns an array of SKUs.</p>
+
+<p><strong>Sample Usage:</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET &lt;host&gt;/rest/&lt;store_code&gt;/V1/sharedCatalog/2/products</code></p>
+
+<p><strong>Payload:</strong></p>
+
+<p>Not applicable</p>
+
+<p><strong>Response:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="p">[</span><span class="w">
+  </span><span class="s2">"24-MB01"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"24-MB04"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"24-UG06"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"24-UG07"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"24-MG04"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="related-information">Related information</h2>
+
+<ul>
+  <li><a href="/devdocs/2.2/guides/v2.2/b2b/shared-catalog.html">Integrate with the SharedCatalog module</a></li>
+  <li><a href="/devdocs/2.2/guides/v2.2/b2b/shared-cat-manage.html">Manage shared catalogs</a></li>
+  <li><a href="/devdocs/2.2/guides/v2.2/b2b/shared-cat-company.html">Assign companies</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-12-03">
+      Dec 3rd, 2019
+    </time>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+

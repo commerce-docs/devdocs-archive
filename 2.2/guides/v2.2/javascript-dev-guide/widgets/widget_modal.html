@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Modal widget | Archived Magento 2.2 Developer Documentation</title>
+	<meta name="description" content="Archived Magento 2 Developer Documentation.">
+
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/app.css?ver=7" />
+	<link rel="stylesheet" href="/devdocs/2.2/assets/css/print.css?ver=7" media="print"/>
+
+	<link rel="stylesheet" href="/devdocs/2.2/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+
+
+
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs/2.2";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [
+    {
+      label: "DevDocs",
+      name: "devdocs",
+      facetFilters: [["guide_version: 2.2", "versionless: true"]],
+      refinements: [
+        {
+          label: "Functional areas",
+          attribute: "functional_areas"
+        }
+      ],
+      baseUrl: "https://devdocs.magento.com"
+    },
+    {
+      label: "User Guide",
+      name: "merchdocs_ee",
+      baseUrl: "https://docs.magento.com/m2/ee/user_guide"
+    },
+    {
+      label: "MBI User Guide",
+      name: "merchdocs-mbi",
+      baseUrl: "https://docs.magento.com/mbi"
+    },
+    {
+      label: "Marketplace User Guide",
+      name: "merchdocs-marketplace",
+      baseUrl: "https://docs.magento.com/marketplace/user_guide"
+    },
+    {
+      label: "PWA",
+      name: "pwa-devdocs",
+      baseUrl: "https://magento.github.io/pwa-studio"
+    },
+    {
+      label: "Order Management",
+      name: "oms-en",
+      baseUrl: "https://omsdocs.magento.com"
+    }
+  ];
+</script>
+
+
+
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+
+	<header class="site-header">
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs/2.2/">
+      <img src="/devdocs/2.2/assets/i/m-logo.svg" alt=""><img src="/devdocs/2.2/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+
+
+<div class="version-switcher dropdown">
+	<button class="btn dropdown-toggle" disabled>
+		Magento 2.2
+	</button>
+</div>
+
+
+      <!-- Main Navigation --><ul class="nav-main" role="menubar"><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Cloud</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Cloud basics</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/bk-cloud.html">Cloud Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/architecture/cloud-architecture.html">Cloud Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/project/project-upgrade-parent.html">Upgrades and Patches</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/release-notes/cloud-tools.html">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Cloud development</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/setup/first-time-setup.html">Local development</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-config.html">Launch Docker</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/docker/docker-quick-reference.html">Docker quick reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/cloud/env/environments.html">Configure Environments</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Setup</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/install-gde/bk-install-guide.html">Installation Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/extensions/">Magento Extensions Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">Software Update Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/config-guide/bk-config-guide.html">Configuration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/performance-best-practices/introduction.html">Performance Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/migration/bk-migration-guide.html">Migration Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Information</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/reference/cli/magento.html">Command-line Tools Reference</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Development</span><div class="nav-popup"><div class="nav-section">
+              <div class="nav-section-title">Backend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/architecture/bk-architecture.html">Architecture</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mrg/intro.html">Module Reference Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/coding-standards/bk-coding-standards.html">Coding Standards</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/contributor-guide/contributing.html">Contributor Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">Frontend</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI Components Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="nav-section-title">API</div>
+              <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/bk-rest.html">REST API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/soap/bk-soap.html">SOAP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/marketplace/eqp/v1/api.html">Marketplace EQP API Reference</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mbi/docs/getting-started.html">Business Intelligence API</a></li></ul>
+            </div></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Testing</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/testing.html">Magento Testing Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/mftf/docs/introduction.html">Functional Acceptance Testing (MFTF)</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/mtf/mtf_introduction.html">Functional Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/integration/integration_test_execution.html">Integration Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/js/jasmine.html">JavaScript Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/test/unit/unit_test_execution.html">PHP Unit Testing</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Functional Areas</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/advanced-reporting/overview.html">Advanced Reporting</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/b2b/bk-b2b.html">B2B</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/compliance/industry-compliance.html">Compliance</a></li><li class="" role="menuitem"><a href="http://omsdocs.magento.com/en/">Order Management</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li></ul></div></li><li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">Tutorials</span><div class="nav-popup"><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/rest/tutorials/index.html">Rest Tutorials</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/customize_product.html">Customize Product Creation Form</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/howdoi/checkout/checkout_overview.html">Customize Checkout</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/community/resources/support.html">Magento Support</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/videos/">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+<div class="app-switcher">
+  <div class="dropdown">
+    <button id="app-switcher-trigger" class="app-switcher-trigger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Documentation sites"></button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="app-switcher-trigger" role="menu">
+      <div class="app-switcher-content">
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Developer</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://devdocs.magento.com/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce Developer Documentation">Commerce Developer Documentation</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="http://pwastudio.io/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=PWA Studio">PWA Studio</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+      </div>
+      
+      <div class="app-switcher-group">
+        <h3 class="app-swither-group-title">Merchant</h3>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/m2/ee/user_guide/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Commerce User Guide">Commerce User Guide</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://omsdocs.magento.com/en/userguides/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Order Management">Order Management</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/mbi/?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Business Intelligence">Business Intelligence</a></li>
+        
+        <li role="menuitem"><a class="dropdown-item" href="https://docs.magento.com/marketplace/user_guide/getting-started.html?itm_source=devdocs&itm_medium=top_nav&itm_campaign=app_switcher&itm_term=Marketplace">Marketplace</a></li>
+        
+      </div>
+      
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="search-btn">
+        <button class="search-trigger search-icon" aria-label="Search"></button>
+      </div>
+
+      <form class="quick-search" action="/devdocs/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
+        <input type="search" name="query" placeholder="Search" />
+        <button class="quick-search-close" aria-label="Close Search">&times;</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+	</header>
+
+	<div class="global-wrapper">
+		
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">JavaScript Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">Introduction</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/conventions_js.html">Conventional notations used in this Guide</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_overview.html">JavaScript</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js-resources.html">JavaScript resources in Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/requirejs.html">RequireJS in Magento</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_init.html">Calling and initializing JavaScript</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html">Frontend product repository</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/custom_js.html">Use custom JavaScript</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_debug.html">Locate JavaScript components</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_practice.html">Customizing JavaScript illustration</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_mixins.html">Using JavaScript mixins</a></li></ul></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/jquery-widgets-about.html">Magento jQuery widgets</a><ul><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_accordion.html">Accordion widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_alert.html">Alert widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-breadcrumbs.html">Breadcrumbs widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_calendar.html">Calendar widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_collapsible.html">Collapsible widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_confirm.html">Confirmation widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_dropdown.html">Dropdown widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_dialog.html">DropdownDialog widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-folder-tree.html">FolderTree widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_gallery.html">Gallery widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_list.html">List widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_gallery_mg.html">Magnifier widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_loader.html">Loader widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-media-uploader.html">MediaUploader widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_menu.html">Menu widget</a></li><li class="active" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_modal.html">Modal widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-multiselect.html">Multiselect widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_navigation.html">Navigation widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_password_strength_indicator.html">PasswordStrengthIndicator widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-popup-window.html">PopupWindow widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_prompt.html">Prompt widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_quickSearch.html">QuickSearch widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_redirectUrl.html">RedirectUrl widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-remaining-characters.html">RemainingCharacters widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-row-builder.html">RowBuilder widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-sortable.html">Sortable widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_sticky.html">Sticky widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_tabs.html">Tabs widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget_toggle.html">ToggleAdvanced widget</a></li><li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/widgets/widget-trim-input.html">TrimInput widget</a></li></ul></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+
+
+
+
+
+
+
+
+<h1 class="page-heading">Modal widget</h1>
+</section>
+
+			<p>The Magento modal widget implements a secondary window that opens on top of the main window. It contains the overlay and modal content. The modal widget configuration enables the following:</p>
+
+<ul>
+  <li>Configuring as popup or slide</li>
+  <li>Controlling stack of modal widgets</li>
+  <li>Setting buttons for action bar</li>
+</ul>
+
+<p>The modal widget source is <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/modal/modal.js"><code class="language-plaintext highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/modal/modal.js</code></a>.</p>
+
+<p>The widget uses the following templates:</p>
+
+<ul>
+  <li><a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/templates/modal/modal-popup.html"><code class="language-plaintext highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/templates/modal/modal-popup.html</code></a> popup type template.</li>
+  <li><a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/templates/modal/modal-slide.html"><code class="language-plaintext highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/templates/modal/modal-slide.html</code></a> slide type template.</li>
+</ul>
+
+<p>The design patterns for the modal pop-up windows in the Admin are described in the <a href="/devdocs/2.2/guides/v2.2/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html#modals">Magento Admin Pattern Library, the Slide-out Panels, Modal Windows, and Overlays topic.</a></p>
+
+<h2 id="modal_initialize">Initialize the modal widget</h2>
+
+<p>To initialize the widget in your script, use the following general notation:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#modal_content</span><span class="dl">'</span><span class="p">).</span><span class="nf">modal</span><span class="p">({</span>
+    <span class="o">&lt;</span><span class="nx">option1</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">value1</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="nx">option2</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">value2</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For details about how to initialize the widget in a<code class="language-plaintext highlighter-rouge">.phtml</code> template, refer to the <a href="/devdocs/2.2/guides/v2.2/javascript-dev-guide/javascript/js_init.html">JavaScript initialization</a> topic.</p>
+
+<h2 id="modal_options">Options</h2>
+
+<p>The modal widget has the following options:</p>
+
+<ul>
+  <li><a href="#modal_appendTo">appendTo</a></li>
+  <li><a href="#modal_autoopen">autoOpen</a></li>
+  <li><a href="#modal_buttons">buttons</a></li>
+  <li><a href="#modal_closeText">closeText</a></li>
+  <li><a href="#modal_customTpl">customTpl</a></li>
+  <li><a href="#modal_clickableOverlay">clickableOverlay</a></li>
+  <li><a href="#modal_focus">focus</a></li>
+  <li><a href="#modal_innerScroll">innerScroll</a></li>
+  <li><a href="#modal_modalAction">modalAction</a></li>
+  <li><a href="#modal_modalClass">modalClass</a></li>
+  <li><a href="#modal_modalCloseBtn">modalCloseBtn</a></li>
+  <li><a href="#modal_modalContent">modalContent</a></li>
+  <li><a href="#modal_modalLeftMargin">modalLeftMargin</a></li>
+  <li><a href="#modal_modalSubTitle">modalSubTitle</a></li>
+  <li><a href="#modal_modalTitle">modalTitle</a></li>
+  <li><a href="#modal_modalVisibleClass">modalVisibleClass</a></li>
+  <li><a href="#modal_parentModalClass">parentModalClass</a></li>
+  <li><a href="#modal_popupTpl">popupTpl</a></li>
+  <li><a href="#modal_responsive">responsive</a></li>
+  <li><a href="#modal_slideTpl">slideTpl</a></li>
+  <li><a href="#modal_subTitle">subTitle</a></li>
+  <li><a href="#modal_title">title</a></li>
+  <li><a href="#modal_trigger">trigger</a></li>
+  <li><a href="#modal_type">type</a></li>
+</ul>
+
+<h3 id="modal_appendTo"><code class="language-plaintext highlighter-rouge">appendTo</code></h3>
+
+<p>The element where the modal should be added.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">body</code></p>
+
+<h3 id="modal_autoopen"><code class="language-plaintext highlighter-rouge">autoOpen</code></h3>
+
+<p>Automatically open the modal window when the widget is initialized.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">false</code></p>
+
+<h3 id="modal_buttons"><code class="language-plaintext highlighter-rouge">buttons</code></h3>
+
+<p>Array of buttons for action pane.</p>
+
+<p><strong>Type</strong>: Array</p>
+
+<p><strong>Structure</strong>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nx">buttons</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="na">text</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="na">class</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="na">click</span><span class="p">:</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{}</span> <span class="c1">//handler on button click</span>
+<span class="p">}]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Default value</strong>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="nx">buttons</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="na">text</span><span class="p">:</span> <span class="nx">$</span><span class="p">.</span><span class="nx">mage</span><span class="p">.</span><span class="nf">__</span><span class="p">(</span><span class="dl">'</span><span class="s1">Ok</span><span class="dl">'</span><span class="p">),</span>
+    <span class="na">class</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="na">click</span><span class="p">:</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nf">closeModal</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="modal_clickableOverlay"><code class="language-plaintext highlighter-rouge">clickableOverlay</code></h3>
+
+<p>Close the modal window when a user clicks on the overlay.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">true</code></p>
+
+<h3 id="modal_closeText"><code class="language-plaintext highlighter-rouge">closeText</code></h3>
+
+<p>The close button text.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">$.mage.__('Close')</code></p>
+
+<h3 id="modal_customTpl"><code class="language-plaintext highlighter-rouge">customTpl</code></h3>
+
+<p>The template file that is used as content for the <code class="language-plaintext highlighter-rouge">custom</code> modal type.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">ui/template/modal/modal-custom.html</code></p>
+
+<h3 id="modal_focus"><code class="language-plaintext highlighter-rouge">focus</code></h3>
+
+<p>Selector to focusing when a modal window opens or ‘none’ if focusing is not necessary.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">[data-role="closeBtn"]</code></p>
+
+<h3 id="modal_innerScroll"><code class="language-plaintext highlighter-rouge">innerScroll</code></h3>
+
+<p>Modal scroll position.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">false</code></p>
+
+<h3 id="modal_modalClass"><code class="language-plaintext highlighter-rouge">modalClass</code></h3>
+
+<p>Custom classes for modal window.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: empty</p>
+
+<h3 id="modal_modalAction"><code class="language-plaintext highlighter-rouge">modalAction</code></h3>
+
+<p>The selector for all the custom action buttons.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">[data-role="action"]</code></p>
+
+<h3 id="modal_modalCloseBtn"><code class="language-plaintext highlighter-rouge">modalCloseBtn</code></h3>
+
+<p>The selector for all the elements that can close the modal.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">[data-role="closeBtn"]</code></p>
+
+<h3 id="modal_modalContent"><code class="language-plaintext highlighter-rouge">modalContent</code></h3>
+
+<p>The selector for element that is used for the modal’s content.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">[data-role="content"]</code></p>
+
+<h3 id="modal_modalLeftMargin"><code class="language-plaintext highlighter-rouge">modalLeftMargin</code></h3>
+
+<p>Sets a margin between slide modal windows.</p>
+
+<p><strong>Type</strong>: Number</p>
+
+<p><strong>Default value</strong>: 45</p>
+
+<h3 id="modal_modalSubTitle"><code class="language-plaintext highlighter-rouge">modalSubTitle</code></h3>
+
+<p>The modal subtitle element selector.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">[data-role="subTitle"]</code></p>
+
+<h3 id="modal_modalTitle"><code class="language-plaintext highlighter-rouge">modalTitle</code></h3>
+
+<p>The modal title element selector.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">[data-role="title"]</code></p>
+
+<h3 id="modal_modalVisibleClass"><code class="language-plaintext highlighter-rouge">modalVisibleClass</code></h3>
+
+<p>The class that is assigned to an opened modal.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">_show</code></p>
+
+<h3 id="modal_parentModalClass"><code class="language-plaintext highlighter-rouge">parentModalClass</code></h3>
+
+<p>The class that is assigned to parent when the modal is opened.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">_has-modal</code></p>
+
+<h3 id="modal_popupTpl"><code class="language-plaintext highlighter-rouge">popupTpl</code></h3>
+
+<p>The template file that is used as content for the <code class="language-plaintext highlighter-rouge">popup</code> modal type.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">ui/template/modal/modal-popup.html</code></p>
+
+<h3 id="modal_responsive"><code class="language-plaintext highlighter-rouge">responsive</code></h3>
+
+<p>Turn popup modal window to slide panel on small screens.
+Available if the type option is set to ‘popup’.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">false</code></p>
+
+<h3 id="modal_slideTpl"><code class="language-plaintext highlighter-rouge">slideTpl</code></h3>
+
+<p>The template file that is used as content for the <code class="language-plaintext highlighter-rouge">slide</code> modal type.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">ui/template/modal/modal-slide.html</code></p>
+
+<h3 id="modal_subTitle"><code class="language-plaintext highlighter-rouge">subTitle</code></h3>
+
+<p>Translated subTitle for the popup window that will be appended to the title.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: empty</p>
+
+<h3 id="modal_title"><code class="language-plaintext highlighter-rouge">title</code></h3>
+
+<p>Translated title for popup window.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: empty</p>
+
+<h3 id="modal_trigger"><code class="language-plaintext highlighter-rouge">trigger</code></h3>
+
+<p>The element that triggers the modal.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: empty</p>
+
+<h3 id="modal_type"><code class="language-plaintext highlighter-rouge">type</code></h3>
+
+<p>The type of window: ‘popup’ or ‘slide’.</p>
+
+<p><strong>Type</strong>: String</p>
+
+<p><strong>Default value</strong>: <code class="language-plaintext highlighter-rouge">popup</code></p>
+
+<h2 id="modal_methods">Methods</h2>
+
+<p>The modal widget has the following methods:</p>
+
+<ul>
+  <li><a href="#modal_close">closeModal()</a></li>
+  <li><a href="#modal_keyEventSwitcher">keyEventSwitcher()</a></li>
+  <li><a href="#modal_open">openModal()</a></li>
+  <li><a href="#modal_toggleModal">toggleModal()</a></li>
+</ul>
+
+<h3 id="modal_open"><code class="language-plaintext highlighter-rouge">openModal()</code></h3>
+
+<p>Open the modal window.</p>
+
+<h3 id="modal_close"><code class="language-plaintext highlighter-rouge">closeModal()</code></h3>
+
+<p>Close the modal window.</p>
+
+<h3 id="modal_keyEventSwitcher"><code class="language-plaintext highlighter-rouge">keyEventSwitcher()</code></h3>
+
+<p>Listens for key events and calls handler function if it exists.</p>
+
+<h3 id="modal_toggleModal"><code class="language-plaintext highlighter-rouge">toggleModal()</code></h3>
+
+<p>Toggles the modal window.</p>
+
+<h2 id="modal_events">Events</h2>
+
+<p>The modal widget is subscribed to the following events:</p>
+
+<ul>
+  <li><a href="#modal_closed">closed</a></li>
+  <li><a href="#modal_opened">opened</a></li>
+</ul>
+
+<p>You can listen to these events in two ways:</p>
+
+<p>Use jQuery’s <a href="http://api.jquery.com/on/"><code class="language-plaintext highlighter-rouge">on</code></a> function:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#modal_content</span><span class="dl">'</span><span class="p">).</span><span class="nf">modal</span><span class="p">({...});</span>
+<span class="nx">modal</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">modalclosed</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Do some action when modal closed</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Or assign a callback as a property when creating a modal instance:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#modal_content</span><span class="dl">'</span><span class="p">).</span><span class="nf">modal</span><span class="p">({</span>
+    <span class="p">...</span>
+    <span class="na">closed</span><span class="p">:</span> <span class="nf">function </span><span class="p">(){</span>
+       <span class="c1">// Do some action when modal closed</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="modal_closed"><code class="language-plaintext highlighter-rouge">closed</code></h3>
+
+<p>Called when the modal window is closed.</p>
+
+<h3 id="modal_opened"><code class="language-plaintext highlighter-rouge">opened</code></h3>
+
+<p>Called when the modal window is opened.</p>
+
+<h2 id="key_navigation">Keyboard navigation</h2>
+
+<ul>
+  <li>the ESC key: close the current modal window</li>
+  <li>the TAB key: set focus to the next focusable element (looped inside the modal window)</li>
+  <li>the SHIFT+TAB keys combination: set focus to the previous focusable element (looped inside the modal window)</li>
+</ul>
+
+<h2 id="code-sample">Code sample</h2>
+
+<p>The following example shows how to initialize the modal widget and pass options during the initialization.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"action"</span> <span class="na">data-trigger=</span><span class="s">"trigger"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">data-bind=</span><span class="s">"i18n: 'Click Here'"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">data-bind=</span><span class="s">"mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Popup title',
+            'trigger': '[data-trigger=trigger]',
+            'responsive': true,
+            'buttons': [{
+                text: $.mage.__('Submit'),
+                class: 'action'
+            }]
+        }}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+        Popup Content
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="result">Result</h3>
+
+<p>The result is a modal and a button (<em>Click Here</em>) that opens the modal.</p>
+
+<p><img src="/devdocs/2.2/common/images/widget/modal-widget-result.png" alt="Modal Widget" /></p>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+  <div class="page-updated">
+    <img src="/devdocs/2.2/i/icons/time.svg" alt="Updated" />
+    <time id="last-modified-at" itemprop="dateModified" datetime="2019-12-05">
+      Dec 5th, 2019
+    </time>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="" role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md">Become a Contributor</a></li>
+
+  <li class="" role="menuitem"><a href="https://glossary.magento.com/">Glossary</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/terms/">Terms of Service</a></li>
+
+  <li class="" role="menuitem"><a href="https://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/bk-release-notes.html">Release Notes</a></li>
+
+  <li class="" role="menuitem"><a href="/devdocs/2.2/guides/v2.2/release-notes/packages-open-source.html">Third-Party Licenses</a></li>
+
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.2/assets/js/app.min.js?ver=7"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs/2.2/common/js/last-modified-at.js"></script>
+<script type="text/javascript" src="/devdocs/2.2/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+</html>
+
