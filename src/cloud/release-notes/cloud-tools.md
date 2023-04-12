@@ -26,7 +26,7 @@ The `{{ site.data.var.ct }}` 2002.0.22 release changes the structure of the `{{ 
 
    -  {:.new}Updated the `composer.json` file for the `{{ site.data.var.ct }}` package to add a dependency for the `magento/magento-cloud-patches` v1.0.0 package.
 
-   -  {:.fix}<!--MAGECLOUD-4661-->Fixed an issue that caused the `{{ site.data.var.ct }}` patching process to break when applying patch sets on top of security-only releases, starting with Magento version 2.3.2-p2 and later. This issue was introduced by the new versioning scheme adopted for [security-only patches]({{ site.baseurl }}/guides/v2.3/release-notes/bk-release-notes.html#security-only-patches).
+   -  {:.fix}<!--MAGECLOUD-4661-->Fixed an issue that caused the `{{ site.data.var.ct }}` patching process to break when applying patch sets on top of security-only releases, starting with Magento version 2.3.2-p2 and later. This issue was introduced by the new versioning scheme adopted for [security-only patches](https://devdocs.magento.com/guides/v2.3/release-notes/bk-release-notes.html#security-only-patches).
 
 -  {:.fix}**Patches and critical fixes**–Update your Cloud environments with `{{ site.data.var.ct }}` version 2002.0.22 to apply the following patches and critical fixes. These patches are included in the `magento/magento-cloud-patches` v1.0.0 package.
 
@@ -338,7 +338,7 @@ The `{{site.data.var.ct}}` version 2002.0.17 includes an important security patc
 
    -  <!--MAGECLOUD--2442-->**Redis service support**—Added a Redis image, which is deployed to a Docker container and configured automatically to work with your Docker installation.
 
-   -  <!--MAGECLOUD--2358-->**Varnish service support**— Added a Varnish image, which is deployed automatically to a Docker container. After deployment, you can manually configure Varnish following Magento best practices. See [Configure and use Varnish]({{ site.baseurl }}/guides/v2.3/config-guide/varnish/config-varnish.html).
+   -  <!--MAGECLOUD--2358-->**Varnish service support**— Added a Varnish image, which is deployed automatically to a Docker container. After deployment, you can manually configure Varnish following Magento best practices. See [Configure and use Varnish](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html).
 
    -  <!--MAGECLOUD--2360-->Secure site access—Added SSL support to access your {{site.data.var.ee}} store and Admin panel.
 

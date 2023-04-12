@@ -6,7 +6,7 @@ functional_areas:
   - Deploy
 ---
 
-Configuration management, or [Pipeline Deployment]({{ site.baseurl }}/guides/v2.3/config-guide/deployment/pipeline/), provides a way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. Add this file to your commit and push it across all of your environments to keep consistent settings and reduce downtime. It provides the following benefits:
+Configuration management, or [Pipeline Deployment](https://devdocs.magento.com/guides/v2.3/config-guide/deployment/pipeline/), provides a way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. Add this file to your commit and push it across all of your environments to keep consistent settings and reduce downtime. It provides the following benefits:
 
 *  Better way to [manage and synchronize](#cloud-confman-over) the configuration across your Integration, Staging, and Production environments.
 *  Less time required to [build](#cloud-confman-scd-over) and deploy your project by moving static file deployment from deploy to the build phase. Your site is in maintenance mode until deployment completes. For details, see [Deployment Process]({{ site.baseurl }}/cloud/reference/discover-deploy.html).
@@ -17,7 +17,7 @@ These methods are optional, but strongly recommended. The process ensures faster
 To complete configuration management tasks, you must have a project reader role with [environment administrator]({{ site.baseurl }}/cloud/project/user-admin.html#cloud-role-env) privileges.
 
 {:.bs-callout-info}
-For extended technical information, see [Pipeline Deployment]({{ site.baseurl }}/guides/v2.3/config-guide/deployment/pipeline/). When configuring and using these features, follow this topic specifically. {{site.data.var.ece}} provides the build server, build and deploy scripts, and deployment environments. You only need to configure settings, generate the file, and deploy.
+For extended technical information, see [Pipeline Deployment](https://devdocs.magento.com/guides/v2.3/config-guide/deployment/pipeline/). When configuring and using these features, follow this topic specifically. {{site.data.var.ece}} provides the build server, build and deploy scripts, and deployment environments. You only need to configure settings, generate the file, and deploy.
 
 ## How it works {#cloud-confman-over}
 
@@ -56,7 +56,7 @@ Sensitive values are _not_ stored in `app/etc/config.php`. Any sensitive configu
 {:.bs-callout-info}
 You can set _any_ value using environment variables, but we recommend using environment variables for sensitive values.
 
-For a list of configurable settings, see [Configuration settings you can change](#cloud-clp-settings) and [System settings reference]({{ site.baseurl }}/guides/v2.3/config-guide/prod/config-reference-var-name.html).
+For a list of configurable settings, see [Configuration settings you can change](#cloud-clp-settings) and [System settings reference](https://devdocs.magento.com/guides/v2.3/config-guide/prod/config-reference-var-name.html).
 
 ### Static content deployment performance {#cloud-confman-scd-over}
 

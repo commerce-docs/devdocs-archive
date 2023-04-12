@@ -162,7 +162,7 @@ As you develop features, add extensions, and design themes, having real data to 
 ![Pull and sanitize production data]({{ site.baseurl }}/common/images/cloud_workflow-data-code-process.png)
 
 {:.bs-callout-info}
-Before pushing the data to another environment, you should consider sanitizing your data. You have a couple of options including [using support utilities]({{ site.baseurl }}/guides/v2.3/config-guide/cli/config-cli-subcommands-spt-util.html) or developing a script to scrub out customer data.
+Before pushing the data to another environment, you should consider sanitizing your data. You have a couple of options including [using support utilities](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-spt-util.html) or developing a script to scrub out customer data.
 
 {:.bs-callout-warning}
 We do not recommend pushing a database from an Integration or Staging environment to a Production environment. If you do, the data from the Integration or Staging environment overwrites your live Production data including sales, orders, new and updated customers, and much more.

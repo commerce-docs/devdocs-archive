@@ -80,7 +80,7 @@ We highly recommend the following best practices and considerations for your dep
 
    -  Ensure that you can connect to all three nodes in the Production environment using [SSH]({{ site.baseurl }}/cloud/env/environments-ssh.html#ssh).
 
-   -  Verify that Indexers are set to _Update on Schedule_. See [Indexing modes]({{ site.baseurl }}/guides/v2.3/extension-dev-guide/indexing.html) in the _Extension Developer Guide_.
+   -  Verify that Indexers are set to _Update on Schedule_. See [Indexing modes](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/indexing.html) in the _Extension Developer Guide_.
 
    -  Prepare the environment by updating any environment-specific variables in the Production code, verifying service availability and compatibility, and making any other required configuration changes.
 
@@ -126,10 +126,10 @@ Follow best practices for builds and deployment, and use the [Upgrades and patch
 
    -  Use SSH to log in to the remote server and verify the following:
 
-      -  Check indexer status and reindex as needed. See [Manage the indexers]({{ site.baseurl }}/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html).
+      -  Check indexer status and reindex as needed. See [Manage the indexers](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html).
 
       -  Check the `cron` logs and the `cron_schedule` table in the Magento database to verify cron status, and rerun cron jobs as needed.
-      See [Logging]({{ site.baseurl }}/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html#logging) in the _Configuration Guide_.
+      See [Logging](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html#logging) in the _Configuration Guide_.
 
    -  Complete post-upgrade User Acceptance Testing UAT on Staging and Production environments and fix any issues related to third-party and custom extension upgrades. See [User Acceptance Testing (UAT)]({{ site.baseurl}}/cloud/live/stage-prod-test.html).
 
@@ -227,9 +227,9 @@ There are two default deploy hooks. The `pre-deploy.php` hook completes necessar
 
 -  If Magento is **not installed**, it installs Magento with `bin/magento setup:install`, updates the deployment configuration, `app/etc/env.php`, and the database for your specified environment, such as Redis and website URLs. **Important:** When you completed the [First time deployment]({{ site.baseurl }}/cloud/setup/first-time-deploy.html) during setup, {{site.data.var.ee}} was installed and deployed across all environments.
 
--  If Magento **is installed**, performs any necessary upgrades. The deployment script runs [`bin/magento setup:upgrade`]({{ site.baseurl }}/guides/v2.3/install-gde/install/cli/install-cli-subcommands-db-upgr.html) to update the database schema and data (which is necessary after extension or core code updates), and also updates the [deployment configuration]({{ site.baseurl }}/guides/v2.3/config-guide/config/config-php.html), `app/etc/env.php`, and the database for your environment. Finally, the deployment script clears the Magento cache.
+-  If Magento **is installed**, performs any necessary upgrades. The deployment script runs [`bin/magento setup:upgrade`](https://devdocs.magento.com/guides/v2.3/install-gde/install/cli/install-cli-subcommands-db-upgr.html) to update the database schema and data (which is necessary after extension or core code updates), and also updates the [deployment configuration](https://devdocs.magento.com/guides/v2.3/config-guide/config/config-php.html), `app/etc/env.php`, and the database for your environment. Finally, the deployment script clears the Magento cache.
 
--  The script optionally generates static web content using the command [`magento setup:static-content:deploy`]({{ site.baseurl }}/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html).
+-  The script optionally generates static web content using the command [`magento setup:static-content:deploy`](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html).
 
 -  Uses scopes (`-s` flag in build scripts) with a default setting of `quick` for static content deployment strategy. You can customize the strategy using the environment variable [`SCD_STRATEGY`]({{ site.baseurl }}/cloud/env/environment-vars_magento.html). For details on these options and features, see [Static files deployment strategies]({{ site.baseurl }}/guides/v2.2/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html) and the `-s` flag for [Deploy static view files]({{ site.baseurl }}/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html).
 

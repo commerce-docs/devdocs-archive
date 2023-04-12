@@ -74,7 +74,7 @@ For Example:
 }
 ```
 
-See the [magento2-ui-library](https://magento-devdocs.github.io/magento2-ui-library/icons.html) for an icon list and implementation.
+See the [magento2-ui-library](https://commerce-docs.github.io/magento2-ui-library/icons.html) for an icon list and implementation.
 
 To customize a font you import, consider using [IcoMoon](https://icomoon.io/app/).
 

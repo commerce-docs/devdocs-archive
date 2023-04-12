@@ -59,7 +59,7 @@ stage:
 -  **Default**—`true`
 -  **Version**—Magento 2.1.4 and later
 
-Enables or disables cleaning [static content files]({{ site.baseurl }}/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview) generated during the build or deploy phase. We recommend the default value _true_ in development.
+Enables or disables cleaning [static content files](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview) generated during the build or deploy phase. We recommend the default value _true_ in development.
 
 -  **`true`**—Removes all existing static content before deploying the updated static content.
 -  **`false`**—The deployment only overwrites existing static content files if the generated content contains a newer version.
@@ -73,7 +73,7 @@ stage:
 ```
 
 Failure to clean static view files before deploying can cause problems if you
-deploy updates to existing files without removing the previous versions. Because of [static file fallback]({{ site.baseurl }}/guides/v2.3/frontend-dev-guide/cache_for_frontdevs.html#clean_static_cache) rules, fallback operations can display the wrong file if the directory contains multiple versions of the same file.
+deploy updates to existing files without removing the previous versions. Because of [static file fallback](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/cache_for_frontdevs.html#clean_static_cache) rules, fallback operations can display the wrong file if the directory contains multiple versions of the same file.
 
 ### `CRON_CONSUMERS_RUNNER`
 
@@ -97,7 +97,7 @@ stage:
         - consumer2
 ```
 
-By default, the deployment process overwrites all settings in the `env.php` file. Refer to [Manage message queues]({{ site.baseurl }}/guides/v2.3/config-guide/mq/manage-mysql.html) for more information about how this works in {{site.data.var.ce}} and {{site.data.var.ee}}.
+By default, the deployment process overwrites all settings in the `env.php` file. Refer to [Manage message queues](https://devdocs.magento.com/guides/v2.3/config-guide/mq/manage-mysql.html) for more information about how this works in {{site.data.var.ce}} and {{site.data.var.ee}}.
 
 The following command returns a list of message queue consumers:
 
@@ -289,7 +289,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-See [Configure the lock]({{site.baseurl}}/guides/v2.3/install-gde/install/cli/install-cli-subcommands-lock.html) in the _Install guide_.
+See [Configure the lock](https://devdocs.magento.com/guides/v2.3/install-gde/install/cli/install-cli-subcommands-lock.html) in the _Install guide_.
 
 ### `MYSQL_USE_SLAVE_CONNECTION`
 

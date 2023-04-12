@@ -145,6 +145,6 @@ Because each service runs in a separate container, the service logs are not avai
 Log file locations in the scaled architecture depend on the node type. See [Log locations in the Scaled architecture][scaled] topic.
 
 [hook]: {{site.baseurl}}/cloud/project/project-conf-files_magento-app.html#hooks
-[configlog]: {{site.baseurl}}/guides/v2.3/config-guide/cli/logging.html
+[configlog]: https://devdocs.magento.com/guides/v2.3/config-guide/cli/logging.html
 [slacklog]: {{site.baseurl}}/cloud/env/setup-notifications.html
 [scaled]: {{site.baseurl}}/cloud/architecture/scaled-architecture.html#log-locations

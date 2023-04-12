@@ -209,7 +209,7 @@ The documentation is available in a convenient [HTML](https://glossary.magento.c
 
 [Magento naming convention for the Less variables]: {{ page.baseurl }}/coding-standards/code-standard-less.html#naming
 
-[Magento UI library documentation]: https://magento-devdocs.github.io/magento2-ui-library/
+[Magento UI library documentation]: https://commerce-docs.github.io/magento2-ui-library/
 
 [ui_lib1.png]: {{ site.baseurl }}/common/images/ui_lib1.png
 [ui_lib2.png]: {{ site.baseurl }}/common/images/ui_lib2.png

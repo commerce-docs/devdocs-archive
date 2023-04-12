@@ -25,7 +25,7 @@ crons:
 ```
 
 {:.bs-callout-info}
-We use only one cron for {{site.data.var.ece}} projects because of the nature of read-only environments. This configuration is different from {{site.data.var.ee}}, which has three default cron jobs. See [Configure and run crons]({{ site.baseurl }}/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html) in the {{site.data.var.ee}} documentation.
+We use only one cron for {{site.data.var.ece}} projects because of the nature of read-only environments. This configuration is different from {{site.data.var.ee}}, which has three default cron jobs. See [Configure and run crons](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html) in the {{site.data.var.ee}} documentation.
 
 {:.procedure}
 To verify cron configuration on Starter projects:

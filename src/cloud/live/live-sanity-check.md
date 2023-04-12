@@ -174,7 +174,7 @@ We highly recommend having Magento already installed prior to deployment. During
 *  Install the Magento application if needed
 *  If the Magento application is installed, upgrade components
 *  Clear the [cache](https://glossary.magento.com/cache)
-*  Set the Magento application for [`production`]({{ site.baseurl }}/guides/v2.3/config-guide/bootstrap/magento-modes.html#production-mode) mode
+*  Set the Magento application for [`production`](https://devdocs.magento.com/guides/v2.3/config-guide/bootstrap/magento-modes.html#production-mode) mode
 
 {:.procedure}
 To deploy your site:
@@ -187,7 +187,7 @@ To deploy your site:
    php bin/magento setup:upgrade
    ```
 
-   We highly recommend having Magento already installed if you followed the [First time deployment]({{ site.baseurl }}/cloud/setup/first-time-deploy.html). If you have not installed the Magento application yet, use the [`magento setup:install`]({{ site.baseurl }}/guides/v2.3/install-gde/install/cli/install-cli.html) command instead. Be advised, you may encounter issues with enabled modules on a fresh installation.
+   We highly recommend having Magento already installed if you followed the [First time deployment]({{ site.baseurl }}/cloud/setup/first-time-deploy.html). If you have not installed the Magento application yet, use the [`magento setup:install`](https://devdocs.magento.com/guides/v2.3/install-gde/install/cli/install-cli.html) command instead. Be advised, you may encounter issues with enabled modules on a fresh installation.
 
 1. Clean the Magento cache:
 
@@ -195,7 +195,7 @@ To deploy your site:
    php bin/magento cache:clean
    ```
 
-1. Set the Magento application for [production mode]({{ site.baseurl }}/guides/v2.3/config-guide/bootstrap/magento-modes.html#production-mode):
+1. Set the Magento application for [production mode](https://devdocs.magento.com/guides/v2.3/config-guide/bootstrap/magento-modes.html#production-mode):
 
    ```bash
    php bin/magento deploy:mode:set production

@@ -6,7 +6,7 @@ functional_areas:
   - Upgrade
 ---
 
-Sometimes we provide a [custom patch]({{ site.baseurl }}/guides/v2.3/comp-mgr/patching.html#custom-patches) to address a specific issue. Also, third-party extension developers can provide a custom patch. Copy the custom patch to the `/m2-hotfixes` directory and test it on your local workstation.
+Sometimes we provide a [custom patch](https://devdocs.magento.com/guides/v2.3/comp-mgr/patching.html#custom-patches) to address a specific issue. Also, third-party extension developers can provide a custom patch. Copy the custom patch to the `/m2-hotfixes` directory and test it on your local workstation.
 
 {% include cloud/note-upgrade.md %}
 

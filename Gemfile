@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'devdocs', git: 'https://github.com/magento-devdocs/devdocs-theme.git', ref: 'e1a4ff688'
+gem 'devdocs', git: 'https://github.com/commerce-docs/devdocs-theme.git', ref: 'e1a4ff688'
 gem 'jekyll'
 gem 'whatsup_github'
 gem 'rake'
