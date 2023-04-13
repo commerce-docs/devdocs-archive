@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>DevDocs Contributions | Magento 2.0 Developer Documentation</title>
+	<meta name="description" content="Magento 2.0.18 Developer Documentation.
+">
+	<meta http-equiv="last-modified" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,700,600,300,800' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="/devdocs/2.0/css/app.css" />
+	<link rel="stylesheet" href="/devdocs/2.0/css/print.css" media="print" />
+	<link rel="canonical" href="/devdocs/2.0//guides/v2.0/contributor-guide/contributing_docs.html">
+
+    <!-- WebUI popover css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
+
+  <script>
+    var baseUrl = "/devdocs/2.0/";
+  </script>
+
+	<!-- crazyegg -->
+	<script type="text/javascript">
+	setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName("script")[0];
+	a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0038/0321.js?"+Math.floor(new Date().getTime()/3600000);
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+
+    <!-- heap analytics -->
+    <script type="text/javascript">
+        window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        heap.load("2619540280");
+    </script>
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body>
+
+<header class="site-header">
+
+	<nav id="global-nav">
+
+		<div class="menu-btn"><a class="menu-trigger menu-icon" href="#" data-proofer-ignore></a></div>
+
+		<div class="container">
+
+			<a class="logo" href="/devdocs/2.0/"><img src="/devdocs/2.0/i/m-logo.svg" alt=""><img src="/devdocs/2.0/i/magento-logo.svg" alt="Magento" class="magento-logo" /><img src="/devdocs/2.0/i/devdocs-logo.svg" alt="Devdocs" class="devdocs-logo" /></a>
+
+			
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn btn-small dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing_docs.html">Magento 2.0</a></li>
+	
+  </ul>
+
+</div>
+
+
+
+			<nav class="nav-main" role="menubar">
+
+  <div class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <a href="#" data-proofer-ignore tabindex="-1">Setup</a>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/devdocs/2.0/guides/v2.0/install-gde/bk-install-guide.html">Installation Guide</a></li>
+          
+          <li><a href="/devdocs/2.0/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade Guide</a></li>
+          
+          <li><a href="/devdocs/2.0/guides/v2.0/config-guide/bk-config-guide.html">Configuration Guide</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/migration/bk-migration-guide.html">Migration Guide</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/cloud/bk-cloud.html">Magento Commerce (Cloud) Guide</a></li>
+          <li><a href="/devdocs/2.0/magento-release-information.html">Release Information</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <a href="#" data-proofer-ignore tabindex="-1">Development</a>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">Backend</div>
+        <ul>
+          <li><a href="/devdocs/2.0/guides/v2.0/architecture/bk-architecture.html">Architecture Guide</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">Extension Developer Best Practices</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/mrg/intro.html">Module Reference Guide</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/coding-standards/bk-coding-standards.html">Coding Standards</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing.html">Contributor Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Frontend</div>
+        <ul>
+          <li class=""><a href="/devdocs/2.0/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a></li>
+          
+          <li><a href="/devdocs/2.0/guides/v2.0/ui-components/ui-component.html">UI Components</a></li>
+          
+          <li><a href="/devdocs/2.0/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript Developer Guide</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/pattern-library/bk-pattern.html">Admin Design Pattern Library</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/design-styleguide/bk-styleguide.html">Admin Style Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/devdocs/2.0/guides/v2.0/get-started/bk-get-started-api.html">Get Started with Magento Web APIs</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/rest/bk-rest.html">REST API Reference</a></li>
+          <li><a href="/devdocs/2.0/guides/v2.0/soap/bk-soap.html">SOAP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <a href="#" data-proofer-ignore tabindex="-1">Testing</a>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/devdocs/2.0/guides/v2.0/test/testing.html">Magento Testing Guide</a></li>
+        
+        <li><a href="/devdocs/2.0/guides/v2.0/mtf/mtf_introduction.html">Functional Testing</a></li>
+        <li><a href="/devdocs/2.0/guides/v2.0/test/integration/integration_test_execution.html">Integration Testing</a></li>
+        <li><a href="/devdocs/2.0/guides/v2.0/test/js/jasmine.html">JavaScript Unit Testing</a></li>
+        <li><a href="/devdocs/2.0/guides/v2.0/test/unit/unit_test_execution.html">PHP Unit Testing</a></li>
+        <li><a href="/devdocs/2.0/guides/v2.0/get-started/web-api-functional-testing.html">Web API Functional Testing</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="nav-main-separator"></div>
+
+
+  <div class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <a href="#" data-proofer-ignore tabindex="-1">Functional Areas</a>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/devdocs/2.0/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/devdocs/2.0/guides/v2.0/payments-integrations/bk-payments-integrations.html">Payment Integrations</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <a href="#" data-proofer-ignore tabindex="-1">Tutorials</a>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/devdocs/2.0/guides/v2.0/howdoi/bk-how-do-i.html">How To</a></li>
+        
+
+        <li><a href="/devdocs/2.0/videos/">Video Tutorials</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</nav><!-- /.nav-main -->
+
+
+			<div class="search-btn">
+				<a class="search-trigger search-icon" href="/devdocs/2.0/search.html"></a>
+			</div>
+
+			<form class="quick-search" action="/devdocs/2.0/guides/v2.0/search.html" method="get">
+				<input type="search" name="q" placeholder="Search" autocomplete="off" />
+				<a href="#" data-proofer-ignore class="quick-search-close">&times;</a>
+			</form>
+
+		</div>
+
+	</nav><!-- #global-nav -->
+
+</header>
+<div class="nav-main-fader"></div>
+
+
+<div id="gl-wrapper">
+
+	<!-- .main-container -->
+	<div class="main-container">
+		<a id="main-content"></a>
+
+
+<div class="container">
+
+    
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">Table of Contents</a>
+	<div class="sidebar-wrapper">
+
+
+
+<h4>Contribution Guide</h4>
+<div class="left-navigation">
+    <ul>
+    
+    
+
+<li class="nav-level1  " id="code-contributions">
+
+    
+    <div class="toggle closed">&nbsp;</div>
+    
+    
+    
+    <a href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing.html">Code Contributions</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="backward-compatible-development">
+            
+            
+        
+            
+            <a href="/devdocs/2.0/guides/v2.0/contributor-guide/backward-compatible-development">Backward compatible development</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+    
+    
+
+<li class="nav-level1 active " id="devdocs-contributions">
+
+    
+    <div class="toggle closed">&nbsp;</div>
+    
+    
+    
+    <a href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing_docs.html">DevDocs Contributions</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-definition-of-done">
+            
+            
+        
+            
+            <a href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing_dod.html">Magento Definition of Done</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="suggested-topics-for-contribution">
+            
+            
+        
+            
+            <a href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing_docs_suggested.html">Suggested topics for contribution</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="quarterly-contributors">
+            
+            
+        
+            
+            <a href="/devdocs/2.0/guides/v2.0/contributor-guide/quarterly-contributors.html">Quarterly Contributors</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+    
+    
+
+<li class="nav-level1  " id="templates">
+
+    
+    <div class="toggle closed">&nbsp;</div>
+    
+    
+    
+    <span>Templates</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="basic-template">
+            
+            
+        
+            
+            <a href="/devdocs/2.0/guides/v2.0/contributor-guide/templates/basic_template.html">Basic template</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  tutorial" id="sample-template-tutorial">
+            
+            
+        
+            
+            <a href="/devdocs/2.0/guides/v2.0/contributor-guide/templates/tutorial-template-first.html">Sample template tutorial</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+    
+    </ul>
+</div>
+
+	</div>
+
+</aside>
+
+
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <a class="breadcrumb-item" href="/devdocs/2.0/"><span>Home</span></a>
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">DevDocs Contributions</span>
+
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+    
+
+
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">DevDocs Contributions</h1>
+
+  
+
+
+</section>
+
+
+			<p>Share your knowledge with the community by contributing to Magento DevDocs! You can contribute by creating an issue or pull request (PR) on our <a href="https://github.com/magento/devdocs" target="\_blank">devdocs</a> Github repository. We welcome all types of contributions; from minor typo fixes to new topics.</p>
+
+<p>Magento’s team of technical writers reviews all issues and pull requests on a regular basis, and we do our best to address all issues as soon as possible. Working through the backlog takes time, though, so we appreciate your patience.</p>
+
+<div class="bs-callout bs-callout-tip" id="tip">
+  <p>If you are not sure where to start contributing, you can review our list of <a href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing_docs_suggested.html">suggested topics</a>.</p>
+</div>
+
+<p>If you write and contribute a full topic, we will put your name (or company’s name) at the top of the page, right under the title, and link it to your blog or website! We will also add your picture and a link to your Github account on the <a href="/devdocs/2.0/guides/v2.0/contributor-guide/quarterly-contributors.html#top-recent-contributors">Top recent contributors</a> page.</p>
+
+<h2 id="contribution-guidelines">Contribution guidelines</h2>
+<p>We use <a href="http://daringfireball.net/projects/markdown/" target="\_blank">Markdown</a> to write our documentation, which is a simple markup language that we convert to HTML using <a href="http://kramdown.gettalong.org/syntax.html" target="\_blank">Kramdown</a>. We have a <a href="/devdocs/2.0/guides/v2.0/contributor-guide/templates/basic_template.html" target="\_blank">template</a> to make getting started easy.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>Refer to the <a href="http://www.magento.com/legaldocuments/mca">Magento Contributor Agreement</a> for detailed information about licensing. All contributors are required to submit a click-through form to agree to the terms.</p>
+</div>
+
+<ol>
+  <li>
+    <p>First, check <a href="https://github.com/magento/devdocs/pulls">existing pull requests</a> and make sure you are not duplicating work!</p>
+  </li>
+  <li>
+    <p>For large contributions or changes that include multiple files, <a href="https://github.com/magento/devdocs/issues" target="\_blank">open an issue</a> and discuss it with us first. This may prevent duplicate or unnecessary effort.</p>
+  </li>
+  <li>
+    <p>Familiarize yourself with the existing documentation; taking a look at what is already there will help you decide where your topic best fits. The DevDocs team can also help find the best home for your new topics.</p>
+  </li>
+  <li>
+    <p>Focus on the content and on creating useful information for your fellow Magento developers and community members. Don’t forget to review your work for typos, formatting errors, or sentences that need clarifying before opening a pull request.</p>
+  </li>
+  <li>
+    <p>Use the following guidelines to help you with the writing process:</p>
+
+    <ul>
+      <li>Define the goal of your topic. What exactly do you want to teach the reader?</li>
+      <li>Make the title of your topic reflect the content.</li>
+      <li>Keep your sentences concise and try to separate conceptual information from procedural steps.</li>
+      <li>Remember to use active voice (not passive), write in the present tense, and use a friendly tone in second person. For example, <em>“You can now view the output…“</em>.</li>
+      <li>Use notes to alert readers about important details.</li>
+      <li>Use cross-references to other topics if appropriate. We can help you with the syntax if it is not clear. The template provides an example you can use.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="fork">Fork and clone a repository</h2>
+<p>Use the <a href="#fork">fork</a> and <a href="#create-a-pull-request">pull</a> model to contribute to Magento DevDocs. This model requires you to keep your forked repository in sync with the upstream repository. You submit pull requests to <em>pull</em> a set of changes from your forked repository to the upstream repository.</p>
+
+<p>To fork the devdocs repository on Github, do the following:</p>
+
+<ol>
+  <li>
+    <p>Create or log in to your development environment account on GitHub.</p>
+  </li>
+  <li>
+    <p>Navigate to the <a href="https://github.com/magento/devdocs" target="\_blank">DevDocs repository</a>.</p>
+  </li>
+  <li>
+    <p>Click <strong>Fork</strong> at the top right.</p>
+  </li>
+  <li>
+    <p>Clone the repository into your development environment and then start writing and committing your changes. Optionally, create a branch first if you plan to work on multiple changes.</p>
+  </li>
+  <li>
+    <p>Build the devdocs site locally using Jekyll by following the instructions in our <a href="https://github.com/magento/devdocs/blob/develop/README.md" target="\_blank">README</a>.</p>
+  </li>
+</ol>
+
+<h2 id="sync">Update your fork</h2>
+<p>As we merge changes with the upstream repository, your fork becomes outdated and pull requests might result in merge conflicts. To see if your fork is outdated, open the fork page in GitHub. If you see the following message at the top of the page, you must update your fork: <code class="highlighter-rouge">This branch is &lt;number&gt; commits behind develop</code>.</p>
+
+<p>There are two ways to update your fork. The typical way is discussed in <a href="https://help.github.com/articles/syncing-a-fork" target="\_blank">GitHub documentation</a>. Make sure to update from the correct branch!</p>
+
+<p>It is also possible to use the GitHub interface to update your fork. This is referred to as a <em>reverse pull request</em>. This method has the downside of inserting unnecessary information into fork commit history.</p>
+
+<ol>
+  <li>
+    <p>Go to your forked repository GitHub page, click <strong>New pull request</strong>. You should see the following message:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>There isn’t anything to compare.
+magento:2.0 is up to date with all commits from &lt;your fork&gt;:2.0. Try switching the base for your comparison.
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Click the base link and then click <strong>Create pull request</strong>.</p>
+  </li>
+  <li>
+    <p>Enter a name for your pull request.</p>
+  </li>
+  <li>
+    <p>Scroll to the bottom of the page and click <strong>Merge pull request</strong>.</p>
+  </li>
+  <li>
+    <p>Click <strong>Confirm Merge</strong>.</p>
+  </li>
+</ol>
+
+<h2 id="create-a-pull-request">Create a pull request</h2>
+<p>To create a pull request do the following:</p>
+
+<ol>
+  <li>
+    <p>Push your changes to your forked repository on GitHub.</p>
+  </li>
+  <li>
+    <p>In your forked repository, click <strong>New pull request</strong>.</p>
+  </li>
+  <li>
+    <p>Be sure to create the pull request on the <code class="highlighter-rouge">develop</code> branch. We do not accept pull requests on other branches, like <code class="highlighter-rouge">gh-pages</code>.</p>
+  </li>
+  <li>
+    <p>Review the changes, then click <strong>Create pull request</strong>.</p>
+  </li>
+  <li>
+    <p>Fill out the form, and click <strong>Create pull request</strong> again to submit the pull request—that’s it!</p>
+  </li>
+</ol>
+
+<h2 id="report-an-issue">Report an issue</h2>
+<p>If you find a typo or erroneous information in Magento DevDocs, you can either fix it with a pull request (as described above) or you can report it by creating an issue in the DevDocs Github repository.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>Check the <a href="https://github.com/magento/devdocs/issues">existing issues</a> on Github to see if someone has already reported the issue.</p>
+</div>
+
+<p>All topics on this site contain a link to the Issues panel on Github, which makes it easy to report issues on specific topics. Click the <strong>Give us feedback</strong> link at the top left of the page to open an issue for that page.</p>
+
+<h2 id="edit-metadata">Edit metadata</h2>
+<p>The Markdown (.md) file’s <span term-uuid="3f0f2ef1-ad38-41c6-bd1e-390daaa71d76" class="glossary-term" data-toggle="popover">metadata</span> is a set of YAML key-value pairs. The metadata section is located at the top of each file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">group</span><span class="pi">:</span> <span class="s">install2</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Continue with your installation</span>
+<span class="na">version</span><span class="pi">:</span> <span class="m">2.0</span>
+<span class="na">github_link</span><span class="pi">:</span> <span class="s">install-gde/continue.md</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Refer to the following table for a description of each key-value pair.</p>
+
+<table style="width:100%">
+   <colgroup>
+      <col width="30%" />
+      <col width="70%" />
+   </colgroup>
+   <thead>
+      <tr style="background-color:lightgray">
+         <th>Key-value pair</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+         <td>layout: default</td>
+         <td>Selects the template Jekyll will use to render the .md file into HTML&amp;CSS.</td>
+      <tr>
+         <td>group: install</td>
+         <td>Defines which guide the file belongs to, that is, which left-hand menu collection the file will show up in. Note that what you put here does not affect the top navigation menu. That is controlled by the `_/includes/navigation.html` file.</td>
+      </tr>
+      <tr>
+         <td>title: Install Magento</td>
+         <td>Sets the title of the page in the HTML meta and the main title on the page.</td>
+      </tr>
+      <tr>
+         <td>version: 2.0</td>
+         <td>Specifies which version(s) of Magento the topic affects. We also use this data to build links to the file on Github.</td>
+      </tr>
+      <tr>
+        <td>github_link: install-gde/continue.md</td>
+        <td>Specifies the name and location of the source file in the Github repository.</td>
+      </tr>
+   </tbody>
+</table>
+
+<h4 id="add-a-contributors-name-to-a-topic">Add a Contributor’s name to a topic</h4>
+<p>When a community member contributes an entire topic—or makes substantial improvements to an existing topic—we like to thank them by adding their name (or company name) beneath the topic title and a link to their blog or web site.</p>
+
+<p>In the metadata section at the top of the file, add these two entries:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">contributor_name</span><span class="pi">:</span> <span class="s">&lt;name_of_contributor&gt;</span>
+<span class="na">contributor_link</span><span class="pi">:</span> <span class="s">&lt;link_to_contributors_site_or_blog&gt;</span>
+</code></pre></div></div>
+
+<p>Thank you for contributing your brilliance to Magento DevDocs!!</p>
+
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+    <div class="page-contributor">
+      <a href="http://www.vaimo.com/" target="_blank">
+        Thanks to Staffan Palopää from Vaimo for contributing this topic
+      </a>
+    </div>
+  
+
+  <!-- 
+   <div class="github-link">
+     <a class="improve-page" href="https://github.com/magento/devdocs/tree/develop/guides/v2.0/contributor-guide/contributing_docs.md" target="_blank">
+       Edit this page on GitHub
+     </a>
+   </div>
+   -->
+
+  <!-- <div class="new-issue">
+    <a href="https://github.com/magento/devdocs/issues/new?title=&body=Feedback on page: /guides/v2.0/contributor-guide/contributing_docs.html" target="_blank">Give us feedback</a>
+  </div> -->
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.container -->
+
+
+	</div>
+	<!-- /.main-container -->
+
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div id="footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav">
+        <li><a href="/devdocs/2.0/guides/v2.0/contributor-guide/contributing_docs.html">Become a Contributor</a>
+        <li><a href="https://magento.github.io/glossary/index.html?audience=developer">Glossary</a></li>
+        <li><a href="http://magento.com/legal/terms/privacy/">Privacy Policy</a></li>
+        <li><a href="http://magento.com/legal/terms/">Terms of Service</a></li>
+        <li><a href="http://magento.com/legal/licensing/">License/Trademark FAQ</a></li>
+        <li><a href="/devdocs/2.0/guides/v2.0/release-notes/bk-release-notes.html">Release Notes</a></li>
+        <li><a href="/devdocs/2.0/magento-third-party.html">Third-Party Licenses</a></li> 
+      </ul>
+    </div>
+
+		<div class="copyright-date">&copy; 2023 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs/2.0/common/js/app.min.js"></script>
+
+<!-- Glossary integration -->
+<script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+<script src="/devdocs/2.0/common/js/glossary.tooltip.min.js"></script>
+<script>
+    $(document).ready(function(){
+      magento.glossary.init("https://magento.github.io/glossary/data/content-glossary.xml",function(term){return term.types.includes("glossary");},magento.glossary.tooltip.init);
+      });
+</script>
+
+<script type="text/javascript">
+    (function() {
+        var didInit = false;
+        function initMunchkin() {
+            if(didInit === false) {
+                didInit = true;
+                Munchkin.init('585-GGD-959', {cookieAnon: false});
+            }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+</script>
+
+
+
+<!--Google Analytics-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66243208-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
+
