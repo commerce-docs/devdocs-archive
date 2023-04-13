@@ -11,7 +11,7 @@ module PageBaseUrlGenerator
       pages = site.pages
       siteBaseUrl = site.baseurl
       for page in pages
-        version = "2.2"
+        version = "2.0"
 
         destination = page.path
         matcher = /guides\/v([\d\.]+)\/.*/.match(destination)

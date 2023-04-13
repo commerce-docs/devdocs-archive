@@ -10,8 +10,6 @@ version: 2.0
 github_link: extension-dev-guide/cache/partial-caching/database-caching.md
 redirect_from:
   -  /guides/v2.0/config-guide/database/database.html
-  -  /guides/v2.1/config-guide/database/database.html
-  -  /guides/v2.2/config-guide/database/database.html
 ---
 
 This topic discusses how to use the Magento 2 database for caching. After you complete these tasks, cached objects are stored in the `cache` and `cache_tag` Magento 2 database tables. Nothing is stored in `var/cache` or `var/page_cache`.

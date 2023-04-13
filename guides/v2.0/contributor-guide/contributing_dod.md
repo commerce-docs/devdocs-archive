@@ -8,7 +8,6 @@ menu_order: 2
 menu_node:
 version: 2.0
 github_link: contributor-guide/contributing_dod.md
-redirect_from: /guides/v1.0/contributor-guide/contributing_dod.html
 ---
 
 ### Overview

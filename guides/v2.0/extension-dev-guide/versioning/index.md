@@ -10,8 +10,6 @@ version: 2.0
 github_link: extension-dev-guide/versioning/index.md
 redirect_from: 
   - /guides/v2.0/architecture/versioning.html
-  - /guides/v2.1/architecture/versioning.html
-  - /guides/v2.2/architecture/versioning.html
 ---
 
 Magento software and Magento module releases have their own unique version number.

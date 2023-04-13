@@ -36,7 +36,7 @@ If you are interested in working on one of these projects, open a [pull request 
           <p><strong>Acceptance criteria:</strong></p>
             <ul>
               <li>Sample code showing the use of the menu widget.</li>
-              <li>Sample code showing the use of other widgets that are not documented, including <code><a href="http://devdocs.magento.com/guides/v2.0/javascript-dev-guide/widgets/widget_dialog.html">dropdowndialog</a></code> and <code><a href="http://devdocs.magento.com/guides/v2.0/javascript-dev-guide/widgets/widget_list.html">list</a></code>.</li>
+              <li>Sample code showing the use of other widgets that are not documented, including <code><a href="https://devdocs.magento.com/guides/v2.0/javascript-dev-guide/widgets/widget_dialog.html">dropdowndialog</a></code> and <code><a href="https://devdocs.magento.com/guides/v2.0/javascript-dev-guide/widgets/widget_list.html">list</a></code>.</li>
             </ul>
         </td>
         <td></td>

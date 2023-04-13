@@ -7,7 +7,6 @@ menu_title: Architecture layers
 menu_order:
 version: 2.0
 github_link: architecture/archi_perspectives/arch_layers.md
-redirect_from: /guides/v1.0/architecture/archi_perspectives/arch_layers.html
 ---
 
 ## Magento Framework

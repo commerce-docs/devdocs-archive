@@ -5,7 +5,6 @@ title: Technical guidelines
 version: 2.0
 github_link: coding-standards/technical-guidelines.md
 redirect_from:
-    - /guides/v2.1/coding-standards/technical-guidelines/technical-guidelines.html
 functional_areas:
     - Standards
 ---

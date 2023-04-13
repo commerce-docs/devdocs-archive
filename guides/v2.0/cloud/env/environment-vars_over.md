@@ -9,15 +9,6 @@ menu_node: parent
 version: 2.0
 github_link: cloud/env/environment-vars_over.md
 redirect_from:
-  - /guides/v2.1/cloud/live/config-reference-most.html
-  - /guides/v2.2/cloud/live/config-reference-most.html
-  - /guides/v2.3/cloud/live/config-reference-most.html
-  - /guides/v2.1/cloud/live/config-reference-payment.html
-  - /guides/v2.2/cloud/live/config-reference-payment.html
-  - /guides/v2.3/cloud/live/config-reference-payment.html
-  - /guides/v2.1/cloud/live/config-reference-sens.html
-  - /guides/v2.2/cloud/live/config-reference-sens.html
-  - /guides/v2.3/cloud/live/config-reference-sens.html
 functional_areas:
   - Cloud
   - Configuration
@@ -33,10 +24,10 @@ You can create all variables using the Magento Cloud CLI in all Starter environm
 ## Additional information {#magevar}
 For additional information on Magento variables for v2.1.X and later, see the following:
 
-* [Sensitive and system-specific](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-sens.html)
-* [Sensitive configuration paths reference](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-payment.html)
-* [Other configuration paths reference](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-most.html)
-* [System settings reference](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-var-name.html)
+* [Sensitive and system-specific](https://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-sens.html)
+* [Sensitive configuration paths reference](https://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-payment.html)
+* [Other configuration paths reference](https://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-most.html)
+* [System settings reference](https://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-var-name.html)
 
 To use a configuration path as a variable:
 

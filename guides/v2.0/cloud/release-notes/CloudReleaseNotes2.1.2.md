@@ -11,7 +11,6 @@ level3_subgroup: mccloud-relnotes
 version: 2.0
 github_link: cloud/release-notes/CloudReleaseNotes2.1.2.md
 redirect_from:
-  - /guides/v2.2/cloud/release-notes/CloudReleaseNotes2.1.2.html
 functional_areas:
   - Cloud
 ---

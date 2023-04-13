@@ -14,7 +14,7 @@ Thanks to the following community members, partners, and Magento fans who helped
 
 We appreciate all the typo fixes, code corrections, comments in issues, and clarifications that our contributors provide.
 
-{% include home/contributors.html %}
+<!-- {% include home/contributors.html %} -->
 
 <br/>
 

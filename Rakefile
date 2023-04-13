@@ -3,17 +3,69 @@ require 'kramdown'
 require 'find'
 require 'launchy'
 
-##############
-#   Build    #
-##############
+require 'colorize'
 
-# Generate the site
+desc "Same as 'rake', 'rake preview'"
+task default: %w[preview]
 
-desc "build the site"
-task :build do
-  puts 'Building the site with Jekyll...'
-  system "bundle exec jekyll build"
+desc 'Preview the devdocs locally'
+task preview: %w[install clean] do
+  puts 'Generating devdocs locally ... '.magenta
+    print 'enabled the additional configuration parameters from _config.local.yml: $ '.magenta
+    sh 'bundle exec jekyll serve --incremental \
+                                 --open-url \
+                                 --livereload \
+                                 --trace'
 end
+
+task :clean do
+  print 'Cleaning after the last site generation: $ '.magenta
+  sh 'bundle exec jekyll clean'
+  puts 'Clean!'.green
+end
+
+task :install do
+  print 'Install gems listed in the Gemfile: $ '.magenta
+  sh 'bundle install'
+  puts 'Installed!'.green
+end
+
+desc 'Build the entire website'
+task build: %w[clean] do
+  print 'Building the site with Jekyll: $ '.magenta
+  sh 'bundle exec jekyll build --verbose --trace'
+  puts 'Built!'.green
+end
+
+desc 'Build the entire website'
+task build_and_deploy: %w[clean] do
+  print 'Building the site with Jekyll: $ '.magenta
+
+  # Check for uncommitted messages
+  abort "\nCannot checkout. The branch contains uncommitted messages.".red unless `git status --short`.empty?
+
+  # Back up an environmental variable
+  jekyll_env = ENV['JEKYLL_ENV']
+  ENV['JEKYLL_ENV'] = 'production'
+  # Build the site
+  sh 'bundle exec jekyll build --verbose --baseurl=/devdocs/2.0'
+  # Restore the environmental variable
+  ENV['JEKYLL_ENV'] = jekyll_env
+
+  # Remember the SHA of the built commit
+  commit = `git log --pretty=format:"%h" -1`
+
+  # Deploy the site
+  `git checkout gh-pages`
+  `cp -R _site/ 2.0/`
+  `git add 2.0/`
+  `git commit --message "Deploy archived-docs-v2.0: #{commit}"`
+  `git push public`
+  `git checkout -`
+
+  puts 'Done!'.green
+end
+
 
 ################
 #   Validate   #
@@ -49,7 +101,9 @@ task :check_links => :build do
     parallel: { :in_processes => 3 },
     typhoeus: { :followlocation => true, :connecttimeout => 10, :timeout => 30 },
     hydra: { :max_concurrency => 50 },
-    cache: { :timeframe => '30d' }
+    cache: { :timeframe => '30d' },
+    internal_domains: ['devdocs.magento.com'],
+    disable_external: true
   }
   HTMLProofer.check_directory("./_site", options).run
 

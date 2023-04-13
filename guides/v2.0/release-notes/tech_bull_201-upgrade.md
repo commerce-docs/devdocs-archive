@@ -10,7 +10,6 @@ version: 2.0
 github_link: release-notes/tech_bull_201-upgrade.md
 redirect_from: 
   - /guides/v2.0/release-notes/tech_bull_jan_22_16.html
-  - /guides/v2.1/release-notes/tech_bull_201-upgrade.html
 ---
 
 This bulletin informs you of the following issues:

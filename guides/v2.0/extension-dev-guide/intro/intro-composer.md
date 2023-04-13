@@ -10,8 +10,6 @@ version: 2.0
 github_link: extension-dev-guide/intro/intro-composer.md
 redirect_from: 
   - /guides/v2.0/mktpl-quickstart/intro-composer.html
-  - /guides/v2.1/mktpl-quickstart/intro-composer.html
-  - /guides/v2.2/mktpl-quickstart/intro-composer.html
 ---
 
 {% include install/composer-overview.html %}

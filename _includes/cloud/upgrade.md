@@ -76,7 +76,7 @@ Verify other changes you're going to submit to source control before you start t
 This section discusses steps to upgrade *only* if your current Magento Commerce version is 2.0.4.
 
 ### Create an authorization file
-To enable you to install and update the Magento software, you must have an `auth.json` file in your project's root directory. `auth.json` contains your Magento Commerce [authorization credentials](http://devdocs.magento.com/guides/v2.1/install-gde/prereq/connect-auth.html).
+To enable you to install and update the Magento software, you must have an `auth.json` file in your project's root directory. `auth.json` contains your Magento Commerce [authorization credentials](https://devdocs.magento.com/guides/v2.1/install-gde/prereq/connect-auth.html).
 
 In some cases, you might already have `auth.json` so check to see if it exists and has your authentication credentials before you create a new one.
 

@@ -10,8 +10,6 @@ version: 2.0
 github_link: cloud/live/stage-prod-live.md
 redirect_from:
   - /guides/v2.0/cloud/live/stage-prod-over.html
-  - /guides/v2.1/cloud/live/stage-prod-over.html
-  - /guides/v2.2/cloud/live/stage-prod-over.html
 functional_areas:
   - Cloud
   - Deploy

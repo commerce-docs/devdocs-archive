@@ -10,8 +10,6 @@ version: 2.0
 github_link: cloud/project/project-webint-branch.md
 redirect_from:
   - /guides/v2.0/cloud/project/project-priv-repos.html
-  - /guides/v2.1/cloud/project/project-priv-repos.html
-  - /guides/v2.2/cloud/project/project-priv-repos.html
 functional_areas:
   - Cloud
   - Configuration

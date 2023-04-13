@@ -9,7 +9,6 @@ menu_order: 410
 version: 2.0
 github_link: install-gde/trouble/git/tshoot_git-pull-origin.md
 redirect_from:
-  - /guides/v1.0/install-gde/trouble/tshoot_git-pull-origin.html
   - /guides/v2.0/install-gde/trouble/tshoot_git-pull-origin.html
 functional_areas:
   - Install

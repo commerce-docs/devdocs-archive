@@ -6,12 +6,7 @@ version: 2.0
 github_link: cloud/architecture/pro-architecture.md
 redirect_from:
   - /guides/v2.0/cloud/discover-arch.html
-  - /guides/v2.1/cloud/discover-arch.html
-  - /guides/v2.2/cloud/discover-arch.html
   - /guides/v2.0/cloud/reference/discover-arch.html
-  - /guides/v2.1/cloud/reference/discover-arch.html
-  - /guides/v2.2/cloud/reference/discover-arch.html
-  - /guides/v2.3/cloud/reference/discover-arch.html
 functional_areas:
   - Cloud
 ---

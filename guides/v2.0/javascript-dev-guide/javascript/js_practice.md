@@ -9,7 +9,6 @@ version: 2.0
 github_link: javascript-dev-guide/javascript/js_practice.md
 redirect_from:
   - guides/v2.0/frontend-dev-guide/javascript/js_practice.html
-  - guides/v1.0/frontend-dev-guide/javascript/js_practice.html
 ---
 
 <h2 id="practice_overview">Overview</h2>

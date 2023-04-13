@@ -22,5 +22,5 @@ Back up your Staging or Production environment database before deploying to thos
 
 <div class="bs-callout bs-callout-info" markdown="1">
 -   We recommend putting the application in maintenance mode before doing a database dump in Production environments.
--   The command creates an archive in your local project directory called  `dump-<timestamp>.sql.gz`. Refer to [Snapshot and backup management](http://devdocs.magento.com/guides/v2.2/cloud/project/project-webint-snap.html#db-dump) for more information.
+-   The command creates an archive in your local project directory called  `dump-<timestamp>.sql.gz`. Refer to [Snapshot and backup management](https://devdocs.magento.com/guides/v2.2/cloud/project/project-webint-snap.html#db-dump) for more information.
 </div>

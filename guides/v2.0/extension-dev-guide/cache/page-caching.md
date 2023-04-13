@@ -10,8 +10,6 @@ version: 2.0
 github_link: extension-dev-guide/cache/page-caching.md
 redirect_from:
   - /guides/v2.0/config-guide/cache/cache-priv-over.html
-  - /guides/v2.1/config-guide/cache/cache-priv-over.html
-  - /guides/v2.2/config-guide/cache/cache-priv-over.html
 ---
 
 {% include cache/page-cache-overview.md%}

@@ -9,11 +9,7 @@ version: 2.0
 github_link: extension-dev-guide/versioning/codebase-changes.md
 redirect_from:
   - /guides/v2.0/architecture/back-compatibility.html
-  - /guides/v2.1/architecture/back-compatibility.html
-  - /guides/v2.2/architecture/back-compatibility.html
   - /guides/v2.0/extension-dev-guide/backward-compatibility.html
-  - /guides/v2.1/extension-dev-guide/backward-compatibility.html
-  - /guides/v2.2/extension-dev-guide/backward-compatibility.html
 ---
 
 Every Magento version release include a change in the codebase.

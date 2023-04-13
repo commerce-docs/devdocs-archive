@@ -8,7 +8,6 @@ menu_order:
 menu_node:
 version: 2.0
 github_link: pattern-library/general/accessibilityguideline/accessibilityGuideline.md
-redirect_from: /guides/v1.0/pattern-library/general/accessibilityguideline/accessibilityGuideline.html
 ---
 
 ## Accessibility guidelines

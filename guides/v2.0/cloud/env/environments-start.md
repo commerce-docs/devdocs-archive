@@ -10,11 +10,7 @@ version: 2.0
 github_link: cloud/env/environments-start.md
 redirect_from:
   - /guides/v2.0/cloud/before/integration-ip-addr.html
-  - /guides/v2.1/cloud/before/integration-ip-addr.html
-  - /guides/v2.2/cloud/before/integration-ip-addr.html
   - /guides/v2.0/cloud/env/environment-tutorial-env-merge.html
-  - /guides/v2.1/cloud/env/environment-tutorial-env-merge.html
-  - /guides/v2.2/cloud/env/environment-tutorial-env-merge.html
 functional_areas:
   - Cloud
 ---

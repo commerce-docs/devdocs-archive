@@ -7,7 +7,6 @@ menu_title: Technology stack
 menu_order: 2
 version: 2.0
 github_link: architecture/tech-stack.md
-redirect_from: /guides/v1.0/extension-dev-guide/tech-stack.html
 ---
 
 ## Overview

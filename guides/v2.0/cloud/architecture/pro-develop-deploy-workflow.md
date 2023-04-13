@@ -6,12 +6,7 @@ version: 2.0
 github_link: cloud/architecture/pro-develop-deploy-workflow.md
 redirect_from:
   - /guides/v2.0/cloud/discover-workflow.html
-  - /guides/v2.1/cloud/discover-workflow.html
-  - /guides/v2.2/cloud/discover-workflow.html
   - /guides/v2.0/cloud/welcome/discover-workflow.html
-  - /guides/v2.1/cloud/welcome/discover-workflow.html
-  - /guides/v2.2/cloud/welcome/discover-workflow.html
-  - /guides/v2.3/cloud/welcome/discover-workflow.html
 functional_areas:
   - Cloud
 ---

@@ -7,7 +7,6 @@ menu_order: 4
 menu_title: Compile LESS with Grunt
 version: 2.0
 github_link: frontend-dev-guide/css-topics/css_debug.md
-redirect_from: /guides/v1.0/frontend-dev-guide/css-topics/css_debug.html
 functional_areas:
   - Frontend
   - Testing
@@ -163,7 +162,7 @@ The following shows which Grunt tasks to use for debugging:
 <li>
 After you customize the content of any <code>.less</code> file, except the root source files, run the <code>less</code> task and reload the page. </li>
 
-<li>After you <a href="http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html#css_exception">customize the root source files or move the files included to the root files</a>, run the <code>exec</code> command and reload the page.</li>
+<li>After you <a href="https://devdocs.magento.com/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html#css_exception">customize the root source files or move the files included to the root files</a>, run the <code>exec</code> command and reload the page.</li>
 
 
 </ul>
@@ -173,7 +172,7 @@ If you have LiveReload installed, run the <code>grunt watch</code> command, and 
 <li>
 After you customize the content of any <code>.less</code> file, changes are applied and the page reloads automatically. No additional changes are required.</li>
 
-<li>After you <a href="http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html#css_exception">customize the root source files or move the files included to the root files</a>, run the <code>clean</code> and <code>exec</code> commands, and the browser page reloads automatically.</li>
+<li>After you <a href="https://devdocs.magento.com/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html#css_exception">customize the root source files or move the files included to the root files</a>, run the <code>clean</code> and <code>exec</code> commands, and the browser page reloads automatically.</li>
 
 </ul>
 

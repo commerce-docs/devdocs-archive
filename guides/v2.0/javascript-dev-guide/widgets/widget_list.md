@@ -9,7 +9,6 @@ version: 2.0
 github_link: javascript-dev-guide/widgets/widget_list.md
 redirect_from:
   - guides/v2.0/frontend-dev-guide/javascript/widget_list.html
-  - guides/v1.0/frontend-dev-guide/javascript/widget_list.html
 ---
 <h2>Overview</h2>
 

@@ -10,8 +10,6 @@ version: 2.0
 github_link: config-guide/cache/cache-types.md
 redirect_from:
   - /guides/v2.0/config-guide/config/caching_frontend-cache-types.html
-  - /guides/v2.1/config-guide/config/caching_frontend-cache-types.html
-  - /guides/v2.2/config-guide/config/caching_frontend-cache-types.html
 functional_areas:
   - Configuration
   - System

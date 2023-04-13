@@ -7,7 +7,6 @@ menu_title: Customizing layout illustration
 menu_order: 7
 version: 2.0
 github_link: frontend-dev-guide/layouts/layout-practice.md
-redirect_from: /guides/v1.0/frontend-dev-guide/layouts/layout-practice.html
 functional_areas:
   - Frontend
 ---

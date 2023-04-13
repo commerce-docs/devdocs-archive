@@ -8,7 +8,6 @@ menu_order: 4000
 version: 2.0
 github_link: extension-dev-guide/build/component-registration.md
 redirect_from:
-  - /guides/v1.0/extension-dev-guide/build/component-registration.html
   - /guides/v2.0/extension-dev-guide/component-registration.html
 ---
 

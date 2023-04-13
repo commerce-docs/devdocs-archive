@@ -10,8 +10,6 @@ version: 2.0
 github_link: cloud/project/project-conf-files_magento-app.md
 redirect_from:
   - /guides/v2.0/cloud/before/before-setup-env-cron.html
-  - /guides/v2.1/cloud/before/before-setup-env-cron.html
-  - /guides/v2.2/cloud/before/before-setup-env-cron.html
 functional_areas:
   - Cloud
   - Setup

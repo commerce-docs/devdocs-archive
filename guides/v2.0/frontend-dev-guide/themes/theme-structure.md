@@ -7,7 +7,6 @@ menu_title: Magento theme structure
 menu_order: 60
 version: 2.0
 github_link: frontend-dev-guide/themes/theme-structure.md
-redirect_from: /guides/v1.0/frontend-dev-guide/themes/theme-structure.html
 functional_areas:
   - Frontend
   - Theme

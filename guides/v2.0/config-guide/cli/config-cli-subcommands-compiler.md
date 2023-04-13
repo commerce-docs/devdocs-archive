@@ -9,7 +9,6 @@ menu_order: 175
 version: 2.0
 github_link: config-guide/cli/config-cli-subcommands-compiler.md
 redirect_from:
-  - /guides/v1.0/config-guide/cli/config-cli-subcommands-compiler-single.html
   - /guides/v2.0/config-guide/cli/config-cli-subcommands-compiler-single.html
   - /guides/v2.0/config-guide/cli/config-cli-subcommands-compiler-multi.html
 functional_areas:

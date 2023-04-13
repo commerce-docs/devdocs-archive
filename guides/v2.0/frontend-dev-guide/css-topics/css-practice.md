@@ -7,7 +7,6 @@ menu_order: 5
 menu_title: Customizing styles illustration
 version: 2.0
 github_link: frontend-dev-guide/css-topics/css-practice.md
-redirect_from: /guides/v1.0/frontend-dev-guide/css-topics/css-practice.html
 functional_areas:
   - Frontend
 ---

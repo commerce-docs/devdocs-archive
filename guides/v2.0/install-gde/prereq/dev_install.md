@@ -9,7 +9,6 @@ menu_node: parent
 version: 2.0
 github_link: install-gde/prereq/dev_install.md
 redirect_from:
-  - /guides/v1.0/install-gde/install/composer-clone.html
   - /guides/v2.0/install-gde/install/composer-clone.html
   - /guides/v2.0/install-gde/prereq/composer.html
 functional_areas:

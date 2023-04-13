@@ -9,7 +9,6 @@ menu_order: 21
 version: 2.0
 github_link: install-gde/trouble/php/tshoot_pdo.md
 redirect_from:
-  - /guides/v1.0/install-gde/trouble/tshoot_pdo.html
   - /guides/v2.0/install-gde/trouble/tshoot_pdo.html
 functional_areas:
   - Install

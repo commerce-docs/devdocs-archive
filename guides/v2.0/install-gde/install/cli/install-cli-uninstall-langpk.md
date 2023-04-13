@@ -9,7 +9,6 @@ menu_order: 500
 version: 2.0
 github_link: install-gde/install/cli/install-cli-uninstall-langpk.md
 redirect_from:
-  - /guides/v1.0/install-gde/install/install-cli-uninstall-langpk.html
   - /guides/v2.0/install-gde/install/install-cli-uninstall-langpk.html
 functional_areas:
   - Install

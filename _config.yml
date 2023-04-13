@@ -1,9 +1,8 @@
 # Site settings
 encoding: "utf-8"
-title: Magento 2 Developer Documentation
-email: mailto:DL-Magento-Doc-Feedback@magento.com
+title: Magento 2.0 Developer Documentation
 description: > # this means to ignore newlines until "baseurl:"
-  Magento 2 Developer Documentation.
+  Magento 2.0.18 Developer Documentation.
 baseurl: "/"
 # url: "https://github.com/magento/devdocs" # the base hostname & protocol for your site
 # twitter_username: magento
@@ -12,20 +11,11 @@ baseurl: "/"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Version Switcher. Version numbers should be STRING
-version: "2.2"
+version: "2.0"
 versions:
    -
       name: "2.0"
       url: guides/v2.0/
-   -
-      name: "2.1"
-      url: guides/v2.1/
-   -
-      name: "2.2"
-      url: guides/v2.2/
-   -
-      name: "2.3 Pre-release"
-      url: guides/v2.3/
 
 # GitHub variables
 github: "https://github.com/magento/devdocs/tree/develop/guides/"
@@ -78,7 +68,7 @@ defaults:
       type: videos
     values:
       layout: video
-      guide_version: "2.2"
+      guide_version: "2.0"
 
 # toc_baseurl: "https://github.corp.ebay.com/pages/Magento/devdocs_internal"
 
@@ -90,13 +80,21 @@ kramdown:
 
 incremental: false
 
-algolia:
-  application_id: 'E642SEDTHL'
-  index_name: 'devdocs'
-  api_key: 'd2d0f33ab73e291ef8d88d8b565e754c'
-  lazy_update: false
-  files_to_exclude:
-    - guides/m1x
-    - swagger
+exclude: 
+  - scss
+  - bin
+  - node_modules
+  - vendor
+  - .git
+  - .idea
+  - Rakefile
+  - src
+  - Dockerfile
+  - docker-compose.yml
+  - gulpfile.js
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - pakcage-lock.json
+  - tmp
 
-exclude: ['scss', 'bin', 'node_modules', 'vendor', '.git', '.idea', 'Rakefile' ]

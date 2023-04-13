@@ -10,11 +10,8 @@ version: 2.0
 github_link: cloud/access-acct/first-time-setup.md
 redirect_from:
   - /guides/v2.0/cloud/howtos/environment-tutorial-set-mage-vars.html
-  - /guides/v2.1/cloud/howtos/environment-tutorial-set-mage-vars.html
   - /guides/v2.0/cloud/env/environment-tutorial-set-mage-vars.html
-  - /guides/v2.1/cloud/env/environment-tutorial-set-mage-vars.html
   - /guides/v2.0/cloud/access-acct/admin-env-vars.html
-  - /guides/v2.1/cloud/access-acct/admin-env-vars.html
 functional_areas:
   - Cloud
   - Setup
@@ -50,7 +47,7 @@ We recommend adding a virtual machine (VM) or Docker container and installing {{
 
 The following steps walk-through preparing your local environment, installing Magento, and starting development:
 
-*	[Prepare for local environment setup]({{ page.baseurl }}cloud/before/before-workspace.html)
+*    [Prepare for local environment setup]({{ page.baseurl }}cloud/before/before-workspace.html)
 * [Install Magento prerequisites]({{ page.baseurl }}cloud/before/before-workspace-magento-prereqs.html)
 * [Enable SSH keys]({{ page.baseurl }}cloud/before/before-workspace-ssh.html)
 * [Set up the Magento file system owner]({{ page.baseurl }}cloud/before/before-workspace-file-sys-owner.html) (optional)

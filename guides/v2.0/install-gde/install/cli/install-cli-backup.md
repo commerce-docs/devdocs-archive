@@ -9,7 +9,6 @@ menu_order: 100
 version: 2.0
 github_link: install-gde/install/cli/install-cli-backup.md
 redirect_from:
-  - /guides/v1.0/install-gde/install/install-cli-backup.html
   - /guides/v2.0/install-gde/install/install-cli-backup.html
 functional_areas:
   - Install

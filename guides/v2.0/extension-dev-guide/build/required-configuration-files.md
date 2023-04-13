@@ -8,7 +8,6 @@ menu_order: 2000
 version: 2.0
 github_link: extension-dev-guide/build/required-configuration-files.md
 redirect_from:
-  - /guides/v1.0/extension-dev-guide/template_create_req_config_files.html
   - /guides/v2.0/extension-dev-guide/template_create_req_config_files.html
   - /guides/v2.0/extension-dev-guide/required-configuration-files.html
 functional_areas:

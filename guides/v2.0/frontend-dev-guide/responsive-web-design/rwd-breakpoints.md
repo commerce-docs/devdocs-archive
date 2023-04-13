@@ -9,7 +9,6 @@ version: 2.0
 github_link: frontend-dev-guide/responsive-web-design/rwd-breakpoints.md
 redirect_from:
   - guides/v2.0/frontend-dev-guide/css-topics/css-breakpoints.html
-  - guides/v2.1/frontend-dev-guide/css-topics/css-breakpoints.html
 functional_areas:
   - Frontend
 ---
@@ -38,7 +37,7 @@ For example:
 
     @your__breakpoint: 1280px;
 
-For variables' naming rules see [Less coding standards](http://devdocs.magento.com/guides/v2.0/coding-standards/code-standard-less.html#variables).
+For variables' naming rules see [Less coding standards](https://devdocs.magento.com/guides/v2.0/coding-standards/code-standard-less.html#variables).
 
 ## Override `_responsive.less` from the library
 
@@ -49,8 +48,8 @@ To implement a new breakpoint, you need to edit the `.media-width()` mixin by ad
 To do this, take the following steps:
 
 1. Copy the `_responsive.less` file to your `<your_theme_dir>/web/css/source/lib/` directory from one of the following locations:
-	- `<your_parent_theme_dir>/web/css/source/lib/_responsive.less`: overriding `_responsive.less` in the parent theme. If there's no such file or no parent theme, use the other option. 
-	- `<your_theme_dir>/web/css/source/lib/_responsive.less`: the library file.
+    - `<your_parent_theme_dir>/web/css/source/lib/_responsive.less`: overriding `_responsive.less` in the parent theme. If there's no such file or no parent theme, use the other option. 
+    - `<your_theme_dir>/web/css/source/lib/_responsive.less`: the library file.
 2. In your `_responsive.less`, add the `.media-width` {% glossarytooltip 1a305bdb-9be8-44aa-adad-98758821d6a7 %}mixin{% endglossarytooltip %} rule for your breakpoint in the corresponding section (desktop or mobile, depending on the type of breakpoint you add).
 
 Example:

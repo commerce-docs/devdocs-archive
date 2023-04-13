@@ -9,7 +9,6 @@ menu_order: 1
 version: 2.0
 github_link: install-gde/install/cli/install-cli.md
 redirect_from:
-  - /guides/v1.0/install-gde/install/install-cli.html
   - /guides/v2.0/install-gde/install/install-cli.html
 functional_areas:
   - Install

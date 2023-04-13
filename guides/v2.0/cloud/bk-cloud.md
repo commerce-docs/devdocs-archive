@@ -11,14 +11,8 @@ version: 2.0
 github_link: cloud/bk-cloud.md
 redirect_from:
   - /guides/v2.0/cloud/access-acct/resources.html
-  - /guides/v2.1/cloud/access-acct/resources.html
-  - /guides/v2.2/cloud/access-acct/resources.html
   - /guides/v2.0/cloud/welcome/get-help.html
-  - /guides/v2.1/cloud/welcome/get-help.html
-  - /guides/v2.2/cloud/welcome/get-help.html
   - /guides/v2.0/cloud/welcome/10000-ft-overview.html
-  - /guides/v2.1/cloud/welcome/10000-ft-overview.html
-  - /guides/v2.2/cloud/welcome/10000-ft-overview.html
 functional_areas:
   - Cloud
 ---
@@ -48,8 +42,8 @@ To start your free 30-day trial, see our [Plan Comparison](https://magento.com/t
 You should become familiar with the following technologies:
 
 * [Git](https://git-scm.com/docs/user-manual.html){:target="_blank"}
-*	[Composer](https://getcomposer.org/doc){:target="_blank"}
-*	[Secure Shell]({{page.baseurl}}cloud/env/environments-ssh.html) (SSH)
+*    [Composer](https://getcomposer.org/doc){:target="_blank"}
+*    [Secure Shell]({{page.baseurl}}cloud/env/environments-ssh.html) (SSH)
 * MySQL (including command-line interaction)
 * Basic linux shell usage
 
@@ -68,35 +62,35 @@ To get started, see:
 
 To better understand {{site.data.var.ee}}, your plan, architecture, and workflows, see the following starting points:
 
-*	[Technologies and requirements]({{page.baseurl}}cloud/requirements/cloud-requirements.html)
-*	Starter information:
+*    [Technologies and requirements]({{page.baseurl}}cloud/requirements/cloud-requirements.html)
+*    Starter information:
 
-	* [Starter architecture]({{page.baseurl}}cloud/basic-information/starter-architecture.html)
-	*	[Starter develop and deploy workflow]({{page.baseurl}}cloud/basic-information/starter-develop-deploy-workflow.html)
-*	Pro information:
+    * [Starter architecture]({{page.baseurl}}cloud/basic-information/starter-architecture.html)
+    *    [Starter develop and deploy workflow]({{page.baseurl}}cloud/basic-information/starter-develop-deploy-workflow.html)
+*    Pro information:
 
-	* [Pro architecture]({{page.baseurl}}cloud/architecture/pro-architecture.html)
-	*	[Pro develop and deploy workflow]({{page.baseurl}}cloud/architecture/pro-develop-deploy-workflow.html)
-*	[Deployment process]({{page.baseurl}}cloud/reference/discover-deploy.html)
+    * [Pro architecture]({{page.baseurl}}cloud/architecture/pro-architecture.html)
+    *    [Pro develop and deploy workflow]({{page.baseurl}}cloud/architecture/pro-develop-deploy-workflow.html)
+*    [Deployment process]({{page.baseurl}}cloud/reference/discover-deploy.html)
 * [Local environment setup]({{page.baseurl}}cloud/access-acct/first-time-setup.html)
 
 ## Learn more about Magento 2 {#magento2}
 If you would like to learn more about Magento 2, see the following resources:
 
-*	[All documentation home page](https://magento.com/help/documentation){:target="_blank"}
-*	User guides (how to use options in the Magento Admin)
+*    [All documentation home page](https://magento.com/help/documentation){:target="_blank"}
+*    User guides (how to use options in the Magento Admin)
 
-	*	[Magento 2.0.x](http://docs.magento.com/m2/2.0/ee/user_guide/getting-started.html){:target="_blank"}
-	*	[Magento 2.1.x](http://docs.magento.com/m2/2.1/ee/user_guide/getting-started.html){:target="_blank"}
-  *	[Magento 2.2.x](http://docs.magento.com/m2/ee/user_guide/getting-started.html){:target="_blank"}
-*	Developer documentation
+    *    [Magento 2.0.x](http://docs.magento.com/m2/2.0/ee/user_guide/getting-started.html){:target="_blank"}
+    *    [Magento 2.1.x](http://docs.magento.com/m2/2.1/ee/user_guide/getting-started.html){:target="_blank"}
+  *    [Magento 2.2.x](http://docs.magento.com/m2/ee/user_guide/getting-started.html){:target="_blank"}
+*    Developer documentation
 
-	*	[Magento 2 Architecture guide]({{page.baseurl}}architecture/bk-architecture.html){:target="_blank"}
-  *	[Front end development]({{page.baseurl}}frontend-dev-guide/bk-frontend-dev-guide.html){:target="_blank"}
-	*	[Customizing the Magento software]({{page.baseurl}}extension-dev-guide/bk-extension-dev-guide.html){:target="_blank"}
-	*	[Installation]({{page.baseurl}}install-gde/bk-install-guide.html), though we recommend following [Prepare for local environment setup]({{page.baseurl}}cloud/before/before-workspace.html){:target="_blank"}
-	*	[Configuration]({{page.baseurl}}config-guide/bk-config-guide.html){:target="_blank"}
-  *	[B2B user guide](http://docs.magento.com/m2/b2b/user_guide/getting-started.html){:target="_blank"}
+    *    [Magento 2 Architecture guide]({{page.baseurl}}architecture/bk-architecture.html){:target="_blank"}
+  *    [Front end development]({{page.baseurl}}frontend-dev-guide/bk-frontend-dev-guide.html){:target="_blank"}
+    *    [Customizing the Magento software]({{page.baseurl}}extension-dev-guide/bk-extension-dev-guide.html){:target="_blank"}
+    *    [Installation]({{page.baseurl}}install-gde/bk-install-guide.html), though we recommend following [Prepare for local environment setup]({{page.baseurl}}cloud/before/before-workspace.html){:target="_blank"}
+    *    [Configuration]({{page.baseurl}}config-guide/bk-config-guide.html){:target="_blank"}
+  *    [B2B user guide](http://docs.magento.com/m2/b2b/user_guide/getting-started.html){:target="_blank"}
 
 ## Helpful terms {#terms}
 
