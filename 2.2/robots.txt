@@ -1,1 +1,1 @@
-Sitemap: https://magento.github.io//devdocs/2.2/sitemap.xml
+Sitemap: https://magento.github.io//devdocs-archive/2.2/sitemap.xml
