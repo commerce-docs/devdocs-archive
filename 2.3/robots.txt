@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: http://magento.github.io/devdocs//devdocs/2.3/sitemap.xml
+Sitemap: http://magento.github.io/devdocs//devdocs-archive/2.3/sitemap.xml
 Disallow: /guides/v2.2/
 Disallow: /guides/v2.3/mtf/
 Disallow: /guides/v2.4/mtf/

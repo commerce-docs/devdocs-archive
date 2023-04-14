@@ -1,11 +1,647 @@
 <!DOCTYPE html>
-<html lang="en-US" data-proofer-ignore>
-  <meta charset="utf-8">
-  <title>Redirecting&hellip;</title>
-  <link rel="canonical" href="https://developer.adobe.com/commerce/testing/functional-testing-framework/configuration/">
-  <script>location="https://developer.adobe.com/commerce/testing/functional-testing-framework/configuration/"</script>
-  <meta http-equiv="refresh" content="0; url=https://developer.adobe.com/commerce/testing/functional-testing-framework/configuration/">
-  <meta name="robots" content="noindex">
-  <h1>Redirecting&hellip;</h1>
-  <a href="https://developer.adobe.com/commerce/testing/functional-testing-framework/configuration/">Click here if you are not redirected.</a>
+<html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--lightest">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Configuration | Archived 2.3 Magento Developer Guide</title>
+	<meta name="description" content="Magento Developer Guide">
+
+	<link rel="stylesheet" href="https://use.typekit.net/iaw1apr.css">
+	<link rel="stylesheet" href="/devdocs-archive/2.3/assets/css/app.css?ver=20" />
+	<link rel="stylesheet" href="/devdocs-archive/2.3/assets/css/print.css?ver=20" media="print" />
+	<script src="https://assets.adobedtm.com/a7d65461e54e/f87b70cb627a/launch-b042bff6c581.min.js" async></script>
+
+	<link rel="stylesheet" href="/devdocs-archive/2.3/common/css/devdocs.css" />
+<link rel="alternate" type="application/rss+xml" title="Magento DevDocs RSS" href="/feed.xml" />
+<meta name="google-site-verification" content="3WFsoYwBe6UuxDwgs7bmd7t0YFQVzDpLpWLjNh0CUp8" />
+
+	<script>
+  var baseUrl = "/devdocs-archive/2.3";
+  var algolia = {
+    id: "E642SEDTHL",
+    index: "devdocs",
+    key: "d2d0f33ab73e291ef8d88d8b565e754c",
+  };
+
+  var indices = [{
+      label: "Results",
+      name: "devdocs",
+      facetFilters: [
+        ["guide_version: 2.3",
+          "versionless: true"
+        ]
+      ],
+      refinements: [{
+        label: "Functional areas",
+        attribute: "functional_areas"
+      }],
+      baseUrl: "/devdocs-archive/2.3"
+    }
+  ];
+
+</script>
+
+
+
+
+	<link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://adobe.com/favicon.ico">
+
+</head>
+
+<body class="layout-default">
+
+	<header class="site-header">
+
+		
+
+<nav class="site-nav">
+
+  <div class="nav-container">
+
+    <div class="menu-btn">
+      <button id="menu-btn" class="menu-trigger menu-icon" aria-haspopup="true" aria-controls="nav-main" aria-label="Menu"></button>
+    </div>
+
+    <a class="logo" href="/devdocs-archive/2.3/">
+      <img class="logo-image" src="/devdocs-archive/2.3/assets/i/adobe-a.svg" alt="Adobe">
+      <span class="logo-text">Adobe</span>
+      <span class="site-logo">Commerce DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      <!-- Main Navigation --><ul class="nav-main spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" role="menubar"><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Cloud</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud basics</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html" class="spectrum-Menu-itemLabel ">Cloud Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html" class="spectrum-Menu-itemLabel ">Cloud Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/file-structure.html" class="spectrum-Menu-itemLabel ">Project Structure</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/best-practices.html" class="spectrum-Menu-itemLabel ">Upgrades and Patches</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html" class="spectrum-Menu-itemLabel ">Release Notes</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Cloud development</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/" class="spectrum-Menu-itemLabel ">Local development</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/configure/" class="spectrum-Menu-itemLabel ">Configure and launch Docker</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/" class="spectrum-Menu-itemLabel ">Docker quick reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html" class="spectrum-Menu-itemLabel ">Configure Application</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html" class="spectrum-Menu-itemLabel ">Configure Environments</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Functional Testing</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/" class="spectrum-Menu-itemLabel ">Application testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/" class="spectrum-Menu-itemLabel ">Cloud code testing</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Setup</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/install-gde/install-flow-diagram.html" class="spectrum-Menu-itemLabel ">Installation Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html" class="spectrum-Menu-itemLabel ">Extensions Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html" class="spectrum-Menu-itemLabel ">Software Update Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/config-guide/bk-config-guide.html" class="spectrum-Menu-itemLabel ">Configuration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/performance-best-practices/introduction.html" class="spectrum-Menu-itemLabel ">Performance Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/migration/bk-migration-guide.html" class="spectrum-Menu-itemLabel ">Migration Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html" class="spectrum-Menu-itemLabel ">Release Information</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/reference/cli/magento.html" class="spectrum-Menu-itemLabel ">Command-line Tools Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html" class="spectrum-Menu-itemLabel ">Tools</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Development</span><div class="nav-popup spectrum-Popover"><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Backend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/architecture/bk-architecture.html" class="spectrum-Menu-itemLabel ">Architecture</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html" class="spectrum-Menu-itemLabel ">PHP Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/ext-best-practices/bk-ext-best-practices.html" class="spectrum-Menu-itemLabel ">Extension Developer Best Practices</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/mrg/intro.html" class="spectrum-Menu-itemLabel ">Module Reference Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/coding-standards/bk-coding-standards.html" class="spectrum-Menu-itemLabel ">Coding Standards</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/guides/" class="spectrum-Menu-itemLabel ">Contributor Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/" class="spectrum-Menu-itemLabel ">Contribution Resources</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">Frontend</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html" class="spectrum-Menu-itemLabel ">Frontend Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/ui_comp_guide/bk-ui_comps.html" class="spectrum-Menu-itemLabel ">UI Components Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html" class="spectrum-Menu-itemLabel ">JavaScript Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/pattern-library/bk-pattern.html" class="spectrum-Menu-itemLabel ">Admin Design Pattern Library</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/design-styleguide/bk-styleguide.html" class="spectrum-Menu-itemLabel ">Admin Style Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/pwa-studio/" class="spectrum-Menu-itemLabel ">PWA Documentation Site</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder Developer Guide</a></li></ul>
+            </div><div class="nav-section">
+              <div class="spectrum-Menu-sectionHeading">API</div>
+              <ul class="spectrum-Menu"><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/get-started/bk-get-started-api.html" class="spectrum-Menu-itemLabel ">Get Started with our Web APIs</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/rest/bk-rest.html" class="spectrum-Menu-itemLabel ">REST API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/soap/bk-soap.html" class="spectrum-Menu-itemLabel ">SOAP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/graphql/" class="spectrum-Menu-itemLabel ">GraphQL Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/" class="spectrum-Menu-itemLabel ">Marketplace EQP API Reference</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/mbi/docs/getting-started.html" class="spectrum-Menu-itemLabel ">Commerce Reporting API</a></li></ul>
+            </div></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Testing</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/test/testing.html" class="spectrum-Menu-itemLabel ">Application Testing Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://devdocs.magento.com/mftf/v2/docs/introduction.html" class="spectrum-Menu-itemLabel ">Functional Acceptance Testing (MFTF)</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/test/integration/integration_test_execution.html" class="spectrum-Menu-itemLabel ">Integration Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/test/js/jasmine.html" class="spectrum-Menu-itemLabel ">JavaScript Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/test/unit/unit_test_execution.html" class="spectrum-Menu-itemLabel ">PHP Unit Testing</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/get-started/web-api-functional-testing.html" class="spectrum-Menu-itemLabel ">Web API Functional Testing</a></li></ul></div></li><li class="nav-main-separator"></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Functional Areas</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/advanced-reporting/overview.html" class="spectrum-Menu-itemLabel ">Advanced Reporting</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/b2b/bk-b2b.html" class="spectrum-Menu-itemLabel ">B2B</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html" class="spectrum-Menu-itemLabel ">Catalog Service</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/inventory/index.html" class="spectrum-Menu-itemLabel ">Inventory Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html" class="spectrum-Menu-itemLabel ">Live Search</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/" class="spectrum-Menu-itemLabel ">Commerce Marketplace</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html" class="spectrum-Menu-itemLabel ">Payment Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://omsdocs.magento.com/en/" class="spectrum-Menu-itemLabel ">Order Management</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/frontend-core/page-builder/" class="spectrum-Menu-itemLabel ">Page Builder</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/developer/development-overview.html" class="spectrum-Menu-itemLabel ">Product Recommendations Developer Guide</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html" class="spectrum-Menu-itemLabel ">Security and Compliance</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/services/shared-services/" class="spectrum-Menu-itemLabel ">Shared Services</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/extension-dev-guide/staging.html" class="spectrum-Menu-itemLabel ">Staging</a></li></ul></div></li><li class="nav-main-item spectrum-Tabs-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span class="spectrum-Tabs-itemLabel" tabindex="-1">Tutorials</span><div class="nav-popup spectrum-Popover"><ul><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/rest/tutorials/index.html" class="spectrum-Menu-itemLabel ">Rest Tutorials</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/howdoi/custom-attributes/introduction.html" class="spectrum-Menu-itemLabel ">Custom Attributes</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/howdoi/customize_product.html" class="spectrum-Menu-itemLabel ">Customize Product Creation Form</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/howdoi/checkout/checkout_overview.html" class="spectrum-Menu-itemLabel ">Customize Checkout</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://developer.adobe.com/commerce/contributor/community/support/" class="spectrum-Menu-itemLabel ">Support</a></li><li class="  spectrum-Menu-item" role="menuitem"><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/overview.html" class="spectrum-Menu-itemLabel ">Video Tutorials</a></li></ul></div></li></ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="nav-actions">
+      
+
+      
+        <div class="search-btn">
+  <button class="search-trigger" aria-label="Search">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Search">
+      <rect opacity="0" width="18" height="18" /><path class="a" d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+    </svg>
+  </button>
+</div>
+
+<div class="quick-search">
+  <form class="spectrum-Search spectrum-Textfield search-form"
+      action="/devdocs-archive/2.3/guides/v2.3/search.html">
+  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+    class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
+    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+    <rect fill="#ff13dc" opacity="0" width="18" height="18" />
+    <path class="a"
+      d="M16.5865,15.107,12.7,11.2215A6.413,6.413,0,1,0,11.2215,12.7l3.886,3.886a1.05,1.05,0,0,0,1.479-1.479ZM3,7.5A4.5,4.5,0,1,1,7.5,12,4.5,4.5,0,0,1,3,7.5Z" />
+  </svg>
+  <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+    <div class="spectrum-ClearButton-fill">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+        <path class="a"
+          d="M13.2425,3.343,9,7.586,4.7575,3.343a.5.5,0,0,0-.707,0L3.343,4.05a.5.5,0,0,0,0,.707L7.586,9,3.343,13.2425a.5.5,0,0,0,0,.707l.707.7075a.5.5,0,0,0,.707,0L9,10.414l4.2425,4.243a.5.5,0,0,0,.707,0l.7075-.707a.5.5,0,0,0,0-.707L10.414,9l4.243-4.2425a.5.5,0,0,0,0-.707L13.95,3.343a.5.5,0,0,0-.70711-.00039Z" />
+      </svg>
+    </div>
+  </button>
+</form>
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<button class="toc-toggler">Table of Contents</button>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Functional Testing Framework Guide</h4>
+		
+		<div class="collapsible-navigation">
+		  <ul class="spectrum-SideNav spectrum-SideNav--multiLevel"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/introduction.html" class="spectrum-SideNav-itemLink ">Introduction</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/getting-started.html" class="spectrum-SideNav-itemLink ">Getting started</a></li><li class="is-selected  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/configuration.html" class="spectrum-SideNav-itemLink ">Configuration</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/credentials.html" class="spectrum-SideNav-itemLink ">Credentials</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/custom-helpers.html" class="spectrum-SideNav-itemLink ">Custom Helpers</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/data.html" class="spectrum-SideNav-itemLink ">Data</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/debugging.html" class="spectrum-SideNav-itemLink ">Debugging</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/extending.html" class="spectrum-SideNav-itemLink ">Extending</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/guides/git-vs-composer-install.html" class="spectrum-SideNav-itemLink ">Git vs. Composer installation</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/guides/cicd.html" class="spectrum-SideNav-itemLink ">How to use MFTF in CICD</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/interactive-pause.html" class="spectrum-SideNav-itemLink ">Interactive Pause</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/introduction.html" class="spectrum-SideNav-itemLink ">Merge points for extensions</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/extend-action-groups.html" class="spectrum-SideNav-itemLink ">Extend action groups</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/extend-data.html" class="spectrum-SideNav-itemLink ">Extend data</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/extend-tests.html" class="spectrum-SideNav-itemLink ">Extend tests</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/merge-action-groups.html" class="spectrum-SideNav-itemLink ">Merge action groups</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/merge-data.html" class="spectrum-SideNav-itemLink ">Merge data</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/merge-pages.html" class="spectrum-SideNav-itemLink ">Merge pages</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/merge-sections.html" class="spectrum-SideNav-itemLink ">Merge sections</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merge_points/merge-tests.html" class="spectrum-SideNav-itemLink ">Merge tests</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/merging.html" class="spectrum-SideNav-itemLink ">Merging</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/metadata.html" class="spectrum-SideNav-itemLink ">Metadata</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/page.html" class="spectrum-SideNav-itemLink ">Page</a></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Reference</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/commands/codeception.html" class="spectrum-SideNav-itemLink ">Codecept CLI</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/commands/mftf.html" class="spectrum-SideNav-itemLink ">MFTF CLI</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/reporting.html" class="spectrum-SideNav-itemLink ">Reporting</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/section.html" class="spectrum-SideNav-itemLink ">Section</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/section/parameterized-selectors.html" class="spectrum-SideNav-itemLink ">Parameterized selectors</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/section/locator-functions.html" class="spectrum-SideNav-itemLink ">Locator functions</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/suite.html" class="spectrum-SideNav-itemLink ">Suite</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/test.html" class="spectrum-SideNav-itemLink ">Test basics</a><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/test/annotations.html" class="spectrum-SideNav-itemLink ">Annotations</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/test/actions.html" class="spectrum-SideNav-itemLink ">Actions</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/test/action-groups.html" class="spectrum-SideNav-itemLink ">Action groups</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/test/assertions.html" class="spectrum-SideNav-itemLink ">Assertions</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><span class="spectrum-SideNav-itemLink ">Test writing</span><ul class="spectrum-SideNav"><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/best-practices.html" class="spectrum-SideNav-itemLink ">Best practices</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/test-prep.html" class="spectrum-SideNav-itemLink ">Preparing a test for MFTF</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/guides/selectors.html" class="spectrum-SideNav-itemLink ">Selectors</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/guides/test-isolation.html" class="spectrum-SideNav-itemLink ">Test isolation</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/guides/test-modularity.html" class="spectrum-SideNav-itemLink ">Test modularity</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/tips-tricks.html" class="spectrum-SideNav-itemLink ">Tips and tricks</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/guides/using-suites.html" class="spectrum-SideNav-itemLink ">Using suites</a></li></ul></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/troubleshooting.html" class="spectrum-SideNav-itemLink ">Troubleshooting</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/configure-2fa.html" class="spectrum-SideNav-itemLink ">Two-factor Authentication</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/update.html" class="spectrum-SideNav-itemLink ">Update MFTF</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/versioning.html" class="spectrum-SideNav-itemLink ">Versioning</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/docs/backward-incompatible-changes.html" class="spectrum-SideNav-itemLink ">Backward incompatible changes in tests</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/.github/CONTRIBUTING.md" class="spectrum-SideNav-itemLink ">Contribution guidelines</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="https://github.com/magento/magento2-functional-testing-framework/blob/master/CHANGELOG.md" class="spectrum-SideNav-itemLink ">Changelog</a></li><li class="  spectrum-SideNav-item" role="menuitem"><a href="/devdocs-archive/2.3/mftf/v2/docs/introduction.html" class="spectrum-SideNav-itemLink ">MFTF Guide (v2)</a></li></ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<header class="content-header">
+				<!-- page-header -->
+<section class="page-intro">
+
+  
+
+  
+
+  
+
+
+
+
+<!--   
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-itemLabel">Shantanu</span>
+  </div>
+</div> -->
+
+
+  <h1 class="page-title">Configuration</h1>
+
+  
+
+  
+	<div class="github-links spectrum-ActionGroup--compact ActionGroup--justified"></div>
+	
+
+</section>
+
+			</header>
+			<main>
+				<p>The <code class="language-plaintext highlighter-rouge">*.env</code> file provides additional configuration for the Magento Functional Testing Framework (MFTF).
+To run the MFTF on your Magento instance, specify the basic configuration values.
+Advanced users can create custom configurations based on requirements and environment.</p>
+
+<h2 id="basic-configuration">Basic configuration</h2>
+
+<p>These basic configuration values are <strong>required</strong> and must be set by the user before the MFTF can function correctly.</p>
+
+<h3 id="magento_base_url">MAGENTO_BASE_URL</h3>
+
+<p>The root URL of the Magento application under test.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_BASE_URL</span>=<span class="n">http</span>://<span class="n">magento2</span>.<span class="n">vagrant251</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="bs-callout bs-callout-info">
+  <p>If the <code class="language-plaintext highlighter-rouge">MAGENTO_BASE_URL</code> contains a subdirectory (like <code class="language-plaintext highlighter-rouge">http://magento.test/magento2ce</code>), specify <a href="#magento_cli_command_path"><code class="language-plaintext highlighter-rouge">MAGENTO_CLI_COMMAND_PATH</code></a>.</p>
+</div>
+
+<h3 id="magento_backend_name">MAGENTO_BACKEND_NAME</h3>
+
+<p>The path to the Magento Admin page.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_BACKEND_NAME</span>=<span class="n">admin_12346</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="magento_backend_base_url">MAGENTO_BACKEND_BASE_URL</h3>
+
+<p>(Optional) If you are running the Admin Panel on separate a domain, specify this value:</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_BACKEND_BASE_URL</span>=<span class="n">https</span>://<span class="n">admin</span>.<span class="n">magento2</span>.<span class="n">test</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="magento_admin_username">MAGENTO_ADMIN_USERNAME</h3>
+
+<p>The username that tests can use to access the Magento Admin page</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_ADMIN_USERNAME</span>=<span class="n">admin</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="magento_admin_password">MAGENTO_ADMIN_PASSWORD</h3>
+
+<p>The password that tests will use to log in to the Magento Admin page.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_ADMIN_PASSWORD</span>=<span class="m">1234</span><span class="n">reTyt</span>%$<span class="m">7</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="advanced-configuration">Advanced configuration</h2>
+
+<p>Depending on the environment you use, you may need to configure the MFTF more precisely by setting more configuration parameters then for basic configuration.
+This section describes available configuration parameters and their default values (where applicable).</p>
+
+<h3 id="default_timezone">DEFAULT_TIMEZONE</h3>
+
+<p>Sets a default value for the <code class="language-plaintext highlighter-rouge">timezone</code> attribute of a <a href="/devdocs-archive/2.3/mftf/docs/test/actions.html#generatedate"><code class="language-plaintext highlighter-rouge">generateDate</code> action</a>.
+This value is applied when a test step does not specify a time zone.
+For the complete list of available time zones, refer to <a href="https://php.net/manual/en/timezones.php">List of Supported Timezones</a>.</p>
+
+<p>Default: <code class="language-plaintext highlighter-rouge">America/Los_Angeles</code>.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">DEFAULT_TIMEZONE</span>=<span class="n">UTC</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="selenium">SELENIUM</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">SELENIUM_*</code> values form the URL of a custom Selenium server for running testing.</p>
+
+<p>Default Selenium URL: <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4444/wd/hub</code></p>
+
+<p>And the default configuration:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">SELENIUM_HOST</span>=<span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>
+<span class="n">SELENIUM_PORT</span>=<span class="m">4444</span>
+<span class="n">SELENIUM_PROTOCOL</span>=<span class="n">http</span>
+<span class="n">SELENIUM_PATH</span>=/<span class="n">wd</span>/<span class="n">hub</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="bs-callout bs-callout-warning">
+  <p><code class="language-plaintext highlighter-rouge">SELENIUM_*</code> values are required if you are running Selenium on an external system.
+If you change the configuration of the external Selenium server, you must update these values.</p>
+</div>
+
+<h4 id="selenium_host">SELENIUM_HOST</h4>
+
+<p>Override the default Selenium server host.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">SELENIUM_HOST</span>=<span class="n">user</span>:<span class="n">pass</span>@<span class="n">ondemand</span>.<span class="n">saucelabs</span>.<span class="n">com</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="selenium_port">SELENIUM_PORT</h4>
+
+<p>Override the default Selenium server port.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">SELENIUM_PORT</span>=<span class="m">443</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="selenium_protocol">SELENIUM_PROTOCOL</h4>
+
+<p>Override the default Selenium server protocol.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">SELENIUM_PROTOCOL</span>=<span class="n">https</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="selenium_path">SELENIUM_PATH</h4>
+
+<p>Override the default Selenium server path.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">SELENIUM_PATH</span>=/<span class="n">wd</span>/<span class="n">hub</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="magento_restapi">MAGENTO_RESTAPI</h3>
+
+<p>These <code class="language-plaintext highlighter-rouge">MAGENTO_RESTAPI_*</code> values are optional and can be used in cases when your Magento instance has a different API path than the one in <code class="language-plaintext highlighter-rouge">MAGENTO_BASE_URL</code>.</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_RESTAPI_SERVER_HOST</span>
+<span class="n">MAGENTO_RESTAPI_SERVER_PORT</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="magento_restapi_server_host">MAGENTO_RESTAPI_SERVER_HOST</h4>
+
+<p>The protocol and the host of the REST API server path.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_RESTAPI_SERVER_HOST</span>=<span class="n">http</span>://<span class="n">localhost</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="magento_restapi_server_port">MAGENTO_RESTAPI_SERVER_PORT</h4>
+
+<p>The port part of the API path.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_RESTAPI_SERVER_PORT</span>=<span class="m">5000</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="_bp">*_BP</h3>
+
+<p>Settings to override base paths for the framework.
+You can use it when the MFTF is applied as a separate tool.
+For example, when you need to place the MFTF and the Magento codebase in separate projects.</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_BP</span>
+<span class="n">TESTS_BP</span>
+<span class="n">FW_BP</span>
+<span class="n">TESTS_MODULES_PATH</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="magento_bp">MAGENTO_BP</h4>
+
+<p>The path to a local Magento codebase.
+It enables the <a href="/devdocs-archive/2.3/mftf/docs/commands/mftf.html"><code class="language-plaintext highlighter-rouge">bin/mftf</code></a> commands such as <code class="language-plaintext highlighter-rouge">run</code> and <code class="language-plaintext highlighter-rouge">generate</code> to parse all modules of the Magento codebase for MFTF tests.</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MAGENTO_BP</span>=~/<span class="n">magento2</span>/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="tests_bp">TESTS_BP</h4>
+
+<p>BP is an acronym for <em>Base Path</em>.
+The path to where MFTF supplementary files are located in the Magento codebase.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">TESTS_BP</span>=~/<span class="n">magento2ce</span>/<span class="n">dev</span>/<span class="n">tests</span>/<span class="n">acceptance</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="fw_bp">FW_BP</h4>
+
+<p>The path to MFTF.
+FW_BP is an acronym for <em>FrameWork Base Path</em>.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">FW_BP</span>=~/<span class="n">magento</span>/<span class="n">magento2</span>-<span class="n">functional</span>-<span class="n">testing</span>-<span class="n">framework</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="tests_module_path">TESTS_MODULE_PATH</h3>
+
+<p>The path to where the MFTF modules mirror Magento modules.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">TESTS_MODULE_PATH</span>=~/<span class="n">magento2</span>/<span class="n">dev</span>/<span class="n">tests</span>/<span class="n">acceptance</span>/<span class="n">tests</span>/<span class="n">functional</span>/<span class="n">Magento</span>/<span class="n">FunctionalTest</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="module_whitelist">MODULE_WHITELIST</h3>
+
+<p>Use for a new module.
+When adding a new directory at <code class="language-plaintext highlighter-rouge">Magento/FunctionalTest</code>, add the directory name to <code class="language-plaintext highlighter-rouge">MODULE_WHITELIST</code> to enable the MFTF to process it.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">MODULE_WHITELIST</span>=<span class="n">Magento_Framework</span>,<span class="n">Magento_ConfigurableProductWishlist</span>,<span class="n">Magento_ConfigurableProductCatalogSearch</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="magento_cli_command_path">MAGENTO_CLI_COMMAND_PATH</h3>
+
+<p>Path to the Magento CLI command entry point.</p>
+
+<p>Default: <code class="language-plaintext highlighter-rouge">dev/tests/acceptance/utils/command.php</code>.
+It points to <code class="language-plaintext highlighter-rouge">MAGENTO_BASE_URL</code> + <code class="language-plaintext highlighter-rouge">dev/tests/acceptance/utils/command.php</code></p>
+
+<p>Modify the default value:</p>
+
+<ul>
+  <li>for non-default Magento installation</li>
+  <li>when use a subdirectory in the <code class="language-plaintext highlighter-rouge">MAGENTO_BASE_URL</code></li>
+</ul>
+
+<p>Example: <code class="language-plaintext highlighter-rouge">dev/tests/acceptance/utils/command.php</code></p>
+
+<h3 id="browser">BROWSER</h3>
+
+<p>Override the default browser performing the tests.</p>
+
+<p>Default: Chrome</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">BROWSER</span>=<span class="n">firefox</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="credential_vault_address">CREDENTIAL_VAULT_ADDRESS</h3>
+
+<p>The Api address for a vault server.</p>
+
+<p>Default: http://127.0.0.1:8200</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># Default api address for local vault dev server
+</span><span class="n">CREDENTIAL_VAULT_ADDRESS</span>=<span class="n">http</span>://<span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8200</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="credential_vault_secret_base_path">CREDENTIAL_VAULT_SECRET_BASE_PATH</h3>
+
+<p>Vault secret engine base path.</p>
+
+<p>Default: secret</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># Default base path for kv secret engine in local vault dev server
+</span><span class="n">CREDENTIAL_VAULT_SECRET_BASE_PATH</span>=<span class="n">secret</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="credential_aws_secrets_manager_region">CREDENTIAL_AWS_SECRETS_MANAGER_REGION</h3>
+
+<p>The region that AWS Secrets Manager is located.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># Region of AWS Secrets Manager
+</span><span class="n">CREDENTIAL_AWS_SECRETS_MANAGER_REGION</span>=<span class="n">us</span>-<span class="n">east</span>-<span class="m">1</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="credential_aws_secrets_manager_profile">CREDENTIAL_AWS_SECRETS_MANAGER_PROFILE</h3>
+
+<p>The profile used to connect to AWS Secrets Manager.</p>
+
+<p>Example:</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># Profile used to connect to AWS Secrets Manager.
+</span><span class="n">CREDENTIAL_AWS_SECRETS_MANAGER_PROFILE</span>=<span class="n">default</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="enable_browser_log">ENABLE_BROWSER_LOG</h3>
+
+<p>Enables addition of browser logs to Allure steps</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">ENABLE_BROWSER_LOG</span>=<span class="n">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="browser_log_blacklist">BROWSER_LOG_BLACKLIST</h3>
+
+<p>Blacklists types of browser log entries from appearing in Allure steps.</p>
+
+<p>Denoted in browser log entry as <code class="language-plaintext highlighter-rouge">"SOURCE": "type"</code>.</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">BROWSER_LOG_BLACKLIST</span>=<span class="n">other</span>,<span class="n">console</span>-<span class="n">api</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="wait_timeout">WAIT_TIMEOUT</h3>
+
+<p>Global MFTF configuration for the default amount of time (in seconds) that a test will wait while loading a page.</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlighter"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">WAIT_TIMEOUT</span>=<span class="m">30</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<!-- Link definitions -->
+
+
+			</main>
+			<footer class="content-footer">
+				<button class="page-updated spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+  <img class="spectrum-Icon spectrum-Icon--sizeS" src="/devdocs-archive/2.3/assets/i/icons/time.svg" alt="Updated" />
+  <time class="spectrum-ActionButton-label" id="last-modified-at" itemprop="dateModified"
+    datetime="2022-08-01">
+    Aug 1st, 2022
+  </time>
+</button>
+
+			</footer>
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+  
+
+</div>
+
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+</div>
+<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+    <div class="container">
+  
+      <div class="copyright-links">
+        
+
+<ul class="nav footer-links" role="menu">
+
+  <li class="  " role="menuitem"><a href="https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md" class=" ">Become a Contributor</a></li>
+
+  <li class="  " role="menuitem"><a href="https://glossary.magento.com/" class=" ">Glossary</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/privacy/" class=" ">Privacy Policy</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/terms/" class=" ">Terms of Service</a></li>
+
+  <li class="  " role="menuitem"><a href="https://magento.com/legal/licensing/" class=" ">License/Trademark FAQ</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/release-notes/bk-release-notes.html" class=" ">Release Notes</a></li>
+
+  <li class="  " role="menuitem"><a href="/devdocs-archive/2.3/guides/v2.3/release-notes/packages-open-source.html" class=" ">Third-Party Licenses</a></li>
+
+</ul>
+
+      </div>
+  
+          <div class="copyright-date">&copy; 2023 Adobe. All rights reserved.</div>
+  
+    </div>
+  </div>
+  <!-- / #footer -->
+  
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/devdocs-archive/2.3/assets/js/app.min.js?ver=20"></script>
+<script src="/devdocs-archive/2.3/assets/js/editions.min.js?ver=20"></script>
+<script src="/devdocs-archive/2.3/assets/js/page-updated.min.js?ver=20"></script>
+
+
+
+
+
+<script type="text/javascript" src="/devdocs-archive/2.3/common/js/glossary-link-enhancer.js"></script>
+
+
+</body>
+
 </html>
