@@ -48,7 +48,7 @@ task build_and_deploy: %w[clean] do
   jekyll_env = ENV['JEKYLL_ENV']
   ENV['JEKYLL_ENV'] = 'production'
   # Build the site
-  sh 'bundle exec jekyll build --verbose --baseurl=/devdocs-archive/1.x/'
+  sh 'bundle exec jekyll build --verbose --baseurl=/devdocs-archive/1.x'
   # Restore the environmental variable
   ENV['JEKYLL_ENV'] = jekyll_env
 
