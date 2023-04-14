@@ -66,7 +66,7 @@ task build_and_deploy: %w[clean] do
   jekyll_env = ENV['JEKYLL_ENV']
   ENV['JEKYLL_ENV'] = 'production'
   # Build the site
-  sh 'bundle exec jekyll build --verbose --baseurl=/devdocs/2.1'
+  sh 'bundle exec jekyll build --verbose --baseurl=/devdocs-archive/2.1'
   # Restore the environmental variable
   ENV['JEKYLL_ENV'] = jekyll_env
 
@@ -78,7 +78,7 @@ task build_and_deploy: %w[clean] do
   `cp -R _site/ 2.1/`
   `git add 2.1/`
   `git commit --message "Deploy archived-docs-v2.1: #{commit}"`
-  `git push public`
+  `git push git@github.com:commerce-docs/devdocs-archive.git`
   `git checkout -`
 
   puts 'Done!'.green
