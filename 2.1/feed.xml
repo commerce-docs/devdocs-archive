@@ -5,15 +5,22 @@
     <description>Archived Magento 2.1.18 Developer Documentation.</description>
     <link>https://dshevtsov.github.io</link>
     <atom:link href="https://dshevtsov.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Apr 2023 16:48:47 -0500</pubDate>
-    <lastBuildDate>Wed, 12 Apr 2023 16:48:47 -0500</lastBuildDate>
+    <pubDate>Fri, 14 Apr 2023 14:01:47 -0500</pubDate>
+    <lastBuildDate>Fri, 14 Apr 2023 14:01:47 -0500</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
     
         <item>
-          <title>Create custom cache engines</title>
-          <description>&lt;p&gt;This topic discusses how to use the Magento 2 database for caching. After you complete these tasks, cached objects are stored in the &lt;code class=&quot;highlighter-rouge&quot;&gt;cache&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;cache_tag&lt;/code&gt; Magento 2 database tables. Nothing is stored &lt;code class=&quot;highlighter-rouge&quot;&gt;var/cache&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;var/page_cache&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;This topic discusses how to set up database caching and how to verify database caching is working. We discuss the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Using the &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; cache frontend, in which case you modify &lt;code...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/partial-caching/database-caching.html</link>
+          <title>Clone and branch the project</title>
+          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step:&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html&quot;&gt;Set up the Magento file system owner&lt;/a&gt;&lt;/p&gt; &lt;p&gt;The Magento Commerce Cloud project is a Git repository of Magento code. Each &lt;strong&gt;active&lt;/strong&gt; branch in the Integration environment includes a database and services to fully access the Magento site and store. You can clone the project and create an &lt;strong&gt;active&lt;/strong&gt; branch from the Integration environment to develop code and add extensions using your local workstation.&lt;/p&gt; &lt;h2 id=&quot;clone-the-project&quot;&gt;Clone the project&lt;/h2&gt; &lt;p&gt;The following instructions use...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/before/before-setup-env-2_clone.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Deploy your store</title>
+          <description>The process for deploying and going live begins with development, continues to Staging, and ends with going live in Production. To provide the best experience for developing, testing, and deploying your store with consistent configurations we provide an end-to-end environment solution. Every environment supports direct URL access to the store and Admin console and SSH access for CLI commands. You can fully push, merge, and deploy through the [Project Web Interface]({{ page.baseurl }}/cloud/project/project-webint-branch.html) or CLI...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/live/stage-prod-live.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
@@ -25,55 +32,22 @@
         </item>
     
         <item>
-          <title>Upload your component to the Magento Marketplace</title>
-          <description>When component development is complete, upload your components to the Magento Marketplace using the instructions in the [Magento Marketplace User Guide](http://docs.magento.com/marketplace/user_guide/getting-started.html){:target=&quot;_blank&quot;}.
-</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/package/package_mktpl.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Customize error pages</title>
-          <description>&lt;p&gt;When a request to the Fastly origin fails, Fastly returns default response pages with basic formatting and generic messaging that can be confusing for users. For example, Fastly returns the following default error page when a request to the Fastly origin fails because of a 503 error.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/devdocs/2.1/common/images/cloud/cloud-fastly-503-example.png&quot; alt=&quot;Fastly default error page&quot; /&gt;&lt;/p&gt; &lt;p&gt;You can update your store configuration to replace some default response pages with pages that have friendlier messaging and improved HTML...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Clone and branch the project</title>
-          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step:&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-file-sys-owner.html&quot;&gt;Set up the Magento file system owner&lt;/a&gt;&lt;/p&gt; &lt;p&gt;The Magento Commerce Cloud project is a Git repository of Magento code. Each &lt;strong&gt;active&lt;/strong&gt; branch in the Integration environment includes a database and services to fully access the Magento site and store. You can clone the project and create an &lt;strong&gt;active&lt;/strong&gt; branch from the Integration environment to develop code and add extensions using your local workstation.&lt;/p&gt; &lt;h2 id=&quot;clone-the-project&quot;&gt;Clone the project&lt;/h2&gt; &lt;p&gt;The following instructions use...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/before/before-setup-env-2_clone.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
           <title>Install Magento</title>
-          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html&quot;&gt;Clone and branch the project&lt;/a&gt;&lt;/p&gt; &lt;p&gt;With your workspace prepared, install Magento on your local to verify custom code, extensions, and more. This section includes the installation prep, options, and post-installation configuration you should complete.&lt;/p&gt; &lt;h2 id=&quot;prepare&quot;&gt;Prepare to install Magento&lt;/h2&gt; &lt;p&gt;To customize the Magento software on your local workstation, prepare the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Hostname or IP address of your machine&lt;/li&gt; &lt;li&gt;Admin username, password, and URL created earlier&lt;/li&gt; &lt;li&gt;Magento authentication keys for installing...</description>
+          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/before/before-setup-env-2_clone.html&quot;&gt;Clone and branch the project&lt;/a&gt;&lt;/p&gt; &lt;p&gt;With your workspace prepared, install Magento on your local to verify custom code, extensions, and more. This section includes the installation prep, options, and post-installation configuration you should complete.&lt;/p&gt; &lt;h2 id=&quot;prepare&quot;&gt;Prepare to install Magento&lt;/h2&gt; &lt;p&gt;To customize the Magento software on your local workstation, prepare the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Hostname or IP address of your machine&lt;/li&gt; &lt;li&gt;Admin username, password, and URL created earlier&lt;/li&gt; &lt;li&gt;Magento authentication keys for installing...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/before/before-setup-env-install.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Page caching</title>
-          <description>{% include cache/page-cache-overview.md%}
-
-{: .bs-callout .bs-callout-info }
-Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:target=&quot;_blank} and [HEAD](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4){:target=&quot;_blank&quot;} requests are cacheable. For more information about caching, see [RFC-2616 section 13](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html){:target=&quot;_blank}.
-</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/page-caching.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
           <title>Install Magento prerequisites</title>
-          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step:&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/before/before-workspace.html&quot;&gt;Prepare for local environment setup&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Install the following software packages and tools on your local to prepare for Magento code development. If you already have these packages installed, check for any recommendations or notes and continue to the next step.&lt;/p&gt; &lt;p&gt;To begin, install and set up a VM on your host computer (Windows, Mac OS, Linux-based system). A VM gives you an environment to install a different Operating System, tools, software,...</description>
+          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step:&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/before/before-workspace.html&quot;&gt;Prepare for local environment setup&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Install the following software packages and tools on your local to prepare for Magento code development. If you already have these packages installed, check for any recommendations or notes and continue to the next step.&lt;/p&gt; &lt;p&gt;To begin, install and set up a VM on your host computer (Windows, Mac OS, Linux-based system). A VM gives you an environment to install a different Operating System, tools, software,...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
           <title>Enable SSH keys</title>
-          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step:&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html&quot;&gt;Install Magento prerequisites&lt;/a&gt;&lt;/p&gt; &lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Secure_Shell&quot;&gt;SSH protocol &lt;/a&gt; is designed to maintain a secure connection between two systems—in this case, your local working environment and your Magento Commerce Cloud Git project.&lt;/p&gt; &lt;p&gt;When initially setting up your local environment, you need to add the SSH keys to the following specific environments:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Starter: Add to Master (Production) and any environments you create by branching from Master&lt;/li&gt; &lt;li&gt;Pro: Add to Master Integration environment....</description>
+          <description>&lt;h4 id=&quot;previous-step&quot;&gt;Previous step:&lt;/h4&gt; &lt;p&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html&quot;&gt;Install Magento prerequisites&lt;/a&gt;&lt;/p&gt; &lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Secure_Shell&quot;&gt;SSH protocol &lt;/a&gt; is designed to maintain a secure connection between two systems—in this case, your local working environment and your Magento Commerce Cloud Git project.&lt;/p&gt; &lt;p&gt;When initially setting up your local environment, you need to add the SSH keys to the following specific environments:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Starter: Add to Master (Production) and any environments you create by branching from Master&lt;/li&gt; &lt;li&gt;Pro: Add to Master Integration environment....</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/before/before-workspace-ssh.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
@@ -86,6 +60,13 @@ Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:
         </item>
     
         <item>
+          <title>PHP Developer Guide</title>
+          <description>&lt;p&gt;The &lt;a href=&quot;https://glossary.magento.com/php&quot;&gt;PHP&lt;/a&gt; Developer Guide contains information for developers who want to know more about developing or modifying Magento components. With this knowledge you can extend or customize any of the existing components in the Magento application. You can also create components that introduce new functionality and distribute them to merchants.&lt;/p&gt; &lt;h2 id=&quot;magento-components&quot;&gt;Magento components&lt;/h2&gt; &lt;p&gt;The Magento application is made up of &lt;em&gt;Modules&lt;/em&gt;, &lt;em&gt;Themes&lt;/em&gt;, and &lt;em&gt;Language Packages&lt;/em&gt;:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/architecture/archi_perspectives/components/modules/mod_intro.html&quot;&gt;&lt;strong&gt;Modules&lt;/strong&gt;&lt;/a&gt; interact with other parts of...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
           <title>Fastly troubleshooting</title>
           <description>Use the following information to troubleshoot and manage the Fastly CDN module for Magento 2 in your {{ site.data.var.ece }} project environments. For example, you can investigate response header values and caching behavior to resolve Fastly service and performance issues. {:.bs-callout .bs-callout-info} For information about setting up and configuring Fastly, see [Set up Fastly]({{ page.baseurl }}/cloud/cdn/cloud-fastly.html). ## Locate Fastly service ID {#service-id} You need the Fastly service ID to configure Fastly from the Magento Admin...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/trouble-fastly.html</link>
@@ -93,128 +74,44 @@ Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:
         </item>
     
         <item>
-          <title>Module version dependencies</title>
-          <description>&lt;p&gt;Magento platform clients need notifications about breaking changes for their installed extensions and customizations when they upgrade their Magento installation.&lt;/p&gt; &lt;p&gt;To achieve this, all third-party modules must obey the following rules:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;You must specify the dependency on all modules listed in the ‘require’ section of your module’s &lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt; file.&lt;/li&gt; &lt;li&gt;Do not specify a dependency on meta packages (e.g. ‘product-community-edition’).&lt;/li&gt; &lt;li&gt;Specify a module’s MAJOR and/or MINOR version number if you use any of that...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/versioning/dependencies.html</link>
+          <title>ActionsColumn component</title>
+          <description>The ActionsColumns component implements a table's column responsible for displaying and performing a list of record-related actions. ## Configuration options &lt;table&gt; &lt;tr&gt; &lt;th&gt;Option&lt;/th&gt; &lt;th&gt;Description&lt;/th&gt; &lt;th&gt;Type&lt;/th&gt; &lt;th&gt;Default&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;bodyTmpl&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Path to the &lt;code&gt;.html&lt;/code&gt; template used to render a column's field in the table's body.&lt;/td&gt; &lt;td&gt;String&lt;/td&gt; &lt;td&gt;&lt;code&gt;ui/grid/cells/actions&lt;/code&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;draggable&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Defines whether a user can change column's position in the table by grabbing column's header and dragging it across the table.&lt;/td&gt; &lt;td&gt;Boolean&lt;/td&gt; &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;fieldClass&lt;/code&gt;&lt;/td&gt;...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/ui_comp_guide/components/ui-actionscolumn.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Partial caching</title>
-          <description>Magento uses [Zend_Cache](http://framework.zend.com/manual/1.12/en/zend.cache.html){:target=&quot;_blank&quot;} to interact with the cache storage. However, Magento also has the [Magento\Cache]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/Cache){:target=&quot;_blank&quot;} [library](https://glossary.magento.com/library) for implementing Magento-specific caching. These topics discuss how to configure caching and [cache](https://glossary.magento.com/cache) types. {: .bs-callout .bs-callout-info } By default, file system caching is enabled; no configuration is necessary to use it. This means the cache is located under `&lt;magento_root&gt;/var`. To change the cache configuration, edit `&lt;magento_root&gt;/app/etc/env.php`. The cache configuration is an associative array similar...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/partial-caching.html</link>
+          <title>Low-level cache options</title>
+          <description>&lt;p&gt;The Magento application uses a low-level &lt;a href=&quot;https://glossary.magento.com/cache&quot;&gt;cache&lt;/a&gt; &lt;a href=&quot;https://glossary.magento.com/frontend&quot;&gt;frontend&lt;/a&gt; and &lt;a href=&quot;https://glossary.magento.com/backend&quot;&gt;backend&lt;/a&gt; to provide access to the cache storage.&lt;/p&gt; &lt;h2 id=&quot;cache-lowlevel-front&quot;&gt;Low-level frontend cache&lt;/h2&gt; &lt;p&gt;Magento extends &lt;a href=&quot;http://framework.zend.com/manual/1.12/en/zend.cache.frontends.html&quot; target=&quot;_blank&quot;&gt;Zend_Cache_Core&lt;/a&gt; by implementing &lt;a href=&quot;https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Cache/Core.php&quot; target=&quot;_blank&quot;&gt;Magento\Framework\Cache\Core&lt;/a&gt; frontend cache.&lt;/p&gt; &lt;h2 id=&quot;cache-lowlevel-front&quot;&gt;Low-level backend cache&lt;/h2&gt; &lt;p&gt;In general, the Magento application works with any backend cache that &lt;a href=&quot;http://framework.zend.com/manual/1.12/en/zend.cache.backends.html&quot; target=&quot;_blank&quot;&gt;Zend_Cache Backends&lt;/a&gt; supports. However, this guide covers only the following low-level backend caches:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/redis/config-redis.html&quot;&gt;Redis&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/extension-dev-guide/cache/partial-caching/database-caching.html&quot;&gt;Database&lt;/a&gt;&lt;/li&gt; &lt;li&gt;File system (default): No...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/cache/cache-options.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Component types</title>
-          <description>&lt;p&gt;Each component type has a different &lt;a href=&quot;/devdocs/2.1/guides/v2.1/extension-dev-guide/build/module-file-structure.html&quot;&gt;directory structure&lt;/a&gt; and different contents for &lt;a href=&quot;/devdocs/2.1/guides/v2.1/extension-dev-guide/build/composer-integration.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;The following table discusses the component types that Magento Marketplace supports. The composer &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; column in the following table specifies the value of the &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; field you must add to &lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt; for that type of component.&lt;/p&gt; &lt;table&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;Friendly name&lt;/th&gt; &lt;th&gt;composer.json type&lt;/th&gt; &lt;th&gt;Description&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Metapackage&lt;/td&gt; &lt;td&gt;metapackage&lt;/td&gt; &lt;td&gt;Technically, a Composer package type, not...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/prepare/dev-modtypes.html</link>
+          <title>Associate cache frontends with cache types</title>
+          <description>&lt;h2 id=&quot;cache-mage-frontend&quot;&gt;Step 1: Define a cache frontend&lt;/h2&gt; &lt;p&gt;The Magento application has a &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; cache &lt;a href=&quot;https://glossary.magento.com/frontend&quot;&gt;frontend&lt;/a&gt; you can use for any &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean-over&quot;&gt;cache type&lt;/a&gt;. This section discusses how to optionally define a &lt;a href=&quot;https://glossary.magento.com/cache-frontend&quot;&gt;cache frontend&lt;/a&gt; with a different name, which is preferable if you expect to customize your frontend.&lt;/p&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;To use the &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; cache type, you don’t need to modify &lt;code class=&quot;highlighter-rouge&quot;&gt;env.php&lt;/code&gt; at all; you modify Magento’s global &lt;code class=&quot;highlighter-rouge&quot;&gt;di.xml&lt;/code&gt;. See...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/cache/cache-types.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Troubleshoot deployment</title>
-          <description>This topic discusses how to recover if you deployed the Magento application with the incorrect [Magento authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html). For example, you might have used the keys for another account or you might have used {{site.data.var.ce}} keys instead of {{site.data.var.ee}} keys. If you used the incorrect keys, deployment fails. To recover, you must clone the project, add the correct keys to `auth.json`, and push the change to the master branch. {:.bs-callout .bs-callout-info} In this...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/trouble/troubleshoot-deployment.html</link>
+          <title>Customize error pages</title>
+          <description>&lt;p&gt;When a request to the Fastly origin fails, Fastly returns default response pages with basic formatting and generic messaging that can be confusing for users. For example, Fastly returns the following default error page when a request to the Fastly origin fails because of a 503 error.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/devdocs-archive/2.1/common/images/cloud/cloud-fastly-503-example.png&quot; alt=&quot;Fastly default error page&quot; /&gt;&lt;/p&gt; &lt;p&gt;You can update your store configuration to replace some default response pages with pages that have friendlier messaging and improved HTML...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/cloud-fastly-custom-response.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Deploy your store</title>
-          <description>The process for deploying and going live begins with development, continues to Staging, and ends with going live in Production. To provide the best experience for developing, testing, and deploying your store with consistent configurations we provide an end-to-end environment solution. Every environment supports direct URL access to the store and Admin console and SSH access for CLI commands. You can fully push, merge, and deploy through the [Project Web Interface]({{ page.baseurl }}/cloud/project/project-webint-branch.html) or CLI...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/live/stage-prod-live.html</link>
+          <title>Fastly</title>
+          <description>&lt;p&gt;Fastly provides the following services to optimize and secure content delivery operations for your Magento Commerce Cloud projects. These services are included with your Magento Commerce Cloud subscription at no additional cost.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;strong&gt;Content delivery network (CDN)&lt;/strong&gt;—Varnish-based service that caches your site pages, assets, CSS, and more in backend data centers you set up. As customers access your site and stores, the requests hit Fastly to load cached pages faster. The CDN service provides...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/cloud-fastly.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Smart wizards</title>
-          <description>The smart wizards can help you determine whether your Cloud configuration follows best practices. The available wizards assist with the following configurations: - Ideal state for minimal deployment downtime - Load balancing configuration for database and Redis - Static Content Deployment (SCD) for on-demand, the build stage, or the deploy stage Each of the smart wizard commands provides a verification response and, if applicable, a recommendation for the proper configuration. Command | Description ------- |...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/deploy/smart-wizards.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Launch Docker</title>
-          <description>&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package (version 2002.0.13 or later) deploys to a read-only file system by default in the Docker environment, which mirrors the read-only file system deployed in the Production environment. You can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker:build&lt;/code&gt; command in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package to generate the Docker Compose configuration and deploy Magento Commerce Cloud in a Docker container.&lt;/p&gt; &lt;h2 id=&quot;launch-modes&quot;&gt;Launch modes&lt;/h2&gt; &lt;p&gt;&lt;em&gt;Mode&lt;/em&gt; is an additional configuration option for the Docker configuration generator (the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker:build&lt;/code&gt;...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/docker/docker-config.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Local development</title>
-          <description>{{site.data.var.ece}} environments are **Read Only**, including all Starter environments and all Pro Integration, Staging, and Production environments. In a local development environment, you can write and test code prior to pushing it to an Integration environment for further testing and deployment to Staging and Production. You must develop in a local workspace using a cloned Integration environment and push changes to the remote, read-only {{site.data.var.ece}} Git repository. You can choose one of two methods: -...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Prepare your existing Magento Commerce install</title>
-          <description>You need to prepare your existing {{site.data.var.ee}} implementation to import it into a new {{site.data.var.ece}} project. This includes updating and adding files, transferring media files, and migrating data. Before preparing your project and importing code, push all pending changes from your local workstation to your remote {{site.data.var.ece}} repository. When you push, the build and deploy scripts run to update code, static content, and environment services. The import preparation steps include the following: - [Prepare and...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Import Magento Commerce code into a Cloud project</title>
-          <description>Use the following instructions to import your {{site.data.var.ee}} code into your current {{ site.data.var.ece }} project code. {: .bs-callout .bs-callout-warning} When you force push code from an existing Git branch to your {{site.data.var.ece}} project, you overwrite the project code in `master` which removes all data, sites, stores, and other development work you have done on the project. If you want to keep any files or directories, copy them to a directory outside of your project....</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup-import-import.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Import existing code into a project</title>
-          <description>You can create a {{site.data.var.ece}} project from a blank template or by importing existing code. We recommend starting with a blank template first, and then importing existing Magento code on top of it. ## Prerequisites for importing code {#prereqs} Before you begin, do the following: - Add the existing {{site.data.var.ee}} code to a Git repository. We recommend using [GitHub]({{ page.baseurl }}/cloud/integrations/github-integration.html). - Set up your [local development environment]({{ page.baseurl }}/cloud/setup/first-time-setup.html). - Gather required information: -...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Install Inventory Management</title>
-          <description>{{site.data.var.im}} modules provide all inventory features and options for Single and Multi Source merchants to manage product quantities and stock for sales channels. These features are available in 2.3.x {{site.data.var.ce}}, {{site.data.var.ee}}, and {{site.data.var.ece}}. These features and extensions were developed as part of the [Magento Inventory (MSI) project](https://github.com/magento/inventory) through the Magento Community Engineering program. {{site.data.var.im}} installs with Magento {{site.data.var.ce}} and {{site.data.var.ee}} with all features enabled by default. No additional steps are required for enabling these inventory...</description>
-          <link>https://dshevtsov.github.io/extensions/inventory-management/</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>First time deployment</title>
-          <description>--- #### Previous step: [Install Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html) {:.bs-callout .bs-callout-info} You only need to complete this step one time for a new **Pro project**. This code is already on `master` for the Starter project. As a best practice, you need to have the template {{site.data.var.ee}} project (or `master` branch) fully deployed across all environments to ensure all future code pushes correctly deploy. After fully setting up your local workspace, for **Pro** you should have the...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-deploy.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>PHP Developer Guide</title>
-          <description>&lt;p&gt;The &lt;a href=&quot;https://glossary.magento.com/php&quot;&gt;PHP&lt;/a&gt; Developer Guide contains information for developers who want to know more about developing or modifying Magento components. With this knowledge you can extend or customize any of the existing components in the Magento application. You can also create components that introduce new functionality and distribute them to merchants.&lt;/p&gt; &lt;h2 id=&quot;magento-components&quot;&gt;Magento components&lt;/h2&gt; &lt;p&gt;The Magento application is made up of &lt;em&gt;Modules&lt;/em&gt;, &lt;em&gt;Themes&lt;/em&gt;, and &lt;em&gt;Language Packages&lt;/em&gt;:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/architecture/archi_perspectives/components/modules/mod_intro.html&quot;&gt;&lt;strong&gt;Modules&lt;/strong&gt;&lt;/a&gt; interact with other parts of...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>What's new on DevDocs</title>
-          <description>{% assign whatsnew = site.data.whats-new %} &lt;a class=&quot;btn&quot; href=&quot;{{ whatsnew.thread }}&quot;&gt;&lt;img src=&quot;{{ site.baseurl }}/i/icons/rss.svg&quot; /&gt; RSS feed&lt;/a&gt; &lt;!-- The link enables RSS readers to recognize the whatsnew-feed thread on the page --&gt; &lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;What's new on Magento DevDocs&quot; href= &quot;{{ whatsnew.thread }}&quot; /&gt; {{ whatsnew.description }} {% assign entries = whatsnew.entries %} {% assign grouped_by_year = entries | group_by_exp: &quot;entry&quot;, &quot;entry.date | date: '%Y'&quot; %} {% for group in grouped_by_year %} ## {{...</description>
-          <link>https://dshevtsov.github.io/whats-new.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Private content</title>
-          <description>{::options syntax_highlighter=&quot;rouge&quot; /} Since private content is specific to individual users, it's reasonable to handle it on the client (i.e., web browser). Use our [customer-data]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/Customer/view/frontend/web/js/customer-data.js){:target=&quot;_blank&quot;} JS library to store private data in local storage, invalidate private data using customizable rules, and synchronize data with the backend. This example shows a customer's name on a cacheable page. ## Create a section source {#config-cache-priv-how-source} The section source class is responsible for retrieving data...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/page-caching/private-content.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Pro architecture</title>
-          <description>Your {{site.data.var.ece}} Pro architecture supports a maximum of **eight** environments that you can use to develop, test, and launch your store. Each environment contains a database and a web server: - **Integration**—Provides a single environment branch, and you can create up to four additional, environment branches. This allows for a maximum of five _active_ branches deployed to Platform-as-a-Service (PaaS) containers. - **Staging**—Provides a single environment branch deployed to dedicated Infrastructure-as-a-Service (IaaS) containers. - **Production**—Provides a...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/architecture/pro-architecture.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Pro develop and deploy workflow</title>
-          <description>The {{site.data.var.ece}} Pro plan includes a single, Git repository with a Global Master and three, main environments: the Integration environment for development and testing, the Staging environment for testing with all services, and the Production environment to go live. See [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html) for an overview. The following graphic demonstrates the Pro develop and deploy workflow, which uses a simple, git-branching approach. You [develop](#develop) code using an Active branch based on the Integration environment...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html</link>
+          <title>Custom Fastly VCL snippets</title>
+          <description>&lt;p&gt;Custom VCL snippets are blocks of VCL logic added to the active VCL version. A custom VCL snippet modifies how Fastly caching services respond to request traffic. For example, you can add a custom VCL snippet to allow request traffic only from specified client IP addresses, or to block traffic from websites known for sending referral spam to your Magento Commerce Cloud sites.&lt;/p&gt; &lt;p&gt;Custom VCL snippets—generated, compiled, and transmitted to all Fastly caches—load and activate...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
@@ -227,85 +124,57 @@ Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:
     
         <item>
           <title>Set up Fastly</title>
-          <description>&lt;p&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/basic-information/cloud-fastly.html&quot;&gt;Fastly&lt;/a&gt; is required for Magento Commerce Cloud, and is used in Staging and Production environments. It works with Varnish to provide fast caching capabilities and a &lt;a href=&quot;https://glossary.magento.com/content-delivery-network&quot;&gt;Content Delivery Network&lt;/a&gt; (CDN) for static assets. Fastly is not available in Integration environments.&lt;/p&gt; &lt;p&gt;This information gets you started with installing and configuring Fastly. We provide additional information for configuring backends and Origin shields, customizing error pages, and adding custom VCL snippets.&lt;/p&gt; &lt;p&gt;For VCL snippets, experience developing...</description>
+          <description>&lt;p&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/basic-information/cloud-fastly.html&quot;&gt;Fastly&lt;/a&gt; is required for Magento Commerce Cloud, and is used in Staging and Production environments. It works with Varnish to provide fast caching capabilities and a &lt;a href=&quot;https://glossary.magento.com/content-delivery-network&quot;&gt;Content Delivery Network&lt;/a&gt; (CDN) for static assets. Fastly is not available in Integration environments.&lt;/p&gt; &lt;p&gt;This information gets you started with installing and configuring Fastly. We provide additional information for configuring backends and Origin shields, customizing error pages, and adding custom VCL snippets.&lt;/p&gt; &lt;p&gt;For VCL snippets, experience developing...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/configure-fastly.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Application</title>
-          <description>The `.magento.app.yaml` file controls the way your application builds and deploys. Although {{site.data.var.ece}} supports multiple applications per project, typically, a project has a single application with the `.magento.app.yaml` file at the root of the repository. The `.magento.app.yaml` has many default values, see [a sample `.magento.app.yaml` file](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml). Always review the `.magento.app.yaml` for your installed version. This file can differ across {{site.data.var.ece}} versions. {% include cloud/note-pro-using-yaml.md %} ## Properties Use the following properties to build your application...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/project-conf-files_magento-app.html</link>
+          <title>Create custom cache engines</title>
+          <description>&lt;p&gt;This topic discusses how to use the Magento 2 database for caching. After you complete these tasks, cached objects are stored in the &lt;code class=&quot;highlighter-rouge&quot;&gt;cache&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;cache_tag&lt;/code&gt; Magento 2 database tables. Nothing is stored &lt;code class=&quot;highlighter-rouge&quot;&gt;var/cache&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;var/page_cache&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;This topic discusses how to set up database caching and how to verify database caching is working. We discuss the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Using the &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; cache frontend, in which case you modify &lt;code...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/partial-caching/database-caching.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Set up redirects to WordPress using Fastly</title>
-          <description>&lt;p&gt;The following example shows how to use a &lt;a href=&quot;https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api&quot;&gt;Fastly Edge Dictionary&lt;/a&gt; with a custom VCL snippet to redirect incoming requests from a Magento Commerce store (&lt;code class=&quot;highlighter-rouge&quot;&gt;staging.example.com&lt;/code&gt;) to a separate WordPress site (&lt;code class=&quot;highlighter-rouge&quot;&gt;customer.example.com&lt;/code&gt;) that hosts related content like blog posts and customer stories.&lt;/p&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;We recommend adding custom VCL configurations to a Staging environment where you can test them before running against Production.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Configure the environment for Fastly services....</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html</link>
+          <title>Module version dependencies</title>
+          <description>&lt;p&gt;Magento platform clients need notifications about breaking changes for their installed extensions and customizations when they upgrade their Magento installation.&lt;/p&gt; &lt;p&gt;To achieve this, all third-party modules must obey the following rules:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;You must specify the dependency on all modules listed in the ‘require’ section of your module’s &lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt; file.&lt;/li&gt; &lt;li&gt;Do not specify a dependency on meta packages (e.g. ‘product-community-edition’).&lt;/li&gt; &lt;li&gt;Specify a module’s MAJOR and/or MINOR version number if you use any of that...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/versioning/dependencies.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Secure access to Magento Admin UI by client IP address</title>
-          <description>&lt;p&gt;The following example shows how to use a custom VCL snippet with a &lt;a href=&quot;https://docs.fastly.com/guides/access-control-lists/about-acls&quot;&gt;Fastly Access Control List (ACL)&lt;/a&gt; to secure access to the Magento Admin UI for a Magento Commerce Cloud project environment by client IP address. When you add the custom VCL snippet, Fastly allows only requests from IP addresses included in the ACL.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Configure the environment for Fastly services. See &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html&quot;&gt;Set up Fastly&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Get Magento Admin...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html</link>
+          <title>Component types</title>
+          <description>&lt;p&gt;Each component type has a different &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/extension-dev-guide/build/module-file-structure.html&quot;&gt;directory structure&lt;/a&gt; and different contents for &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/extension-dev-guide/build/composer-integration.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;The following table discusses the component types that Magento Marketplace supports. The composer &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; column in the following table specifies the value of the &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; field you must add to &lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt; for that type of component.&lt;/p&gt; &lt;table&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;Friendly name&lt;/th&gt; &lt;th&gt;composer.json type&lt;/th&gt; &lt;th&gt;Description&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Metapackage&lt;/td&gt; &lt;td&gt;metapackage&lt;/td&gt; &lt;td&gt;Technically, a Composer package type, not...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/prepare/dev-modtypes.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>JavaScript resources in Magento</title>
-          <description>## Overview {#m2devgde-js-resources-intro} This topic describes the general concepts of how [JavaScript](https://glossary.magento.com/javascript) components are organized in Magento. To address the problem of slow page load, we exclude JavaScript from the page headers and we added the ability to use the [RequireJS library](http://requirejs.org){: target=&quot;_blank&quot;}. RequireJS improves the perceived page load time because it allows JavaScript to load in the background; in particular, because it enables asynchronous JavaScript loading. ## Explore JavaScript resources {#m2devgde-js-resources-configuring} ### JS resources...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/javascript-dev-guide/javascript/js-resources.html</link>
+          <title>Launch Docker</title>
+          <description>&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package (version 2002.0.13 or later) deploys to a read-only file system by default in the Docker environment, which mirrors the read-only file system deployed in the Production environment. You can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker:build&lt;/code&gt; command in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package to generate the Docker Compose configuration and deploy Magento Commerce Cloud in a Docker container.&lt;/p&gt; &lt;h2 id=&quot;launch-modes&quot;&gt;Launch modes&lt;/h2&gt; &lt;p&gt;&lt;em&gt;Mode&lt;/em&gt; is an additional configuration option for the Docker configuration generator (the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker:build&lt;/code&gt;...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/docker/docker-config.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
           <title>Manage branches with the CLI</title>
-          <description>&lt;p&gt;After you install the Magento Cloud CLI and set up SSH keys for remote access to your Cloud infrastructure, you can use Magento Cloud CLI commands to manage the environments for your Magento Commerce Cloud projects. For information about the environment architecture, see &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html&quot;&gt;Starter architecture&lt;/a&gt; or &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/architecture/pro-architecture.html&quot;&gt;Pro architecture&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To manage the branches and environments with the Project Web Interface, see &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/project/project-webint-branch.html&quot;&gt;Manage branches with the Project Web Interface&lt;/a&gt;.&lt;/p&gt; &lt;h2 id=&quot;env-start-comm&quot;&gt;Common Magento Cloud CLI...</description>
+          <description>&lt;p&gt;After you install the Magento Cloud CLI and set up SSH keys for remote access to your Cloud infrastructure, you can use Magento Cloud CLI commands to manage the environments for your Magento Commerce Cloud projects. For information about the environment architecture, see &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/basic-information/starter-architecture.html&quot;&gt;Starter architecture&lt;/a&gt; or &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/architecture/pro-architecture.html&quot;&gt;Pro architecture&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To manage the branches and environments with the Project Web Interface, see &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/project/project-webint-branch.html&quot;&gt;Manage branches with the Project Web Interface&lt;/a&gt;.&lt;/p&gt; &lt;h2 id=&quot;env-start-comm&quot;&gt;Common Magento Cloud CLI...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/env/environments-start.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
           <title>Configure environments</title>
-          <description>&lt;p&gt;After fully configuring your store, you need to configure your environments. Environments in Magento Commerce Cloud include containers with applications, services, and a database to provide a complete system for your Magento application codebase and files.&lt;/p&gt; &lt;p&gt;You can configure application settings, routes, build and deploy actions, and notifications to support your project environments using the following configuration files:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.magento.app.yaml&lt;/code&gt;&lt;/a&gt;—defines how to build and deploy Magento, including services, hooks, and cron jobs.&lt;/li&gt; &lt;li&gt;&lt;a...</description>
+          <description>&lt;p&gt;After fully configuring your store, you need to configure your environments. Environments in Magento Commerce Cloud include containers with applications, services, and a database to provide a complete system for your Magento application codebase and files.&lt;/p&gt; &lt;p&gt;You can configure application settings, routes, build and deploy actions, and notifications to support your project environments using the following configuration files:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/project/project-conf-files_magento-app.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.magento.app.yaml&lt;/code&gt;&lt;/a&gt;—defines how to build and deploy Magento, including services, hooks, and cron jobs.&lt;/li&gt; &lt;li&gt;&lt;a...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/env/environments.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Manage branches with the Project Web Interface</title>
-          <description>Every {{site.data.var.ece}} *environment* has an associated active Git *branch*. You can manage your environments using either the Project Web Interface, the Magento Cloud CLI, or Git commands. For more information on Git branches, see [Git documentation](https://git-scm.com/doc). For more information about managing environments using the CLI, see [Manage branches with the CLI]({{ page.baseurl }}/cloud/env/environments-start.html). This topic discusses how to use the Project Web Interface to: * Add or delete an environment. You cannot add or delete...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/project-webint-branch.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Low-level cache options</title>
-          <description>&lt;p&gt;The Magento application uses a low-level &lt;a href=&quot;https://glossary.magento.com/cache&quot;&gt;cache&lt;/a&gt; &lt;a href=&quot;https://glossary.magento.com/frontend&quot;&gt;frontend&lt;/a&gt; and &lt;a href=&quot;https://glossary.magento.com/backend&quot;&gt;backend&lt;/a&gt; to provide access to the cache storage.&lt;/p&gt; &lt;h2 id=&quot;cache-lowlevel-front&quot;&gt;Low-level frontend cache&lt;/h2&gt; &lt;p&gt;Magento extends &lt;a href=&quot;http://framework.zend.com/manual/1.12/en/zend.cache.frontends.html&quot; target=&quot;_blank&quot;&gt;Zend_Cache_Core&lt;/a&gt; by implementing &lt;a href=&quot;https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Cache/Core.php&quot; target=&quot;_blank&quot;&gt;Magento\Framework\Cache\Core&lt;/a&gt; frontend cache.&lt;/p&gt; &lt;h2 id=&quot;cache-lowlevel-front&quot;&gt;Low-level backend cache&lt;/h2&gt; &lt;p&gt;In general, the Magento application works with any backend cache that &lt;a href=&quot;http://framework.zend.com/manual/1.12/en/zend.cache.backends.html&quot; target=&quot;_blank&quot;&gt;Zend_Cache Backends&lt;/a&gt; supports. However, this guide covers only the following low-level backend caches:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/redis/config-redis.html&quot;&gt;Redis&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/extension-dev-guide/cache/partial-caching/database-caching.html&quot;&gt;Database&lt;/a&gt;&lt;/li&gt; &lt;li&gt;File system (default): No...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/cache/cache-options.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Associate cache frontends with cache types</title>
-          <description>&lt;h2 id=&quot;cache-mage-frontend&quot;&gt;Step 1: Define a cache frontend&lt;/h2&gt; &lt;p&gt;The Magento application has a &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; cache &lt;a href=&quot;https://glossary.magento.com/frontend&quot;&gt;frontend&lt;/a&gt; you can use for any &lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean-over&quot;&gt;cache type&lt;/a&gt;. This section discusses how to optionally define a &lt;a href=&quot;https://glossary.magento.com/cache-frontend&quot;&gt;cache frontend&lt;/a&gt; with a different name, which is preferable if you expect to customize your frontend.&lt;/p&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;To use the &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; cache type, you don’t need to modify &lt;code class=&quot;highlighter-rouge&quot;&gt;env.php&lt;/code&gt; at all; you modify Magento’s global &lt;code class=&quot;highlighter-rouge&quot;&gt;di.xml&lt;/code&gt;. See...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/cache/cache-types.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>magento-cloud-configuration release 101.5.x Release Notes</title>
-          <description>&lt;p&gt;These Release Notes provide up-to-date information about changes, additions, and fixes to the Magento Commerce Cloud version 2.1.5, &lt;code class=&quot;highlighter-rouge&quot;&gt;magento-cloud-configuration&lt;/code&gt; release 101.5.2, 101.5.3, and 101.5.4.&lt;/p&gt; &lt;h2 id=&quot;general-changes&quot;&gt;General changes&lt;/h2&gt; &lt;p&gt;Staging and Production environments in the UI for Pro projects. You can enter a ticket to have your project updated. For more information, see &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/trouble/pro-env-management.html&quot;&gt;Add Staging and Production to Pro projects UI&lt;/a&gt;.&lt;/p&gt; &lt;h2 id=&quot;10154-changes&quot;&gt;101.5.4 changes&lt;/h2&gt; &lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;magento-cloud-configuration&lt;/code&gt; release 101.5.4 on Magento Commerce Cloud 2.1.5, we...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.5.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>ActionsColumn component</title>
-          <description>The ActionsColumns component implements a table's column responsible for displaying and performing a list of record-related actions. ## Configuration options &lt;table&gt; &lt;tr&gt; &lt;th&gt;Option&lt;/th&gt; &lt;th&gt;Description&lt;/th&gt; &lt;th&gt;Type&lt;/th&gt; &lt;th&gt;Default&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;bodyTmpl&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Path to the &lt;code&gt;.html&lt;/code&gt; template used to render a column's field in the table's body.&lt;/td&gt; &lt;td&gt;String&lt;/td&gt; &lt;td&gt;&lt;code&gt;ui/grid/cells/actions&lt;/code&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;draggable&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Defines whether a user can change column's position in the table by grabbing column's header and dragging it across the table.&lt;/td&gt; &lt;td&gt;Boolean&lt;/td&gt; &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;fieldClass&lt;/code&gt;&lt;/td&gt;...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/ui_comp_guide/components/ui-actionscolumn.html</link>
+          <title>Block referral spam</title>
+          <description>&lt;p&gt;The following example shows how to configure &lt;a href=&quot;https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api&quot;&gt;Fastly Edge Dictionary&lt;/a&gt; with a custom VCL snippet to block referral spam from your Magento Commerce Cloud site.&lt;/p&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;We recommend adding custom VCL configurations to a Staging environment where you can test them before running them against the Production environment.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Configure the environment for Fastly services. See &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/cdn/configure-fastly.html&quot;&gt;Set up Fastly&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Get Admin credentials for your Magento Commerce Cloud environment.&lt;/p&gt;...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
@@ -317,16 +186,65 @@ Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:
         </item>
     
         <item>
-          <title>Public content</title>
-          <description>{::options syntax_highlighter=&quot;rouge&quot; /} By default, all pages in Magento are cacheable, but you can disable caching if necessary (e.g., payment method return page, debug page, or AJAX data source). ## Caching If you need to refresh data every second consider using a cache. Requesting content from the cache is faster than generating it for every request. Only `GET` and `HEAD` methods are cacheable. ### Disable or enable caching Add a `cacheable=&quot;false&quot;` attribute to any block...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/page-caching/public-content.html</link>
+          <title>Secure access to Magento Admin UI by client IP address</title>
+          <description>&lt;p&gt;The following example shows how to use a custom VCL snippet with a &lt;a href=&quot;https://docs.fastly.com/guides/access-control-lists/about-acls&quot;&gt;Fastly Access Control List (ACL)&lt;/a&gt; to secure access to the Magento Admin UI for a Magento Commerce Cloud project environment by client IP address. When you add the custom VCL snippet, Fastly allows only requests from IP addresses included in the ACL.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Configure the environment for Fastly services. See &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/cdn/configure-fastly.html&quot;&gt;Set up Fastly&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Get Magento Admin...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/fastly-vcl-whitelist.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Block referral spam</title>
-          <description>&lt;p&gt;The following example shows how to configure &lt;a href=&quot;https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api&quot;&gt;Fastly Edge Dictionary&lt;/a&gt; with a custom VCL snippet to block referral spam from your Magento Commerce Cloud site.&lt;/p&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;We recommend adding custom VCL configurations to a Staging environment where you can test them before running them against the Production environment.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Configure the environment for Fastly services. See &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/cdn/configure-fastly.html&quot;&gt;Set up Fastly&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Get Admin credentials for your Magento Commerce Cloud environment.&lt;/p&gt;...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/fastly-vcl-badreferer.html</link>
+          <title>Set up redirects to WordPress using Fastly</title>
+          <description>&lt;p&gt;The following example shows how to use a &lt;a href=&quot;https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api&quot;&gt;Fastly Edge Dictionary&lt;/a&gt; with a custom VCL snippet to redirect incoming requests from a Magento Commerce store (&lt;code class=&quot;highlighter-rouge&quot;&gt;staging.example.com&lt;/code&gt;) to a separate WordPress site (&lt;code class=&quot;highlighter-rouge&quot;&gt;customer.example.com&lt;/code&gt;) that hosts related content like blog posts and customer stories.&lt;/p&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;We recommend adding custom VCL configurations to a Staging environment where you can test them before running against Production.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Configure the environment for Fastly services....</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/fastly-vcl-wordpress.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>First time deployment</title>
+          <description>--- #### Previous step: [Install Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html) {:.bs-callout .bs-callout-info} You only need to complete this step one time for a new **Pro project**. This code is already on `master` for the Starter project. As a best practice, you need to have the template {{site.data.var.ee}} project (or `master` branch) fully deployed across all environments to ensure all future code pushes correctly deploy. After fully setting up your local workspace, for **Pro** you should have the...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-deploy.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Import existing code into a project</title>
+          <description>You can create a {{site.data.var.ece}} project from a blank template or by importing existing code. We recommend starting with a blank template first, and then importing existing Magento code on top of it. ## Prerequisites for importing code {#prereqs} Before you begin, do the following: - Add the existing {{site.data.var.ee}} code to a Git repository. We recommend using [GitHub]({{ page.baseurl }}/cloud/integrations/github-integration.html). - Set up your [local development environment]({{ page.baseurl }}/cloud/setup/first-time-setup.html). - Gather required information: -...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup-import-first-steps.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Import Magento Commerce code into a Cloud project</title>
+          <description>Use the following instructions to import your {{site.data.var.ee}} code into your current {{ site.data.var.ece }} project code. {: .bs-callout .bs-callout-warning} When you force push code from an existing Git branch to your {{site.data.var.ece}} project, you overwrite the project code in `master` which removes all data, sites, stores, and other development work you have done on the project. If you want to keep any files or directories, copy them to a directory outside of your project....</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup-import-import.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Prepare your existing Magento Commerce install</title>
+          <description>You need to prepare your existing {{site.data.var.ee}} implementation to import it into a new {{site.data.var.ece}} project. This includes updating and adding files, transferring media files, and migrating data. Before preparing your project and importing code, push all pending changes from your local workstation to your remote {{site.data.var.ece}} repository. When you push, the build and deploy scripts run to update code, static content, and environment services. The import preparation steps include the following: - [Prepare and...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup-import-prepare.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Local development</title>
+          <description>{{site.data.var.ece}} environments are **Read Only**, including all Starter environments and all Pro Integration, Staging, and Production environments. In a local development environment, you can write and test code prior to pushing it to an Integration environment for further testing and deployment to Staging and Production. You must develop in a local workspace using a cloned Integration environment and push changes to the remote, read-only {{site.data.var.ece}} Git repository. You can choose one of two methods: -...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/setup/first-time-setup.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Git</title>
+          <description>Git is the center of all code management, build, and deployment for your {{site.data.var.ece}} stores and sites. We use Git to provide source control for your code: * Git supports branch development that merges upstream (or to a parent branch) before deploying across your environments. Multiple developers can work together on small to large code updates through Git branch management. * When you push Git branches, we automatically kick off build and deploy scripts to...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/reference/git-integration.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Install Inventory Management</title>
+          <description>{{site.data.var.im}} modules provide all inventory features and options for Single and Multi Source merchants to manage product quantities and stock for sales channels. These features are available in 2.3.x {{site.data.var.ce}}, {{site.data.var.ee}}, and {{site.data.var.ece}}. These features and extensions were developed as part of the [Magento Inventory (MSI) project](https://github.com/magento/inventory) through the Magento Community Engineering program. {{site.data.var.im}} installs with Magento {{site.data.var.ce}} and {{site.data.var.ee}} with all features enabled by default. No additional steps are required for enabling these inventory...</description>
+          <link>https://dshevtsov.github.io/extensions/inventory-management/</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
@@ -345,16 +263,16 @@ Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:
         </item>
     
         <item>
-          <title>Onboarding tasks</title>
-          <description>After your company purchases a subscription plan for {{site.data.var.ece}}, the only person who initially has access to the project and code is the Project Owner. The _Project Owner_ is the person in your business or finance organization that manages payments and other business-related issues for the {{site.data.var.ece}} account. The Project Owner serves as the point of contact with Magento. To quickly onboard your project so you can develop your site for live deployment, you need...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/onboarding/onboarding-tasks.html</link>
+          <title>JavaScript resources in Magento</title>
+          <description>## Overview {#m2devgde-js-resources-intro} This topic describes the general concepts of how [JavaScript](https://glossary.magento.com/javascript) components are organized in Magento. To address the problem of slow page load, we exclude JavaScript from the page headers and we added the ability to use the [RequireJS library](http://requirejs.org){: target=&quot;_blank&quot;}. RequireJS improves the perceived page load time because it allows JavaScript to load in the background; in particular, because it enables asynchronous JavaScript loading. ## Explore JavaScript resources {#m2devgde-js-resources-configuring} ### JS resources...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/javascript-dev-guide/javascript/js-resources.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Custom Fastly VCL snippets</title>
-          <description>&lt;p&gt;Custom VCL snippets are blocks of VCL logic added to the active VCL version. A custom VCL snippet modifies how Fastly caching services respond to request traffic. For example, you can add a custom VCL snippet to allow request traffic only from specified client IP addresses, or to block traffic from websites known for sending referral spam to your Magento Commerce Cloud sites.&lt;/p&gt; &lt;p&gt;Custom VCL snippets—generated, compiled, and transmitted to all Fastly caches—load and activate...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/cloud-vcl-custom-snippets.html</link>
+          <title>Onboarding tasks</title>
+          <description>After your company purchases a subscription plan for {{site.data.var.ece}}, the only person who initially has access to the project and code is the Project Owner. The _Project Owner_ is the person in your business or finance organization that manages payments and other business-related issues for the {{site.data.var.ece}} account. The Project Owner serves as the point of contact with Magento. To quickly onboard your project so you can develop your site for live deployment, you need...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/onboarding/onboarding-tasks.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
@@ -369,13 +287,6 @@ Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:
           <title>Step 1. Configure the store</title>
           <description>The default Luma store needs additional configuration to run the REST calls mentioned in this tutorial. ### Set the payment method {#set-payment} Since the Luma store is for demonstration purposes only, it is not set up to handle credit card payments. However, it can simulate any of the following offline payment methods: Payment type | Configuration name | Enabled by default? --- | --- | --- Check/Money Order | `checkmo` | Yes Bank Transfer Payment...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/rest/tutorials/orders/order-config-store.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Git</title>
-          <description>Git is the center of all code management, build, and deployment for your {{site.data.var.ece}} stores and sites. We use Git to provide source control for your code: * Git supports branch development that merges upstream (or to a parent branch) before deploying across your environments. Multiple developers can work together on small to large code updates through Git branch management. * When you push Git branches, we automatically kick off build and deploy scripts to...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/reference/git-integration.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
@@ -429,124 +340,119 @@ Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:
         </item>
     
         <item>
-          <title>Fastly</title>
-          <description>&lt;p&gt;Fastly provides the following services to optimize and secure content delivery operations for your Magento Commerce Cloud projects. These services are included with your Magento Commerce Cloud subscription at no additional cost.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;strong&gt;Content delivery network (CDN)&lt;/strong&gt;—Varnish-based service that caches your site pages, assets, CSS, and more in backend data centers you set up. As customers access your site and stores, the requests hit Fastly to load cached pages faster. The CDN service provides...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/cdn/cloud-fastly.html</link>
+          <title>Upload your component to the Magento Marketplace</title>
+          <description>When component development is complete, upload your components to the Magento Marketplace using the instructions in the [Magento Marketplace User Guide](http://docs.magento.com/marketplace/user_guide/getting-started.html){:target=&quot;_blank&quot;}.
+</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/package/package_mktpl.html</link>
           <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Install Magento using Composer</title>
-          <description>&lt;p&gt;We use &lt;a href=&quot;https://getcomposer.org/&quot; target=&quot;_blank&quot;&gt;Composer&lt;/a&gt; to manage Magento components and their dependencies. Using Composer to get the Magento software &lt;a href=&quot;https://glossary.magento.com/metapackage&quot;&gt;metapackage&lt;/a&gt; provides the following advantages:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Reuse third-party libraries without bundling them with source code&lt;/li&gt; &lt;li&gt;Reduce extension conflicts and compatibility issues by using a component-based architecture with robust dependency management&lt;/li&gt; &lt;li&gt;Adhere to &lt;a href=&quot;https://www.php-fig.org/&quot;&gt;PHP-Framework Interoperability Group (FIG)&lt;/a&gt; standards&lt;/li&gt; &lt;li&gt;Repackage Magento Open Source with other components&lt;/li&gt; &lt;li&gt;Use the Magento software in a production environment&lt;/li&gt; &lt;/ul&gt; &lt;p...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/install-gde/composer.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+          <title>Page caching</title>
+          <description>{% include cache/page-cache-overview.md%}
+
+{: .bs-callout .bs-callout-info }
+Only HTTP [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3){:target=&quot;_blank} and [HEAD](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4){:target=&quot;_blank&quot;} requests are cacheable. For more information about caching, see [RFC-2616 section 13](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html){:target=&quot;_blank}.
+</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/page-caching.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Deploy variables</title>
-          <description>The following _deploy_ variables control actions in the deploy phase and can inherit and override values from the [Global variables]({{ page.baseurl }}/cloud/env/variables-global.html). Also, you can override the [ADMIN variables]({{ page.baseurl }}/cloud/env/environment-vars_magento.html). Insert these variables in the `deploy` stage of the `.magento.env.yaml` file: ```yaml stage: deploy: DEPLOY_VARIABLE_NAME: value ``` {% include cloud/customize-build-deploy.md %} ### `CACHE_CONFIGURATION` - **Default**—_Not set_ - **Version**—Magento 2.1.4 and later Configure Redis page and default caching. When setting the `cm_cache_backend_redis` parameter, you must...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/env/variables-deploy.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+          <title>Partial caching</title>
+          <description>Magento uses [Zend_Cache](http://framework.zend.com/manual/1.12/en/zend.cache.html){:target=&quot;_blank&quot;} to interact with the cache storage. However, Magento also has the [Magento\Cache]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/Cache){:target=&quot;_blank&quot;} [library](https://glossary.magento.com/library) for implementing Magento-specific caching. These topics discuss how to configure caching and [cache](https://glossary.magento.com/cache) types. {: .bs-callout .bs-callout-info } By default, file system caching is enabled; no configuration is necessary to use it. This means the cache is located under `&lt;magento_root&gt;/var`. To change the cache configuration, edit `&lt;magento_root&gt;/app/etc/env.php`. The cache configuration is an associative array similar...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/partial-caching.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Update ece-tools version</title>
-          <description>&lt;p&gt;Typically, an &lt;em&gt;update&lt;/em&gt; includes patches and available hotfixes as part of the &lt;code class=&quot;highlighter-rouge&quot;&gt;magento-cloud-metapackage&lt;/code&gt;. If you still use a version of Magento Commerce Cloud that does not contain the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package, then your project requires an &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html&quot;&gt;upgrade&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Before beginning an upgrade or a patching process, create an active branch from the Integration environment and checkout the new branch to your local workstation. Dedicating a branch to the upgrade or the patch process helps...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/ece-tools-update.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+          <title>Private content</title>
+          <description>{::options syntax_highlighter=&quot;rouge&quot; /} Since private content is specific to individual users, it's reasonable to handle it on the client (i.e., web browser). Use our [customer-data]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/Customer/view/frontend/web/js/customer-data.js){:target=&quot;_blank&quot;} JS library to store private data in local storage, invalidate private data using customizable rules, and synchronize data with the backend. This example shows a customer's name on a cacheable page. ## Create a section source {#config-cache-priv-how-source} The section source class is responsible for retrieving data...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/page-caching/private-content.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Configuration management for store settings</title>
-          <description>Configuration management in {{site.data.var.ece}} provides a new way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. With this file, you can add it to your Git commit and push it across all of your environments to keep consistent settings and reduce downtime. It provides the following benefits: * Better way to [manage and synchronize](#cloud-confman-over) the configuration across your Integration, Staging, and...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/live/sens-data-over.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+          <title>Pro architecture</title>
+          <description>Your {{site.data.var.ece}} Pro architecture supports a maximum of **eight** environments that you can use to develop, test, and launch your store. Each environment contains a database and a web server: - **Integration**—Provides a single environment branch, and you can create up to four additional, environment branches. This allows for a maximum of five _active_ branches deployed to Platform-as-a-Service (PaaS) containers. - **Staging**—Provides a single environment branch deployed to dedicated Infrastructure-as-a-Service (IaaS) containers. - **Production**—Provides a...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/architecture/pro-architecture.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Web API technical vision</title>
-          <description>Web API is crucial for Magento because of the need to integrate with order management, customer management, and other enterprise management software systems. There are many headless Magento installations in which a merchant partially uses Magento functionality, while the other pieces of an eCommerce website are provided by other systems. See [more details](https://en.wikipedia.org/wiki/Web_API) about the importance of web APIs in modern web applications. ### Components Dependencies The following diagram shows Web API component dependencies. ![Web...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/coding-standards/technical-vision/webapi.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+          <title>Pro develop and deploy workflow</title>
+          <description>The {{site.data.var.ece}} Pro plan includes a single, Git repository with a Global Master and three, main environments: the Integration environment for development and testing, the Staging environment for testing with all services, and the Production environment to go live. See [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html) for an overview. The following graphic demonstrates the Pro develop and deploy workflow, which uses a simple, git-branching approach. You [develop](#develop) code using an Active branch based on the Integration environment...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/architecture/pro-develop-deploy-workflow.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
         </item>
     
         <item>
-          <title>Build and deploy on local</title>
-          <description>Before pushing your code to your [Starter]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html) or [Pro]({{ page.baseurl }}/cloud/architecture/pro-architecture.html) Staging and Production environments, you should fully build on your local. Fully testing builds and deploys along with full site testing can reduce the risk of issues or delays for your final site deployment, and expose any issues early for debugging. These tasks walk through: * Complete development on your local * Complete a full build and deploy process on your local...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/live/live-sanity-check.html</link>
+          <title>Application</title>
+          <description>The `.magento.app.yaml` file controls the way your application builds and deploys. Although {{site.data.var.ece}} supports multiple applications per project, typically, a project has a single application with the `.magento.app.yaml` file at the root of the repository. The `.magento.app.yaml` has many default values, see [a sample `.magento.app.yaml` file](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml). Always review the `.magento.app.yaml` for your installed version. This file can differ across {{site.data.var.ece}} versions. {% include cloud/note-pro-using-yaml.md %} ## Properties Use the following properties to build your application...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/project-conf-files_magento-app.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Manage branches with the Project Web Interface</title>
+          <description>Every {{site.data.var.ece}} *environment* has an associated active Git *branch*. You can manage your environments using either the Project Web Interface, the Magento Cloud CLI, or Git commands. For more information on Git branches, see [Git documentation](https://git-scm.com/doc). For more information about managing environments using the CLI, see [Manage branches with the CLI]({{ page.baseurl }}/cloud/env/environments-start.html). This topic discusses how to use the Project Web Interface to: * Add or delete an environment. You cannot add or delete...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/project-webint-branch.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Public content</title>
+          <description>{::options syntax_highlighter=&quot;rouge&quot; /} By default, all pages in Magento are cacheable, but you can disable caching if necessary (e.g., payment method return page, debug page, or AJAX data source). ## Caching If you need to refresh data every second consider using a cache. Requesting content from the cache is faster than generating it for every request. Only `GET` and `HEAD` methods are cacheable. ### Disable or enable caching Add a `cacheable=&quot;false&quot;` attribute to any block...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/cache/page-caching/public-content.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>magento-cloud-configuration release 101.5.x Release Notes</title>
+          <description>&lt;p&gt;These Release Notes provide up-to-date information about changes, additions, and fixes to the Magento Commerce Cloud version 2.1.5, &lt;code class=&quot;highlighter-rouge&quot;&gt;magento-cloud-configuration&lt;/code&gt; release 101.5.2, 101.5.3, and 101.5.4.&lt;/p&gt; &lt;h2 id=&quot;general-changes&quot;&gt;General changes&lt;/h2&gt; &lt;p&gt;Staging and Production environments in the UI for Pro projects. You can enter a ticket to have your project updated. For more information, see &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/trouble/pro-env-management.html&quot;&gt;Add Staging and Production to Pro projects UI&lt;/a&gt;.&lt;/p&gt; &lt;h2 id=&quot;10154-changes&quot;&gt;101.5.4 changes&lt;/h2&gt; &lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;magento-cloud-configuration&lt;/code&gt; release 101.5.4 on Magento Commerce Cloud 2.1.5, we...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.5.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>What's new on DevDocs</title>
+          <description>{% assign whatsnew = site.data.whats-new %} &lt;a class=&quot;btn&quot; href=&quot;{{ whatsnew.thread }}&quot;&gt;&lt;img src=&quot;{{ site.baseurl }}/i/icons/rss.svg&quot; /&gt; RSS feed&lt;/a&gt; &lt;!-- The link enables RSS readers to recognize the whatsnew-feed thread on the page --&gt; &lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;What's new on Magento DevDocs&quot; href= &quot;{{ whatsnew.thread }}&quot; /&gt; {{ whatsnew.description }} {% assign entries = whatsnew.entries %} {% assign grouped_by_year = entries | group_by_exp: &quot;entry&quot;, &quot;entry.date | date: '%Y'&quot; %} {% for group in grouped_by_year %} ## {{...</description>
+          <link>https://dshevtsov.github.io/whats-new.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Smart wizards</title>
+          <description>The smart wizards can help you determine whether your Cloud configuration follows best practices. The available wizards assist with the following configurations: - Ideal state for minimal deployment downtime - Load balancing configuration for database and Redis - Static Content Deployment (SCD) for on-demand, the build stage, or the deploy stage Each of the smart wizard commands provides a verification response and, if applicable, a recommendation for the proper configuration. Command | Description ------- |...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/deploy/smart-wizards.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Troubleshoot deployment</title>
+          <description>This topic discusses how to recover if you deployed the Magento application with the incorrect [Magento authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html). For example, you might have used the keys for another account or you might have used {{site.data.var.ce}} keys instead of {{site.data.var.ee}} keys. If you used the incorrect keys, deployment fails. To recover, you must clone the project, add the correct keys to `auth.json`, and push the change to the master branch. {:.bs-callout .bs-callout-info} In this...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/trouble/troubleshoot-deployment.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:31:57 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>General CLI installation</title>
+          <description>Code that extends or customizes Magento behavior is called an extension. You can optionally package and distribute extensions on the [Magento Marketplace](https://marketplace.magento.com) or another Magento extension distribution system. Extensions include: - Modules (extend Magento capabilities) - Themes (change the look and feel of your [storefront](https://glossary.magento.com/storefront) and Admin) - Language packages (localize the storefront and Admin) {: .bs-callout .bs-callout-tip } This topic explains how to use the command line to install extensions you purchase from the...</description>
+          <link>https://dshevtsov.github.io/extensions/install/</link>
           <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
         </item>
     
         <item>
           <title>Release notes for ece-tools</title>
-          <description>&lt;!-- 2.1 release notes --&gt; &lt;p&gt;The following updates describe the latest improvements to the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package, which uses the following version sequence: &lt;code class=&quot;highlighter-rouge&quot;&gt;200&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;&lt;/code&gt;. See &lt;a href=&quot;/devdocs/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html&quot;&gt;Upgrades and patches&lt;/a&gt; for information about updating to the latest release of the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package.&lt;/p&gt; &lt;p&gt;The release notes include:&lt;/p&gt; &lt;ul&gt; &lt;li class=&quot;new&quot;&gt;New features&lt;/li&gt; &lt;li class=&quot;fix&quot;&gt;Fixes and improvements&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;v2002020&quot;&gt;v2002.0.20&lt;/h2&gt; &lt;ul&gt; &lt;li class=&quot;new&quot;&gt; &lt;p&gt;&lt;strong&gt;Docker Updates&lt;/strong&gt;—&lt;/p&gt; &lt;ul&gt; &lt;li class=&quot;new&quot;&gt; &lt;!-- MAGECLOUD-3129/3684 --&gt; &lt;p&gt;You can now perform functional testing...</description>
+          <description>&lt;!-- 2.1 release notes --&gt; &lt;p&gt;The following updates describe the latest improvements to the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package, which uses the following version sequence: &lt;code class=&quot;highlighter-rouge&quot;&gt;200&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;&lt;/code&gt;. See &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/project/project-upgrade-parent.html&quot;&gt;Upgrades and patches&lt;/a&gt; for information about updating to the latest release of the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package.&lt;/p&gt; &lt;p&gt;The release notes include:&lt;/p&gt; &lt;ul&gt; &lt;li class=&quot;new&quot;&gt;New features&lt;/li&gt; &lt;li class=&quot;fix&quot;&gt;Fixes and improvements&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;v2002020&quot;&gt;v2002.0.20&lt;/h2&gt; &lt;ul&gt; &lt;li class=&quot;new&quot;&gt; &lt;p&gt;&lt;strong&gt;Docker Updates&lt;/strong&gt;—&lt;/p&gt; &lt;ul&gt; &lt;li class=&quot;new&quot;&gt; &lt;!-- MAGECLOUD-3129/3684 --&gt; &lt;p&gt;You can now perform functional testing...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/release-notes/cloud-tools.html</link>
           <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
         </item>
     
         <item>
-          <title>Payment configuration paths reference</title>
-          <description>&lt;p&gt;This topic lists payment-related configuration paths that are neither sensitive nor system-specific. The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento app:config:dump&lt;/code&gt; command&lt;/a&gt; writes these values to the shared configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/config.php&lt;/code&gt;, which should be in source control.&lt;/p&gt; &lt;p&gt;For a list of other configuration paths, see:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/prod/config-reference-most.html&quot;&gt;All configuration paths except payments&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/prod/config-reference-sens.html&quot;&gt;Sensitive and system-specific configuration paths reference&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To optionally override any configuration settings or to set sensitive settings, see &lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/prod/config-reference-var-name.html&quot;&gt;Use environment variables to override...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/prod/config-reference-payment.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Sensitive and system-specific</title>
-          <description>&lt;p&gt;This topic lists configuration paths for system-specific and sensitive settings:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento app:config:dump&lt;/code&gt; command&lt;/a&gt; writes system-specific settings to the system-specific configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/env.php&lt;/code&gt;, which should &lt;em&gt;not&lt;/em&gt; be in source control. It also writes shared configuration for all Magento instances to &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/config.php&lt;/code&gt;, this file &lt;em&gt;should&lt;/em&gt; be in source control.&lt;/li&gt; &lt;li&gt; &lt;p&gt;The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-set.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento config:sensitive:set&lt;/code&gt; command&lt;/a&gt; writes sensitive settings to &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/env.php&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;You can also set sensitive values using configuration variables...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/prod/config-reference-sens.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Use environment variables to override configuration settings</title>
-          <description>&lt;p&gt;This topic discusses how to derive an environment variable name knowing a configuration path. You can override Magento configuration settings using environment variables. For example, you can override the value of a payment processor’s live URL on your production system.&lt;/p&gt; &lt;p&gt;You can override the value of &lt;em&gt;any&lt;/em&gt; configuration setting using environment variables; however, we recommend you maintain consistent settings using the shared configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;config.php&lt;/code&gt;, and the system-specific configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;env.php&lt;/code&gt;, as discussed...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/prod/config-reference-var-name.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Magento Commerce Cloud package updates</title>
-          <description>The release information in this section relates to [Composer packages](https://devdocs.magento.com/guides/v2.2/cloud/reference/cloud-composer.html) used by {{site.data.var.ece}} only. For general release information, refer to the main Magento [Release Notes]({{ page.baseurl }}/release-notes/bk-release-notes.html) page.
-
-Use this section to learn about updates to the following Composer packages:
-
--   `vendor/magento/magento-cloud-metapackage`
--   [`vendor/magento/ece-tools`]({{ site.baseurl }}/guides/v2.1/cloud/composer-packages/ece-tools.html)
--   `vendor/magento/product-enterprise-edition`
-
-{:.bs-callout .bs-callout-info}
-You must [update these packages]({{ site.baseurl }}/guides/v2.1/cloud/project/project-patch.html) to get new features and fixes.
-</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/composer-packages/patch-notes.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Configure your project</title>
-          <description>The {{site.data.var.ece}} [Project Web Interface](https://accounts.magento.cloud) enables you to do the following for all Starter and Pro environments: * [Access projects](#project-access) * Create and manage projects * Access active environments and branches using SSH, CLI, and URLs * Configure environment settings, environment variables, and routes * [Create and manage users]({{ page.baseurl }}/cloud/project/user-admin.html) * [Manage Git branches]({{ page.baseurl }}/cloud/project/project-webint-branch.html) As you make changes to these settings, the branch redeploys to the environment. You can make these setting...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/project-webint-basic.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Static content deployment strategies</title>
-          <description>Static content deployment (SCD) has a significant impact on the store deployment process that depends on how much content to generate—such as images, scripts, CSS, videos, themes, locales, and web pages—and when to generate the content. For example, the default strategy generates static content during the [deploy phase]({{page.baseurl}}/cloud/deploy/cloud-deployment-process.html#-deploy-phase) when the site is in maintenance mode; however, this deployment strategy takes time to write the content directly to the mounted `pub/static` directory. You have several options...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/deploy/static-content-deployment.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Slide-out Panels, Modal Windows, and Overlays</title>
-          <description>Within the Magento application it is often necessary to focus the user’s attention on some particular bit of content or isolated action, process or sub-process. A &quot;Slide-out Panel&quot;, &quot;Modal Window&quot; or &quot;Overlay&quot; is an effective way to achieve this. These are triggered by a particular user action causing their current task to be interrupted. The user must then take some required action to be returned to their primary task and continue (in most cases). The...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title></title>
-          <description>&lt;section class=&quot;home-features&quot;&gt; &lt;div class=&quot;container&quot;&gt; &lt;br/&gt; &lt;div class=&quot;feature&quot;&gt; &lt;img src=&quot;{{ site.baseurl }}/i/icons/install.svg&quot; alt=&quot;&quot; /&gt; &lt;h2 class=&quot;title&quot;&gt;Setup and Deployment&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/system-requirements.html&quot;&gt;System Requirements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/bk-install-guide.html&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/config-guide/bk-config-guide.html&quot;&gt;Configuration Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/cloud/bk-cloud.html&quot;&gt;{{site.data.var.ece}}&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;img src=&quot;{{ site.baseurl }}/i/icons/backend.svg&quot; alt=&quot;&quot; /&gt; &lt;h2 class=&quot;title&quot;&gt;Development&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html&quot;&gt;PHP Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/ext-best-practices/bk-ext-best-practices.html&quot;&gt;Extensions Best Practices&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/bk-coding-standards.html&quot;&gt;Coding Standards&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/technical-guidelines.html&quot;&gt;Technical Guidelines&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div...</description>
-          <link>https://dshevtsov.github.io/</link>
+          <title>Release notes archive for ece-tools</title>
+          <description>&lt;h2 id=&quot;v200208&quot;&gt;v2002.0.8&lt;/h2&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;We merged &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor/magento/ece-patches&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor/magento/ece-tools&lt;/code&gt; in this release. You no longer need to update the &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor/magento/ece-patches&lt;/code&gt; package separately.&lt;/p&gt; &lt;h4 id=&quot;new-features&quot;&gt;New features&lt;/h4&gt; &lt;ul&gt; &lt;li&gt; &lt;!-- MAGECLOUD-1253 -MAGECLOUD-1495--&gt; &lt;p&gt;&lt;strong&gt;Improved logging&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;We improved log messaging to provide better explanations when the build or deploy process overrides an environment variable.&lt;/li&gt; &lt;li&gt; &lt;p&gt;You can now view installation and upgrade progress in real time. Tail the &lt;code class=&quot;highlighter-rouge&quot;&gt;install_update.log&lt;/code&gt; file to view progress. For...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/release-notes/cloud-release-archive.html</link>
           <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
         </item>
     
@@ -558,9 +464,82 @@ You must [update these packages]({{ site.baseurl }}/guides/v2.1/cloud/project/pr
         </item>
     
         <item>
+          <title></title>
+          <description>
+</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/versioning/check-version.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Update ece-tools version</title>
+          <description>&lt;p&gt;Typically, an &lt;em&gt;update&lt;/em&gt; includes patches and available hotfixes as part of the &lt;code class=&quot;highlighter-rouge&quot;&gt;magento-cloud-metapackage&lt;/code&gt;. If you still use a version of Magento Commerce Cloud that does not contain the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package, then your project requires an &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/project/ece-tools-upgrade-project.html&quot;&gt;upgrade&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Before beginning an upgrade or a patching process, create an active branch from the Integration environment and checkout the new branch to your local workstation. Dedicating a branch to the upgrade or the patch process helps...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/ece-tools-update.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Deploy variables</title>
+          <description>The following _deploy_ variables control actions in the deploy phase and can inherit and override values from the [Global variables]({{ page.baseurl }}/cloud/env/variables-global.html). Also, you can override the [ADMIN variables]({{ page.baseurl }}/cloud/env/environment-vars_magento.html). Insert these variables in the `deploy` stage of the `.magento.env.yaml` file: ```yaml stage: deploy: DEPLOY_VARIABLE_NAME: value ``` {% include cloud/customize-build-deploy.md %} ### `CACHE_CONFIGURATION` - **Default**—_Not set_ - **Version**—Magento 2.1.4 and later Configure Redis page and default caching. When setting the `cm_cache_backend_redis` parameter, you must...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/env/variables-deploy.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Slide-out Panels, Modal Windows, and Overlays</title>
+          <description>Within the Magento application it is often necessary to focus the user’s attention on some particular bit of content or isolated action, process or sub-process. A &quot;Slide-out Panel&quot;, &quot;Modal Window&quot; or &quot;Overlay&quot; is an effective way to achieve this. These are triggered by a particular user action causing their current task to be interrupted. The user must then take some required action to be returned to their primary task and continue (in most cases). The...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Static content deployment strategies</title>
+          <description>Static content deployment (SCD) has a significant impact on the store deployment process that depends on how much content to generate—such as images, scripts, CSS, videos, themes, locales, and web pages—and when to generate the content. For example, the default strategy generates static content during the [deploy phase]({{page.baseurl}}/cloud/deploy/cloud-deployment-process.html#-deploy-phase) when the site is in maintenance mode; however, this deployment strategy takes time to write the content directly to the mounted `pub/static` directory. You have several options...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/deploy/static-content-deployment.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title></title>
+          <description>To find individual system requirements for the Magento 2.1.x releases, see the following pages:
+
+* [Magento 2.1.x system requirements](https://devdocs.magento.com/guides/v2.1/install-gde/system-requirements.html)</description>
+          <link>https://dshevtsov.github.io/system-requirements.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Web API technical vision</title>
+          <description>Web API is crucial for Magento because of the need to integrate with order management, customer management, and other enterprise management software systems. There are many headless Magento installations in which a merchant partially uses Magento functionality, while the other pieces of an eCommerce website are provided by other systems. See [more details](https://en.wikipedia.org/wiki/Web_API) about the importance of web APIs in modern web applications. ### Components Dependencies The following diagram shows Web API component dependencies. ![Web...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/coding-standards/technical-vision/webapi.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Configure your project</title>
+          <description>The {{site.data.var.ece}} [Project Web Interface](https://accounts.magento.cloud) enables you to do the following for all Starter and Pro environments: * [Access projects](#project-access) * Create and manage projects * Access active environments and branches using SSH, CLI, and URLs * Configure environment settings, environment variables, and routes * [Create and manage users]({{ page.baseurl }}/cloud/project/user-admin.html) * [Manage Git branches]({{ page.baseurl }}/cloud/project/project-webint-branch.html) As you make changes to these settings, the branch redeploys to the environment. You can make these setting...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/project-webint-basic.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Build and deploy on local</title>
+          <description>Before pushing your code to your [Starter]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html) or [Pro]({{ page.baseurl }}/cloud/architecture/pro-architecture.html) Staging and Production environments, you should fully build on your local. Fully testing builds and deploys along with full site testing can reduce the risk of issues or delays for your final site deployment, and expose any issues early for debugging. These tasks walk through: * Complete development on your local * Complete a full build and deploy process on your local...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/live/live-sanity-check.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
           <title>Upgrades and patches</title>
           <description>The Upgrades and patches section contains detailed release notes for the `{{site.data.var.ct}}` package, and information on how to upgrade the `{{site.data.var.ct}}` package, upgrade {{site.data.var.ece}}, and apply custom patches and hotfixes. - [Upgrade project to use the {{site.data.var.ct}} package]({{ page.baseurl }}/cloud/project/ece-tools-upgrade-project.html) - [Update the {{site.data.var.ct}} package]({{ page.baseurl }}/cloud/project/ece-tools-update.html) - [Apply custom patches]({{ page.baseurl }}/cloud/project/project-patch.html) - [Upgrade Magento version]({{ page.baseurl }}/cloud/project/project-upgrade.html) {{site.data.var.ece}} checks for pending patches and updates whenever you push code changes to the remote environment....</description>
           <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/project-upgrade-parent.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento UI library</title>
+          <description>The Magento UI [library](https://glossary.magento.com/library) is a flexible [Less]-based [frontend](https://glossary.magento.com/frontend) library designed to assist Magento [theme](https://glossary.magento.com/theme) developers. It employs a set of mixins for base elements to ease frontend theme development and customization. This topic describes how the library is organized, and how to use it. For more information, see the [Magento UI library documentation] that reflects the latest [embedded documentation]. ## Components provided by the UI library {#library_elements} The Magento UI library provides the ability...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/frontend-dev-guide/css-topics/theme-ui-lib.html</link>
           <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
         </item>
     
@@ -582,47 +561,68 @@ You must [update these packages]({{ site.baseurl }}/guides/v2.1/cloud/project/pr
         </item>
     
         <item>
-          <title>Magento UI library</title>
-          <description>The Magento UI [library](https://glossary.magento.com/library) is a flexible [Less]-based [frontend](https://glossary.magento.com/frontend) library designed to assist Magento [theme](https://glossary.magento.com/theme) developers. It employs a set of mixins for base elements to ease frontend theme development and customization. This topic describes how the library is organized, and how to use it. For more information, see the [Magento UI library documentation] that reflects the latest [embedded documentation]. ## Components provided by the UI library {#library_elements} The Magento UI library provides the ability...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/frontend-dev-guide/css-topics/theme-ui-lib.html</link>
+          <title>Configuration management for store settings</title>
+          <description>Configuration management in {{site.data.var.ece}} provides a new way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. With this file, you can add it to your Git commit and push it across all of your environments to keep consistent settings and reduce downtime. It provides the following benefits: * Better way to [manage and synchronize](#cloud-confman-over) the configuration across your Integration, Staging, and...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/live/sens-data-over.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Use environment variables to override configuration settings</title>
+          <description>&lt;p&gt;This topic discusses how to derive an environment variable name knowing a configuration path. You can override Magento configuration settings using environment variables. For example, you can override the value of a payment processor’s live URL on your production system.&lt;/p&gt; &lt;p&gt;You can override the value of &lt;em&gt;any&lt;/em&gt; configuration setting using environment variables; however, we recommend you maintain consistent settings using the shared configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;config.php&lt;/code&gt;, and the system-specific configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;env.php&lt;/code&gt;, as discussed...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/prod/config-reference-var-name.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Sensitive and system-specific</title>
+          <description>&lt;p&gt;This topic lists configuration paths for system-specific and sensitive settings:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento app:config:dump&lt;/code&gt; command&lt;/a&gt; writes system-specific settings to the system-specific configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/env.php&lt;/code&gt;, which should &lt;em&gt;not&lt;/em&gt; be in source control. It also writes shared configuration for all Magento instances to &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/config.php&lt;/code&gt;, this file &lt;em&gt;should&lt;/em&gt; be in source control.&lt;/li&gt; &lt;li&gt; &lt;p&gt;The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-set.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento config:sensitive:set&lt;/code&gt; command&lt;/a&gt; writes sensitive settings to &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/env.php&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;You can also set sensitive values using configuration variables...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/prod/config-reference-sens.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title></title>
+          <description>&lt;section class=&quot;home-features&quot;&gt; &lt;div class=&quot;container&quot;&gt; &lt;br/&gt; &lt;div class=&quot;feature&quot;&gt; &lt;img src=&quot;{{ site.baseurl }}/i/icons/install.svg&quot; alt=&quot;&quot; /&gt; &lt;h2 class=&quot;title&quot;&gt;Setup and Deployment&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/system-requirements.html&quot;&gt;System Requirements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/bk-install-guide.html&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/config-guide/bk-config-guide.html&quot;&gt;Configuration Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/cloud/bk-cloud.html&quot;&gt;{{site.data.var.ece}}&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;img src=&quot;{{ site.baseurl }}/i/icons/backend.svg&quot; alt=&quot;&quot; /&gt; &lt;h2 class=&quot;title&quot;&gt;Development&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html&quot;&gt;PHP Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/ext-best-practices/bk-ext-best-practices.html&quot;&gt;Extensions Best Practices&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/bk-coding-standards.html&quot;&gt;Coding Standards&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/technical-guidelines.html&quot;&gt;Technical Guidelines&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div...</description>
+          <link>https://dshevtsov.github.io/</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Payment configuration paths reference</title>
+          <description>&lt;p&gt;This topic lists payment-related configuration paths that are neither sensitive nor system-specific. The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento app:config:dump&lt;/code&gt; command&lt;/a&gt; writes these values to the shared configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/config.php&lt;/code&gt;, which should be in source control.&lt;/p&gt; &lt;p&gt;For a list of other configuration paths, see:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/prod/config-reference-most.html&quot;&gt;All configuration paths except payments&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/prod/config-reference-sens.html&quot;&gt;Sensitive and system-specific configuration paths reference&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To optionally override any configuration settings or to set sensitive settings, see &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/prod/config-reference-var-name.html&quot;&gt;Use environment variables to override...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/config-guide/prod/config-reference-payment.html</link>
+          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Magento Commerce Cloud package updates</title>
+          <description>The release information in this section relates to [Composer packages](https://devdocs.magento.com/guides/v2.2/cloud/reference/cloud-composer.html) used by {{site.data.var.ece}} only. For general release information, refer to the main Magento [Release Notes]({{ page.baseurl }}/release-notes/bk-release-notes.html) page.
+
+Use this section to learn about updates to the following Composer packages:
+
+-   `vendor/magento/magento-cloud-metapackage`
+-   [`vendor/magento/ece-tools`]({{ site.baseurl }}/guides/v2.1/cloud/composer-packages/ece-tools.html)
+-   `vendor/magento/product-enterprise-edition`
+
+{:.bs-callout .bs-callout-info}
+You must [update these packages]({{ site.baseurl }}/guides/v2.1/cloud/project/project-patch.html) to get new features and fixes.
+</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/composer-packages/patch-notes.html</link>
           <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
         </item>
     
         <item>
           <title>Other configuration paths reference</title>
-          <description>&lt;p&gt;This topic lists all configuration paths &lt;em&gt;except&lt;/em&gt; payment variables, sensitive values, and system-specific values. The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento app:config:dump&lt;/code&gt; command&lt;/a&gt; writes these values to the shared configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/config.php&lt;/code&gt;, which should be in source control.&lt;/p&gt; &lt;p&gt;For those configuration paths, see:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/prod/config-reference-payment.html&quot;&gt;Payment configuration paths&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/prod/config-reference-sens.html&quot;&gt;Sensitive and system-specific configuration paths reference&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To optionally override any configuration settings or to set sensitive settings, see &lt;a href=&quot;/devdocs/2.1/guides/v2.1/config-guide/prod/config-reference-var-name.html&quot;&gt;Use environment variables to override configuration settings&lt;/a&gt;.&lt;/p&gt; &lt;h2...</description>
+          <description>&lt;p&gt;This topic lists all configuration paths &lt;em&gt;except&lt;/em&gt; payment variables, sensitive values, and system-specific values. The &lt;a href=&quot;https://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;magento app:config:dump&lt;/code&gt; command&lt;/a&gt; writes these values to the shared configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;app/etc/config.php&lt;/code&gt;, which should be in source control.&lt;/p&gt; &lt;p&gt;For those configuration paths, see:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/prod/config-reference-payment.html&quot;&gt;Payment configuration paths&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/prod/config-reference-sens.html&quot;&gt;Sensitive and system-specific configuration paths reference&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To optionally override any configuration settings or to set sensitive settings, see &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/config-guide/prod/config-reference-var-name.html&quot;&gt;Use environment variables to override configuration settings&lt;/a&gt;.&lt;/p&gt; &lt;h2...</description>
           <link>https://dshevtsov.github.io/guides/v2.1/config-guide/prod/config-reference-most.html</link>
           <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
         </item>
     
         <item>
-          <title>Release notes archive for ece-tools</title>
-          <description>&lt;h2 id=&quot;v200208&quot;&gt;v2002.0.8&lt;/h2&gt; &lt;p class=&quot;bs-callout bs-callout-info&quot;&gt;We merged &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor/magento/ece-patches&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor/magento/ece-tools&lt;/code&gt; in this release. You no longer need to update the &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor/magento/ece-patches&lt;/code&gt; package separately.&lt;/p&gt; &lt;h4 id=&quot;new-features&quot;&gt;New features&lt;/h4&gt; &lt;ul&gt; &lt;li&gt; &lt;!-- MAGECLOUD-1253 -MAGECLOUD-1495--&gt; &lt;p&gt;&lt;strong&gt;Improved logging&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;We improved log messaging to provide better explanations when the build or deploy process overrides an environment variable.&lt;/li&gt; &lt;li&gt; &lt;p&gt;You can now view installation and upgrade progress in real time. Tail the &lt;code class=&quot;highlighter-rouge&quot;&gt;install_update.log&lt;/code&gt; file to view progress. For...</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/cloud/release-notes/cloud-release-archive.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>General CLI installation</title>
-          <description>Code that extends or customizes Magento behavior is called an extension. You can optionally package and distribute extensions on the [Magento Marketplace](https://marketplace.magento.com) or another Magento extension distribution system. Extensions include: - Modules (extend Magento capabilities) - Themes (change the look and feel of your [storefront](https://glossary.magento.com/storefront) and Admin) - Language packages (localize the storefront and Admin) {: .bs-callout .bs-callout-tip } This topic explains how to use the command line to install extensions you purchase from the...</description>
-          <link>https://dshevtsov.github.io/extensions/install/</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title></title>
-          <description>
-</description>
-          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/versioning/check-version.html</link>
-          <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title></title>
-          <description>To find individual system requirements for the Magento 2.1.x releases, see the following pages:
-
-* [Magento 2.1.x system requirements](https://devdocs.magento.com/guides/v2.1/install-gde/system-requirements.html)</description>
-          <link>https://dshevtsov.github.io/system-requirements.html</link>
+          <title>Install Magento using Composer</title>
+          <description>&lt;p&gt;We use &lt;a href=&quot;https://getcomposer.org/&quot; target=&quot;_blank&quot;&gt;Composer&lt;/a&gt; to manage Magento components and their dependencies. Using Composer to get the Magento software &lt;a href=&quot;https://glossary.magento.com/metapackage&quot;&gt;metapackage&lt;/a&gt; provides the following advantages:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Reuse third-party libraries without bundling them with source code&lt;/li&gt; &lt;li&gt;Reduce extension conflicts and compatibility issues by using a component-based architecture with robust dependency management&lt;/li&gt; &lt;li&gt;Adhere to &lt;a href=&quot;https://www.php-fig.org/&quot;&gt;PHP-Framework Interoperability Group (FIG)&lt;/a&gt; standards&lt;/li&gt; &lt;li&gt;Repackage Magento Open Source with other components&lt;/li&gt; &lt;li&gt;Use the Magento software in a production environment&lt;/li&gt; &lt;/ul&gt; &lt;p...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/install-gde/composer.html</link>
           <pubDate>Wed, 12 Apr 2023 16:19:19 -0500</pubDate>
         </item>
     
@@ -634,109 +634,108 @@ You must [update these packages]({{ site.baseurl }}/guides/v2.1/cloud/project/pr
         </item>
     
         <item>
-          <title>Magento BI Libraries</title>
-          <description></description>
-          <link>https://dshevtsov.github.io/mbi/docs/libraries.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+          <title>Depends Annotation</title>
+          <description>&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;@depends&lt;/code&gt; annotation helps you to define some dependencies between methods.&lt;/p&gt; &lt;h2 id=&quot;format&quot;&gt;Format&lt;/h2&gt; &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlighter&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1 2 3 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;cd&quot;&gt;/** * @depends methodName */&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p class=&quot;bs-callout bs-callout-warning&quot;&gt;Please note that dependencies don’t define the order in which the test methods are executed, so you still have to keep to proper order for your methods.&lt;/p&gt; &lt;h3 id=&quot;example-1&quot;&gt;Example 1&lt;/h3&gt; &lt;p&gt;Let’s check the following basic example.&lt;/p&gt; &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/test/integration/annotations/depends.html</link>
+          <pubDate>Thu, 27 Jun 2019 14:34:56 -0500</pubDate>
         </item>
     
         <item>
-          <title>Magento BI Export API</title>
-          <description>
-</description>
-          <link>https://dshevtsov.github.io/mbi/docs/export-api.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+          <title>Post-deploy variables</title>
+          <description>The following _post\_deploy_ variables control actions in the post-deploy phase and can inherit and override values from the [Global variables]({{ page.baseurl }}/cloud/env/variables-global.html). Insert these variables in the `post-deploy` stage of the `.magento.env.yaml` file: ```yaml stage: post-deploy: POST-DEPLOY_VARIABLE_NAME: value ``` {% include cloud/customize-build-deploy.md %} ### `TTFB_TESTED_PAGES` - **Default**— `[]` (an empty array) - **Version**—Magento 2.1.4 and later Configure _Time To First Byte_ (TTFB) testing for specified pages to test your {{ site.data.var.ece }} site performance. Specify...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/env/variables-post-deploy.html</link>
+          <pubDate>Thu, 27 Jun 2019 14:20:58 -0500</pubDate>
         </item>
     
         <item>
-          <title>Magento BI API Getting Started</title>
-          <description></description>
-          <link>https://dshevtsov.github.io/mbi/docs/getting-started.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+          <title>Configure Xdebug for Docker</title>
+          <description>&lt;p&gt;Xdebug is an extension for debugging your PHP. The following explains how to configure Xdebug and PhpStorm to debug in your local Docker environment.&lt;/p&gt; &lt;p&gt;If you use Microsoft Windows, take the following steps before continuing:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Open your Docker settings.&lt;/li&gt; &lt;li&gt;Select the &lt;strong&gt;Expose daemon on tcp://localhost:2375 without TLS&lt;/strong&gt; checkbox.&lt;/li&gt; &lt;li&gt;Wait for the settings to apply.&lt;/li&gt; &lt;/ol&gt; &lt;h2 id=&quot;enable-xdebug&quot;&gt;Enable Xdebug&lt;/h2&gt; &lt;p&gt;To enable Xdebug for your project, add &lt;code class=&quot;highlighter-rouge&quot;&gt;xdebug&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;runtime:extensions&lt;/code&gt; section of the...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/docker/docker-development-debug.html</link>
+          <pubDate>Thu, 27 Jun 2019 12:58:31 -0500</pubDate>
         </item>
     
         <item>
-          <title>Magento BI Import API</title>
-          <description></description>
-          <link>https://dshevtsov.github.io/mbi/docs/import-api.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
+          <title></title>
+          <description>&lt;p&gt;Every Magento version release include a change in the codebase. The scope of the change determines whether the MAJOR, MINOR, or PATCH number increases in the version.&lt;/p&gt; &lt;h2 id=&quot;public-vs-private-code-changes&quot;&gt;Public vs private code changes&lt;/h2&gt; &lt;p&gt;A Magento module’s codebase consists of public and private code. Public code includes Public &lt;a href=&quot;https://glossary.magento.com/api&quot;&gt;API&lt;/a&gt;(indicated by the &lt;code class=&quot;highlighter-rouge&quot;&gt;@api&lt;/code&gt; docblock tag) and Public Customization Points. Private code is not accessible via the API: classes and constants marked as &lt;a href=&quot;http://php.net/manual/en/language.oop5.visibility.php&quot;&gt;private&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Changes...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/extension-dev-guide/versioning/codebase-changes.html</link>
+          <pubDate>Thu, 27 Jun 2019 10:21:24 -0500</pubDate>
         </item>
     
         <item>
-          <title>Configuration</title>
-          <description>The `*.env` file provides additional configuration for the Magento Functional Testing Framework (MFTF). To run the MFTF on your Magento instance, specify the basic configuration values. Advanced users can create custom configurations based on requirements and environment. ## Basic configuration These basic configuration values are __required__ and must be set by the user before the MFTF can function correctly. ### MAGENTO_BASE_URL The root URL of the Magento application under test. Example: ```conf MAGENTO_BASE_URL=http://magento2.vagrant251 ``` &lt;div...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/configuration.html</link>
-          <pubDate>Mon, 01 Aug 2022 16:47:08 -0500</pubDate>
+          <title>Module overview</title>
+          <description>## What is a Magento module? {#arch-modules-overview} A *module* is a logical group -- that is, a directory containing blocks, controllers, helpers, models -- that are related to a specific business feature. In keeping with Magento's commitment to optimal modularity, a [module](https://glossary.magento.com/module) encapsulates one feature and has minimal dependencies on other modules. Modules and themes are the units of customization in Magento. Modules provide business features, with supporting logic, while themes strongly influence user experience...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/architecture/archi_perspectives/components/modules/mod_intro.html</link>
+          <pubDate>Thu, 27 Jun 2019 10:19:11 -0500</pubDate>
         </item>
     
         <item>
-          <title>Annotations</title>
-          <description>Annotations are essentially comments in the code. In PHP, they all are marked by a preceding `@` symbol. Within [tests], annotations are contained within their own node. ## Principles The following conventions apply to annotations in the Magento Functional Testing Framework (MFTF): - All annotations are within an `&lt;annotations&gt;` element. - Each element within corresponds to a supported annotation type. - There is no distinction made in XML between Codeception annotations and Allure annotations. -...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/test/annotations.html</link>
-          <pubDate>Mon, 01 Aug 2022 16:47:08 -0500</pubDate>
+          <title>Magento Framework</title>
+          <description>## Overview The Magento Framework controls how application components interact, including request flow, routing, indexing, caching, and [exception](https://glossary.magento.com/exception) handling. It provides services that reduce the effort of creating modules that contain business logic, contributing to the goal of both making Magento code more modular as well as decreasing dependencies. This primarily [PHP](https://glossary.magento.com/php) software component is organized into logical groups called *libraries*, which all modules can call. Most of the framework code sits under the domain...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/architecture/archi_perspectives/framework.html</link>
+          <pubDate>Thu, 27 Jun 2019 10:17:07 -0500</pubDate>
         </item>
     
         <item>
-          <title>Input testing data</title>
-          <description>The MFTF enables you to specify and use `&lt;data&gt;` entities defined in XML. Default `&lt;data&gt;` entities are provided for use and as templates for entity creation and manipulation. The following diagram shows the XML structure of an MFTF data object: ![MFTF Data Object](/devdocs/2.1/mftf/docs/img/data-dia.svg) &lt;!-- {% raw %} --&gt; ## Supply data to test by reference to a data entity Test steps requiring `&lt;data&gt;` input in an action, like filling a field with a string, may...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/data.html</link>
-          <pubDate>Mon, 01 Aug 2022 16:47:08 -0500</pubDate>
+          <title>Architectural diagrams</title>
+          <description>&lt;h2 id=&quot;m2arch-whatis-overview&quot;&gt;Magento architecture from different perspectives&lt;/h2&gt; &lt;p&gt;Depending upon your role and purpose for learning more about Magento, there are several different ways to view the Magento architecture. For example, a developer who wants to create new modules or perhaps customize an existing &lt;a href=&quot;https://glossary.magento.com/module&quot;&gt;module&lt;/a&gt; will want to understand the architecture of a module itself, and how it fits into the larger view, with the Magento framework and other components. However, a merchant who wants to...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/architecture/archi_perspectives/arch_diagrams.html</link>
+          <pubDate>Thu, 27 Jun 2019 10:16:24 -0500</pubDate>
         </item>
     
         <item>
-          <title>Getting started</title>
-          <description>&lt;div class=&quot;bs-callout bs-callout-info&quot; markdown=&quot;1&quot;&gt; [Find your MFTF version][] of the MFTF. The latest Magento 2.3.x release supports MFTF 2.5.3. The latest Magento 2.2.x release supports MFTF 2.4.5. &lt;/div&gt; ## Prepare environment {#prepare-environment} Make sure that you have the following software installed and configured on your development environment: - [PHP version supported by the Magento instance under test][php] - [Composer 1.3 or later][composer] - [Java 1.8 or later][java] - [Selenium Server Standalone 3.1 or later][selenium server]...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/getting-started.html</link>
-          <pubDate>Mon, 01 Aug 2022 16:47:08 -0500</pubDate>
+          <title>Module dependencies</title>
+          <description>## Overview {#m2devgde-moddep-intro} A *software dependency* identifies one software component's reliance on another for proper functioning. A core principle of Magento architecture is the **minimization of software dependencies**. Instead of being closely interrelated with other modules, modules are optimally designed to be *loosely coupled*. Loosely coupled modules require little or no knowledge of other modules to perform their tasks. Each Magento [module](https://glossary.magento.com/module) is responsible for a unique feature. In practice, this means that: * Several...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend.html</link>
+          <pubDate>Thu, 27 Jun 2019 10:16:05 -0500</pubDate>
         </item>
     
         <item>
-          <title>Reporting</title>
-          <description>The Magento Functional Testing Framework provides two types of reporting: - Inline reporting that you can view in the terminal as you run [`mftf`][mftf] or [`codecept`][codecept] CLI commands. - HTML reports that you can view using the [Allure Framework][] after a test run completes. When you run a test, MFTF copies all reporting artifacts to the `dev/tests/acceptance/tests/_output` subdirectory in the Magento root directory. The directory contains: - `allure-results/` that is a directory generated and served...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/reporting.html</link>
-          <pubDate>Mon, 01 Aug 2022 16:47:08 -0500</pubDate>
+          <title>Upgrade to ece-tools</title>
+          <description>&lt;p&gt;If you still use a version of Magento Commerce Cloud that does not contain the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package, then your project requires an &lt;em&gt;upgrade&lt;/em&gt;. We deprecated the &lt;code class=&quot;highlighter-rouge&quot;&gt;magento/magento-cloud-configuration&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;magento/ece-patches&lt;/code&gt; packages in favor of the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package.&lt;/p&gt; &lt;p&gt;You must perform a one-time, manual step to update the &lt;code class=&quot;highlighter-rouge&quot;&gt;magento/magento-cloud-metapackage&lt;/code&gt; version constraint in the &lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt; file, located in the root directory. This constraint enables updates for Magento Commerce Cloud metapackages—including removing deprecated...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/project/ece-tools-upgrade-project.html</link>
+          <pubDate>Wed, 26 Jun 2019 10:32:00 -0500</pubDate>
         </item>
     
         <item>
-          <title>Locator functions</title>
-          <description>## Define Locator::functions in elements Codeception has a set of very useful [Locator functions][] that may be used by elements inside a [section][]. Declare an element with a `locatorFunction`: ```xml &lt;element name=&quot;simpleLocator&quot; type=&quot;button&quot; locatorFunction=&quot;Locator::contains('label', 'Name')&quot;/&gt; ``` When using the `locatorFunction`, omit `Locator::` for code simplicity: ```xml &lt;element name=&quot;simpleLocatorShorthand&quot; type=&quot;button&quot; locatorFunction=&quot;contains('label', 'Name')&quot;/&gt; ``` An element's `locatorFunction` can also be parameterized the same way as [parameterized selectors][]: &lt;!-- {% raw %} --&gt; ```xml &lt;element name=&quot;simpleLocatorTwoParam&quot; type=&quot;button&quot; locatorFunction=&quot;contains({{arg1}},...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/section/locator-functions.html</link>
-          <pubDate>Mon, 01 Aug 2022 16:47:08 -0500</pubDate>
+          <title>Backward incompatible changes reference</title>
+          <description>This topic provides details about backward incompatible changes made in {{site.data.var.ce}} 2.1. All changes are generated automatically using the codebase of corresponding releases in [magento/magento2] repository. The changes are aggregated into two tables: 1. **Changes in classes** that contains backward incompatible changes made to the Magento classes 2. **Changes in interfaces** that contains backward incompatible changes made to the Magento interfaces ## 2.1.17 - 2.1.18 {#releases-2_1_17-2_1_18} {% include backward-incompatible-changes/open-source/2.1.17-2.1.18.md %} {% include backward-incompatible-changes/commerce/2.1.17-2.1.18.md %} ##...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/release-notes/backward-incompatible-changes/reference.html</link>
+          <pubDate>Tue, 25 Jun 2019 17:48:47 -0500</pubDate>
         </item>
     
         <item>
-          <title>CLI commands: vendor/bin/mftf</title>
-          <description>The Magento Functional Testing Framework (MFTF) introduces the command line interface (CLI) tool `vendor/bin/mftf` to facilitate your interaction with the framework. Note that `mftf` commands replace the `robo` commands that were used in previous releases. ## Command format In the project root directory (where you have installed the framework as a composer dependency), run commands using the following format: ```bash vendor/bin/mftf command [options] [&lt;arguments&gt;] [--remove|-r] ``` ## Useful commands Use the following commands to run...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/commands/mftf.html</link>
-          <pubDate>Sat, 13 Nov 2021 14:52:08 -0600</pubDate>
+          <title>Functional testing in Docker</title>
+          <description>&lt;p&gt;You can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package to run functional tests in the Docker environment. Functional tests are in the &lt;code class=&quot;highlighter-rouge&quot;&gt;src/Test/Functional/Acceptance&lt;/code&gt; folder. See an example in the &lt;a href=&quot;https://github.com/magento/ece-tools/tree/develop/src/Test/Functional/Acceptance&quot;&gt;ece-tools repository&lt;/a&gt;.&lt;/p&gt; &lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt; &lt;p&gt;Before you run functional tests, you must prepare your environment with the following steps.&lt;/p&gt; &lt;ol&gt; &lt;li&gt; &lt;p&gt;Stop all services that use the following ports:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;80&lt;/code&gt;—varnish&lt;/li&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;443&lt;/code&gt;—web, tls&lt;/li&gt; &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;3306&lt;/code&gt;—apache, mysql&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Switch to the preferred PHP version...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/docker/docker-development-testing.html</link>
+          <pubDate>Tue, 25 Jun 2019 16:15:49 -0500</pubDate>
         </item>
     
         <item>
-          <title>Test actions</title>
-          <description>Actions in the MFTF allow you to automate different scenarios of Magento user's actions. They are mostly XML implementations of [Codeception actions](https://github.com/Codeception/Codeception/blob/2.5/docs/modules/WebDriver#Actions). Some actions drive browser elements, while others use REST APIs. ## Common attributes All `&lt;actions&gt;` contain the following attributes that are useful for merging needs. ### `stepKey` `stepKey` is a required attribute that stores a unique identifier of the action. Example test step of the `myAction` action with the `conditionalClickStep1` identifier: ```xml &lt;myAction...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/test/actions.html</link>
-          <pubDate>Wed, 24 Feb 2021 11:26:52 -0600</pubDate>
+          <title>Docker container architecture</title>
+          <description>&lt;p&gt;Magento Commerce Cloud provides a Docker environment option for those who use their local environment for development, test, or automation tasks. The Magento Commerce Cloud Docker environment requires three, essential components: a Magento Commerce v2 template, Docker Compose, and the Magento Commerce Cloud &lt;code class=&quot;highlighter-rouge&quot;&gt;ece-tools&lt;/code&gt; package. See the instructions in &lt;a href=&quot;/devdocs-archive/2.1/guides/v2.1/cloud/docker/docker-config.html&quot;&gt;Launch Docker&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;The &lt;a href=&quot;https://github.com/magento/magento-cloud-docker&quot;&gt;Magento Cloud Docker repository&lt;/a&gt; contains build information for the following Docker containers.&lt;/p&gt; &lt;h2 id=&quot;database-container&quot;&gt;Database container&lt;/h2&gt; &lt;p&gt;The database container is based...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/docker/docker-development.html</link>
+          <pubDate>Tue, 25 Jun 2019 16:15:49 -0500</pubDate>
         </item>
     
         <item>
-          <title>Assertions</title>
-          <description>Assertions serve to pass or fail the [test](/devdocs/2.1/mftf/docs/test.html#test-tag) if a condition is not met. These assertions will look familiar to you if you've used any other testing framework, like PHPUnit. All assertions contain the same [common actions attributes](/devdocs/2.1/mftf/docs/test/actions.html#common-attributes): `stepKey`, `before`, and `after`. Most assertions contain a `message` attribute that specifies the text of an informational message to help you identify the cause of the failure. ## Principles The [principles for actions](/devdocs/2.1/mftf/docs/test.html#principles) are also applicable to...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/test/assertions.html</link>
-          <pubDate>Tue, 23 Feb 2021 16:14:51 -0600</pubDate>
+          <title>Security, Performance, and Data Handling</title>
+          <description>You should make sure that your [extension](https://glossary.magento.com/extension) handles data with care in order to prevent sensitive information from being exposed. Incorrect handling of data requests or class usage can negatively impact your extension and create security vulnerabilities. Consider applying the following best practices to your extension to improve performance and security. ## Avoid using low-level functionality The Magento application is made up of a variety of components that work together to perform different business functions....</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/ext-best-practices/extension-coding/security-performance-data-bp.html</link>
+          <pubDate>Tue, 25 Jun 2019 15:50:00 -0500</pubDate>
         </item>
     
         <item>
-          <title>MFTF 2.7.0 backward incompatible changes</title>
-          <description>This page highlights backward incompatible changes from previous 2.6.x releases that have major impacts and require special instructions to ensure third-party tests continue working with Magento core tests. ## Minimum supported PHP version changes We changed the minimum PHP version requirement from 7.0 to 7.3. Because of the PHP version requirement change, this MFTF version only supports Magento 2.3.x, where x is 7 or above. ## XSD schema changes - `arrayVariable` is added as an...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/backward-incompatible-changes.html</link>
-          <pubDate>Tue, 23 Feb 2021 16:14:51 -0600</pubDate>
+          <title>Test deployment</title>
+          <description>#### Previous step: [Migrate data and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html) When your code, files, and data is successfully migrated to Staging or Production, use the environment URLs to test your site(s) and store(s). For a list of your URLs, see [Starter]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#starter-urls) and [Pro]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#pro-urls) access information. The following information provides information on verifying logs, testing Fastly configurations, user acceptance testing (UAT), and more. ## Log files {#logs} If you encounter errors on...</description>
+          <link>https://dshevtsov.github.io/guides/v2.1/cloud/live/stage-prod-test.html</link>
+          <pubDate>Mon, 24 Jun 2019 21:14:25 -0500</pubDate>
         </item>
     
         <item>
-          <title>Best practices</title>
-          <description>Check out our best practices below to ensure you are getting the absolute most out of the Magento Functional Testing Framework. ## Focus on reusability ### Use existing Tests and resources Magento offers more than **3000** acceptance tests, **2500** [Action group]s, **750** Page declarations with more than **1500** Section definitions. It is very probable that behaviour you want to test already exists as a Test or Action Group. Instead of writing everything by yourself -...</description>
-          <link>https://dshevtsov.github.io/mftf/docs/best-practices.html</link>
-          <pubDate>Thu, 19 Mar 2020 13:23:13 -0500</pubDate>
+          <title>Upcoming releases</title>
+          <description>Magento continually strives to find the right balance between making product upgrades simple and predictable and delivering improvements and new features to early adopters faster. Over the last year, we have refined how we deliver software to support this balance. For additional information, refer to our [release policy]({{site.baseurl}}/release/policy/). ## Availability The following table describes the status of Magento software availability and where to get it, particularly for software that is available outside the conventional {{site.data.var.ee}}...</description>
+          <link>https://dshevtsov.github.io/release/</link>
+          <pubDate>Mon, 24 Jun 2019 14:52:21 -0500</pubDate>
         </item>
     
   </channel>
