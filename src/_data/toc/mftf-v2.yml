@@ -188,6 +188,6 @@ pages:
     url: https://github.com/magento/magento2-functional-testing-framework/blob/master/CHANGELOG.md
     versionless: true
 
-  - label: Functional Testing Framework Guide (v3)
-    url: /mftf/docs/introduction.html
-    versionless: true
+  # - label: Functional Testing Framework Guide (v3)
+  #   url: /mftf/docs/introduction.html
+  #   versionless: true

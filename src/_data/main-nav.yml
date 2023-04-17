@@ -255,10 +255,6 @@
           url: https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/
           versionless: true
 
-        - label: Commerce Reporting API
-          url: /mbi/docs/getting-started.html
-          versionless: true
-
 - label: Testing
   children:
     - label: Application Testing Guide

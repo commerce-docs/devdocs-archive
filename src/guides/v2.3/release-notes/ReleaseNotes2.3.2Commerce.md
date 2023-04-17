@@ -122,7 +122,7 @@ See [Release notes]({{ page.baseurl }}/graphql/release-notes.html) for a more de
 
 ### BlueFoot to Page Builder content migration
 
-**Assistance for BlueFoot to Page Builder migration**.  The BlueFoot content migration module (PageBuilderDataMigration) enables merchants who are running Magento 2.1.x or 2.2.x with BlueFoot  to upgrade to Magento 2.3.1+ with PageBuilder 1.0 without losing their website content. This module  migrates only content created with native BlueFoot. See [Overview of content migration]({{ site.baseurl }}/page-builder/docs/migration/overview.html) for information about module installation and supported content types.
+**Assistance for BlueFoot to Page Builder migration**.  The BlueFoot content migration module (PageBuilderDataMigration) enables merchants who are running Magento 2.1.x or 2.2.x with BlueFoot  to upgrade to Magento 2.3.1+ with PageBuilder 1.0 without losing their website content. This module  migrates only content created with native BlueFoot. See [Overview of content migration](https://devdocs.magento.com/page-builder/docs/migration/overview.html) for information about module installation and supported content types.
 
 ### Vendor-developed extension enhancements
 
@@ -224,7 +224,7 @@ We have fixed hundreds of issues in the Magento 2.3.2 core code.
 
 <!--- ENGCOM-4397-->
 
-*  Magento now redirects to you the Admin home page or a 404 page as expected when you try to access a nonexisting Admin page and **Stores** > **Configuration** > **Advanced** > **Admin** > **Security** > **Add Secret Key to URLs** is enabled. Previously,  redirects did not work properly, and Magento displayed the following message, `The page isn’t redirecting properly`. *Fix submitted by Jitheesh V O in pull request [21455](https://github.com/magento/magento2/pull/21455)*. [GitHub-21454](https://github.com/magento/magento2/issues/21454)
+*  Magento now redirects to you the Admin home page or a 404 page as expected when you try to access a nonexisting Admin page and **Stores** > **Configuration** > **Advanced** > **Admin** > **Security** > **Add Secret Key to URLs** is enabled. Previously,  redirects did not work properly, and Magento displayed the following message, `The page isn't redirecting properly`. *Fix submitted by Jitheesh V O in pull request [21455](https://github.com/magento/magento2/pull/21455)*. [GitHub-21454](https://github.com/magento/magento2/issues/21454)
 
 ### Back up
 

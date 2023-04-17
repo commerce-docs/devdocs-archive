@@ -119,7 +119,7 @@ To set up and run MFTF tests in a Cloud Docker environment:
    docker-compose run test mftf-command run:test AddProductBySkuWithEmptyQtyTest --debug=none
    ```
 
-[MFTF docs]: {{site.baseurl}}/mftf/docs/introduction.html
+[MFTF docs]: {{ site.baseurl }}/mftf/v2/docs/introduction.html
 [CLI container command]: {{site.baseurl}}/cloud/docker/docker-containers-cli.html#cli-container-commands
 [cloud-docker-repo]: https://github.com/magento/magento-cloud-docker
 [developer mode]: {{site.baseurl}}/cloud/docker/docker-mode-developer.html

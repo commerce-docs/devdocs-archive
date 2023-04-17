@@ -71,9 +71,9 @@ The Allure results returned to Marketplace can be downloaded and displayed as an
 
 <!-- Link Definitions -->
 
-[1]: {{site.baseurl}}/mftf/docs/introduction.html
+[1]: {{ site.baseurl }}/mftf/v2/docs/introduction.html
 [2]: https://github.com/magento/magento-cloud-docker
 [3]: https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html
-[4]: {{site.baseurl}}/mftf/docs/reporting.html
-[5]: {{site.baseurl}}/mftf/docs/best-practices.html
-[6]: {{site.baseurl}}/mftf/docs/tips-tricks.html
+[4]: {{ site.baseurl }}/mftf/v2/docs/reporting.html
+[5]: {{ site.baseurl }}/mftf/v2/docs/best-practices.html
+[6]: {{ site.baseurl }}/mftf/v2/docs/tips-tricks.html

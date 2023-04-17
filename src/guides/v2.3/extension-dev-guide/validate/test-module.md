@@ -51,7 +51,7 @@ See these resources for testing in [PHP](https://glossary.magento.com/php) and v
 *  [Extension Quality Program]({{ site.baseurl }}/marketplace/sellers/extension-quality-program.html) in the Magento User Guide
 
 [Magento Testing Overview]: {{ page.baseurl }}/test/testing.html
-[Magento Functional Testing Framework]: {{ site.baseurl }}/mftf/docs/introduction.html
+[Magento Functional Testing Framework]: {{ site.baseurl }}/mftf/v2/docs/introduction.html
 [register]: {{ page.baseurl }}/extension-dev-guide/build/component-registration.html
 [Package your component]: {{ page.baseurl }}/extension-dev-guide/package/package_module.html
 [Install your component]: {{ page.baseurl }}/install-gde/install/cli/dev_add-update.html

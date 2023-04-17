@@ -15,7 +15,7 @@ The patch addresses an issue with [CVE-2019-8118](https://cve.mitre.org/cgi-bin/
 
 ## Apply patch PRODSECBUG-2233 to address critical remote code execution vulnerability (RCE)
 
-An unauthenticated cross-site scripting vulnerability combined with an authenticated Phar deserialization vulnerability has left this version of {{site.data.var.ee}} open to serious exploit. An attacker can use these vulnerabilities to inject JavaScript into the Admin and subsequently launch malicious code in a store user’s browser.   **We strongly recommend that all users of the affected versions of Magento download and apply the appropriate patch as soon as possible**.
+An unauthenticated cross-site scripting vulnerability combined with an authenticated Phar deserialization vulnerability has left this version of {{site.data.var.ee}} open to serious exploit. An attacker can use these vulnerabilities to inject JavaScript into the Admin and subsequently launch malicious code in a store user's browser.   **We strongly recommend that all users of the affected versions of Magento download and apply the appropriate patch as soon as possible**.
 
 This issue and the available patches are discussed in the [Extending the June 25 Security Update to Older Versions of Magento](https://community.magento.com/t5/Magento-DevBlog/Extending-the-June-25-Security-Update-to-Older-Versions-of/ba-p/138231)
 blog post. You can directly access patch code through your Magento account for {{site.data.var.ee}}. Locate the patch by the name. We provide both Git-based and Composer-based patches.
@@ -56,7 +56,7 @@ Look for the following highlights in this release:
 
 #### Page Builder
 
-Page Builder is a drag-and-drop visual content editing tool that lets merchants customize content page layout and create shopping experiences that blend content and commerce without writing HTML or CSS.  Page Builder provides merchants with a powerful set of content types to compose various types of pages and easy drag-and-drop positioning of all content elements for intuitive page editing. Page Builder is available on {{site.data.var.ee}} only. See [Page Builder User Guide](https://docs.magento.com/m2/ee/user_guide/cms/page-builder.html) and [Page Builder Developer Documentation]({{ site.baseurl }}/page-builder/docs/index.html).
+Page Builder is a drag-and-drop visual content editing tool that lets merchants customize content page layout and create shopping experiences that blend content and commerce without writing HTML or CSS.  Page Builder provides merchants with a powerful set of content types to compose various types of pages and easy drag-and-drop positioning of all content elements for intuitive page editing. Page Builder is available on {{site.data.var.ee}} only. See [Page Builder User Guide](https://docs.magento.com/m2/ee/user_guide/cms/page-builder.html) and [Page Builder Developer Documentation]([{{ site.baseurl }}](https://devdocs.magento.com/page-builder/docs/index.html).
 
 #### Improved order creation workflow in the Admin
 

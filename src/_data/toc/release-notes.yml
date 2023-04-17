@@ -169,9 +169,9 @@ pages:
       url: /live-search/release-notes.html
       versionless: true
 
-    - label: Page Builder
-      url: /page-builder/docs/release-notes.html
-      versionless: true
+    # - label: Page Builder
+    #   url: /page-builder/docs/release-notes.html
+    #   versionless: true
 
     - label: Product Recommendations
       url: /recommendations/release-notes.html

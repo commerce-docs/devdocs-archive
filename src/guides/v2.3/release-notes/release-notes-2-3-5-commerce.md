@@ -31,7 +31,7 @@ Although code for these features is bundled with quarterly releases of the Magen
 
 Merchants upgrading to pre-release versions of Magento 2.3.5 and security-only patch 2.3.4-p1 and whose deployments contain bundle products may encounter the following error during upgrade:
 
-`Module ‘Magento_Wishlist’:
+`Module 'Magento_Wishlist':
 Unable to apply data patch Magento\Wishlist\Setup\Patch\Data\CleanUpData for module Magento_Wishlist. Original exception message: Unable to unserialize value. Error: Syntax error`
 
 Merchants who encounter this error after  installing Magento 2.3.5 should upgrade to Magento 2.3.5-p1. Merchants who encounter this error after  installing Magento 2.3.4-p1 should upgrade to Magento 2.3.4-p2. See [Wishlist error during upgrade to Magento versions 2.3.4-p1 or 2.3.5](https://support.magento.com/hc/en-us/articles/360042621771).<!--- MC-33513 33514-->
@@ -77,7 +77,7 @@ The following platform upgrades help enhance website security and performance:
 
 *  **Upgrade of Symfony Components** to the latest lifetime support version (4.4). (Symfony Components are a set of decoupled PHP libraries used by the Magento Framework.) <!--- MC-29549-->
 
-*  **Migration of dependencies on Zend Framework to the [Laminas project](https://getlaminas.org/about/foundation)** to reflect the transitioning of Zend Framework to the Linux Foundation’s Laminas Project. Zend Framework has been deprecated. Magento 2.3.5 contains the minimal number of changes to code and configuration that are required to support the use of the Laminas libraries. These changes are backward-compatible, and you can continue to use your current code. However, **we recommend that extension developers and system integrators begin migrating their extensions to use Laminas**. While this migration is not required for compatibility with this patch release, long-term solutions will require it.
+*  **Migration of dependencies on Zend Framework to the [Laminas project](https://getlaminas.org/about/foundation)** to reflect the transitioning of Zend Framework to the Linux Foundation's Laminas Project. Zend Framework has been deprecated. Magento 2.3.5 contains the minimal number of changes to code and configuration that are required to support the use of the Laminas libraries. These changes are backward-compatible, and you can continue to use your current code. However, **we recommend that extension developers and system integrators begin migrating their extensions to use Laminas**. While this migration is not required for compatibility with this patch release, long-term solutions will require it.
 
    The `laminas/laminas-dependency-plugin` requires Composer 1.7.0 and higher. To see which version of Composer you are running, run `composer -–version`. Then, run `composer self-update` if you are on an older version of Composer. <!--- MC-15318-->
 
@@ -90,7 +90,7 @@ The following platform upgrades help enhance website security and performance:
 *  **Multiple optimizations to Redis performance**. The enhancements minimize the number of queries to Redis that are performed on each Magento request. These optimizations include:
 
    *  Decrease in the size of network data transfers between Redis and Magento
-   *  Reduction in Redis’ consumption of CPU cycles by improving the adapter’s ability to automatically determine what needs to be loaded
+   *  Reduction in Redis' consumption of CPU cycles by improving the adapter's ability to automatically determine what needs to be loaded
    *  Reduction in race conditions on Redis write operations
 
 See [Use Redis for the Magento page and default cache]({{page.baseurl}}/config-guide/redis/redis-pg-cache.html) and [Configure caching]({{page.baseurl}}/config-guide/cache.html).
@@ -99,7 +99,7 @@ See [Use Redis for the Magento page and default cache]({{page.baseurl}}/config-g
 
 This release contains enhancements to core quality, which improve the quality of the Framework and these modules: Catalog, Sales, PayPal, Elasticsearch, Import, CMS, and B2B.
 
-*  **The PayPal Pro payment method now works as expected in the Chrome 80 browser**. This payment method previously invoked a Magento callback endpoint that needed access to the customer’s session — access that the new default Chrome SameSite cookie functionality does not permit. [GitHub-26840](https://github.com/magento/magento2/issues/26840)
+*  **The PayPal Pro payment method now works as expected in the Chrome 80 browser**. This payment method previously invoked a Magento callback endpoint that needed access to the customer's session — access that the new default Chrome SameSite cookie functionality does not permit. [GitHub-26840](https://github.com/magento/magento2/issues/26840)
 
 *  **A PHPStan code analysis check has been integrated into Magento static builds**. This tool performs sophisticated static code analysis and identifies additional issues that are currently not detected by PHP CodeSniffer and PHP Mess Detector. See [Magento Testing Guide]({{page.baseurl}}/test/testing.html).
 
@@ -113,7 +113,7 @@ Page Builder enhancements for this release include:
 
 *  **Full Height Rows, Banners, and Sliders**. Page Builder Rows, Banners, and Sliders now have the option to set their heights to the full-height of the page using a number with any CSS unit (px, %, vh, em) or a calculation between units (100vh - 237px). See [Rows](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-layout-row.html), [Banners](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-banner.html), [Sliders](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-slider.html).
 
-*  **Content type upgrade library**. We can now introduce new versions of Page Builder content types without introducing backward-incompatible issues with previous versions. Prior to this release, significant changes to content type configurations would create display and data-loss issues with previously saved Page Builder content types. Our new upgrade library eliminates these issues. The library upgrades previous versions of content types saved to the database to match the configuration changes of the new versions. See [Upgrade content types]({{ site.baseurl }}/page-builder/docs/administration/upgrade-content-types.html).
+*  **Content type upgrade library**. We can now introduce new versions of Page Builder content types without introducing backward-incompatible issues with previous versions. Prior to this release, significant changes to content type configurations would create display and data-loss issues with previously saved Page Builder content types. Our new upgrade library eliminates these issues. The library upgrades previous versions of content types saved to the database to match the configuration changes of the new versions. See [Upgrade content types](https://devdocs.magento.com/page-builder/docs/administration/upgrade-content-types.html).
 
 ### Inventory Management
 
@@ -163,7 +163,7 @@ This release includes multiple bug fixes. See [B2B Release Notes]({{page.baseurl
 
 ### Product Recommendations
 
-Magento’s Product Recommendations is a new marketing tool that merchants can use to increase conversions, boost revenue, and stimulate shopper engagement. It is powered by Adobe Sensei, which uses artificial intelligence and machine-learning algorithms to perform a deep analysis of aggregated shopper data. This data, when combined with your Magento catalog, results in highly engaging, relevant, and personalized experiences for the shopper. See [Product Recommendations]({{ site.baseurl }}/recommendations/product-recs.html).
+Magento's Product Recommendations is a new marketing tool that merchants can use to increase conversions, boost revenue, and stimulate shopper engagement. It is powered by Adobe Sensei, which uses artificial intelligence and machine-learning algorithms to perform a deep analysis of aggregated shopper data. This data, when combined with your Magento catalog, results in highly engaging, relevant, and personalized experiences for the shopper. See [Product Recommendations]({{ site.baseurl }}/recommendations/product-recs.html).
 
 ### Vendor-developed extension enhancements
 
@@ -201,7 +201,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-19037-->
 
-*  You can now successfully remove a website along with the website’s scope-specific configuration settings in `app/etc/config.php` as expected. Previously, when you tried to remove the website, the operation failed, and Magento displayed this error: `The website with code xxx that was requested wasn't found. Verify the website and try again`. Additionally, Magento displayed this error on the storefront:  `Config files have changed. Run app:config:import or setup:upgrade command to synchronize configuration`. [GitHub-24061](https://github.com/magento/magento2/issues/24061)
+*  You can now successfully remove a website along with the website's scope-specific configuration settings in `app/etc/config.php` as expected. Previously, when you tried to remove the website, the operation failed, and Magento displayed this error: `The website with code xxx that was requested wasn't found. Verify the website and try again`. Additionally, Magento displayed this error on the storefront:  `Config files have changed. Run app:config:import or setup:upgrade command to synchronize configuration`. [GitHub-24061](https://github.com/magento/magento2/issues/24061)
 
 <!--- MC-29795-->
 
@@ -263,7 +263,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-29598-->
 
-*  Administrators can no longer manually enter a tax class in the Admin for a bundle product when  the bundle product’s **Tax Class** and **Dynamic Price** settings are disabled for the default store view. Previously, when an administrator  unchecked the **Use Default Value**  option next to **Tax Class**, Magento enabled the option, permitting an administrator to enter another value and save the product.
+*  Administrators can no longer manually enter a tax class in the Admin for a bundle product when  the bundle product's **Tax Class** and **Dynamic Price** settings are disabled for the default store view. Previously, when an administrator  unchecked the **Use Default Value**  option next to **Tax Class**, Magento enabled the option, permitting an administrator to enter another value and save the product.
 
 ### Cache
 
@@ -325,7 +325,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-29651-->
 
-*  Customizable options are now imported as expected when `row_id` is not equal to a product's `entity_id`. Previously, Magento did not import customizable options when `row_id` was not equal to a product’s `entity_id`, which resulted in certain products not being imported.
+*  Customizable options are now imported as expected when `row_id` is not equal to a product's `entity_id`. Previously, Magento did not import customizable options when `row_id` was not equal to a product's `entity_id`, which resulted in certain products not being imported.
 
 <!--- MC-30067-->
 
@@ -341,7 +341,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-30213-->
 
-*  The product compare feature now works as expected. It displays only products in the current user’s compare list.
+*  The product compare feature now works as expected. It displays only products in the current user's compare list.
 
 <!--- MC-21948-->
 
@@ -361,11 +361,11 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-30974-->
 
-*  You can now add a configurable product to the cart from the Cross-Sells tab. When you select a product and click **Add to Cart** from this tab, you are now taken to the product’s details page, where you can select specific product options. Previously, Magento redirected you to  a 404 error page.
+*  You can now add a configurable product to the cart from the Cross-Sells tab. When you select a product and click **Add to Cart** from this tab, you are now taken to the product's details page, where you can select specific product options. Previously, Magento redirected you to  a 404 error page.
 
 <!--- MC-30261-->
 
-*  You can now add a child product of a grouped product to your cart when one of the grouped product’s other child products is out-of-stock. Previously, when one child product was out-of-stock, you could not add any other child products to the cart.
+*  You can now add a child product of a grouped product to your cart when one of the grouped product's other child products is out-of-stock. Previously, when one child product was out-of-stock, you could not add any other child products to the cart.
 
 ### CatalogInventory
 
@@ -457,7 +457,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-22819-->
 
-*  We’ve improved the reliability of background `cron` execution. We now use the Magento Lock Framework to lock `cron` jobs. Previously, Magento used job status in the `cron_schedule` table. As a result, `cron:run` execution no longer causes an error on the application level.
+*  We've improved the reliability of background `cron` execution. We now use the Magento Lock Framework to lock `cron` jobs. Previously, Magento used job status in the `cron_schedule` table. As a result, `cron:run` execution no longer causes an error on the application level.
 
 ### Custom customer attributes
 
@@ -481,7 +481,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-29722-->
 
-*  Magento now honors a customer’s default shipping address. Previously, Magento did not honor the default billing and default shipping addresses according to  the settings, and the **Same As Billing Address** setting was not enabled automatically.
+*  Magento now honors a customer's default shipping address. Previously, Magento did not honor the default billing and default shipping addresses according to  the settings, and the **Same As Billing Address** setting was not enabled automatically.
 
 <!--- MC-30576-->
 
@@ -511,7 +511,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-30487-->
 
-*  The Update Attribute action now correctly updates the timestamp of a product’s `updated_at column` from `catalog_product_entity`  when you update the product from the Admin edit product page.
+*  The Update Attribute action now correctly updates the timestamp of a product's `updated_at column` from `catalog_product_entity`  when you update the product from the Admin edit product page.
 
 <!--- MC-29918-->
 
@@ -531,7 +531,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-15318 31567-->
 
-*  Dependencies on Zend Framework have been migrated to the [Laminas project](https://getlaminas.org/about/foundation) to reflect the transitioning of Zend Framework to the Linux Foundation’s Laminas Project. Zend Framework has been deprecated.
+*  Dependencies on Zend Framework have been migrated to the [Laminas project](https://getlaminas.org/about/foundation) to reflect the transitioning of Zend Framework to the Linux Foundation's Laminas Project. Zend Framework has been deprecated.
 
 <!--- MC-20533-->
 
@@ -547,7 +547,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-30290-->
 
-*  Non-cacheable blocks are no longer added to default layout handles. Adding non-cacheable blocks to default layout handlers renders all Magento pages non-cacheable. This results from the layout generation process:  During layout generation, Magento collects all available layout handles for a particular page and merges instructions from them into the page’s final layout structure. The default layout handle is used as a basic handle for every page. As a result,  layout updates that are declared for the default handler appear on every Magento page. [GitHub-9041](https://github.com/magento/magento2/issues/9041)
+*  Non-cacheable blocks are no longer added to default layout handles. Adding non-cacheable blocks to default layout handlers renders all Magento pages non-cacheable. This results from the layout generation process:  During layout generation, Magento collects all available layout handles for a particular page and merges instructions from them into the page's final layout structure. The default layout handle is used as a basic handle for every page. As a result,  layout updates that are declared for the default handler appear on every Magento page. [GitHub-9041](https://github.com/magento/magento2/issues/9041)
 
 <!--- MC-30824-->
 
@@ -619,7 +619,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-29261-->
 
-*  A store’s Admin URL no longer redirects to the storefront URL when these two URLs differ.
+*  A store's Admin URL no longer redirects to the storefront URL when these two URLs differ.
 
 <!--- MC-23228-->
 
@@ -659,7 +659,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-31283-->
 
-*  Magento now  correctly calculates the cost of gift wrapping based on the number of products  for which you’ve ordered gift wrap. Previously, Magento included the cost of gift wrap for one product only in the order.
+*  Magento now  correctly calculates the cost of gift wrapping based on the number of products  for which you've ordered gift wrap. Previously, Magento included the cost of gift wrap for one product only in the order.
 
 ### Google Tag Manager
 
@@ -735,7 +735,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-30438-->
 
-*  Magento now successfully imports all custom options for a configurable product’s child products  when `store_view_code` is specified. This works whether you choose to import configurable products individually or collectively. Previously, Magento did not successfully import all custom options when the import file contained more than one item and `store_view_code` was specified.
+*  Magento now successfully imports all custom options for a configurable product's child products  when `store_view_code` is specified. This works whether you choose to import configurable products individually or collectively. Previously, Magento did not successfully import all custom options when the import file contained more than one item and `store_view_code` was specified.
 
 <!--- MC-30285-->
 
@@ -845,11 +845,11 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-31574-->
 
-*  The PayPal Pro payment method now works as expected in the Chrome 80 browser. This payment method previously invoked a Magento callback endpoint that needed access to the customer’s session — access that the new default Chrome SameSite cookie functionality does not permit. [GitHub-26840](https://github.com/magento/magento2/issues/26840)
+*  The PayPal Pro payment method now works as expected in the Chrome 80 browser. This payment method previously invoked a Magento callback endpoint that needed access to the customer's session — access that the new default Chrome SameSite cookie functionality does not permit. [GitHub-26840](https://github.com/magento/magento2/issues/26840)
 
 <!--- MC-31387-->
 
-*  Magento now successfully processes orders placed with PayPal Express Checkout where the order’s shipping address specifies a country region that the customer has manually entered into the text field rather than selected from the drop-down menu on the Shipping page. Previously, Magento displayed this error on the order review page: `Error 500: NOTICE: PHP message: PHP Fatal error: Uncaught Error: Call to a member function getId() on null in httpdocs/vendor/magento/module-paypal/Model/Api/Nvp.php:1527`. [GitHub-26698](https://github.com/magento/magento2/issues/26698)
+*  Magento now successfully processes orders placed with PayPal Express Checkout where the order's shipping address specifies a country region that the customer has manually entered into the text field rather than selected from the drop-down menu on the Shipping page. Previously, Magento displayed this error on the order review page: `Error 500: NOTICE: PHP message: PHP Fatal error: Uncaught Error: Call to a member function getId() on null in httpdocs/vendor/magento/module-paypal/Model/Api/Nvp.php:1527`. [GitHub-26698](https://github.com/magento/magento2/issues/26698)
 
 <!--- MC-30497-->
 
@@ -857,7 +857,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-30550-->
 
-*  Magento no longer changes an order’s status to **processing** in the Payment Review section of the checkout workflow when a payment with PayPal fails.
+*  Magento no longer changes an order's status to **processing** in the Payment Review section of the checkout workflow when a payment with PayPal fails.
 
 <!--- MC-29919-->
 
@@ -868,7 +868,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 *  Optimizations to Redis performance minimize the number of queries to Redis that are performed on each Magento request. These optimizations include:
 
    *  Decrease in size of network data transfers between Redis and Magento
-   *  Reduction in Redis’ consumption of CPU cycles by improving the adapter’s ability to automatically determine what needs to be loaded
+   *  Reduction in Redis' consumption of CPU cycles by improving the adapter's ability to automatically determine what needs to be loaded
    *  Reduction in race conditions on Redis write operations
 
 <!--- MC-30786-->
@@ -1047,7 +1047,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-23084-->
 
-*  We’ve improved the performance of the Product/Target rule and Target Rule/Product indexers. Indexing operations and editing and saving product operations are now faster.
+*  We've improved the performance of the Product/Target rule and Target Rule/Product indexers. Indexing operations and editing and saving product operations are now faster.
 
 ### Tax
 
@@ -1077,7 +1077,7 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-29750-->
 
-*  We’ve resolved a bug in `JsFooterPlugin.php` that affected the display of dynamic blocks. Previously, Magento displayed this error when you directly accessed `/banner/ajax/load/url`: `Uncaught TypeError: strpos() expects parameter 1 to be string, null given in`
+*  We've resolved a bug in `JsFooterPlugin.php` that affected the display of dynamic blocks. Previously, Magento displayed this error when you directly accessed `/banner/ajax/load/url`: `Uncaught TypeError: strpos() expects parameter 1 to be string, null given in`
 
 ### Translation and locales
 
@@ -1149,13 +1149,13 @@ We have fixed hundreds of issues in the Magento 2.3.5 core code.
 
 <!--- MC-23219-->
 
-*  We’ve reverted a previous fix (https://github.com/magento/magento2/pull/25309) that had introduced a change to global styles that had the unintended consequence of breaking styles through the storefront.
+*  We've reverted a previous fix (https://github.com/magento/magento2/pull/25309) that had introduced a change to global styles that had the unintended consequence of breaking styles through the storefront.
 
 ### URL rewrites
 
 <!--- MC-30917-->
 
-*  Customers who change language on a CMS page can now successfully navigate to the store view they’ve selected. Previously, Magento displayed a 404 error.
+*  Customers who change language on a CMS page can now successfully navigate to the store view they've selected. Previously, Magento displayed a 404 error.
 
 <!--- MC-22606-->
 
