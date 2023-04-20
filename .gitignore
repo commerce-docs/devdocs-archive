@@ -5,3 +5,8 @@ thumbs.db
 
 _site
 .jekyll-cache
+.jekyll-metadata
+
+src
+_config.local.yml
+tmp
