@@ -28,6 +28,1142 @@
 		<p>Welcome to the home page for Magento 1.x documentation for installation, configuration, developers, patches, and more. Here you'll find articles that were formerly located on <code>http://magentocommerce.com/knowledge-base</code>.</p>
 <p>For information you don't find here&mdash;including Release Notes&mdash;see <a href="https://magento.com/resources/technical" target="_blank">the User Guide page</a>.</p>
 
+<!-- The code comes from https://jekyllcodex.org/without-plugin/search-lunr/# -->
+
+<script src="/common/js/lunr.js"></script>
+
+<script>
+
+var documents = [{
+    "id": 0,
+    "url": "/ce18-ee113/EE113-benchmark.html",
+    "title": ""
+    }, {
+    "id": 1,
+    "url": "/api/soap/catalogInventory/Inventory.html",
+    "title": "Catalog Inventory"
+    }, {
+    "id": 2,
+    "url": "/ce19-ee114/RWD_dev-guide.html",
+    "title": ""
+    }, {
+    "id": 3,
+    "url": "/ce19-ee114/RWD_responsive_emails.html",
+    "title": ""
+    }, {
+    "id": 4,
+    "url": "/other/appsec-900_addhandler.html",
+    "title": ""
+    }, {
+    "id": 5,
+    "url": "/api/rest/permission_settings/attributes_configuration.html",
+    "title": "Attributes Configuration"
+    }, {
+    "id": 6,
+    "url": "/api/rest/permission_settings/attributes_description.html",
+    "title": "Attributes Description"
+    }, {
+    "id": 7,
+    "url": "/api/soap/checkout/cart/cart.create.html",
+    "title": "Cart Create"
+    }, {
+    "id": 8,
+    "url": "/api/soap/checkout/cart/cart.html",
+    "title": "Cart"
+    }, {
+    "id": 9,
+    "url": "/api/soap/checkout/cart/cart.info.html",
+    "title": "Cart Info"
+    }, {
+    "id": 10,
+    "url": "/api/soap/checkout/cart/cart.license.html",
+    "title": "Cart License"
+    }, {
+    "id": 11,
+    "url": "/api/soap/checkout/cart/cart.order.html",
+    "title": "Cart Order"
+    }, {
+    "id": 12,
+    "url": "/api/soap/checkout/cart/cart.totals.html",
+    "title": "Cart Totals"
+    }, {
+    "id": 13,
+    "url": "/api/soap/checkout/cartCoupon/cartCoupon.html",
+    "title": "Cart Coupon"
+    }, {
+    "id": 14,
+    "url": "/api/soap/checkout/cartCustomer/cartCustomer.html",
+    "title": "Cart Customer"
+    }, {
+    "id": 15,
+    "url": "/api/soap/enterpriseGiftCard/cartGiftCard/cartGiftCard.html",
+    "title": "Cart Gift Card"
+    }, {
+    "id": 16,
+    "url": "/api/soap/checkout/cartPayment/cartPayment.html",
+    "title": "Cart Payment"
+    }, {
+    "id": 17,
+    "url": "/api/soap/checkout/cartProduct/cartProduct.html",
+    "title": "Cart Product"
+    }, {
+    "id": 18,
+    "url": "/api/soap/checkout/cartShipping/cartShipping.html",
+    "title": "Cart Shipping"
+    }, {
+    "id": 19,
+    "url": "/api/soap/checkout/cartCoupon/cart_coupon.add.html",
+    "title": "Coupon Add"
+    }, {
+    "id": 20,
+    "url": "/api/soap/checkout/cartCoupon/cart_coupon.remove.html",
+    "title": "Coupon Remove"
+    }, {
+    "id": 21,
+    "url": "/api/soap/checkout/cartCustomer/cart_customer.addresses.html",
+    "title": "Customer Addresses"
+    }, {
+    "id": 22,
+    "url": "/api/soap/checkout/cartCustomer/cart_customer.set.html",
+    "title": "Customer Set"
+    }, {
+    "id": 23,
+    "url": "/api/soap/enterpriseGiftCard/cartGiftCard/cart_giftcard.add.html",
+    "title": "Gift Card Add"
+    }, {
+    "id": 24,
+    "url": "/api/soap/enterpriseGiftCard/cartGiftCard/cart_giftcard.list.html",
+    "title": "Gift Card List"
+    }, {
+    "id": 25,
+    "url": "/api/soap/enterpriseGiftCard/cartGiftCard/cart_giftcard.remove.html",
+    "title": "Gift Card Remove"
+    }, {
+    "id": 26,
+    "url": "/api/soap/checkout/cartPayment/cart_payment.list.html",
+    "title": "Payment List"
+    }, {
+    "id": 27,
+    "url": "/api/soap/checkout/cartPayment/cart_payment.method.html",
+    "title": "Payment Method"
+    }, {
+    "id": 28,
+    "url": "/api/soap/checkout/cartProduct/cart_product.add.html",
+    "title": "Product Add"
+    }, {
+    "id": 29,
+    "url": "/api/soap/checkout/cartProduct/cart_product.list.html",
+    "title": "Product List"
+    }, {
+    "id": 30,
+    "url": "/api/soap/checkout/cartProduct/cart_product.moveToCustomerQuote.html",
+    "title": "Product Move To Customer Quote"
+    }, {
+    "id": 31,
+    "url": "/api/soap/checkout/cartProduct/cart_product.remove.html",
+    "title": "Product Remove"
+    }, {
+    "id": 32,
+    "url": "/api/soap/checkout/cartProduct/cart_product.update.html",
+    "title": "Product Update"
+    }, {
+    "id": 33,
+    "url": "/api/soap/checkout/cartShipping/cart_shipping.list.html",
+    "title": "Shipping List"
+    }, {
+    "id": 34,
+    "url": "/api/soap/checkout/cartShipping/cart_shipping.method.html",
+    "title": "Shipping Method"
+    }, {
+    "id": 35,
+    "url": "/api/soap/catalog/catalog.html",
+    "title": "Catalog"
+    }, {
+    "id": 36,
+    "url": "/api/soap/catalog/catalogCategory/catalogCategory.html",
+    "title": "Catalog Category"
+    }, {
+    "id": 37,
+    "url": "/api/soap/catalog/catalogProduct/catalogProduct.html",
+    "title": "Catalog Product"
+    }, {
+    "id": 38,
+    "url": "/api/soap/catalog/catalogProductAttribute/catalogProductAttribute.html",
+    "title": "Catalog Product Attribute"
+    }, {
+    "id": 39,
+    "url": "/api/soap/catalog/catalogProductCustomOption/catalogProductCustomOption.html",
+    "title": "Catalog Product Custom Option"
+    }, {
+    "id": 40,
+    "url": "/api/soap/catalog/catalogProductCustomOptionValue/catalogProductCustomOptionValue.html",
+    "title": "Catalog Product Custom Option Value"
+    }, {
+    "id": 41,
+    "url": "/api/soap/catalog/catalogProductDownloadableLink/catalogProductDownloadableLink.html",
+    "title": "Catalog Product Downloadable Link"
+    }, {
+    "id": 42,
+    "url": "/api/soap/catalog/catalogProductLink/catalogProductLink.html",
+    "title": "Catalog Product Link"
+    }, {
+    "id": 43,
+    "url": "/api/soap/catalog/catalogProductTag/catalogProductTag.html",
+    "title": "Catalog Product Tag"
+    }, {
+    "id": 44,
+    "url": "/api/soap/catalog/catalogProductTierPrice/catalogProductTierPrice.html",
+    "title": "Catalog Product Tier Price"
+    }, {
+    "id": 45,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.assignProduct.html",
+    "title": "Assign Product"
+    }, {
+    "id": 46,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.assignedProducts.html",
+    "title": "Assigned Products"
+    }, {
+    "id": 47,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.create.html",
+    "title": "Create Category"
+    }, {
+    "id": 48,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.currentStore.html",
+    "title": "Current Store"
+    }, {
+    "id": 49,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.delete.html",
+    "title": "Category Delete"
+    }, {
+    "id": 50,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.info.html",
+    "title": "Category Info"
+    }, {
+    "id": 51,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.level.html",
+    "title": "Category Level"
+    }, {
+    "id": 52,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.move.html",
+    "title": "Category Move"
+    }, {
+    "id": 53,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.removeProduct.html",
+    "title": "Remove Product"
+    }, {
+    "id": 54,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.tree.html",
+    "title": "Category Tree"
+    }, {
+    "id": 55,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.update.html",
+    "title": "Category Update"
+    }, {
+    "id": 56,
+    "url": "/api/soap/catalog/catalogCategory/catalog_category.updateProduct.html",
+    "title": "Category Product Update"
+    }, {
+    "id": 57,
+    "url": "/api/soap/catalog/catalogCategoryAttributes/catalog_category_attribute.currentStore.html",
+    "title": "Current Store"
+    }, {
+    "id": 58,
+    "url": "/api/soap/catalog/catalogCategoryAttributes/catalog_category_attribute.list.html",
+    "title": "Attribute List"
+    }, {
+    "id": 59,
+    "url": "/api/soap/catalog/catalogCategoryAttributes/catalog_category_attribute.options.html",
+    "title": "Attribute Options"
+    }, {
+    "id": 60,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.create.html",
+    "title": "Product Create"
+    }, {
+    "id": 61,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.currentStore.html",
+    "title": "Current Product Store"
+    }, {
+    "id": 62,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.delete.html",
+    "title": "Product Delete"
+    }, {
+    "id": 63,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.getSpecialPrice.html",
+    "title": "Get Special Price"
+    }, {
+    "id": 64,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.info.html",
+    "title": "Product Info"
+    }, {
+    "id": 65,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.list.html",
+    "title": "Product List"
+    }, {
+    "id": 66,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.listOfAdditionalAttributes.html",
+    "title": "List of Additional Product Attributes"
+    }, {
+    "id": 67,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.setSpecialPrice.html",
+    "title": "Set Special Price"
+    }, {
+    "id": 68,
+    "url": "/api/soap/catalog/catalogProduct/catalog_product.update.html",
+    "title": "Product Update"
+    }, {
+    "id": 69,
+    "url": "/api/soap/catalog/catalogProductAttribute/catalog_product_attribute.options.html",
+    "title": "Attribute Options"
+    }, {
+    "id": 70,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.create.html",
+    "title": "Create"
+    }, {
+    "id": 71,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.currentStore.html",
+    "title": "Current Store"
+    }, {
+    "id": 72,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.info.html",
+    "title": "Media Info"
+    }, {
+    "id": 73,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.list.html",
+    "title": "Media List"
+    }, {
+    "id": 74,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.remove.html",
+    "title": "Media Remove"
+    }, {
+    "id": 75,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.types.html",
+    "title": "Media Types"
+    }, {
+    "id": 76,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.update.html",
+    "title": "Media Update"
+    }, {
+    "id": 77,
+    "url": "/api/soap/catalog/catalogProductTierPrice/catalog_product_attribute_tier_price.info.html",
+    "title": "Product Attribute Tier Price Info"
+    }, {
+    "id": 78,
+    "url": "/api/soap/catalog/catalogProductTierPrice/catalog_product_attribute_tier_price.update.html",
+    "title": "Product Attribute Tier Price Update"
+    }, {
+    "id": 79,
+    "url": "/api/soap/catalog/catalogProductLink/catalog_product_link.assign.html",
+    "title": "Product Link Assign"
+    }, {
+    "id": 80,
+    "url": "/api/soap/catalog/catalogProductLink/catalog_product_link.attributes.html",
+    "title": "Product Link Attributes"
+    }, {
+    "id": 81,
+    "url": "/api/soap/catalog/catalogProductLink/catalog_product_link.list.html",
+    "title": "Product Link List"
+    }, {
+    "id": 82,
+    "url": "/api/soap/catalog/catalogProductLink/catalog_product_link.remove.html",
+    "title": "Product Link Remove"
+    }, {
+    "id": 83,
+    "url": "/api/soap/catalog/catalogProductLink/catalog_product_link.types.html",
+    "title": "Product Link Types"
+    }, {
+    "id": 84,
+    "url": "/api/soap/catalog/catalogProductLink/catalog_product_link.update.html",
+    "title": "Product Link Update"
+    }, {
+    "id": 85,
+    "url": "/api/soap/catalog/catalogProductTypes/catalog_product_type.list.html",
+    "title": "Product Type List"
+    }, {
+    "id": 86,
+    "url": "/api/soap/catalogInventory/cataloginventory_stock_item.list.html",
+    "title": "Inventory Item List"
+    }, {
+    "id": 87,
+    "url": "/api/soap/catalogInventory/cataloginventory_stock_item.update.html",
+    "title": "Inventory Item Update"
+    }, {
+    "id": 88,
+    "url": "/api/soap/catalog/catalogCategoryAttributes/categoryAttributes.html",
+    "title": "Category Attributes"
+    }, {
+    "id": 89,
+    "url": "/ce18-ee113/ce1.8_release-notes.html",
+    "title": ""
+    }, {
+    "id": 90,
+    "url": "/ce19-ee114/ce1.9_release-notes.html",
+    "title": ""
+    }, {
+    "id": 91,
+    "url": "/ce18-ee113-home.html",
+    "title": ""
+    }, {
+    "id": 92,
+    "url": "/ce19-ee114-home.html",
+    "title": ""
+    }, {
+    "id": 93,
+    "url": "/api/soap/checkout/checkout.html",
+    "title": "Checkout"
+    }, {
+    "id": 94,
+    "url": "/api/rest/common_http_status_codes.html",
+    "title": "Common HTTP Status Codes"
+    }, {
+    "id": 95,
+    "url": "/api/soap/create_your_own_api.html",
+    "title": "Create Your Own API"
+    }, {
+    "id": 96,
+    "url": "/api/soap/customer/customer.create.html",
+    "title": "Customer Create"
+    }, {
+    "id": 97,
+    "url": "/api/soap/customer/customer.delete.html",
+    "title": "Customer Delete"
+    }, {
+    "id": 98,
+    "url": "/api/soap/customer/customer.html",
+    "title": "Customer"
+    }, {
+    "id": 99,
+    "url": "/api/soap/customer/customer.info.html",
+    "title": "Customer Info"
+    }, {
+    "id": 100,
+    "url": "/api/soap/customer/customer.list.html",
+    "title": "Customer List"
+    }, {
+    "id": 101,
+    "url": "/api/soap/customer/customer.update.html",
+    "title": "Customer Update"
+    }, {
+    "id": 102,
+    "url": "/api/soap/customer/customerAddress/customerAddress.html",
+    "title": "Customer Address"
+    }, {
+    "id": 103,
+    "url": "/api/soap/customer/customerAddress/customer_address.create.html",
+    "title": "Address Create"
+    }, {
+    "id": 104,
+    "url": "/api/soap/customer/customerAddress/customer_address.delete.html",
+    "title": "Address Delete"
+    }, {
+    "id": 105,
+    "url": "/api/soap/customer/customerAddress/customer_address.info.html",
+    "title": "Address Info"
+    }, {
+    "id": 106,
+    "url": "/api/soap/customer/customerAddress/customer_address.list.html",
+    "title": "Address List"
+    }, {
+    "id": 107,
+    "url": "/api/soap/customer/customerAddress/customer_address.update.html",
+    "title": "Address Update"
+    }, {
+    "id": 108,
+    "url": "/api/soap/customer/customer_group.html",
+    "title": "Customer Group"
+    }, {
+    "id": 109,
+    "url": "/api/soap/directory/directory.html",
+    "title": "Directory"
+    }, {
+    "id": 110,
+    "url": "/api/soap/directory/directory_country.list.html",
+    "title": "Country List"
+    }, {
+    "id": 111,
+    "url": "/api/soap/directory/directory_region.list.html",
+    "title": "Region List"
+    }, {
+    "id": 112,
+    "url": "/other/discover-card-validation.html",
+    "title": ""
+    }, {
+    "id": 113,
+    "url": "/ce18-ee113/ee1.13_release-notes.html",
+    "title": ""
+    }, {
+    "id": 114,
+    "url": "/ce19-ee114/ee1.14_release-notes.html",
+    "title": ""
+    }, {
+    "id": 115,
+    "url": "/other/ee_connect_patches.html",
+    "title": ""
+    }, {
+    "id": 116,
+    "url": "/api/soap/enterprise_customerbalance/enterprise_customerbalance.html",
+    "title": "Enterprise Customer Balance"
+    }, {
+    "id": 117,
+    "url": "/api/soap/enterpriseGiftCard/enterprise_giftCard.html",
+    "title": "Enterprise Gift Card"
+    }, {
+    "id": 118,
+    "url": "/api/rest/Resources/get_filters.html",
+    "title": "GET Filters"
+    }, {
+    "id": 119,
+    "url": "/api/rest/get_filters.html",
+    "title": "GET Filters"
+    }, {
+    "id": 120,
+    "url": "/api/soap/enterpriseGiftCard/giftCardAccount/giftCardAccount.html",
+    "title": "Gift Card Account"
+    }, {
+    "id": 121,
+    "url": "/api/soap/enterpriseGiftCard/giftCardCustomer/giftCardCustomer.html",
+    "title": "Gift Card Customer"
+    }, {
+    "id": 122,
+    "url": "/api/soap/enterpriseGiftMessage/giftMessage.html",
+    "title": "Enterprise Gift Message"
+    }, {
+    "id": 123,
+    "url": "/api/soap/enterpriseGiftCard/giftCardAccount/giftcard_account.create.html",
+    "title": "Account Create"
+    }, {
+    "id": 124,
+    "url": "/api/soap/enterpriseGiftCard/giftCardAccount/giftcard_account.info.html",
+    "title": "Account Info"
+    }, {
+    "id": 125,
+    "url": "/api/soap/enterpriseGiftCard/giftCardAccount/giftcard_account.list.html",
+    "title": "Account List"
+    }, {
+    "id": 126,
+    "url": "/api/soap/enterpriseGiftCard/giftCardAccount/giftcard_account.remove.html",
+    "title": "Account Remove"
+    }, {
+    "id": 127,
+    "url": "/api/soap/enterpriseGiftCard/giftCardAccount/giftcard_account.update.html",
+    "title": "Account Update"
+    }, {
+    "id": 128,
+    "url": "/api/soap/enterpriseGiftCard/giftCardCustomer/giftcard_customer.info.html",
+    "title": "Customer Info"
+    }, {
+    "id": 129,
+    "url": "/api/soap/enterpriseGiftCard/giftCardCustomer/giftcard_customer.redeem.html",
+    "title": "Customer Redeem"
+    }, {
+    "id": 130,
+    "url": "/api/soap/enterpriseGiftMessage/giftmessage.setForQuote.html",
+    "title": "Set For Quote"
+    }, {
+    "id": 131,
+    "url": "/api/soap/enterpriseGiftMessage/giftmessage.setForQuoteItem.html",
+    "title": "Set For Quote Item"
+    }, {
+    "id": 132,
+    "url": "/api/soap/enterpriseGiftMessage/giftmessage.setForQuoteProduct.html",
+    "title": "Set For Quote Product"
+    }, {
+    "id": 133,
+    "url": "/other/ht_extend_magento_rest_api.html",
+    "title": ""
+    }, {
+    "id": 134,
+    "url": "/other/ht_install-patches.html",
+    "title": ""
+    }, {
+    "id": 135,
+    "url": "/ce18-ee113/ht_magento-ce-sample.data.html",
+    "title": "Installing Sample Data for Magento Community Edition (CE)"
+    }, {
+    "id": 136,
+    "url": "/other/ht_magento-solr.html",
+    "title": "How to Install and Configure the Solr Search Engine With Magento Enterprise Edition (EE) 1.x"
+    }, {
+    "id": 137,
+    "url": "/api/rest/http_methods.html",
+    "title": "HTTP Methods"
+    }, {
+    "id": 138,
+    "url": "/",
+    "title": "Magento 1.x Reference"
+    }, {
+    "id": 139,
+    "url": "/install/installer-privileges_after.html",
+    "title": ""
+    }, {
+    "id": 140,
+    "url": "/install/installer-privileges_before.html",
+    "title": ""
+    }, {
+    "id": 141,
+    "url": "/install/installing.html",
+    "title": ""
+    }, {
+    "id": 142,
+    "url": "/install/installing_install.html",
+    "title": ""
+    }, {
+    "id": 143,
+    "url": "/install/installing_req-prereq_centos.html",
+    "title": ""
+    }, {
+    "id": 144,
+    "url": "/install/installing_req-prereq_ubuntu.html",
+    "title": ""
+    }, {
+    "id": 145,
+    "url": "/install/installing_upgrade_ce18_upgrade-roadmap.html",
+    "title": ""
+    }, {
+    "id": 146,
+    "url": "/install/installing_upgrade_details.html",
+    "title": ""
+    }, {
+    "id": 147,
+    "url": "/install/installing_upgrade_from-ee112.html",
+    "title": ""
+    }, {
+    "id": 148,
+    "url": "/install/installing_upgrade_from-ee11300-or-01.html",
+    "title": ""
+    }, {
+    "id": 149,
+    "url": "/install/installing_upgrade_landing.html",
+    "title": ""
+    }, {
+    "id": 150,
+    "url": "/api/soap/introduction.html",
+    "title": "Introduction to the Magento 1.x SOAP API"
+    }, {
+    "id": 151,
+    "url": "/api/rest/introduction.html",
+    "title": "Introduction to the Magento 1.x REST API"
+    }, {
+    "id": 152,
+    "url": "/api/rest/Resources/inventory.html",
+    "title": "Inventory"
+    }, {
+    "id": 153,
+    "url": "/ce19-ee114/ios-instrux.html",
+    "title": ""
+    }, {
+    "id": 154,
+    "url": "/other/ios-instrux.html",
+    "title": ""
+    }, {
+    "id": 155,
+    "url": "/magefordev/mage-for-dev-1.html",
+    "title": ""
+    }, {
+    "id": 156,
+    "url": "/magefordev/mage-for-dev-2.html",
+    "title": ""
+    }, {
+    "id": 157,
+    "url": "/magefordev/mage-for-dev-3.html",
+    "title": ""
+    }, {
+    "id": 158,
+    "url": "/magefordev/mage-for-dev-4.html",
+    "title": ""
+    }, {
+    "id": 159,
+    "url": "/magefordev/mage-for-dev-5.html",
+    "title": ""
+    }, {
+    "id": 160,
+    "url": "/magefordev/mage-for-dev-6.html",
+    "title": ""
+    }, {
+    "id": 161,
+    "url": "/magefordev/mage-for-dev-7.html",
+    "title": ""
+    }, {
+    "id": 162,
+    "url": "/magefordev/mage-for-dev-8.html",
+    "title": ""
+    }, {
+    "id": 163,
+    "url": "/api/soap/miscellaneous/magento.info.html",
+    "title": "Magento Info"
+    }, {
+    "id": 164,
+    "url": "/api/soap/miscellaneous/miscellaneous.html",
+    "title": "Miscellaneous"
+    }, {
+    "id": 165,
+    "url": "/install/nginx.html",
+    "title": "nginx configuration"
+    }, {
+    "id": 166,
+    "url": "/api/rest/authentication/oauth_authentication.html",
+    "title": "Authentication"
+    }, {
+    "id": 167,
+    "url": "/api/rest/authentication/oauth_configuration.html",
+    "title": "OAuth Configuration"
+    }, {
+    "id": 168,
+    "url": "/api/rest/Resources/Orders/order_addresses.html",
+    "title": "Order Addresses"
+    }, {
+    "id": 169,
+    "url": "/api/rest/Resources/Orders/order_comments.html",
+    "title": "Order Comments"
+    }, {
+    "id": 170,
+    "url": "/api/rest/Resources/Orders/order_items.html",
+    "title": "Order Items"
+    }, {
+    "id": 171,
+    "url": "/other/payflow.html",
+    "title": ""
+    }, {
+    "id": 172,
+    "url": "/api/rest/permission_settings/permission_settings.html",
+    "title": "Permission Settings"
+    }, {
+    "id": 173,
+    "url": "/other/php5.4_patch.html",
+    "title": ""
+    }, {
+    "id": 174,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/productAttributeSet.html",
+    "title": "Catalog Product Attribute Set"
+    }, {
+    "id": 175,
+    "url": "/api/soap/catalog/catalogProductAttributeMedia/productImages.html",
+    "title": "Catalog Product Attribute Media"
+    }, {
+    "id": 176,
+    "url": "/api/soap/catalog/catalogProductTypes/productTypes.html",
+    "title": "Catalog Product Types"
+    }, {
+    "id": 177,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.addOption.html",
+    "title": "Add Option"
+    }, {
+    "id": 178,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.create.html",
+    "title": "Create Attribute"
+    }, {
+    "id": 179,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.currentStore.html",
+    "title": "Current Store"
+    }, {
+    "id": 180,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.info.html",
+    "title": "Attribute Info"
+    }, {
+    "id": 181,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.list.html",
+    "title": "Attribute List"
+    }, {
+    "id": 182,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.options.html",
+    "title": "Attribute Options"
+    }, {
+    "id": 183,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.remove.html",
+    "title": "Attribute Remove"
+    }, {
+    "id": 184,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.removeOption.html",
+    "title": "Remove Option"
+    }, {
+    "id": 185,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.types.html",
+    "title": "Attribute Types"
+    }, {
+    "id": 186,
+    "url": "/api/soap/catalog/catalogProductAttribute/product_attribute.update.html",
+    "title": "Attribute Update"
+    }, {
+    "id": 187,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.attributeAdd.html",
+    "title": "Attribute Set Add"
+    }, {
+    "id": 188,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.attributeRemove.html",
+    "title": "Attribute Remove"
+    }, {
+    "id": 189,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.create.html",
+    "title": "Attribute Set Create"
+    }, {
+    "id": 190,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.groupAdd.html",
+    "title": "Attribute Set Group Add"
+    }, {
+    "id": 191,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.groupRemove.html",
+    "title": "Attribute Set Group Remove"
+    }, {
+    "id": 192,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.groupRename.html",
+    "title": "Attribute Set Group Rename"
+    }, {
+    "id": 193,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.list.html",
+    "title": "Attribute Set List"
+    }, {
+    "id": 194,
+    "url": "/api/soap/catalog/catalogProductAttributeSet/product_attribute_set.remove.html",
+    "title": "Attribute Set Remove"
+    }, {
+    "id": 195,
+    "url": "/api/rest/Resources/Products/product_categories.html",
+    "title": "Product Categories"
+    }, {
+    "id": 196,
+    "url": "/api/soap/catalog/catalogProductCustomOption/product_custom_option.add.html",
+    "title": "Product Custom Option Add"
+    }, {
+    "id": 197,
+    "url": "/api/soap/catalog/catalogProductCustomOption/product_custom_option.info.html",
+    "title": "Product Custom Option Info"
+    }, {
+    "id": 198,
+    "url": "/api/soap/catalog/catalogProductCustomOption/product_custom_option.list.html",
+    "title": "Product Custom Option List"
+    }, {
+    "id": 199,
+    "url": "/api/soap/catalog/catalogProductCustomOption/product_custom_option.remove.html",
+    "title": "Product Custom Option Remove"
+    }, {
+    "id": 200,
+    "url": "/api/soap/catalog/catalogProductCustomOption/product_custom_option.types.html",
+    "title": "Product Custom Option Types"
+    }, {
+    "id": 201,
+    "url": "/api/soap/catalog/catalogProductCustomOption/product_custom_option.update.html",
+    "title": "Product Custom Option Update"
+    }, {
+    "id": 202,
+    "url": "/api/soap/catalog/catalogProductCustomOptionValue/product_custom_option_value.add.html",
+    "title": "Product Custom Value Add"
+    }, {
+    "id": 203,
+    "url": "/api/soap/catalog/catalogProductCustomOptionValue/product_custom_option_value.info.html",
+    "title": "Product Custom Value Info"
+    }, {
+    "id": 204,
+    "url": "/api/soap/catalog/catalogProductCustomOptionValue/product_custom_option_value.list.html",
+    "title": "Product Custom Value List"
+    }, {
+    "id": 205,
+    "url": "/api/soap/catalog/catalogProductCustomOptionValue/product_custom_option_value.remove.html",
+    "title": "Product Custom Value Remove"
+    }, {
+    "id": 206,
+    "url": "/api/soap/catalog/catalogProductCustomOptionValue/product_custom_option_value.update.html",
+    "title": "Product Custom Value Update"
+    }, {
+    "id": 207,
+    "url": "/api/soap/catalog/catalogProductDownloadableLink/product_downloadable_link.add.html",
+    "title": "Downloadable Link Add"
+    }, {
+    "id": 208,
+    "url": "/api/soap/catalog/catalogProductDownloadableLink/product_downloadable_link.list.html",
+    "title": "Downloadable Link List"
+    }, {
+    "id": 209,
+    "url": "/api/soap/catalog/catalogProductDownloadableLink/product_downloadable_link.remove.html",
+    "title": "Downloadable Link Remove"
+    }, {
+    "id": 210,
+    "url": "/api/rest/Resources/Products/product_images.html",
+    "title": "Product Images"
+    }, {
+    "id": 211,
+    "url": "/api/soap/catalog/catalogProductTag/product_tag.add.html",
+    "title": "Product Tag Add"
+    }, {
+    "id": 212,
+    "url": "/api/soap/catalog/catalogProductTag/product_tag.info.html",
+    "title": "Product Tag Info"
+    }, {
+    "id": 213,
+    "url": "/api/soap/catalog/catalogProductTag/product_tag.list.html",
+    "title": "Product Tag List"
+    }, {
+    "id": 214,
+    "url": "/api/soap/catalog/catalogProductTag/product_tag.remove.html",
+    "title": "Product Tag Remove"
+    }, {
+    "id": 215,
+    "url": "/api/soap/catalog/catalogProductTag/product_tag.update.html",
+    "title": "Product Tag Update"
+    }, {
+    "id": 216,
+    "url": "/api/rest/Resources/Products/product_websites.html",
+    "title": "Product Websites"
+    }, {
+    "id": 217,
+    "url": "/api/rest/Resources/Products/products.html",
+    "title": "Products"
+    }, {
+    "id": 218,
+    "url": "/other/remote-code-exploit.html",
+    "title": ""
+    }, {
+    "id": 219,
+    "url": "/api/rest/Resources/resource_customer_addresses.html",
+    "title": "Customer Addresses"
+    }, {
+    "id": 220,
+    "url": "/api/rest/Resources/resource_customers.html",
+    "title": "Customers"
+    }, {
+    "id": 221,
+    "url": "/api/rest/Resources/resources.html",
+    "title": "Resources"
+    }, {
+    "id": 222,
+    "url": "/api/rest/response_formats.html",
+    "title": "Response Formats"
+    }, {
+    "id": 223,
+    "url": "/api/rest-api-index.html",
+    "title": "Magento 1.x REST API"
+    }, {
+    "id": 224,
+    "url": "/api/rest/permission_settings/roles_configuration.html",
+    "title": "Roles Configuration"
+    }, {
+    "id": 225,
+    "url": "/api/soap/sales/sales.html",
+    "title": "Sales"
+    }, {
+    "id": 226,
+    "url": "/api/soap/sales/salesOrder/salesOrder.html",
+    "title": "Sales Order"
+    }, {
+    "id": 227,
+    "url": "/api/soap/sales/salesOrderCreditMemo/salesOrderCreditMemo.html",
+    "title": "Sales Order Credit Memo"
+    }, {
+    "id": 228,
+    "url": "/api/soap/sales/salesOrderInvoice/salesOrderInvoice.html",
+    "title": "Sales Order Invoice"
+    }, {
+    "id": 229,
+    "url": "/api/soap/sales/salesOrderShipment/salesOrderShipment.html",
+    "title": "Sales Order Shipment"
+    }, {
+    "id": 230,
+    "url": "/api/soap/sales/salesOrder/sales_order.addComment.html",
+    "title": "Add Comment"
+    }, {
+    "id": 231,
+    "url": "/api/soap/sales/salesOrder/sales_order.cancel.html",
+    "title": "Order Cancel"
+    }, {
+    "id": 232,
+    "url": "/api/soap/sales/salesOrder/sales_order.hold.html",
+    "title": "Order Hold"
+    }, {
+    "id": 233,
+    "url": "/api/soap/sales/salesOrder/sales_order.info.html",
+    "title": "Order Info"
+    }, {
+    "id": 234,
+    "url": "/api/soap/sales/salesOrder/sales_order.list.html",
+    "title": "Order List"
+    }, {
+    "id": 235,
+    "url": "/api/soap/sales/salesOrder/sales_order.unhold.html",
+    "title": "Order Unhold"
+    }, {
+    "id": 236,
+    "url": "/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.addComment.html",
+    "title": "Add Comment"
+    }, {
+    "id": 237,
+    "url": "/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.cancel.html",
+    "title": "Memo Cancel"
+    }, {
+    "id": 238,
+    "url": "/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.create.html",
+    "title": "Memo Create"
+    }, {
+    "id": 239,
+    "url": "/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.info.html",
+    "title": "Memo Info"
+    }, {
+    "id": 240,
+    "url": "/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.list.html",
+    "title": "Memo List"
+    }, {
+    "id": 241,
+    "url": "/api/soap/sales/salesOrderInvoice/sales_order_invoice.addComment.html",
+    "title": "Add Comment"
+    }, {
+    "id": 242,
+    "url": "/api/soap/sales/salesOrderInvoice/sales_order_invoice.cancel.html",
+    "title": "Invoice Cancel"
+    }, {
+    "id": 243,
+    "url": "/api/soap/sales/salesOrderInvoice/sales_order_invoice.capture.html",
+    "title": "Invoice Capture"
+    }, {
+    "id": 244,
+    "url": "/api/soap/sales/salesOrderInvoice/sales_order_invoice.create.html",
+    "title": "Invoice Create"
+    }, {
+    "id": 245,
+    "url": "/api/soap/sales/salesOrderInvoice/sales_order_invoice.info.html",
+    "title": "Invoice Info"
+    }, {
+    "id": 246,
+    "url": "/api/soap/sales/salesOrderInvoice/sales_order_invoice.list.html",
+    "title": "Invoice List"
+    }, {
+    "id": 247,
+    "url": "/api/soap/sales/salesOrderShipment/sales_order_shipment.addComment.html",
+    "title": "Shipment Add Comment"
+    }, {
+    "id": 248,
+    "url": "/api/soap/sales/salesOrderShipment/sales_order_shipment.addTrack.html",
+    "title": "Shipment Add Track"
+    }, {
+    "id": 249,
+    "url": "/api/soap/sales/salesOrderShipment/sales_order_shipment.create.html",
+    "title": "Shipment Create"
+    }, {
+    "id": 250,
+    "url": "/api/soap/sales/salesOrderShipment/sales_order_shipment.getCarriers.html",
+    "title": "Shipment Get Carriers"
+    }, {
+    "id": 251,
+    "url": "/api/soap/sales/salesOrderShipment/sales_order_shipment.info.html",
+    "title": "Shipment Info"
+    }, {
+    "id": 252,
+    "url": "/api/soap/sales/salesOrderShipment/sales_order_shipment.list.html",
+    "title": "Shipment List"
+    }, {
+    "id": 253,
+    "url": "/api/soap/sales/salesOrderShipment/sales_order_shipment.removeTrack.html",
+    "title": "Remove Track"
+    }, {
+    "id": 254,
+    "url": "/api/rest/Resources/Orders/sales_orders.html",
+    "title": "Sales Orders"
+    }, {
+    "id": 255,
+    "url": "/api/soap-api-index.html",
+    "title": "Magento 1.x SOAP API"
+    }, {
+    "id": 256,
+    "url": "/other/solr-ee-patches.html",
+    "title": ""
+    }, {
+    "id": 257,
+    "url": "/api/soap/miscellaneous/store.info.html",
+    "title": "Store Info"
+    }, {
+    "id": 258,
+    "url": "/api/soap/miscellaneous/store.list.html",
+    "title": "Store List"
+    }, {
+    "id": 259,
+    "url": "/api/soap/enterprise_customerbalance/customerBalance/storecredit.balance.html",
+    "title": "Credit Balance"
+    }, {
+    "id": 260,
+    "url": "/api/soap/enterprise_customerbalance/customerBalance/storecredit.history.html",
+    "title": "Credit History"
+    }, {
+    "id": 261,
+    "url": "/api/soap/enterprise_customerbalance/customerBalance/storecredit.html",
+    "title": "Customer Balance"
+    }, {
+    "id": 262,
+    "url": "/api/soap/enterprise_customerbalance/shoppingCartCustomerBalance/storecredit_quote.html",
+    "title": "Shopping Cart Customer Balance"
+    }, {
+    "id": 263,
+    "url": "/api/soap/enterprise_customerbalance/shoppingCartCustomerBalance/storecredit_quote.removeAmount.html",
+    "title": "Balance Remove Amount"
+    }, {
+    "id": 264,
+    "url": "/api/soap/enterprise_customerbalance/shoppingCartCustomerBalance/storecredit_quote.setAmount.html",
+    "title": "Balance Set Amount"
+    }, {
+    "id": 265,
+    "url": "/system-requirements.html",
+    "title": "System Requirements for Magento Enterprise Edition and Community Edition (Current Shipping Versions)"
+    }, {
+    "id": 266,
+    "url": "/api/rest/testing_rest_resources.html",
+    "title": "Testing REST Resources"
+    }, {
+    "id": 267,
+    "url": "/ce18-ee113/using_redis.html",
+    "title": ""
+    }, {
+    "id": 268,
+    "url": "/api/soap/wsi_compliance.html",
+    "title": "WS-I Compliance"
+    }];
+
+var idx = lunr(function () {
+    this.ref('id')
+    this.field('title')
+    // this.field('body')
+
+    documents.forEach(function (doc) {
+        this.add(doc)
+    }, this)
+});
+function lunr_search(term) {
+    document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
+    if(term) {
+        document.getElementById('lunrsearchresults').innerHTML = "<p>Search results for '" + term + "'</p>" + document.getElementById('lunrsearchresults').innerHTML;
+        //put results on the screen.
+        var results = idx.search(term);
+        if(results.length>0){
+            //console.log(idx.search(term));
+            //if results
+            for (var i = 0; i < results.length; i++) {
+                // more statements
+                var ref = results[i]['ref'];
+                var url = documents[ref]['url'];
+                var title = documents[ref]['title'];
+                // var body = documents[ref]['body'].substring(0,160)+'...';
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='url'>"+ url +"</span></a></li>";
+            }
+        } else {
+            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";
+        }
+    }
+    return false;
+}
+</script>
+<style>
+    #lunrsearchresults {padding-top: 0.2rem;}
+    .lunrsearchresult {padding-bottom: 1rem;}
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search on this site" /></p>
+</form>
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+
 <div class="toc"> <h4 class="toc">Table of Contents</h4>
 <ul>
 	<li><a href="/devdocs-archive/1.x/system-requirements.html">Magento 1.x system requirements</a></li>
