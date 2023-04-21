@@ -1,4 +1,5 @@
 ---
+layout: null
 ---
 
 // Credits to https://thomascfoulds.com/2020/07/27/jekyll-static-site-search-lunr.html
