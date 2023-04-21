@@ -1,5 +1,4 @@
 ---
-permalink: /js/search-content.js
 ---
 
 // Credits to https://thomascfoulds.com/2020/07/27/jekyll-static-site-search-lunr.html
@@ -9,7 +8,7 @@ window.store = {
     "{{ page.url | slugify }}": {
       "title": "{{ page.title | xml_escape }}",
       "content": {{ page.content | strip_html | jsonify }},
-      "url": "{{ page.url | xml_escape }}"
+      "url": "{{ site.url }}{{ site.baseurl }}{{ page.url | xml_escape }}"
     }
     {% unless forloop.last %},{% endunless %}
   {% endfor %}
