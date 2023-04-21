@@ -12,7 +12,7 @@ require 'launchy'
 require 'colorator'
 
 # Require helper methods from the 'lib' directory
-Dir.glob('lib/**/*.rb') { |file| require_relative(file) }
+Dir.glob('rakelib/**/*.rb') { |file| require_relative(file) }
 
 desc "Same as 'rake', 'rake preview'"
 task default: %w[preview]

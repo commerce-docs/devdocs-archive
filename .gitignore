@@ -21,17 +21,3 @@ _config.local.yml
 _algolia_api_key
 
 /src/
-
-# Docs from different repositories #
-###################################
-
-/mbi/
-/page-builder/
-/page-builder-migration/
-/guides/m1x/
-/mftf/
-
-# Docs from different branches #
-###################################
-
-/guides/v2.0/
