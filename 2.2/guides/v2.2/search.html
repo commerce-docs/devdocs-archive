@@ -82,7 +82,7 @@
 	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
 
 </head>
-<body class="layout-search">
+<body class="layout-search_lunr">
 
 
 	<header class="site-header">
@@ -174,16 +174,6 @@
   </div>
 </div>
 
-
-      <div class="search-btn">
-        <button class="search-trigger search-icon" aria-label="Search"></button>
-      </div>
-
-      <form class="quick-search" action="/devdocs-archive/2.2/guides/v2.2/search.html" method="get" novalidate="novalidate">
-        <input type="search" name="query" placeholder="Search" />
-        <button class="quick-search-close" aria-label="Close Search">&times;</button>
-      </form>
-
     </div>
 
   </div>
@@ -199,24 +189,22 @@
 			<a id="main-content"></a>
 
 
-<div class="search-results-header">
-  <div class="search-results-header-inner">
-    <div id="search-input"></div>
-  </div>
-</div>
+<!-- Credits to https://thomascfoulds.com/2020/07/27/jekyll-static-site-search-lunr.html -->
 
-<div class="search-results-container">
-  <div id="index-navigation" class="indices-list"></div>
-  <div id="hits"></div>
+<div class="search-form">
+  <form class="input-group" action="search" method="get">
+    <input type="search" autocomplete="off" id="search-box" name="query" placeholder="Search the site" class="form-control search-field" />
+    <i class="search-icon"></i>
+    <div class="input-group-btn">
+        <button type="submit" class="btn btn-primary btn-large search-submit">Search</button>
+    </div>
+  </form>
+  <ul id="search-results" class="search-results"></ul>
 </div>
+<script src="/devdocs-archive/2.2/js/search-content.js"></script>
+<script src="/devdocs-archive/2.2/js/lunr.js"></script>
+<script src="/devdocs-archive/2.2/js/search.js"></script>
 
-<div class="search-results-footer">
-  <div id="pagination"></div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js"></script>
-<script src="/devdocs-archive/2.2/assets/js/search.min.js?ver=7"></script>
-<link rel="stylesheet" href="/devdocs-archive/2.2/assets/css/search.css?ver=7" />
 
 
 	</div>
@@ -272,4 +260,3 @@
 
 </body>
 </html>
-
