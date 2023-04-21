@@ -6,14 +6,17 @@
     <p>Everything you need to build and manage a customized Magento store.</p>
 
     <div class="search-form">
-      <form class="input-group" action="{{ page.baseurl }}/search.html" method="get">
-        <input type="search" autocomplete="off" name="query" placeholder="Looking for something specific?" class="form-control search-field" />
+      <form class="input-group" action="search" method="get">
+        <input type="search" autocomplete="off" id="search-box" name="query" placeholder="Looking for something specific?" class="form-control search-field" />
         <i class="search-icon"></i>
         <div class="input-group-btn">
           <button type="submit" class="btn btn-primary btn-large search-submit">Search</button>
         </div>
       </form>
+      <ul id="search-results" class="search-results"></ul>
     </div>
-
+    <script src="{{ site.baseurl }}/js/search-content.js"></script>
+    <script src="{{ site.baseurl }}/js/lunr.js"></script>
+    <script src="{{ site.baseurl }}/js/search.js"></script>
   </div>
 </section><!-- END home-intro -->
