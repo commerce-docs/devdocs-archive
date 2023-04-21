@@ -6,7 +6,7 @@
 {% assign counter = 0 %}
 var documents = [{% for page in site.pages %}{
     "id": {{ counter }},
-    "url": "{{ site.url }}{{ page.url }}",
+    "url": "{{ site.baseurl }}{{ page.url }}",
     "title": "{{ page.title }}"
     }{% assign counter = counter | plus: 1 %}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
 
