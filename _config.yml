@@ -6,9 +6,6 @@ title: Archived Magento 2.2 Developer Documentation
 logo: DevDocs
 description: Archived Magento 2 Developer Documentation.
 
-# the base protocol and domain
-url: https://magento.github.io/
-
 # Site theme. https://jekyllrb.com/docs/themes/
 theme: devdocs
 
