@@ -1,5 +1,5 @@
 ---
-layout: search
+layout: search-lunr
 group:
 subgroup:
 title: Search Results
