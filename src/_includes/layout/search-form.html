@@ -5,8 +5,8 @@
 {%- endif -%}
 
 <form class="spectrum-Search spectrum-Textfield search-form"
-      action="{{ site.baseurl }}/guides/v{{ search_version }}/search.html">
-  <input type="search" placeholder="Looking for something specific?" name="query" value=""
+      action="{{ site.baseurl }}/guides/v{{ search_version }}/search.html" method="get">
+  <input type="search" autocomplete="off" placeholder="Looking for something specific?" name="query" id="search-box" value=""
     class="spectrum-Textfield-input spectrum-Search-input search-field form-control" autocomplete="off">
     <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
     <rect fill="#ff13dc" opacity="0" width="18" height="18" />
@@ -22,3 +22,7 @@
     </div>
   </button>
 </form>
+<ul id="search-results" class="search-results"></ul>
+<script src="{{ site.baseurl }}/js/search-content.js"></script>
+<script src="{{ site.baseurl }}/js/lunr.js"></script>
+<script src="{{ site.baseurl }}/js/search.js"></script>

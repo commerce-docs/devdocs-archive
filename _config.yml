@@ -6,9 +6,6 @@ title: Archived 2.3 Magento Developer Guide
 logo: Commerce DevDocs
 description: Magento Developer Guide
 
-# the base protocol and domain
-url: http://magento.github.io/devdocs/
-
 # Site theme: https://github.com/commerce-docs/devdocs-theme
 # About themes in Jekyll: https://jekyllrb.com/docs/themes/
 theme: devdocs
