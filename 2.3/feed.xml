@@ -3,25 +3,418 @@
   <channel>
     <title>Archived 2.3 Magento Developer Guide</title>
     <description>Magento Developer Guide</description>
-    <link>http://magento.github.io/devdocs/</link>
-    <atom:link href="http://magento.github.io/devdocs//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Apr 2023 14:09:51 -0500</pubDate>
-    <lastBuildDate>Fri, 14 Apr 2023 14:09:51 -0500</lastBuildDate>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 21 Apr 2023 20:58:26 -0500</pubDate>
+    <lastBuildDate>Fri, 21 Apr 2023 20:58:26 -0500</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
     
         <item>
-          <title>Usage</title>
+          <title>Search Results</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//quality-patches/usage.html</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+          <link>/guides/v2.3/search.html</link>
+          <pubDate>Fri, 21 Apr 2023 20:58:11 -0500</pubDate>
         </item>
     
         <item>
-          <title>Contributors</title>
+          <title>About this document</title>
+          <description>### Overview This document lists the fundamental coding and application design principles that guide Magento 2 developer team members. Magento core developers use this document as a reference during code reviews; some rules have corresponding code checks in the Magento static tests. These guidelines came from many years of hard work, experience, and discussions. We strongly believe that new technical initiatives should follow these recommendations, and the existing code should be improved to meet them....</description>
+          <link>/guides/v2.3/coding-standards/technical-guidelines.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Merge sections</title>
+          <description>Sections can be merged together to cover your extension. In this example we add another selector to the section on the products page section. ## Starting section &lt;!-- {% raw %} --&gt; ```xml &lt;section name=&quot;ProductsPageSection&quot;&gt; &lt;element name=&quot;addProductButton&quot; type=&quot;button&quot; selector=&quot;//button[@id='add_new_product-button']&quot;/&gt; &lt;element name=&quot;checkboxForProduct&quot; type=&quot;button&quot; selector=&quot;//*[contains(text(),'{{args}}')]/parent::td/preceding-sibling::td/label[@class='data-grid-checkbox-cell-inner']&quot; parameterized=&quot;true&quot;/&gt; &lt;element name=&quot;actions&quot; type=&quot;button&quot; selector=&quot;//div[@class='col-xs-2']/div[@class='action-select-wrap']/button[@class='action-select']&quot;/&gt; &lt;element name=&quot;delete&quot; type=&quot;button&quot; selector=&quot;//*[contains(@class,'admin__data-grid-header-row row row-gutter')]//*[text()='Delete']&quot;/&gt; &lt;element name=&quot;ok&quot; type=&quot;button&quot; selector=&quot;//button[@data-role='action']//span[text()='OK']&quot;/&gt; &lt;element name=&quot;deletedSuccessMessage&quot; type=&quot;button&quot; selector=&quot;//*[@class='message message-success success']&quot;/&gt; &lt;/section&gt; ``` ## File to merge ```xml &lt;section name=&quot;ProductsPageSection&quot;&gt; &lt;!-- myExtensionElement...</description>
+          <link>/mftf/v2/docs/merge_points/merge-sections.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Merge data</title>
+          <description>Data objects can be merged to cover the needs of your extension. In this example we update the `quantity` to `1001` and add a new piece of data relevant to our extension. This will affect all other tests that use this data. ## Starting entity ```xml &lt;entity name=&quot;SimpleProduct&quot; type=&quot;product&quot;&gt; &lt;data key=&quot;sku&quot; unique=&quot;suffix&quot;&gt;SimpleProduct&lt;/data&gt; &lt;data key=&quot;type_id&quot;&gt;simple&lt;/data&gt; &lt;data key=&quot;attribute_set_id&quot;&gt;4&lt;/data&gt; &lt;data key=&quot;name&quot; unique=&quot;suffix&quot;&gt;SimpleProduct&lt;/data&gt; &lt;data key=&quot;price&quot;&gt;123.00&lt;/data&gt; &lt;data key=&quot;visibility&quot;&gt;4&lt;/data&gt; &lt;data key=&quot;status&quot;&gt;1&lt;/data&gt; &lt;data key=&quot;quantity&quot;&gt;1000&lt;/data&gt; &lt;data key=&quot;urlKey&quot; unique=&quot;suffix&quot;&gt;simpleproduct&lt;/data&gt; &lt;data key=&quot;weight&quot;&gt;1&lt;/data&gt; &lt;requiredEntity type=&quot;product_extension_attribute&quot;&gt;EavStockItem&lt;/requiredEntity&gt; &lt;requiredEntity...</description>
+          <link>/mftf/v2/docs/merge_points/merge-data.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Test your component</title>
+          <description>## Unit and Integration Tests {#test-unit} Run the PHPUnit based Magento unit and integration tests. See the [Magento Testing Overview]. ## Functional testing {#test-functional} For further testing with the Magento functional testing frameworks, see [Functional Testing Framework] and [Magento Functional Testing Framework]. ## Test using {{site.data.var.ce}} {#test-comm} Test your component by deploying {{site.data.var.ce}} and adding the component to the project's `composer.json`. To install, see [Install using Composer]. ```json &quot;require&quot;: { &quot;magento/magento-composer-installer&quot;: &quot;*&quot;, &quot;yourvendorname/module-one&quot;: &quot;0.1.1&quot; },...</description>
+          <link>/guides/v2.3/extension-dev-guide/validate/test-module.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Metadata</title>
+          <description>In this topic we talk about handling entities that you need in your tests (such as categories, products, wish lists, and similar) using the MFTF. Using data handling actions like [`createData`], [`deleteData`], [`updateData`], and [`getData`], you are able to create, delete, update, and read entities for your tests. The framework enables you to send HTTP requests with these statically defined data entities: - [Sending a REST API request][rest request] - [Handling a REST API response][rest...</description>
+          <link>/mftf/v2/docs/metadata.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Update the Magento Functional Testing Framework</title>
+          <description>&lt;div class=&quot;bs-callout bs-callout-info&quot; markdown=&quot;1&quot;&gt; Both Magento `2.2` and `2.3` supports MFTF `2.5.3` ([Find your version][] of the MFTF). &lt;/div&gt; Tests and the Framework itself are stored in different repositories. * Tests are stored in Module's directory. * MFTF is installed separately (usually as a Composer dependency) To understand different types of update - please follow the [Versioning][] page. ## Patch version update Takes place when **third** digit of version number changes. 1. Make sure that...</description>
+          <link>/mftf/v2/docs/update.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Action groups</title>
+          <description>In the MFTF, you can re-use a group of [actions][], such as logging in as an administrator or a customer, declared in an XML file when you need to perform the same sequence of actions multiple times. The following diagram shows the structure of an MFTF action group: ![Structure of MFTF action group](/devdocs-archive/2.3/mftf/v2/docs/img/action-groups-dia.svg) ## Principles {% raw %} The following conventions apply to MFTF action groups: - All action groups are declared in XML files...</description>
+          <link>/mftf/v2/docs/test/action-groups.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>MFTF versioning schema</title>
+          <description>This document describes the versioning policy for the Magento Functional Testing Framework (MFTF), including the version numbering schema. ## Backward compatibility In this context, backward compatibility means that when changes are made to the MFTF, all existing tests still run normally. If a modification to MFTF forces tests to be changed, this is a backward incompatible change. ## Find your MFTF version number To find the version of MFTF that you are using, run the...</description>
+          <link>/mftf/v2/docs/versioning.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Application Testing Guide</title>
+          <description>Magento actively leverages various testing strategies to ensure product and code quality. Product quality matters to the end-users working with the Magento storefront, admin panel, web APIs and CLI. Product quality tests verify that the user gets expected results while interacting with the Magento system. Code quality is important to developers working with Magento codebase including: - System integrators - Extension developers - Magento core team - Community contributors Code quality matters for: - Extensibility...</description>
+          <link>/guides/v2.3/test/testing.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Section structure</title>
+          <description>A `&lt;section&gt;` is a reusable part of a [`&lt;page&gt;`](./page.html) and is the standard file for defining UI elements on a page used in a test. A `&lt;section&gt;` can define: &lt;!-- {% raw %} --&gt; - An explicit element that has a selector equal to the constant string. Example: `selector=&quot;#add_root_category_button&quot;` - A parameterized element that contains substitutable values in the selector. Example: `selector=&quot;#element .{{var1}} .{{var2}}&quot;`. ## Substitutable values Substitutable values in the test can be of...</description>
+          <link>/mftf/v2/docs/section.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Suites</title>
+          <description>Suites are essentially groups of tests that run in specific conditions (preconditions and postconditions). They enable including, excluding, and grouping tests for a customized test run. You can form suites using separate tests, groups, and modules. Each suite must be defined in the `&lt;VendorName&gt;/&lt;ModuleName&gt;/Test/Mftf/Suite` directory. The tests for each suite are generated in a separate directory under `&lt;magento 2 root&gt;/dev/tests/acceptance/tests/functional/Magento/FunctionalTest/_generated/`. All tests that are not within a suite are generated in the _default_ suite at...</description>
+          <link>/mftf/v2/docs/suite.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Test Isolation</title>
+          <description>Because MFTF is a framework for testing a highly customizable and ever changing application, MFTF tests need to be properly isolated. ## What is test isolation? Test isolation refers to a test that does not leave behind any data or configuration changes in the Magento instance. An MFTF test is considered fully isolated if: 1. It does not leave data behind. 1. It does not leave Magento configured in a different state than when the...</description>
+          <link>/mftf/v2/docs/guides/test-isolation.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Extend tests</title>
+          <description>Tests can be extended to cover the needs of your extension. In this example, we add an action group to a new copy of the original test for our extension. ## Starting test ```xml &lt;test name=&quot;AdminCreateSimpleProductTest&quot;&gt; &lt;annotations&gt; &lt;features value=&quot;Catalog&quot;/&gt; &lt;stories value=&quot;Create a Simple Product via Admin&quot;/&gt; &lt;title value=&quot;Admin should be able to create a Simple Product&quot;/&gt; &lt;description value=&quot;Admin should be able to create a Simple Product&quot;/&gt; &lt;severity value=&quot;CRITICAL&quot;/&gt; &lt;testCaseId value=&quot;MAGETWO-23414&quot;/&gt; &lt;group value=&quot;product&quot;/&gt; &lt;/annotations&gt; &lt;before&gt; &lt;createData...</description>
+          <link>/mftf/v2/docs/merge_points/extend-tests.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Test actions</title>
+          <description>Actions in the MFTF allow you to automate different scenarios of Magento user's actions. They are mostly XML implementations of [Codeception actions](https://github.com/Codeception/Codeception/blob/2.5/docs/modules/WebDriver#Actions). Some actions drive browser elements, while others use REST APIs. ## Common attributes All `&lt;actions&gt;` contain the following attributes that are useful for merging needs. ### `stepKey` `stepKey` is a required attribute that stores a unique identifier of the action. Example test step of the `myAction` action with the `conditionalClickStep1` identifier: ```xml &lt;myAction...</description>
+          <link>/mftf/v2/docs/test/actions.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>How To write good selectors</title>
+          <description>Selectors are the atomic unit of test writing. They fit into the hierarchy like this: MFTF tests make use of action groups &gt; which are made up of actions &gt; which interact with page objects &gt; which contain elements &gt; which are specified by selectors. Because they are fundamental building blocks, we must take care when writing them. ## What is a selector? A &quot;selector&quot; works like an address to an element in the Document...</description>
+          <link>/mftf/v2/docs/guides/selectors.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Extend data entities</title>
+          <description>Extending a data entity does not affect the existing data entity. In this example we update the quantity to 1001 and add a new piece of data relevant to our extension. Unlike merging, this will _not_ affect any other tests that use this data entity. ## Starting entity ```xml &lt;entity name=&quot;SimpleProduct&quot; type=&quot;product&quot;&gt; &lt;data key=&quot;sku&quot; unique=&quot;suffix&quot;&gt;SimpleProduct&lt;/data&gt; &lt;data key=&quot;type_id&quot;&gt;simple&lt;/data&gt; &lt;data key=&quot;attribute_set_id&quot;&gt;4&lt;/data&gt; &lt;data key=&quot;name&quot; unique=&quot;suffix&quot;&gt;SimpleProduct&lt;/data&gt; &lt;data key=&quot;price&quot;&gt;123.00&lt;/data&gt; &lt;data key=&quot;visibility&quot;&gt;4&lt;/data&gt; &lt;data key=&quot;status&quot;&gt;1&lt;/data&gt; &lt;data key=&quot;quantity&quot;&gt;1000&lt;/data&gt; &lt;data key=&quot;urlKey&quot; unique=&quot;suffix&quot;&gt;simpleproduct&lt;/data&gt; &lt;data key=&quot;weight&quot;&gt;1&lt;/data&gt;...</description>
+          <link>/mftf/v2/docs/merge_points/extend-data.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Git vs Composer installation of Magento with MFTF</title>
+          <description>Depending on how you plan to use Magnto code, there are different options for installing Magento. ## GitHub Installation If you are contributing a pull request to the Magento 2 codebase, download Magento 2 from our GitHub repository. Contribution to the codebase is done using the 'fork and pull' model where contributors maintain their own fork of the repo. This repo is then used to submit a pull request to the base repo. Install guide:...</description>
+          <link>/mftf/v2/docs/guides/git-vs-composer-install.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Docker services containers</title>
           <description>
 </description>
-          <link>http://magento.github.io/devdocs//contributor-guide/contributors.html</link>
+          <link>/cloud/docker/docker-containers-service.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Annotations</title>
+          <description>Annotations are essentially comments in the code. In PHP, they all are marked by a preceding `@` symbol. Within [tests], annotations are contained within their own node. ## Principles The following conventions apply to annotations in the Magento Functional Testing Framework (MFTF): - All annotations are within an `&lt;annotations&gt;` element. - Each element within corresponds to a supported annotation type. - There is no distinction made in XML between Codeception annotations and Allure annotations. -...</description>
+          <link>/mftf/v2/docs/test/annotations.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title></title>
+          <description>&lt;section class=&quot;home-features&quot;&gt; &lt;div class=&quot;bs-callout-warning&quot;&gt;&lt;center&gt;{{site.data.var.ee}} 2.3 reached end of support in September 2022.&lt;/center&gt;&lt;/div&gt; &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Setup&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/system-requirements.html&quot;&gt;System Requirements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/bk-install-guide.html&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/config-guide/bk-config-guide.html&quot;&gt;Configuration Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/cloud/bk-cloud.html&quot;&gt;{{site.data.var.ece}}&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Backend Development&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html&quot;&gt;PHP Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/b2b/bk-b2b.html&quot;&gt;B2B Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/bk-coding-standards.html&quot;&gt;Coding Standards&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/technical-guidelines.html&quot;&gt;Technical Guidelines&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Frontend Development&lt;/h2&gt;...</description>
+          <link>/</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Action Group Best Practices</title>
+          <description>We strive to write tests using only action groups. Fortunately, we have built up a large set of action groups to get started. We can make use of them and extend them for our own specific needs. In some cases, we may never even need to write action groups of our own. We may be able to simply chain together calls to existing action groups to implement our new test case. ## Why use Action...</description>
+          <link>/mftf/v2/docs/guides/action-groups.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.2 Release Notes</title>
+          <description>&lt;p&gt;&lt;em&gt;Release notes published on June 25, 2019 and last updated on June 3, 2020.&lt;/em&gt;&lt;/p&gt; &lt;p&gt;We are pleased to present Adobe Commerce 2.3.2. This release includes over 200 functional fixes to the core product, over 350 pull requests contributed by the community, and over 75 security enhancements. It includes contributions from our community members. These contributions range from minor clean-up of core code to significant enhancements to Inventory Management and GraphQL.&lt;/p&gt; &lt;h2 id=&quot;other-release-information&quot;&gt;Other release information&lt;/h2&gt; &lt;p&gt;Although...</description>
+          <link>/guides/v2.3/release-notes/ReleaseNotes2.3.2Commerce.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.5 Release Notes</title>
+          <description>{{site.data.var.ee}} 2.3.5 offers significant platform upgrades, substantial security changes, and performance improvements. This release includes over 180 functional fixes to the core product and over 25 security enhancements. It includes the resolution of over 46 GitHub issues by our community members. These community contributions range from minor clean-up of core code to significant enhancements in Inventory Management and GraphQL. {:.bs-callout-info} Quarterly releases may contain backward-incompatible changes (BIC). Magento 2.3.5 contains minor backward-incompatible changes. To review...</description>
+          <link>/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Extend action groups</title>
+          <description>Extending an action group doesn't affect the existing action group. In this example we add a `&lt;click&gt;` command to check the checkbox that our extension added with a new action group for the simple product creation form. ## Starting action group &lt;!-- {% raw %} --&gt; ```xml &lt;actionGroup name=&quot;FillAdminSimpleProductForm&quot;&gt; &lt;arguments&gt; &lt;argument name=&quot;category&quot;/&gt; &lt;argument name=&quot;simpleProduct&quot;/&gt; &lt;/arguments&gt; &lt;amOnPage url=&quot;{{AdminProductIndexPage.url}}&quot; stepKey=&quot;navigateToProductIndex&quot;/&gt; &lt;click selector=&quot;{{AdminProductGridActionSection.addProductToggle}}&quot; stepKey=&quot;clickAddProductDropdown&quot;/&gt; &lt;click selector=&quot;{{AdminProductGridActionSection.addSimpleProduct}}&quot; stepKey=&quot;clickAddSimpleProduct&quot;/&gt; &lt;fillField userInput=&quot;{{simpleProduct.name}}&quot; selector=&quot;{{AdminProductFormSection.productName}}&quot; stepKey=&quot;fillName&quot;/&gt; &lt;fillField userInput=&quot;{{simpleProduct.sku}}&quot; selector=&quot;{{AdminProductFormSection.productSku}}&quot; stepKey=&quot;fillSKU&quot;/&gt; &lt;fillField userInput=&quot;{{simpleProduct.price}}&quot; selector=&quot;{{AdminProductFormSection.productPrice}}&quot;...</description>
+          <link>/mftf/v2/docs/merge_points/extend-action-groups.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Preparing a test for MFTF</title>
+          <description>This tutorial demonstrates the process of converting a raw functional test into a properly abstracted test file, ready for publishing. ## The abstraction process When first writing a test for a new piece of code such as a custom extension, it is likely that values are hardcoded for the specific testing environment while in development. To make the test more generic and easier for others to update and use, we need to abstract the test....</description>
+          <link>/mftf/v2/docs/test-prep.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Test</title>
+          <description>Test cases in the Magento Functional Testing Framework (MFTF) are defined in XML as [`&lt;tests&gt;`]. `&lt;tests&gt;` is a [Codeception test container][Codeception] that contains multiple individual tests with test metadata and before and after actions. MFTF `&lt;tests&gt;` is considered a sequence of actions with associated parameters. Any failed [assertion] within a test constitutes a failed test. &lt;div class=&quot;bs-callout bs-callout-info&quot; markdown=&quot;1&quot;&gt; `&lt;before&gt;` and `&lt;after&gt;` hooks are not global within `&lt;tests&gt;`. They only apply to the `&lt;test&gt;` in...</description>
+          <link>/mftf/v2/docs/test.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction to the Magento Functional Testing Framework</title>
+          <description>The Magento Functional Tesitng Framework (MFTF) is a framework used to perform automated end-to-end functional testing. ## Goals - To facilitate functional testing and minimize the effort it takes to perform regression testing. - Enable extension developers to provide the Functional Tests to offered extensions. - Ensuring a common standard of quality between Magento, Extension Developers and System Intergrators. MFTF also focuses on - **Traceability** for clear logging and reporting capabilities. - **Modularity** to run...</description>
+          <link>/mftf/v2/docs/introduction.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Assertions</title>
+          <description>Assertions serve to pass or fail the [test](/devdocs-archive/2.3/mftf/v2/docs/test.html#test-tag) if a condition is not met. These assertions will look familiar to you if you've used any other testing framework, like PHPUnit. All assertions contain the same [common actions attributes](/devdocs-archive/2.3/mftf/v2/docs/test/actions.html#common-attributes): `stepKey`, `before`, and `after`. Most assertions contain a `message` attribute that specifies the text of an informational message to help you identify the cause of the failure. ## Principles The [principles for actions](/devdocs-archive/2.3/mftf/v2/docs/test.html#principles) are also applicable to...</description>
+          <link>/mftf/v2/docs/test/assertions.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Tips and Tricks</title>
+          <description>Sometimes, little changes can make a big difference in your project. Here are some test writing tips to keep everything running smoothly. ## Actions and action groups ### Use parameterized selectors in action groups with argument references Clarity and readability are important factors in good test writing. Having to parse through unreadable code can be time consuming. Save time by writing clearly. The good example clearly shows what the selector arguments refer to. In the...</description>
+          <link>/mftf/v2/docs/tips-tricks.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Merge pages</title>
+          <description>Sections can be merged into pages to cover your extension. In this example we add a section that may be relevant to our extension to the list of sections underneath one page. ## Starting page ```xml &lt;page name=&quot;AdminCategoryPage&quot; url=&quot;catalog/category/&quot; area=&quot;admin&quot; module=&quot;Magento_Catalog&quot;&gt; &lt;section name=&quot;AdminCategorySidebarActionSection&quot;/&gt; &lt;section name=&quot;AdminCategoryMainActionsSection&quot;/&gt; &lt;section name=&quot;AdminCategorySidebarTreeSection&quot;/&gt; &lt;section name=&quot;AdminCategoryBasicFieldSection&quot;/&gt; &lt;section name=&quot;AdminCategorySEOSection&quot;/&gt; &lt;section name=&quot;AdminCategoryProductsSection&quot;/&gt; &lt;section name=&quot;AdminCategoryProductsGridSection&quot;/&gt; &lt;section name=&quot;AdminCategoryModalSection&quot;/&gt; &lt;section name=&quot;AdminCategoryMessagesSection&quot;/&gt; &lt;section name=&quot;AdminCategoryContentSection&quot;/&gt; &lt;/page&gt; ``` ## File to merge ```xml &lt;page name=&quot;AdminCategoryPage&quot; url=&quot;catalog/category/&quot; area=&quot;admin&quot; module=&quot;Magento_Catalog&quot;&gt; &lt;!-- myExtensionSection...</description>
+          <link>/mftf/v2/docs/merge_points/merge-pages.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Locator functions</title>
+          <description>## Define Locator::functions in elements Codeception has a set of very useful [Locator functions][] that may be used by elements inside a [section][]. Declare an element with a `locatorFunction`: ```xml &lt;element name=&quot;simpleLocator&quot; type=&quot;button&quot; locatorFunction=&quot;Locator::contains('label', 'Name')&quot;/&gt; ``` When using the `locatorFunction`, omit `Locator::` for code simplicity: ```xml &lt;element name=&quot;simpleLocatorShorthand&quot; type=&quot;button&quot; locatorFunction=&quot;contains('label', 'Name')&quot;/&gt; ``` An element's `locatorFunction` can also be parameterized the same way as [parameterized selectors][]: &lt;!-- {% raw %} --&gt; ```xml &lt;element name=&quot;simpleLocatorTwoParam&quot; type=&quot;button&quot; locatorFunction=&quot;contains({{arg1}},...</description>
+          <link>/mftf/v2/docs/section/locator-functions.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Parameterized selectors</title>
+          <description>Use the following examples to create and use parameterized selectors in the MFTF. ## Set up a selector in section Create a new `&lt;element/&gt;` in a `&lt;section&gt;&lt;/section&gt;`, : ```xml &lt;section name=&quot;SampleSection&quot;&gt; &lt;element name=&quot;&quot; type=&quot;&quot; selector=&quot;&quot;/&gt; &lt;/section&gt; ``` Add the attribute `parameterized=&quot;true&quot;` to the `&lt;element/&gt;`: ```xml &lt;section name=&quot;SampleSection&quot;&gt; &lt;element name=&quot;&quot; type=&quot;&quot; selector=&quot;&quot; parameterized=&quot;true&quot;/&gt; &lt;/section&gt; ``` Add your selector in the `selector=&quot;&quot;` attribute: ```xml &lt;section name=&quot;SampleSection&quot;&gt; &lt;element name=&quot;&quot; type=&quot;&quot; selector=&quot;#element&quot; parameterized=&quot;true&quot;/&gt; &lt;/section&gt; ``` &lt;!-- {% raw %}...</description>
+          <link>/mftf/v2/docs/section/parameterized-selectors.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Using suites</title>
+          <description>With an increasing number of MFTF tests, it is important to have a mechanism to organize and consolidate them for ease-of-use. ### What is a suite? A suite is a collection of MFTF tests that are intended to test specific behaviors of Magento. It may contain initialization and clean up steps common to the included test cases. It allows you to include, exclude and/or group tests with preconditions and post conditions. You can create a...</description>
+          <link>/mftf/v2/docs/guides/using-suites.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Getting started</title>
+          <description>&lt;div class=&quot;bs-callout bs-callout-info&quot; markdown=&quot;1&quot;&gt; [Find your MFTF version][] of the MFTF. The latest Magento 2.3.x release supports MFTF 2.5.3. The latest Magento 2.2.x release supports MFTF 2.4.5. &lt;/div&gt; ## Prepare environment {#prepare-environment} Make sure that you have the following software installed and configured on your development environment: - [PHP version supported by the Magento instance under test][php] - [Composer 1.3 or later][composer] - [Java 1.8 or later][java] - [Selenium Server Standalone 3.1 or later][selenium server]...</description>
+          <link>/mftf/v2/docs/getting-started.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.1 Release Notes</title>
+          <description>&lt;p&gt;&lt;em&gt;Release notes published on March 26, 2019 and last edited on June 3, 2020.&lt;/em&gt;&lt;/p&gt; &lt;p&gt;We are pleased to present Adobe Commerce 2.3.1. This release includes over 200 functional fixes to the core product, over 500 pull requests contributed by the community, and over 30 security enhancements.&lt;/p&gt; &lt;p&gt;This release includes significant contributions from our community members. These contributions range from minor clean-up of core code to the development of substantial features such as Inventory Management and...</description>
+          <link>/guides/v2.3/release-notes/ReleaseNotes2.3.1Commerce.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Extending</title>
+          <description>There are cases when you need to create many tests that are very similar to each other. For example, only one or two parameters (for example, URL) might vary between tests. To avoid copy-pasting and to save some time the Magento Functional Testing Framework (MFTF) enables you to extend test components such as [test], [data], and [action group]. You can create or update any component of the parent body in your new test/action group/entity. *...</description>
+          <link>/mftf/v2/docs/extending.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Troubleshooting</title>
+          <description>Having a little trouble with the MFTF? See some common errors and fixes below. ## AcceptanceTester class issues If you see the following error: ```terminal AcceptanceTester class doesn't exist in suite folder. Run the 'build' command to generate it ``` ### Reason Something went wrong during the `mftf build:project` command that prevented the creation of the AcceptanceTester class. ### Solution This issue is fixed in the MFTF 2.5.0. In versions of the MFTF lower than...</description>
+          <link>/mftf/v2/docs/troubleshooting.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Debugging</title>
+          <description>Debugging within the Magento Functional Testing Framework is helpful in identifying test bugs by allowing you to pause execution so that you may: - Examine the page. - Check returned data and other variables being used during run-time. This is straightforward to do once you create a basic Debug Configuration. ## Prerequisites - [Xdebug][] - PHPUnit configured for use in [PHPStorm][] ## Creating Debug Configuration with PHPStorm 1. If not already installed, download the Codeception...</description>
+          <link>/mftf/v2/docs/debugging.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Input testing data</title>
+          <description>The MFTF enables you to specify and use `&lt;data&gt;` entities defined in XML. Default `&lt;data&gt;` entities are provided for use and as templates for entity creation and manipulation. The following diagram shows the XML structure of an MFTF data object: ![MFTF Data Object](/devdocs-archive/2.3/mftf/v2/docs/img/data-dia.svg) &lt;!-- {% raw %} --&gt; ## Supply data to test by reference to a data entity Test steps requiring `&lt;data&gt;` input in an action, like filling a field with a string, may...</description>
+          <link>/mftf/v2/docs/data.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Merging</title>
+          <description>The MFTF allows you to merge test components defined in XML files, such as: - [`&lt;tests&gt;`][] - [`&lt;pages&gt;`][] - [`&lt;sections&gt;`][] - [`&lt;data&gt;`][] - [`&lt;action groups&gt;`][] You can create, delete, or update the component. It is useful for supporting rapid test creation for extensions and customizations. You can specify needed changes to an existing file and merge them to produce a modification of the original that incorporates the specified changes (the &quot;delta&quot;). Merging operates at the...</description>
+          <link>/mftf/v2/docs/merging.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Credentials</title>
+          <description>When you test functionality that involves external services such as UPS, FedEx, PayPal, or SignifyD, use the MFTF credentials feature to hide sensitive [data][] like integration tokens and API keys. Currently the MFTF supports three types of credential storage: - **.credentials file** - **HashiCorp Vault** - **AWS Secrets Manager** ## Configure File Storage The MFTF creates a sample file for credentials during [initial setup][]: `magento2/dev/tests/acceptance/.credentials.example`. The file contains an example list of keys for fields...</description>
+          <link>/mftf/v2/docs/credentials.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Configuration</title>
+          <description>The `*.env` file provides additional configuration for the Magento Functional Testing Framework (MFTF). To run the MFTF on your Magento instance, specify the basic configuration values. Advanced users can create custom configurations based on requirements and environment. ## Basic configuration These basic configuration values are __required__ and must be set by the user before the MFTF can function correctly. ### MAGENTO_BASE_URL The root URL of the Magento application under test. Example: ```conf MAGENTO_BASE_URL=http://magento2.vagrant251 ``` &lt;div...</description>
+          <link>/mftf/v2/docs/configuration.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>CLI commands: vendor/bin/mftf</title>
+          <description>The Magento Functional Testing Framework (MFTF) introduces the command line interface (CLI) tool `vendor/bin/mftf` to facilitate your interaction with the framework. Note that `mftf` commands replace the `robo` commands that were used in previous releases. ## Command format In the project root directory (where you have installed the framework as a composer dependency), run commands using the following format: ```bash vendor/bin/mftf command [options] [&lt;arguments&gt;] [--remove|-r] ``` ## Useful commands Use the following commands to run...</description>
+          <link>/mftf/v2/docs/commands/mftf.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>CLI commands: vendor/bin/codecept</title>
+          <description>&lt;div class=&quot;bs-callout bs-callout-warning&quot; markdown=&quot;1&quot;&gt; We do not recommend using Codeception commands directly as they can break the MFTF basic workflow. All the Codeception commands you need are wrapped using the [mftf tool][]. To run the Codeception testing framework commands directly, change your directory to the `&lt;Magento root&gt;`. &lt;/div&gt; ## Usage examples Run all the generated tests: ```bash vendor/bin/codecept run functional -c dev/tests/acceptance/codeception.yml ``` Run all tests without the `&lt;group value=&quot;skip&quot;/&gt;` [annotation][]: ```bash vendor/bin/codecept run functional...</description>
+          <link>/mftf/v2/docs/commands/codeception.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Merge tests</title>
+          <description>Tests can be merged to create a new test that covers new extension capabilities. In this example we add an action group that modifies the original test to interact with our extension sending in data we created. ## Starting test ```xml &lt;test name=&quot;AdminCreateSimpleProductTest&quot;&gt; &lt;annotations&gt; &lt;features value=&quot;Catalog&quot;/&gt; &lt;stories value=&quot;Create a Simple Product via Admin&quot;/&gt; &lt;title value=&quot;Admin should be able to create a Simple Product&quot;/&gt; &lt;description value=&quot;Admin should be able to create a Simple Product&quot;/&gt; &lt;severity value=&quot;CRITICAL&quot;/&gt;...</description>
+          <link>/mftf/v2/docs/merge_points/merge-tests.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Selectors</title>
+          <description>These guidelines should help you to write high quality selectors. ### Selectors SHOULD be written in CSS instead of XPath whenever possible CSS is generally easier to read than XPath. For example, `//*[@id=&quot;foo&quot;]` in XPath can be expressed as simply as `#foo` in CSS. See this [XPath Cheatsheet](https://devhints.io/xpath) for more examples. ### XPath selectors SHOULD NOT use `@attribute=&quot;foo&quot;`. This would fail if the attribute was `attribute=&quot;foo bar&quot;`. Instead you SHOULD use `contains(@attribute, &quot;foo&quot;)` where `@attribute`...</description>
+          <link>/mftf/v2/docs/selectors.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>MFTF Vendor-supplied Tests</title>
+          <description></description>
+          <link>/marketplace/sellers/mftf-vendor.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Page structure</title>
+          <description>The MFTF uses a modified concept of [PageObjects], which models the testing areas of your page as objects within the code. This reduces occurrences of duplicated code and enables you to fix things quickly, in one place, when things change. You define the contents of a page, for reference in a [`&lt;test&gt;`], at both the [`&lt;page&gt;`] and [`&lt;section&gt;`] level. The `pageObject` lists the URL of the `page` and the `sections` that it contains. You can...</description>
+          <link>/mftf/v2/docs/page.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>MFTF Commerce-supplied Tests</title>
+          <description></description>
+          <link>/marketplace/sellers/mftf-magento.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Merge action groups</title>
+          <description>An action group is a set of individual actions working together as a group. These action groups can be shared between tests and they also be modified to your needs. In this example we add a `&lt;click&gt;` command to check the checkbox that our extension adds to the simple product creation form. ## Starting test &lt;!-- {% raw %} --&gt; ```xml &lt;actionGroup name=&quot;FillAdminSimpleProductForm&quot;&gt; &lt;arguments&gt; &lt;argument name=&quot;category&quot;/&gt; &lt;argument name=&quot;simpleProduct&quot;/&gt; &lt;/arguments&gt; &lt;amOnPage url=&quot;{{AdminProductIndexPage.url}}&quot; stepKey=&quot;navigateToProductIndex&quot;/&gt; &lt;click selector=&quot;{{AdminProductGridActionSection.addProductToggle}}&quot; stepKey=&quot;clickAddProductDropdown&quot;/&gt;...</description>
+          <link>/mftf/v2/docs/merge_points/merge-action-groups.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Best practices</title>
+          <description>Check out our best practices below to ensure you are getting the absolute most out of the Magento Functional Testing Framework. ## Focus on reusability ### Use existing Tests and resources Magento offers more than **3000** acceptance tests, **2500** [Action group]s, **750** Page declarations with more than **1500** Section definitions. It is very probable that behaviour you want to test already exists as a Test or Action Group. Instead of writing everything by yourself -...</description>
+          <link>/mftf/v2/docs/best-practices.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>MFTF 2.7.0 backward incompatible changes</title>
+          <description>This page highlights backward incompatible changes from previous 2.6.x releases that have major impacts and require special instructions to ensure third-party tests continue working with Magento core tests. ## Minimum supported PHP version changes We changed the minimum PHP version requirement from 7.0 to 7.3. Because of the PHP version requirement change, this MFTF version only supports Magento 2.3.x, where x is 7 or above. ## XSD schema changes - `arrayVariable` is added as an...</description>
+          <link>/mftf/v2/docs/backward-incompatible-changes.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Merge Points for testing extensions in MFTF</title>
+          <description>The Magento Functional Testing Framework (MFTF) allows great flexibility when writing XML tests for extensions. All parts of tests can be used, reused, and merged to best suit your needs and cut down on needless duplication. Extension developers can utilitze these merge points to leverage existing tests and modify just the parts needed to test their extension. For instance, if your extension adds a form field to a Catalog admin page, you can modify the...</description>
+          <link>/mftf/v2/docs/merge_points/introduction.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Reporting</title>
+          <description>The Magento Functional Testing Framework provides two types of reporting: - Inline reporting that you can view in the terminal as you run [`mftf`][mftf] or [`codecept`][codecept] CLI commands. - HTML reports that you can view using the [Allure Framework][] after a test run completes. When you run a test, MFTF copies all reporting artifacts to the `dev/tests/acceptance/tests/_output` subdirectory in the Magento root directory. The directory contains: - `allure-results/` that is a directory generated and served...</description>
+          <link>/mftf/v2/docs/reporting.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Application testing</title>
+          <description>
+</description>
+          <link>/cloud/docker/docker-test-app-mftf.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Test Modularity</title>
+          <description>One of MFTF's most distinguishing functionalities is the framework's modularity. ## What is test modularity Within MFTF, test modularity can refer to two different concepts: ### Test material merging Test material merging is covered extensively in the [merging] topic, so it will not be our focus in this guide. ### Modular test materials This refers to test materials being correctly owned by the right Magento module, and for tests to have references to only what...</description>
+          <link>/mftf/v2/docs/guides/test-modularity.html</link>
+          <pubDate>Mon, 17 Apr 2023 14:35:06 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>General CLI installation</title>
+          <description>Code that extends or customizes {{site.data.var.ee}} and {{site.data.var.ce}} behavior is called an extension. You can optionally package and distribute extensions on the [Commerce Marketplace](https://marketplace.magento.com) or another extension distribution system. Extensions include: - Modules (extend Magento capabilities) - Themes (change the look and feel of your [storefront](https://glossary.magento.com/storefront) and Admin) - Language packages (localize the storefront and Admin) {:.bs-callout-tip} This topic explains how to use the command line to install extensions you purchase from the Commerce Marketplace....</description>
+          <link>/extensions/install/</link>
           <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
         </item>
     
@@ -29,57 +422,7 @@
           <title>Commerce Definition of Done</title>
           <description>
 </description>
-          <link>http://magento.github.io/devdocs//contributor-guide/contributing_dod.html</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Blackfire.io</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-integrate-blackfire.html</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Code Contributions</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//contributor-guide/contributing.html</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Step X. Finish the tutorial</title>
-          <description>The last page of a tutorial should acknowledge the reader has completed the tutorial and provide links to related information. Otherwise, add the content as you see fit. ## Metadata parameters The [metadata](https://glossary.magento.com/metadata) parameters for the last page of a tutorial are the same as a middle page. Parameter | Description --- | --- `layout:` | Must be `tutorial`. `level3_subgroup:` | A group name that binds the tutorial topics together. This value must be specified...</description>
-          <link>http://magento.github.io/devdocs//contributor-guide/templates/tutorial-template-last.html</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>General CLI installation</title>
-          <description>Code that extends or customizes {{site.data.var.ee}} and {{site.data.var.ce}} behavior is called an extension. You can optionally package and distribute extensions on the [Commerce Marketplace](https://marketplace.magento.com) or another extension distribution system. Extensions include: - Modules (extend Magento capabilities) - Themes (change the look and feel of your [storefront](https://glossary.magento.com/storefront) and Admin) - Language packages (localize the storefront and Admin) {:.bs-callout-tip} This topic explains how to use the command line to install extensions you purchase from the Commerce Marketplace....</description>
-          <link>http://magento.github.io/devdocs//extensions/install/</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Sample template tutorial</title>
-          <description>A tutorial provides procedural information spread across multiple pages. It contains several design elements that differ from standard topics: * A tutorial replaces the navigation with a table of contents that is specific to the tutorial. * The bottom of the index page contains a **Begin Tutorial** button. * **Next** and **Previous** buttons are displayed at the bottom of each topic. ## Metadata parameters You must use the following metadata parameters on the tutorial index...</description>
-          <link>http://magento.github.io/devdocs//contributor-guide/templates/tutorial-template-first.html</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Maintainers</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//contributor-guide/maintainers.html</link>
-          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Step 1. Start the procedure</title>
-          <description>Add the content for each step as you see fit. ## Metadata parameters The procedural steps of a tutorial use the `subtitle` [metadata](https://glossary.magento.com/metadata) parameter. Parameter | Description --- | --- `layout:` | Must be `tutorial`. `level3_subgroup:` | A group name that binds the tutorial topics together. This value must be specified on each topic in the tutorial. `title:` | The title of the topic. This value should be in the form _Step X. Perform this...</description>
-          <link>http://magento.github.io/devdocs//contributor-guide/templates/tutorial-template-middle.html</link>
+          <link>/contributor-guide/contributing_dod.html</link>
           <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
         </item>
     
@@ -87,59 +430,86 @@
           <title>Basic template</title>
           <description>
 </description>
-          <link>http://magento.github.io/devdocs//contributor-guide/templates/basic_template.html</link>
+          <link>/contributor-guide/templates/basic_template.html</link>
           <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
         </item>
     
         <item>
           <title>Backward compatible development</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//contributor-guide/backward-compatible-development/</link>
+          <link>/contributor-guide/backward-compatible-development/</link>
           <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
         </item>
     
         <item>
-          <title>Set up multiple websites or stores using Cloud Docker</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//cloud/docker/docker-multi-website.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+          <title>Sample template tutorial</title>
+          <description>A tutorial provides procedural information spread across multiple pages. It contains several design elements that differ from standard topics: * A tutorial replaces the navigation with a table of contents that is specific to the tutorial. * The bottom of the index page contains a **Begin Tutorial** button. * **Next** and **Previous** buttons are displayed at the bottom of each topic. ## Metadata parameters You must use the following metadata parameters on the tutorial index...</description>
+          <link>/contributor-guide/templates/tutorial-template-first.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
         </item>
     
         <item>
-          <title>Adobe Commerce 2.3.7-p1 Release Notes</title>
-          <description>&lt;p&gt;Adobe Commerce 2.3.7-p1 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous patch release, Adobe Commerce 2.3.7 and Magento Open Source 2.3.7.&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x reaches end of support in April 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce...</description>
-          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p1.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+          <title>Usage</title>
+          <description></description>
+          <link>/quality-patches/usage.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
         </item>
     
         <item>
-          <title>Prepare Commerce for Docker</title>
+          <title>Maintainers</title>
+          <description></description>
+          <link>/contributor-guide/maintainers.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Code Contributions</title>
           <description>
 </description>
-          <link>http://magento.github.io/devdocs//cloud/docker/docker-installation.html</link>
+          <link>/contributor-guide/contributing.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Blackfire.io</title>
+          <description></description>
+          <link>/cloud/project/project-integrate-blackfire.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Step X. Finish the tutorial</title>
+          <description>The last page of a tutorial should acknowledge the reader has completed the tutorial and provide links to related information. Otherwise, add the content as you see fit. ## Metadata parameters The [metadata](https://glossary.magento.com/metadata) parameters for the last page of a tutorial are the same as a middle page. Parameter | Description --- | --- `layout:` | Must be `tutorial`. `level3_subgroup:` | A group name that binds the tutorial topics together. This value must be specified...</description>
+          <link>/contributor-guide/templates/tutorial-template-last.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Step 1. Start the procedure</title>
+          <description>Add the content for each step as you see fit. ## Metadata parameters The procedural steps of a tutorial use the `subtitle` [metadata](https://glossary.magento.com/metadata) parameter. Parameter | Description --- | --- `layout:` | Must be `tutorial`. `level3_subgroup:` | A group name that binds the tutorial topics together. This value must be specified on each topic in the tutorial. `title:` | The title of the topic. This value should be in the form _Step X. Perform this...</description>
+          <link>/contributor-guide/templates/tutorial-template-middle.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Contributors</title>
+          <description>
+</description>
+          <link>/contributor-guide/contributors.html</link>
+          <pubDate>Tue, 11 Apr 2023 17:03:52 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.7-p4 Release Notes</title>
+          <description>&lt;p&gt;Adobe Commerce 2.3.7-p4 provides 15 security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p3).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x will reach end of support in September 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce 2.4.x or Magento...</description>
+          <link>/guides/v2.3/release-notes/2-3-7-p4.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
           <title>Adobe Commerce 2.3.7-p3 Release Notes</title>
           <description>&lt;p&gt;Adobe Commerce 2.3.7-p3 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p2).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x will reach end of support in September 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe...</description>
-          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p3.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Docker services containers</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//cloud/docker/docker-containers-service.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Adobe Commerce 2.3.7-p4 Release Notes</title>
-          <description>&lt;p&gt;Adobe Commerce 2.3.7-p4 provides 15 security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p3).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x will reach end of support in September 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce 2.4.x or Magento...</description>
-          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p4.html</link>
+          <link>/guides/v2.3/release-notes/2-3-7-p3.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
@@ -147,14 +517,43 @@
           <title>Fastly</title>
           <description>
 </description>
-          <link>http://magento.github.io/devdocs//cloud/cdn/cloud-fastly.html</link>
+          <link>/cloud/cdn/cloud-fastly.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
-          <title>Install Inventory Management</title>
+          <title>Prepare Commerce for Docker</title>
+          <description>
+</description>
+          <link>/cloud/docker/docker-installation.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Upgrade version</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//extensions/inventory-management/</link>
+          <link>/cloud/project/project-upgrade.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Cloud Patches for Commerce</title>
+          <description></description>
+          <link>/cloud/release-notes/mcp-release-notes.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Payment Services Release Notes</title>
+          <description></description>
+          <link>/payment-services/release-notes.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Introduction</title>
+          <description></description>
+          <link>/upgrade-compatibility-tool/introduction.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
@@ -162,21 +561,35 @@
           <title>Configuration sources</title>
           <description>
 </description>
-          <link>http://magento.github.io/devdocs//cloud/docker/docker-config-sources.html</link>
+          <link>/cloud/docker/docker-config-sources.html</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Catalog Service for Adobe Commerce</title>
+          <description></description>
+          <link>/catalog-service/</link>
+          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
+        </item>
+    
+        <item>
+          <title>Adobe Commerce 2.3.7-p2 Release Notes</title>
+          <description>&lt;p&gt;Adobe Commerce 2.3.7-p2 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p1).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x reaches end of support in April 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce...</description>
+          <link>/guides/v2.3/release-notes/2-3-7-p2.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
           <title>Deploy variables</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/env/variables-deploy.html</link>
+          <link>/cloud/env/variables-deploy.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
-          <title>Payment Services Release Notes</title>
+          <title>products query</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//payment-services/release-notes.html</link>
+          <link>/catalog-service/products.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
@@ -184,567 +597,132 @@
           <title>Docker container architecture</title>
           <description>
 </description>
-          <link>http://magento.github.io/devdocs//cloud/docker/docker-containers.html</link>
+          <link>/cloud/docker/docker-containers.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
-          <title>MFTF Vendor-supplied Tests</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//marketplace/sellers/mftf-vendor.html</link>
+          <title>Set up multiple websites or stores using Cloud Docker</title>
+          <description>
+</description>
+          <link>/cloud/docker/docker-multi-website.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
-          <title>Catalog Service for Adobe Commerce</title>
+          <title>Install Inventory Management</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//catalog-service/</link>
+          <link>/extensions/inventory-management/</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
-          <title>Adobe Commerce 2.3.7-p2 Release Notes</title>
-          <description>&lt;p&gt;Adobe Commerce 2.3.7-p2 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous release (Adobe Commerce 2.3.7-p1).&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x and Magento Open Source 2.3.x reaches end of support in April 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce...</description>
-          <link>http://magento.github.io/devdocs//guides/v2.3/release-notes/2-3-7-p2.html</link>
+          <title>Adobe Commerce 2.3.7-p1 Release Notes</title>
+          <description>&lt;p&gt;Adobe Commerce 2.3.7-p1 is a security release that provides security fixes that enhance your Adobe Commerce 2.3.7 or Magento Open Source 2.3.7 deployment. It provides fixes for vulnerabilities that have been identified in the previous patch release, Adobe Commerce 2.3.7 and Magento Open Source 2.3.7.&lt;/p&gt; &lt;p class=&quot;bs-callout-info&quot;&gt;PHP 7.3 reached end of support in December 2021, and Adobe Commerce 2.3.x reaches end of support in April 2022. &lt;strong&gt;We strongly recommend planning your upgrade now to Adobe Commerce...</description>
+          <link>/guides/v2.3/release-notes/2-3-7-p1.html</link>
           <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
         </item>
     
         <item>
-          <title>Cloud Patches for Commerce</title>
+          <title>Set up OpenSearch service</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/release-notes/mcp-release-notes.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Introduction</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//upgrade-compatibility-tool/introduction.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>products query</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//catalog-service/products.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title></title>
-          <description>&lt;section class=&quot;home-features&quot;&gt; &lt;div class=&quot;bs-callout-warning&quot;&gt;&lt;center&gt;{{site.data.var.ee}} 2.3 reached end of support in September 2022.&lt;/center&gt;&lt;/div&gt; &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Setup&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/system-requirements.html&quot;&gt;System Requirements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/install-gde/bk-install-guide.html&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/config-guide/bk-config-guide.html&quot;&gt;Configuration Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/cloud/bk-cloud.html&quot;&gt;{{site.data.var.ece}}&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Backend Development&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html&quot;&gt;PHP Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/b2b/bk-b2b.html&quot;&gt;B2B Developer Guide&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/bk-coding-standards.html&quot;&gt;Coding Standards&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;{{ page.baseurl }}/coding-standards/technical-guidelines.html&quot;&gt;Technical Guidelines&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class=&quot;feature&quot;&gt; &lt;h2 class=&quot;title&quot;&gt;Frontend Development&lt;/h2&gt;...</description>
-          <link>http://magento.github.io/devdocs//</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Upgrade version</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-upgrade.html</link>
-          <pubDate>Tue, 11 Apr 2023 16:46:44 -0500</pubDate>
-        </item>
-    
-        <item>
-          <title>Add viewports</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/add-viewports.html</link>
-          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add appearances</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/add-appearances.html</link>
-          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Extend an appearance</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/extend-appearances.html</link>
-          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add a custom toolbar</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-custom-toolbar.html</link>
-          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Install Page Builder example modules</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/pagebuilder-examples.html</link>
-          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Extend another appearance</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/extend-more-appearances.html</link>
-          <pubDate>Fri, 10 Mar 2023 13:06:37 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Search Results</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//guides/v2.3/search.html</link>
-          <pubDate>Fri, 20 Jan 2023 17:43:33 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Magento BI Libraries</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//mbi/docs/libraries.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Magento BI Import API</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//mbi/docs/import-api.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Magento BI API Getting Started</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//mbi/docs/getting-started.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Magento BI Export API</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//mbi/docs/export-api.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:57:17 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Use Themes to override styles</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/styles/use-themes-to-override-styles.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Migrate other BlueFoot content</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/migration/migrate-other-bluefoot-content.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>How content migration works</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/migration/how-content-migration-works.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add icon</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-icon.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Introduction to creating content types</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/introduction.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add breakpoints</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/add-breakpoints.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Overview of content migration</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/migration/overview.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Content type configurations</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/configurations.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add a block chooser</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-block-chooser.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>How Page Builder styles content</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/styles/introduction.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Configure the panel</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/configure-panel.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Migrate content from custom blocks</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/migration/migrate-content-custom-blocks.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Deactivate Page Builder</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/administration/deactivate-pagebuilder.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Page Builder data store</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/data-store.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add form</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-form.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add components</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-components.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add icons and images</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-icons-images.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Upgrade content types</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/administration/upgrade-content-types.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Introduction to extending content types</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/extend/introduction.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Release notes for Page Builder</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/release-notes.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Use Page Builder for product attributes</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/administration/use-for-product-attributes.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Page Builder Architecture</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/overview.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add additional data</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-additional-data.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add an image uploader</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-image-uploader.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Use Modules to override styles</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/styles/use-modules-to-override-styles.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>What is Page Builder?</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Install the migration module</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/migration/install-migration-module.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add configuration</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-configuration.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Change breakpoints and viewports</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/change-breakpoints-viewports.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Introduction to viewports for responsive content</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/introduction.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Install Page Builder</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/contributors.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add a visual selector</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-visual-selector.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add a storefront widget</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-storefront-widget.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add styles</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-styles.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Render server-side previews</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/render-server-side-preview.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Run the migration module</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/migration/run-migration-module.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add templates</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/add-templates.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Add a text editor</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/add-text-editor.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Override Page Builder styles</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/styles/override-pagebuilder-styles.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Apply product conditions</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/customize/apply-product-conditions.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Page Builder Knockout bindings</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/knockout-bindings.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Use viewports for forms</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/use-viewports.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Troubleshooting</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/content-types/create/troubleshooting.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Use breakpoints for widgets</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/viewports/use-breakpoints.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Page Builder events</title>
-          <description>
-</description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/architecture/events.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Use HTML Code to override styles</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//page-builder/docs/styles/use-htmlcode-to-override-styles.html</link>
-          <pubDate>Thu, 15 Dec 2022 13:56:15 -0600</pubDate>
-        </item>
-    
-        <item>
-          <title>Personal Profile</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//marketplace/sellers/profile-personal.html</link>
+          <link>/cloud/project/services-opensearch.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Manage user access to Cloud projects</title>
+          <title>Set up RabbitMQ service</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/user-admin.html</link>
+          <link>/cloud/project/services-rabbit.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Users</title>
+          <title>Set up Redis service</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//marketplace/eqp/v1/users.html</link>
+          <link>/cloud/project/services-redis.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Enable multi-factor authentication for SSH access</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-enable-mfa-enforcement.html</link>
+          <title>Account Setup Process</title>
+          <description>
+</description>
+          <link>/marketplace/sellers/account-setup-process.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Set up multiple websites or stores</title>
+          <title>Configure services</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-multi-sites.html</link>
+          <link>/cloud/project/services.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Apply patches</title>
+          <title>Set cache for static files</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-patch.html</link>
+          <link>/cloud/project/set-cache.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Caching</title>
+          <title>Cloud package updates for Commerce</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-routes-more-cache.html</link>
+          <link>/cloud/composer-packages/patch-notes.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Redirects</title>
+          <title>Handle Cookie Restrictions</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-routes-more-redir.html</link>
+          <link>/recommendations/setting-cookie.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Application configuration</title>
-          <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/magento-app.html</link>
+          <title>Magento Cloud CLI</title>
+          <description>
+</description>
+          <link>/cloud/reference/cli-ref-topic.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Server side includes</title>
+          <title>Set up B2B</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-routes-more-ssi.html</link>
+          <link>/cloud/configure/setup-b2b.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
         <item>
-          <title>Project structure</title>
+          <title>Set up cron jobs</title>
           <description></description>
-          <link>http://magento.github.io/devdocs//cloud/project/project-start.html</link>
+          <link>/cloud/configure/setup-cron-jobs.html</link>
+          <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Cloud architecture for Commerce</title>
+          <description>
+</description>
+          <link>/cloud/architecture/cloud-architecture.html</link>
+          <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Composer</title>
+          <description>
+</description>
+          <link>/cloud/reference/cloud-composer.html</link>
+          <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
+        </item>
+    
+        <item>
+          <title>Cloud deployment process</title>
+          <description>
+</description>
+          <link>/cloud/deploy/cloud-deployment-process.html</link>
           <pubDate>Thu, 15 Dec 2022 10:40:23 -0600</pubDate>
         </item>
     
