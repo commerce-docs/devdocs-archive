@@ -3,7 +3,7 @@
 This project contains the source code of the latest 2.1 Magento developer documentation archived.
 The resulting website is available at <https://commerce-docs.github.io/devdocs-archive/2.1/>.
 
-# Building this site
+## Building this site
 
 For local builds, you need to install Ruby 2.4 or later.
 
