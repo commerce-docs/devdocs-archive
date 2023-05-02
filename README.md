@@ -1,7 +1,7 @@
 # Adobe Commerce Developer Documentation
 
-Welcome! This site contains the latest Adobe Commerce and Magento Open Source developer documentation for ongoing releases of both products. For additional information, see our [Contribution Guide](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md).
-
+This branch contains the latest 2.3 Adobe Commerce and Magento Open Source developer documentation archived.
+The website is available at <https://commerce-docs.github.io/devdocs-archive/2.3/>.
 > **Important update**
 >
 > Adobe Commerce and Magento Open Source 2.4.x documentation has been migrated to Adobe sites. See our new landing pages to access the most current information.
@@ -14,27 +14,9 @@ Welcome! This site contains the latest Adobe Commerce and Magento Open Source de
 >
 > We welcome contributions to migrated content! You can find similar links to GitHub on the Adobe sites.
 
-## Contributors
-
-Our goal is to provide the Commerce and Open Source communities with comprehensive and quality technical documentation. We believe that to accomplish that goal we need experts from the community to share their knowledge with us and each other. We are thankful to all of our contributors for improving the documentation.
-
-![](https://raw.githubusercontent.com/wiki/magento/magento2/images/dev_docs_contributors.png)
-
-## Building this site
-
-This site is built by [Jekyll](https://jekyllrb.com/), which is an open-source tool developed in [Ruby](https://www.ruby-lang.org/en/).
-
-You can build the site locally in the following ways:
-
--  [Installing the project dependencies locally](#build-locally) (Mac, Linux)
--  [Using Docker (docker-compose)](https://github.com/magento/devdocs/wiki/Build-DevDocs-with-Docker) (Mac, Linux, Windows)
--  [Using a Vagrant virtual machine](https://github.com/commerce-docs/vagrant-for-magento-devdocs) (Mac, Linux, Windows)
--  [Build DevDocs in Windows](https://github.com/magento/devdocs/wiki/Build-DevDocs-in-Windows) (Windows 7 & 10)
--  [Building older versions of the documentation](https://github.com/magento/devdocs/wiki/Build-DevDocs-with-Docker)
-
 ## Build locally
 
-You do not need to set up a webserver to serve the site locally. Jekyll will use its own webserver for this.
+You do not need to set up a web server to serve the site locally. Jekyll will use its own web server for this.
 
 ### Set up Ruby
 
@@ -58,7 +40,7 @@ To pull all the mapped sources:
 rake init
 ```
 
-Docfile begins with public sources, because the `rake init` task fails when it attempts to clone content from private repositories without the corresponding permissions.
+Docfile contains public sources, because the `rake init` task fails when it attempts to clone content from private repositories without the corresponding permissions.
 
 >**NOTE**
 >By default _rake_ clones using SSH. If you want to clone with HTTPS, you can run it with the `token` variable:
@@ -133,56 +115,25 @@ Once you have completed preparing your environment, you can build locally and pr
 > ***TIP***
 > Leave the serve terminal open and running. Every time you save changes to a file, it automatically regenerates the site so you can test the output immediately. Changing the `_config.yml` file or other YAML file with data or configuration requires a fresh build (stop and start the server again with `rake preview`).
 
-### Exclude private repositories
+## Build and deploy (for admins)
 
-If you do not have access to the private repositories required by Docfile, you can exclude them in `_config.local.yml` to avoid the link checking report about missing pages.
+The website is deployed using the [GitHub Pages](https://pages.github.com/) service.
+The builds are pushed to the 2.3 directory at the gh-pages branch.
 
-Create a `_config.local.yml` file at the root of the project directory and exclude the paths you do not want to generate:
+To build and deploy the website, run:
 
-```yaml
-exclude:
-  - page-builder
+```sh
+rake build_and_deploy
 ```
 
->**TIP**
->You can override any other configuration options using this file.
+The command performs the following actions:
 
->**TIP**
->To ignore the `_config.local.yml` file and preview the site with default configuration, use the `preview:all` option :
->
->```bash
->rake preview:all
->```
-
-## Building old versions
-
-The published website contains documentation for the most current Adobe Commerce and Magento Open Source releases only. For cases, when you need to view the content as it was for an earlier release, we created [tags](https://github.com/magento/devdocs/tags) in this repository. Typically, they point at the commit when the release notes were finalized and published.
-
-To view the list of available tags:
-
-```bash
-git tag --list
-```
-
-To checkout the version (for example 2.2.0):
-
-```bash
-git checkout 2.2.0
-```
-
-Find guidelines for building the site locally in the checked out README.
-
->**NOTE**
->There is no guarantee the site will be built, since it can have dependencies on the external resources that are not available anymore.
-
-## Archived docs
-
-To view the archived documentation, see <http://magento.github.io/devdocs/>.
-
-***
-
-If you have questions, open an issue and ask us. We're looking forward to hearing from you!
-
--  [Slack](https://magentocommeng.slack.com/archives/CAN932A3H) ([Join us](https://opensource.magento.com/slack))
--  [Visit our wiki](https://github.com/magento/devdocs/wiki)
--  <a href="https://twitter.com/AdobeCommrcDocs" class="twitter-follow-button" data-show-count="false">Twitter @AdobeCommrcDocs</a>
+1. Clears the _site directory.
+1. Builds the website with the base URL `devdocs-archive/2.3`.
+1. Remembers the number of commit that's been built to use later in a commit message for reference.
+1. Checkouts the gh-pages branch.
+1. Copies the content of the _site directory to the 2.3 directory.
+   The \_site directory is ignored by git that makes the build from the archived-docs-v2.3 available in the gh-pages branch.
+1. Adds and commits the changes with the message that has reference to the commit of the built source code (see item 3 in this list).
+1. Pushes the commit to the remote repository.
+1. Checkouts back to the source code branch.
