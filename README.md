@@ -1,97 +1,73 @@
 # Magento Developer Documentation
 
-Welcome! This site contains the latest Magento developer documentation for ongoing Magento 2.x releases.
+This project contains the source code of the latest 2.0 Magento developer documentation archived.
+The resulting website is available at <https://commerce-docs.github.io/devdocs-archive/2.0/>.
 
-To contribute, please fork the `develop` branch.
+## Building this site
 
-# Building this site
+For local builds, you need to install Ruby 2.4 or later.
 
-You can build this site locally in the following ways:
+To check the Ruby version on your environment, run in your terminal:
 
-- [Installing the project dependencies locally](#build-using-jekyll) (Mac, Linux)
-- [Using a Docker container](#build-using-docker) (Mac, Linux)
-- [Using a Vagrant virtual machine](#build-using-vagrant) (Mac, Linux, Windows)
+```shell
+ruby -v
+```
 
-## Build using Jekyll
+See the [Ruby site](https://www.ruby-lang.org/en/documentation/installation) for installation instructions.
 
-For local builds, you need to install [Bundler](http://bundler.io/), and [Ruby](https://www.ruby-lang.org) version manager.
+### Install Bundler
 
-### To prepare your MacOS environment:
-1. Install Homebrew. See the [Homebrew site](https://brew.sh) for instructions.
-1. Use Homebrew to install a Ruby version manager.
+Install the [Bundler](https://bundler.io/) gem, which helps with Ruby dependencies:
 
-   ```
-   $ brew install rbenv ruby-build
-   ```
+```sh
+gem install bundler
+```
 
-1. Add rbenv to bash so that it loads every time you open a terminal.
-
-   ```
-   $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-   ```
-
-1. Source your `.bash_profile` file.
-
-   ```
-   $ source ~/.bash_profile
-   ```
-
-1. Install a specific version of Ruby.
-
-   ```
-   $ rbenv install 2.4.x
-   $ rbenv global 2.4.x
-   $ ruby -v
-   ```
-
-1. Install the Bundler gem, which helps with Ruby dependencies.
-
-   ```
-   $ gem install bundler
-   ```
-
-1. Run `bundle install` the first time you are in the `devdocs` directory or when you need to pick up theme changes.
-
-### To build locally:
 Once you have completed preparing your environment, you can build locally and review the site in your browser.
 
-1. Run the serve command.
+### Install devdocs
 
+Clone or download the repository. The first time you are at the `devdocs` directory, run:
+
+```sh
+bundle install
+```
+
+Once you have completed preparing your environment, you can build locally and review the site in your browser.
+
+### Build and preview locally
+
+[rake](https://github.com/ruby/rake) is a native Ruby tool that helps to automate tasks.
+
+1. Run the rake task that installs all required dependencies and starts the [Jekyll](https://jekyllrb.com/) server:
+
+   ```sh
+   rake preview
    ```
-   $ bundle exec jekyll serve --incremental
-
-    Configuration file: /Users/username/Github/devdocs/_config.yml
-                Source: /Users/username/Github/devdocs
-           Destination: /Users/username/Github/devdocs/_site
-     Incremental build: enabled
-          Generating...
-                        done in x.x seconds.
-     Auto-regeneration: enabled for '/Users/username/Github/devdocs'
-        Server address: http://127.0.0.1:4000//
-      Server running... press ctrl-c to stop.
-   ```
-
-1. Use the **Server address** URL `http://127.0.0.1:4000/` in a browser to preview the content.
 
 1. Press `Ctrl+C` in the serve terminal to stop the server.
 
-> ***TIP***  
-> Leave the serve terminal open and running. Every time you save changes to a file, it automatically regenerates the site so you can test the output immediately. Changing the `_config.yml` file requires a fresh build. Using the `--incremental` option limits re-builds to posts and pages that have changed.
+If rake fails on your environment, generate the preview using jekyll.
 
-## Build using Docker
+## Build and deploy (for admins)
 
-[This Docker container](https://github.com/magento-devdocs/docker-for-devdocs) contains everything necessary to run Jekyll3 for working with Magento DevDocs.
+The website is deployed using the [GitHub Pages](https://pages.github.com/) service.
+The builds are pushed to the 2.0 directory at the gh-pages branch.
 
-## Build using Vagrant
+To build and deploy the website, run:
 
-You can deploy the devdocs site locally using [this Vagrant project](https://github.com/magento-devdocs/vagrant-for-magento-devdocs).
+```sh
+rake build_and_deploy
+```
 
-***
+The command performs the following actions:
 
-If you have questions, open an issue and ask us. We're looking forward to hearing from you!
-
-*	<a href="https://twitter.com/MagentoDevDocs" class="twitter-follow-button" data-show-count="false">Follow @MagentoDevDocs</a>
-
-*	<a href="mailto:DL-Magento-Doc-Feedback@magento.com">E-mail us</a>
-
-*	<a href="https://devdocs.magento.com">Visit our documentation site</a>, built using [GitHub pages](https://pages.github.com/).
+1. Clears the _site directory.
+1. Builds the website with the base URL `devdocs-archive/2.0`.
+1. Remembers the number of commit that's been built to use later in a commit message for reference.
+1. Checkouts the gh-pages branch.
+1. Copies the content of the _site directory to the 2.0 directory.
+   The \_site directory is ignored by git that makes the build from the archived-docs-v2.0 available in the gh-pages branch.
+1. Adds and commits the changes with the message that has reference to the commit of the built source code (see item 3 in this list).
+1. Pushes the commit to the remote repository.
+1. Checkouts back to the source code branch.
