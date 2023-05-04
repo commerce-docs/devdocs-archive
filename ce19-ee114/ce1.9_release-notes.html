@@ -16,7 +16,7 @@
 <body>
 
 
-<img src="{{ site.baseurl }}/images/m1xheader.png" width="1024" alt="header" />
+<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/m1xheader.png" width="1024" alt="header" /></a>
 {% include m1x/eol_message.html %}
 
 <!-- Title: Magento Community Edition (CE) 1.9 Release Notes -->
@@ -258,7 +258,7 @@
 <h3>Fixed issues and enhancements</h3>
 
 <ul>
-<li>Changed Magento Admin to support recent USPS shipping changes. On February 23, 2018, USPS removed APIs that support the creation of shipping labels without postage. In response, we’ve removed this functionality from the Magento Admin. Consequently, you cannot create and print shipping labels that do not have postage applied.  </li>
+<li>Changed Magento Admin to support recent USPS shipping changes. On February 23, 2018, USPS removed APIs that support the creation of shipping labels without postage. In response, we’ve removed this functionality from the Magento Admin. Consequently, you cannot create and print shipping labels that do not have postage applied. </li>
 
 <li>Updated copyright to 2018.</li>
 </ul>
@@ -268,7 +268,7 @@
 <p>These two known issues are associated with the use of HTML tags within a product’s SKU attribute:</p>
 
 <ul>
-<li>If you try to import products that contain HTML tags in the SKU attribute, Magento displays this error  at the data validation stage (that is, when you click <b>Check data</b>):  <code>Invalid value in SKU column. HTML tags are not allowed</code>.</li>
+<li>If you try to import products that contain HTML tags in the SKU attribute, Magento displays this error  at the data validation stage (that is, when you click <b>Check data</b>): <code>Invalid value in SKU column. HTML tags are not allowed</code>.</li>
 
 
 <li>If you try to create  or edit a product in the Admin panel and the product’s SKU attribute value contains HTML tags, Magento throws this error when you try to save the product: <code>HTML tags are not allowed in SKU attribute</code>. </li>
